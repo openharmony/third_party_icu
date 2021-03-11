@@ -1,39 +1,38 @@
-# third_party_icu
+#  International Components for Unicode
 
-#### 介绍
-{**以下是 Gitee 平台说明，您可以替换此简介**
-Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用 Gitee 实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+This is the repository for the [International Components for Unicode](http://site.icu-project.org). 
+The ICU project is under the stewardship of [The Unicode Consortium](https://www.unicode.org).
 
-#### 软件架构
-软件架构说明
+- Source: https://github.com/unicode-org/icu
+- Bugs: https://unicode-org.atlassian.net/projects/ICU
 
+![ICU Logo](./tools/images/iculogo_64.png)
 
-#### 安装教程
+### Build Status (`master` branch)
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+Build | Status
+------|-------
+TravisCI | [![Build Status](https://travis-ci.org/unicode-org/icu.svg?branch=master)](https://travis-ci.org/unicode-org/icu)
+Azure Pipelines | [![Build Status](https://unicode-icu.visualstudio.com/ICU/_apis/build/status/CI?branchName=master)](https://unicode-icu.visualstudio.com/ICU/_build/latest?definitionId=21&branchName=master)
+Azure Pipelines (Exhaustive Tests) | [![Build Status](https://unicode-icu.visualstudio.com/ICU/_apis/build/status/CI-Exhaustive-Master?branchName=master)](https://unicode-icu.visualstudio.com/ICU/_build/latest?definitionId=24&branchName=master)
+Azure Pipelines (Valgrind ICU4C) | [![Build Status](https://unicode-icu.visualstudio.com/ICU/_apis/build/status/CI-Valgrind-Master?branchName=master)](https://unicode-icu.visualstudio.com/ICU/_build/latest?definitionId=30&branchName=master)
+AppVeyor | [![Build status](https://ci.appveyor.com/api/projects/status/6ev1ssb6efahsvs2?svg=true)](https://ci.appveyor.com/project/unicode-org/icu)
+Fuzzing | [![Fuzzing Status](https://oss-fuzz-build-logs.storage.googleapis.com/badges/icu.svg)](https://bugs.chromium.org/p/oss-fuzz/issues/list?sort=-opened&can=1&q=proj:icu)
 
 
-#### 特技
+### Subdirectories and Information
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+- [`icu4c/`](./icu4c/) [ICU for C/C++](./icu4c/readme.html) with OHOS code modification and data customization
+- [`icu4j/`](./icu4j/) [ICU for Java](./icu4j/readme.html)
+- [`tools/`](./tools/) Tools
+- [`vendor/`](./vendor/) Vendor dependencies
+- [`ohos_icu4j/`](./ohos_icu4j/) This is a copy of icu4j with package name changed from com.ibm.icu to ohos.global.icu
+
+### License
+
+Please see [./icu4c/LICENSE](./icu4c/LICENSE) (C and J are under an identical license file.)
+
+> Copyright © 2016 and later Unicode, Inc. and others. All Rights Reserved.
+Unicode and the Unicode Logo are registered trademarks 
+of Unicode, Inc. in the U.S. and other countries.
+[Terms of Use and License](http://www.unicode.org/copyright.html)
