@@ -269,7 +269,7 @@ en{
         TR{"Turkey"}
         TT{"Trinidad & Tobago"}
         TV{"Tuvalu"}
-        TW{"Taiwan,China"}
+        TW{"Taiwan, China"}
         TZ{"Tanzania"}
         UA{"Ukraine"}
         UG{"Uganda"}
