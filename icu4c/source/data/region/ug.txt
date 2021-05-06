@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html#License
 ug{
     Countries{
@@ -89,7 +89,7 @@ ug{
         CW{"كۇراچاۋ"}
         CX{"مىلاد ئارىلى"}
         CY{"سىپرۇس"}
-        CZ{"چېخ جۇمھۇرىيىتى"}
+        CZ{"چېخىيە"}
         DE{"گېرمانىيە"}
         DG{"دېگو-گارشىيا"}
         DJ{"جىبۇتى"}
@@ -184,7 +184,7 @@ ug{
         MH{"مارشال ئاراللىرى"}
         MK{"شىمالىي ماكېدونىيە"}
         ML{"مالى"}
-        MM{"بىرما"}
+        MM{"ميانمار"}
         MN{"موڭغۇلىيە"}
         MO{"جۇڭگو ئاۋمېن"}
         MP{"شىمالىي مارىيانا ئاراللىرى"}
