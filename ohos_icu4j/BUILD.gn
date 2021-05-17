@@ -662,10 +662,8 @@ ohos_maple_java("ohos_icu4j_maple_java") {
 }
 
 group("icu_bin") {
+  deps = [ ":ohos_icudat" ]
   if (host_os != "mac") {
-    deps = [
-      ":ohos_icudat",
-      "//third_party/icu/icu4c/source:bin_host",
-    ]
+    deps += [ "//third_party/icu/icu4c/source:icuuc_win" ]
   }
 }
