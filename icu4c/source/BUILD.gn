@@ -707,7 +707,6 @@ group("bin_host") {
     ":genrb(${host_toolchain})",
     ":gensprep(${host_toolchain})",
     ":icupkg(${host_toolchain})",
-    ":icuuc_win",
     ":makeconv(${host_toolchain})",
     ":pkgdata(${host_toolchain})",
   ]
