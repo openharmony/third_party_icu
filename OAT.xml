@@ -61,5 +61,22 @@ Note:If the text contains special characters, please escape them according to th
                 <policyitem type="compatibility" name="Unicode-TOU" path="." desc="This license is compatible with Apache 2.0."/>
             </policy>
         </policylist>
+        <filefilterlist>
+            <filefilter name="binaryFileTypePolicyFilter" desc="binary file filter policy">
+                <filteritem type="filepath" name="ohos_icu4j/data/.*" desc="icudt file"/>
+                <filteritem type="filepath" name="ohos_icu4j/src/main/tests/.*" desc="test binary"/>
+                <filteritem type="filepath" name="icu4c/.*" desc="icu source binary file"/>
+            </filefilter>
+            <filefilter name="defaultPolicyFilter" desc="compatibility, license">
+                <filteritem type="filepath" name="KEYS" desc="open source orgin file, confirmed"/>
+                <filteritem type="filepath" name="LICENSE" desc="open source orgin file, confirmed"/>
+                <filteritem type="filepath" name="icu4c/.*" desc="open source orgin file, confirmed"/>
+                <filteritem type="filepath" name="ohos_icu4j/.*" desc="open source orgin file, confirmed"/>
+            </filefilter>
+            <filefilter name="copyrightPolicyFilter" desc="compatibility, license">
+                <filteritem type="filepath" name="icu4c/.*" desc="open source orgin file, confirmed"/>
+                <filteritem type="filepath" name="ohos_icu4j/.*" desc="open source orgin file, confirmed"/>
+            </filefilter>
+        </filefilterlist>
     </oatconfig>
 </configuration>
