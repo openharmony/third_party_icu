@@ -35363,7 +35363,15 @@ supplementalData:table(nofallback){
             }
             preferred{"h"}
         }
-	
+	TW{
+            allowed{
+                "hB",
+                "hb",
+                "H",
+                "h",
+            }
+            preferred{"h"}
+       }
         TZ{
             allowed{
                 "hB",
