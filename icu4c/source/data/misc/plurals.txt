@@ -16,7 +16,7 @@ plurals:table(nofallback){
         bem{"set8"}
         bez{"set8"}
         bg{"set8"}
-        bho{"set6"}
+        bh{"set6"}
         bm{"set0"}
         bn{"set1"}
         bo{"set0"}
@@ -99,7 +99,7 @@ plurals:table(nofallback){
         ksb{"set8"}
         ksh{"set15"}
         ku{"set8"}
-        kw{"set33"}
+        kw{"set16"}
         ky{"set8"}
         lag{"set14"}
         lb{"set8"}
@@ -116,7 +116,7 @@ plurals:table(nofallback){
         ml{"set8"}
         mn{"set8"}
         mo{"set18"}
-        mr{"set8"}
+        mr{"set1"}
         ms{"set0"}
         mt{"set28"}
         my{"set0"}
@@ -422,8 +422,9 @@ plurals:table(nofallback){
         }
         set18{
             few{
-                "v != 0 or n = 0 or n % 100 = 2..19 @integer 0, 2~16, 102, 1002, … @d"
-                "ecimal 0.0~1.5, 10.0, 100.0, 1000.0, 10000.0, 100000.0, 1000000.0, …"
+                "v != 0 or n = 0 or n != 1 and n % 100 = 1..19 @integer 0, 2~16, 101,"
+                " 1001, … @decimal 0.0~1.5, 10.0, 100.0, 1000.0, 10000.0, 100000.0, 1"
+                "000000.0, …"
             }
             one{"i = 1 and v = 0 @integer 1"}
             other{" @integer 20~35, 100, 1000, 10000, 100000, 1000000, …"}

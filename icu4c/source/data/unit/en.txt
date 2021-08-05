@@ -994,12 +994,6 @@ en{
                 other{"{0}km²"}
                 per{"{0}/km²"}
             }
-            square-meter{
-                dnam{"meters²"}
-                one{"{0}m²"}
-                other{"{0}m²"}
-                per{"{0}/m²"}
-            }
             square-mile{
                 dnam{"mi²"}
                 one{"{0}mi²"}
