@@ -34,7 +34,11 @@
 	<alias from="zh_SG" to="zh_Hans_SG" />
 	<alias from="zh_HK" to="zh_Hant_HK" />
 	<alias from="zh_MO" to="zh_Hant_MO" />
-	<alias from="zh_TW" to="zh_Hant_TW" />
+	<alias from="zh_TW" to="zh_Hant" />
+	<alias from="zh_Hant_TW" to="zh_Hant" />
+	<alias from="zh_Hant_HK" to="zh_Hant" />
+	<alias from="zh_Hant_MO" to="zh_Hant" />
+	<alias from="zh_Hans_CN" to="zh_Hans" />
 	<emptyLocale locale="de_" />
 	<emptyLocale locale="es_" />
 	<emptyLocale locale="pa_Guru" />
