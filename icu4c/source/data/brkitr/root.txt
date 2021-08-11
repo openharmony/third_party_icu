@@ -20,5 +20,6 @@ root{
         Laoo:process(dependency){"laodict.dict"}
         Mymr:process(dependency){"burmesedict.dict"}
         Thai:process(dependency){"thaidict.dict"}
+        Zwgi:process(dependency){"zawgyidict.dict"}
     }
 }
