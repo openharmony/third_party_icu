@@ -183,7 +183,7 @@ sw{
         MF{"St. Martin"}
         MG{"Madagaska"}
         MH{"Visiwa vya Marshall"}
-        MK{"Masedonia ya Kaskazini"}
+        MK{"Masedonia Kaskazini"}
         ML{"Mali"}
         MM{"Myanmar (Burma)"}
         MN{"Mongolia"}

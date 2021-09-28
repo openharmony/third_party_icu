@@ -153,7 +153,7 @@ mi{
         MF{"Hato Mātene"}
         MG{"Marakāhaka"}
         MH{"Ngā Moutere Māhara"}
-        MK{"Mahetōnia ki te Raki"}
+        MK{"Makerōnia ki te Raki"}
         ML{"Māri"}
         MM{"Maiāma (Pēma)"}
         MN{"Monokōria"}
