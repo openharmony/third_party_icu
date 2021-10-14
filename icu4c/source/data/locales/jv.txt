@@ -10,8 +10,8 @@ jv{
         word-initial{"… {0}"}
         word-medial{"{0} … {1}"}
     }
-    ExemplarCharacters{"[a â å b c d e é è ê g h i ì j k l m n o ò p r s t u ù w y]"}
-    ExemplarCharactersIndex{"[A Â Å B C D E É È Ê G H I Ì J K L M N O Ò P R S T U Ù W Y]"}
+    ExemplarCharacters{"[a b c d e f g h i j k l m n o p q r s t u v w x y z]"}
+    ExemplarCharactersIndex{"[A B C D E F G H I J K L M N O P Q R S T U V W X Y Z]"}
     MoreInformation{"?"}
     NumberElements{
         default{"latn"}
