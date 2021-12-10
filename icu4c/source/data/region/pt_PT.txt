@@ -48,7 +48,7 @@ pt_PT{
         MD{"Moldávia"}
         MG{"Madagáscar"}
         MK{"Macedónia do Norte"}
-        MO{"Macau, RAE da China"}
+        MO{"Macau, China"}
         MS{"Monserrate"}
         MU{"Maurícia"}
         MW{"Maláui"}
