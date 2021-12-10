@@ -157,7 +157,7 @@ mi{
         ML{"Māri"}
         MM{"Maiāma (Pēma)"}
         MN{"Monokōria"}
-        MO{"Makau, Haina"}
+        MO{"Makao, Haina"}
         MP{"Ngā Motu Mariana"}
         MQ{"Mātiniki"}
         MR{"Mauritānia"}

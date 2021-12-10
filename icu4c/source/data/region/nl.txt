@@ -187,7 +187,7 @@ nl{
         ML{"Mali"}
         MM{"Myanmar (Birma)"}
         MN{"Mongolië"}
-        MO{"Macau, China"}
+        MO{"Macao, China"}
         MP{"Noordelijke Marianen"}
         MQ{"Martinique"}
         MR{"Mauritanië"}

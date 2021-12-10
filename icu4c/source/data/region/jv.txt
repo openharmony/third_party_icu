@@ -78,7 +78,7 @@ jv{
         CK{"Kapuloan Cook"}
         CL{"Cilé"}
         CM{"Kamerun"}
-        CN{"Tyongkok"}
+        CN{"Tiongkok"}
         CO{"Kolombia"}
         CP{"Pulo Clipperton"}
         CR{"Kosta Rika"}
