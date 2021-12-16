@@ -645,7 +645,6 @@ ohos_static_library("static_icui18n") {
     "-W",
     "-Wall",
     "-pedantic",
-    "-fPIC",
     "-Wpointer-arith",
     "-Wwrite-strings",
     "-Wno-error=unused-parameter",
@@ -657,6 +656,12 @@ ohos_static_library("static_icui18n") {
     "-fno-exceptions",
     "-Wno-ignored-attributes",
   ]
+
+  if (is_mingw) {
+    cflags_cc += [ "-DWINVER=0x0601" ]
+  } else {
+    cflags_cc += [ "-fPIC" ]
+  }
 
   cflags = [
     "-fvisibility=hidden",
