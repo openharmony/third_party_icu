@@ -425,10 +425,10 @@ uz{
                 "HH:mm:ss (z)",
                 "HH:mm:ss",
                 "HH:mm",
-                "EEEE, y MMMM d",
-                "y MMMM d",
-                "y MMM d",
-                "yy/MM/dd",
+                "EEEE, d-MMMM, y",
+                "d-MMMM, y",
+                "d-MMM, y",
+                "dd/MM/yy",
                 "{1}, {0}",
                 "{1}, {0}",
                 "{1}, {0}",
@@ -460,16 +460,16 @@ uz{
                 Hmsv{"HH:mm:ss (v)"}
                 Hmv{"HH:mm (v)"}
                 M{"LL"}
-                MEd{"MM/dd, E"}
+                MEd{"E, dd/MM"}
                 MMM{"LLL"}
-                MMMEd{"E, MMM d"}
+                MMMEd{"E, d-MMM"}
                 MMMMW{
                     one{"MMMM, W-'hafta'"}
                     other{"MMMM, W-'hafta'"}
                 }
-                MMMMd{"MMMM d"}
-                MMMd{"MMM d"}
-                Md{"MM/dd"}
+                MMMMd{"d-MMMM"}
+                MMMd{"d-MMM"}
+                Md{"dd/MM"}
                 d{"d"}
                 h{"h a"}
                 hm{"h:mm a"}
@@ -478,13 +478,13 @@ uz{
                 hmv{"h:mm a (v)"}
                 ms{"mm:ss"}
                 y{"y"}
-                yM{"y/MM"}
-                yMEd{"E, y/MM/dd"}
-                yMMM{"y MMM"}
-                yMMMEd{"y MMM d, E"}
-                yMMMM{"y MMMM"}
-                yMMMd{"y MMM d"}
-                yMd{"y/MM/dd"}
+                yM{"MM.y"}
+                yMEd{"E, dd/MM/y"}
+                yMMM{"MMM, y"}
+                yMMMEd{"E, d-MMM, y"}
+                yMMMM{"MMMM, y"}
+                yMMMd{"d-MMM, y"}
+                yMd{"dd/MM/y"}
                 yQQQ{"y, QQQ"}
                 yQQQQ{"y, QQQQ"}
                 yw{
@@ -714,23 +714,23 @@ uz{
                     M{"MM–MM"}
                 }
                 MEd{
-                    M{"E, MM/dd – E, MM/dd"}
-                    d{"E, MM/dd – E, MM/dd"}
+                    M{"E, dd/MM – E, dd/MM"}
+                    d{"E, dd/MM – E, dd/MM"}
                 }
                 MMM{
                     M{"MMM–MMM"}
                 }
                 MMMEd{
-                    M{"E, MMM d – E, MMM d"}
-                    d{"E, MMM d – E, MMM d"}
+                    M{"E, d-MMM – E, d-MMM"}
+                    d{"E, d-MMM – E, d-MMM"}
                 }
                 MMMd{
-                    M{"MMM d – MMM d"}
-                    d{"MMM d–d"}
+                    M{"d-MMM – d-MMM"}
+                    d{"d – d-MMM"}
                 }
                 Md{
-                    M{"MM/dd – MM/dd"}
-                    d{"MM/dd – MM/dd"}
+                    M{"dd/MM – dd/MM"}
+                    d{"dd/MM – dd/MM"}
                 }
                 d{
                     d{"d–d"}
@@ -758,36 +758,36 @@ uz{
                     y{"y–y"}
                 }
                 yM{
-                    M{"y/MM – y/MM"}
-                    y{"y/MM – y/MM"}
+                    M{"MM/y – MM/y"}
+                    y{"MM/y – MM/y"}
                 }
                 yMEd{
-                    M{"E, y/MM/dd – E, y/MM/dd"}
-                    d{"E, y/MM/dd – E, y/MM/dd"}
-                    y{"E, y/MM/dd – E, y/MM/dd"}
+                    M{"E, dd/MM/y – E, dd/MM/y"}
+                    d{"E, dd/MM/y – E, dd/MM/y"}
+                    y{"E, dd/MM/y – E, dd/MM/y"}
                 }
                 yMMM{
-                    M{"y MMM–MMM"}
-                    y{"y MMM – y MMM"}
+                    M{"MMM – MMM, y"}
+                    y{"MMM, y – MMM, y"}
                 }
                 yMMMEd{
-                    M{"E, y MMM d – E, y MMM d"}
-                    d{"E, y MMM d – E, y MMM d"}
-                    y{"E, y MMM d – E, y MMM d"}
+                    M{"E, d-MMM – E, d-MMM, y"}
+                    d{"E, d-MMM – E, d-MMM, y"}
+                    y{"E, d-MMM, y – E, d-MMM, y"}
                 }
                 yMMMM{
-                    M{"y MMMM–MMMM"}
-                    y{"y MMMM – y MMMM"}
+                    M{"MMMM – MMMM, y"}
+                    y{"MMMM, y – MMMM, y"}
                 }
                 yMMMd{
-                    M{"y MMM d – MMM d"}
-                    d{"y MMM d–d"}
-                    y{"y MMM d – y MMM d"}
+                    M{"d-MMM – d-MMM, y"}
+                    d{"d – d-MMM, y"}
+                    y{"d-MMM, y – d-MMM, y"}
                 }
                 yMd{
-                    M{"y/MM/dd – y/MM/dd"}
-                    d{"y/MM/dd – y/MM/dd"}
-                    y{"y/MM/dd – y/MM/dd"}
+                    M{"dd/MM/y – dd/MM/y"}
+                    d{"dd/MM/y – dd/MM/y"}
+                    y{"dd/MM/y – dd/MM/y"}
                 }
             }
             monthNames{
