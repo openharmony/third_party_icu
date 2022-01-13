@@ -1,0 +1,40 @@
+{
+    "name": "@ohos/icu",
+    "version": "",
+    "description": "ICU is a mature, widely used set of portable C/C++ and Java libraries for Unicode support, software internationalization and globalization (i18n/g11n)",
+    "homePage": "https://gitee.com/openharmony",
+    "license": "ICU,BSD 3-Clause",
+    "repository": "https://gitee.com/openharmony/third_party_icu",
+    "domain": "os",
+    "language": "",
+    "publishAs": "code-segment",
+    "private": false,
+    "scripts": {},
+    "tags": [
+        "third_party"
+    ],
+    "keywords": [
+        "third-party",
+        "icu"
+    ],
+    "envs": {},
+    "dirs": {},
+	"licensePath": "icu4c/LICENSE",
+    "segment": {
+        "destPath": "third_party/icu"
+    },
+    "component": {
+        "name": "thirdparty_icu",
+        "subsystem": "",
+        "syscap": [],
+        "features": [],
+        "adapted_system_type": [],
+        "rom": "",
+        "ram": "",
+        "build": {
+            "sub_component": [],
+            "inner_kits": [],
+            "test": []
+        }
+    }
+}
