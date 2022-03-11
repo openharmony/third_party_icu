@@ -548,7 +548,6 @@ ohos_shared_library("shared_icui18n") {
     "-W",
     "-Wall",
     "-pedantic",
-    "-fPIC",
     "-Wpointer-arith",
     "-Wno-error=unused-parameter",
     "-Wno-error=unused-const-variable",
@@ -560,9 +559,12 @@ ohos_shared_library("shared_icui18n") {
   ]
   ldflags = [
     "-shared",
-    "-ldl",
     "-lm",
   ]
+  if (!is_mingw) {
+    cflags_cc += [ "-fPIC" ]
+    ldflags += [ "-ldl" ]
+  }
   if (is_standard_system) {
     part_name = "i18n_standard"
     subsystem_name = "global"
