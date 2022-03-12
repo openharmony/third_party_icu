@@ -98,6 +98,7 @@ UnicodeString* Win32DateFormat::getTimeDateFormat(const Calendar *cal, const Loc
 // be factored out into a common helper for both.
 static UErrorCode GetEquivalentWindowsLocaleName(const Locale& locale, UnicodeString** buffer)
 {
+#if defined(WINVER) && (WINVER >= 0x0601)
     UErrorCode status = U_ZERO_ERROR;
     char asciiBCP47Tag[LOCALE_NAME_MAX_LENGTH] = {};
 
@@ -156,6 +157,10 @@ static UErrorCode GetEquivalentWindowsLocaleName(const Locale& locale, UnicodeSt
         }
     }
     return status;
+#else
+    UErrorCode status = U_UNSUPPORTED_ERROR;
+    return status;
+#endif
 }
 
 // TODO: Range-check timeStyle, dateStyle
