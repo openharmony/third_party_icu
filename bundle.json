@@ -7,15 +7,14 @@
     "segment": {
         "destPath": "third_party/icu"
     },
-    "dirs": {},
+    "dirs": [],
     "scripts": {},
-    "licensePath": "icu4c/LICENSE",
     "component": {
-        "name": "thirdparty_icu",
-        "subsystem": "",
+        "name": "icu",
+        "subsystem": "thirdparty",
         "syscap": [],
         "features": [],
-        "adapted_system_type": [],
+        "adapted_system_type": [ "standard" ],
         "rom": "",
         "ram": "",
         "deps": {
@@ -23,7 +22,11 @@
             "third_party": []
         },
         "build": {
-            "sub_component": [],
+            "sub_component": [
+                "//third_party/icu/icu4c:ohos_icudat",
+                "//third_party/icu/icu4c:shared_icuuc",
+                "//third_party/icu/icu4c:shared_icui18n"
+            ],
             "inner_kits": [],
             "test": []
         }
