@@ -15,8 +15,12 @@
 
 #include "init_data.h"
 
+#include <mutex>
+
 namespace {
 const char* g_hwDirectory = "/system/usr/ohos_icu";
+static int status = 0;
+std::mutex dataMutex;
 }
 
 /**
@@ -24,5 +28,10 @@ const char* g_hwDirectory = "/system/usr/ohos_icu";
  */
 void SetHwIcuDirectory( )
 {
+    std::lock_guard<std::mutex> lock(dataMutex);
+    if (status != 0) {
+        return;
+    }
     u_setDataDirectory(g_hwDirectory);
+    status = 1;
 }
