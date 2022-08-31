@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 uz{
     Keys{
         calendar{"taqvim"}
@@ -23,14 +24,14 @@ uz{
         ak{"akan"}
         ale{"aleut"}
         alt{"janubiy oltoy"}
-        am{"amxara"}
+        am{"amxar"}
         an{"aragon"}
         anp{"angika"}
         ar{"arab"}
         ar_001{"standart arab"}
         arn{"mapuche"}
         arp{"arapaxo"}
-        as{"assom"}
+        as{"assam"}
         asa{"asu"}
         ast{"asturiy"}
         av{"avar"}
@@ -54,7 +55,7 @@ uz{
         bo{"tibet"}
         br{"breton"}
         brx{"bodo"}
-        bs{"bosniya"}
+        bs{"bosniy"}
         bug{"bugi"}
         byn{"blin"}
         ca{"katalan"}
@@ -79,7 +80,7 @@ uz{
         dak{"dakota"}
         dar{"dargva"}
         dav{"taita"}
-        de{"nemis"}
+        de{"nemischa"}
         de_AT{"nemis (Avstriya)"}
         de_CH{"yuqori nemis (Shveytsariya)"}
         dgr{"dogrib"}
@@ -95,28 +96,28 @@ uz{
         efi{"efik"}
         eka{"ekajuk"}
         el{"grek"}
-        en{"ingliz"}
+        en{"inglizcha"}
         en_AU{"ingliz (Avstraliya)"}
         en_CA{"ingliz (Kanada)"}
         en_GB{"ingliz (Britaniya)"}
         en_US{"ingliz (Amerika)"}
         eo{"esperanto"}
-        es{"ispan"}
+        es{"ispancha"}
         es_419{"ispan (Lotin Amerikasi)"}
         es_ES{"ispan (Yevropa)"}
         es_MX{"ispan (Meksika)"}
-        et{"eston"}
+        et{"estoncha"}
         eu{"bask"}
         ewo{"evondo"}
         fa{"fors"}
         fa_AF{"dari"}
         ff{"fula"}
-        fi{"fin"}
-        fil{"filippin"}
+        fi{"fincha"}
+        fil{"filipincha"}
         fj{"fiji"}
         fo{"farercha"}
         fon{"fon"}
-        fr{"fransuz"}
+        fr{"fransuzcha"}
         fr_CA{"fransuz (Kanada)"}
         fr_CH{"fransuz (Shveytsariya)"}
         fur{"friul"}
@@ -137,7 +138,6 @@ uz{
         gv{"men"}
         gwi{"gvichin"}
         ha{"xausa"}
-        hak{"hak"}
         haw{"gavaycha"}
         he{"ivrit"}
         hi{"hind"}
@@ -145,7 +145,6 @@ uz{
         hmn{"xmong"}
         hr{"xorvat"}
         hsb{"yuqori sorb"}
-        hsn{"hsn"}
         ht{"gaityan"}
         hu{"venger"}
         hup{"xupa"}
@@ -167,8 +166,8 @@ uz{
         jbo{"lojban"}
         jgo{"ngomba"}
         jmc{"machame"}
-        jv{"yava"}
-        ka{"gruzin"}
+        jv{"yavan"}
+        ka{"gruzincha"}
         kab{"kabil"}
         kac{"kachin"}
         kaj{"kaji"}
@@ -182,14 +181,14 @@ uz{
         khq{"koyra-chiini"}
         ki{"kikuyu"}
         kj{"kvanyama"}
-        kk{"qozoq"}
+        kk{"qozoqcha"}
         kkj{"kako"}
         kl{"grenland"}
         kln{"kalenjin"}
-        km{"kxmer"}
+        km{"xmer"}
         kmb{"kimbundu"}
         kn{"kannada"}
-        ko{"koreys"}
+        ko{"koreyscha"}
         koi{"komi-permyak"}
         kok{"konkan"}
         kpe{"kpelle"}
@@ -205,7 +204,7 @@ uz{
         kum{"qo‘miq"}
         kv{"komi"}
         kw{"korn"}
-        ky{"qirgʻiz"}
+        ky{"qirgʻizcha"}
         la{"lotincha"}
         lad{"ladino"}
         lag{"langi"}
@@ -225,7 +224,7 @@ uz{
         luo{"luo"}
         lus{"lushay"}
         luy{"luhya"}
-        lv{"latish"}
+        lv{"latishcha"}
         mad{"madur"}
         mag{"magahi"}
         mai{"maythili"}
@@ -248,21 +247,20 @@ uz{
         mni{"manipur"}
         moh{"mohauk"}
         mos{"mossi"}
-        mr{"marathiy"}
+        mr{"maratxi"}
         ms{"malay"}
         mt{"maltiy"}
         mua{"mundang"}
         mul{"bir nechta til"}
         mus{"krik"}
         mwl{"miranda"}
-        my{"birma"}
+        my{"birman"}
         myv{"erzya"}
         mzn{"mozandaron"}
         na{"nauru"}
-        nan{"nan"}
         nap{"neapolitan"}
         naq{"nama"}
-        nb{"norveg-bukmol"}
+        nb{"norveg-bokmal"}
         nd{"shimoliy ndebele"}
         nds{"quyi nemis"}
         nds_NL{"quyi sakson"}
@@ -288,16 +286,16 @@ uz{
         om{"oromo"}
         or{"oriya"}
         os{"osetin"}
-        pa{"panjob"}
+        pa{"panjobcha"}
         pag{"pangasinan"}
         pam{"pampanga"}
         pap{"papiyamento"}
         pau{"palau"}
         pcm{"kreol (Nigeriya)"}
-        pl{"polyak"}
+        pl{"polyakcha"}
         prg{"pruss"}
         ps{"pushtu"}
-        pt{"portugal"}
+        pt{"portugalcha"}
         pt_BR{"portugal (Braziliya)"}
         pt_PT{"portugal (Yevropa)"}
         qu{"kechua"}
@@ -306,11 +304,10 @@ uz{
         rar{"rarotongan"}
         rm{"romansh"}
         rn{"rundi"}
-        ro{"rumin"}
+        ro{"rumincha"}
         ro_MD{"moldovan"}
         rof{"rombo"}
-        root{"tub aholi tili"}
-        ru{"rus"}
+        ru{"ruscha"}
         rup{"arumin"}
         rw{"kinyaruanda"}
         rwk{"ruanda"}
@@ -333,8 +330,8 @@ uz{
         shi{"tashelxit"}
         shn{"shan"}
         si{"singal"}
-        sk{"slovak"}
-        sl{"sloven"}
+        sk{"slovakcha"}
+        sl{"slovencha"}
         sm{"samoa"}
         sma{"janubiy saam"}
         smj{"lule-saam"}
@@ -344,7 +341,7 @@ uz{
         snk{"soninke"}
         so{"somalicha"}
         sq{"alban"}
-        sr{"serb"}
+        sr{"serbcha"}
         srn{"sranan-tongo"}
         ss{"svati"}
         ssy{"saho"}
@@ -398,7 +395,6 @@ uz{
         war{"varay"}
         wbp{"valbiri"}
         wo{"volof"}
-        wuu{"wuu"}
         xal{"qalmoq"}
         xh{"kxosa"}
         xog{"soga"}
@@ -474,10 +470,6 @@ uz{
         Zxxx{"yozuvsiz"}
         Zyyy{"umumiy"}
         Zzzz{"noma’lum yozuv"}
-    }
-    Scripts%stand-alone{
-        Hans{"soddalashgan xitoy"}
-        Hant{"an’anaviy xitoy"}
     }
     Types{
         calendar{
@@ -556,7 +548,6 @@ uz{
             tibt{"tibet raqamlari"}
         }
     }
-    Version{"37"}
     characterLabelPattern{
         all{"{0} — hammasi"}
         category-list{"{0}: {1}"}
@@ -571,6 +562,8 @@ uz{
             one{"{0} ta chiziq"}
             other{"{0} ta chiziq"}
         }
+        subscript{"{0} pastki yozuv"}
+        superscript{"{0} ustki yozuv"}
     }
     codePatterns{
         language{"Til: {0}"}
