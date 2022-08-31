@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 ee{
     Countries{
         001{"xexeme"}
@@ -106,7 +107,7 @@ ee{
         EU{"Europa Wɔɖeka nutome"}
         FI{"Finland nutome"}
         FJ{"Fidzi nutome"}
-        FK{"Falkland ƒudomekpowo (Islas Malvinas) nutome"}
+        FK{"Falkland ƒudomekpowo nutome"}
         FM{"Mikronesia nutome"}
         FO{"Faroe ƒudomekpowo nutome"}
         FR{"France nutome"}
@@ -129,7 +130,7 @@ ee{
         GU{"Guam nutome"}
         GW{"Gini-Bisao nutome"}
         GY{"Guyanadu"}
-        HK{"Hɔng Kɔng nutome"}
+        HK{"Hɔng Kɔng SAR Tsaina nutome"}
         HM{"Heard kple Mcdonald ƒudomekpowo nutome"}
         HN{"Hondurasdu"}
         HR{"Kroatsia nutome"}
@@ -179,11 +180,10 @@ ee{
         MF{"Saint Martin nutome"}
         MG{"Madagaska nutome"}
         MH{"Marshal ƒudomekpowo nutome"}
-        MK{"Makedonia (FYROM) nutome"}
         ML{"Mali nutome"}
         MM{"Myanmar (Burma) nutome"}
         MN{"Mongolia nutome"}
-        MO{"Macau nutome"}
+        MO{"Macau SAR Tsaina nutome"}
         MP{"Dziehe Marina ƒudomekpowo nutome"}
         MQ{"Martiniki nutome"}
         MR{"Mauritania nutome"}
@@ -297,5 +297,4 @@ ee{
         FK{"Falkland ƒudomekpowo (Islas Malvinas) nutome"}
         TL{"Ɣedzeƒe Timɔ nutome"}
     }
-    Version{"37"}
 }

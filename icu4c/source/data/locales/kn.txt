@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 kn{
     AuxExemplarCharacters{"[\u200C\u200D ೞ]"}
     Ellipsis{
@@ -240,7 +241,6 @@ kn{
         minimumGroupingDigits{"1"}
         native{"knda"}
     }
-    Version{"37"}
     calendar{
         buddhist{
             eras{
@@ -481,10 +481,10 @@ kn{
         }
         generic{
             DateTimePatterns{
-                "h:mm:ss a zzzz",
-                "h:mm:ss a z",
-                "h:mm:ss a",
-                "h:mm a",
+                "hh:mm:ss a zzzz",
+                "hh:mm:ss a z",
+                "hh:mm:ss a",
+                "hh:mm a",
                 "G y MMMM d, EEEE",
                 "G y MMMM d",
                 "G y MMM d",
@@ -638,25 +638,25 @@ kn{
         }
         gregorian{
             AmPmMarkers{
-                "AM",
-                "PM",
+                "ಪೂರ್ವಾಹ್ನ",
+                "ಅಪರಾಹ್ನ",
             }
             AmPmMarkersAbbr{
-                "AM",
-                "PM",
+                "ಪೂರ್ವಾಹ್ನ",
+                "ಅಪರಾಹ್ನ",
             }
             AmPmMarkersNarrow{
-                "AM",
-                "PM",
+                "ಪೂ",
+                "ಅ",
             }
             DateTimePatterns{
-                "h:mm:ss a zzzz",
-                "h:mm:ss a z",
-                "h:mm:ss a",
-                "h:mm a",
-                "d MMMM y, EEEE",
-                "d MMMM y",
-                "d MMM y",
+                "hh:mm:ss a zzzz",
+                "hh:mm:ss a z",
+                "hh:mm:ss a",
+                "hh:mm a",
+                "EEEE, MMMM d, y",
+                "MMMM d, y",
+                "MMM d, y",
                 "d/M/yy",
                 "{1} {0}",
                 "{1} {0}",
@@ -691,14 +691,14 @@ kn{
                 M{"L"}
                 MEd{"d/M, E"}
                 MMM{"LLL"}
-                MMMEd{"d MMM, E"}
+                MMMEd{"E, d MMM"}
                 MMMMW{
                     one{"'week' W 'of' MMMM"}
                     other{"'week' W 'of' MMMM"}
                 }
                 MMMMd{"d MMMM"}
-                MMMd{"d MMM"}
-                MMdd{"dd/MM"}
+                MMMd{"MMM d"}
+                MMdd{"dd-MM"}
                 Md{"d/M"}
                 d{"d"}
                 h{"h a"}
@@ -709,12 +709,12 @@ kn{
                 ms{"mm:ss"}
                 y{"y"}
                 yM{"M/y"}
-                yMEd{"d/M/y, E"}
-                yMM{"M/y"}
+                yMEd{"E, M/d/y"}
+                yMM{"MM-y"}
                 yMMM{"MMM y"}
-                yMMMEd{"d MMM y, E"}
+                yMMMEd{"E, MMM d, y"}
                 yMMMM{"MMMM y"}
-                yMMMd{"d MMM y"}
+                yMMMd{"MMM d,y"}
                 yMd{"d/M/y"}
                 yQQQ{"QQQ y"}
                 yQQQQ{"QQQQ y"}
@@ -828,30 +828,30 @@ kn{
                 stand-alone{
                     abbreviated{
                         afternoon1{"ಮಧ್ಯಾಹ್ನ"}
-                        am{"AM"}
+                        am{"ಪೂರ್ವಾಹ್ನ"}
                         evening1{"ಸಂಜೆ"}
                         midnight{"ಮಧ್ಯರಾತ್ರಿ"}
                         morning1{"ಬೆಳಗ್ಗೆ"}
                         night1{"ರಾತ್ರಿ"}
-                        pm{"PM"}
+                        pm{"ಅಪರಾಹ್ನ"}
                     }
                     narrow{
                         afternoon1{"ಮಧ್ಯಾಹ್ನ"}
-                        am{"AM"}
+                        am{"ಪೂರ್ವಾಹ್ನ"}
                         evening1{"ಸಂಜೆ"}
                         midnight{"ಮಧ್ಯರಾತ್ರಿ"}
                         morning1{"ಬೆಳಗ್ಗೆ"}
                         night1{"ರಾತ್ರಿ"}
-                        pm{"PM"}
+                        pm{"ಅಪರಾಹ್ನ"}
                     }
                     wide{
                         afternoon1{"ಮಧ್ಯಾಹ್ನ"}
-                        am{"AM"}
+                        am{"ಪೂರ್ವಾಹ್ನ"}
                         evening1{"ಸಂಜೆ"}
                         midnight{"ಮಧ್ಯರಾತ್ರಿ"}
                         morning1{"ಬೆಳಗ್ಗೆ"}
                         night1{"ರಾತ್ರಿ"}
-                        pm{"PM"}
+                        pm{"ಅಪರಾಹ್ನ"}
                     }
                 }
             }
@@ -901,23 +901,23 @@ kn{
                     M{"M–M"}
                 }
                 MEd{
-                    M{"d/M, E - d/M, E"}
-                    d{"d/M, E - d/M, E"}
+                    M{"E, M/d – E, M/d"}
+                    d{"E, M/d – E, M/d"}
                 }
                 MMM{
                     M{"MMM–MMM"}
                 }
                 MMMEd{
-                    M{"d MMM, E - d MMM, E"}
-                    d{"d-d MMM, E"}
+                    M{"MMM d, E – MMM d, E"}
+                    d{"MMM d, E – MMM d, E"}
                 }
                 MMMd{
-                    M{"d MMM - d MMM"}
-                    d{"d–d MMM"}
+                    M{"d MMM – d MMM"}
+                    d{"MMM d – d"}
                 }
                 Md{
-                    M{"d/M – d/M"}
-                    d{"d/M – d/M"}
+                    M{"M/d – M/d"}
+                    d{"M/d – M/d"}
                 }
                 d{
                     d{"d–d"}
@@ -949,39 +949,39 @@ kn{
                     y{"M/y – M/y"}
                 }
                 yMEd{
-                    M{"d/M/y, E – d/M/y, E"}
-                    d{"d/M/y, E – d/M/y, E"}
-                    y{"d/M/y, E – d/M/y, E"}
+                    M{"E, M/d/y – E, M/d/y"}
+                    d{"d/M/y,E – d/M/y,E,"}
+                    y{"E, M/d/y – E, M/d/y"}
                 }
                 yMMM{
                     M{"MMM–MMM y"}
                     y{"MMM y – MMM y"}
                 }
                 yMMMEd{
-                    M{"d MMM y, E – d MMM y, E"}
-                    d{"d MMM y, E – d MMM y, E"}
-                    y{"d MMM y, E – d MMM y, E"}
+                    M{"E, MMM d – E, MMMM d, y"}
+                    d{"E, MMM d – E, MMM d,y"}
+                    y{"d MMM, y E – d MMM, y E"}
                 }
                 yMMMM{
                     M{"MMMM – MMMM y"}
                     y{"MMMM y – MMMM y"}
                 }
                 yMMMd{
-                    M{"d MMM – d MMM y"}
-                    d{"d–d MMM y"}
-                    y{"d MMM y – d MMM y"}
+                    M{"d MMM – d MMM, y"}
+                    d{"MMM d–d,y"}
+                    y{"d, MMM, y – d, MMM, y"}
                 }
                 yMd{
-                    M{"d/M/y – d/M/y"}
-                    d{"d/M/y – d/M/y"}
-                    y{"d/M/y – d/M/y"}
+                    M{"M/d/y – M/d/y"}
+                    d{"M/d/y – M/d/y"}
+                    y{"M/d/y – M/d/y"}
                 }
             }
             monthNames{
                 format{
                     abbreviated{
-                        "ಜನ",
-                        "ಫೆಬ್ರ",
+                        "ಜನವರಿ",
+                        "ಫೆಬ್ರವರಿ",
                         "ಮಾರ್ಚ್",
                         "ಏಪ್ರಿ",
                         "ಮೇ",

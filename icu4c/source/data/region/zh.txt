@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 zh{
     Countries{
         001{"世界"}
@@ -133,7 +134,7 @@ zh{
         GU{"关岛"}
         GW{"几内亚比绍"}
         GY{"圭亚那"}
-        HK{"中国香港"}
+        HK{"中国香港特别行政区"}
         HM{"赫德岛和麦克唐纳群岛"}
         HN{"洪都拉斯"}
         HR{"克罗地亚"}
@@ -187,7 +188,7 @@ zh{
         ML{"马里"}
         MM{"缅甸"}
         MN{"蒙古"}
-        MO{"中国澳门"}
+        MO{"中国澳门特别行政区"}
         MP{"北马里亚纳群岛"}
         MQ{"马提尼克"}
         MR{"毛里塔尼亚"}
@@ -269,7 +270,7 @@ zh{
         TR{"土耳其"}
         TT{"特立尼达和多巴哥"}
         TV{"图瓦卢"}
-        TW{"中国台湾"}
+        TW{"台湾"}
         TZ{"坦桑尼亚"}
         UA{"乌克兰"}
         UG{"乌干达"}
@@ -298,12 +299,9 @@ zh{
         ZZ{"未知地区"}
     }
     Countries%short{
-        GB{"英国"}
         HK{"香港"}
         MO{"澳门"}
         PS{"巴勒斯坦"}
-        UN{"联合国"}
-        US{"美国"}
     }
     Countries%variant{
         CD{"刚果民主共和国"}
@@ -312,5 +310,4 @@ zh{
         CZ{"捷克共和国"}
         FK{"福克兰群岛（马尔维纳斯群岛）"}
     }
-    Version{"37"}
 }

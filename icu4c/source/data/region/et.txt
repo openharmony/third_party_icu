@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 et{
     Countries{
         001{"maailm"}
@@ -115,7 +116,7 @@ et{
         FO{"Fääri saared"}
         FR{"Prantsusmaa"}
         GA{"Gabon"}
-        GB{"Suurbritannia"}
+        GB{"Ühendkuningriik"}
         GD{"Grenada"}
         GE{"Gruusia"}
         GF{"Prantsuse Guajaana"}
@@ -133,7 +134,7 @@ et{
         GU{"Guam"}
         GW{"Guinea-Bissau"}
         GY{"Guyana"}
-        HK{"Hongkong, Hiina"}
+        HK{"Hongkongi erihalduspiirkond"}
         HM{"Heardi ja McDonaldi saared"}
         HN{"Honduras"}
         HR{"Horvaatia"}
@@ -187,7 +188,7 @@ et{
         ML{"Mali"}
         MM{"Myanmar (Birma)"}
         MN{"Mongoolia"}
-        MO{"Macau, Hiina"}
+        MO{"Macau erihalduspiirkond"}
         MP{"Põhja-Mariaanid"}
         MQ{"Martinique"}
         MR{"Mauritaania"}
@@ -253,7 +254,7 @@ et{
         SV{"El Salvador"}
         SX{"Sint Maarten"}
         SY{"Süüria"}
-        SZ{"eSwatini"}
+        SZ{"Svaasimaa"}
         TA{"Tristan da Cunha"}
         TC{"Turks ja Caicos"}
         TD{"Tšaad"}
@@ -269,7 +270,7 @@ et{
         TR{"Türgi"}
         TT{"Trinidad ja Tobago"}
         TV{"Tuvalu"}
-        TW{"Taiwan, Hiina"}
+        TW{"Taiwan"}
         TZ{"Tansaania"}
         UA{"Ukraina"}
         UG{"Uganda"}
@@ -309,10 +310,9 @@ et{
         CD{"Kongo-Kinshasa"}
         CG{"Kongo-Brazzaville"}
         CI{"Elevandiluurannik"}
-        CZ{"Tšehhia"}
-        FK{"Malviini saared"}
+        CZ{"Tšehhi Vabariik"}
+        FK{"Falklandi saared (Malviini saared)"}
         SZ{"eSwatini"}
         TL{"Timor-Leste"}
     }
-    Version{"37"}
 }
