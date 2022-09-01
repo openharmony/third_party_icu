@@ -57,7 +57,6 @@ private:
     void TestSTLCompatibility();
     void TestCharString();
     void TestCStr();
-    void TestCharStrAppendNumber();
     void Testctou();
 };
 

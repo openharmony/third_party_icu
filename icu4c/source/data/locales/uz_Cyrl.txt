@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 uz_Cyrl{
     %%Parent{"root"}
     AuxExemplarCharacters{"[ц щ ы ь]"}
@@ -166,6 +165,7 @@ uz_Cyrl{
             }
         }
     }
+    Version{"37"}
     calendar{
         generic{
             DateTimePatterns{

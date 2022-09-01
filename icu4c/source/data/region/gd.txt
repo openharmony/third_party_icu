@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 gd{
     Countries{
         001{"An Saoghal"}
@@ -111,7 +110,7 @@ gd{
         EZ{"Raon an Eòro"}
         FI{"An Fhionnlann"}
         FJ{"Fìdi"}
-        FK{"Na h-Eileanan Fàclannach"}
+        FK{"Na h-Eileanan Fàclannach (Islas Malvinas)"}
         FM{"Na Meanbh-eileanan"}
         FO{"Na h-Eileanan Fàro"}
         FR{"An Fhraing"}
@@ -134,7 +133,7 @@ gd{
         GU{"Guam"}
         GW{"Gini-Bioso"}
         GY{"Guidheàna"}
-        HK{"Hong Kong SAR na Sìne"}
+        HK{"Hong Kong"}
         HM{"Eilean Heard is MhicDhòmhnaill"}
         HN{"Hondùras"}
         HR{"A’ Chròthais"}
@@ -184,11 +183,11 @@ gd{
         MF{"Naomh Màrtainn"}
         MG{"Madagasgar"}
         MH{"Eileanan Mharshall"}
-        MK{"A’ Mhasadon a Tuath"}
+        MK{"A’ Mhasadon (FYROM)"}
         ML{"Màili"}
         MM{"Miànmar"}
         MN{"Dùthaich nam Mongol"}
-        MO{"Macàthu SAR na Sìne"}
+        MO{"Macàthu"}
         MP{"Na h-Eileanan Mairianach a Tuath"}
         MQ{"Mairtinic"}
         MR{"Moratàinea"}
@@ -223,7 +222,7 @@ gd{
         PM{"Saint Pierre agus Miquelon"}
         PN{"Eileanan Pheit a’ Chàirn"}
         PR{"Porto Rìceo"}
-        PS{"Ùghdarras nam Palastaineach"}
+        PS{"Palastain"}
         PT{"A’ Phortagail"}
         PW{"Palabh"}
         PY{"Paraguaidh"}
@@ -242,7 +241,7 @@ gd{
         SG{"Singeapòr"}
         SH{"Eilean Naomh Eilidh"}
         SI{"An t-Slòbhain"}
-        SJ{"Svalbard is Jan Mayen"}
+        SJ{"Svalbard agus Jan Mayen"}
         SK{"An t-Slòbhac"}
         SL{"Siarra Leòmhann"}
         SM{"San Marino"}
@@ -254,7 +253,7 @@ gd{
         SV{"An Salbhador"}
         SX{"Sint Maarten"}
         SY{"Siridhea"}
-        SZ{"eSwatini"}
+        SZ{"Dùthaich nan Suasaidh"}
         TA{"Tristan da Cunha"}
         TC{"Na h-Eileanan Turcach is Caiceo"}
         TD{"An t-Seàd"}
@@ -314,4 +313,5 @@ gd{
         SZ{"Dùthaich nan Suasaidh"}
         TL{"Tìomor an Ear"}
     }
+    Version{"37"}
 }

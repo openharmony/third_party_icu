@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 fur{
     Keys{
         calendar{"calendari"}
@@ -300,6 +299,7 @@ fur{
         SOLBA{"dialet di Stolvize"}
         VALENCIA{"valenzian"}
     }
+    Version{"37"}
     codePatterns{
         language{"Lenghe: {0}"}
         script{"Scriture: {0}"}

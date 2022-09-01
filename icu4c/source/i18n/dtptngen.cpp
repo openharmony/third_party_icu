@@ -311,16 +311,6 @@ DateTimePatternGenerator::createInstance(const Locale& locale, UErrorCode& statu
     return U_SUCCESS(status) ? result.orphan() : nullptr;
 }
 
-DateTimePatternGenerator* U_EXPORT2
-DateTimePatternGenerator::createInstanceNoStdPat(const Locale& locale, UErrorCode& status) {
-    if (U_FAILURE(status)) {
-        return nullptr;
-    }
-    LocalPointer<DateTimePatternGenerator> result(
-            new DateTimePatternGenerator(locale, status, true), status);
-    return U_SUCCESS(status) ? result.orphan() : nullptr;
-}
-
 DateTimePatternGenerator*  U_EXPORT2
 DateTimePatternGenerator::createEmptyInstance(UErrorCode& status) {
     if (U_FAILURE(status)) {
@@ -346,7 +336,7 @@ DateTimePatternGenerator::DateTimePatternGenerator(UErrorCode &status) :
     }
 }
 
-DateTimePatternGenerator::DateTimePatternGenerator(const Locale& locale, UErrorCode &status, UBool skipStdPatterns) :
+DateTimePatternGenerator::DateTimePatternGenerator(const Locale& locale, UErrorCode &status) :
     skipMatcher(nullptr),
     fAvailableFormatKeyHash(nullptr),
     fDefaultHourFormatChar(0),
@@ -360,7 +350,7 @@ DateTimePatternGenerator::DateTimePatternGenerator(const Locale& locale, UErrorC
         internalErrorCode = status = U_MEMORY_ALLOCATION_ERROR;
     }
     else {
-        initData(locale, status, skipStdPatterns);
+        initData(locale, status);
     }
 }
 
@@ -499,15 +489,13 @@ enum AllowedHourFormat{
 }  // namespace
 
 void
-DateTimePatternGenerator::initData(const Locale& locale, UErrorCode &status, UBool skipStdPatterns) {
+DateTimePatternGenerator::initData(const Locale& locale, UErrorCode &status) {
     //const char *baseLangName = locale.getBaseName(); // unused
 
     skipMatcher = nullptr;
     fAvailableFormatKeyHash=nullptr;
     addCanonicalItems(status);
-    if (!skipStdPatterns) { // skip to prevent circular dependency when called from SimpleDateFormat::construct
-        addICUPatterns(locale, status);
-    }
+    addICUPatterns(locale, status);
     addCLDRData(locale, status);
     setDateTimeFromCalendar(locale, status);
     setDecimalSymbols(locale, status);
@@ -905,7 +893,7 @@ DateTimePatternGenerator::getCalendarTypeToUse(const Locale& locale, CharString&
             err = localStatus;
             return;
         }
-        if (calendarTypeLen > 0 && calendarTypeLen < ULOC_KEYWORDS_CAPACITY) {
+        if (calendarTypeLen < ULOC_KEYWORDS_CAPACITY) {
             destination.clear().append(calendarType, -1, err);
             if (U_FAILURE(err)) { return; }
         }

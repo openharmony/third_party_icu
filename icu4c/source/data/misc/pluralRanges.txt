@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 pluralRanges:table(nofallback){
     locales{
         af{"set04"}
@@ -49,7 +48,6 @@ pluralRanges:table(nofallback){
         kn{"set01"}
         ko{"set00"}
         ky{"set03"}
-        lij{"set03"}
         lo{"set00"}
         lt{"set15"}
         lv{"set09"}
@@ -62,7 +60,6 @@ pluralRanges:table(nofallback){
         nb{"set04"}
         ne{"set03"}
         nl{"set03"}
-        no{"set04"}
         or{"set07"}
         pa{"set05"}
         pcm{"set04"}

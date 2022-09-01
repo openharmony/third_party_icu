@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 fa{
     AuxExemplarCharacters{
         "[ـ\u200C\u200D\u200E\u200F \u064E \u0650 \u064F \u0652 \u0656 \u0670 إ ك ى ي"
@@ -62,7 +61,6 @@ fa{
             patterns{
                 accountingFormat{"‎¤ #,##0.00;‎(¤ #,##0.00)"}
                 currencyFormat{"‎¤ #,##0.00"}
-                decimalFormat{"#,##0.###"}
                 percentFormat{"#,##0%"}
                 scientificFormat{"#E0"}
             }
@@ -204,7 +202,7 @@ fa{
                     }
                     100000000000{
                         one{"000 ب"}
-                        other{"000B"}
+                        other{"000 میلیارد"}
                     }
                     1000000000000{
                         one{"0 ت"}
@@ -245,6 +243,7 @@ fa{
         minimumGroupingDigits{"1"}
         native{"arabext"}
     }
+    Version{"37"}
     calendar{
         buddhist{
             eras{
@@ -363,7 +362,6 @@ fa{
                 }
             }
         }
-        default{"persian"}
         ethiopic{
             eras{
                 abbreviated{
@@ -656,8 +654,8 @@ fa{
         }
         gregorian{
             AmPmMarkers{
-                "قبل‌ازظهر",
-                "بعدازظهر",
+                "ق.ظ",
+                "ب.ظ",
             }
             AmPmMarkersAbbr{
                 "ق.ظ.",
@@ -2704,13 +2702,13 @@ fa{
             dn{"روز سال"}
         }
         dayperiod{
-            dn{"ق.ظ/ب.ظ"}
+            dn{"قبل/بعدازظهر"}
         }
         dayperiod-narrow{
-            dn{"ق.ظ/ب.ظ"}
+            dn{"قبل/بعدازظهر"}
         }
         dayperiod-short{
-            dn{"ق.ظ/ب.ظ"}
+            dn{"قبل/بعدازظهر"}
         }
         era{
             dn{"دوره"}
@@ -3528,7 +3526,7 @@ fa{
         }
         unit-short{
             2{"{0}،‏ {1}"}
-            end{"{0}، و {1}"}
+            end{"{0}،‏ {1}"}
             middle{"{0}،‏ {1}"}
             start{"{0}،‏ {1}"}
         }

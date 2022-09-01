@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 es{
     Currencies{
         ADP{
@@ -29,7 +28,7 @@ es{
         }
         ANG{
             "ANG",
-            "florín antillano",
+            "florín de las Antillas Neerlandesas",
         }
         AOA{
             "AOA",
@@ -125,7 +124,7 @@ es{
         }
         BMD{
             "BMD",
-            "dólar bermudeño",
+            "dólar de Bermudas",
         }
         BND{
             "BND",
@@ -200,7 +199,7 @@ es{
             "dólar beliceño",
         }
         CAD{
-            "CAD",
+            "CA$",
             "dólar canadiense",
         }
         CDF{
@@ -685,7 +684,7 @@ es{
         }
         NIO{
             "NIO",
-            "córdoba oro",
+            "córdoba nicaragüense",
         }
         NLG{
             "NLG",
@@ -1246,8 +1245,8 @@ es{
             other{"drams"}
         }
         ANG{
-            one{"florín antillano"}
-            other{"florines antillanos"}
+            one{"florín de las Antillas Neerlandesas"}
+            other{"florines de las Antillas Neerlandesas"}
         }
         AOA{
             one{"kuanza"}
@@ -1326,8 +1325,8 @@ es{
             other{"francos burundeses"}
         }
         BMD{
-            one{"dólar bermudeño"}
-            other{"dólares bermudeños"}
+            one{"dólar de Bermudas"}
+            other{"dólares de Bermudas"}
         }
         BND{
             one{"dólar bruneano"}
@@ -1850,8 +1849,8 @@ es{
             other{"córdobas nicaragüenses (1988–1991)"}
         }
         NIO{
-            one{"córdoba oro"}
-            other{"córdobas oro"}
+            one{"córdoba nicaragüense"}
+            other{"córdobas nicaragüenses"}
         }
         NLG{
             one{"florín neerlandés"}
@@ -2230,4 +2229,5 @@ es{
         one{"{0} {1}"}
         other{"{0} {1}"}
     }
+    Version{"37"}
 }

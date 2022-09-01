@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 shi_Latn{
     %%Parent{"root"}
     Countries{
@@ -129,6 +128,7 @@ shi_Latn{
         MD{"muldufya"}
         MG{"madaɣacqar"}
         MH{"tigzirin n marcal"}
+        MK{"masidunya"}
         ML{"mali"}
         MM{"myanmar"}
         MN{"mnɣulya"}
@@ -228,4 +228,5 @@ shi_Latn{
         ZM{"zambya"}
         ZW{"zimbabwi"}
     }
+    Version{"37"}
 }

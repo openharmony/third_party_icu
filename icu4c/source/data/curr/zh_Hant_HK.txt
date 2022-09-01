@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 zh_Hant_HK{
     Currencies{
         AED{
@@ -256,7 +255,7 @@ zh_Hant_HK{
             "東加勒比元",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "多哥非洲共同體法郎",
         }
         XPF{
@@ -469,4 +468,5 @@ zh_Hant_HK{
             other{"贊比亞克瓦查"}
         }
     }
+    Version{"37"}
 }

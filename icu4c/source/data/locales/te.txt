@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 te{
     AuxExemplarCharacters{"[\u200C\u200D ౦ ౧ ౨ ౩ ౪ ౫ ౬ ౭ ౮ ౯]"}
     Ellipsis{
@@ -241,6 +240,7 @@ te{
             }
         }
     }
+    Version{"37"}
     calendar{
         buddhist{
             eras{
@@ -663,7 +663,7 @@ te{
                 "h:mm:ss a z",
                 "h:mm:ss a",
                 "h:mm a",
-                "d, MMMM y, EEEE",
+                "EEEE, d MMMM, y",
                 "d MMMM, y",
                 "d MMM, y",
                 "dd-MM-yy",
@@ -698,9 +698,9 @@ te{
                 Hmsv{"HH:mm:ss v"}
                 Hmv{"HH:mm v"}
                 M{"L"}
-                MEd{"d/M, E"}
+                MEd{"E, dd-MM"}
                 MMM{"LLL"}
-                MMMEd{"d MMM, E"}
+                MMMEd{"E, d MMM"}
                 MMMMW{
                     one{"MMMMలో Wవ వారం"}
                     other{"MMMMలో Wవ వారం"}
@@ -708,7 +708,7 @@ te{
                 MMMMd{"d MMMM"}
                 MMMd{"d MMM"}
                 MMdd{"dd-MM"}
-                Md{"d/M"}
+                Md{"dd-MM"}
                 d{"d"}
                 h{"h a"}
                 hm{"h:mm a"}
@@ -717,14 +717,14 @@ te{
                 hmv{"h:mm a v"}
                 ms{"mm:ss"}
                 y{"y"}
-                yM{"M/y"}
-                yMEd{"d/M/y, E"}
+                yM{"MM-y"}
+                yMEd{"E, dd-MM-y"}
                 yMM{"MM-y"}
                 yMMM{"MMM y"}
-                yMMMEd{"d MMM, y, E"}
+                yMMMEd{"E, d MMM, y"}
                 yMMMM{"MMMM y"}
-                yMMMd{"d, MMM y"}
-                yMd{"d/M/y"}
+                yMMMd{"d MMM, y"}
+                yMd{"dd-MM-y"}
                 yQQQ{"QQQ y"}
                 yQQQQ{"QQQQ y"}
                 yw{
@@ -944,23 +944,23 @@ te{
                     M{"M–M"}
                 }
                 MEd{
-                    M{"d/M, E – d/M, E"}
-                    d{"d/M, E – d/M, E"}
+                    M{"E, dd-MM – E, dd-MM"}
+                    d{"E, dd-MM – E, dd-MM"}
                 }
                 MMM{
                     M{"MMM–MMM"}
                 }
                 MMMEd{
-                    M{"d MMM, E – d MMM, E"}
-                    d{"d MMM, E – d MMM, E"}
+                    M{"E, d MMM – E, d MMM"}
+                    d{"E, d MMM – E, d MMM"}
                 }
                 MMMd{
                     M{"d MMM – d MMM"}
                     d{"d–d MMM"}
                 }
                 Md{
-                    M{"d/M – d/M"}
-                    d{"d/M – d/M"}
+                    M{"dd-MM – dd-MM"}
+                    d{"dd-MM – dd-MM"}
                 }
                 d{
                     d{"d–d"}
@@ -988,22 +988,22 @@ te{
                     y{"y–y"}
                 }
                 yM{
-                    M{"M/y – M/y"}
-                    y{"M/y – M/y"}
+                    M{"MM-y – MM-y"}
+                    y{"MM-y – MM-y"}
                 }
                 yMEd{
-                    M{"d/M/y, E – d/M/y, E"}
-                    d{"d/M/y, E – d/M/y, E"}
-                    y{"d/M/y, E – d/M/y, E"}
+                    M{"E, dd-MM-y – E, dd-MM-y"}
+                    d{"E, dd-MM-y – E, dd-MM-y"}
+                    y{"E, dd-MM-y – E, dd-MM-y"}
                 }
                 yMMM{
                     M{"MMM–MMM y"}
                     y{"MMM y – MMM y"}
                 }
                 yMMMEd{
-                    M{"d MMM, E – d MMM, y, E"}
-                    d{"d MMM, E – d MMM, y, E"}
-                    y{"d MMM, y, E – d MMM, y, E"}
+                    M{"E, d MMM – E, d MMM, y"}
+                    d{"E, d MMM – E, d MMM, y"}
+                    y{"E, d MMM, y – E, d MMM, y"}
                 }
                 yMMMM{
                     M{"MMMM – MMMM y"}
@@ -1029,7 +1029,7 @@ te{
                         "ఏప్రి",
                         "మే",
                         "జూన్",
-                        "జులై",
+                        "జూలై",
                         "ఆగ",
                         "సెప్టెం",
                         "అక్టో",
@@ -1057,7 +1057,7 @@ te{
                         "ఏప్రిల్",
                         "మే",
                         "జూన్",
-                        "జులై",
+                        "జూలై",
                         "ఆగస్టు",
                         "సెప్టెంబర్",
                         "అక్టోబర్",
@@ -1073,8 +1073,8 @@ te{
                         "ఏప్రి",
                         "మే",
                         "జూన్",
-                        "జులై",
-                        "ఆగ",
+                        "జూలై",
+                        "ఆగస్టు",
                         "సెప్టెం",
                         "అక్టో",
                         "నవం",
@@ -1101,7 +1101,7 @@ te{
                         "ఏప్రిల్",
                         "మే",
                         "జూన్",
-                        "జులై",
+                        "జూలై",
                         "ఆగస్టు",
                         "సెప్టెంబర్",
                         "అక్టోబర్",

@@ -26,8 +26,6 @@
 #include "unicode/uloc.h"
 #include "unicode/ures.h"
 #include "unicode/ustring.h"
-#include "bytesinkutil.h"
-#include "charstr.h"
 #include "cmemory.h"
 #include "cstring.h"
 #include "putilimp.h"
@@ -408,26 +406,20 @@ uloc_getDisplayScript(const char* locale,
                       UChar *dest, int32_t destCapacity,
                       UErrorCode *pErrorCode)
 {
-    UErrorCode err = U_ZERO_ERROR;
-    int32_t res = _getDisplayNameForComponent(locale, displayLocale, dest, destCapacity,
+	UErrorCode err = U_ZERO_ERROR;
+	int32_t res = _getDisplayNameForComponent(locale, displayLocale, dest, destCapacity,
                 uloc_getScript, _kScriptsStandAlone, &err);
-
-    if (destCapacity == 0 && err == U_BUFFER_OVERFLOW_ERROR) {
-        // For preflight, return the max of the value and the fallback.
-        int32_t fallback_res = _getDisplayNameForComponent(locale, displayLocale, dest, destCapacity,
-                                                           uloc_getScript, _kScripts, pErrorCode);
-        return (fallback_res > res) ? fallback_res : res;
-    }
-    if ( err == U_USING_DEFAULT_WARNING ) {
+	
+	if ( err == U_USING_DEFAULT_WARNING ) {
         return _getDisplayNameForComponent(locale, displayLocale, dest, destCapacity,
-                                           uloc_getScript, _kScripts, pErrorCode);
-    } else {
-        *pErrorCode = err;
-        return res;
-    }
+                    uloc_getScript, _kScripts, pErrorCode);
+	} else {
+		*pErrorCode = err;
+		return res;
+	}
 }
 
-static int32_t
+U_INTERNAL int32_t U_EXPORT2
 uloc_getDisplayScriptInContext(const char* locale,
                       const char* displayLocale,
                       UChar *dest, int32_t destCapacity,
@@ -698,7 +690,7 @@ uloc_getDisplayName(const char *locale,
                     } /* end switch */
 
                     if (len>0) {
-                        /* we added a component, so add separator and write it if there's room. */
+                        /* we addeed a component, so add separator and write it if there's room. */
                         if(len+sepLen<=cap) {
                             const UChar * plimit = p + len;
                             for (; p < plimit; p++) {
@@ -735,7 +727,7 @@ uloc_getDisplayName(const char *locale,
                     int32_t padLen;
                     patPos+=subLen;
                     padLen=(subi==0 ? sub1Pos : patLen)-patPos;
-                    if(length+padLen <= destCapacity) {
+                    if(length+padLen < destCapacity) {
                         p=dest+length;
                         for(int32_t i=0;i<padLen;++i) {
                             *p++=pattern[patPos++];
@@ -813,6 +805,10 @@ uloc_getDisplayKeywordValue(   const char* locale,
                                UErrorCode* status){
 
 
+    char keywordValue[ULOC_FULLNAME_CAPACITY*4];
+    int32_t capacity = ULOC_FULLNAME_CAPACITY*4;
+    int32_t keywordValueLen =0;
+
     /* argument checking */
     if(status==NULL || U_FAILURE(*status)) {
         return 0;
@@ -824,11 +820,10 @@ uloc_getDisplayKeywordValue(   const char* locale,
     }
 
     /* get the keyword value */
-    CharString keywordValue;
-    {
-        CharStringByteSink sink(&keywordValue);
-        ulocimp_getKeywordValue(locale, keyword, sink, status);
-    }
+    keywordValue[0]=0;
+    keywordValueLen = uloc_getKeywordValue(locale, keyword, keywordValue, capacity, status);
+    if (*status == U_STRING_NOT_TERMINATED_WARNING)
+      *status = U_BUFFER_OVERFLOW_ERROR;
 
     /* 
      * if the keyword is equal to currency .. then to get the display name 
@@ -844,7 +839,7 @@ uloc_getDisplayKeywordValue(   const char* locale,
         icu::LocalUResourceBundlePointer currencies(
                 ures_getByKey(bundle.getAlias(), _kCurrencies, NULL, status));
         icu::LocalUResourceBundlePointer currency(
-                ures_getByKeyWithFallback(currencies.getAlias(), keywordValue.data(), NULL, status));
+                ures_getByKeyWithFallback(currencies.getAlias(), keywordValue, NULL, status));
 
         dispName = ures_getStringByIndex(currency.getAlias(), UCURRENCY_DISPLAY_NAME_INDEX, &dispNameLen, status);
 
@@ -868,12 +863,12 @@ uloc_getDisplayKeywordValue(   const char* locale,
             }
         }else{
             /* we have not found the display name for the value .. just copy over */
-            if(keywordValue.length() <= destCapacity){
-                u_charsToUChars(keywordValue.data(), dest, keywordValue.length());
-                return u_terminateUChars(dest, destCapacity, keywordValue.length(), status);
+            if(keywordValueLen <= destCapacity){
+                u_charsToUChars(keywordValue, dest, keywordValueLen);
+                return u_terminateUChars(dest, destCapacity, keywordValueLen, status);
             }else{
                  *status = U_BUFFER_OVERFLOW_ERROR;
-                return keywordValue.length();
+                return keywordValueLen;
             }
         }
 
@@ -882,8 +877,8 @@ uloc_getDisplayKeywordValue(   const char* locale,
 
         return _getStringOrCopyKey(U_ICUDATA_LANG, displayLocale,
                                    _kTypes, keyword, 
-                                   keywordValue.data(),
-                                   keywordValue.data(),
+                                   keywordValue,
+                                   keywordValue,
                                    dest, destCapacity,
                                    status);
     }

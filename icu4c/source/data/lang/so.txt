@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 so{
     Keys{
         calendar{"Habeentiris"}
@@ -73,7 +72,7 @@ so{
         fa_AF{"Faarsi"}
         ff{"Fuulah"}
         fi{"Finishka"}
-        fil{"Filibiino"}
+        fil{"Tagalog"}
         fo{"Farowsi"}
         fr{"Faransiis"}
         fr_CA{"Faransiiska Kanada"}
@@ -99,7 +98,7 @@ so{
         hu{"Hangariyaan"}
         hy{"Armeeniyaan"}
         ia{"Interlinguwa"}
-        id{"Indunusiyaan"}
+        id{"Indonesiyaan"}
         ig{"Igbo"}
         ii{"Sijuwan Yi"}
         is{"Ayslandays"}
@@ -155,7 +154,6 @@ so{
         mk{"Masadooniyaan"}
         ml{"Malayalam"}
         mn{"Mangooli"}
-        mni{"Maniburi"}
         mr{"Maarati"}
         ms{"Malaay"}
         mt{"Maltiis"}
@@ -180,7 +178,6 @@ so{
         or{"Oodhiya"}
         os{"Oseetic"}
         pa{"Bunjaabi"}
-        pcm{"Bidjinka Nayjeeriya"}
         pl{"Boolish"}
         prg{"Brashiyaanki Hore"}
         ps{"Bashtuu"}
@@ -192,13 +189,13 @@ so{
         rn{"Rundhi"}
         ro{"Romanka"}
         rof{"Rombo"}
+        root{"Xidid"}
         ru{"Ruush"}
-        rw{"Ruwaandha"}
+        rw{"Rwanda"}
         rwk{"Raawa"}
         sa{"Sanskrit"}
         sah{"Saaqa"}
         saq{"Sambuuru"}
-        sat{"Santali"}
         sbp{"Sangu"}
         sd{"Siindhi"}
         se{"Koonfurta Saami"}
@@ -249,9 +246,9 @@ so{
         yo{"Yoruuba"}
         yue{"Kantoneese"}
         zgh{"Morokaanka Tamasayt Rasmiga"}
-        zh{"Shiinaha Mandarin"}
-        zh_Hans{"Shiinaha Rasmiga ah"}
-        zh_Hant{"Shiinahii Hore"}
+        zh{"Jayniis Mandarin"}
+        zh_Hans{"Jayniis rasmiga ah"}
+        zh_Hant{"Jayniiskii hore"}
         zu{"Zuulu"}
         zxx{"Luuqad Looma Hayo"}
     }
@@ -444,15 +441,15 @@ so{
             dangi{"Habeetiriska Dangi"}
             ethiopic{"Habeentiriska Itoobiya"}
             ethiopic-amete-alem{"Taariikhda Itoobiya ee Amete Alem"}
-            gregorian{"Habeetiriska Geregoriyaan"}
+            gregorian{"Geregoriyaan"}
             hebrew{"Habeentiriska yuhuudda"}
-            indian{"Habeentiris Qarameedka Hindiya"}
+            indian{"Taariikhda Qaranka Hindiya"}
             islamic{"Habeentiriska islaamka"}
             islamic-civil{"Taariikhda Islaamiga (tabular, civil epoch)"}
             islamic-rgsa{"Habeentiriska Islaamka (Sacuudiga, aragtida)"}
             islamic-tbla{"Taariikhda Islaamiga (tabular, astronomical epoch)"}
             islamic-umalqura{"Taariikhda Islaamiga(Umm al-Qura)"}
-            iso8601{"Habeentiriska ISO-8601"}
+            iso8601{"iso8601"}
             japanese{"Habeentiriska jabbaanka"}
             persian{"Habeentiriska Baarshiyaanka"}
             roc{"Habeentiriska Minguwo"}
@@ -474,8 +471,7 @@ so{
             reformed{"Isku hagaajinta Reformed"}
             search{"Raadinta Guud"}
             searchjl{"Raadinta Shibanaha Hangul"}
-            standard{"Amarka Kala Soocidda Caadiga ah"}
-            stroke{"Isku hagaajinta Farta"}
+            standard{"Istaandar"}
             traditional{"Isku hagaajin Fareedkii Hore"}
             unihan{"Isku hagaajinta Farta Radical-Stroke"}
             zhuyin{"Isku hagaajinta Farta Zhuyin"}
@@ -536,7 +532,6 @@ so{
             lana{"Godadka Tai Tham Hora"}
             lanatham{"Godadka Tai Tham"}
             laoo{"Godadka Laao"}
-            latn{"Godadka Ree Galbeedka"}
             lepc{"Godadka Lepcha"}
             limb{"Godadka Limbu"}
             mathbold{"Godad Xisaabeedka Waaweeyn"}
@@ -562,7 +557,7 @@ so{
             saur{"Godadka Saurashtra"}
             shrd{"Godadka Sharada"}
             sind{"Godadka Khudawadi"}
-            sinh{"Godadka Sinhala Lith"}
+            latn{"Laatiin"}
             sora{"Godadka Sora Sompeng"}
             sund{"Godadka Sundaniiska"}
             takr{"Godadka Takri"}
@@ -627,6 +622,7 @@ so{
         UCRCOR{"orthographyga mideeysan ee hadana ladul maray"}
         VALENCIA{"Faleensiyaawi"}
     }
+    Version{"37"}
     characterLabelPattern{
         all{"{0} dhamaan"}
         compatibility{"{0} — waafaqsanaanta"}
@@ -640,12 +636,15 @@ so{
             one{"{0} garaaca"}
             other{"{0} graacis"}
         }
-        subscript{"kordhig{0}"}
-        superscript{"kordhig {0}"}
     }
     codePatterns{
         language{"Luuqad : {0}"}
         script{"Qoraal: {0}"}
         territory{"Gobol : {0}"}
+    }
+    localeDisplayPattern{
+        keyTypePattern{"{0}: {1}"}
+        pattern{"{0} ({1})"}
+        separator{"{0}, {1}"}
     }
 }

@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ne{
     Currencies{
         AED{
@@ -632,7 +631,7 @@ ne{
             "पूर्वी क्यारिबियन डलर",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "सीएफ्‌ए फ्रान्क बीसीइएओ",
         }
         XPF{
@@ -1415,4 +1414,5 @@ ne{
             other{"जाम्बियाली क्वाचा"}
         }
     }
+    Version{"37"}
 }

@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ia{
     Countries{
         001{"Mundo"}
@@ -41,7 +40,6 @@ ia{
         AL{"Albania"}
         AM{"Armenia"}
         AO{"Angola"}
-        AQ{"Antarctica"}
         AR{"Argentina"}
         AS{"Samoa american"}
         AT{"Austria"}
@@ -152,7 +150,7 @@ ia{
         ME{"Montenegro"}
         MG{"Madagascar"}
         MH{"Insulas Marshall"}
-        MK{"Macedonia"}
+        MK{"Macedonia (ARYM)"}
         ML{"Mali"}
         MN{"Mongolia"}
         MP{"Insulas Marianna del Nord"}
@@ -206,7 +204,6 @@ ia{
         SY{"Syria"}
         SZ{"Swazilandia"}
         TC{"Insulas Turcos e Caicos"}
-        TD{"Tchad"}
         TF{"Territorios meridional francese"}
         TG{"Togo"}
         TH{"Thailandia"}
@@ -246,4 +243,5 @@ ia{
     Countries%variant{
         CZ{"Republica Chec"}
     }
+    Version{"37"}
 }

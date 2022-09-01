@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 tr{
     Keys{
         calendar{"Takvim"}
@@ -56,10 +55,10 @@ tr{
         arw{"Arawak Dili"}
         ary{"Fas Arapçası"}
         arz{"Mısır Arapçası"}
-        as{"Assamca"}
+        as{"Assam dili"}
         asa{"Asu"}
         ase{"Amerikan İşaret Dili"}
-        ast{"Asturyasça"}
+        ast{"Asturyasca"}
         av{"Avar Dili"}
         avk{"Kotava"}
         awa{"Awadhi"}
@@ -377,7 +376,7 @@ tr{
         mgh{"Makhuwa-Meetto"}
         mgo{"Meta’"}
         mh{"Marshall Adaları dili"}
-        mi{"Maori dili"}
+        mi{"Maorice"}
         mic{"Micmac"}
         min{"Minangkabau"}
         mk{"Makedonca"}
@@ -438,7 +437,7 @@ tr{
         oc{"Oksitan dili"}
         oj{"Ojibva dili"}
         om{"Oromo dili"}
-        or{"Oriya dili"}
+        or{"Oriya Dili"}
         os{"Osetçe"}
         osa{"Osage"}
         ota{"Osmanlı Türkçesi"}
@@ -480,6 +479,7 @@ tr{
         ro_MD{"Moldovaca"}
         rof{"Rombo"}
         rom{"Romanca"}
+        root{"Köken"}
         rtm{"Rotuman"}
         ru{"Rusça"}
         rue{"Rusince"}
@@ -648,7 +648,7 @@ tr{
     }
     Languages%menu{
         ars{"Arapça, Necd"}
-        ckb{"Kürtçe, Orta"}
+        ckb{"Kürtçe, Sorani"}
         yue{"Çince, Kantonca"}
         zh{"Çince, Mandarin"}
     }
@@ -656,9 +656,6 @@ tr{
         az{"Azerice"}
         en_GB{"Birleşik Krallık İngilizcesi"}
         en_US{"ABD İngilizcesi"}
-    }
-    Languages%variant{
-        ckb{"Kürtçe, Sorani"}
     }
     Scripts{
         Afak{"Afaka"}
@@ -729,7 +726,7 @@ tr{
         Khmr{"Kmer"}
         Khoj{"Khojki"}
         Knda{"Kannada"}
-        Kore{"Korece"}
+        Kore{"Kore"}
         Kpel{"Kpelle"}
         Kthi{"Kaithi"}
         Lana{"Lanna"}
@@ -747,6 +744,7 @@ tr{
         Lydi{"Lidya"}
         Mahj{"Mahajani"}
         Mand{"Manden"}
+        Mani{"Mani"}
         Maya{"Maya Hiyeroglifleri"}
         Mend{"Mende"}
         Merc{"Meroitik El Yazısı"}
@@ -1054,6 +1052,7 @@ tr{
         VALENCIA{"Valensiyaca"}
         WADEGILE{"Wade-Giles (Latin Alfabesinde Yazımı)"}
     }
+    Version{"37"}
     characterLabelPattern{
         all{"{0} — tümü"}
         category-list{"{0}: {1}"}
@@ -1068,8 +1067,6 @@ tr{
             one{"{0} çizgi"}
             other{"{0} çizgi"}
         }
-        subscript{"alt simge {0}"}
-        superscript{"üst simge {0}"}
     }
     codePatterns{
         language{"Dil: {0}"}

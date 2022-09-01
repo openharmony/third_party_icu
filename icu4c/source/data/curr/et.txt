@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 et{
     Currencies{
         ADP{
@@ -1037,7 +1036,7 @@ et{
             "Prantsuse UIC-frank",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "Lääne-Aafrika CFA frank",
         }
         XPD{
@@ -1106,11 +1105,8 @@ et{
         }
     }
     Currencies%narrow{
-        AFN{"؋"}
-        AMD{"֏"}
         ARS{"$"}
         AUD{"$"}
-        AZN{"₼"}
         BBD{"$"}
         BDT{"৳"}
         BMD{"$"}
@@ -1129,7 +1125,6 @@ et{
         EUR{"€"}
         FJD{"$"}
         GBP{"£"}
-        GHS{"GH₵"}
         GIP{"£"}
         GYD{"$"}
         HKD{"$"}
@@ -2186,4 +2181,5 @@ et{
         one{"{0} {1}"}
         other{"{0} {1}"}
     }
+    Version{"37"}
 }

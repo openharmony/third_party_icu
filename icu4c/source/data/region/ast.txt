@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ast{
     Countries{
         001{"Mundu"}
@@ -110,7 +109,7 @@ ast{
         EZ{"Eurozona"}
         FI{"Finlandia"}
         FJ{"Islles Fixi"}
-        FK{"Falkland Islands"}
+        FK{"Islles Malvines (Falkland Islands)"}
         FM{"Micronesia"}
         FO{"Islles Feroe"}
         FR{"Francia"}
@@ -133,7 +132,7 @@ ast{
         GU{"Guam"}
         GW{"Guinea-Bisáu"}
         GY{"Guyana"}
-        HK{"ARE China de Ḥong Kong"}
+        HK{"Ḥong Kong"}
         HM{"Islles Heard y McDonald"}
         HN{"Hondures"}
         HR{"Croacia"}
@@ -183,10 +182,11 @@ ast{
         MF{"Saint Martin"}
         MG{"Madagascar"}
         MH{"Islles Marshall"}
+        MK{"Macedonia (ARYDM)"}
         ML{"Malí"}
         MM{"Myanmar (Birmania)"}
         MN{"Mongolia"}
-        MO{"ARE China de Macáu"}
+        MO{"Macáu"}
         MP{"Islles Marianes del Norte"}
         MQ{"La Martinica"}
         MR{"Mauritania"}
@@ -221,7 +221,7 @@ ast{
         PM{"Saint Pierre y Miquelon"}
         PN{"Islles Pitcairn"}
         PR{"Puertu Ricu"}
-        PS{"Territorios Palestinos"}
+        PS{"Palestina"}
         PT{"Portugal"}
         PW{"Paláu"}
         PY{"Paraguái"}
@@ -309,4 +309,5 @@ ast{
         FK{"Islles Malvines (Falkland Islands)"}
         TL{"Timor Este"}
     }
+    Version{"37"}
 }

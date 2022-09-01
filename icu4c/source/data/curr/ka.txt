@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ka{
     Currencies{
         ADP{
@@ -617,7 +616,7 @@ ka{
         }
         NIO{
             "NIO",
-            "ნიკარაგუას ოქროს კორდობა",
+            "ნიკარაგუული კორდობა",
         }
         NLG{
             "NLG",
@@ -932,7 +931,7 @@ ka{
             "ფრანგული ოქროს ფრანკი",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "დასავლეთ აფრიკული CFA ფრანკი",
         }
         XPF{
@@ -1749,4 +1748,5 @@ ka{
         one{"{0} {1}"}
         other{"{0} {1}"}
     }
+    Version{"37"}
 }

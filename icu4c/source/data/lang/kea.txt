@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 kea{
     Keys{
         calendar{"Kalendáriu"}
@@ -53,9 +52,9 @@ kea{
         cy{"gales"}
         da{"dinamarkes"}
         dav{"taita"}
-        de{"alemon"}
-        de_AT{"alemon austríaku"}
-        de_CH{"alemon altu suisu"}
+        de{"alimãu"}
+        de_AT{"alimãu austriaku"}
+        de_CH{"altu alimãu suisu"}
         dje{"zarma"}
         dsb{"sórbiu baxu"}
         dua{"duala"}
@@ -67,7 +66,7 @@ kea{
         en{"ingles"}
         en_AU{"ingles australianu"}
         en_CA{"ingles kanadianu"}
-        en_GB{"ingles britániku"}
+        en_GB{"ingles britaniku"}
         en_US{"ingles merkanu"}
         eo{"sperantu"}
         es{"spanhol"}
@@ -92,7 +91,7 @@ kea{
         gag{"gagauz"}
         gl{"galegu"}
         gn{"guarani"}
-        gsw{"alemon suisu"}
+        gsw{"alimãu suísu"}
         gu{"gujarati"}
         guz{"gusii"}
         gv{"manks"}
@@ -146,7 +145,7 @@ kea{
         lkt{"lakota"}
         ln{"lingala"}
         lo{"lausianu"}
-        lt{"lituanu"}
+        lt{"lituanes"}
         lu{"luba-katanga"}
         luo{"luo"}
         luy{"luyia"}
@@ -210,7 +209,7 @@ kea{
         to{"tonganes"}
         tr{"turku"}
         tt{"tatar"}
-        tzm{"tamaziti di Atlas Sentral"}
+        tzm{"tamazait di Atlas Sentral"}
         ug{"uigur"}
         uk{"ukranianu"}
         und{"língua diskonxedu"}
@@ -238,6 +237,8 @@ kea{
     }
     Languages%short{
         az{"azeri"}
+        en_GB{"ingles (R.U.)"}
+        en_US{"ingles (S.U.)"}
     }
     Scripts{
         Arab{"arábiku"}
@@ -291,17 +292,11 @@ kea{
         calendar{
             buddhist{"Kalendáriu budista"}
             chinese{"Kalendáriu xines"}
-            coptic{"Kalendáriu kopta"}
             dangi{"Kalendáriu dangi"}
             ethiopic{"Kalendáriu etiópiku"}
-            ethiopic-amete-alem{"Kalendáriu etíopi ameti alem"}
             gregorian{"Kalendáriu Gregorianu"}
             hebrew{"Kalendáriu ebraiku"}
-            indian{"Kalendáriu nasional indianu"}
             islamic{"Kalendáriu islámiku"}
-            islamic-civil{"Kalendáriu islámiku (sivil)"}
-            islamic-tbla{"Kalendáriu islámiku (astronómiku)"}
-            islamic-umalqura{"Kalendáriu islámiku (Umm al-Qura)"}
             iso8601{"Kalendáriu ISO-8601"}
             japanese{"Kalendáriu japones"}
             persian{"Kalendáriu persa"}
@@ -333,13 +328,14 @@ kea{
             ussystem{"Sistema di midida merkanu"}
         }
         numbers{
-            latn{"Nunbru osidental"}
+            latn{"Númerus Arábikus"}
         }
     }
+    Version{"37"}
     codePatterns{
         language{"Lingua: {0}"}
         script{"Skrita: {0}"}
-        territory{"Rejion: {0}"}
+        territory{"Rejiãu: {0}"}
     }
     localeDisplayPattern{
         keyTypePattern{"{0}: {1}"}

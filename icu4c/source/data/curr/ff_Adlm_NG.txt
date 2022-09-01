@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ff_Adlm_NG{
     Currencies{
         GNF{
@@ -12,4 +11,5 @@ ff_Adlm_NG{
             "𞤐𞤢𞤴𞤪𞤢 𞤐𞤢𞤶𞤭𞤪𞤢𞤴𞤢𞤲𞤳𞤮",
         }
     }
+    Version{"37"}
 }

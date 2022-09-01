@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 lu{
     AuxExemplarCharacters{"[g r x]"}
     ExemplarCharacters{
@@ -8,7 +7,7 @@ lu{
         " ɔ {ɔ\u0301} {ɔ\u0300} p {ph} q s {shi} t u ú ù v w y z]"
     }
     ExemplarCharactersIndex{"[A B C D E F H I J K L M N O P Q S T U V W Y Z]"}
-    ExemplarCharactersNumbers{"[\\- ‑ , . % ‰ + 0 1 2 3 4 5 6 7 8 9]"}
+    ExemplarCharactersNumbers{"[\\- , . % ‰ + 0 1 2 3 4 5 6 7 8 9]"}
     NumberElements{
         latn{
             patterns{
@@ -21,6 +20,7 @@ lu{
             }
         }
     }
+    Version{"37"}
     calendar{
         generic{
             DateTimePatterns{

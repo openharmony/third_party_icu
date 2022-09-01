@@ -167,7 +167,7 @@ public:
     virtual const char * getType() const;
 
     /**
-     * @return false - no default century in Japanese
+     * @return FALSE - no default century in Japanese
      * @internal 
      */
     virtual UBool haveDefaultCentury() const;

@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 or{
     AuxExemplarCharacters{"[\u200C\u200D]"}
     Ellipsis{
@@ -241,6 +240,7 @@ or{
             }
         }
     }
+    Version{"37"}
     calendar{
         generic{
             DateTimePatterns{
@@ -390,15 +390,15 @@ or{
                 "h:mm:ss a z",
                 "h:mm:ss a",
                 "h:mm a",
-                "EEEE, MMMM d, y",
-                "MMMM d, y",
-                "MMM d, y",
-                "M/d/yy",
-                "{1}, {0}",
+                "EEEE, d MMMM y",
+                "d MMMM y",
+                "d MMM y",
+                "d-M-yy",
+                "{1} {0}",
                 "{0} ଠାରେ {1}",
                 "{0} ଠାରେ {1}",
-                "{1}, {0}",
-                "{1}, {0}",
+                "{1} {0}",
+                "{1} {0}",
             }
             appendItems{
                 Timezone{"{0} {1}"}
@@ -425,17 +425,17 @@ or{
                 Hmsv{"HH:mm:ss v"}
                 Hmv{"HH:mm v"}
                 M{"L"}
-                MEd{"E, M/d"}
+                MEd{"E, d-M"}
                 MMM{"LLL"}
-                MMMEd{"E, MMM d"}
+                MMMEd{"EEE, d MMM"}
                 MMMMW{
                     one{"MMMM ର ସପ୍ତାହ W"}
                     other{"MMMM ର ସପ୍ତାହ W"}
                 }
-                MMMMd{"MMMM d"}
-                MMMd{"MMM d"}
+                MMMMd{"d MMMM"}
+                MMMd{"d MMM"}
                 MMdd{"dd-MM"}
-                Md{"M/d"}
+                Md{"d-M"}
                 d{"d"}
                 h{"h a"}
                 hm{"h:mm a"}
@@ -444,14 +444,14 @@ or{
                 hmv{"h:mm a v"}
                 ms{"mm:ss"}
                 y{"y"}
-                yM{"M/y"}
-                yMEd{"E, M/d/y"}
+                yM{"M-y"}
+                yMEd{"E, d-M-y"}
                 yMM{"MM-y"}
                 yMMM{"MMM y"}
-                yMMMEd{"E, MMM d, y"}
+                yMMMEd{"EEE, d MMM y"}
                 yMMMM{"MMMM y"}
-                yMMMd{"MMM d, y"}
-                yMd{"M/d/y"}
+                yMMMd{"d MMM y"}
+                yMd{"d-M-y"}
                 yQQQ{"QQQ y"}
                 yQQQQ{"QQQQ y"}
                 yw{
@@ -590,23 +590,23 @@ or{
                     M{"MM–MM"}
                 }
                 MEd{
-                    M{"MM-dd, E – MM-dd, E"}
-                    d{"MM-dd, E – MM-dd, E"}
+                    M{"d-M, E – d-M, E"}
+                    d{"d-M, E – d-M, E"}
                 }
                 MMM{
                     M{"LLL–LLL"}
                 }
                 MMMEd{
-                    M{"MMM d, E – MMM d, E"}
-                    d{"MMM d, E – MMM d, E"}
+                    M{"d MMM, E – d MMM, E"}
+                    d{"d MMM, E – d MMM, E"}
                 }
                 MMMd{
-                    M{"MMM d – MMM d"}
-                    d{"MMM d–d"}
+                    M{"d MMM – d MMM"}
+                    d{"d–d MMM"}
                 }
                 Md{
-                    M{"MM-dd – MM-dd"}
-                    d{"MM-dd – MM-dd"}
+                    M{"d-M – d-M"}
+                    d{"d-M – d-M"}
                 }
                 d{
                     d{"d–d"}
@@ -634,36 +634,36 @@ or{
                     y{"y–y"}
                 }
                 yM{
-                    M{"y-MM – y-MM"}
-                    y{"y-MM – y-MM"}
+                    M{"M-y – M-y"}
+                    y{"M-y – M-y"}
                 }
                 yMEd{
-                    M{"y-MM-dd, E – y-MM-dd, E"}
-                    d{"y-MM-dd, E – y-MM-dd, E"}
-                    y{"y-MM-dd, E – y-MM-dd, E"}
+                    M{"E, d-M-y – E, d-M-y"}
+                    d{"E, d-M-y – E, d-M-y"}
+                    y{"E, d-M-y – E, d-M-y"}
                 }
                 yMMM{
-                    M{"y MMM–MMM"}
-                    y{"y MMM – y MMM"}
+                    M{"MMM–MMM y"}
+                    y{"MMM y – MMM y"}
                 }
                 yMMMEd{
-                    M{"y MMM d, E – MMM d, E"}
-                    d{"y MMM d, E – MMM d, E"}
-                    y{"y MMM d, E – y MMM d, E"}
+                    M{"E, d MMM – E, d MMM y"}
+                    d{"E, d MMM – E, d MMM y"}
+                    y{"E, d MMM y – E, d MMM y"}
                 }
                 yMMMM{
-                    M{"y MMMM–MMMM"}
-                    y{"y MMMM – y MMMM"}
+                    M{"MMMM–MMMM y"}
+                    y{"MMMM y – MMMM y"}
                 }
                 yMMMd{
-                    M{"y MMM d – MMM d"}
-                    d{"y MMM d–d"}
-                    y{"y MMM d – y MMM d"}
+                    M{"d MMM – d MMM y"}
+                    d{"d–d MMM y"}
+                    y{"d MMM y – d MMM y"}
                 }
                 yMd{
-                    M{"y-MM-dd – y-MM-dd"}
-                    d{"y-MM-dd – y-MM-dd"}
-                    y{"y-MM-dd – y-MM-dd"}
+                    M{"d-M-y – d-M-y"}
+                    d{"d-M-y – d-M-y"}
+                    y{"d-M-y – d-M-y"}
                 }
             }
             monthNames{

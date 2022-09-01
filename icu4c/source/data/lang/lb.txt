@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 lb{
     Keys{
         calendar{"Kalenner"}
@@ -456,6 +455,7 @@ lb{
         ro_MD{"Moldawesch"}
         rof{"Rombo"}
         rom{"Romani"}
+        root{"Root"}
         rtm{"Rotumanesch"}
         ru{"Russesch"}
         rue{"Russinesch"}
@@ -618,9 +618,11 @@ lb{
     }
     Languages%short{
         en_GB{"Englesch (UK)"}
+        en_US{"Englesch (US)"}
     }
     Scripts{
         Arab{"Arabesch"}
+        Armi{"Armi"}
         Armn{"Armenesch"}
         Avst{"Avestesch"}
         Bali{"Balinesesch"}
@@ -634,6 +636,7 @@ lb{
         Buhd{"Buhid"}
         Cans{"UCAS"}
         Cari{"Karesch"}
+        Cham{"Cham"}
         Cher{"Cherokee"}
         Cirt{"Cirth"}
         Copt{"Koptesch"}
@@ -872,6 +875,7 @@ lb{
         VALENCIA{"Valencianesch"}
         WADEGILE{"Wade-Giles"}
     }
+    Version{"37"}
     codePatterns{
         language{"Sprooch: {0}"}
         script{"Schrëft: {0}"}

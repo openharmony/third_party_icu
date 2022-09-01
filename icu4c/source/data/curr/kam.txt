@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 kam{
     Currencies{
         AED{
@@ -212,7 +211,7 @@ kam{
             "Faranga CFA BEAC",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "Faranga CFA BCEAO",
         }
         ZAR{
@@ -232,4 +231,5 @@ kam{
             "Ndola ya Zimbabwe",
         }
     }
+    Version{"37"}
 }

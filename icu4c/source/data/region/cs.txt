@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 cs{
     Countries{
         001{"svět"}
@@ -134,7 +133,7 @@ cs{
         GU{"Guam"}
         GW{"Guinea-Bissau"}
         GY{"Guyana"}
-        HK{"Hongkong – ZAO Číny"}
+        HK{"Hongkong, Čína"}
         HM{"Heardův ostrov a McDonaldovy ostrovy"}
         HN{"Honduras"}
         HR{"Chorvatsko"}
@@ -188,7 +187,7 @@ cs{
         ML{"Mali"}
         MM{"Myanmar (Barma)"}
         MN{"Mongolsko"}
-        MO{"Macao – ZAO Číny"}
+        MO{"Macao, Čína"}
         MP{"Severní Mariany"}
         MQ{"Martinik"}
         MR{"Mauritánie"}
@@ -254,7 +253,7 @@ cs{
         SV{"Salvador"}
         SX{"Svatý Martin (Nizozemsko)"}
         SY{"Sýrie"}
-        SZ{"Eswatini"}
+        SZ{"Svazijsko"}
         TA{"Tristan da Cunha"}
         TC{"Turks a Caicos"}
         TD{"Čad"}
@@ -270,7 +269,7 @@ cs{
         TR{"Turecko"}
         TT{"Trinidad a Tobago"}
         TV{"Tuvalu"}
-        TW{"Tchaj-wan"}
+        TW{"Tchaj-wan, Čína"}
         TZ{"Tanzanie"}
         UA{"Ukrajina"}
         UG{"Uganda"}
@@ -312,7 +311,8 @@ cs{
         CI{"Côte d’Ivoire"}
         CZ{"Česká republika"}
         FK{"Falklandské ostrovy (Malvíny)"}
-        SZ{"Svazijsko"}
+        SZ{"Eswatini"}
         TL{"Timor-Leste"}
     }
+    Version{"37"}
 }

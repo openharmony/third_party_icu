@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 dsb{
     Keys{
         calendar{"kalender"}
@@ -379,6 +378,7 @@ dsb{
             tibt{"tibetske cyfry"}
         }
     }
+    Version{"37"}
     codePatterns{
         language{"Rěc: {0}"}
         script{"Pismo: {0}"}

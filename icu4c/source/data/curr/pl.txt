@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 pl{
     Currencies{
         ADP{
@@ -89,7 +88,7 @@ pl{
         }
         BBD{
             "BBD",
-            "dolar barbadoski",
+            "dolar Barbadosu",
         }
         BDT{
             "BDT",
@@ -889,7 +888,7 @@ pl{
         }
         TTD{
             "TTD",
-            "dolar trynidadzki",
+            "dolar Trynidadu i Tobago",
         }
         TWD{
             "TWD",
@@ -996,7 +995,7 @@ pl{
             "UIC-frank francuski",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "frank CFA",
         }
         XPD{
@@ -1113,8 +1112,8 @@ pl{
         AMD{
             few{"dramy armeńskie"}
             many{"dramów armeńskich"}
-            one{"dram armeński"}
-            other{"drama armeńskiego"}
+            one{"dram ormiański"}
+            other{"dramy ormiańskiej"}
         }
         ANG{
             few{"guldeny antylskie"}
@@ -1183,10 +1182,10 @@ pl{
             other{"marki zamiennej Bośni i Hercegowiny"}
         }
         BBD{
-            few{"dolary barbadoskie"}
-            many{"dolarów barbadoskich"}
-            one{"dolar barbadoski"}
-            other{"dolara barbadoskiego"}
+            few{"dolary Barbadosu"}
+            many{"dolarów Barbadosu"}
+            one{"dolar Barbadosu"}
+            other{"dolara Barbadosu"}
         }
         BDT{
             few{"taka bengalskie"}
@@ -1759,10 +1758,10 @@ pl{
             other{"rupii malediwskiej"}
         }
         MWK{
-            few{"kwachy malawijskie"}
-            many{"kwach malawijskich"}
+            few{"kwacha malawijskie"}
+            many{"kwacha malawijskich"}
             one{"kwacha malawijska"}
-            other{"kwachy malawijskiej"}
+            other{"kwacha malawijskiej"}
         }
         MXN{
             few{"pesos meksykańskie"}
@@ -2089,10 +2088,10 @@ pl{
             other{"liry tureckiej"}
         }
         TTD{
-            few{"dolary trynidadzkie"}
-            many{"dolarów trynidadzkich"}
-            one{"dolar trynidadzki"}
-            other{"dolara trynidadzkiego"}
+            few{"dolary Trynidadu i Tobago"}
+            many{"dolarów Trynidadu i Tobago"}
+            one{"dolar Trynidadu i Tobago"}
+            other{"dolara Trynidadu i Tobago"}
         }
         TWD{
             few{"nowe dolary tajwańskie"}
@@ -2239,4 +2238,5 @@ pl{
         one{"{0} {1}"}
         other{"{0} {1}"}
     }
+    Version{"37"}
 }

@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 kea{
     Currencies{
         AED{
@@ -126,7 +125,7 @@ kea{
         }
         EUR{
             "€",
-            "euro",
+            "Euro",
         }
         FKP{
             "FKP",
@@ -418,7 +417,7 @@ kea{
         }
         STD{
             "STD",
-            "Dobra di San Tume i Prínsipi (1977–2017)",
+            "Dobra di Sãu Tume i Prínsipi (1977–2017)",
         }
         STN{
             "STN",
@@ -462,7 +461,7 @@ kea{
         }
         TZS{
             "TZS",
-            "Xelin di Tanzánia",
+            "Xelin di Tanzania",
         }
         UGX{
             "UGX",
@@ -501,7 +500,7 @@ kea{
             "XCD",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "Franku CFA (BCEAO)",
         }
         XPF{
@@ -614,7 +613,7 @@ kea{
             other{"Bir etiópiku"}
         }
         EUR{
-            other{"euro"}
+            other{"Euro"}
         }
         GBP{
             other{"Libra britániku"}
@@ -710,7 +709,10 @@ kea{
             other{"Xelin somalianu"}
         }
         STD{
-            other{"Dobra di San Tume i Prínsipi (1977–2017)"}
+            other{"Dobra di Sãu Tume i Prinsipi (1977–2017)"}
+        }
+        STN{
+            other{"Dobra di San Tume i Prinsipi"}
         }
         SZL{
             other{"Lilanjeni"}
@@ -728,7 +730,7 @@ kea{
             other{"Dola Novu di Taiwan"}
         }
         TZS{
-            other{"Xelin di Tanzánia"}
+            other{"Xelin di Tanzania"}
         }
         UGX{
             other{"Xelin ugandensi"}
@@ -755,4 +757,5 @@ kea{
     CurrencyUnitPatterns{
         other{"{0} {1}"}
     }
+    Version{"37"}
 }

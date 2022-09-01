@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 th{
     AuxExemplarCharacters{"[\u200B]"}
     Ellipsis{
@@ -184,6 +183,7 @@ th{
         minimumGroupingDigits{"1"}
         native{"thai"}
     }
+    Version{"37"}
     calendar{
         buddhist{
             DateTimePatterns{
@@ -903,7 +903,6 @@ th{
                 }
             }
         }
-        default{"buddhist"}
         ethiopic{
             monthNames{
                 format{
@@ -1259,7 +1258,7 @@ th{
                 GyMMMEd{"E d MMM G y"}
                 GyMMMd{"d MMM G y"}
                 H{"HH"}
-                Hm{"HH:mm น."}
+                Hm{"HH:mm"}
                 Hms{"HH:mm:ss"}
                 Hmsv{"HH:mm:ss v"}
                 Hmv{"HH:mm v"}
@@ -1281,7 +1280,7 @@ th{
                 hm{"h:mm a"}
                 hms{"h:mm:ss a"}
                 hmsv{"h:mm:ss a v"}
-                hmv{"h:mm น. a v"}
+                hmv{"h:mm a v"}
                 mmss{"mm:ss"}
                 ms{"mm:ss"}
                 y{"y"}
@@ -1488,14 +1487,14 @@ th{
                 }
                 GyM{
                     G{"MM/GGGGG y – MM/GGGGG y"}
-                    M{"MM/GGGGG y – MM/GGGGG y"}
-                    y{"MM/GGGGG y – MM/GGGGG y"}
+                    M{"M/y – M/y"}
+                    y{"M/y – M/y"}
                 }
                 GyMEd{
                     G{"E d/MM/GGGGG y – E d/MM/GGGGG y"}
-                    M{"E d/MM/GGGGG y – E d/MM/GGGGG y"}
-                    d{"E d/MM/GGGGG y – E d/MM/GGGGG y"}
-                    y{"E d/MM/GGGGG y – E d/MM/GGGGG y"}
+                    M{"E d/M/y – E d/M/y"}
+                    d{"E d/M/y – E d/M/y"}
+                    y{"E d/M/y – E d/M/y"}
                 }
                 GyMMM{
                     G{"MMM G y – MMM G y"}
@@ -1516,20 +1515,20 @@ th{
                 }
                 GyMd{
                     G{"d/MM/GGGGG y – d/MM/GGGGG y"}
-                    M{"d/MM/GGGGG y – d/MM/GGGGG y"}
-                    d{"d/MM/GGGGG y – d/MM/GGGGG y"}
-                    y{"d/MM/GGGGG y – d/MM/GGGGG y"}
+                    M{"d/M/y – d/M/y"}
+                    d{"d/M/y – d/M/y"}
+                    y{"d/M/y – d/M/y"}
                 }
                 H{
                     H{"HH–HH"}
                 }
                 Hm{
-                    H{"HH:mm น. – HH:mm น."}
-                    m{"HH:mm น. – HH:mm น."}
+                    H{"HH:mm – HH:mm"}
+                    m{"HH:mm – HH:mm"}
                 }
                 Hmv{
-                    H{"H:mm น. – H:mm น. v"}
-                    m{"H:mm น. – H:mm น. v"}
+                    H{"HH:mm – HH:mm v"}
+                    m{"HH:mm – HH:mm v"}
                 }
                 Hv{
                     H{"HH–HH v"}
@@ -1539,7 +1538,7 @@ th{
                 }
                 MEd{
                     M{"E d/M – E d/M"}
-                    d{"E d/M – E d/M/"}
+                    d{"E d/M – E d/M"}
                 }
                 MMM{
                     M{"MMM – MMM"}
@@ -1554,7 +1553,7 @@ th{
                 }
                 MMMd{
                     M{"d MMM – d MMM"}
-                    d{"MMM d–d"}
+                    d{"d–d MMM"}
                 }
                 Md{
                     M{"d/M – d/M"}
@@ -1609,8 +1608,8 @@ th{
                     y{"E d MMM y – E d MMM y"}
                 }
                 yMMMM{
-                    M{"MMMM – MMMM y"}
-                    y{"MMMM y – MMMM y"}
+                    M{"MMMM–MMMM G y"}
+                    y{"MMMM G y – MMMM y"}
                 }
                 yMMMMEEEEd{
                     M{"EEEEที่ d MMMM – EEEEที่ d MMMM G y"}
@@ -2573,8 +2572,8 @@ th{
     }
     characterLabel{
         activities{"กิจกรรม"}
-        african_scripts{"ตัวอักษรแอฟริกัน"}
-        american_scripts{"ตัวอักษรอเมริกัน"}
+        african_scripts{"สคริปต์แอฟริกัน"}
+        american_scripts{"สคริปต์อเมริกัน"}
         animal{"สัตว์"}
         animals_nature{"สัตว์หรือธรรมชาติ"}
         arrows{"ลูกศร"}
@@ -2591,9 +2590,9 @@ th{
         divination_symbols{"สัญลักษณ์การทำนาย"}
         downwards_arrows{"ลูกศรลง"}
         downwards_upwards_arrows{"ลูกศรชี้ขึ้นและลง"}
-        east_asian_scripts{"ตัวอักษรเอเชียตะวันออก"}
-        emoji{"อีโมจิ"}
-        european_scripts{"ตัวอักษรยุโรป"}
+        east_asian_scripts{"สคริปต์เอเชียตะวันออก"}
+        emoji{"อิโมจิ"}
+        european_scripts{"สคริปต์ยุโรป"}
         female{"ผู้หญิง"}
         flag{"ธง"}
         flags{"ธง"}
@@ -2609,7 +2608,7 @@ th{
         hanzi_simplified{"อักษรจีน (ตัวย่อ)"}
         hanzi_traditional{"อักษรจีน (ตัวเต็ม)"}
         heart{"หัวใจ"}
-        historic_scripts{"ตัวอักษรโบราณ"}
+        historic_scripts{"สคริปต์โบราณ"}
         ideographic_desc_characters{"อักขระเป็นภาพที่แสดงความหมาย"}
         japanese_kana{"คะนะญี่ปุ่น"}
         kanbun{"อักษรจีน"}
@@ -2621,9 +2620,9 @@ th{
         limited_use{"ใช้งานแบบจำกัด"}
         male{"ผู้ชาย"}
         math_symbols{"สัญลักษณ์ทางคณิตศาสตร์"}
-        middle_eastern_scripts{"ตัวอักษรตะวันออกกลาง"}
+        middle_eastern_scripts{"สคริปต์ตะวันออกกลาง"}
         miscellaneous{"อื่นๆ"}
-        modern_scripts{"ตัวอักษรสมัยใหม่"}
+        modern_scripts{"สคริปต์ปัจจุบัน"}
         modifier{"ตัวขยาย"}
         musical_symbols{"สัญลักษณ์ทางดนตรี"}
         nature{"ธรรมชาติ"}
@@ -2634,7 +2633,7 @@ th{
         paired{"จับคู่"}
         person{"คน"}
         phonetic_alphabet{"ตัวอักษรสัทศาสตร์"}
-        pictographs{"อักษรภาพ"}
+        pictographs{"ภาพสัญลักษณ์"}
         place{"สถานที่"}
         plant{"พืช"}
         punctuation{"เครื่องหมายวรรคตอน"}
@@ -2643,8 +2642,8 @@ th{
         small_form_variant{"รูปแบบขนาดเล็ก"}
         smiley{"หน้ายิ้ม"}
         smileys_people{"หน้ายิ้มหรือรูปคน"}
-        south_asian_scripts{"ตัวอักษรเอเชียใต้"}
-        southeast_asian_scripts{"ตัวอักษรเอเชียตะวันออกเฉียงใต้"}
+        south_asian_scripts{"สคริปต์เอเชียใต้"}
+        southeast_asian_scripts{"สคริปต์เอเชียตะวันออกเฉียงใต้"}
         spacing{"การเว้นวรรค"}
         sport{"กีฬา"}
         symbols{"สัญลักษณ์"}
@@ -2656,7 +2655,7 @@ th{
         variant_forms{"รูปแบบที่เปลี่ยนแปลง"}
         vocalic_jamo{"สระภาษาเกาหลี"}
         weather{"สภาพอากาศ"}
-        western_asian_scripts{"ตัวอักษรเอเชียตะวันตก"}
+        western_asian_scripts{"สคริปต์เอเชียตะวันตก"}
         whitespace{"ช่องว่าง"}
     }
     delimiters{
@@ -3272,7 +3271,7 @@ th{
                 "0"{"สัปดาห์นี้"}
                 "1"{"สัปดาห์หน้า"}
             }
-            relativePeriod{"สัปดาห์ที่เริ่มต้นวันที่ {0}"}
+            relativePeriod{"สัปดาห์ที่เริ่มต้นวันที่"}
             relativeTime{
                 future{
                     other{"ในอีก {0} สัปดาห์"}
@@ -3289,7 +3288,7 @@ th{
                 "0"{"สัปดาห์นี้"}
                 "1"{"สัปดาห์หน้า"}
             }
-            relativePeriod{"สัปดาห์ที่เริ่มต้นวันที่ {0}"}
+            relativePeriod{"สัปดาห์ที่เริ่มต้นวันที่"}
             relativeTime{
                 future{
                     other{"ใน {0} สัปดาห์"}
@@ -3306,7 +3305,7 @@ th{
                 "0"{"สัปดาห์นี้"}
                 "1"{"สัปดาห์หน้า"}
             }
-            relativePeriod{"สัปดาห์ที่เริ่มต้นวันที่ {0}"}
+            relativePeriod{"สัปดาห์ที่เริ่มต้นวันที่"}
             relativeTime{
                 future{
                     other{"ใน {0} สัปดาห์"}

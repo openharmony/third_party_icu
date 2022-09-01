@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 tr{
     Countries{
         001{"Dünya"}
@@ -87,7 +86,7 @@ tr{
         CP{"Clipperton Adası"}
         CR{"Kosta Rika"}
         CU{"Küba"}
-        CV{"Cape Verde"}
+        CV{"Cabo Verde"}
         CW{"Curaçao"}
         CX{"Christmas Adası"}
         CY{"Kıbrıs"}
@@ -134,7 +133,7 @@ tr{
         GU{"Guam"}
         GW{"Gine-Bissau"}
         GY{"Guyana"}
-        HK{"Çin Hong Kong ÖİB"}
+        HK{"Hong Kong, Çin"}
         HM{"Heard Adası ve McDonald Adaları"}
         HN{"Honduras"}
         HR{"Hırvatistan"}
@@ -188,7 +187,7 @@ tr{
         ML{"Mali"}
         MM{"Myanmar (Burma)"}
         MN{"Moğolistan"}
-        MO{"Çin Makao ÖİB"}
+        MO{"Makao, Çin"}
         MP{"Kuzey Mariana Adaları"}
         MQ{"Martinik"}
         MR{"Moritanya"}
@@ -270,7 +269,7 @@ tr{
         TR{"Türkiye"}
         TT{"Trinidad ve Tobago"}
         TV{"Tuvalu"}
-        TW{"Tayvan"}
+        TW{"Tayvan, Çin"}
         TZ{"Tanzanya"}
         UA{"Ukrayna"}
         UG{"Uganda"}
@@ -315,4 +314,5 @@ tr{
         SZ{"Svaziland"}
         TL{"Doğu Timor"}
     }
+    Version{"37"}
 }

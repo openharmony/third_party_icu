@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 hr{
     Currencies{
         ADP{
@@ -1116,7 +1115,7 @@ hr{
             "francuski UIC-franak",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "CFA franak BCEAO",
         }
         XPD{
@@ -1213,12 +1212,9 @@ hr{
         }
     }
     Currencies%narrow{
-        AFN{"؋"}
-        AMD{"֏"}
         AOA{"Kz"}
         ARS{"$"}
         AUD{"$"}
-        AZN{"₼"}
         BAM{"KM"}
         BBD{"$"}
         BDT{"৳"}
@@ -1247,7 +1243,6 @@ hr{
         FKP{"£"}
         GBP{"£"}
         GEL{"₾"}
-        GHS{"GH₵"}
         GIP{"£"}
         GNF{"FG"}
         GTQ{"Q"}
@@ -2740,9 +2735,9 @@ hr{
             other{"obračunskih jedinica ADB"}
         }
         XXX{
-            few{"(nepoznata valuta)"}
-            one{"(nepoznata valuta)"}
-            other{"(nepoznata valuta)"}
+            few{"nepoznata valuta"}
+            one{"nepoznata valuta"}
+            other{"nepoznata valuta"}
         }
         YDD{
             few{"jemenska dinara"}
@@ -2825,4 +2820,5 @@ hr{
         one{"{0} {1}"}
         other{"{0} {1}"}
     }
+    Version{"37"}
 }

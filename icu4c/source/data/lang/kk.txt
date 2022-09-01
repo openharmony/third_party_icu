@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 kk{
     Keys{
         calendar{"Күнтізбе"}
@@ -308,6 +307,7 @@ kk{
         ro{"румын тілі"}
         ro_MD{"молдован тілі"}
         rof{"ромбо тілі"}
+        root{"ата тіл"}
         ru{"орыс тілі"}
         rup{"арумын тілі"}
         rw{"киньяруанда тілі"}
@@ -424,6 +424,7 @@ kk{
         zh{"қытай тілі (мандарин)"}
     }
     Languages%short{
+        az{"әзірбайжан тілі"}
         en_GB{"британиялық ағылшын тілі"}
         en_US{"америкалық ағылшын тілі"}
     }
@@ -472,6 +473,10 @@ kk{
         Zxxx{"жазусыз"}
         Zyyy{"жалпы"}
         Zzzz{"белгісіз жазу"}
+    }
+    Scripts%stand-alone{
+        Hans{"жеңілдетілген қытай иероглифы"}
+        Hant{"дәстүрлі қытай иероглифы"}
     }
     Types{
         calendar{
@@ -550,6 +555,7 @@ kk{
             tibt{"Тибет сандары"}
         }
     }
+    Version{"37"}
     characterLabelPattern{
         all{"{0} — барлығы"}
         category-list{"{0}: {1}"}
@@ -564,8 +570,6 @@ kk{
             one{"{0} сызық"}
             other{"{0} сызық"}
         }
-        subscript{"жол асты таңба {0}"}
-        superscript{"жол үсті таңба {0}"}
     }
     codePatterns{
         language{"Тіл: {0}"}

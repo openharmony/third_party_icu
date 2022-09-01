@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ccp{
     Currencies{
         ADP{
@@ -996,7 +995,7 @@ ccp{
             "𑄜𑄧𑄢𑄥𑄨 𑄃𑄨𑄃𑄪𑄃𑄭𑄥𑄨 𑄜𑄳𑄢𑄋𑄳𑄇𑄴",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "𑄛𑄧𑄎𑄨𑄟𑄴 𑄃𑄜𑄳𑄢𑄨𑄇𑄚𑄴 [CFA] 𑄜𑄳𑄢𑄳𑄠𑄋𑄳𑄇𑄴",
         }
         XPD{
@@ -1805,4 +1804,5 @@ ccp{
             other{"𑄎𑄟𑄴𑄝𑄨𑄠𑄚𑄴 𑄇𑄧𑄤𑄌"}
         }
     }
+    Version{"37"}
 }
