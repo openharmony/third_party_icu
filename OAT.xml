@@ -74,7 +74,7 @@ Note:If the text contains special characters, please escape them according to th
                 <filteritem type="filepath" name="icu4j/.*" desc="open source orgin file, confirmed"/>
                 <filteritem type="filepath" name="tools/.*" desc="open source orgin file, confirmed"/>
                 <filteritem type="filepath" name="vendor/.*" desc="open source orgin file, confirmed"/>
-                <filteritem type="filepath" name="doc/.*" desc="open source orgin file, confirmed"/>
+                <filteritem type="filepath" name="docs/.*" desc="open source orgin file, confirmed"/>
             </filefilter>
             <filefilter name="copyrightPolicyFilter" desc="compatibility, license">
                 <filteritem type="filepath" name="icu4c/.*" desc="open source orgin file, confirmed"/>
