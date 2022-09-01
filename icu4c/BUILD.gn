@@ -45,8 +45,8 @@ ohos_static_library("static_icustubdata") {
 ohos_prebuilt_etc("ohos_icudat") {
   source = "//third_party/icu/ohos_icu4j/data/icudt69l.dat"
   module_install_dir = "usr/ohos_icu/"
-  part_name = "common"
-  subsystem_name = "common"
+  part_name = "icu"
+  subsystem_name = "thirdparty"
 }
 
 icu_common_source = [
@@ -525,8 +525,8 @@ ohos_shared_library("shared_icuuc") {
     "-lm",
   ]
   if (is_standard_system) {
-    part_name = "common"
-    subsystem_name = "common"
+    part_name = "icu"
+    subsystem_name = "thirdparty"
   } else {
     part_name = "i18n"
     subsystem_name = "global"
@@ -573,8 +573,8 @@ ohos_shared_library("shared_icui18n") {
     ldflags += [ "-ldl" ]
   }
   if (is_standard_system) {
-    part_name = "common"
-    subsystem_name = "common"
+    part_name = "icu"
+    subsystem_name = "thirdparty"
   } else {
     part_name = "i18n"
     subsystem_name = "global"
