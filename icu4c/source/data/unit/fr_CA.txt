@@ -1,11 +1,11 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 fr_CA{
+    Version{"37"}
     units{
         acceleration{
             g-force{
-                dnam{"force g"}
+                dnam{"force G"}
             }
             meter-per-square-second{
                 one{"{0} mètre par seconde carrée"}
@@ -13,6 +13,14 @@ fr_CA{
             }
         }
         angle{
+            arc-minute{
+                one{"{0} minute d’angle"}
+                other{"{0} minutes d’angle"}
+            }
+            arc-second{
+                one{"{0} seconde d’angle"}
+                other{"{0} secondes d’angle"}
+            }
             degree{
                 one{"{0} degré"}
                 other{"{0} degrés"}
@@ -312,15 +320,11 @@ fr_CA{
             }
             yard{
                 dnam{"verges"}
-                gender{"feminine"}
                 one{"{0} verge"}
                 other{"{0} verges"}
             }
         }
         light{
-            candela{
-                dnam{"candela"}
-            }
             lux{
                 one{"{0} lux"}
                 other{"{0} lux"}
@@ -330,9 +334,6 @@ fr_CA{
             carat{
                 one{"{0} carat"}
                 other{"{0} carats"}
-            }
-            grain{
-                dnam{"grain"}
             }
             gram{
                 one{"{0} gramme"}
@@ -484,11 +485,6 @@ fr_CA{
                 one{"{0} hectolitre"}
                 other{"{0} hectolitres"}
             }
-            jigger{
-                dnam{"gobelet doseur"}
-                one{"{0} gobelet doseur"}
-                other{"{0} gobelets doseurs"}
-            }
             liter{
                 one{"{0} litre"}
                 other{"{0} litres"}
@@ -504,15 +500,8 @@ fr_CA{
             }
             quart{
                 dnam{"pintes"}
-                gender{"feminine"}
                 one{"{0} pinte"}
                 other{"{0} pintes"}
-            }
-            quart-imperial{
-                dnam{"pinte impériale"}
-                gender{"feminine"}
-                one{"{0} pinte impériale"}
-                other{"{0} pintes impériales"}
             }
             teaspoon{
                 dnam{"cuillères à thé"}
@@ -547,8 +536,8 @@ fr_CA{
                 other{"´{0}s."}
             }
             microsecond{
-                one{"{0}μs"}
-                other{"{0}μs"}
+                one{"{0}µs"}
+                other{"{0}µs"}
             }
             minute{
                 one{"{0}m"}
@@ -589,8 +578,8 @@ fr_CA{
                 other{"{0}al"}
             }
             micrometer{
-                one{"{0}μm"}
-                other{"{0}μm"}
+                one{"{0}µm"}
+                other{"{0}µm"}
             }
             mile-scandinavian{
                 one{"{0}smi"}
@@ -625,8 +614,8 @@ fr_CA{
                 other{"{0}t"}
             }
             microgram{
-                one{"{0}μg"}
-                other{"{0}μg"}
+                one{"{0}µg"}
+                other{"{0}µg"}
             }
             milligram{
                 one{"{0}mg"}
@@ -767,8 +756,6 @@ fr_CA{
             }
             mile-per-gallon-imperial{
                 dnam{"mi/gal Imp"}
-                one{"{0} mi/gal Imp"}
-                other{"{0} mi/gal Imp"}
             }
         }
         digital{
@@ -928,23 +915,6 @@ fr_CA{
                 other{"{0} MHz"}
             }
         }
-        graphics{
-            dot{
-                dnam{"p"}
-                one{"{0} p"}
-                other{"{0} p"}
-            }
-            dot-per-centimeter{
-                dnam{"ppcm"}
-                one{"{0} ppcm"}
-                other{"{0} ppcm"}
-            }
-            dot-per-inch{
-                dnam{"ppp"}
-                one{"{0} ppp"}
-                other{"{0} ppp"}
-            }
-        }
         length{
             astronomical-unit{
                 one{"{0} ua"}
@@ -979,8 +949,8 @@ fr_CA{
                 other{"{0} m"}
             }
             micrometer{
-                one{"{0} μm"}
-                other{"{0} μm"}
+                one{"{0} µm"}
+                other{"{0} µm"}
             }
             mile{
                 one{"{0} mi"}
@@ -1024,10 +994,6 @@ fr_CA{
                 one{"{0} ct"}
                 other{"{0} ct"}
             }
-            grain{
-                one{"{0} grain"}
-                other{"{0} grains"}
-            }
             gram{
                 one{"{0} g"}
                 other{"{0} g"}
@@ -1041,8 +1007,8 @@ fr_CA{
                 other{"{0} t"}
             }
             microgram{
-                one{"{0} μg"}
-                other{"{0} μg"}
+                one{"{0} µg"}
+                other{"{0} µg"}
             }
             milligram{
                 one{"{0} mg"}
@@ -1192,26 +1158,6 @@ fr_CA{
                 one{"{0} dL"}
                 other{"{0} dL"}
             }
-            dessert-spoon{
-                dnam{"cuill. à d."}
-                one{"{0} cuill. à d."}
-                other{"{0} cuill. à d."}
-            }
-            dessert-spoon-imperial{
-                dnam{"cuill. à d. imp."}
-                one{"{0} cuill. à d. imp."}
-                other{"{0} cuill. à d. imp."}
-            }
-            dram{
-                dnam{"dram liquide"}
-                one{"{0} dram liq"}
-                other{"{0} dram liq"}
-            }
-            drop{
-                dnam{"goutte"}
-                one{"{0} goutte"}
-                other{"{0} gouttes"}
-            }
             fluid-ounce{
                 dnam{"oz liq."}
                 one{"{0} oz liq."}
@@ -1232,11 +1178,6 @@ fr_CA{
                 dnam{"hL"}
                 one{"{0} hL"}
                 other{"{0} hL"}
-            }
-            jigger{
-                dnam{"gobelet doseur"}
-                one{"{0} gobelet doseur"}
-                other{"{0} gobelets doseurs"}
             }
             liter{
                 dnam{"L"}
@@ -1263,11 +1204,6 @@ fr_CA{
                 dnam{"pte"}
                 one{"{0} pte"}
                 other{"{0} pte"}
-            }
-            quart-imperial{
-                dnam{"pte Imp"}
-                one{"{0} pte Imp"}
-                other{"{0} pte Imp"}
             }
             teaspoon{
                 dnam{"c. à t."}

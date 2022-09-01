@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 my{
     Currencies{
         AED{
@@ -53,7 +52,7 @@ my{
         }
         BBD{
             "BBD",
-            "ဘာဘေးဒိုးစ် ဒေါ်လာ",
+            "ဘာဘေးဒီယန်း ဒေါ်လာ",
         }
         BDT{
             "BDT",
@@ -708,7 +707,7 @@ my{
             "အထူးထုတ်ယူခွင့်",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "အနောက် အာဖရိက CFA ဖရန့်",
         }
         XPF{
@@ -878,7 +877,7 @@ my{
             other{"ဘော့စနီးယားနှင့် ဟာဇီဂိုဘီးနားမတ်က်"}
         }
         BBD{
-            other{"ဘာဘေးဒိုးစ် ဒေါ်လာ"}
+            other{"ဘာဘေးဒီယန်း ဒေါ်လာ"}
         }
         BDT{
             other{"ဘင်္ဂလားဒေ့ရှ် တာကာ"}
@@ -1331,4 +1330,5 @@ my{
             other{"ဇင်ဘာဘွေ ခွါးချာ"}
         }
     }
+    Version{"37"}
 }

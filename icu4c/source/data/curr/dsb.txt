@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 dsb{
     Currencies{
         ADP{
@@ -544,7 +543,7 @@ dsb{
             "papua-neuguinejska kina",
         }
         PHP{
-            "₱",
+            "PHP",
             "filipinski peso",
         }
         PKR{
@@ -728,7 +727,7 @@ dsb{
             "pódzajtšnokaribiski dolar",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "CFA-frank (BCEAO)",
         }
         XPF{
@@ -1885,4 +1884,5 @@ dsb{
         other{"{0} {1}"}
         two{"{0} {1}"}
     }
+    Version{"37"}
 }

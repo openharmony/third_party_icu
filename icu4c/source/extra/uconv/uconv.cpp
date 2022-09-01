@@ -323,7 +323,7 @@ static int printConverters(const char *pname, const char *lookfor,
                         if (U_SUCCESS(err)) {
                             /* List the standard tags */
                             const char *standardName;
-                            UBool isFirst = true;
+                            UBool isFirst = TRUE;
                             UErrorCode enumError = U_ZERO_ERROR;
                             while ((standardName = uenum_next(nameEnum, NULL, &enumError))) {
                                 /* See if this alias is supported by this standard. */
@@ -335,7 +335,7 @@ static int printConverters(const char *pname, const char *lookfor,
                                     /* Print a * after the default standard name */
                                     printf(" %s%s", stds[s], (isFirst ? "*" : ""));
                                 }
-                                isFirst = false;
+                                isFirst = FALSE;
                             }
                         }
                     }
@@ -518,7 +518,7 @@ cnvSigType(UConverter *cnv) {
         ucnv_fromUnicode(cnv,
             &out, buffer + sizeof(buffer),
             &in, a + 1,
-            NULL, true, &err);
+            NULL, TRUE, &err);
         ucnv_resetFromUnicode(cnv);
 
         if (NULL != ucnv_detectUnicodeSignature(buffer, (int32_t)(out - buffer), NULL, &err) &&
@@ -589,12 +589,12 @@ ConvertFile::convertFile(const char *pname,
                          FILE * outfile, int verbose)
 {
     FILE *infile;
-    UBool ret = true;
+    UBool ret = TRUE;
     UConverter *convfrom = 0;
     UConverter *convto = 0;
     UErrorCode err = U_ZERO_ERROR;
     UBool flush;
-    UBool closeFile = false;
+    UBool closeFile = FALSE;
     const char *cbufp, *prevbufp;
     char *bufp;
 
@@ -615,7 +615,7 @@ ConvertFile::convertFile(const char *pname,
     // use conversion offsets for error messages
     // unless a transliterator is used -
     // a text transformation will reorder characters in unpredictable ways
-    UBool useOffsets = true;
+    UBool useOffsets = TRUE;
 
     // Open the correct input file or connect to stdin for reading input
 
@@ -628,9 +628,9 @@ ConvertFile::convertFile(const char *pname,
             str2.append((UChar32) 0);
             initMsg(pname);
             u_wmsg(stderr, "cantOpenInputF", str1.getBuffer(), str2.getBuffer());
-            return false;
+            return FALSE;
         }
-        closeFile = true;
+        closeFile = TRUE;
     } else {
         infilestr = "-";
         infile = stdin;
@@ -638,7 +638,7 @@ ConvertFile::convertFile(const char *pname,
         if (setmode(fileno(stdin), O_BINARY) == -1) {
             initMsg(pname);
             u_wmsg(stderr, "cantSetInBinMode");
-            return false;
+            return FALSE;
         }
 #endif
     }
@@ -686,7 +686,7 @@ ConvertFile::convertFile(const char *pname,
             goto error_exit;
         }
 
-        useOffsets = false;
+        useOffsets = FALSE;
     }
 #endif
 
@@ -733,7 +733,7 @@ ConvertFile::convertFile(const char *pname,
     rd = 0;
 
     do {
-        willexit = false;
+        willexit = FALSE;
 
         // input file offset at the beginning of the next buffer
         infoffset += static_cast<uint32_t>(rd);
@@ -823,7 +823,7 @@ ConvertFile::convertFile(const char *pname,
                         str.getTerminatedBuffer(),
                         u_wmsg_errorName(err));
 
-                willexit = true;
+                willexit = TRUE;
                 err = U_ZERO_ERROR; /* reset the error for the rest of the conversion. */
             }
 
@@ -1013,7 +1013,7 @@ ConvertFile::convertFile(const char *pname,
                            u_wmsg_errorName(err));
                     u_wmsg(stderr, "errorUnicode", str.getTerminatedBuffer());
 
-                    willexit = true;
+                    willexit = TRUE;
                     err = U_ZERO_ERROR; /* reset the error for the rest of the conversion. */
                 }
 
@@ -1027,7 +1027,7 @@ ConvertFile::convertFile(const char *pname,
                     UnicodeString str(strerror(errno));
                     initMsg(pname);
                     u_wmsg(stderr, "cantWrite", str.getTerminatedBuffer());
-                    willexit = true;
+                    willexit = TRUE;
                 }
 
                 if (willexit) {
@@ -1042,7 +1042,7 @@ ConvertFile::convertFile(const char *pname,
     goto normal_exit;
 
 error_exit:
-    ret = false;
+    ret = FALSE;
 
 normal_exit:
     // Cleanup.
@@ -1107,7 +1107,7 @@ main(int argc, char **argv)
     const char *tocpage = 0;
     const char *translit = 0;
     const char *outfilestr = 0;
-    UBool fallback = false;
+    UBool fallback = FALSE;
 
     UConverterFromUCallback fromucallback = UCNV_FROM_U_CALLBACK_STOP;
     const void *fromuctxt = 0;
@@ -1119,10 +1119,10 @@ main(int argc, char **argv)
 
     const char *pname;
 
-    UBool printConvs = false, printCanon = false, printTranslits = false;
+    UBool printConvs = FALSE, printCanon = FALSE, printTranslits = FALSE;
     const char *printName = 0;
 
-    UBool verbose = false;
+    UBool verbose = FALSE;
     UErrorCode status = U_ZERO_ERROR;
 
     ConvertFile cf;
@@ -1173,9 +1173,9 @@ main(int argc, char **argv)
             else
                 usage(pname, 1);
         } else if (!strcmp("--fallback", *iter)) {
-            fallback = true;
+            fallback = TRUE;
         } else if (!strcmp("--no-fallback", *iter)) {
-            fallback = false;
+            fallback = FALSE;
         } else if (strcmp("-b", *iter) == 0 || !strcmp("--block-size", *iter)) {
             iter++;
             if (iter != end) {
@@ -1194,7 +1194,7 @@ main(int argc, char **argv)
             if (printTranslits) {
                 usage(pname, 1);
             }
-            printConvs = true;
+            printConvs = TRUE;
         } else if (strcmp("--default-code", *iter) == 0) {
             if (printTranslits) {
                 usage(pname, 1);
@@ -1218,13 +1218,13 @@ main(int argc, char **argv)
             } else
                 usage(pname, 1);
         } else if (strcmp("--canon", *iter) == 0) {
-            printCanon = true;
+            printCanon = TRUE;
         } else if (strcmp("-L", *iter) == 0
             || !strcmp("--list-transliterators", *iter)) {
             if (printConvs) {
                 usage(pname, 1);
             }
-            printTranslits = true;
+            printTranslits = TRUE;
         } else if (strcmp("-h", *iter) == 0 || !strcmp("-?", *iter)
             || !strcmp("--help", *iter)) {
             usage(pname, 0);
@@ -1283,9 +1283,9 @@ main(int argc, char **argv)
                 usage(pname, 1);
             }
         } else if (!strcmp("-s", *iter) || !strcmp("--silent", *iter)) {
-            verbose = false;
+            verbose = FALSE;
         } else if (!strcmp("-v", *iter) || !strcmp("--verbose", *iter)) {
-            verbose = true;
+            verbose = TRUE;
         } else if (!strcmp("-V", *iter) || !strcmp("--version", *iter)) {
             printf("%s v2.1  ICU " U_ICU_VERSION "\n", pname);
             return 0;

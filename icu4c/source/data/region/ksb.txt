@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ksb{
     Countries{
         AD{"Andola"}
@@ -127,6 +126,7 @@ ksb{
         MD{"Moldova"}
         MG{"Bukini"}
         MH{"Visiwa vya Mashal"}
+        MK{"Masedonia"}
         ML{"Mali"}
         MM{"Myama"}
         MN{"Mongolia"}
@@ -226,4 +226,5 @@ ksb{
         ZM{"Zambia"}
         ZW{"Zimbabwe"}
     }
+    Version{"37"}
 }

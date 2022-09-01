@@ -738,8 +738,8 @@ getOutFilename(
         exit(U_ILLEGAL_ARGUMENT_ERROR);
     }
 
-    outFilenameBuilder.extract(outFilename, outFilenameCapacity, status);
-    entryNameBuilder.extract(entryName, entryNameCapacity, status);
+    uprv_strcpy(outFilename, outFilenameBuilder.data());
+    uprv_strcpy(entryName, entryNameBuilder.data());
 }
 
 #ifdef CAN_GENERATE_OBJECTS

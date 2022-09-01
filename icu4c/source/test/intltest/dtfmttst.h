@@ -226,8 +226,6 @@ public:
 
     void TestTimeZoneDisplayName(void);
 
-    void TestTimeZoneInLocale(void);
-
     void TestRoundtripWithCalendar(void);
 
 public:

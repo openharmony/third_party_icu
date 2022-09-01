@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 mk{
     AuxExemplarCharacters{"[ѐ ѝ]"}
     Ellipsis{
@@ -87,16 +86,16 @@ mk{
             patternsShort{
                 currencyFormat{
                     1000{
-                        one{"0 илј'.' ¤"}
-                        other{"0 илј'.' ¤"}
+                        one{"0 илј'.' ¤ "}
+                        other{"0 илј'.' ¤ "}
                     }
                     10000{
-                        one{"00 илј'.' ¤"}
-                        other{"00 илј'.' ¤"}
+                        one{"00 илј'.' ¤ "}
+                        other{"00 илј'.' ¤ "}
                     }
                     100000{
-                        one{"000 илј'.' ¤"}
-                        other{"000 илј'.' ¤"}
+                        one{"000 илј'.' ¤ "}
+                        other{"000 илј'.' ¤ "}
                     }
                     1000000{
                         one{"0 мил'.' ¤"}
@@ -187,7 +186,6 @@ mk{
                 }
             }
             symbols{
-                approximatelySign{"≈"}
                 decimal{","}
                 exponential{"E"}
                 group{"."}
@@ -216,6 +214,7 @@ mk{
         minimumGroupingDigits{"1"}
         native{"latn"}
     }
+    Version{"37"}
     calendar{
         buddhist{
             DateTimePatterns{
@@ -729,11 +728,11 @@ mk{
                 "d MMMM y",
                 "d.M.y",
                 "d.M.yy",
-                "{1}, 'во' {0}",
-                "{1}, 'во' {0}",
-                "{1}, 'во' {0}",
-                "{1}, 'во' {0}",
-                "{1}, 'во' {0}",
+                "{1} {0}",
+                "{1} {0}",
+                "{1} {0}",
+                "{1} {0}",
+                "{1} {0}",
             }
             appendItems{
                 Timezone{"{0} {1}"}
@@ -790,8 +789,8 @@ mk{
                 yQQQ{"QQQ y 'г'."}
                 yQQQQ{"QQQQ y 'г'."}
                 yw{
-                    one{"w. 'седмица' 'од' Y"}
-                    other{"w. 'седмица' 'од' Y"}
+                    one{"w 'седмица' 'од' Y"}
+                    other{"w 'седмица' 'од' Y"}
                 }
             }
             dayNames{
@@ -875,11 +874,11 @@ mk{
             dayPeriod{
                 format{
                     abbreviated{
-                        afternoon1{"попладне"}
+                        afternoon1{"попл."}
                         evening1{"навечер"}
                         midnight{"полноќ"}
                         morning1{"наутро"}
-                        morning2{"претпладне"}
+                        morning2{"претпл."}
                         night1{"ноќе"}
                         noon{"напладне"}
                     }
@@ -940,11 +939,15 @@ mk{
             }
             eras{
                 abbreviated{
+                    "пр.н.е.",
+                    "н.е.",
+                }
+                abbreviated%variant{
                     "п.н.е.",
                     "н.е.",
                 }
                 narrow{
-                    "п.н.е.",
+                    "пр.н.е.",
                     "н.е.",
                 }
                 wide{

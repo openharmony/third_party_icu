@@ -156,7 +156,7 @@ private:
     virtual int32_t handleGetLimit(UCalendarDateFields field, ELimitType limitType) const;
 
     /**
-     * Returns true because the Taiwan Calendar does have a default century
+     * Returns TRUE because the Taiwan Calendar does have a default century
      * @internal
      */
     virtual UBool haveDefaultCentury() const;

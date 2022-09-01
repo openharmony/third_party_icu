@@ -2,7 +2,7 @@
 *******************************************************************************
 *
 *   © 2016 and later: Unicode, Inc. and others.
-*   License & terms of use: http://www.unicode.org/copyright.html
+*   License & terms of use: http://www.unicode.org/copyright.html#License
 *
 *******************************************************************************
 *******************************************************************************
@@ -55,7 +55,7 @@ static const char *resPath = NULL;
 static const int32_t indentsize = 4;
 static UFILE *outerr = NULL;
 static int32_t truncsize = URESB_DEFAULTTRUNC;
-static UBool trunc = false;
+static UBool trunc = FALSE;
 
 const UChar baderror[] = { 0x0042, 0x0041, 0x0044, 0x0000 };
 
@@ -76,7 +76,7 @@ static UOption options[]={
     UOPTION_VERBOSE
 };
 
-static UBool VERBOSE = false;
+static UBool VERBOSE = FALSE;
 
 extern int
 main(int argc, char* argv[]) {
@@ -134,18 +134,18 @@ main(int argc, char* argv[]) {
     }
 
     if(options[5].doesOccur) {
-        trunc = true;
+        trunc = TRUE;
         if(options[5].value != NULL) {
             truncsize = atoi(options[5].value); /* user defined printable size */
         } else {
             truncsize = URESB_DEFAULTTRUNC; /* we'll use default omitting size */
         }
     } else {
-        trunc = false;
+        trunc = FALSE;
     }
 
     if(options[6].doesOccur) {
-        VERBOSE = true;
+        VERBOSE = TRUE;
     }
 
     outerr = u_finit(stderr, locale, encoding);

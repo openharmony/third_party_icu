@@ -1,7 +1,7 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 sq_XK{
+    Version{"37"}
     calendar{
         gregorian{
             DateTimePatterns{
@@ -11,7 +11,7 @@ sq_XK{
                 "HH:mm",
                 "EEEE, d MMMM y",
                 "d MMMM y",
-                "d MMM y",
+                "d MMMM y",
                 "d.M.yy",
                 "{1}, {0}",
                 "{1} 'në' {0}",

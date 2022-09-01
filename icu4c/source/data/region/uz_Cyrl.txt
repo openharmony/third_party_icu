@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 uz_Cyrl{
     %%Parent{"root"}
     Countries{
@@ -183,7 +182,7 @@ uz_Cyrl{
         MF{"Сент-Мартин"}
         MG{"Мадагаскар"}
         MH{"Маршал ороллари"}
-        MK{"Шимолий Македония"}
+        MK{"Македония"}
         ML{"Мали"}
         MM{"Мьянма (Бирма)"}
         MN{"Монголия"}
@@ -295,6 +294,7 @@ uz_Cyrl{
         ZZ{"Номаълум минтақа"}
     }
     Countries%short{
+        GB{"Буюк Британия"}
         HK{"Гонконг"}
         MO{"Макао"}
         PS{"Фаластин"}
@@ -306,6 +306,8 @@ uz_Cyrl{
         CI{"Фил Суяги Қирғоғи"}
         CZ{"Чехия Республикаси"}
         FK{"Фолкленд (Малвин) ороллари"}
+        MK{"Македония (МСЮР)"}
         TL{"Шарқий Тимор"}
     }
+    Version{"37"}
 }

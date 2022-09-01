@@ -1,11 +1,10 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 qu{
     Currencies{
         AED{
             "AED",
-            "Dirham de Emiratos Árabes Unidos",
+            "AED",
         }
         AFN{
             "AFN",
@@ -17,7 +16,7 @@ qu{
         }
         AMD{
             "AMD",
-            "Dram Armenio",
+            "AMD",
         }
         ANG{
             "ANG",
@@ -41,7 +40,7 @@ qu{
         }
         AZN{
             "AZN",
-            "Manat Azerbaiyano",
+            "AZN",
         }
         BAM{
             "BAM",
@@ -604,7 +603,7 @@ qu{
             "Dólar del Caribe Oriental",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "Franco CFA de África Occidental",
         }
         XPF{
@@ -628,21 +627,12 @@ qu{
             "Kwacha Zambiano",
         }
     }
-    Currencies%narrow{
-        GHS{"GHC"}
-    }
     CurrencyPlurals{
-        AED{
-            other{"UAE dirhams"}
-        }
         AFN{
             other{"Afgani afgano"}
         }
         ALL{
             other{"Lek albanés"}
-        }
-        AMD{
-            other{"drams Armenios"}
         }
         ANG{
             other{"Florín antillano neerlandés"}
@@ -658,9 +648,6 @@ qu{
         }
         AWG{
             other{"Florín arubeño"}
-        }
-        AZN{
-            other{"manats Azerbaiyanos"}
         }
         BAM{
             other{"Marco bosnioherzegovino"}
@@ -1101,4 +1088,5 @@ qu{
     CurrencyUnitPatterns{
         other{"{0} {1}"}
     }
+    Version{"37"}
 }

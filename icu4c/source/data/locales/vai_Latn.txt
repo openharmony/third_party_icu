@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 vai_Latn{
     %%Parent{"root"}
     ExemplarCharacters{
@@ -8,7 +7,7 @@ vai_Latn{
         " {ɔ\u0301} {ɔ\u0303} p q r s t u ú ũ v w x y z]"
     }
     ExemplarCharactersIndex{"[A B Ɓ C D Ɗ E Ɛ F G H I J K L M N Ŋ O Ɔ P Q R S T U V W X Y Z]"}
-    ExemplarCharactersNumbers{"[\\- ‑ , . % ‰ + 0 1 2 3 4 5 6 7 8 9]"}
+    ExemplarCharactersNumbers{"[\\- , . % ‰ + 0 1 2 3 4 5 6 7 8 9]"}
     NumberElements{
         default{"latn"}
         latn{
@@ -24,6 +23,7 @@ vai_Latn{
         }
         native{"vaii"}
     }
+    Version{"37"}
     calendar{
         generic{
             DateTimePatterns{
@@ -116,6 +116,24 @@ vai_Latn{
                         "aimisa",
                         "aijima",
                         "siɓiti",
+                    }
+                }
+            }
+            monthNames{
+                format{
+                    wide{
+                        "luukao kemã",
+                        "ɓandaɓu",
+                        "vɔɔ",
+                        "fulu",
+                        "goo",
+                        "6",
+                        "7",
+                        "kɔnde",
+                        "saah",
+                        "galo",
+                        "kenpkato ɓololɔ",
+                        "luukao lɔma",
                     }
                 }
             }

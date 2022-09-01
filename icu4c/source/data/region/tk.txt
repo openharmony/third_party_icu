@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 tk{
     Countries{
         001{"Dünýä"}
@@ -111,7 +110,7 @@ tk{
         EZ{"Ýewro sebiti"}
         FI{"Finlýandiýa"}
         FJ{"Fiji"}
-        FK{"Folklend adalary"}
+        FK{"Folklend (Malwina) adalary"}
         FM{"Mikroneziýa"}
         FO{"Farer adalary"}
         FR{"Fransiýa"}
@@ -134,7 +133,7 @@ tk{
         GU{"Guam"}
         GW{"Gwineýa-Bisau"}
         GY{"Gaýana"}
-        HK{"Gonkong AAS Hytaý"}
+        HK{"Gonkong"}
         HM{"Herd we Makdonald adalary"}
         HN{"Gonduras"}
         HR{"Horwatiýa"}
@@ -180,15 +179,15 @@ tk{
         MA{"Marokko"}
         MC{"Monako"}
         MD{"Moldowa"}
-        ME{"Çernogoriýa"}
+        ME{"Montenegro"}
         MF{"Sen-Marten"}
         MG{"Madagaskar"}
         MH{"Marşall adalary"}
-        MK{"Demirgazyk Makedoniýa"}
+        MK{"Makedoniýa (ÖÝR)"}
         ML{"Mali"}
-        MM{"Mýanma (Birma)"}
+        MM{"Mýanma (Burma)"}
         MN{"Mongoliýa"}
-        MO{"Makao AAS Hytaý"}
+        MO{"Makau"}
         MP{"Demirgazyk Mariana adalary"}
         MQ{"Martinika"}
         MR{"Mawritaniýa"}
@@ -223,7 +222,7 @@ tk{
         PM{"Sen-Pýer we Mikelon"}
         PN{"Pitkern adalary"}
         PR{"Puerto-Riko"}
-        PS{"Palestina territoriýasy"}
+        PS{"Palestina"}
         PT{"Portugaliýa"}
         PW{"Palau"}
         PY{"Paragwaý"}
@@ -254,7 +253,7 @@ tk{
         SV{"Salwador"}
         SX{"Sint-Marten"}
         SY{"Siriýa"}
-        SZ{"Eswatini"}
+        SZ{"Swazilend"}
         TA{"Tristan-da-Kunýa"}
         TC{"Terks we Kaýkos adalary"}
         TD{"Çad"}
@@ -299,6 +298,7 @@ tk{
         ZZ{"Näbelli sebit"}
     }
     Countries%short{
+        GB{"Birleşen Patyşalyk"}
         HK{"Gonkong"}
         MO{"Makao"}
         PS{"Palestina"}
@@ -313,4 +313,5 @@ tk{
         SZ{"Swazilend"}
         TL{"Gündogar Timor"}
     }
+    Version{"37"}
 }

@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 fo{
     Keys{
         calendar{"kalendari"}
@@ -103,7 +102,6 @@ fo{
         eu{"baskiskt"}
         ewo{"ewondo"}
         fa{"persiskt"}
-        fa_AF{"dari"}
         ff{"fulah"}
         fi{"finskt"}
         fil{"filipiniskt"}
@@ -304,6 +302,7 @@ fo{
         ro{"rumenskt"}
         ro_MD{"moldaviskt"}
         rof{"rombo"}
+        root{"root"}
         ru{"russiskt"}
         rup{"aromenskt"}
         rw{"kinyarwanda"}
@@ -418,15 +417,13 @@ fo{
         zh_Hant{"mandarin kinesiskt (vanligt)"}
     }
     Languages%menu{
-        ckb{"kurdiskt, mið"}
         yue{"kinesiskt, kantonesiskt"}
         zh{"kinesiskt, mandarin"}
     }
     Languages%short{
         az{"azeri"}
-    }
-    Languages%variant{
-        ckb{"kurdiskt, sorani"}
+        en_GB{"enskt (UK)"}
+        en_US{"enskt (USA)"}
     }
     Scripts{
         Arab{"arabisk"}
@@ -562,6 +559,7 @@ fo{
         POLYTON{"polytonísk"}
         WADEGILE{"Wade-Giles"}
     }
+    Version{"37"}
     characterLabelPattern{
         all{"{0} — Alt"}
         category-list{"{0}: {1}"}
@@ -576,8 +574,6 @@ fo{
             one{"{0} strok"}
             other{"{0} strok"}
         }
-        subscript{"lágskrift {0}"}
-        superscript{"háskrift {0}"}
     }
     codePatterns{
         language{"Mál: {0}"}

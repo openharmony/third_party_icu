@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 mzn{
     Currencies{
         AED{
@@ -584,7 +583,7 @@ mzn{
             "شرقی کاراییب ِدولار",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "غربی آفریقای ِسی‌اف‌ای فرانک",
         }
         YER{
@@ -1142,4 +1141,5 @@ mzn{
             other{"زامبیای ِکواچا"}
         }
     }
+    Version{"37"}
 }

@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 br{
     Keys{
         calendar{"deiziadur"}
@@ -8,7 +7,6 @@ br{
         collation{"doare rummañ"}
         currency{"moneiz"}
         hc{"kelcʼhiad eurioù"}
-        lb{"stil torr linenn"}
         ms{"reizhiad vuzuliañ"}
         numbers{"niveroù"}
     }
@@ -150,7 +148,6 @@ br{
         eu{"euskareg"}
         ewo{"ewondo"}
         fa{"perseg"}
-        fa_AF{"dareg"}
         fan{"fang"}
         fat{"fanti"}
         ff{"fula"}
@@ -414,6 +411,7 @@ br{
         ro_MD{"moldoveg"}
         rof{"rombo"}
         rom{"romanieg"}
+        root{"gwrizienn"}
         ru{"rusianeg"}
         rup{"aroumaneg"}
         rw{"kinyarwanda"}
@@ -544,7 +542,7 @@ br{
         yue{"kantoneg"}
         za{"zhuang"}
         zap{"zapoteg"}
-        zbl{"arouezioù Bliss"}
+        zbl{"Bliss"}
         zea{"zelandeg"}
         zen{"zenaga"}
         zgh{"tamacheg Maroko standart"}
@@ -561,7 +559,6 @@ br{
         zh_Hant{"sinaeg mandarinek hengounel"}
     }
     Languages%menu{
-        ckb{"kurdeg kreiz"}
         yue{"sinaeg, kantoneg"}
         zh{"sinaeg, mandarineg"}
     }
@@ -603,7 +600,7 @@ br{
         Guru{"gurmukhi"}
         Hanb{"han gant bopomofo"}
         Hang{"hangeul"}
-        Hani{"sinalunioù (han)"}
+        Hani{"han"}
         Hans{"eeunaet"}
         Hant{"hengounel"}
         Hebr{"hebraek"}
@@ -661,8 +658,8 @@ br{
         Zzzz{"skritur dianav"}
     }
     Scripts%stand-alone{
-        Hans{"sinalunioù (han) eeunaet"}
-        Hant{"sinalunioù (han) hengounel"}
+        Hans{"han eeunaet"}
+        Hant{"han hengounel"}
     }
     Types{
         calendar{
@@ -686,7 +683,6 @@ br{
             roc{"deiziadur Republik Sina"}
         }
         cf{
-            account{"furmad unanenn jediñ"}
             standard{"furmad moneiz standart"}
         }
         collation{
@@ -711,11 +707,6 @@ br{
             h12{"reizhiad 12 eurvezh (1–12)"}
             h23{"reizhiad 24 eurvezh (0–23)"}
             h24{"reizhiad 24 eurvezh (1–24)"}
-        }
-        lb{
-            loose{"stil torr linenn lezober"}
-            normal{"stil torr linenn boas"}
-            strict{"stil torr linenn strizh"}
         }
         ms{
             metric{"reizhiad vetrek"}
@@ -784,7 +775,7 @@ br{
         }
     }
     Variants{
-        1606NICT{"krenncʼhalleg diwezhañ"}
+        1606NICT{"krenncʼhalleg"}
         1694ACAD{"galleg rakvodern"}
         1901{"reizhskrivadur alamanek hengounel"}
         1959ACAD{"belaruseg akademek"}
@@ -809,7 +800,6 @@ br{
         BISKE{"rannyezh San Giorgio/Bila"}
         BOHORIC{"lizherenneg Bohorič"}
         BOONT{"boontling"}
-        BORNHOLM{"rannyezh Bornholm"}
         CISAUP{"kizalpeg"}
         COLB1945{"emglev 1945 war reizhskrivadur portugaleg Brazil"}
         CORNU{"saozneg Kerne-Veur"}
@@ -819,7 +809,7 @@ br{
         EMODENG{"saozneg rakvodern"}
         FONIPA{"lizherenneg fonetek etrebroadel"}
         FONKIRSH{"lizherenneg fonetek Kirshenbaum"}
-        FONNAPA{"lizherenneg fonetek Norzh Amerika"}
+        FONNAPA{"FONNAPA"}
         FONUPA{"lizherenneg fonetek ouralek"}
         FONXSAMP{"treuzskrivadur X-SAMPA"}
         GASCON{"gwaskoneg"}
@@ -831,11 +821,11 @@ br{
         HSISTEMO{"esperanteg sistem H"}
         IJEKAVSK{"serbeg gant distagadur ijekavian"}
         ITIHASA{"sanskriteg itihâsa"}
-        IVANCHOV{"reizhskrivadur bulgarek Ivanchov"}
+        IVANCHOV{"reizhskrivadur Ivanchov"}
         JAUER{"rannyezh romañchek Jauer"}
         JYUTPING{"romanekadur kantonek Jyutping"}
         KKCOR{"kerneveureg kumun"}
-        KOCIEWIE{"rannyezh polonek Kociewie"}
+        KOCIEWIE{"Kociewie"}
         KSCOR{"kerneveureg standart"}
         LAUKIKA{"sanskriteg klasel"}
         LEMOSIN{"rannyezh Limousin"}
@@ -852,14 +842,14 @@ br{
         NULIK{"volapük modern"}
         OSOJS{"rannyezh Oseacco/Osojane"}
         OXENDICT{"skritur Oxford English Dictionary"}
-        PAHAWH2{"reizhskrivadur pahawh hmong lankad 2"}
-        PAHAWH3{"reizhskrivadur pahawh hmong lankad 3"}
-        PAHAWH4{"reizhskrivadur pahawh hmong doare diwezhañ"}
+        PAHAWH2{"PAHAWH2"}
+        PAHAWH3{"PAHAWH3"}
+        PAHAWH4{"PAHAWH4"}
         PAMAKA{"rannyezh Pamaka"}
         PETR1708{"reizhskrivadur rusianek 1708 Pêr I"}
         PINYIN{"romanekadur pinyin"}
         POLYTON{"gresianeg liestonel"}
-        POSIX{"stlenneg"}
+        POSIX{"POSIX"}
         PROVENC{"provañseg"}
         PUTER{"rannyezh romañchek Puter"}
         REVISED{"reizhskrivadur reizhet"}
@@ -869,10 +859,10 @@ br{
         SAAHO{"saho"}
         SCOTLAND{"saozneg standart Skos"}
         SCOUSE{"saozneg Liverpool (scouse)"}
-        SIMPLE{"eeunaet"}
+        SIMPLE{"SIMPLE"}
         SOLBA{"rannyezh Stolvizza/Solbica"}
         SOTAV{"rannyezhoù Sotavento kreoleg ar Cʼhab-Glas"}
-        SPANGLIS{"spanglish"}
+        SPANGLIS{"SPANGLIS"}
         SURMIRAN{"rannyezh romañchek surmiran"}
         SURSILV{"rannyezh romañchek sursilvan"}
         SUTSILV{"rannyezh romañchek sutsilvan"}
@@ -888,30 +878,19 @@ br{
         WADEGILE{"romanekadur Wade-Giles"}
         XSISTEMO{"esperanteg sistem X"}
     }
+    Version{"37"}
     characterLabelPattern{
-        all{"{0} — holl"}
-        category-list{"{0} : {1}"}
-        compatibility{"{0} — kenglotusted"}
         enclosed{"{0} — kelcʼhiet"}
         extended{"{0} — astennet"}
         historic{"{0} — istorel"}
         miscellaneous{"{0} — liesseurt"}
         other{"{0} — all"}
         scripts{"skriturioù — {0}"}
-        strokes{
-            few{"{0} linenn"}
-            many{"{0} a linennoù"}
-            one{"{0} linenn"}
-            other{"{0} linenn"}
-            two{"{0} linenn"}
-        }
-        subscript{"isskridad {0}"}
-        superscript{"usskridad {0}"}
     }
     codePatterns{
-        language{"yezh : {0}"}
-        script{"skritur : {0}"}
-        territory{"rannved : {0}"}
+        language{"{0}"}
+        script{"{0}"}
+        territory{"{0}"}
     }
     localeDisplayPattern{
         keyTypePattern{"{0} : {1}"}

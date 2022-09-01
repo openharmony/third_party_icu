@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ks{
     Currencies{
         ADP{
@@ -660,7 +659,7 @@ ks{
             "نیوٗ پیپُعا گِنِیَن کیٖنا",
         }
         PHP{
-            "₱",
+            "PHP",
             "پھِلِپایِٔن پؠسو",
         }
         PKR{
@@ -948,7 +947,7 @@ ks{
             "فرینچ یوٗ اے سی فرینک",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "سی ایف اے فرینک بی سی ایٖ اے او",
         }
         XPD{
@@ -1020,4 +1019,5 @@ ks{
             "زِمبابِیُک ڈالَر",
         }
     }
+    Version{"37"}
 }

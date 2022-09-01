@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 is{
     Currencies{
         ADP{
@@ -565,7 +564,7 @@ is{
         }
         NIO{
             "NIO",
-            "níkarögsk kordóva",
+            "níkaraögsk kordóva",
         }
         NLG{
             "NLG",
@@ -868,7 +867,7 @@ is{
             "Franskur franki, UIC",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "vesturafrískur franki",
         }
         XPF{
@@ -1645,4 +1644,5 @@ is{
         one{"{0} {1}"}
         other{"{0} {1}"}
     }
+    Version{"37"}
 }

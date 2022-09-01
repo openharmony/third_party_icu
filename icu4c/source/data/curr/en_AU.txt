@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 en_AU{
     %%Parent{"en_001"}
     Currencies{
@@ -370,7 +369,7 @@ en_AU{
         }
         PHP{
             "PHP",
-            "Philippine Peso",
+            "Philippine Piso",
         }
         PLN{
             "PLN",
@@ -554,6 +553,7 @@ en_AU{
         AUD{"$"}
         BDT{"Tk"}
         BND{"$"}
+        BOB{"$b"}
         BRL{"R$"}
         CLP{"$"}
         CNY{"¥"}
@@ -588,10 +588,6 @@ en_AU{
         VND{"₫"}
     }
     CurrencyPlurals{
-        AFN{
-            one{"Afghan Afghani"}
-            other{"Afghan Afghanis"}
-        }
         BAM{
             one{"Bosnia-Herzegovina convertible marka"}
             other{"Bosnia-Herzegovina convertible marka"}
@@ -611,10 +607,6 @@ en_AU{
         CNH{
             one{"CNH"}
             other{"CNH"}
-        }
-        ETB{
-            one{"Ethiopian birr"}
-            other{"Ethiopian birrs"}
         }
         EUR{
             one{"euro"}
@@ -636,17 +628,9 @@ en_AU{
             one{"Laotian kip"}
             other{"Laotian kip"}
         }
-        LSL{
-            one{"Lesotho loti"}
-            other{"Lesotho lotis"}
-        }
         MKD{
             one{"Macedonian denar"}
             other{"Macedonian denar"}
-        }
-        MVR{
-            one{"Maldivian rufiyaa"}
-            other{"Maldivian rufiyaas"}
         }
         PGK{
             one{"Papua New Guinean kina"}
@@ -680,13 +664,10 @@ en_AU{
             one{"Vietnamese dong"}
             other{"Vietnamese dongs"}
         }
-        VUV{
-            one{"Vanuatu vatu"}
-            other{"Vanuatu vatus"}
-        }
         WST{
             one{"Samoan tala"}
             other{"Samoan talas"}
         }
     }
+    Version{"37"}
 }

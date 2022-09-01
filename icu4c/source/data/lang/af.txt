@@ -1,17 +1,16 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 af{
     Keys{
         calendar{"Kalender"}
         cf{"Geldeenheidformaat"}
-        colAlternate{"Ignoreer simboolrangskikking"}
-        colBackwards{"Omgekeerde aksentrangskikking"}
-        colCaseFirst{"Hoofletter-/kleinletter-rangskikking"}
-        colCaseLevel{"Kassensitiewe rangskikking"}
-        colNormalization{"Genormaliseerde rangskikking"}
-        colNumeric{"Numeriese rangskikking"}
-        colStrength{"Rangskiksterkte"}
+        colAlternate{"Ignoreer simboolsortering"}
+        colBackwards{"Omgekeerde aksentsortering"}
+        colCaseFirst{"Hoofletters/kleinletters-sortering"}
+        colCaseLevel{"Kassensitiewe sortering"}
+        colNormalization{"Genormaliseerde sortering"}
+        colNumeric{"Numeriese sortering"}
+        colStrength{"Sorteringssterkte"}
         collation{"Rangskikvolgorde"}
         currency{"Geldeenheid"}
         hc{"Uursiklus (12 vs 24)"}
@@ -94,6 +93,7 @@ af{
         dar{"Dakota"}
         dav{"Taita"}
         de{"Duits"}
+        de_CH{"Switserse hoog-Duits"}
         dgr{"Dogrib"}
         dje{"Zarma"}
         dsb{"Benedesorbies"}
@@ -172,7 +172,7 @@ af{
         io{"Ido"}
         is{"Yslands"}
         it{"Italiaans"}
-        iu{"Inoektitoet"}
+        iu{"Inuïties"}
         ja{"Japannees"}
         jbo{"Lojban"}
         jgo{"Ngomba"}
@@ -275,7 +275,7 @@ af{
         naq{"Nama"}
         nb{"Boeknoors"}
         nd{"Noord-Ndebele"}
-        nds{"Nederduits"}
+        nds{"Lae Duits"}
         nds_NL{"Nedersaksies"}
         ne{"Nepalees"}
         new{"Newari"}
@@ -319,6 +319,7 @@ af{
         rn{"Rundi"}
         ro{"Roemeens"}
         rof{"Rombo"}
+        root{"Root"}
         ru{"Russies"}
         rup{"Aromanies"}
         rw{"Rwandees"}
@@ -394,7 +395,7 @@ af{
         ug{"Uighur"}
         uk{"Oekraïens"}
         umb{"Umbundu"}
-        und{"Onbekende taal"}
+        und{"Onbekende of ongeldige taal"}
         ur{"Oerdoe"}
         uz{"Oezbeeks"}
         vai{"Vai"}
@@ -419,6 +420,8 @@ af{
         yue{"Kantonees"}
         zgh{"Standaard Marokkaanse Tamazight"}
         zh{"Chinees"}
+        zh_Hans{"Chinees (Vereenvoudig)"}
+        zh_Hant{"Chinees (Tradisioneel)"}
         zu{"Zoeloe"}
         zun{"Zuni"}
         zxx{"Geen taalinhoud nie"}
@@ -434,9 +437,10 @@ af{
     }
     Languages%short{
         az{"Azeri"}
+        en_GB{"Engels (VK)"}
+        en_US{"Engels (VSA)"}
     }
     Languages%variant{
-        ckb{"Koerdies Sorani"}
         ps{"Pushto"}
     }
     Scripts{
@@ -452,7 +456,7 @@ af{
         Grek{"Grieks"}
         Gujr{"Gudjarati"}
         Guru{"Gurmukhi"}
-        Hanb{"Han met Bopomofo"}
+        Hanb{"Hanb"}
         Hang{"Hangul"}
         Hani{"Han"}
         Hans{"Vereenvoudig"}
@@ -482,7 +486,7 @@ af{
         Zsye{"Emoji"}
         Zsym{"Simbole"}
         Zxxx{"Ongeskrewe"}
-        Zyyy{"Gemeenskaplik"}
+        Zyyy{"Algemeen"}
         Zzzz{"Onbekende skryfstelsel"}
     }
     Scripts%stand-alone{
@@ -630,22 +634,21 @@ af{
             vaii{"Vai-syfers"}
         }
     }
+    Version{"37"}
     characterLabelPattern{
-        all{"{0} – alle"}
+        all{"{0} – Alle"}
         category-list{"{0}: {1}"}
-        compatibility{"{0} – versoenbaarheid"}
-        enclosed{"{0} ingeslote"}
-        extended{"{0} – uitgebreid"}
-        historic{"{0} – histories"}
-        miscellaneous{"{0} – allerlei"}
-        other{"{0} – ander"}
-        scripts{"skrifte – {0}"}
+        compatibility{"{0} – Versoenbaarheid"}
+        enclosed{"{0} – Ingesluit"}
+        extended{"{0} – Uitgebreid"}
+        historic{"{0} – Histories"}
+        miscellaneous{"{0} – Allerlei"}
+        other{"{0} – Ander"}
+        scripts{"Skrifte – {0}"}
         strokes{
-            one{"{0} haal"}
+            one{"{0} hale"}
             other{"{0} hale"}
         }
-        subscript{"onderskrif {0}"}
-        superscript{"boskrif {0}"}
     }
     codePatterns{
         language{"Taal: {0}"}

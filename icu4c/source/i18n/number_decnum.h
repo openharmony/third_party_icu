@@ -9,7 +9,6 @@
 
 #include "decNumber.h"
 #include "charstr.h"
-#include "bytesinkutil.h"
 
 U_NAMESPACE_BEGIN
 
@@ -57,13 +56,6 @@ class U_I18N_API DecNum : public UMemory {
     bool isZero() const;
 
     void toString(ByteSink& output, UErrorCode& status) const;
-
-    inline CharString toCharString(UErrorCode& status) const {
-      CharString cstr;
-      CharStringByteSink sink(&cstr);
-      toString(sink, status);
-      return cstr;
-    }
 
     inline const decNumber* getRawDecNumber() const {
         return fData.getAlias();

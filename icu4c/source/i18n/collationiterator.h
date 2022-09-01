@@ -76,9 +76,9 @@ private:
             // (Rather than buffer.getCapacity().)
             if(length < INITIAL_CAPACITY || ensureAppendCapacity(1, errorCode)) {
                 ++length;
-                return true;
+                return TRUE;
             } else {
-                return false;
+                return FALSE;
             }
         }
 
@@ -251,9 +251,9 @@ protected:
     virtual UBool foundNULTerminator();
 
     /**
-     * @return false if surrogate code points U+D800..U+DFFF
+     * @return FALSE if surrogate code points U+D800..U+DFFF
      *         map to their own implicit primary weights (for UTF-16),
-     *         or true if they map to CE(U+FFFD) (for UTF-8)
+     *         or TRUE if they map to CE(U+FFFD) (for UTF-8)
      */
     virtual UBool forbidSurrogateCodePoints() const;
 

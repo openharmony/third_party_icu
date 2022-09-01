@@ -344,7 +344,7 @@ public:
     UBool isLeapYear(int32_t year) const;
 
     /**
-     * Returns true if the given Calendar object is equivalent to this
+     * Returns TRUE if the given Calendar object is equivalent to this
      * one.  Calendar override.
      *
      * @param other the Calendar to be compared with this Calendar   
@@ -756,7 +756,7 @@ public:
  public: // internal implementation
 
     /**
-     * @return true if this calendar has the notion of a default century
+     * @return TRUE if this calendar has the notion of a default century
      * @internal 
      */
     virtual UBool haveDefaultCentury() const;

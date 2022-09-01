@@ -1,7 +1,7 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 vi{
+    Version{"37"}
     zoneStrings{
         "Africa:Abidjan"{
             ec{"Abidjan"}
@@ -958,7 +958,7 @@ vi{
             ls{"Giờ Phối hợp Quốc tế"}
         }
         "Etc:Unknown"{
-            ec{"Thành phố không xác định"}
+            ec{"Thành phố Không xác định"}
         }
         "Europe:Amsterdam"{
             ec{"Amsterdam"}
@@ -1441,9 +1441,9 @@ vi{
             ls{"Giờ Chuẩn Azerbaijan"}
         }
         "meta:Azores"{
-            ld{"Giờ mùa hè Azores"}
+            ld{"Giờ Mùa Hè Azores"}
             lg{"Giờ Azores"}
-            ls{"Giờ chuẩn Azores"}
+            ls{"Giờ Chuẩn Azores"}
         }
         "meta:Bangladesh"{
             ld{"Giờ Mùa Hè Bangladesh"}
@@ -1544,7 +1544,7 @@ vi{
             ls{"Giờ chuẩn Đông Âu"}
         }
         "meta:Europe_Further_Eastern"{
-            ls{"Giờ Viễn đông Châu Âu"}
+            ls{"Giờ Châu Âu Viễn Đông"}
         }
         "meta:Europe_Western"{
             ld{"Giờ mùa hè Tây Âu"}

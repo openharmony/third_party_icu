@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 gd{
     Currencies{
         ADP{
@@ -1037,7 +1036,7 @@ gd{
         }
         UYW{
             "UYW",
-            "Aonad inneacs tuarastail ainmeach Uruguaidh",
+            "aonad inneacs tuarastail ainmeach Uruguaidh",
         }
         UZS{
             "UZS",
@@ -1120,7 +1119,7 @@ gd{
             "Franc UIC Frangach",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "Franc CFA Afraga an Iar",
         }
         XPD{
@@ -3145,4 +3144,5 @@ gd{
         other{"{0} {1}"}
         two{"{0} {1}"}
     }
+    Version{"37"}
 }

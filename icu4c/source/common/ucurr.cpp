@@ -91,8 +91,6 @@ static const char VAR_DELIM = '_';
 // Tag for localized display names (symbols) of currencies
 static const char CURRENCIES[] = "Currencies";
 static const char CURRENCIES_NARROW[] = "Currencies%narrow";
-static const char CURRENCIES_FORMAL[] = "Currencies%formal";
-static const char CURRENCIES_VARIANT[] = "Currencies%variant";
 static const char CURRENCYPLURALS[] = "CurrencyPlurals";
 
 // ISO codes mapping table
@@ -651,7 +649,7 @@ ucurr_getName(const UChar* currency,
     }
 
     int32_t choice = (int32_t) nameStyle;
-    if (choice < 0 || choice > 4) {
+    if (choice < 0 || choice > 2) {
         *ec = U_ILLEGAL_ARGUMENT_ERROR;
         return 0;
     }
@@ -686,22 +684,9 @@ ucurr_getName(const UChar* currency,
     ec2 = U_ZERO_ERROR;
     LocalUResourceBundlePointer rb(ures_open(U_ICUDATA_CURR, loc, &ec2));
 
-    if (nameStyle == UCURR_NARROW_SYMBOL_NAME || nameStyle == UCURR_FORMAL_SYMBOL_NAME || nameStyle == UCURR_VARIANT_SYMBOL_NAME) {
+    if (nameStyle == UCURR_NARROW_SYMBOL_NAME) {
         CharString key;
-        switch (nameStyle) {
-        case UCURR_NARROW_SYMBOL_NAME:
-            key.append(CURRENCIES_NARROW, ec2);
-            break;
-        case UCURR_FORMAL_SYMBOL_NAME:
-            key.append(CURRENCIES_FORMAL, ec2);
-            break;
-        case UCURR_VARIANT_SYMBOL_NAME:
-            key.append(CURRENCIES_VARIANT, ec2);
-            break;
-        default:
-            *ec = U_UNSUPPORTED_ERROR;
-            return 0;
-        }
+        key.append(CURRENCIES_NARROW, ec2);
         key.append("/", ec2);
         key.append(buf, ec2);
         s = ures_getStringByKeyWithFallback(rb.getAlias(), key.data(), len, &ec2);
@@ -844,7 +829,7 @@ typedef struct {
 #endif
 
 
-// Comparison function used in quick sort.
+// Comparason function used in quick sort.
 static int U_CALLCONV currencyNameComparator(const void* a, const void* b) {
     const CurrencyNameStruct* currName_1 = (const CurrencyNameStruct*)a;
     const CurrencyNameStruct* currName_2 = (const CurrencyNameStruct*)b;
@@ -1530,7 +1515,7 @@ uprv_parseCurrency(const char* locale,
 
     int32_t max = 0;
     int32_t matchIndex = -1;
-    // case in-sensitive comparison against currency names
+    // case in-sensitive comparision against currency names
     searchCurrencyName(currencyNames, total_currency_name_count, 
                        upperText, textLen, partialMatchLen, &max, &matchIndex);
 
@@ -1625,7 +1610,7 @@ ucurr_getDefaultFractionDigits(const UChar* currency, UErrorCode* ec) {
     return ucurr_getDefaultFractionDigitsForUsage(currency,UCURR_USAGE_STANDARD,ec);
 }
 
-U_CAPI int32_t U_EXPORT2
+U_DRAFT int32_t U_EXPORT2
 ucurr_getDefaultFractionDigitsForUsage(const UChar* currency, const UCurrencyUsage usage, UErrorCode* ec) {
     int32_t fracDigits = 0;
     if (U_SUCCESS(*ec)) {
@@ -1648,7 +1633,7 @@ ucurr_getRoundingIncrement(const UChar* currency, UErrorCode* ec) {
     return ucurr_getRoundingIncrementForUsage(currency, UCURR_USAGE_STANDARD, ec);
 }
 
-U_CAPI double U_EXPORT2
+U_DRAFT double U_EXPORT2
 ucurr_getRoundingIncrementForUsage(const UChar* currency, const UCurrencyUsage usage, UErrorCode* ec) {
     double result = 0.0;
 
@@ -2274,6 +2259,7 @@ ucurr_countCurrencies(const char* locale,
         // local variables
         UErrorCode localStatus = U_ZERO_ERROR;
         char id[ULOC_FULLNAME_CAPACITY];
+        uloc_getKeywordValue(locale, "currency", id, ULOC_FULLNAME_CAPACITY, &localStatus);
 
         // get country or country_variant in `id'
         idForLocale(locale, id, sizeof(id), ec);
@@ -2389,6 +2375,7 @@ ucurr_forLocaleAndDate(const char* locale,
             // local variables
             UErrorCode localStatus = U_ZERO_ERROR;
             char id[ULOC_FULLNAME_CAPACITY];
+            resLen = uloc_getKeywordValue(locale, "currency", id, ULOC_FULLNAME_CAPACITY, &localStatus);
 
             // get country or country_variant in `id'
             idForLocale(locale, id, sizeof(id), ec);

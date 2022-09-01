@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 vi{
     Currencies{
         ADP{
@@ -516,7 +515,7 @@ vi{
             "Dinar Jordan",
         }
         JPY{
-            "¥",
+            "JP¥",
             "Yên Nhật",
         }
         KES{
@@ -1096,7 +1095,7 @@ vi{
             "Đồng UIC-Franc Pháp",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "Franc CFA Tây Phi",
         }
         XPD{
@@ -1704,4 +1703,5 @@ vi{
     CurrencyUnitPatterns{
         other{"{0} {1}"}
     }
+    Version{"37"}
 }

@@ -20,7 +20,7 @@ namespace impl {
 class DecNum;
 
 /**
- * A class for representing a number to be processed by the decimal formatting pipeline. Includes
+ * An class for representing a number to be processed by the decimal formatting pipeline. Includes
  * methods for rounding, plural rules, and decimal digit extraction.
  *
  * <p>By design, this is NOT IMMUTABLE and NOT THREAD SAFE. It is intended to be an intermediate
@@ -209,7 +209,7 @@ class U_I18N_API DecimalQuantity : public IFixedDecimal, public UMemory {
     double toDouble() const;
 
     /** Computes a DecNum representation of this DecimalQuantity, saving it to the output parameter. */
-    DecNum& toDecNum(DecNum& output, UErrorCode& status) const;
+    void toDecNum(DecNum& output, UErrorCode& status) const;
 
     DecimalQuantity &setToInt(int32_t n);
 
@@ -217,13 +217,7 @@ class U_I18N_API DecimalQuantity : public IFixedDecimal, public UMemory {
 
     DecimalQuantity &setToDouble(double n);
 
-    /**
-     * Produces a DecimalQuantity that was parsed from a string by the decNumber
-     * C Library.
-     *
-     * decNumber is similar to BigDecimal in Java, and supports parsing strings
-     * such as "123.456621E+40".
-     */
+    /** decNumber is similar to BigDecimal in Java. */
     DecimalQuantity &setToDecNumber(StringPiece n, UErrorCode& status);
 
     /** Internal method if the caller already has a DecNum. */

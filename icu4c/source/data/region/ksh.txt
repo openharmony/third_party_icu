@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ksh{
     Countries{
         001{"de Ääd"}
@@ -109,7 +108,7 @@ ksh{
         EU{"de Europähjesche Unijon"}
         FI{"Finnland"}
         FJ{"de Fidschi-Endelle"}
-        FK{"de Falkland-Enselle"}
+        FK{"de malleviinesche Enselle"}
         FM{"Mikroneesije"}
         FO{"de Färrör-Enselle"}
         FR{"Frankrisch"}
@@ -182,6 +181,7 @@ ksh{
         MF{"de Zint-Määtes-Ensel"}
         MG{"Maddajaska"}
         MH{"de Machschall-Enselle"}
+        MK{"de vörmaals ens jugoßlaawesch jewääse Republik Mazedoonije"}
         ML{"Maali"}
         MM{"Birma"}
         MN{"Mongjolei"}
@@ -293,6 +293,7 @@ ksh{
         ZZ{"- Jähjend onbikannt -"}
     }
     Countries%short{
+        GB{"Jruußbrettannije"}
         US{"USA"}
     }
     Countries%variant{
@@ -301,4 +302,5 @@ ksh{
         CI{"de Älfebeijnköß"}
         FK{"de malleviinesche Enselle"}
     }
+    Version{"37"}
 }

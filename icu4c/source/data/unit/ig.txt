@@ -1,7 +1,7 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ig{
+    Version{"37"}
     units{
         duration{
             century{
@@ -21,26 +21,6 @@ ig{
             }
             year{
                 dnam{"Ọtụtụ Afọ"}
-            }
-        }
-        length{
-            earth-radius{
-                dnam{"radius uwa"}
-            }
-        }
-        volume{
-            dessert-spoon{
-                dnam{"ngaji mégharia onu"}
-            }
-            dram{
-                dnam{"mmiri dram"}
-            }
-        }
-    }
-    unitsShort{
-        volume{
-            drop{
-                dnam{"dobé"}
             }
         }
     }

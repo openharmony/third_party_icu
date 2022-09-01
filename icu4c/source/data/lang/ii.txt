@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ii{
     Languages{
         de{"ꄓꇩꉙ"}
@@ -34,6 +33,7 @@ ii{
             islamic{"ꑳꌦꇂꑍꉖ"}
         }
     }
+    Version{"37"}
     codePatterns{
         language{"ꅇꉙ: {0}"}
         script{"ꇇꁱ: {0}"}

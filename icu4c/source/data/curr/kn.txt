@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 kn{
     Currencies{
         AED{
@@ -632,7 +631,7 @@ kn{
             "ಪೂರ್ವ ಕೆರೀಬಿಯನ್ ಡಾಲರ್",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "ಪಶ್ಚಿಮ ಆಫ್ರಿಕಾದ CFA ಫ್ರಾಂಕ್",
         }
         XPF{
@@ -661,12 +660,9 @@ kn{
         }
     }
     Currencies%narrow{
-        AFN{"؋"}
-        AMD{"֏"}
         AOA{"Kz"}
         ARS{"$"}
         AUD{"$"}
-        AZN{"₼"}
         BAM{"KM"}
         BBD{"$"}
         BDT{"৳"}
@@ -694,7 +690,6 @@ kn{
         FKP{"£"}
         GBP{"£"}
         GEL{"₾"}
-        GHS{"GH₵"}
         GIP{"£"}
         GNF{"FG"}
         GTQ{"Q"}
@@ -1418,4 +1413,5 @@ kn{
         one{"{0} {1}"}
         other{"{0} {1}"}
     }
+    Version{"37"}
 }

@@ -1,8 +1,7 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 root{
-    Version{"39"}
+    Version{"37"}
     boundaries{
         grapheme:process(dependency){"char.brk"}
         line:process(dependency){"line.brk"}
@@ -21,5 +20,6 @@ root{
         Laoo:process(dependency){"laodict.dict"}
         Mymr:process(dependency){"burmesedict.dict"}
         Thai:process(dependency){"thaidict.dict"}
+        Zwgi:process(dependency){"zawgyidict.dict"}
     }
 }

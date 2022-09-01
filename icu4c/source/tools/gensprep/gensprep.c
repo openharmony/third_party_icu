@@ -28,7 +28,6 @@
 
 #include "cmemory.h"
 #include "cstring.h"
-#include "toolutil.h"
 #include "unewdata.h"
 #include "uoptions.h"
 #include "uparse.h"

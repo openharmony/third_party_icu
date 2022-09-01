@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 tk{
     AuxExemplarCharacters{"[c q v x]"}
     Ellipsis{
@@ -13,8 +12,8 @@ tk{
     }
     ExemplarCharacters{"[a b ç d e ä f g h i j ž k l m n ň o ö p r s ş t u ü w y ý z]"}
     ExemplarCharactersIndex{"[A B Ç D E Ä F G H I J Ž K L M N Ň O Ö P R S Ş T U Ü W Y Ý Z]"}
-    ExemplarCharactersNumbers{"[  \\- ‑ , % ‰ + 0 1 2 3 4 5 6 7 8 9]"}
-    ExemplarCharactersPunctuation{"[\\- ‑ – — , ; \\: ! ? . … \u0022 “ ” ( ) \\[ \\] \\{ \\} § @ * #]"}
+    ExemplarCharactersNumbers{"[  \\- , % ‰ + 0 1 2 3 4 5 6 7 8 9]"}
+    ExemplarCharactersPunctuation{"[\\- – — , ; \\: ! ? . … \u0022 “ ” ( ) \\[ \\] \\{ \\} § @ * #]"}
     MoreInformation{"?"}
     NumberElements{
         default{"latn"}
@@ -187,7 +186,6 @@ tk{
                 }
             }
             symbols{
-                approximatelySign{"~"}
                 decimal{","}
                 exponential{"E"}
                 group{" "}
@@ -199,6 +197,7 @@ tk{
                 percentSign{"%"}
                 plusSign{"+"}
                 superscriptingExponent{"×"}
+                timeSeparator{":"}
             }
         }
         minimalPairs{
@@ -213,6 +212,7 @@ tk{
         minimumGroupingDigits{"1"}
         native{"latn"}
     }
+    Version{"37"}
     calendar{
         generic{
             DateTimePatterns{
@@ -280,6 +280,19 @@ tk{
                 yyyyMd{"GGGGG y-MM-dd"}
                 yyyyQQQ{"G y QQQ"}
                 yyyyQQQQ{"G y QQQQ"}
+            }
+	    dayNames{
+                stand-alone{
+                    narrow{
+                        "Ý",
+                        "D",
+                        "S",
+                        "Ç",
+                        "P",
+                        "A",
+                        "Ş",
+                    }
+                }
             }
             intervalFormats{
                 Bh{
@@ -1368,7 +1381,7 @@ tk{
             relative{
                 "-1"{"geçen ýekşenbe"}
                 "0"{"şu ýekşenbe"}
-                "1"{"indiki ýekşenbe"}
+                "1"{"indiki çekşenbe"}
             }
             relativeTime{
                 future{
@@ -1715,11 +1728,13 @@ tk{
             start{"{0}, {1}"}
         }
         standard-short{
+            2{"{0} we {1}"}
             end{"{0} we {1}"}
             middle{"{0}, {1}"}
             start{"{0}, {1}"}
         }
         unit{
+            2{"{0} we {1}"}
             end{"{0}, {1}"}
             middle{"{0}, {1}"}
             start{"{0}, {1}"}

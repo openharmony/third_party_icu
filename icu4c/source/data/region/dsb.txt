@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 dsb{
     Countries{
         001{"swět"}
@@ -109,7 +108,7 @@ dsb{
         EU{"Europska unija"}
         FI{"Finska"}
         FJ{"Fidži"}
-        FK{"Falklandske kupy"}
+        FK{"Falklandske kupy (Malwiny)"}
         FM{"Mikroneziska"}
         FO{"Färöje"}
         FR{"Francojska"}
@@ -132,7 +131,7 @@ dsb{
         GU{"Guam"}
         GW{"Gineja-Bissau"}
         GY{"Guyana"}
-        HK{"Wósebna zastojnstwowa cona Hongkong"}
+        HK{"Hongkong"}
         HM{"Heardowa kupa a McDonaldowe kupy"}
         HN{"Honduras"}
         HR{"Chorwatska"}
@@ -182,10 +181,11 @@ dsb{
         MF{"St. Martin"}
         MG{"Madagaskar"}
         MH{"Marshallowe kupy"}
+        MK{"Makedońska (PRJ)"}
         ML{"Mali"}
         MM{"Myanmar"}
         MN{"Mongolska"}
-        MO{"Wósebna zastojnstwowa cona Macao"}
+        MO{"Macao"}
         MP{"Pódpołnocne Mariany"}
         MQ{"Martinique"}
         MR{"Mawretańska"}
@@ -220,7 +220,7 @@ dsb{
         PM{"St. Pierre a Miquelon"}
         PN{"Pitcairnowe kupy"}
         PR{"Puerto Rico"}
-        PS{"Palestinski awtonomny teritorium"}
+        PS{"Palestina"}
         PT{"Portugalska"}
         PW{"Palau"}
         PY{"Paraguay"}
@@ -306,4 +306,5 @@ dsb{
         FK{"Falklandske kupy (Malwiny)"}
         TL{"Pódzajtšny Timor"}
     }
+    Version{"37"}
 }

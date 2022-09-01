@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 hu{
     Countries{
         001{"Világ"}
@@ -74,9 +73,9 @@ hu{
         BZ{"Belize"}
         CA{"Kanada"}
         CC{"Kókusz (Keeling)-szigetek"}
-        CD{"Kongó – Kinshasa"}
+        CD{"Kongó - Kinshasa"}
         CF{"Közép-afrikai Köztársaság"}
-        CG{"Kongó – Brazzaville"}
+        CG{"Kongó - Brazzaville"}
         CH{"Svájc"}
         CI{"Elefántcsontpart"}
         CK{"Cook-szigetek"}
@@ -134,7 +133,7 @@ hu{
         GU{"Guam"}
         GW{"Bissau-Guinea"}
         GY{"Guyana"}
-        HK{"Hongkong KKT"}
+        HK{"Hongkong, Kína"}
         HM{"Heard-sziget és McDonald-szigetek"}
         HN{"Honduras"}
         HR{"Horvátország"}
@@ -188,7 +187,7 @@ hu{
         ML{"Mali"}
         MM{"Mianmar"}
         MN{"Mongólia"}
-        MO{"Makaó KKT"}
+        MO{"Makaó, Kína"}
         MP{"Északi Mariana-szigetek"}
         MQ{"Martinique"}
         MR{"Mauritánia"}
@@ -223,7 +222,7 @@ hu{
         PM{"Saint-Pierre és Miquelon"}
         PN{"Pitcairn-szigetek"}
         PR{"Puerto Rico"}
-        PS{"Palesztin Autonómia"}
+        PS{"Palesztin Terület"}
         PT{"Portugália"}
         PW{"Palau"}
         PY{"Paraguay"}
@@ -270,7 +269,7 @@ hu{
         TR{"Törökország"}
         TT{"Trinidad és Tobago"}
         TV{"Tuvalu"}
-        TW{"Tajvan"}
+        TW{"Tajvan, Kína"}
         TZ{"Tanzánia"}
         UA{"Ukrajna"}
         UG{"Uganda"}
@@ -314,4 +313,5 @@ hu{
         SZ{"Eswatini"}
         TL{"Timor-Leste"}
     }
+    Version{"37"}
 }

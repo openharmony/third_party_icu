@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 pl{
     Countries{
         001{"świat"}
@@ -134,7 +133,7 @@ pl{
         GU{"Guam"}
         GW{"Gwinea Bissau"}
         GY{"Gujana"}
-        HK{"SRA Hongkong (Chiny)"}
+        HK{"Hongkong, Chiny"}
         HM{"Wyspy Heard i McDonalda"}
         HN{"Honduras"}
         HR{"Chorwacja"}
@@ -188,7 +187,7 @@ pl{
         ML{"Mali"}
         MM{"Mjanma (Birma)"}
         MN{"Mongolia"}
-        MO{"SRA Makau (Chiny)"}
+        MO{"Makau, Chiny"}
         MP{"Mariany Północne"}
         MQ{"Martynika"}
         MR{"Mauretania"}
@@ -270,7 +269,7 @@ pl{
         TR{"Turcja"}
         TT{"Trynidad i Tobago"}
         TV{"Tuvalu"}
-        TW{"Tajwan"}
+        TW{"Tajwan, Chiny"}
         TZ{"Tanzania"}
         UA{"Ukraina"}
         UG{"Uganda"}
@@ -315,4 +314,5 @@ pl{
         SZ{"Suazi"}
         TL{"Timor-Leste"}
     }
+    Version{"37"}
 }

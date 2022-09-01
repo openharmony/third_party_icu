@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 wo{
     Countries{
         AD{"Andoor"}
@@ -43,7 +42,7 @@ wo{
         CC{"Duni Koko (Kilin)"}
         CF{"Repiblik Sàntar Afrik"}
         CH{"Siwis"}
-        CI{"Kodiwaar"}
+        CI{"Kodiwaar (Côte d’Ivoire)"}
         CK{"Duni Kuuk"}
         CL{"Sili"}
         CM{"Kamerun"}
@@ -93,6 +92,7 @@ wo{
         GU{"Guwam"}
         GW{"Gine-Bisaawóo"}
         GY{"Giyaan"}
+        HK{"Ooŋ Koŋ"}
         HM{"Duni Hërd ak Duni MakDonald"}
         HN{"Onduraas"}
         HR{"Korowasi"}
@@ -140,10 +140,11 @@ wo{
         MF{"Saŋ Marteŋ"}
         MG{"Madagaskaar"}
         MH{"Duni Marsaal"}
-        MK{"Maseduwaan bëj Gànnaar"}
+        MK{"Maseduwaan (Réewum yugoslawi gu yàgg ga)"}
         ML{"Mali"}
         MM{"Miyanmaar"}
         MN{"Mongoli"}
+        MO{"Makaawo"}
         MP{"Duni Mariyaan Noor"}
         MQ{"Martinik"}
         MR{"Mooritani"}
@@ -255,4 +256,5 @@ wo{
         CD{"Kongo (R K D)"}
         CG{"Réewum Kongo"}
     }
+    Version{"37"}
 }

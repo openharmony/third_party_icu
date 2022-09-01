@@ -1,13 +1,12 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ckb{
     AuxExemplarCharacters{
         "[\u200E\u200F \u064B \u064C \u064D \u064E \u064F \u0650 \u0651 \u0652 ء آ أ "
         "ؤ إ ة ث ذ ص ض ط ظ ك ه ى ي]"
     }
     ExemplarCharacters{"[ئ ا ب پ ت ج چ ح خ د ر ز ڕ ژ س ش ع غ ف ڤ ق ک گ ل ڵ م ن ھ ە و ۆ ی ێ]"}
-    ExemplarCharactersNumbers{"[\u200E\u200F \\- ‑ , ٫ ٬ . % ٪ ‰ ؉ + 0٠ 1١ 2٢ 3٣ 4٤ 5٥ 6٦ 7٧ 8٨ 9٩]"}
+    ExemplarCharactersNumbers{"[\u200E\u200F \\- , ٫ ٬ . % ٪ ‰ ؉ + 0٠ 1١ 2٢ 3٣ 4٤ 5٥ 6٦ 7٧ 8٨ 9٩]"}
     NumberElements{
         arab{
             patterns{
@@ -58,6 +57,7 @@ ckb{
         minimumGroupingDigits{"1"}
         native{"arab"}
     }
+    Version{"37"}
     calendar{
         generic{
             DateTimePatterns{
@@ -224,8 +224,8 @@ ckb{
                 MMM{"LLL"}
                 MMMEd{"E، dی MMM"}
                 MMMMW{
-                    one{"هەفتەی W ی MMMM"}
-                    other{"هەفتەی W ی MMMM"}
+                    one{"هەفتەی W ی MMM"}
+                    other{"هەفتەی W ی MMM"}
                 }
                 MMMMd{"MMMM d"}
                 MMMd{"dی MMM"}

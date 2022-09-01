@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 kk{
     AuxExemplarCharacters{"[]"}
     Ellipsis{
@@ -222,6 +221,7 @@ kk{
         minimumGroupingDigits{"1"}
         native{"latn"}
     }
+    Version{"37"}
     calendar{
         generic{
             DateTimePatterns{
@@ -415,7 +415,7 @@ kk{
                 "HH:mm",
                 "y 'ж'. d MMMM, EEEE",
                 "y 'ж'. d MMMM",
-                "y 'ж'. dd MMM",
+                "y 'ж'. d MMM",
                 "dd.MM.yy",
                 "{1}, {0}",
                 "{1}, {0}",

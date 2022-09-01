@@ -1,12 +1,9 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 en_AU{
     %%Parent{"en_001"}
     Keys{
         colCaseFirst{"Upper case / Lower case Ordering"}
-        x{"Private Use"}
-        x0{"Private Use Transform"}
     }
     Languages{
         ar_001{"Modern Standard Arabic"}
@@ -50,4 +47,5 @@ en_AU{
             ethiopic{"Ethiopian Calendar"}
         }
     }
+    Version{"37"}
 }

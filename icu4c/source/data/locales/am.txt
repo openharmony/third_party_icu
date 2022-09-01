@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 am{
     Ellipsis{
         final{"{0}…"}
@@ -109,16 +108,16 @@ am{
                         other{"¤000 ሺ"}
                     }
                     1000000{
-                        one{"¤0 ሚ"}
-                        other{"¤0 ሚ"}
+                        one{"¤0 ሜትር"}
+                        other{"¤0 ሜትር"}
                     }
                     10000000{
-                        one{"¤00 ሚ"}
-                        other{"¤00 ሚ"}
+                        one{"¤00 ሜትር"}
+                        other{"¤00 ሜትር"}
                     }
                     100000000{
-                        one{"¤000 ሚ"}
-                        other{"¤000 ሚ"}
+                        one{"¤000 ሜትር"}
+                        other{"¤000 ሜትር"}
                     }
                     1000000000{
                         one{"¤0 ቢ"}
@@ -159,16 +158,16 @@ am{
                         other{"000 ሺ"}
                     }
                     1000000{
-                        one{"0 ሚ"}
-                        other{"0 ሚ"}
+                        one{"0 ሜትር"}
+                        other{"0 ሜትር"}
                     }
                     10000000{
-                        one{"00 ሚ"}
-                        other{"00 ሚ"}
+                        one{"00 ሜትር"}
+                        other{"00 ሜትር"}
                     }
                     100000000{
-                        one{"000 ሚ"}
-                        other{"000 ሚ"}
+                        one{"000ሜ"}
+                        other{"000ሜ"}
                     }
                     1000000000{
                         one{"0 ቢ"}
@@ -223,6 +222,7 @@ am{
         minimumGroupingDigits{"1"}
         traditional{"ethi"}
     }
+    Version{"37"}
     calendar{
         buddhist{
             DateTimePatterns{
@@ -821,11 +821,11 @@ am{
         }
         gregorian{
             AmPmMarkers{
-                "ጥዋት",
+                "ጠዋት",
                 "ከሰዓት",
             }
             AmPmMarkersAbbr{
-                "ጥዋት",
+                "ጠዋት",
                 "ከሰዓት",
             }
             AmPmMarkersNarrow{
@@ -837,7 +837,7 @@ am{
                 "h:mm:ss a z",
                 "h:mm:ss a",
                 "h:mm a",
-                "y MMMM d, EEEE",
+                "EEEE፣ d MMMM y",
                 "d MMMM y",
                 "d MMM y",
                 "dd/MM/y",
@@ -864,25 +864,21 @@ am{
                 Ehms{"E h:mm:ss a"}
                 Gy{"y G"}
                 GyMMM{"MMM y G"}
-                GyMMMEd{"G y MMM d, E"}
-                GyMMMd{"G y MMM d"}
+                GyMMMEd{"E፣ d MMM y G"}
+                GyMMMd{"d MMM y G"}
                 H{"H"}
                 Hm{"HH:mm"}
                 Hms{"HH:mm:ss"}
                 Hmsv{"HH:mm:ss v"}
                 Hmv{"HH:mm v"}
                 M{"L"}
-                MEd{"E፣ M/d"}
+                MEd{"E፣ dd/MM"}
                 MMM{"LLL"}
-                MMMEd{"E፣ MMM d"}
-                MMMMEd{"E፣ MMMM d"}
-                MMMMW{
-                    one{"ሳምንት W የ MMMM"}
-                    other{"ሳምንት W የ MMMM"}
-                }
-                MMMMd{"MMMM d"}
-                MMMd{"MMM d"}
-                Md{"M/d"}
+                MMMEd{"E፣ d MMM"}
+                MMMMEd{"E፣ d MMMM"}
+                MMMMd{"d MMMM"}
+                MMMd{"d MMM"}
+                Md{"dd/MM"}
                 d{"d"}
                 h{"h a"}
                 hm{"h:mm a"}
@@ -891,13 +887,13 @@ am{
                 hmv{"h:mm a v"}
                 ms{"mm:ss"}
                 y{"y"}
-                yM{"M/y"}
-                yMEd{"E፣ d/M/y"}
+                yM{"MM/y"}
+                yMEd{"E፣ dd/MM/y"}
                 yMMM{"MMM y"}
-                yMMMEd{"E፣ MMM d y"}
+                yMMMEd{"E፣ d MMM y"}
                 yMMMM{"MMMM y"}
                 yMMMd{"d MMM y"}
-                yMd{"d/M/y"}
+                yMd{"dd/MM/y"}
                 yQQQ{"QQQ y"}
                 yQQQQ{"QQQQ y"}
                 yw{
@@ -910,7 +906,7 @@ am{
                     abbreviated{
                         "እሑድ",
                         "ሰኞ",
-                        "ማክሰ",
+                        "ማክሰኞ",
                         "ረቡዕ",
                         "ሐሙስ",
                         "ዓርብ",
@@ -946,13 +942,13 @@ am{
                 }
                 stand-alone{
                     abbreviated{
-                        "እሑድ",
+                        "እሑ",
                         "ሰኞ",
-                        "ማክሰ",
-                        "ረቡዕ",
-                        "ሐሙስ",
-                        "ዓርብ",
-                        "ቅዳሜ",
+                        "ማክ",
+                        "ረቡ",
+                        "ሐሙ",
+                        "ዓር",
+                        "ቅዳ",
                     }
                     narrow{
                         "እ",
@@ -986,7 +982,7 @@ am{
             dayPeriod{
                 format{
                     abbreviated{
-                        afternoon1{"ከሰዓት 7"}
+                        afternoon1{"ከሰዓት1"}
                         evening1{"ማታ1"}
                         midnight{"እኩለ ሌሊት"}
                         morning1{"ጥዋት1"}
@@ -1002,7 +998,7 @@ am{
                         noon{"ቀ"}
                     }
                     wide{
-                        afternoon1{"ከሰዓት 7 ሰዓት"}
+                        afternoon1{"ከሰዓት1"}
                         evening1{"ማታ1"}
                         midnight{"እኩለ ሌሊት"}
                         morning1{"ጥዋት1"}
@@ -1013,7 +1009,7 @@ am{
                 stand-alone{
                     abbreviated{
                         afternoon1{"ከሰዓት በኋላ"}
-                        am{"ጥዋት"}
+                        am{"ጠዋት"}
                         evening1{"ማታ"}
                         midnight{"እኩለ ሌሊት"}
                         morning1{"ጥዋት1"}
@@ -1033,7 +1029,7 @@ am{
                     }
                     wide{
                         afternoon1{"ከሰዓት በኋላ"}
-                        am{"ጥዋት"}
+                        am{"ጠዋት"}
                         evening1{"ማታ"}
                         midnight{"እኩለ ሌሊት"}
                         morning1{"ጥዋት1"}
@@ -1049,7 +1045,7 @@ am{
                     "ዓ/ም",
                 }
                 abbreviated%variant{
-                    "ዓ/ዓ",
+                    "BCE",
                     "CE",
                 }
                 narrow{
@@ -1122,23 +1118,23 @@ am{
                     M{"M–M"}
                 }
                 MEd{
-                    M{"E፣ d/M – E፣ d/M"}
-                    d{"E d/M – E d/M"}
+                    M{"E፣ dd/MM – E፣ dd/MM"}
+                    d{"E፣ dd/MM – E፣ dd/MM"}
                 }
                 MMM{
                     M{"MMM–MMM"}
                 }
                 MMMEd{
-                    M{"MMM d, E – MMM d, E"}
-                    d{"E d – E d፣ MMM"}
+                    M{"E፣ d MMM – E፣ d MMM"}
+                    d{"E፣ d MMM – E፣ d MMM"}
                 }
                 MMMd{
-                    M{"MMM d – MMM d"}
-                    d{"MMM d–d"}
+                    M{"d MMM – d MMM"}
+                    d{"d–d MMM"}
                 }
                 Md{
-                    M{"d/M – d/M"}
-                    d{"d–d/M"}
+                    M{"dd/MM – dd/MM"}
+                    d{"dd/MM – dd/MM"}
                 }
                 d{
                     d{"d–d"}
@@ -1166,31 +1162,31 @@ am{
                     y{"y–y"}
                 }
                 yM{
-                    M{"M/y – M/y"}
-                    y{"M/y – M/y"}
+                    M{"MM/y – MM/y"}
+                    y{"MM/y – MM/y"}
                 }
                 yMEd{
-                    M{"E d/M/ – E d/M፣ y"}
-                    d{"y-MM-dd, E – y-MM-dd, E"}
-                    y{"E፣ d/M/y – E፣ d/M/y"}
+                    M{"E፣ dd/MM/y – E፣ dd/MM/y"}
+                    d{"E፣ dd/MM/y – E፣ dd/MM/y"}
+                    y{"E፣ dd/MM/y – E፣ dd/MM/y"}
                 }
                 yMMM{
-                    M{"MMM–MMM፣ y"}
+                    M{"MMM–MMM y"}
                     y{"MMM y – MMM y"}
                 }
                 yMMMEd{
-                    M{"E MMM d – E MMM d፣ y"}
-                    d{"E MMM d – E MMM d፣ y"}
-                    y{"E፣ MMM d፣ y – E፣ MMM d፣ y"}
+                    M{"E፣ d MMM – E፣ d MMM y"}
+                    d{"E፣ d MMM – E፣ d MMM y"}
+                    y{"E፣ d MMM y – E፣ d MMM y"}
                 }
                 yMMMM{
                     M{"MMMM–MMMM y"}
                     y{"MMMM y – MMMM y"}
                 }
                 yMMMd{
-                    M{"MMM d – MMM d፣ y"}
-                    d{"MMM d–d፣ y"}
-                    y{"MMM d፣ y – MMM d፣ y"}
+                    M{"d MMM – d MMM y"}
+                    d{"d–d MMM y"}
+                    y{"d MMM y – d MMM y"}
                 }
                 yMd{
                     M{"d/M/y – d/M/y"}
@@ -1201,18 +1197,18 @@ am{
             monthNames{
                 format{
                     abbreviated{
-                        "ጃንዩ",
-                        "ፌብሩ",
+                        "ጃንዋሪ",
+                        "ፌብሩዋሪ",
                         "ማርች",
-                        "ኤፕሪ",
+                        "ኤፕሪል",
                         "ሜይ",
                         "ጁን",
                         "ጁላይ",
-                        "ኦገስ",
-                        "ሴፕቴ",
-                        "ኦክቶ",
-                        "ኖቬም",
-                        "ዲሴም",
+                        "ኦገስት",
+                        "ሴፕቴምበር",
+                        "ኦክቶበር",
+                        "ኖቬምበር",
+                        "ዲሴምበር",
                     }
                     narrow{
                         "ጃ",
@@ -1229,8 +1225,8 @@ am{
                         "ዲ",
                     }
                     wide{
-                        "ጃንዩወሪ",
-                        "ፌብሩወሪ",
+                        "ጃንዋሪ",
+                        "ፌብሩዋሪ",
                         "ማርች",
                         "ኤፕሪል",
                         "ሜይ",
@@ -1245,18 +1241,18 @@ am{
                 }
                 stand-alone{
                     abbreviated{
-                        "ጃንዩ",
-                        "ፌብሩ",
+                        "ጃንዋሪ",
+                        "ፌብሩዋሪ",
                         "ማርች",
-                        "ኤፕሪ",
+                        "ኤፕሪል",
                         "ሜይ",
                         "ጁን",
                         "ጁላይ",
-                        "ኦገስ",
-                        "ሴፕቴ",
-                        "ኦክቶ",
-                        "ኖቬም",
-                        "ዲሴም",
+                        "ኦገስት",
+                        "ሴፕቴምበር",
+                        "ኦክቶበር",
+                        "ኖቬምበር",
+                        "ዲሴምበር",
                     }
                     narrow{
                         "ጃ",
@@ -1273,8 +1269,8 @@ am{
                         "ዲ",
                     }
                     wide{
-                        "ጃንዩወሪ",
-                        "ፌብሩወሪ",
+                        "ጃንዋሪ",
+                        "ፌብሩዋሪ",
                         "ማርች",
                         "ኤፕሪል",
                         "ሜይ",
@@ -2262,12 +2258,9 @@ am{
     listPattern{
         or{
             2{"{0} ወይም {1}﻿"}
-            end{"{0}፣ ወይም {1}"}
+            end{"{0} ወይም {1}﻿"}
             middle{"{0}፣ {1}"}
             start{"{0}፣ {1}"}
-        }
-        or-narrow{
-            end{"{0}፣ ወይም {1}"}
         }
         standard{
             2{"{0} እና {1}"}
