@@ -1,14 +1,17 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 jv{
     Countries{
         001{"Donya"}
         002{"Afrika"}
+        003{"Amérika Lor"}
         005{"Amérika Kidul"}
         009{"Oséania"}
         011{"Afrika Kulon"}
         013{"Amérika Tengah"}
         014{"Afrika Wétan"}
+        015{"Afrika Lor"}
         017{"Afrika Sisih Tengah"}
         018{"Afrika Sisih Kidul"}
         019{"Amérika"}
@@ -27,6 +30,7 @@ jv{
         145{"Asia Kulon"}
         150{"Éropah"}
         151{"Éropah Wétan"}
+        154{"Éropah Lor"}
         155{"Éropah Kulon"}
         202{"Afrika Kidule Sahara"}
         419{"Amérika Latin"}
@@ -36,7 +40,7 @@ jv{
         AF{"Afganistan"}
         AG{"Antigua lan Barbuda"}
         AI{"Anguilla"}
-        AL{"Albania"}
+        AL{"Albani"}
         AM{"Arménia"}
         AO{"Angola"}
         AQ{"Antartika"}
@@ -78,7 +82,7 @@ jv{
         CK{"Kapuloan Cook"}
         CL{"Cilé"}
         CM{"Kamerun"}
-        CN{"Tiongkok"}
+        CN{"Tyongkok"}
         CO{"Kolombia"}
         CP{"Pulo Clipperton"}
         CR{"Kosta Rika"}
@@ -103,13 +107,13 @@ jv{
         ER{"Éritréa"}
         ES{"Sepanyol"}
         ET{"Étiopia"}
-        EU{"Uni Éropa"}
+        EU{"Uni Éropah"}
         EZ{"Zona Éuro"}
         FI{"Finlan"}
         FJ{"Fiji"}
         FK{"Kapuloan Falkland"}
         FM{"Féderasi Mikronésia"}
-        FO{"Kapuloan Faroe"}
+        FO{"Kapuloan Faro"}
         FR{"Prancis"}
         GA{"Gabon"}
         GB{"Karajan Manunggal"}
@@ -125,13 +129,13 @@ jv{
         GP{"Guadélup"}
         GQ{"Guinéa Katulistiwa"}
         GR{"Grikenlan"}
-        GS{"Georgia Selatan lan Kapuloan Sandwich Selatan"}
+        GS{"Georgia Kidul lan Kapuloan Sandwich Kidul"}
         GT{"Guatémala"}
         GU{"Guam"}
         GW{"Guinea-Bissau"}
         GY{"Guyana"}
-        HK{"Hong Kong, Tiongkok"}
-        HM{"Pulo Heard & Kepuloan McDonald"}
+        HK{"Laladan Administratif Astamiwa Hong Kong"}
+        HM{"Kapuloan Heard lan McDonald"}
         HN{"Honduras"}
         HR{"Kroasia"}
         HT{"Haiti"}
@@ -141,11 +145,11 @@ jv{
         IE{"Républik Irlan"}
         IL{"Israèl"}
         IM{"Pulo Man"}
-        IN{"Indhi"}
+        IN{"Indhia"}
         IO{"Wilayah Inggris nang Segoro Hindia"}
         IQ{"Irak"}
         IR{"Iran"}
-        IS{"Islandia"}
+        IS{"Èslan"}
         IT{"Itali"}
         JE{"Jersey"}
         JM{"Jamaika"}
@@ -157,7 +161,7 @@ jv{
         KI{"Kiribati"}
         KM{"Komoro"}
         KN{"Saint Kits lan Nèvis"}
-        KP{"Korea Utara"}
+        KP{"Korea Lor"}
         KR{"Koréa Kidul"}
         KW{"Kuwait"}
         KY{"Kapuloan Kéman"}
@@ -180,11 +184,11 @@ jv{
         MF{"Santa Martin"}
         MG{"Madagaskar"}
         MH{"Kapuloan Marshall"}
-        MK{"Makedonia Utara"}
+        MK{"Républik Makédonia Lor"}
         ML{"Mali"}
         MM{"Myanmar (Burma)"}
         MN{"Mongolia"}
-        MO{"Macao, Tiongkok"}
+        MO{"Laladan Administratif Astamiwa Makau"}
         MP{"Kapuloan Mariana Lor"}
         MQ{"Martinik"}
         MR{"Mauritania"}
@@ -195,7 +199,7 @@ jv{
         MW{"Malawi"}
         MX{"Mèksiko"}
         MY{"Malaysia"}
-        MZ{"Mozambik"}
+        MZ{"Mosambik"}
         NA{"Namibia"}
         NC{"Kalédonia Anyar"}
         NE{"Nigér"}
@@ -207,7 +211,7 @@ jv{
         NP{"Népal"}
         NR{"Nauru"}
         NU{"Niue"}
-        NZ{"Niu Sélan"}
+        NZ{"Selandia Anyar"}
         OM{"Oman"}
         PA{"Panama"}
         PE{"Peru"}
@@ -254,7 +258,7 @@ jv{
         TA{"Tristan da Cunha"}
         TC{"Turks lan Kapuloan Kaikos"}
         TD{"Chad"}
-        TF{"Wilayah Prancis Selatan"}
+        TF{"Wilayah Prancis nang Kutub Kidul"}
         TG{"Togo"}
         TH{"Tanah Thai"}
         TJ{"Tajikistan"}
@@ -266,16 +270,16 @@ jv{
         TR{"Turki"}
         TT{"Trinidad lan Tobago"}
         TV{"Tuvalu"}
-        TW{"Taiwan, Tiongkok"}
+        TW{"Taiwan"}
         TZ{"Tansania"}
         UA{"Ukrania"}
         UG{"Uganda"}
         UM{"Kapuloan AS Paling Njaba"}
-        UN{"Perserikatan Bangsa-Bangsa"}
+        UN{"Pasarékatan Bangsa-Bangsa"}
         US{"Amérika Sarékat"}
         UY{"Uruguay"}
         UZ{"Usbèkistan"}
-        VA{"Vatikan"}
+        VA{"Kutha Vatikan"}
         VC{"Saint Vinsen lan Grénadin"}
         VE{"Vénésuéla"}
         VG{"Kapuloan Virgin Britania"}
@@ -309,5 +313,4 @@ jv{
         SZ{"(Swasiland)"}
         TL{"Timor Wétan"}
     }
-    Version{"37"}
 }

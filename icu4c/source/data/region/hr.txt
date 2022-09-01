@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 hr{
     Countries{
         001{"Svijet"}
@@ -128,12 +129,12 @@ hr{
         GP{"Guadalupe"}
         GQ{"Ekvatorska Gvineja"}
         GR{"Grčka"}
-        GS{"Južna Georgia i Otočje Južni Sendvič"}
+        GS{"Južna Georgija i Južni Sendvički Otoci"}
         GT{"Gvatemala"}
         GU{"Guam"}
         GW{"Gvineja Bisau"}
         GY{"Gvajana"}
-        HK{"Hong Kong, Kina"}
+        HK{"PUP Hong Kong Kina"}
         HM{"Otoci Heard i McDonald"}
         HN{"Honduras"}
         HR{"Hrvatska"}
@@ -187,7 +188,7 @@ hr{
         ML{"Mali"}
         MM{"Mjanmar (Burma)"}
         MN{"Mongolija"}
-        MO{"Makao, Kina"}
+        MO{"PUP Makao Kina"}
         MP{"Sjevernomarijanski otoci"}
         MQ{"Martinique"}
         MR{"Mauretanija"}
@@ -249,7 +250,7 @@ hr{
         SO{"Somalija"}
         SR{"Surinam"}
         SS{"Južni Sudan"}
-        ST{"Sveti Toma i Prinsipe"}
+        ST{"Sveti Toma i Princip"}
         SV{"Salvador"}
         SX{"Sint Maarten"}
         SY{"Sirija"}
@@ -269,7 +270,7 @@ hr{
         TR{"Turska"}
         TT{"Trinidad i Tobago"}
         TV{"Tuvalu"}
-        TW{"Tajvan, Kina"}
+        TW{"Tajvan"}
         TZ{"Tanzanija"}
         UA{"Ukrajina"}
         UG{"Uganda"}
@@ -278,7 +279,7 @@ hr{
         US{"Sjedinjene Američke Države"}
         UY{"Urugvaj"}
         UZ{"Uzbekistan"}
-        VA{"Vatikan"}
+        VA{"Vatikanski Grad"}
         VC{"Sveti Vincent i Grenadini"}
         VE{"Venezuela"}
         VG{"Britanski Djevičanski otoci"}
@@ -314,5 +315,4 @@ hr{
         SZ{"Svazi"}
         TL{"Istočni Timor"}
     }
-    Version{"37"}
 }

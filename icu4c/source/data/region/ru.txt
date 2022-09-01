@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 ru{
     Countries{
         001{"весь мир"}
@@ -133,7 +134,7 @@ ru{
         GU{"Гуам"}
         GW{"Гвинея-Бисау"}
         GY{"Гайана"}
-        HK{"Гонконг, Китай"}
+        HK{"Гонконг (САР)"}
         HM{"о-ва Херд и Макдональд"}
         HN{"Гондурас"}
         HR{"Хорватия"}
@@ -187,7 +188,7 @@ ru{
         ML{"Мали"}
         MM{"Мьянма (Бирма)"}
         MN{"Монголия"}
-        MO{"Макао, Китай"}
+        MO{"Макао (САР)"}
         MP{"Северные Марианские о-ва"}
         MQ{"Мартиника"}
         MR{"Мавритания"}
@@ -269,7 +270,7 @@ ru{
         TR{"Турция"}
         TT{"Тринидад и Тобаго"}
         TV{"Тувалу"}
-        TW{"Тайвань, Китай"}
+        TW{"Тайвань"}
         TZ{"Танзания"}
         UA{"Украина"}
         UG{"Уганда"}
@@ -313,5 +314,4 @@ ru{
         SZ{"Свазиленд"}
         TL{"Тимор-Лесте"}
     }
-    Version{"37"}
 }
