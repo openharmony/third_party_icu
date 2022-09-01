@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 sr_Latn{
     %%Parent{"root"}
     Countries{
@@ -134,7 +135,7 @@ sr_Latn{
         GU{"Guam"}
         GW{"Gvineja-Bisao"}
         GY{"Gvajana"}
-        HK{"Hongkong, Kina"}
+        HK{"SAR Hongkong (Kina)"}
         HM{"Ostrvo Herd i Mekdonaldova ostrva"}
         HN{"Honduras"}
         HR{"Hrvatska"}
@@ -188,7 +189,7 @@ sr_Latn{
         ML{"Mali"}
         MM{"Mijanmar (Burma)"}
         MN{"Mongolija"}
-        MO{"Makao, Kina"}
+        MO{"SAR Makao (Kina)"}
         MP{"Severna Marijanska Ostrva"}
         MQ{"Martinik"}
         MR{"Mauritanija"}
@@ -263,14 +264,14 @@ sr_Latn{
         TH{"Tajland"}
         TJ{"Tadžikistan"}
         TK{"Tokelau"}
-        TL{"Istočni Timor"}
+        TL{"Timor-Leste (Istočni Timor)"}
         TM{"Turkmenistan"}
         TN{"Tunis"}
         TO{"Tonga"}
         TR{"Turska"}
         TT{"Trinidad i Tobago"}
         TV{"Tuvalu"}
-        TW{"Tajvan, Kina"}
+        TW{"Tajvan"}
         TZ{"Tanzanija"}
         UA{"Ukrajina"}
         UG{"Uganda"}
@@ -312,8 +313,6 @@ sr_Latn{
         CI{"Obala Slonovače"}
         CZ{"Češka Republika"}
         FK{"Foklandska (Malvinska) ostrva"}
-        SZ{"Svazilend"}
         TL{"Istočni Timor"}
     }
-    Version{"37"}
 }

@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 de{
     Countries{
         001{"Welt"}
@@ -63,7 +64,7 @@ de{
         BM{"Bermuda"}
         BN{"Brunei Darussalam"}
         BO{"Bolivien"}
-        BQ{"Bonaire, Sint Eustatius und Saba"}
+        BQ{"Karibische Niederlande"}
         BR{"Brasilien"}
         BS{"Bahamas"}
         BT{"Bhutan"}
@@ -133,7 +134,7 @@ de{
         GU{"Guam"}
         GW{"Guinea-Bissau"}
         GY{"Guyana"}
-        HK{"Hongkong, China"}
+        HK{"Sonderverwaltungsregion Hongkong"}
         HM{"Heard und McDonaldinseln"}
         HN{"Honduras"}
         HR{"Kroatien"}
@@ -187,7 +188,7 @@ de{
         ML{"Mali"}
         MM{"Myanmar"}
         MN{"Mongolei"}
-        MO{"Macau, China"}
+        MO{"Sonderverwaltungsregion Macau"}
         MP{"Nördliche Marianen"}
         MQ{"Martinique"}
         MR{"Mauretanien"}
@@ -269,7 +270,7 @@ de{
         TR{"Türkei"}
         TT{"Trinidad und Tobago"}
         TV{"Tuvalu"}
-        TW{"Taiwan, China"}
+        TW{"Taiwan"}
         TZ{"Tansania"}
         UA{"Ukraine"}
         UG{"Uganda"}
@@ -298,7 +299,7 @@ de{
         ZZ{"Unbekannte Region"}
     }
     Countries%short{
-        GB{"GB"}
+        GB{"UK"}
         HK{"Hongkong"}
         MO{"Macau"}
         PS{"Palästina"}
@@ -314,5 +315,4 @@ de{
         SZ{"Swasiland"}
         TL{"Osttimor"}
     }
-    Version{"37"}
 }

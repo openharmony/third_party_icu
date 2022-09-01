@@ -43,7 +43,7 @@ ohos_static_library("static_icustubdata") {
 }
 
 ohos_prebuilt_etc("ohos_icudat") {
-  source = "//third_party/icu/ohos_icu4j/data/icudt67l.dat"
+  source = "//third_party/icu/ohos_icu4j/data/icudt69l.dat"
   module_install_dir = "usr/ohos_icu/"
   part_name = "icu"
   subsystem_name = "thirdparty"
@@ -376,8 +376,15 @@ icu_i18n_source = [
   "//third_party/icu/icu4c/source/i18n/reldtfmt.cpp",
   "//third_party/icu/icu4c/source/i18n/nultrans.cpp",
   "//third_party/icu/icu4c/source/i18n/number_grouping.cpp",
+  "//third_party/icu/icu4c/source/i18n/number_symbolswrapper.cpp",
+  "//third_party/icu/icu4c/source/i18n/number_usageprefs.cpp",
+  "//third_party/icu/icu4c/source/i18n/numrange_capi.cpp",
+  "//third_party/icu/icu4c/source/i18n/pluralranges.cpp",
+  "//third_party/icu/icu4c/source/i18n/units_complexconverter.cpp",
+  "//third_party/icu/icu4c/source/i18n/units_converter.cpp",
+  "//third_party/icu/icu4c/source/i18n/units_data.cpp",
+  "//third_party/icu/icu4c/source/i18n/units_router.cpp",
   "//third_party/icu/icu4c/source/i18n/rbt_pars.cpp",
-  "//third_party/icu/icu4c/source/i18n/nounit.cpp",
   "//third_party/icu/icu4c/source/i18n/winnmfmt.cpp",
   "//third_party/icu/icu4c/source/i18n/uregexc.cpp",
   "//third_party/icu/icu4c/source/i18n/fpositer.cpp",
