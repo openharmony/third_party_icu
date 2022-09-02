@@ -282,6 +282,7 @@ typedef int8_t UBool;
  */
 #ifdef U_DEFINE_FALSE_AND_TRUE
     // Use the predefined value.
+    define U_DEFINE_FALSE_AND_TRUE 1
 #elif defined(U_COMBINED_IMPLEMENTATION) || \
         defined(U_COMMON_IMPLEMENTATION) || defined(U_I18N_IMPLEMENTATION) || \
         defined(U_IO_IMPLEMENTATION) || defined(U_LAYOUTEX_IMPLEMENTATION) || \
