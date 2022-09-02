@@ -1,10 +1,7 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 ia{
-    AuxExemplarCharacters{
-        "[á à ă â å ä ã ā æ ç é è ĕ ê ë ē í ì ĭ î ï ī ñ ó ò ŏ ô ö ø ō œ ú ù ŭ û ü ū ÿ"
-        "]"
-    }
     Ellipsis{
         final{"{0}…"}
         initial{"…{0}"}
@@ -16,10 +13,9 @@ ia{
     ExemplarCharacters{"[a b c {ch} d e f g h i j k l m n o p {ph} q r s t u v w x y z]"}
     MoreInformation{"?"}
     NumberElements{
-        default{"latn"}
         latn{
             miscPatterns{
-                atLeast{"≥{0}"}
+                atLeast{"⩾{0}"}
                 range{"{0}–{1}"}
             }
             patterns{
@@ -196,15 +192,8 @@ ia{
                 superscriptingExponent{"×"}
             }
         }
-        minimalPairs{
-            ordinal{
-                other{"Prende le 7e exito a dextra."}
-            }
-        }
         minimumGroupingDigits{"2"}
-        native{"latn"}
     }
-    Version{"37"}
     calendar{
         generic{
             DateTimePatterns{

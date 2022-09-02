@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 yi{
     Countries{
         001{"וועלט"}
@@ -139,7 +140,6 @@ yi{
         ME{"מאנטענעגרא"}
         MG{"מאַדאַגאַסקאַר"}
         MH{"מאַרשאַל אינזלען"}
-        MK{"מאַקעדאניע"}
         ML{"מאַלי"}
         MM{"מיאַנמאַר"}
         MN{"מאנגאליי"}
@@ -231,5 +231,4 @@ yi{
     Countries%variant{
         TL{"מזרח טימאר"}
     }
-    Version{"37"}
 }

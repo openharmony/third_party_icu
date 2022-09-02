@@ -1,7 +1,7 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 zh_Hans_SG{
-    Version{"37"}
     calendar{
         buddhist{
             DateTimePatterns{
@@ -122,13 +122,13 @@ zh_Hans_SG{
                 "{1} {0}",
             }
             availableFormats{
-                MEd{"dd/MM E"}
+                MEd{"M-dE"}
                 MMM{"M月"}
                 MMMMdd{"M月d日"}
-                MMdd{"dd/MM"}
-                Md{"dd/MM"}
-                yMEd{"dd/MM/y，E"}
-                yMd{"dd/MM/y"}
+                MMdd{"MM-dd"}
+                Md{"M-d"}
+                yMEd{"y年M月d日，E"}
+                yMd{"y年M月d日"}
             }
             intervalFormats{
                 Hmv{
@@ -139,29 +139,27 @@ zh_Hans_SG{
                     H{"vHH–HH"}
                 }
                 MEd{
-                    M{"d/M E至d/M E"}
-                    d{"d/M E至d/M E"}
+                    M{"M-dE至M-dE"}
+                    d{"M-dE至M-dE"}
                 }
                 MMMEd{
-                    M{"M月d日 E至M月d日 E"}
-                    d{"M月d日 E至d日 E"}
+                    d{"M月d日E至M月d日E"}
                 }
                 Md{
-                    M{"d/M至d/M"}
-                    d{"d/M至d/M"}
+                    M{"M-d至M-d"}
+                    d{"M-d至M-d"}
                 }
                 d{
                     d{"d日至d日"}
                 }
                 fallback{"{0}至{1}"}
                 yM{
-                    M{"M/y至M/y"}
-                    y{"M/y至M/y"}
+                    M{"y年M月至y年M月"}
                 }
                 yMEd{
-                    M{"d/M/y E至d/M/y E"}
-                    d{"d/M/y E至d/M/y E"}
-                    y{"d/M/y E至d/M/y E"}
+                    M{"d/M/yE至d/M/yE"}
+                    d{"d/M/yE至d/M/yE"}
+                    y{"d/M/yE至d/M/yE"}
                 }
                 yMd{
                     M{"d/M/y至d/M/y"}

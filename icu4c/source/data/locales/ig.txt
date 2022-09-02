@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 ig{
     AuxExemplarCharacters{
         "[á à ā c é è ē í ì ī {ị\u0301} {ị\u0300} ḿ {m\u0300} ń ǹ ó ò ō {ọ\u0301} {ọ"
@@ -10,7 +11,7 @@ ig{
         " p r s {sh} t u ụ v w y z]"
     }
     ExemplarCharactersIndex{"[A B C D E F G H I J K L M N O P Q R S T U V W X Y Z]"}
-    ExemplarCharactersNumbers{"[\\- , . % ‰ + 0 1 2 3 4 5 6 7 8 9]"}
+    ExemplarCharactersPunctuation{"[\\- ‑ , ; \\: ! ? . ‘ ’ “ ” ( ) \\[ \\] \\{ \\}]"}
     NumberElements{
         arab{
             patterns{
@@ -75,9 +76,46 @@ ig{
             patterns{
                 accountingFormat{"¤#,##0.00;(¤#,##0.00)"}
                 currencyFormat{"¤#,##0.00"}
-                decimalFormat{"#,##0.###"}
-                percentFormat{"#,##0%"}
-                scientificFormat{"#E0"}
+            }
+            patternsShort{
+                currencyFormat{
+                    1000{
+                        other{"¤0K"}
+                    }
+                    10000{
+                        other{"¤00K"}
+                    }
+                    100000{
+                        other{"¤000K"}
+                    }
+                    1000000{
+                        other{"¤0M"}
+                    }
+                    10000000{
+                        other{"¤00M"}
+                    }
+                    100000000{
+                        other{"¤000M"}
+                    }
+                    1000000000{
+                        other{"¤0G"}
+                    }
+                    10000000000{
+                        other{"¤00G"}
+                    }
+                    100000000000{
+                        other{"¤000G"}
+                    }
+                    1000000000000{
+                        other{"¤0T"}
+                    }
+                    10000000000000{
+                        other{"¤00T"}
+                    }
+                    100000000000000{
+                        other{"¤000T"}
+                    }
+                }
             }
             symbols{
                 decimal{"."}
@@ -104,7 +142,6 @@ ig{
         }
         minimumGroupingDigits{"1"}
     }
-    Version{"37"}
     calendar{
         generic{
             DateTimePatterns{
@@ -116,11 +153,11 @@ ig{
                 "d MMMM y G",
                 "d MMM y G",
                 "dd/MM/y GGGGG",
-                "{1} {0}",
-                "{1} {0}",
-                "{1} {0}",
-                "{1} {0}",
-                "{1} {0}",
+                "{1}, {0}",
+                "{1} 'na' {0}",
+                "{1} 'na' {0}",
+                "{1}, {0}",
+                "{1}, {0}",
             }
             availableFormats{
                 Hm{"HH:mm"}
@@ -148,8 +185,8 @@ ig{
         }
         gregorian{
             AmPmMarkers{
-                "A.M.",
-                "P.M.",
+                "N’ụtụtụ",
+                "N’abali",
             }
             AmPmMarkersAbbr{
                 "A.M.",
@@ -167,68 +204,46 @@ ig{
                 "EEEE, d MMMM y",
                 "d MMMM y",
                 "d MMM y",
-                "dd/MM/y",
-                "{1} {0}",
-                "{1} {0}",
-                "{1} {0}",
-                "{1} {0}",
-                "{1} {0}",
+                "d/M/yy",
+                "{1}, {0}",
+                "{1} 'na' {0}",
+                "{1} 'na' {0}",
+                "{1}, {0}",
+                "{1}, {0}",
             }
             appendItems{
                 Timezone{"{0} {1}"}
             }
             availableFormats{
-                E{"ccc"}
-                EHm{"E HH:mm"}
-                EHms{"E HH:mm:ss"}
-                Ed{"d, E"}
-                Ehm{"E h:mm a"}
-                Ehms{"E h:mm:ss a"}
-                Gy{"y G"}
-                GyMMM{"MMM y G"}
-                GyMMMEd{"E, MMM d, y G"}
-                GyMMMd{"MMM d, y G"}
-                H{"HH"}
-                Hm{"HH:mm"}
-                Hms{"HH:mm:ss"}
-                Hmsv{"HH:mm:ss v"}
-                Hmv{"HH:mm v"}
-                M{"L"}
-                MEd{"E, M/d"}
-                MMM{"LLL"}
-                MMMEd{"E, MMM d"}
-                MMMMEd{"E, MMMM d"}
+                GyMMM{"MMM G y"}
+                GyMMMEd{"E, d MMM, G y"}
+                GyMMMd{"d MMM, G y"}
+                MEd{"E, d/M"}
+                MMMEd{"E, d MMM"}
+                MMMMEd{"E, d MMMM"}
                 MMMMW{
-                    other{"'week' W 'of' MMM"}
+                    other{"'Izu' W 'n'‘'ime' MMMM"}
                 }
-                MMMMd{"MMMM d"}
-                MMMd{"MMM d"}
-                Md{"M/d"}
-                d{"d"}
-                h{"h a"}
-                hm{"h:mm a"}
-                hms{"h:mm:ss a"}
-                hmsv{"h:mm:ss a v"}
-                hmv{"h:mm a v"}
-                ms{"mm:ss"}
-                y{"y"}
+                MMMMd{"d MMMM"}
+                MMMd{"d MMM"}
+                Md{"d/M"}
                 yM{"M/y"}
-                yMEd{"E, M/d/y"}
+                yMEd{"E, d/M/y"}
                 yMMM{"MMM y"}
-                yMMMEd{"E, MMM d, y"}
+                yMMMEd{"E, d MMM y"}
                 yMMMM{"MMMM y"}
-                yMMMd{"MMM d, y"}
-                yMd{"y-MM-dd"}
+                yMMMd{"d MMM y"}
+                yMd{"d/M/y"}
                 yQQQ{"QQQ y"}
                 yQQQQ{"QQQQ y"}
                 yw{
-                    other{"'week' w 'of' Y"}
+                    other{"'Izu' w 'n' 'ime' Y"}
                 }
             }
             dayNames{
                 format{
                     abbreviated{
-                        "Ụka",
+                        "Sọn",
                         "Mọn",
                         "Tiu",
                         "Wen",
@@ -236,17 +251,8 @@ ig{
                         "Fraị",
                         "Sat",
                     }
-                    narrow{
-                        "S",
-                        "M",
-                        "T",
-                        "W",
-                        "T",
-                        "F",
-                        "S",
-                    }
                     short{
-                        "Ụka",
+                        "Sọn",
                         "Mọn",
                         "Tiu",
                         "Wen",
@@ -255,7 +261,7 @@ ig{
                         "Sat",
                     }
                     wide{
-                        "Mbọsị Ụka",
+                        "Sọndee",
                         "Mọnde",
                         "Tiuzdee",
                         "Wenezdee",
@@ -266,7 +272,7 @@ ig{
                 }
                 stand-alone{
                     abbreviated{
-                        "Ụka",
+                        "Sọn",
                         "Mọn",
                         "Tiu",
                         "Wen",
@@ -274,17 +280,8 @@ ig{
                         "Fraị",
                         "Sat",
                     }
-                    narrow{
-                        "S",
-                        "M",
-                        "T",
-                        "W",
-                        "T",
-                        "F",
-                        "S",
-                    }
                     short{
-                        "Ụka",
+                        "Sọn",
                         "Mọn",
                         "Tiu",
                         "Wen",
@@ -293,7 +290,7 @@ ig{
                         "Sat",
                     }
                     wide{
-                        "Mbọsị Ụka",
+                        "Sọndee",
                         "Mọnde",
                         "Tiuzdee",
                         "Wenezdee",
@@ -325,8 +322,8 @@ ig{
                     "A.K.",
                 }
                 abbreviated%variant{
-                    "BCE",
-                    "CE",
+                    "TOA",
+                    "OA",
                 }
                 narrow{
                     "T.K.",
@@ -337,12 +334,12 @@ ig{
                     "CE",
                 }
                 wide{
-                    "Tupu Kristi",
-                    "Afọ Kristi",
+                    "Tupu Kraist",
+                    "Afọ Kraịst",
                 }
                 wide%variant{
-                    "BCE",
-                    "CE",
+                    "Tupu Oge Afọ",
+                    "Oge Afọ",
                 }
             }
             intervalFormats{
@@ -385,7 +382,6 @@ ig{
                 d{
                     d{"d–d"}
                 }
-                fallback{"{0} – {1}"}
                 h{
                     a{"h a – h a"}
                     h{"h–h a"}
@@ -457,24 +453,24 @@ ig{
                         "Dis",
                     }
                     narrow{
-                        "1",
-                        "2",
-                        "3",
-                        "4",
-                        "5",
-                        "6",
-                        "7",
-                        "8",
-                        "9",
-                        "10",
-                        "11",
-                        "12",
+                        "J",
+                        "F",
+                        "M",
+                        "E",
+                        "M",
+                        "J",
+                        "J",
+                        "Ọ",
+                        "S",
+                        "Ọ",
+                        "N",
+                        "D",
                     }
                     wide{
                         "Jenụwarị",
                         "Febrụwarị",
                         "Maachị",
-                        "Eprel",
+                        "Epreel",
                         "Mee",
                         "Juun",
                         "Julaị",
@@ -501,24 +497,24 @@ ig{
                         "Dis",
                     }
                     narrow{
-                        "1",
-                        "2",
-                        "3",
-                        "4",
-                        "5",
-                        "6",
-                        "7",
-                        "8",
-                        "9",
-                        "10",
-                        "11",
-                        "12",
+                        "J",
+                        "F",
+                        "M",
+                        "E",
+                        "M",
+                        "J",
+                        "J",
+                        "Ọ",
+                        "S",
+                        "Ọ",
+                        "N",
+                        "D",
                     }
                     wide{
                         "Jenụwarị",
                         "Febrụwarị",
                         "Maachị",
-                        "Eprel",
+                        "Epreel",
                         "Mee",
                         "Juun",
                         "Julaị",
@@ -574,17 +570,51 @@ ig{
             }
         }
     }
-    delimiters{
-        alternateQuotationEnd{"’"}
-        alternateQuotationStart{"‘"}
-        quotationEnd{"”"}
-        quotationStart{"“"}
+    characterLabel{
+        animal{"anụmanụ"}
+        animals_nature{"anụmanụ ma ọbụ ụwa"}
+        arrows{"arọ"}
+        body{"ahụ"}
+        box_drawing{"ịgbe osese"}
+        building{"ulọ"}
+        currency_symbols{"akara ego"}
+        divination_symbols{"akara ịgba afa"}
+        downwards_arrows{"arọ ala"}
+        downwards_upwards_arrows{"arọ elụ ala"}
+        female{"nwanyị"}
+        food_drink{"nrị & ịhe ọnụnụ"}
+        heart{"obi"}
+        leftwards_arrows{"arọ aka ekpe"}
+        leftwards_rightwards_arrows{"arọ aka nrị aka ekpe"}
+        male{"nwoke"}
+        math_symbols{"akara matị"}
+        musical_symbols{"akara ụrị"}
+        nature{"ụwa"}
+        nonspacing{"enweghịọhere"}
+        numbers{"ọnụọgụgụ"}
+        objects{"ịhe"}
+        other{"ọzọ"}
+        person{"mmadụ"}
+        place{"ebe"}
+        plant{"ahịha"}
+        punctuation{"akara edemede"}
+        rightwards_arrows{"arọ aka nrị"}
+        sign_standard_symbols{"ịrịba ama maọbụ akara"}
+        spacing{"ọhere"}
+        sport{"egwụregwụ"}
+        symbols{"akara"}
+        technical_symbols{"akara teknịkal"}
+        tone_marks{"ụda akara"}
+        travel{"njem"}
+        travel_places{"njem maọbụ ebe"}
+        upwards_arrows{"arọ elụ"}
+        weather{"ụdịdịụbọchị"}
     }
     fields{
         day{
             dn{"Ụbọchị"}
             relative{
-                "-1"{"Nnyaafụ"}
+                "-1"{"Ụnyaahụ"}
                 "0"{"Taa"}
                 "1"{"Echi"}
             }
@@ -603,17 +633,77 @@ ig{
                 "1"{"Echi"}
             }
         }
+        dayOfYear{
+            dn{"ụbọchị na afọ"}
+        }
+        dayOfYear-short{
+            dn{"Ụbọchị na afọ"}
+        }
         dayperiod{
-            dn{"N’ụtụtụ/N’anyasị"}
+            dn{"N’ụtụtụ/N’abalị"}
+        }
+        dayperiod-narrow{
+            dn{"N’ụtụtụ/N’abalị"}
+        }
+        dayperiod-short{
+            dn{"N’ụtụtụ/N’abalị"}
         }
         era{
             dn{"Agba"}
         }
+        fri{
+            relative{
+                "-1"{"Ụbọchị faraịde gara aga"}
+                "0"{"ụbọchị Faraịde a"}
+                "1"{"ụbọchị Faraịde na abịa"}
+            }
+        }
+        fri-narrow{
+            relative{
+                "-1"{"ụbọchị Faraịde gara aga"}
+                "0"{"ụbọchị Faraịde a"}
+                "1"{"ụọchị Faraịde na abịa"}
+            }
+        }
+        fri-short{
+            relative{
+                "-1"{"ụbọchị Faraịde gara aga"}
+                "0"{"ụbọchị Faraịde a"}
+                "1"{"ụbọchị na abịa"}
+            }
+        }
         hour{
             dn{"Elekere"}
+            relative{
+                "0"{"elekere a"}
+            }
         }
         minute{
             dn{"Nkeji"}
+            relative{
+                "0"{"nkejị a"}
+            }
+        }
+        mon{
+            relative{
+                "-1"{"ụbọchị Mọnde gara aga"}
+                "0"{"ụbọchị Mọnde a"}
+                "1"{"ụbọchị Monde a"}
+            }
+        }
+        mon-narrow{
+            relative{
+                "-1"{"ụbọchị Monde gara aga"}
+                "0"{"ụbọchị Monde a"}
+                "1"{"ụbọchị Monde na abịa"}
+            }
+        }
+        mon-short{
+            relative{
+                "-1"{"Mon gara aga"}
+                "0"{"ụbọchị Mọnde a"}
+                "1"{"ụbọchị Mọnde na abịa"}
+            }
         }
         month{
             dn{"Ọnwa"}
@@ -639,6 +729,11 @@ ig{
         }
         quarter{
             dn{"Ọnwa atọ n’afọ"}
+            relative{
+                "-1"{"Nkejị keanọ gara aga"}
+                "0"{"nkejị keanọ a"}
+                "1"{"nkejị keanọ na abịa"}
+            }
         }
         quarter-narrow{
             dn{"Ọnwa atọ n’afọ"}
@@ -646,14 +741,122 @@ ig{
         quarter-short{
             dn{"Ọnwa atọ n’afọ"}
         }
+        sat{
+            relative{
+                "-1"{"ụbọchị Satụde gara aga"}
+                "0"{"ụbọchị Satụde a"}
+                "1"{"ụbọchị Satụde na abịa"}
+            }
+        }
+        sat-narrow{
+            relative{
+                "-1"{"ụbọchị Satụde gara aga"}
+                "0"{"ụbọchị Satụde a"}
+                "1"{"ụbọchị Satụde na abịa"}
+            }
+        }
+        sat-short{
+            relative{
+                "-1"{"Ụbọchị Satụde gara aga"}
+                "0"{"ụbọchị Satụde a"}
+                "1"{"ụbọchị Satụde na abịa"}
+            }
+        }
         second{
-            dn{"Nkejinta"}
+            dn{"Tịm kọm"}
+            relative{
+                "0"{"ụgbụa"}
+            }
         }
         second-narrow{
             dn{"Tịm kọm"}
         }
         second-short{
             dn{"Tịm kọm"}
+        }
+        sun{
+            relative{
+                "-1"{"Ụbọchị ụka gara aga"}
+                "0"{"ụbọchị ụka a"}
+                "1"{"ụbọchị ụka na abịa"}
+            }
+        }
+        sun-narrow{
+            relative{
+                "-1"{"ụbọchị ụka gara aga"}
+                "0"{"ụbọchị ụka a"}
+                "1"{"ụbọchị ụka na abịa"}
+            }
+        }
+        sun-short{
+            relative{
+                "-1"{"ụbọchị ụka gara aga"}
+                "0"{"ubochị ụka a"}
+                "1"{"ụbọchị ụka na abịa"}
+            }
+        }
+        thu{
+            relative{
+                "-1"{"ụbọchị Tọsdee gara aga"}
+                "0"{"ụbọchị Tọsdee a"}
+                "1"{"ụbọchị Tọsdee na abịa"}
+            }
+        }
+        thu-narrow{
+            relative{
+                "-1"{"ụbọchị Tọsdee gara aga"}
+                "0"{"ụbọchị Tọsdee a"}
+                "1"{"ụbọchị Tọsdee na abịa"}
+            }
+        }
+        thu-short{
+            relative{
+                "-1"{"Ụbọchị Tọsdee gara aga"}
+                "0"{"ụbọchị Tọsdee a"}
+                "1"{"ụbọchị Tọsdee na abịa"}
+            }
+        }
+        tue{
+            relative{
+                "-1"{"ụbọchị Tuesde gara aga"}
+                "0"{"ụbọchị Tuesde a"}
+                "1"{"ụbọchị Tuesde na abịa"}
+            }
+        }
+        tue-narrow{
+            relative{
+                "-1"{"ụbọchị Tuesde gara aga"}
+                "0"{"ụbọchị Tuesde a"}
+                "1"{"ụbọchị Tuesde na abịa"}
+            }
+        }
+        tue-short{
+            relative{
+                "-1"{"ụbọchị Tụesde gara aga"}
+                "0"{"ụbọchị Tuesde a"}
+                "1"{"ụbọchị Tuesde na abịa"}
+            }
+        }
+        wed{
+            relative{
+                "-1"{"ụbọchị wednesde gara aga"}
+                "0"{"ụbọchị Wednesde a"}
+                "1"{"ụbọchị Wednesde na abịa"}
+            }
+        }
+        wed-narrow{
+            relative{
+                "-1"{"ụbọchị Wednesde gara ag"}
+                "0"{"ụbọchị Wednesde a"}
+                "1"{"ụbọchị Wednesde a"}
+            }
+        }
+        wed-short{
+            relative{
+                "-1"{"ụbọchị Wednesde gara ag"}
+                "0"{"ụbọchị Wednesde a"}
+                "1"{"ụbọchị Wednesde na abịa"}
+            }
         }
         week{
             dn{"Izu"}
@@ -680,8 +883,32 @@ ig{
             }
             relativePeriod{"Izu nke{0}"}
         }
+        weekOfMonth{
+            dn{"ịzụ ọnwa"}
+        }
+        weekOfMonth-narrow{
+            dn{"ịzụ ọnwa"}
+        }
+        weekOfMonth-short{
+            dn{"ịzụ ọnwa"}
+        }
         weekday{
             dn{"Ụbọchị izu"}
+        }
+        weekday-narrow{
+            dn{"Ụbọchị ịzụ"}
+        }
+        weekday-short{
+            dn{"Ụbọchị ịzụ"}
+        }
+        weekdayOfMonth{
+            dn{"Ụbọchị ịzụ na ọnwa"}
+        }
+        weekdayOfMonth-narrow{
+            dn{"Ụbọchị ịzụ na ọnwa"}
+        }
+        weekdayOfMonth-short{
+            dn{"Ụbọchị ịzụ na ọnwa"}
         }
         year{
             dn{"Afọ"}

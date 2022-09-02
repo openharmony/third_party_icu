@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 sq{
     AuxExemplarCharacters{"[w]"}
     Ellipsis{
@@ -18,10 +19,10 @@ sq{
         "[A B C Ç D {DH} E Ë F G {GJ} H I J K L {LL} M N {NJ} O P Q R {RR} S {SH} T {"
         "TH} U V X {XH} Y Z {ZH}]"
     }
-    ExemplarCharactersNumbers{"[  \\- , % ‰ + 0 1 2 3 4 5 6 7 8 9]"}
+    ExemplarCharactersNumbers{"[  \\- ‑ , % ‰ + 0 1 2 3 4 5 6 7 8 9]"}
     ExemplarCharactersPunctuation{
-        "[\\- ‐ – — , ; \\: ! ? . … ' ‘ ’ \u0022 “ ” « » ( ) \\[ \\] § @ * / \\& # ′ "
-        "″ ~]"
+        "[\\- ‐ ‑ – — , ; \\: ! ? . … ' ‘ ’ \u0022 “ ” « » ( ) \\[ \\] § @ * / \\& # "
+        "′ ″ ~]"
     }
     MoreInformation{"?"}
     NumberElements{
@@ -195,6 +196,7 @@ sq{
                 }
             }
             symbols{
+                approximatelySign{"≈"}
                 decimal{","}
                 exponential{"E"}
                 group{" "}
@@ -222,14 +224,13 @@ sq{
         minimumGroupingDigits{"2"}
         native{"latn"}
     }
-    Version{"37"}
     calendar{
         generic{
             DateTimePatterns{
-                "HH:mm:ss, zzzz",
-                "HH:mm:ss, z",
-                "HH:mm:ss",
-                "HH:mm",
+                "h:mm:ss a, zzzz",
+                "h:mm:ss a, z",
+                "h:mm:ss a",
+                "h:mm a",
                 "EEEE, d MMM y G",
                 "d MMM y G",
                 "d MMM y G",
@@ -264,7 +265,7 @@ sq{
                 MMM{"LLL"}
                 MMMEd{"E, d MMM"}
                 MMMMEd{"E, d MMM"}
-                MMMMd{"d MMM"}
+                MMMMd{"d MMMM"}
                 MMMd{"d MMM"}
                 Md{"d.M"}
                 d{"d"}
@@ -423,13 +424,13 @@ sq{
                 "m.d.",
             }
             DateTimePatterns{
-                "HH:mm:ss, zzzz",
-                "HH:mm:ss, z",
-                "HH:mm:ss",
-                "HH:mm",
+                "h:mm:ss a, zzzz",
+                "h:mm:ss a, z",
+                "h:mm:ss a",
+                "h:mm a",
                 "EEEE, d MMMM y",
                 "d MMMM y",
-                "d MMMM y",
+                "d MMM y",
                 "d.M.yy",
                 "{1}, {0}",
                 "{1} 'në' {0}",
@@ -447,31 +448,31 @@ sq{
                 E{"ccc"}
                 EBhm{"E h:mm B"}
                 EBhms{"E h:mm:ss B"}
-                EHm{"EEEE, HH:mm"}
-                EHms{"EEEE, HH:mm:ss"}
-                Ed{"EEEE, d"}
-                Ehm{"EEEE, h:mm a"}
-                Ehms{"EEEE, h:mm:ss a"}
+                EHm{"E, HH:mm"}
+                EHms{"E, HH:mm:ss"}
+                Ed{"E, d"}
+                Ehm{"E, h:mm a"}
+                Ehms{"E, h:mm:ss a"}
                 Gy{"y G"}
-                GyMMM{"MMMM y G"}
-                GyMMMEd{"EEEE, d MMMM y G"}
-                GyMMMd{"d MMMM y G"}
+                GyMMM{"MMM y G"}
+                GyMMMEd{"E, d MMM y G"}
+                GyMMMd{"d MMM y G"}
                 H{"HH"}
                 Hm{"HH:mm"}
                 Hms{"HH:mm:ss"}
                 Hmsv{"HH:mm:ss, v"}
                 Hmv{"HH:mm, v"}
                 M{"L"}
-                MEd{"EEEE, d.M"}
+                MEd{"E, d.M"}
                 MMM{"LLL"}
-                MMMEd{"EEEE, d MMMM"}
-                MMMMEd{"EEEE, d MMMM"}
+                MMMEd{"E, d MMM"}
+                MMMMEd{"E, d MMMM"}
                 MMMMW{
-                    one{"'java' W 'e' MMM"}
-                    other{"'java' W 'e' MMM"}
+                    one{"'java' W 'e' MMMM"}
+                    other{"'java' W 'e' MMMM"}
                 }
                 MMMMd{"d MMMM"}
-                MMMd{"d MMMM"}
+                MMMd{"d MMM"}
                 MMdd{"d.M"}
                 Md{"d.M"}
                 d{"d"}
@@ -483,11 +484,11 @@ sq{
                 ms{"mm:ss"}
                 y{"y"}
                 yM{"M.y"}
-                yMEd{"EEEE, d.M.y"}
-                yMMM{"MMMM y"}
-                yMMMEd{"EEEE, d MMMM y"}
+                yMEd{"E, d.M.y"}
+                yMMM{"MMM y"}
+                yMMMEd{"E, d MMM y"}
                 yMMMM{"MMMM y"}
-                yMMMd{"d MMMM y"}
+                yMMMd{"d MMM y"}
                 yMd{"d.M.y"}
                 yQQQ{"QQQ, y"}
                 yQQQQ{"QQQQ, y"}
@@ -508,22 +509,22 @@ sq{
                         "Sht",
                     }
                     narrow{
-                        "D",
-                        "H",
-                        "M",
-                        "M",
-                        "E",
-                        "P",
-                        "S",
+                        "d",
+                        "h",
+                        "m",
+                        "m",
+                        "e",
+                        "p",
+                        "sh",
                     }
                     short{
-                        "Die",
-                        "Hën",
-                        "Mar",
-                        "Mër",
-                        "Enj",
-                        "Pre",
-                        "Sht",
+                        "die",
+                        "hën",
+                        "mar",
+                        "mër",
+                        "enj",
+                        "pre",
+                        "sht",
                     }
                     wide{
                         "e diel",
@@ -537,40 +538,40 @@ sq{
                 }
                 stand-alone{
                     abbreviated{
-                        "Die",
-                        "Hën",
-                        "Mar",
-                        "Mër",
-                        "Enj",
-                        "Pre",
-                        "Sht",
+                        "die",
+                        "hën",
+                        "mar",
+                        "mër",
+                        "enj",
+                        "pre",
+                        "sht",
                     }
                     narrow{
-                        "D",
-                        "H",
-                        "M",
-                        "M",
-                        "E",
-                        "P",
-                        "S",
+                        "d",
+                        "h",
+                        "m",
+                        "m",
+                        "e",
+                        "p",
+                        "sh",
                     }
                     short{
-                        "Die",
-                        "Hën",
-                        "Mar",
-                        "Mër",
-                        "Enj",
-                        "Pre",
-                        "Sht",
+                        "die",
+                        "hën",
+                        "mar",
+                        "mër",
+                        "enj",
+                        "pre",
+                        "sht",
                     }
                     wide{
-                        "E diel",
-                        "E hënë",
-                        "E martë",
-                        "E mërkurë",
-                        "E enjte",
-                        "E premte",
-                        "E shtunë",
+                        "e diel",
+                        "e hënë",
+                        "e martë",
+                        "e mërkurë",
+                        "e enjte",
+                        "e premte",
+                        "e shtunë",
                     }
                 }
             }
@@ -732,19 +733,19 @@ sq{
                     M{"M – M"}
                 }
                 MEd{
-                    M{"EEEE, d.M – EEEE, d.M"}
-                    d{"EEEE, d.M – EEEE, d.M"}
+                    M{"E, d.M – E, d.M"}
+                    d{"E, d.M – E, d.M"}
                 }
                 MMM{
                     M{"MMM – MMM"}
                 }
                 MMMEd{
-                    M{"EEEE, d MMMM – EEEE, d MMMM"}
-                    d{"EEEE, d MMMM – EEEE, d MMMM"}
+                    M{"E, d MMM – E, d MMM"}
+                    d{"E, d MMM – E, d MMM"}
                 }
                 MMMd{
-                    M{"d MMMM – d MMMM"}
-                    d{"d – d MMMM"}
+                    M{"d MMM – d MMM"}
+                    d{"d – d MMM"}
                 }
                 Md{
                     M{"d.M – d.M"}
@@ -780,27 +781,27 @@ sq{
                     y{"M.y – M.y"}
                 }
                 yMEd{
-                    M{"EEEE, d.M.y – EEEE, d.M.y"}
-                    d{"EEEE, d.M.y – EEEE, d.M.y"}
-                    y{"EEEE, d.M.y – EEEE, d.M.y"}
+                    M{"E, d.M.y – E, d.M.y"}
+                    d{"E, d.M.y – E, d.M.y"}
+                    y{"E, d.M.y – E, d.M.y"}
                 }
                 yMMM{
-                    M{"MMMM – MMMM y"}
-                    y{"MMMM y – MMMM y"}
+                    M{"MMM – MMM y"}
+                    y{"MMM y – MMM y"}
                 }
                 yMMMEd{
-                    M{"EEEE, d MMMM – EEEE, d MMMM y"}
-                    d{"EEEE, d – EEEE, d MMMM y"}
-                    y{"EEEE, d MMMM y – EEEE, d MMMM y"}
+                    M{"E, d MMM – E, d MMM y"}
+                    d{"E, d – E, d MMM y"}
+                    y{"E, d MMM y – E, d MMM y"}
                 }
                 yMMMM{
                     M{"MMMM – MMMM y"}
                     y{"MMMM y – MMMM y"}
                 }
                 yMMMd{
-                    M{"d MMMM – d MMMM y"}
-                    d{"d – d MMMM y"}
-                    y{"d MMMM y – d MMMM y"}
+                    M{"d MMM – d MMM y"}
+                    d{"d – d MMM y"}
+                    y{"d MMM y – d MMM y"}
                 }
                 yMd{
                     M{"d.M.y – d.M.y"}
@@ -817,8 +818,8 @@ sq{
                         "pri",
                         "maj",
                         "qer",
-                        "kor",
-                        "gsh",
+                        "korr",
+                        "gush",
                         "sht",
                         "tet",
                         "nën",
@@ -826,17 +827,17 @@ sq{
                     }
                     narrow{
                         "j",
-                        "s",
+                        "sh",
                         "m",
                         "p",
                         "m",
                         "q",
                         "k",
                         "g",
-                        "s",
+                        "sh",
                         "t",
                         "n",
-                        "d",
+                        "dh",
                     }
                     wide{
                         "janar",
@@ -855,46 +856,46 @@ sq{
                 }
                 stand-alone{
                     abbreviated{
-                        "Jan",
-                        "Shk",
-                        "Mar",
-                        "Pri",
-                        "Maj",
-                        "Qer",
-                        "Kor",
-                        "Gsh",
-                        "Sht",
-                        "Tet",
-                        "Nën",
-                        "Dhj",
+                        "jan",
+                        "shk",
+                        "mar",
+                        "pri",
+                        "maj",
+                        "qer",
+                        "korr",
+                        "gush",
+                        "sht",
+                        "tet",
+                        "nën",
+                        "dhj",
                     }
                     narrow{
-                        "J",
-                        "S",
-                        "M",
-                        "P",
-                        "M",
-                        "Q",
-                        "K",
-                        "G",
-                        "S",
-                        "T",
-                        "N",
-                        "D",
+                        "j",
+                        "sh",
+                        "m",
+                        "p",
+                        "m",
+                        "q",
+                        "k",
+                        "g",
+                        "sh",
+                        "t",
+                        "n",
+                        "dh",
                     }
                     wide{
-                        "Janar",
-                        "Shkurt",
-                        "Mars",
-                        "Prill",
-                        "Maj",
-                        "Qershor",
-                        "Korrik",
-                        "Gusht",
-                        "Shtator",
-                        "Tetor",
-                        "Nëntor",
-                        "Dhjetor",
+                        "janar",
+                        "shkurt",
+                        "mars",
+                        "prill",
+                        "maj",
+                        "qershor",
+                        "korrik",
+                        "gusht",
+                        "shtator",
+                        "tetor",
+                        "nëntor",
+                        "dhjetor",
                     }
                 }
             }
@@ -1889,37 +1890,5 @@ sq{
         UK{"britanik (imperial)"}
         US{"amerikan"}
         metric{"metrik"}
-    }
-    parse{
-        date{
-            lenient{
-                "[\\--/]",
-                "[\\:∶]",
-            }
-        }
-        general{
-            lenient{
-                "[.․。︒﹒．｡]",
-                "['ʼ՚᾽᾿’＇]",
-                "[%٪﹪％]",
-                "[؉‰]",
-                "[\$﹩＄$]",
-                "[£₤]",
-                "[¥￥]",
-                "[₩￦]",
-                "[₨₹{Rp}{Rs}]",
-            }
-        }
-        number{
-            lenient{
-                "[\\-‒⁻₋−➖﹣－]",
-                "[,،٫、︐︑﹐﹑，､]",
-                "[+⁺₊➕﬩﹢＋]",
-            }
-            stricter{
-                "[,٫︐﹐，]",
-                "[.․﹒．｡]",
-            }
-        }
     }
 }

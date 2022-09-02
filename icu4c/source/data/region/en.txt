@@ -1,8 +1,9 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 en{
     Countries{
-        001{"World"}
+        001{"world"}
         002{"Africa"}
         003{"North America"}
         005{"South America"}
@@ -110,7 +111,7 @@ en{
         EZ{"Eurozone"}
         FI{"Finland"}
         FJ{"Fiji"}
-        FK{"Falkland Islands (Islas Malvinas)"}
+        FK{"Falkland Islands"}
         FM{"Micronesia"}
         FO{"Faroe Islands"}
         FR{"France"}
@@ -133,7 +134,7 @@ en{
         GU{"Guam"}
         GW{"Guinea-Bissau"}
         GY{"Guyana"}
-        HK{"Hong Kong, China"}
+        HK{"Hong Kong SAR China"}
         HM{"Heard & McDonald Islands"}
         HN{"Honduras"}
         HR{"Croatia"}
@@ -187,7 +188,7 @@ en{
         ML{"Mali"}
         MM{"Myanmar (Burma)"}
         MN{"Mongolia"}
-        MO{"Macao, China"}
+        MO{"Macao SAR China"}
         MP{"Northern Mariana Islands"}
         MQ{"Martinique"}
         MR{"Mauritania"}
@@ -222,7 +223,7 @@ en{
         PM{"St. Pierre & Miquelon"}
         PN{"Pitcairn Islands"}
         PR{"Puerto Rico"}
-        PS{"Palestine"}
+        PS{"Palestinian Territories"}
         PT{"Portugal"}
         PW{"Palau"}
         PY{"Paraguay"}
@@ -269,7 +270,7 @@ en{
         TR{"Turkey"}
         TT{"Trinidad & Tobago"}
         TV{"Tuvalu"}
-        TW{"Taiwan, China"}
+        TW{"Taiwan"}
         TZ{"Tanzania"}
         UA{"Ukraine"}
         UG{"Uganda"}
@@ -296,14 +297,13 @@ en{
         ZM{"Zambia"}
         ZW{"Zimbabwe"}
         ZZ{"Unknown Region"}
-        ZG{"Zawgyi"}
     }
     Countries%short{
         BA{"Bosnia"}
         GB{"UK"}
         HK{"Hong Kong"}
         MM{"Myanmar"}
-        MO{"Macau"}
+        MO{"Macao"}
         PS{"Palestine"}
         UN{"UN"}
         US{"US"}
@@ -318,5 +318,4 @@ en{
         SZ{"Swaziland"}
         TL{"East Timor"}
     }
-    Version{"37"}
 }
