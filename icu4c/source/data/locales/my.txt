@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 my{
     AuxExemplarCharacters{
         "[၀႐ ၁႑ ၂႒ ၃႓ ၄႔ ၅႕ ၆႖ ၇႗ ၈႘ ၉႙ ၵ ၚ ၽ ၾ ၐ ၑ ၥ ဨ ဢ ၒ ၓ ၔ ၕ \u1033 ၖ ၗ \u1058 "
@@ -176,7 +177,7 @@ my{
                 other{"{0} အုပ်မြောက်"}
             }
             plural{
-                other{"{0}ရက်"}
+                other{"{0} ရက်"}
             }
         }
         minimumGroupingDigits{"1"}
@@ -203,14 +204,13 @@ my{
         }
         native{"mymr"}
     }
-    Version{"37"}
     calendar{
         generic{
             DateTimePatterns{
                 "zzzz HH:mm:ss",
                 "z HH:mm:ss",
-                "HH:mm:ss",
-                "HH:mm",
+                "B HH:mm:ss",
+                "B H:mm",
                 "EEEE G dd MMMM y",
                 "G dd MMMM y",
                 "G d MMM y",
@@ -386,12 +386,12 @@ my{
             DateTimePatterns{
                 "zzzz HH:mm:ss",
                 "z HH:mm:ss",
-                "HH:mm:ss",
-                "HH:mm",
-                "EEEEနေ့၊ y ခုနှစ် MMMMလ d ရက်",
-                "y ခုနှစ် MMMMလ d ရက်",
-                "y ခုနှစ် MMMလ d ရက်",
-                "yy/MM/dd",
+                "B HH:mm:ss",
+                "B H:mm",
+                "y၊ MMMM d၊ EEEE",
+                "y၊ d MMMM",
+                "y၊ MMM d",
+                "dd-MM-yy",
                 "{1} {0}",
                 "{1} {0}",
                 "{1} {0}",
@@ -405,14 +405,14 @@ my{
                 Bh{"B h"}
                 Bhm{"B h:mm"}
                 Bhms{"B h:mm:ss"}
-                E{"ccc"}
+                E{"cccနေ့"}
                 EBhm{"E B h:mm"}
                 EBhms{"E B h:mm:ss"}
                 EHm{"E HH:mm"}
                 EHms{"E HH:mm:ss"}
-                Ed{"E, d"}
-                Ehm{"E h:mm a"}
-                Ehms{"E h:mm:ss a"}
+                Ed{"d ရက် Eနေ့"}
+                Ehm{"E B h:mm"}
+                Ehms{"E B h:mm:ss"}
                 Gy{"G y"}
                 GyMMM{"G y MMM"}
                 GyMMMEd{"G y၊ MMM d၊ E"}
@@ -423,32 +423,31 @@ my{
                 Hmsv{"v HH:mm:ss"}
                 Hmv{"v HH:mm"}
                 M{"L"}
-                MEd{"Eနေ့၊ MM/dd"}
+                MEd{"d/M၊ E"}
                 MMM{"LLL"}
-                MMMEd{"Eနေ့၊ MMMလ d ရက်"}
-                MMMM{"LLLLလ"}
-                MMMMEd{"Eနေ့၊ MMMMလ d ရက်"}
+                MMMEd{"MMM d၊ E"}
+                MMMMEd{"MMMM d ရက် Eနေ့"}
                 MMMMW{
                     other{"MMMM လ W ပတ်မြောက်"}
                 }
-                MMMMd{"MMMMလ d ရက်"}
-                MMMd{"MMMလ d ရက်"}
-                Md{"MM/dd"}
+                MMMMd{"MMMM d"}
+                MMMd{"d MMM"}
+                Md{"d/M"}
                 d{"d"}
-                h{"h a"}
-                hm{"h:mm a"}
-                hms{"h:mm:ss a"}
-                hmsv{"h:mm:ss a v"}
-                hmv{"h:mm a v"}
+                h{"B h"}
+                hm{"B h:mm"}
+                hms{"B h:mm:ss"}
+                hmsv{"v a h:mm:ss"}
+                hmv{"v a h:mm"}
                 ms{"mm:ss"}
                 y{"y"}
-                yM{"y/MM"}
-                yMEd{"Eနေ့၊ y/MM/dd"}
-                yMMM{"y ခုနှစ် MMMလ"}
-                yMMMEd{"Eနေ့၊ y ခုနှစ် MMMလ d ရက်"}
-                yMMMM{"y ခုနှစ် MMMMလ"}
-                yMMMd{"y ခုနှစ် MMMလ d ရက်"}
-                yMd{"y/MM/dd"}
+                yM{"M/y"}
+                yMEd{"d/M/y၊ E"}
+                yMMM{"MMM y"}
+                yMMMEd{"y၊ MMM d၊ E"}
+                yMMMM{"y MMMM"}
+                yMMMd{"y၊ MMM d"}
+                yMd{"dd-MM-y"}
                 yQQQ{"y QQQ"}
                 yQQQQ{"y QQQQ"}
                 yw{
@@ -626,9 +625,9 @@ my{
                     y{"G y – y"}
                 }
                 GyM{
-                    G{"GGGGG y-MM – GGGGG y-MM   "}
+                    G{"GGGGG y-MM – GGGGG y-MM"}
                     M{"GGGGG y-MM – y-MM"}
-                    y{"GGGGG y-MM – y-MM "}
+                    y{"GGGGG y-MM – y-MM"}
                 }
                 GyMEd{
                     G{"GGGGG y-MM-dd, E – GGGGG y-MM-dd, E"}
@@ -648,7 +647,7 @@ my{
                     y{"G y MMM d, E – y MMM d, E"}
                 }
                 GyMMMd{
-                    G{"G y MMM d – G y MMM d   "}
+                    G{"G y MMM d – G y MMM d"}
                     M{"G y MMM d – MMM d"}
                     d{"G y MMM d – d"}
                     y{"G y MMM d – y MMM d"}
@@ -677,97 +676,97 @@ my{
                     M{"M – M"}
                 }
                 MEd{
-                    M{"EEEEနေ့၊ MM/dd – EEEEနေ့၊ MM/dd"}
-                    d{"EEEEနေ့၊ MM/dd – EEEEနေ့၊ MM/dd"}
+                    M{"d/M၊ EEEE – d/M၊ EEEE"}
+                    d{"d/M၊ EEEE – d/M၊ EEEE"}
                 }
                 MMM{
-                    M{"MMMလ – MMMလ"}
+                    M{"MMM – MMM"}
                 }
                 MMMEd{
-                    M{"EEEEနေ့၊ MMMလ d ရက် – EEEEနေ့၊ MMMလ d ရက်"}
-                    d{"EEEEနေ့၊ MMMလ d ရက် – EEEEနေ့၊ MMMလ d ရက်"}
+                    M{"MMM d၊ E – MMM d၊ E"}
+                    d{"MMM d၊ E – MMM d၊ E"}
                 }
                 MMMd{
-                    M{"MMMလ d ရက် – MMMလ d ရက်"}
-                    d{"MMMလ d ရက် – MMMလ d ရက်"}
+                    M{"MMM d – MMM d"}
+                    d{"MMM d – d"}
                 }
                 Md{
-                    M{"MM/dd – MM/dd"}
-                    d{"MM/dd – MM/dd"}
+                    M{"d/M – d/M"}
+                    d{"d/M – d/M"}
                 }
                 d{
                     d{"d – d"}
                 }
                 fallback{"{0} – {1}"}
                 h{
-                    a{"h a – h a"}
-                    h{"h–h a"}
+                    a{"a h – a h"}
+                    h{"a h – h"}
                 }
                 hm{
-                    a{"h:mm a – h:mm a"}
-                    h{"h:mm–h:mm a"}
-                    m{"h:mm–h:mm a"}
+                    a{"a h:mm – a h:mm"}
+                    h{"a h:mm – h:mm"}
+                    m{"a h:mm – h:mm"}
                 }
                 hmv{
-                    a{"h:mm a – h:mm a v"}
-                    h{"h:mm–h:mm a v"}
-                    m{"h:mm–h:mm a v"}
+                    a{"v a h:mm – a h:mm"}
+                    h{"v a h:mm – h:mm"}
+                    m{"v a h:mm – h:mm"}
                 }
                 hv{
-                    a{"h a – h a v"}
-                    h{"h–h a v"}
+                    a{"v a h – a h"}
+                    h{"v a h – h"}
                 }
                 y{
                     y{"y – y"}
                 }
                 yM{
-                    M{"y/MM – y/MM"}
-                    y{"y/MM – y/MM"}
+                    M{"M/y – M/y"}
+                    y{"M/y – M/y"}
                 }
                 yMEd{
-                    M{"EEEEနေ့၊ y/MM/dd – EEEEနေ့၊ y/MM/dd"}
-                    d{"EEEEနေ့၊ y/MM/dd – EEEEနေ့၊ y/MM/dd"}
-                    y{"EEEEနေ့၊ y/MM/dd – EEEEနေ့၊ y/MM/dd"}
+                    M{"d/M/y၊ EEEE – d/M/y၊ EEEE"}
+                    d{"d/M/y၊ EEEE – d/M/y၊ EEEE"}
+                    y{"d/M/y၊ EEEE – d/M/y၊ EEEE"}
                 }
                 yMMM{
-                    M{"y ခုနှစ် MMMလ–MMMလ"}
-                    y{"y ခုနှစ် MMMလ – y ခုနှစ် MMMလ"}
+                    M{"y MMM – MMM"}
+                    y{"y MMM – y MMM"}
                 }
                 yMMMEd{
-                    M{"EEEEနေ့၊ y ခုနှစ် MMMလ d ရက် – EEEEနေ့၊ y ခုနှစ် MMMလ d ရက်"}
-                    d{"EEEEနေ့၊ y ခုနှစ် MMMလ d ရက် – EEEEနေ့၊ y ခုနှစ် MMMလ d ရက်"}
-                    y{"EEEEနေ့၊ y ခုနှစ် MMMလ d ရက် – EEEEနေ့၊ y ခုနှစ် MMMလ d ရက်"}
+                    M{"y၊ MMM d၊ EEEE – MMM d၊ EEEE"}
+                    d{"y၊ MMM d၊ EEEE – MMM d၊ EEEE"}
+                    y{"y၊ MMM d၊ EEEE – y၊ MMM d၊ EEEE"}
                 }
                 yMMMM{
-                    M{"y ခုနှစ် MMMMလ–MMMMလ"}
-                    y{"y ခုနှစ် MMMMလ – y ခုနှစ် MMMMလ"}
+                    M{"y MMMM – MMMM"}
+                    y{"y MMMM – y MMMM"}
                 }
                 yMMMd{
-                    M{"y ခုနှစ် MMMလ d ရက် – MMMလ d ရက်"}
-                    d{"y ခုနှစ် MMMလ d ရက်–d ရက်"}
-                    y{"y ခုနှစ် MMMလ d ရက် – y ခုနှစ် MMMလ d ရက်"}
+                    M{"y၊ MMM d – MMM d"}
+                    d{"y၊ MMM d – d"}
+                    y{"y၊ MMM d – y၊ MMM d"}
                 }
                 yMd{
-                    M{"y/MM/dd – y/MM/dd"}
-                    d{"y/MM/dd – y/MM/dd"}
-                    y{"y/MM/dd – y/MM/dd"}
+                    M{"d/M/y – d/M/y"}
+                    d{"d/M/y – d/M/y"}
+                    y{"d/M/y – d/M/y"}
                 }
             }
             monthNames{
                 format{
                     abbreviated{
-                        "ဇန်နဝါရီ",
-                        "ဖေဖော်ဝါရီ",
+                        "ဇန်",
+                        "ဖေ",
                         "မတ်",
-                        "ဧပြီ",
+                        "ဧ",
                         "မေ",
                         "ဇွန်",
-                        "ဇူလိုင်",
-                        "ဩဂုတ်",
-                        "စက်တင်ဘာ",
-                        "အောက်တိုဘာ",
-                        "နိုဝင်ဘာ",
-                        "ဒီဇင်ဘာ",
+                        "ဇူ",
+                        "ဩ",
+                        "စက်",
+                        "အောက်",
+                        "နို",
+                        "ဒီ",
                     }
                     narrow{
                         "ဇ",
@@ -800,18 +799,18 @@ my{
                 }
                 stand-alone{
                     abbreviated{
-                        "ဇန်နဝါရီ",
-                        "ဖေဖော်ဝါရီ",
+                        "ဇန်",
+                        "ဖေ",
                         "မတ်",
-                        "ဧပြီ",
+                        "ဧ",
                         "မေ",
                         "ဇွန်",
-                        "ဇူလိုင်",
-                        "ဩဂုတ်",
-                        "စက်တင်ဘာ",
-                        "အောက်တိုဘာ",
-                        "နိုဝင်ဘာ",
-                        "ဒီဇင်ဘာ",
+                        "ဇူ",
+                        "ဩ",
+                        "စက်",
+                        "အောက်",
+                        "နို",
+                        "ဒီ",
                     }
                     narrow{
                         "ဇ",
@@ -1678,29 +1677,37 @@ my{
         or{
             2{"{0} သို့မဟုတ် {1}"}
             end{"{0} သို့မဟုတ် {1}"}
-            middle{"{0} {1}"}
-            start{"{0} {1}"}
+            middle{"{0}၊ {1}"}
+            start{"{0}၊ {1}"}
+        }
+        or-narrow{
+            middle{"{0}၊ {1}"}
         }
         or-short{
+            middle{"{0}၊ {1}"}
             start{"{0} ၊ {1}"}
         }
         standard{
             2{"{0}နှင့် {1}"}
             end{"{0}နှင့် {1}"}
-            middle{"{0} {1}"}
-            start{"{0} {1}"}
+            middle{"{0}၊ {1}"}
+            start{"{0}၊ {1}"}
+        }
+        standard-narrow{
+            middle{"{0}၊ {1}"}
+            start{"{0}၊ {1}"}
         }
         standard-short{
             2{"{0}နှင့် {1}"}
             end{"{0}နှင့် {1}"}
-            middle{"{0} {1}"}
-            start{"{0} {1}"}
+            middle{"{0}၊ {1}"}
+            start{"{0}၊ {1}"}
         }
         unit{
             2{"{0}နှင့်{1}"}
             end{"{0}နှင့် {1}"}
-            middle{"{0} {1}"}
-            start{"{0} {1}"}
+            middle{"{0}၊ {1}"}
+            start{"{0}၊ {1}"}
         }
         unit-narrow{
             2{"{0}နှင့် {1}"}
@@ -1711,8 +1718,8 @@ my{
         unit-short{
             2{"{0}နှင့် {1}"}
             end{"{0}နှင့် {1}"}
-            middle{"{0} {1}"}
-            start{"{0} {1}"}
+            middle{"{0}၊ {1}"}
+            start{"{0}၊ {1}"}
         }
     }
     measurementSystemNames{

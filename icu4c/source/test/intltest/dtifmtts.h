@@ -17,6 +17,10 @@
 #include "intltest.h"
 #include "itformat.h"
 
+U_NAMESPACE_BEGIN
+class FormattedDateInterval;
+U_NAMESPACE_END
+
 /**
  * Test basic functionality of various API functions
  **/
@@ -34,12 +38,23 @@ public:
      */
     void testFormat();
 
+    
+    /**
+     * Test handling of hour and day period metacharacters
+     */
+    void testHourMetacharacters();
+
     void testFormatMillisecond();
 
     /**
      * Test formatting using user defined DateIntervalInfo
      */
     void testFormatUserDII();
+
+    /*
+     * Test format using UDisplayContext
+     */
+    void testContext();
 
     /**
      * Test for no unwanted side effects when setting
@@ -70,6 +85,9 @@ public:
     void testCreateInstanceForAllLocales();
 
     void testTicket20707();
+    void testTicket21222GregorianEraDiff();
+    void testTicket21222ROCEraDiff();
+    void testTicket21222JapaneseEraDiff();
 
 private:
     /**
@@ -88,6 +106,19 @@ private:
      */
     void stress(const char** data, int32_t data_length, const Locale& loc,
                 const char* locName);
+
+    void getCategoryAndField(
+        const FormattedDateInterval& formatted,
+        std::vector<int32_t>& categories,
+        std::vector<int32_t>& fields,
+        IcuTestErrorCode& status);
+
+    void verifyCategoryAndField(
+        const FormattedDateInterval& formatted,
+        const std::vector<int32_t>& categories,
+        const std::vector<int32_t>& fields,
+        IcuTestErrorCode& status);
+
 };
 
 #endif /* #if !UCONFIG_NO_FORMATTING */

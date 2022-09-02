@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 nl{
     AuxExemplarCharacters{"[à â å ã æ ç è ê î ñ ô ø œ ù û ÿ]"}
     ExemplarCharacters{
@@ -865,6 +866,10 @@ nl{
             }
         }
         minimalPairs{
+            gender{
+                common{"De {0} is"}
+                neuter{"Het {0} is"}
+            }
             ordinal{
                 other{"Neem de {0}e afslag rechts."}
             }
@@ -1485,7 +1490,6 @@ nl{
             }
         }
     }
-    Version{"37"}
     calendar{
         buddhist{
             DateTimePatterns{
@@ -4436,7 +4440,7 @@ nl{
                 Hmsv{"HH:mm:ss v"}
                 Hmv{"HH:mm v"}
                 M{"L"}
-                MEd{"E dd-MM"}
+                MEd{"E d-M"}
                 MMM{"LLL"}
                 MMMEd{"E d MMM"}
                 MMMMW{
@@ -4445,7 +4449,7 @@ nl{
                 }
                 MMMMd{"d MMMM"}
                 MMMd{"d MMM"}
-                Md{"dd-MM"}
+                Md{"d-M"}
                 d{"d"}
                 h{"h a"}
                 hm{"h:mm a"}
@@ -4454,13 +4458,13 @@ nl{
                 hmv{"h:mm a v"}
                 ms{"mm:ss"}
                 y{"y"}
-                yM{"MM-y"}
-                yMEd{"E dd-MM-y"}
+                yM{"M-y"}
+                yMEd{"E d-M-y"}
                 yMMM{"MMM y"}
                 yMMMEd{"E d MMM y"}
                 yMMMM{"MMMM y"}
                 yMMMd{"d MMM y"}
-                yMd{"dd-MM-y"}
+                yMd{"d-M-y"}
                 yQQQ{"QQQ y"}
                 yQQQQ{"QQQQ y"}
                 yw{
@@ -7012,8 +7016,6 @@ nl{
         }
     }
     delimiters{
-        alternateQuotationEnd{"”"}
-        alternateQuotationStart{"“"}
         quotationEnd{"’"}
         quotationStart{"‘"}
     }
@@ -7919,7 +7921,7 @@ nl{
                 "[%٪﹪％]",
                 "[؉‰]",
                 "[\$﹩＄$]",
-                "[£₤]",
+                "[£₤￡]",
                 "[¥￥]",
                 "[₩￦]",
                 "[₨₹{Rp}{Rs}]",
@@ -7928,7 +7930,7 @@ nl{
         number{
             lenient{
                 "[\\-‒⁻₋−➖﹣－]",
-                "[,،٫、︐︑﹐﹑，､]",
+                "[,،٫⹁、︐︑﹐﹑，､]",
                 "[+⁺₊➕﬩﹢＋]",
             }
         }

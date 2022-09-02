@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 bs{
     Countries{
         001{"Svijet"}
@@ -42,7 +43,7 @@ bs{
         AL{"Albanija"}
         AM{"Armenija"}
         AO{"Angola"}
-        AQ{"Antarktik"}
+        AQ{"Antarktika"}
         AR{"Argentina"}
         AS{"Američka Samoa"}
         AT{"Austrija"}
@@ -67,7 +68,7 @@ bs{
         BR{"Brazil"}
         BS{"Bahami"}
         BT{"Butan"}
-        BV{"Ostrvo Bouvet"}
+        BV{"Ostrvo Buve"}
         BW{"Bocvana"}
         BY{"Bjelorusija"}
         BZ{"Belize"}
@@ -86,7 +87,7 @@ bs{
         CP{"Ostrvo Clipperton"}
         CR{"Kostarika"}
         CU{"Kuba"}
-        CV{"Zelenortska Republika"}
+        CV{"Zelenortska Ostrva"}
         CW{"Kurasao"}
         CX{"Božićno ostrvo"}
         CY{"Kipar"}
@@ -112,14 +113,14 @@ bs{
         FJ{"Fidži"}
         FK{"Folklandska ostrva"}
         FM{"Mikronezija"}
-        FO{"Farska Ostrva"}
+        FO{"Farska ostrva"}
         FR{"Francuska"}
         GA{"Gabon"}
         GB{"Ujedinjeno Kraljevstvo"}
         GD{"Grenada"}
         GE{"Gruzija"}
         GF{"Francuska Gvajana"}
-        GG{"Gernzi"}
+        GG{"Guernsey"}
         GH{"Gana"}
         GI{"Gibraltar"}
         GL{"Grenland"}
@@ -133,8 +134,8 @@ bs{
         GU{"Guam"}
         GW{"Gvineja-Bisao"}
         GY{"Gvajana"}
-        HK{"Hong Kong, Kina"}
-        HM{"Ostrva Herd i McDonald"}
+        HK{"Hong Kong (SAR Kina)"}
+        HM{"Ostrvo Heard i arhipelag McDonald"}
         HN{"Honduras"}
         HR{"Hrvatska"}
         HT{"Haiti"}
@@ -187,7 +188,7 @@ bs{
         ML{"Mali"}
         MM{"Mjanmar"}
         MN{"Mongolija"}
-        MO{"Makao, Kina"}
+        MO{"Makao (SAR Kina)"}
         MP{"Sjeverna Marijanska ostrva"}
         MQ{"Martinik"}
         MR{"Mauritanija"}
@@ -269,7 +270,7 @@ bs{
         TR{"Turska"}
         TT{"Trinidad i Tobago"}
         TV{"Tuvalu"}
-        TW{"Tajvan, Kina"}
+        TW{"Tajvan"}
         TZ{"Tanzanija"}
         UA{"Ukrajina"}
         UG{"Uganda"}
@@ -308,10 +309,8 @@ bs{
     Countries%variant{
         CD{"DR Kongo"}
         CG{"Republika Kongo"}
-        CI{"Obala Bjelokosti"}
         CZ{"Češka Republika"}
         FK{"Folklandska (Malvinska) ostrva"}
         SZ{"Svazilend"}
     }
-    Version{"37"}
 }
