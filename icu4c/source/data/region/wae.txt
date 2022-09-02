@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 wae{
     Countries{
         001{"Wäld"}
@@ -107,7 +106,7 @@ wae{
         EU{"Europäiši Unio"}
         FI{"Finnland"}
         FJ{"Fidši"}
-        FK{"Falklandinslä"}
+        FK{"Falklandinslä (Malwine)"}
         FM{"Mikronesie"}
         FO{"Färöe"}
         FR{"Frankrič"}
@@ -130,7 +129,7 @@ wae{
         GU{"Guam"}
         GW{"Ginea Bissau"}
         GY{"Guyana"}
-        HK{"Sonderverwaltigszona Hongkong"}
+        HK{"Hongkong"}
         HM{"Heard- und McDonald-Inslä"}
         HN{"Honduras"}
         HR{"Kroatie"}
@@ -180,10 +179,11 @@ wae{
         MF{"St. Martin"}
         MG{"Madagaskar"}
         MH{"Maršalinslä"}
+        MK{"Mazedonie (EJR)"}
         ML{"Mali"}
         MM{"Burma"}
         MN{"Mongolei"}
-        MO{"Sonderverwaltigszona Makau"}
+        MO{"Makau"}
         MP{"Nördliči Mariane"}
         MQ{"Martinique"}
         MR{"Mauretanie"}
@@ -298,4 +298,5 @@ wae{
         FK{"Falklandinslä (Malwine)"}
         TL{"Wešttimor"}
     }
+    Version{"37"}
 }

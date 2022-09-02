@@ -549,15 +549,9 @@ void PluralFormat::parseType(const UnicodeString& source, const NFRule *rbnfLeni
 
         UnicodeString currArg = pattern.tempSubString(partStart->getLimit(), partLimit->getIndex() - partStart->getLimit());
         if (rbnfLenientScanner != NULL) {
-            // Check if non-lenient rule finds the text before call lenient parsing
-            int32_t tempIndex = source.indexOf(currArg, startingAt);
-            if (tempIndex >= 0) {
-                currMatchIndex = tempIndex;
-            } else {
-                // If lenient parsing is turned ON, we've got some time consuming parsing ahead of us.
-                int32_t length = -1;
-                currMatchIndex = rbnfLenientScanner->findTextLenient(source, currArg, startingAt, &length);
-            }
+            // If lenient parsing is turned ON, we've got some time consuming parsing ahead of us.
+            int32_t length = -1;
+            currMatchIndex = rbnfLenientScanner->findTextLenient(source, currArg, startingAt, &length);
         }
         else {
             currMatchIndex = source.indexOf(currArg, startingAt);

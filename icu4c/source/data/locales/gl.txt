@@ -1,8 +1,7 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 gl{
-    AuxExemplarCharacters{"[ª à ă â å ä ã ā æ ɑ ç è ĕ ê ë ē ì ĭ î ī º ò ŏ ô ö õ ø ō œ ù ŭ û ū]"}
+    AuxExemplarCharacters{"[ª à â å ä ã ç è ê ë ì î ï º ò ô ö õ ù û]"}
     Ellipsis{
         final{"{0}…"}
         initial{"…{0}"}
@@ -11,12 +10,12 @@ gl{
         word-initial{"…{0}"}
         word-medial{"{0}… {1}"}
     }
-    ExemplarCharacters{"[a á b c d e é f g h i í ï j k l m n ñ o ó p q r s t u ú ü v w x y z]"}
+    ExemplarCharacters{"[a á b c d e é f g h i í j k l m n ñ o ó p q r s t u ú ü v w x y z]"}
     ExemplarCharactersIndex{"[A B C D E F G H I J K L M N Ñ O P Q R S T U V W X Y Z]"}
     ExemplarCharactersNumbers{"[\\- ‑ , . % ‰ + 0 1 2 3 4 5 6 7 8 9]"}
     ExemplarCharactersPunctuation{
-        "[\\- ‐ ‑ – — , ; \\: ! ¡ ? ¿ . … ' ‘ ’ \u0022 “ ” « » ( ) \\[ \\] § @ * / "
-        "\\\\ \\& # † ‡ ′ ″]"
+        "[\\- ‐ ‑ – — , ; \\: ! ? . … ' ‘ ’ \u0022 “ ” ( ) \\[ \\] § @ * / \\& # † ‡ "
+        "′ ″]"
     }
     MoreInformation{"?"}
     NumberElements{
@@ -62,16 +61,16 @@ gl{
                         other{"000 millóns"}
                     }
                     1000000000{
-                        one{"0000 millóns"}
-                        other{"0000 millóns"}
+                        one{"0"}
+                        other{"0"}
                     }
                     10000000000{
-                        one{"00000 millóns"}
-                        other{"00000 millóns"}
+                        one{"0"}
+                        other{"0"}
                     }
                     100000000000{
-                        one{"000000 millóns"}
-                        other{"000000 millóns"}
+                        one{"0"}
+                        other{"0"}
                     }
                     1000000000000{
                         one{"0 billón"}
@@ -90,16 +89,16 @@ gl{
             patternsShort{
                 currencyFormat{
                     1000{
-                        one{"0"}
-                        other{"0"}
+                        one{"0 ¤"}
+                        other{"0 ¤"}
                     }
                     10000{
-                        one{"0"}
-                        other{"0"}
+                        one{"0 ¤"}
+                        other{"0 ¤"}
                     }
                     100000{
-                        one{"0"}
-                        other{"0"}
+                        one{"0 ¤"}
+                        other{"0 ¤"}
                     }
                     1000000{
                         one{"0 M¤"}
@@ -114,16 +113,16 @@ gl{
                         other{"000 M¤"}
                     }
                     1000000000{
-                        one{"0000 M¤"}
-                        other{"0000 M¤"}
+                        one{"0 ¤"}
+                        other{"0 ¤"}
                     }
                     10000000000{
-                        one{"00000 M¤"}
-                        other{"00000 M¤"}
+                        one{"0 ¤"}
+                        other{"0 ¤"}
                     }
                     100000000000{
-                        one{"00000 M¤"}
-                        other{"00000 M¤"}
+                        one{"0 ¤"}
+                        other{"0 ¤"}
                     }
                     1000000000000{
                         one{"0 B¤"}
@@ -164,16 +163,16 @@ gl{
                         other{"000 M"}
                     }
                     1000000000{
-                        one{"0000 M"}
-                        other{"0000 M"}
+                        one{"0"}
+                        other{"0"}
                     }
                     10000000000{
-                        one{"00000 M"}
-                        other{"00000 M"}
+                        one{"0"}
+                        other{"0"}
                     }
                     100000000000{
-                        one{"000000 M"}
-                        other{"000000 M"}
+                        one{"0"}
+                        other{"0"}
                     }
                     1000000000000{
                         one{"0 B"}
@@ -190,7 +189,6 @@ gl{
                 }
             }
             symbols{
-                approximatelySign{"~"}
                 decimal{","}
                 exponential{"E"}
                 group{"."}
@@ -217,6 +215,7 @@ gl{
         minimumGroupingDigits{"1"}
         native{"latn"}
     }
+    Version{"37"}
     calendar{
         generic{
             DateTimePatterns{
@@ -452,7 +451,7 @@ gl{
                 "HH:mm",
                 "EEEE, d 'de' MMMM 'de' y",
                 "d 'de' MMMM 'de' y",
-                "d 'de' MMM 'de' y",
+                "d MMM y",
                 "dd/MM/yy",
                 "{0}, {1}",
                 "{0} 'do' {1}",
@@ -477,8 +476,8 @@ gl{
                 Ehms{"E, h:mm:ss a"}
                 Gy{"y G"}
                 GyMMM{"MMM 'de' y G"}
-                GyMMMEd{"E, d 'de' MMM 'de' y G"}
-                GyMMMd{"d 'de' MMM 'de' y G"}
+                GyMMMEd{"E, d/MM/y G"}
+                GyMMMd{"d 'de' MMMM 'de' y G"}
                 H{"HH"}
                 Hm{"HH:mm"}
                 Hms{"HH:mm:ss"}
@@ -487,14 +486,14 @@ gl{
                 M{"L"}
                 MEd{"E, d/M"}
                 MMM{"LLL"}
-                MMMEd{"E, d 'de' MMM"}
-                MMMMEd{"E, d 'de' MMMM"}
+                MMMEd{"ccc, d MMM"}
+                MMMMEd{"ccc, d 'de' MMMM"}
                 MMMMW{
                     one{"W.'ª' 'semana' 'de' MMMM"}
                     other{"W.'ª' 'semana' 'de' MMMM"}
                 }
                 MMMMd{"d 'de' MMMM"}
-                MMMd{"d 'de' MMM"}
+                MMMd{"d MMM"}
                 MMdd{"dd/MM"}
                 Md{"d/M"}
                 d{"d"}
@@ -506,12 +505,13 @@ gl{
                 ms{"mm:ss"}
                 y{"y"}
                 yM{"M/y"}
-                yMEd{"E, d/M/y"}
+                yMEd{"ccc, d/M/y"}
                 yMM{"MM/y"}
-                yMMM{"MMM 'de' y"}
-                yMMMEd{"E, d 'de' MMM 'de' y"}
-                yMMMM{"MMMM 'de' y"}
-                yMMMd{"d 'de' MMM 'de' y"}
+                yMMM{"LLL y"}
+                yMMMEd{"ccc, d MMM y"}
+                yMMMM{"LLLL 'de' y"}
+                yMMMMd{"d 'de' MMMM 'de' y"}
+                yMMMd{"d MMM y"}
                 yMd{"d/M/y"}
                 yQQQ{"QQQ y"}
                 yQQQQ{"QQQQ 'de' y"}
@@ -523,13 +523,13 @@ gl{
             dayNames{
                 format{
                     abbreviated{
-                        "dom.",
-                        "luns",
-                        "mar.",
-                        "mér.",
-                        "xov.",
-                        "ven.",
-                        "sáb.",
+                        "dom",
+                        "lun",
+                        "mar",
+                        "mér",
+                        "xov",
+                        "ven",
+                        "sáb",
                     }
                     narrow{
                         "d.",
@@ -561,13 +561,13 @@ gl{
                 }
                 stand-alone{
                     abbreviated{
-                        "Dom.",
-                        "Luns",
-                        "Mar.",
-                        "Mér.",
-                        "Xov.",
-                        "Ven.",
-                        "Sáb.",
+                        "Dom",
+                        "Lun",
+                        "Mar",
+                        "Mér",
+                        "Xov",
+                        "Ven",
+                        "Sáb",
                     }
                     narrow{
                         "D",
@@ -749,12 +749,20 @@ gl{
                     M{"MMM–MMM"}
                 }
                 MMMEd{
-                    M{"E, d 'de' MMM – E, d 'de' MMM"}
-                    d{"E, d 'de' MMM – E, d 'de' MMM"}
+                    M{"E, d MMM – E, d MMM"}
+                    d{"E, d MMM – E, d MMM"}
+                }
+                MMMMEd{
+                    M{"E, d 'de' MMMM – E, d 'de' MMMM"}
+                    d{"E, d 'de' MMMM – E, d 'de' MMMM"}
+                }
+                MMMMd{
+                    M{"d 'de' MMMM – d 'de' MMMM"}
+                    d{"d–d 'de' MMMM"}
                 }
                 MMMd{
-                    M{"d 'de' MMM – d 'de' MMM"}
-                    d{"d–d 'de' MMM"}
+                    M{"d MMM – d MMM"}
+                    d{"d–d MMM"}
                 }
                 Md{
                     M{"d/M – d/M"}
@@ -790,27 +798,37 @@ gl{
                     y{"M/y – M/y"}
                 }
                 yMEd{
-                    M{"E, dd/MM/y – E, dd/MM/y"}
+                    M{"E, d/M/y – E, d/M/y"}
                     d{"E, d/M/y – E, d/M/y"}
                     y{"E, d/M/y – E, d/M/y"}
                 }
                 yMMM{
-                    M{"MMM–MMM 'de' y"}
-                    y{"MMM 'de' y – MMM 'de' y"}
+                    M{"MMM–MMM y"}
+                    y{"MMM y – MMM y"}
                 }
                 yMMMEd{
-                    M{"E, d 'de' MMM – E, d 'de' MMM 'de' y"}
+                    M{"E, d MMM – E, d MMM y"}
                     d{"E, d MMM – E, d MMM y"}
-                    y{"E, d 'de' MMM 'de' y – E, d 'de' MMM 'de' y"}
+                    y{"E, d MMM y – E, d MMM y"}
                 }
                 yMMMM{
                     M{"MMMM–MMMM 'de' y"}
                     y{"MMMM 'de' y – MMMM 'de' y"}
                 }
-                yMMMd{
-                    M{"d 'de' MMM – d 'de' MMM 'de' y"}
+                yMMMMEd{
+                    M{"E, d 'de' MMMM – E, d 'de' MMMM y"}
+                    d{"E, d 'de' MMMM – E, d 'de' MMMM y"}
+                    y{"E, d 'de' MMMM 'de' y – E, d 'de' MMMM 'de' y"}
+                }
+                yMMMMd{
+                    M{"d 'de' MMMM – d 'de' MMMM 'de' y"}
                     d{"d–d 'de' MMMM 'de' y"}
-                    y{"d 'de' MMM 'de' y – d 'de' MMM 'de' y"}
+                    y{"d 'de' MMMM 'de' y – d 'de' MMMM 'de' y"}
+                }
+                yMMMd{
+                    M{"d MMM – d MMM y"}
+                    d{"d–d MMM y"}
+                    y{"d MMM y – d MMM y"}
                 }
                 yMd{
                     M{"d/M/y – d/M/y"}
@@ -821,18 +839,18 @@ gl{
             monthNames{
                 format{
                     abbreviated{
-                        "xan.",
-                        "feb.",
-                        "mar.",
-                        "abr.",
-                        "maio",
-                        "xuño",
-                        "xul.",
-                        "ago.",
-                        "set.",
-                        "out.",
-                        "nov.",
-                        "dec.",
+                        "xan",
+                        "feb",
+                        "mar",
+                        "abr",
+                        "mai",
+                        "xuñ",
+                        "xul",
+                        "ago",
+                        "set",
+                        "out",
+                        "nov",
+                        "dec",
                     }
                     narrow{
                         "x.",
@@ -865,18 +883,18 @@ gl{
                 }
                 stand-alone{
                     abbreviated{
-                        "Xan.",
-                        "Feb.",
-                        "Mar.",
-                        "Abr.",
-                        "Maio",
-                        "Xuño",
-                        "Xul.",
-                        "Ago.",
-                        "Set.",
-                        "Out.",
-                        "Nov.",
-                        "Dec.",
+                        "Xan",
+                        "Feb",
+                        "Mar",
+                        "Abr",
+                        "Mai",
+                        "Xuñ",
+                        "Xul",
+                        "Ago",
+                        "Set",
+                        "Out",
+                        "Nov",
+                        "Dec",
                     }
                     narrow{
                         "X",

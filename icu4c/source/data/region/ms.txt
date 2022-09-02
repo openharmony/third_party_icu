@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ms{
     Countries{
         001{"Dunia"}
@@ -134,7 +133,7 @@ ms{
         GU{"Guam"}
         GW{"Guinea Bissau"}
         GY{"Guyana"}
-        HK{"Hong Kong SAR China"}
+        HK{"Hong Kong, China"}
         HM{"Kepulauan Heard & McDonald"}
         HN{"Honduras"}
         HR{"Croatia"}
@@ -188,7 +187,7 @@ ms{
         ML{"Mali"}
         MM{"Myanmar (Burma)"}
         MN{"Mongolia"}
-        MO{"Macau SAR China"}
+        MO{"Macao, China"}
         MP{"Kepulauan Mariana Utara"}
         MQ{"Martinique"}
         MR{"Mauritania"}
@@ -254,7 +253,7 @@ ms{
         SV{"El Salvador"}
         SX{"Sint Maarten"}
         SY{"Syria"}
-        SZ{"Swaziland"}
+        SZ{"Eswatini"}
         TA{"Tristan da Cunha"}
         TC{"Kepulauan Turks dan Caicos"}
         TD{"Chad"}
@@ -270,7 +269,7 @@ ms{
         TR{"Turki"}
         TT{"Trinidad dan Tobago"}
         TV{"Tuvalu"}
-        TW{"Taiwan"}
+        TW{"Taiwan, China"}
         TZ{"Tanzania"}
         UA{"Ukraine"}
         UG{"Uganda"}
@@ -279,7 +278,7 @@ ms{
         US{"Amerika Syarikat"}
         UY{"Uruguay"}
         UZ{"Uzbekistan"}
-        VA{"Kota Vatican"}
+        VA{"Bandar Vatican"}
         VC{"Saint Vincent dan Grenadines"}
         VE{"Venezuela"}
         VG{"Kepulauan Virgin British"}
@@ -312,6 +311,8 @@ ms{
         CI{"Ivory Coast"}
         CZ{"Republik Czech"}
         FK{"Kepulauan Falkland (Islas Malvinas)"}
+        SZ{"Swaziland"}
         TL{"Timor Timur"}
     }
+    Version{"37"}
 }

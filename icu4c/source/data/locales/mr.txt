@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 mr{
     AuxExemplarCharacters{"[\u200C\u200D]"}
     Ellipsis{
@@ -244,6 +243,7 @@ mr{
         minimumGroupingDigits{"1"}
         native{"deva"}
     }
+    Version{"37"}
     calendar{
         buddhist{
             eras{
@@ -641,12 +641,16 @@ mr{
         }
         gregorian{
             AmPmMarkers{
-                "AM",
-                "PM",
+                "म.पू.",
+                "म.उ.",
+            }
+            AmPmMarkersAbbr{
+                "म.पू.",
+                "म.उ.",
             }
             AmPmMarkersNarrow{
-                "a",
-                "p",
+                "स",
+                "सं",
             }
             DateTimePatterns{
                 "h:mm:ss a zzzz",
@@ -697,7 +701,7 @@ mr{
                 }
                 MMMMd{"d MMMM"}
                 MMMd{"d MMM"}
-                MMdd{"dd-MM"}
+                MMdd{"dd/MM"}
                 Md{"d/M"}
                 d{"d"}
                 h{"h a"}
@@ -709,9 +713,9 @@ mr{
                 y{"y"}
                 yM{"M/y"}
                 yMEd{"E, d/M/y"}
-                yMM{"MM-y"}
+                yMM{"MM/y"}
                 yMMM{"MMM y"}
-                yMMMEd{"E, d, MMM y"}
+                yMMMEd{"E, d MMM, y"}
                 yMMMM{"MMMM y"}
                 yMMMd{"d MMM, y"}
                 yMd{"d/M/y"}
@@ -836,7 +840,7 @@ mr{
                 stand-alone{
                     abbreviated{
                         afternoon1{"दुपार"}
-                        am{"AM"}
+                        am{"म.पू."}
                         evening1{"संध्याकाळ"}
                         evening2{"सायंकाळ"}
                         midnight{"मध्यरात्र"}
@@ -844,11 +848,11 @@ mr{
                         morning2{"सकाळ"}
                         night1{"रात्र"}
                         noon{"मध्यान्ह"}
-                        pm{"PM"}
+                        pm{"म.उ."}
                     }
                     narrow{
                         afternoon1{"दु"}
-                        am{"AM"}
+                        am{"म.पू."}
                         evening1{"सं"}
                         evening2{"सा"}
                         midnight{"म.रा."}
@@ -856,11 +860,11 @@ mr{
                         morning2{"स"}
                         night1{"रात्र"}
                         noon{"म"}
-                        pm{"PM"}
+                        pm{"म.उ."}
                     }
                     wide{
                         afternoon1{"दुपार"}
-                        am{"AM"}
+                        am{"म.पू."}
                         evening1{"संध्याकाळ"}
                         evening2{"सायंकाळ"}
                         midnight{"मध्यरात्र"}
@@ -868,7 +872,7 @@ mr{
                         morning2{"सकाळ"}
                         night1{"रात्र"}
                         noon{"मध्यान्ह"}
-                        pm{"PM"}
+                        pm{"म.उ."}
                     }
                 }
             }
@@ -967,7 +971,7 @@ mr{
                 }
                 yMMMEd{
                     M{"E, d MMM – E, d MMM, y"}
-                    d{"E, d MMM y – E, d MMM, y"}
+                    d{"E, d MMM, y – E, d MMM, y"}
                     y{"E, d MMM, y – E, d MMM, y"}
                 }
                 yMMMM{
@@ -1708,13 +1712,13 @@ mr{
             dn{"वर्षातील दिवस"}
         }
         dayperiod{
-            dn{"AM/PM"}
+            dn{"[म.पू./म.उ.]"}
         }
         dayperiod-narrow{
-            dn{"AM/PM"}
+            dn{"[म.पू./म.उ.]"}
         }
         dayperiod-short{
-            dn{"AM/PM"}
+            dn{"[म.पू./म.उ.]"}
         }
         era{
             dn{"युग"}
@@ -2470,9 +2474,6 @@ mr{
             end{"{0}, किंवा {1}"}
             middle{"{0}, {1}"}
             start{"{0}, {1}"}
-        }
-        or-short{
-            end{"{0} किंवा {1}"}
         }
         standard{
             2{"{0} आणि {1}"}

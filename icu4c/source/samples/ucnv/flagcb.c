@@ -1,6 +1,6 @@
 /**************************************************************************
  * © 2016 and later: Unicode, Inc. and others.
- * License & terms of use: http://www.unicode.org/copyright.html
+ * License & terms of use: http://www.unicode.org/copyright.html#License
  **************************************************************************
  **************************************************************************
  * COPYRIGHT:
@@ -25,7 +25,7 @@ U_CAPI FromUFLAGContext* U_EXPORT2  flagCB_fromU_openContext()
 
     ctx->subCallback = NULL;
     ctx->subContext  = NULL;
-    ctx->flag        = false;
+    ctx->flag        = FALSE;
 
     return ctx;
 }
@@ -42,7 +42,7 @@ U_CAPI void U_EXPORT2 flagCB_fromU(
   /* First step - based on the reason code, take action */
 
   if(reason == UCNV_UNASSIGNED) { /* whatever set should be trapped here */
-    ((FromUFLAGContext*)context)->flag = true;
+    ((FromUFLAGContext*)context)->flag = TRUE;
   }
 
   if(reason == UCNV_CLONE) {

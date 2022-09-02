@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 km{
     AuxExemplarCharacters{"[\u17B4\u17B5\u200B \u17CC \u17CE \u17CF \u17D1 ឝ ឞ]"}
     Ellipsis{
@@ -15,10 +14,6 @@ km{
         "[\u17D0 ៈ \u17CB \u17C9 \u17CA \u17CD ក ខ គ ឃ ង ច ឆ ជ ឈ ញ ដ ឋ ឌ ឍ ណ ត ថ ទ ធ "
         "ន ប ផ ព ភ ម យ រ ឫ ឬ ល ឭ ឮ វ ស ហ ឡ អ {អា} ឥ ឦ ឧ {ឧក} ឩ ឪ ឯ ឰ ឱ ឲ ឳ ា \u17B7 "
         "\u17B8 \u17B9 \u17BA \u17BB \u17BC \u17BD ើ ឿ ៀ េ ែ ៃ ោ ៅ \u17C6 ះ \u17D2]"
-    }
-    ExemplarCharactersIndex{
-        "[ក ខ គ ឃ ង ច ឆ ជ ឈ ញ ដ ឋ ឌ ឍ ណ ត ថ ទ ធ ន ប ផ ព ភ ម យ រ ឫ ឬ ល ឭ ឮ វ ស ហ ឡ អ ឥ"
-        " ឦ ឧ ឩ ឪ ឯ ឰ ឱ ឳ]"
     }
     ExemplarCharactersNumbers{"[\\- ‑ , . % ‰ + 0 1 2 3 4 5 6 7 8 9]"}
     ExemplarCharactersPunctuation{"[\\- ‑ , ៖ ! ? . ។ ៕ ‘ ’ \u0022 “ ” ( ) \\[ \\] \\{ \\} ៙ ៚]"}
@@ -183,6 +178,7 @@ km{
         minimumGroupingDigits{"1"}
         native{"khmr"}
     }
+    Version{"37"}
     calendar{
         generic{
             DateTimePatterns{
@@ -402,8 +398,8 @@ km{
                 "h:mm:ss a z",
                 "h:mm:ss a",
                 "h:mm a",
-                "EEEE d MMMM y",
-                "d MMMM y",
+                "EEEE ទីd MMMM ឆ្នាំy",
+                "ថ្ងៃទីd MMMM ឆ្នាំy",
                 "d MMM y",
                 "d/M/yy",
                 "{1}, {0}",
@@ -427,10 +423,13 @@ km{
                 Ed{"d E"}
                 Ehm{"E h:mm a"}
                 Ehms{"E h:mm:ss a"}
-                Gy{"y G"}
-                GyMMM{"MMM y G"}
-                GyMMMEd{"E d MMM y G"}
-                GyMMMd{"d MMM y G"}
+                Gy{"y នៃ G"}
+                GyMMM{"MMM y នៃ G"}
+                GyMMMEd{"E d MMM y នៃ G"}
+                GyMMMM{"MMMM ឆ្នាំy នៃ G"}
+                GyMMMMEd{"E ទីd MMMM ឆ្នាំy នៃ G"}
+                GyMMMMd{"ទីd MMMM ឆ្នាំy នៃ G"}
+                GyMMMd{"d MMM y នៃ G"}
                 H{"HH"}
                 Hm{"HH:mm"}
                 Hms{"HH:mm:ss"}
@@ -440,10 +439,11 @@ km{
                 MEd{"E d/M"}
                 MMM{"LLL"}
                 MMMEd{"E d MMM"}
+                MMMMEd{"E ទីd MMMM"}
                 MMMMW{
                     other{"សប្តាហ៍ទី W នៃខែ MMMM"}
                 }
-                MMMMd{"MMMM d"}
+                MMMMd{"ទីd MMMM"}
                 MMMd{"d MMM"}
                 Md{"d/M"}
                 d{"d"}
@@ -458,7 +458,9 @@ km{
                 yMEd{"E d/M/y"}
                 yMMM{"MMM y"}
                 yMMMEd{"E d MMM y"}
-                yMMMM{"MMMM y"}
+                yMMMM{"MMMM ឆ្នាំy"}
+                yMMMMEd{"E ទីd MMMM ឆ្នាំy"}
+                yMMMMd{"ថ្ងៃទីd MMMM ឆ្នាំy"}
                 yMMMd{"d MMM y"}
                 yMd{"d/M/y"}
                 yQQQ{"QQQ y"}
@@ -497,13 +499,13 @@ km{
                         "ស",
                     }
                     wide{
-                        "អាទិត្យ",
-                        "ច័ន្ទ",
-                        "អង្គារ",
-                        "ពុធ",
-                        "ព្រហស្បតិ៍",
-                        "សុក្រ",
-                        "សៅរ៍",
+                        "ថ្ងៃអាទិត្យ",
+                        "ថ្ងៃច័ន្ទ",
+                        "ថ្ងៃអង្គារ",
+                        "ថ្ងៃពុធ",
+                        "ថ្ងៃព្រហស្បតិ៍",
+                        "ថ្ងៃសុក្រ",
+                        "ថ្ងៃសៅរ៍",
                     }
                 }
                 stand-alone{
@@ -535,40 +537,40 @@ km{
                         "ស",
                     }
                     wide{
-                        "អាទិត្យ",
-                        "ចន្ទ",
-                        "អង្គារ",
-                        "ពុធ",
-                        "ព្រហស្បតិ៍",
-                        "សុក្រ",
-                        "សៅរ៍",
+                        "ថ្ងៃអាទិត្យ",
+                        "ថ្ងៃច័ន្ទ",
+                        "ថ្ងៃអង្គារ",
+                        "ថ្ងៃពុធ",
+                        "ថ្ងៃព្រហស្បតិ៍",
+                        "ថ្ងៃសុក្រ",
+                        "ថ្ងៃសៅរ៍",
                     }
                 }
             }
             dayPeriod{
                 format{
                     abbreviated{
-                        afternoon1{"នៅពេលរសៀល"}
-                        evening1{"នៅពេល​ល្ងាច"}
+                        afternoon1{"រសៀល"}
+                        evening1{"ល្ងាច"}
                         midnight{"អធ្រាត្រ"}
-                        morning1{"នៅពេល​ព្រឹក"}
-                        night1{"នៅពេល​យប់"}
+                        morning1{"ព្រឹក"}
+                        night1{"យប់"}
                         noon{"ថ្ងៃត្រង់"}
                     }
                     narrow{
-                        afternoon1{"នៅពេលរសៀល"}
-                        evening1{"នៅពេល​ល្ងាច"}
+                        afternoon1{"រសៀល"}
+                        evening1{"ល្ងាច"}
                         midnight{"អធ្រាត្រ"}
-                        morning1{"នៅពេល​ព្រឹក"}
-                        night1{"នៅពេល​យប់"}
+                        morning1{"ព្រឹក"}
+                        night1{"យប់"}
                         noon{"ថ្ងៃត្រង់"}
                     }
                     wide{
-                        afternoon1{"នៅពេលរសៀល"}
-                        evening1{"នៅពេល​ល្ងាច"}
+                        afternoon1{"រសៀល"}
+                        evening1{"ល្ងាច"}
                         midnight{"អធ្រាត្រ"}
-                        morning1{"នៅពេល​ព្រឹក"}
-                        night1{"នៅពេល​យប់"}
+                        morning1{"ព្រឹក"}
+                        night1{"យប់"}
                         noon{"ថ្ងៃត្រង់"}
                     }
                 }
@@ -697,6 +699,14 @@ km{
                     M{"E d MMM – E d MMM"}
                     d{"E d MMM – E d MMM"}
                 }
+                MMMMEd{
+                    M{"E ទីd MMMM - E ទីd MMMM"}
+                    d{"E ទីd MMMM - E ទីd MMMM"}
+                }
+                MMMMd{
+                    M{"ទីd MMMM - ទីd MMMM"}
+                    d{"ទីd-d MMMM"}
+                }
                 MMMd{
                     M{"d MMM – d MMM"}
                     d{"d–d MMM"}
@@ -744,13 +754,23 @@ km{
                     y{"MMM y – MMM y"}
                 }
                 yMMMEd{
-                    M{"E dd MMM y – E dd MMM y"}
-                    d{"E dd MMM y – E dd MMM y"}
-                    y{"E dd-MM-y – E dd MMM y"}
+                    M{"E d MMM y – E d MMM y"}
+                    d{"E d MMM y – E d MMM y"}
+                    y{"E d MMM y – E d MMM y"}
                 }
                 yMMMM{
                     M{"MMMM – MMMM y"}
                     y{"MMMM y – MMMM y"}
+                }
+                yMMMMEd{
+                    M{"E ទីd MMMM ឆ្នាំy - E ទីd MMMM ឆ្នាំy"}
+                    d{"E ទីd MMMM ឆ្នាំy - E ទីd MMMM ឆ្នាំy"}
+                    y{"E ទីd MMMM ឆ្នាំy - E ទីd MMMM ឆ្នាំy"}
+                }
+                yMMMMd{
+                    M{"ថ្ងៃទីd MMMM – ថ្ងៃទីd MMMM ឆ្នាំy"}
+                    d{"ថ្ងៃទីd-d MMMM ឆ្នាំy"}
+                    y{"ថ្ងៃទីd MMMM ឆ្នាំy - ថ្ងៃទីd MMMM ឆ្នាំy"}
                 }
                 yMMMd{
                     M{"d MMM – d MMM y"}
@@ -794,18 +814,18 @@ km{
                         "ធ",
                     }
                     wide{
-                        "មករា",
-                        "កុម្ភៈ",
-                        "មីនា",
-                        "មេសា",
-                        "ឧសភា",
-                        "មិថុនា",
-                        "កក្កដា",
-                        "សីហា",
-                        "កញ្ញា",
-                        "តុលា",
-                        "វិច្ឆិកា",
-                        "ធ្នូ",
+                        "ខែមករា",
+                        "ខែកុម្ភៈ",
+                        "ខែមីនា",
+                        "ខែមេសា",
+                        "ខែឧសភា",
+                        "ខែមិថុនា",
+                        "ខែកក្កដា",
+                        "ខែសីហា",
+                        "ខែកញ្ញា",
+                        "ខែតុលា",
+                        "ខែវិច្ឆិកា",
+                        "ខែធ្នូ",
                     }
                 }
                 stand-alone{
@@ -838,18 +858,18 @@ km{
                         "ធ",
                     }
                     wide{
-                        "មករា",
-                        "កុម្ភៈ",
-                        "មីនា",
-                        "មេសា",
-                        "ឧសភា",
-                        "មិថុនា",
-                        "កក្កដា",
-                        "សីហា",
-                        "កញ្ញា",
-                        "តុលា",
-                        "វិច្ឆិកា",
-                        "ធ្នូ",
+                        "ខែមករា",
+                        "ខែកុម្ភៈ",
+                        "ខែមីនា",
+                        "ខែមេសា",
+                        "ខែឧសភា",
+                        "ខែមិថុនា",
+                        "ខែកក្កដា",
+                        "ខែសីហា",
+                        "ខែកញ្ញា",
+                        "ខែតុលា",
+                        "ខែវិច្ឆិកា",
+                        "ខែធ្នូ",
                     }
                 }
             }

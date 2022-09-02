@@ -83,16 +83,9 @@ public:
     void TestReverse(std::unique_ptr<RuleBasedBreakIterator>bi);
     void TestBug13692();
     void TestDebugRules();
-    void TestUnpairedSurrogate();
 
     void TestDebug();
     void TestProperties();
-    void Test8BitsTrieWith8BitStateTable();
-    void Test8BitsTrieWith16BitStateTable();
-    void Test16BitsTrieWith8BitStateTable();
-    void Test16BitsTrieWith16BitStateTable();
-    void TestTable_8_16_Bits();
-    void TestBug13590();
 
 #if U_ENABLE_TRACING
     void TestTraceCreateCharacter();
@@ -139,9 +132,6 @@ private:
 
     // Test parameters, from the test framework and test invocation.
     const char* fTestParams;
-
-    // Helper functions to test different trie bit sizes and state table bit sizes.
-    void testTrieStateTable(int32_t numChar, bool expectedTrieWidthIn8Bits, bool expectedStateRowIn8Bits);
 
 #if U_ENABLE_TRACING
     void assertTestTraceResult(int32_t fnNumber, const char* expectedData);

@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ee{
     Currencies{
         ADP{
@@ -764,7 +763,7 @@ ee{
             "papua new guineaga kina",
         }
         PHP{
-            "₱",
+            "PHP",
             "filipiniga peso",
         }
         PKR{
@@ -1076,7 +1075,7 @@ ee{
             "frentsi UIC-franc",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "ɣetoɖofe afrikaga CFA franc BCEAO",
         }
         XPD{
@@ -2391,4 +2390,5 @@ ee{
         one{"{1} {0}"}
         other{"{1} {0}"}
     }
+    Version{"37"}
 }

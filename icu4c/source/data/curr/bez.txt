@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 bez{
     Currencies{
         AED{
@@ -212,7 +211,7 @@ bez{
             "Lupila lwa CFA BEAC",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "Lupila lwa CFA BCEAO",
         }
         ZAR{
@@ -232,4 +231,5 @@ bez{
             "Lupila lwa Huzimbabwe",
         }
     }
+    Version{"37"}
 }

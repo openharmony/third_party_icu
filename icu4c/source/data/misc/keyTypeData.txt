@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 keyTypeData:table(nofallback){
     bcpTypeAlias{
         ca{
@@ -15,7 +14,6 @@ keyTypeData:table(nofallback){
         }
         valueType{
             ca{"incremental"}
-            dx{"multiple"}
             h0{"single"}
             kr{"multiple"}
             vt{"multiple"}
@@ -37,7 +35,6 @@ keyTypeData:table(nofallback){
         colstrength{"ks"}
         currency{"cu"}
         d0{""}
-        dx{""}
         em{""}
         fw{""}
         h0{""}
@@ -494,9 +491,6 @@ keyTypeData:table(nofallback){
             title{""}
             upper{""}
             zawgyi{""}
-        }
-        dx{
-            SCRIPT_CODE{""}
         }
         em{
             default{""}

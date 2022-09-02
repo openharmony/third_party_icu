@@ -581,10 +581,7 @@ void MeasureFormat::initMeasureFormat(
         UMeasureFormatWidth w,
         NumberFormat *nfToAdopt,
         UErrorCode &status) {
-    static const UListFormatterWidth listWidths[] = {
-        ULISTFMT_WIDTH_WIDE,
-        ULISTFMT_WIDTH_SHORT,
-        ULISTFMT_WIDTH_NARROW};
+    static const char *listStyles[] = {"unit", "unit-short", "unit-narrow"};
     LocalPointer<NumberFormat> nf(nfToAdopt);
     if (U_FAILURE(status)) {
         return;
@@ -623,8 +620,7 @@ void MeasureFormat::initMeasureFormat(
     delete listFormatter;
     listFormatter = ListFormatter::createInstance(
             locale,
-            ULISTFMT_TYPE_UNITS,
-            listWidths[getRegularWidth(fWidth)],
+            listStyles[getRegularWidth(fWidth)],
             status);
 }
 
@@ -865,7 +861,7 @@ UnicodeString &MeasureFormat::formatMeasuresSlowTrack(
         return appendTo;
     }
     // Fix up FieldPosition indexes if our field is found.
-    if (fieldPositionFoundIndex != -1 && offset != -1) {
+    if (offset != -1) {
         pos.setBeginIndex(fpos.getBeginIndex() + offset);
         pos.setEndIndex(fpos.getEndIndex() + offset);
     }

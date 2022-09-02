@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 lt{
     Keys{
         calendar{"kalendorius"}
@@ -384,7 +383,7 @@ lt{
         mni{"manipurių"}
         moh{"mohok"}
         mos{"mosi"}
-        mr{"maratų"}
+        mr{"marathų"}
         mrj{"vakarų mari"}
         ms{"malajiečių"}
         mt{"maltiečių"}
@@ -439,7 +438,7 @@ lt{
         os{"osetinų"}
         osa{"osage"}
         ota{"osmanų turkų"}
-        pa{"pendžabų"}
+        pa{"pandžabų"}
         pag{"pangasinanų"}
         pal{"vidurinė persų kalba"}
         pam{"pampangų"}
@@ -477,6 +476,7 @@ lt{
         ro_MD{"moldavų"}
         rof{"rombo"}
         rom{"romų"}
+        root{"rūt"}
         rtm{"rotumanų"}
         ru{"rusų"}
         rue{"rusinų"}
@@ -644,6 +644,7 @@ lt{
         zh_Hant{"tradicinė mandarinų kinų"}
     }
     Languages%menu{
+        yue{"kinų kalbos Kantono tarmė"}
         zh{"kinų, mandarinų"}
     }
     Languages%short{
@@ -1029,6 +1030,7 @@ lt{
         VALENCIA{"Valenciečiai"}
         WADEGILE{"Wade-Giles Romanization"}
     }
+    Version{"37"}
     characterLabelPattern{
         all{"{0} – visi"}
         category-list{"{0}: {1}"}
@@ -1045,8 +1047,6 @@ lt{
             one{"{0} brūkšnys"}
             other{"{0} brūkšnių"}
         }
-        subscript{"apatinis indeksas {0}"}
-        superscript{"viršutinis indeksas {0}"}
     }
     codePatterns{
         language{"Kalba: {0}"}

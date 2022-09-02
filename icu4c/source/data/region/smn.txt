@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 smn{
     Countries{
         AC{"Ascension-suálui"}
@@ -74,7 +73,7 @@ smn{
         ET{"Etiopia"}
         FI{"Suomâ"}
         FJ{"Fidži"}
-        FK{"Falklandsuolluuh"}
+        FK{"Falklandsuolluuh (Malvinassuolluuh)"}
         FM{"Mikronesia littoväldi"}
         FO{"Färsuolluuh"}
         FR{"Ranska"}
@@ -97,7 +96,7 @@ smn{
         GU{"Guam"}
         GW{"Guinea-Bissau"}
         GY{"Guyana"}
-        HK{"Hongkong – Kiina e.h.k."}
+        HK{"Hong Kong"}
         HM{"Heard já McDonaldsuolluuh"}
         HN{"Honduras"}
         HR{"Kroatia"}
@@ -147,10 +146,11 @@ smn{
         MF{"St. Martin"}
         MG{"Madagaskar"}
         MH{"Marshallsuolluuh"}
+        MK{"OJT Makedonia"}
         ML{"Mali"}
         MM{"Myanmar (Burma)"}
         MN{"Mongolia"}
-        MO{"Macao - – Kiina e.h.k."}
+        MO{"Macao"}
         MP{"Tave-Marianeh"}
         MQ{"Martinique"}
         MR{"Mauritania"}
@@ -265,4 +265,5 @@ smn{
         CG{"Kongo täsiväldi"}
         FK{"Falklandsuolluuh (Malvinassuolluuh)"}
     }
+    Version{"37"}
 }

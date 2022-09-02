@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 sk{
     AuxExemplarCharacters{"[à ă â å ā æ ç è ĕ ê ë ē ì ĭ î ï ī ñ ò ŏ ö ő ø ō œ ř ù ŭ û ü ű ū ÿ]"}
     Ellipsis{
@@ -262,7 +261,6 @@ sk{
                 }
             }
             symbols{
-                approximatelySign{"~"}
                 decimal{","}
                 exponential{"e"}
                 group{" "}
@@ -291,6 +289,7 @@ sk{
         minimumGroupingDigits{"1"}
         native{"latn"}
     }
+    Version{"37"}
     calendar{
         buddhist{
             eras{
@@ -694,7 +693,7 @@ sk{
                 "H:mm:ss z",
                 "H:mm:ss",
                 "H:mm",
-                "EEEE d. MMMM y",
+                "EEEE, d. MMMM y",
                 "d. MMMM y",
                 "d. M. y",
                 "d. M. y",
@@ -720,10 +719,10 @@ sk{
                 Ehm{"E h:mm a"}
                 Ehms{"E h:mm:ss a"}
                 Gy{"y G"}
-                GyMMM{"LLLL y G"}
-                GyMMMEd{"E d. M. y G"}
-                GyMMMMd{"d. M. y G"}
-                GyMMMd{"d. M. y G"}
+                GyMMM{"LLL y G"}
+                GyMMMEd{"E, d. MMM y G"}
+                GyMMMMd{"d. MMMM y G"}
+                GyMMMd{"d. MMM y G"}
                 H{"H"}
                 Hm{"H:mm"}
                 Hms{"H:mm:ss"}
@@ -732,8 +731,8 @@ sk{
                 M{"L."}
                 MEd{"E d. M."}
                 MMM{"LLL"}
-                MMMEd{"E d. M."}
-                MMMMEd{"E d. MMMM"}
+                MMMEd{"E, d. MMM"}
+                MMMMEd{"E, d. MMMM"}
                 MMMMW{
                     few{"W. 'týždeň' MMMM"}
                     many{"W. 'týždeň' MMMM"}
@@ -741,7 +740,7 @@ sk{
                     other{"W. 'týždeň' MMMM"}
                 }
                 MMMMd{"d. MMMM"}
-                MMMd{"d. M."}
+                MMMd{"d. MMM"}
                 Md{"d. M."}
                 d{"d."}
                 h{"h a"}
@@ -752,13 +751,13 @@ sk{
                 mmss{"mm:ss"}
                 ms{"mm:ss"}
                 y{"y"}
-                yM{"M/y"}
+                yM{"M. y"}
                 yMEd{"E d. M. y"}
-                yMMM{"M/y"}
-                yMMMEd{"E d. M. y"}
+                yMMM{"LLL y"}
+                yMMMEd{"E, d. MMM y"}
                 yMMMM{"LLLL y"}
                 yMMMMd{"d. MMMM y"}
-                yMMMd{"d. M. y"}
+                yMMMd{"d. MMM y"}
                 yMd{"d. M. y"}
                 yQQQ{"QQQ y"}
                 yQQQQ{"QQQQ y"}
@@ -978,7 +977,7 @@ sk{
                     y{"d. M. y – d. M. y GGGGG"}
                 }
                 H{
-                    H{"HH – HH"}
+                    H{"H – H"}
                 }
                 Hm{
                     H{"H:mm – H:mm"}
@@ -989,7 +988,7 @@ sk{
                     m{"H:mm – H:mm v"}
                 }
                 Hv{
-                    H{"HH – HH v"}
+                    H{"H – H v"}
                 }
                 M{
                     M{"M. – M."}
@@ -1002,15 +1001,15 @@ sk{
                     M{"LLL – LLL"}
                 }
                 MMMEd{
-                    M{"E d. M. – E d. M."}
-                    d{"E d. – E d. M."}
+                    M{"E, d. MMM – E, d. MMM"}
+                    d{"E, d. – E, d. MMM"}
                 }
                 MMMM{
                     M{"LLLL – LLLL"}
                 }
                 MMMd{
-                    M{"d. M. – d. M."}
-                    d{"d. – d. M."}
+                    M{"d. MMM – d. MMM"}
+                    d{"d. – d. MMM"}
                 }
                 Md{
                     M{"d. M. – d. M."}
@@ -1042,8 +1041,8 @@ sk{
                     y{"y – y"}
                 }
                 yM{
-                    M{"M/y – M/y"}
-                    y{"M/y – M/y"}
+                    M{"M. y – M. y"}
+                    y{"M. y – M. y"}
                 }
                 yMEd{
                     M{"E d. M. y – E d. M. y"}
@@ -1051,22 +1050,22 @@ sk{
                     y{"E d. M. y – E d. M. y"}
                 }
                 yMMM{
-                    M{"M – M/y"}
-                    y{"M/y – M/y"}
+                    M{"LLL – LLL y"}
+                    y{"LLL y – LLL y"}
                 }
                 yMMMEd{
-                    M{"E d. M. – E d. M. y"}
-                    d{"E d. – E d. M. y"}
-                    y{"E d. M. y – E d. M. y"}
+                    M{"E, d. MMM – E, d. MMM y"}
+                    d{"E, d. – E, d. MMM y"}
+                    y{"E, d. MMM y – E, d. MMM y"}
                 }
                 yMMMM{
                     M{"LLLL – LLLL y"}
                     y{"LLLL y – LLLL y"}
                 }
                 yMMMd{
-                    M{"d. M. – d. M. y"}
-                    d{"d. – d. M. y"}
-                    y{"d. M. y – d. M. y"}
+                    M{"d. MMM – d. MMM y"}
+                    d{"d. – d. MMM y"}
+                    y{"d. MMM y – d. MMM y"}
                 }
                 yMd{
                     M{"d. M. y – d. M. y"}
@@ -2564,10 +2563,10 @@ sk{
             dn{"deň týždňa v mesiaci"}
         }
         weekdayOfMonth-narrow{
-            dn{"d. týž. v mes."}
+            dn{"d.  týž. v mes."}
         }
         weekdayOfMonth-short{
-            dn{"d. týž. v mes."}
+            dn{"d.  týž. v mes."}
         }
         year{
             dn{"rok"}

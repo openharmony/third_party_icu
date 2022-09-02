@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ja{
     Countries{
         001{"世界"}
@@ -134,7 +133,7 @@ ja{
         GU{"グアム"}
         GW{"ギニアビサウ"}
         GY{"ガイアナ"}
-        HK{"中華人民共和国香港特別行政区"}
+        HK{"中国香港"}
         HM{"ハード島・マクドナルド諸島"}
         HN{"ホンジュラス"}
         HR{"クロアチア"}
@@ -188,7 +187,7 @@ ja{
         ML{"マリ"}
         MM{"ミャンマー (ビルマ)"}
         MN{"モンゴル"}
-        MO{"中華人民共和国マカオ特別行政区"}
+        MO{"中国マカオ"}
         MP{"北マリアナ諸島"}
         MQ{"マルティニーク"}
         MR{"モーリタニア"}
@@ -255,7 +254,7 @@ ja{
         SX{"シント・マールテン"}
         SY{"シリア"}
         SZ{"エスワティニ"}
-        TA{"トリスタン・ダ・クーニャ"}
+        TA{"トリスタンダクーニャ"}
         TC{"タークス・カイコス諸島"}
         TD{"チャド"}
         TF{"仏領極南諸島"}
@@ -270,7 +269,7 @@ ja{
         TR{"トルコ"}
         TT{"トリニダード・トバゴ"}
         TV{"ツバル"}
-        TW{"台湾"}
+        TW{"中国台湾"}
         TZ{"タンザニア"}
         UA{"ウクライナ"}
         UG{"ウガンダ"}
@@ -315,4 +314,5 @@ ja{
         SZ{"スワジランド"}
         TL{"東チモール"}
     }
+    Version{"37"}
 }

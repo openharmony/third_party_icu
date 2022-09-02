@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ha{
     Keys{
         calendar{"Kalanda"}
@@ -21,13 +20,13 @@ ha{
         ar_001{"Larabci Asali Na Zamani"}
         as{"Asamisanci"}
         asa{"Asu"}
-        ast{"Asturia"}
+        ast{"Asturian"}
         az{"Azerbaijanci"}
         bas{"Basaa"}
         be{"Belarusanci"}
         bem{"Bemba"}
         bez{"Bena"}
-        bg{"Bulgariyanci"}
+        bg{"Bulgaranci"}
         bm{"Bambara"}
         bn{"Bengali"}
         bo{"Tibetan"}
@@ -40,18 +39,18 @@ ha{
         ceb{"Cebuano"}
         cgg{"Chiga"}
         chr{"Cherokee"}
-        ckb{"Kurdawa ta Tsakiya"}
+        ckb{"Kurdish na Tsaka"}
         co{"Corsican"}
-        cs{"Cek"}
+        cs{"Harshen Cak"}
         cu{"Church Slavic"}
-        cy{"Welsh"}
+        cy{"Kabilar Welsh"}
         da{"Danish"}
         dav{"Taita"}
         de{"Jamusanci"}
         de_AT{"Jamusanci Ostiriya"}
         de_CH{"Jamusanci Suwizalan"}
         dje{"Zarma"}
-        dsb{"Sorbianci ta kasa"}
+        dsb{"Lower Sorbian"}
         dua{"Duala"}
         dyo{"Jola-Fonyi"}
         dz{"Dzongkha"}
@@ -63,15 +62,15 @@ ha{
         en_CA{"Turanci Kanada"}
         en_GB{"Turanci Biritaniya"}
         en_US{"Turanci Amirka"}
-        eo{"Esperanto"}
-        es{"Sifaniyanci"}
+        eo{"Dʼan/ʼYar Kabilar Andalus"}
+        es{"Ispaniyanci"}
         es_419{"Sifaniyancin Latin Amirka"}
         es_ES{"Sifaniyanci Turai"}
         es_MX{"Sifaniyanci Mesiko"}
         et{"Istoniyanci"}
         eu{"Basque"}
         ewo{"Ewondo"}
-        fa{"Farisa"}
+        fa{"Parisanci"}
         ff{"Fulah"}
         fi{"Yaren mutanen Finland"}
         fil{"Dan Filifin"}
@@ -80,8 +79,8 @@ ha{
         fr_CA{"Farasanci Kanada"}
         fr_CH{"Farasanci Suwizalan"}
         fur{"Friulian"}
-        fy{"Frisian ta Yamma"}
-        ga{"Dan Irish"}
+        fy{"Kʼabilan Firsi"}
+        ga{"Dan Ailan"}
         gd{"Kʼabilan Scots Gaelic"}
         gl{"Bagalike"}
         gsw{"Jamusanci Swiss"}
@@ -89,7 +88,7 @@ ha{
         guz{"Gusii"}
         gv{"Manx"}
         ha{"Hausa"}
-        haw{"Hawaiianci"}
+        haw{"Hawaiian"}
         he{"Ibrananci"}
         hi{"Harshen Hindi"}
         hmn{"Hmong"}
@@ -100,14 +99,14 @@ ha{
         hy{"Armeniyanci"}
         ia{"Yare Tsakanin Kasashe"}
         id{"Harshen Indunusiya"}
-        ig{"Igbo"}
+        ig{"Inyamuranci"}
         ii{"Sichuan Yi"}
         is{"Yaren mutanen Iceland"}
         it{"Italiyanci"}
         ja{"Japananci"}
         jgo{"Ngomba"}
         jmc{"Machame"}
-        jv{"Jafananci"}
+        jv{"Jabananci"}
         ka{"Jojiyanci"}
         kab{"Kabyle"}
         kam{"Kamba"}
@@ -122,7 +121,7 @@ ha{
         km{"Harshen Kimar"}
         kn{"Kannada"}
         ko{"Harshen Koreya"}
-        kok{"Konkananci"}
+        kok{"Konkani"}
         ks{"Kashmiri"}
         ksb{"Shambala"}
         ksf{"Bafia"}
@@ -136,26 +135,24 @@ ha{
         lg{"Ganda"}
         lkt{"Lakota"}
         ln{"Lingala"}
-        lo{"Lao"}
-        lrc{"Arewacin Luri"}
+        lo{"Laothian"}
+        lrc{"Northern Luri"}
         lt{"Lituweniyanci"}
         lu{"Luba-Katanga"}
         luo{"Luo"}
         luy{"Luyia"}
         lv{"Latbiyanci"}
-        mai{"Maithili"}
         mas{"Harshen Masai"}
         mer{"Meru"}
         mfe{"Morisyen"}
-        mg{"Malagasi"}
+        mg{"Malagasy"}
         mgh{"Makhuwa-Meetto"}
         mgo{"Metaʼ"}
         mi{"Maori"}
         mk{"Dan Masedoniya"}
-        ml{"Malayalamci"}
-        mn{"Mongoliyanci"}
-        mni{"Manipuri"}
-        mr{"Maratinci"}
+        ml{"Kabilar Maleyalam"}
+        mn{"Mongolian"}
+        mr{"Kʼabilan Marathi"}
         ms{"Harshen Malai"}
         mt{"Harshen Maltis"}
         mua{"Mundang"}
@@ -175,31 +172,28 @@ ha{
         ny{"Nyanja"}
         nyn{"Nyankole"}
         om{"Oromo"}
-        or{"Odiya"}
+        or{"Oriyanci"}
         os{"Ossetic"}
         pa{"Punjabi"}
-        pcm{"Pidgin na Najeriya"}
         pl{"Harshen Polan"}
         prg{"Ferusawa"}
         ps{"Pashtanci"}
-        pt{"Harshen Potugis"}
-        pt_BR{"Harshen Potugis na Birazil"}
-        pt_PT{"Potugis Ƙasashen Turai"}
+        pt{"Harshen Portugal"}
+        pt_PT{"Fotugis kasashen Turai"}
         qu{"Quechua"}
         rm{"Romansh"}
         rn{"Rundi"}
         ro{"Romaniyanci"}
         rof{"Rombo"}
         ru{"Rashanci"}
-        rw{"Kinyarwanda"}
-        rwk{"Rwa"}
+        rw{"Kiniyaruwanda"}
+        rwk{"yaren Rwa"}
         sa{"Sanskrit"}
         sah{"Sakha"}
         saq{"Samburu"}
-        sat{"Santali"}
         sbp{"Sangu"}
         sd{"Sindiyanci"}
-        se{"Sami ta Arewa"}
+        se{"Northern Sami"}
         seh{"Sena"}
         ses{"Koyraboro Senni"}
         sg{"Sango"}
@@ -210,29 +204,29 @@ ha{
         sm{"Samoan"}
         smn{"Inari Sami"}
         sn{"Shona"}
-        so{"Somalianci"}
-        sq{"Albaniyanci"}
+        so{"Somali"}
+        sq{"Albanian"}
         sr{"Sabiyan"}
         st{"Sesotanci"}
-        su{"Harshen Sundanese"}
+        su{"Sudananci"}
         sv{"Harshen Suwedan"}
         sw{"Harshen Suwahili"}
         ta{"Tamil"}
-        te{"Telugu"}
+        te{"Dʼan/ʼYar Kabilar Telug"}
         teo{"Teso"}
         tg{"Tajik"}
         th{"Thai"}
-        ti{"Tigrinyanci"}
+        ti{"Tigriyanci"}
         tk{"Tukmenistanci"}
-        to{"Tonganci"}
+        to{"Tongan"}
         tr{"Harshen Turkiyya"}
         tt{"Tatar"}
-        twq{"Tasawak"}
+        twq{"Tasawaq"}
         tzm{"Tamazight na Atlas Tsaka"}
         ug{"Ugiranci"}
         uk{"Harshen Yukuren"}
         und{"Harshen da ba a sani ba"}
-        ur{"Urdanci"}
+        ur{"Harshen Urdu"}
         uz{"Uzbek"}
         vai{"Vai"}
         vi{"Harshen Biyetinam"}
@@ -243,24 +237,24 @@ ha{
         xh{"Bazosa"}
         xog{"Soga"}
         yav{"Yangben"}
-        yi{"Yaren Yiddish"}
+        yi{"Yiddish"}
         yo{"Yarbanci"}
-        yue{"Harshen Cantonese"}
-        zgh{"Daidaitaccen Moroccan Tamazight"}
-        zh{"Harshen Sinanci"}
+        yue{"Cantonese"}
+        zgh{"Standard Moroccan Tamazight"}
+        zh{"Harshen Sin"}
         zh_Hans{"Sauƙaƙaƙƙen Sinanci"}
         zh_Hant{"Sinanci na gargajiya"}
         zu{"Harshen Zulu"}
-        zxx{"Babu abun cikin yare"}
+        zxx{"Babu abun-ciki na yare"}
     }
     Languages%menu{
-        yue{"Sinanci, Cantonese"}
+        yue{"Sinanci"}
         zh{"Harshen, Sinanci"}
     }
     Languages%short{
         az{"Azeri"}
-        en_GB{"Turancin Ingila"}
-        en_US{"Turancin Amurka"}
+        en_GB{"Turanci Ingila"}
+        en_US{"Amirka Turanci"}
     }
     Scripts{
         Arab{"Larabci"}
@@ -275,7 +269,7 @@ ha{
         Grek{"Girka"}
         Gujr{"Gujarati"}
         Guru{"Gurmukhi"}
-        Hanb{"Han tare da Bopomofo"}
+        Hanb{"Han with Bopomofo"}
         Hang{"Yaren Hangul"}
         Hani{"Mutanen Han na ƙasar Sin"}
         Hans{"Sauƙaƙaƙƙen"}
@@ -287,8 +281,8 @@ ha{
         Kana{"Tsarin Rubutun Katakana"}
         Khmr{"Yaren Khmer"}
         Knda{"Yaren Kannada"}
-        Kore{"Rubutun Koriya"}
-        Laoo{"Yan lao"}
+        Kore{"Koriya"}
+        Laoo{"Mutanen Laos"}
         Latn{"Latin"}
         Mlym{"Yaren Malayalam"}
         Mong{"Na kasar Mongolia"}
@@ -298,7 +292,6 @@ ha{
         Taml{"Yaren Tamil"}
         Telu{"Yaren Telugu"}
         Thaa{"Yaren Thaana"}
-        Thai{"Thai"}
         Tibt{"Yaren Tibet"}
         Zmth{"Alamar Lissafi"}
         Zsye{"Alama ta hoto"}
@@ -313,16 +306,16 @@ ha{
     }
     Types{
         calendar{
-            buddhist{"Kalandar Buddist"}
-            chinese{"Kalandar Sin"}
-            dangi{"Kalandar Dangi"}
-            ethiopic{"Kalandar Etiofic"}
-            gregorian{"Kalandar Gregoria"}
-            hebrew{"Kalandar Ibrananci"}
+            buddhist{"Kalanda Buddist"}
+            chinese{"Kalanda Sin"}
+            dangi{"Kalanda Dangi"}
+            ethiopic{"Kalanda Etiofic"}
+            gregorian{"Gregorian Kalanda"}
+            hebrew{"Kalanda Ibrananci"}
             islamic{"Kalandar Musulunci"}
-            iso8601{"Kalandar ISO-8601"}
-            japanese{"Kalandar Jafan"}
-            persian{"Kalandar Farisa"}
+            iso8601{"Kalanda ISO-8601"}
+            japanese{"Kalanda Jafan"}
+            persian{"Kalanda Farisa"}
             roc{"Kalandar kasar Sin"}
         }
         cf{
@@ -332,7 +325,7 @@ ha{
         collation{
             ducet{"Tsarin Rabewa na Dan-maƙalu na Asali"}
             search{"Bincike na Dalilai-Gamagari"}
-            standard{"Daidaitaccen Kasawa"}
+            standard{"Daidai ta ce Kasà"}
         }
         hc{
             h11{"Tsarin Awowi 12(0–11)"}
@@ -351,7 +344,7 @@ ha{
             ussystem{"Tsarin Awo na Amurka"}
         }
         numbers{
-            arab{"Lambobi na Larabawan a Gabas"}
+            arab{"Lambobi na larabawan a gabas"}
             arabext{"Fitattun lambobin lissafi na Larabci"}
             armn{"Lambobin ƙirga na Armenia"}
             armnlow{"Kananan Haruffan Armenia"}
@@ -375,7 +368,7 @@ ha{
             khmr{"Lambobin Yaren Khmer"}
             knda{"Lambobin Yaren Kannada"}
             laoo{"Lambobin Yaren Lao"}
-            latn{"Lambobi na Yammaci"}
+            latn{"Lambobi na yammacin"}
             mlym{"Lambobin Yaren Malayalam"}
             mymr{"Lambobin Myanmar"}
             orya{"Lambobin Yaren Odia"}
@@ -388,9 +381,10 @@ ha{
             tibt{"Lambobin yaren Tibet"}
         }
     }
+    Version{"37"}
     codePatterns{
         language{"Harshe: {0}"}
         script{"Rubutu: {0}"}
-        territory{"Yanki: {0}"}
+        territory{"Yanki/Sashe: {0}"}
     }
 }

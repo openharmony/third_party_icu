@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 tg{
     Languages{
         af{"африкаанс"}
@@ -40,7 +39,7 @@ tg{
         en_US{"англисии америкоӣ"}
         eo{"эсперанто"}
         es{"испанӣ"}
-        es_419{"испании америкоии лотинӣ"}
+        es_419{"испанӣ (Америкаи Лотинӣ)"}
         es_ES{"испании аврупоӣ"}
         es_MX{"испании мексикоӣ"}
         et{"эстонӣ"}
@@ -152,7 +151,7 @@ tg{
         to{"тонганӣ"}
         tr{"туркӣ"}
         tt{"тоторӣ"}
-        tzm{"тамазайти Атласи Марказӣ"}
+        tzm{"тамазайти атласи марказӣ"}
         ug{"ӯйғурӣ"}
         uk{"украинӣ"}
         und{"забони номаълум"}
@@ -176,6 +175,7 @@ tg{
     }
     Languages%short{
         en_GB{"англисӣ (ШМ)"}
+        en_US{"англисӣ (ИМ)"}
     }
     Scripts{
         Arab{"Арабӣ"}
@@ -202,6 +202,7 @@ tg{
             latn{"Рақамҳои ғарбӣ"}
         }
     }
+    Version{"37"}
     codePatterns{
         language{"{0}"}
         script{"{0}"}

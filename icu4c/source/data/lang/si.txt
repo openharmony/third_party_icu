@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 si{
     Keys{
         calendar{"දින දර්ශනය"}
@@ -19,7 +18,7 @@ si{
         ada{"අඩන්ග්මෙ"}
         ady{"අඩිඝෙ"}
         aeb{"ටියුනිසියනු අරාබි"}
-        af{"අෆ්‍රිකාන්ස්"}
+        af{"අෆ්රිකාන්ස්"}
         agq{"ඇගම්"}
         ain{"අයිනු"}
         ak{"අකාන්"}
@@ -145,11 +144,11 @@ si{
         hi{"හින්දි"}
         hil{"හිලිගෙනන්"}
         hmn{"මොන්ග්"}
-        hr{"කෝඒෂියානු"}
+        hr{"ක්‍රෝසියානු"}
         hsb{"ඉහළ සෝබියානු"}
         hsn{"සියැන් චීන"}
         ht{"හයිටි"}
-        hu{"හන්ගේරියානු"}
+        hu{"හංගේරියානු"}
         hup{"හුපා"}
         hy{"ආර්මේනියානු"}
         hz{"හෙරෙරො"}
@@ -308,9 +307,10 @@ si{
         rar{"රරොටොන්ගන්"}
         rm{"රොමෑන්ශ්"}
         rn{"රුන්ඩි"}
-        ro{"රොමේනියානු"}
+        ro{"රුමේනියානු"}
         ro_MD{"මොල්ඩවිආනු"}
         rof{"රෝම්බෝ"}
+        root{"රූට්"}
         ru{"රුසියානු"}
         rup{"ඇරොමානියානු"}
         rw{"කින්යර්වන්ඩා"}
@@ -358,7 +358,7 @@ si{
         swb{"කොමොරියන්"}
         syr{"ස්‍රයෑක්"}
         ta{"දෙමළ"}
-        te{"තෙළිඟු"}
+        te{"තෙළුඟු"}
         tem{"ටිම්නෙ"}
         teo{"ටෙසෝ"}
         tet{"ටේටම්"}
@@ -422,7 +422,6 @@ si{
         zh_Hant{"සාම්ප්‍රදායික මැන්ඩරීන් චීන"}
     }
     Languages%menu{
-        ckb{"කුර්දිෂ්, මධ්‍යම"}
         yue{"චීන, කැන්ටොනීස්"}
         zh{"චීන, මැන්ඩරීන්"}
     }
@@ -430,9 +429,6 @@ si{
         az{"අසීරී"}
         en_GB{"එ.රා ඉංග්‍රීසි"}
         en_US{"එ.ජ ඉංග්‍රීසි"}
-    }
-    Languages%variant{
-        ckb{"කුර්දිෂ්, සොරානි"}
     }
     Scripts{
         Arab{"අරාබි"}
@@ -562,6 +558,7 @@ si{
             tibt{"ටිබෙට ඉලක්කම්"}
         }
     }
+    Version{"37"}
     characterLabelPattern{
         all{"{0} — සියල්ල"}
         category-list{"{0}: {1}"}
@@ -576,8 +573,6 @@ si{
             one{"{0} පහර"}
             other{"{0} පහර"}
         }
-        subscript{"යටකුර {0}"}
-        superscript{"උඩකුර {0}"}
     }
     codePatterns{
         language{"{0} භාෂාව: සිංහල"}

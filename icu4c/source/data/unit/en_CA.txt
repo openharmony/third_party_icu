@@ -1,8 +1,8 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 en_CA{
     %%Parent{"en_001"}
+    Version{"37"}
     units{
         concentr{
             karat{
@@ -11,23 +11,10 @@ en_CA{
                 other{"{0} karats"}
             }
         }
-        graphics{
-            dot{
-                one{"{0} dot"}
-                other{"{0} dots"}
-            }
-        }
-        light{
-            candela{
-                dnam{"candelas"}
-            }
-            lumen{
-                dnam{"lumens"}
-            }
-        }
-        mass{
-            grain{
-                dnam{"grains"}
+        energy{
+            kilowatt-hour{
+                one{"{0} kilowatt-hour"}
+                other{"{0} kilowatt-hours"}
             }
         }
         torque{
@@ -38,40 +25,16 @@ en_CA{
             }
         }
         volume{
-            dram{
-                dnam{"fluid drams"}
-                one{"{0} fluid dram"}
-                other{"{0} fluid drams"}
-            }
-            drop{
-                dnam{"drops"}
-            }
-            fluid-ounce{
-                dnam{"fluid ounces"}
-                one{"{0} fluid ounce"}
-                other{"{0} fluid ounces"}
-            }
             fluid-ounce-imperial{
                 dnam{"imp. fluid ounces"}
                 one{"{0} imp. fluid ounce"}
                 other{"{0} imp. fluid ounces"}
             }
-            jigger{
-                dnam{"jiggers"}
-            }
-            pinch{
-                dnam{"pinches"}
-            }
-            quart-imperial{
-                dnam{"imp. quart"}
-                one{"{0} imp. quart"}
-                other{"{0} imp. quarts"}
-            }
         }
     }
     unitsNarrow{
         concentr{
-            milligram-ofglucose-per-deciliter{
+            milligram-per-deciliter{
                 dnam{"mg/dL"}
                 one{"{0}mg/dL"}
                 other{"{0}mg/dL"}
@@ -121,7 +84,7 @@ en_CA{
                 other{"{0} m"}
             }
             second{
-                dnam{"sec."}
+                dnam{"s"}
                 one{"{0} sec."}
                 other{"{0} sec."}
             }
@@ -253,7 +216,7 @@ en_CA{
                 one{"{0} kt"}
                 other{"{0} kt"}
             }
-            milligram-ofglucose-per-deciliter{
+            milligram-per-deciliter{
                 dnam{"mg/dL"}
                 one{"{0} mg/dL"}
                 other{"{0} mg/dL"}
@@ -326,9 +289,9 @@ en_CA{
                 other{"{0} nanosec."}
             }
             second{
-                dnam{"sec."}
+                dnam{"secs."}
                 one{"{0} sec."}
-                other{"{0} sec."}
+                other{"{0} secs."}
                 per{"{0}/sec."}
             }
             week{
@@ -408,9 +371,8 @@ en_CA{
         mass{
             carat{
                 dnam{"ct"}
-            }
-            grain{
-                dnam{"grains"}
+                one{"{0} ct"}
+                other{"{0} ct"}
             }
             ounce{
                 dnam{"oz."}
@@ -444,10 +406,8 @@ en_CA{
             }
         }
         pressure{
-            millimeter-ofhg{
-                dnam{"mm Hg"}
-                one{"{0} mm Hg"}
-                other{"{0} mm Hg"}
+            inch-ofhg{
+                dnam{"inHg"}
             }
         }
         speed{
@@ -472,7 +432,7 @@ en_CA{
         }
         volume{
             acre-foot{
-                dnam{"ac. ft."}
+                dnam{"acre ft."}
                 one{"{0} ac. ft."}
                 other{"{0} ac. ft."}
             }
@@ -514,24 +474,6 @@ en_CA{
                 one{"{0} dL"}
                 other{"{0} dL"}
             }
-            dessert-spoon{
-                dnam{"dssp"}
-                one{"{0} dssp"}
-                other{"{0} dssp"}
-            }
-            dessert-spoon-imperial{
-                dnam{"imp. dssp"}
-                one{"{0} imp. dssp"}
-                other{"{0} imp. dssp"}
-            }
-            dram{
-                dnam{"fl. dr."}
-                one{"{0} fl. dr."}
-                other{"{0} fl. dr."}
-            }
-            drop{
-                dnam{"drops"}
-            }
             fluid-ounce{
                 dnam{"fl. oz."}
                 one{"{0} fl. oz."}
@@ -539,8 +481,8 @@ en_CA{
             }
             fluid-ounce-imperial{
                 dnam{"imp. fl. oz."}
-                one{"{0} imp. fl. oz."}
-                other{"{0} imp. fl. oz."}
+                one{"{0} fl. oz. imp."}
+                other{"{0} fl. oz. imp."}
             }
             gallon{
                 dnam{"US gal."}
@@ -559,9 +501,6 @@ en_CA{
                 one{"{0} hL"}
                 other{"{0} hL"}
             }
-            jigger{
-                dnam{"jiggers"}
-            }
             liter{
                 one{"{0} L"}
                 other{"{0} L"}
@@ -577,9 +516,6 @@ en_CA{
                 one{"{0} mL"}
                 other{"{0} mL"}
             }
-            pinch{
-                dnam{"pinches"}
-            }
             pint{
                 one{"{0} pt."}
                 other{"{0} pt."}
@@ -588,11 +524,6 @@ en_CA{
                 dnam{"qt."}
                 one{"{0} qt."}
                 other{"{0} qt."}
-            }
-            quart-imperial{
-                dnam{"imp. qt."}
-                one{"{0} imp. qt."}
-                other{"{0} imp. qt."}
             }
             tablespoon{
                 dnam{"tbsp."}

@@ -1,7 +1,10 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ne_IN{
+    NumberElements{
+        default{"latn"}
+    }
+    Version{"37"}
     calendar{
         gregorian{
             DateTimePatterns{
@@ -12,7 +15,7 @@ ne_IN{
                 "y MMMM d, EEEE",
                 "y MMMM d",
                 "y MMM d",
-                "yy/M/d",
+                "y-MM-dd",
                 "{1}, {0}",
                 "{1} {0}",
                 "{1} {0}",

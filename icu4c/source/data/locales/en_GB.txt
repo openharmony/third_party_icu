@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 en_GB{
     %%Parent{"en_001"}
     NumberElements{
@@ -11,6 +10,7 @@ en_GB{
         }
         minimumGroupingDigits{"1"}
     }
+    Version{"37"}
     calendar{
         generic{
             availableFormats{
@@ -110,20 +110,6 @@ en_GB{
             }
             monthNames{
                 format{
-                    abbreviated{
-                        "Jan",
-                        "Feb",
-                        "Mar",
-                        "Apr",
-                        "May",
-                        "Jun",
-                        "Jul",
-                        "Aug",
-                        "Sept",
-                        "Oct",
-                        "Nov",
-                        "Dec",
-                    }
                     narrow{
                         "J",
                         "F",
@@ -149,7 +135,7 @@ en_GB{
                         "Jun",
                         "Jul",
                         "Aug",
-                        "Sept",
+                        "Sep",
                         "Oct",
                         "Nov",
                         "Dec",

@@ -292,7 +292,7 @@ public:
     /**
      * Equality operator. 
      * @param that instance to be compared.
-     * @return true if both instances have the same attributes, 
+     * @return TRUE if both instances have the same attributes, 
      *         breakiterators, collators and iterate over the same text 
      *         while looking for the same pattern.
      * @stable ICU 2.0

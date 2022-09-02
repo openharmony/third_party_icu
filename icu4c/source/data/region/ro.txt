@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ro{
     Countries{
         001{"Lume"}
@@ -134,7 +133,7 @@ ro{
         GU{"Guam"}
         GW{"Guineea-Bissau"}
         GY{"Guyana"}
-        HK{"R.A.S. Hong Kong, China"}
+        HK{"Hong Kong, China"}
         HM{"Insula Heard și Insulele McDonald"}
         HN{"Honduras"}
         HR{"Croația"}
@@ -188,7 +187,7 @@ ro{
         ML{"Mali"}
         MM{"Myanmar (Birmania)"}
         MN{"Mongolia"}
-        MO{"R.A.S. Macao, China"}
+        MO{"Macao, China"}
         MP{"Insulele Mariane de Nord"}
         MQ{"Martinica"}
         MR{"Mauritania"}
@@ -228,7 +227,7 @@ ro{
         PW{"Palau"}
         PY{"Paraguay"}
         QA{"Qatar"}
-        QO{"Oceania Periferică"}
+        QO{"Oceania Îndepărtată"}
         RE{"Réunion"}
         RO{"România"}
         RS{"Serbia"}
@@ -254,7 +253,7 @@ ro{
         SV{"El Salvador"}
         SX{"Sint-Maarten"}
         SY{"Siria"}
-        SZ{"Eswatini"}
+        SZ{"eSwatini"}
         TA{"Tristan da Cunha"}
         TC{"Insulele Turks și Caicos"}
         TD{"Ciad"}
@@ -270,7 +269,7 @@ ro{
         TR{"Turcia"}
         TT{"Trinidad și Tobago"}
         TV{"Tuvalu"}
-        TW{"Taiwan"}
+        TW{"Taiwan, China"}
         TZ{"Tanzania"}
         UA{"Ucraina"}
         UG{"Uganda"}
@@ -279,7 +278,7 @@ ro{
         US{"Statele Unite ale Americii"}
         UY{"Uruguay"}
         UZ{"Uzbekistan"}
-        VA{"Statul Cetății Vaticanului"}
+        VA{"Cetatea Vaticanului"}
         VC{"Saint Vincent și Grenadinele"}
         VE{"Venezuela"}
         VG{"Insulele Virgine Britanice"}
@@ -299,6 +298,7 @@ ro{
         ZZ{"Regiune necunoscută"}
     }
     Countries%short{
+        GB{"Regatul Unit"}
         HK{"Hong Kong"}
         MO{"Macao"}
         PS{"Palestina"}
@@ -314,4 +314,5 @@ ro{
         SZ{"Swaziland"}
         TL{"Timorul de Est"}
     }
+    Version{"37"}
 }

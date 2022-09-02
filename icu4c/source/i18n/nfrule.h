@@ -38,7 +38,7 @@ public:
         kNegativeNumberRule = -1,
         kImproperFractionRule = -2,
         kProperFractionRule = -3,
-        kDefaultRule = -4,
+        kMasterRule = -4,
         kInfinityRule = -5,
         kNaNRule = -6,
         kOtherRule = -7

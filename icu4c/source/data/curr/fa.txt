@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 fa{
     Currencies{
         ADP{
@@ -884,7 +883,7 @@ fa{
             "فرانک طلای فرانسه",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "فرانک CFA غرب افریقا",
         }
         XPD{
@@ -1903,4 +1902,5 @@ fa{
             other{"کواچای زامبیا"}
         }
     }
+    Version{"37"}
 }

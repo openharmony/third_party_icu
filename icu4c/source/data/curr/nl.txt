@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 nl{
     Currencies{
         ADP{
@@ -221,7 +220,7 @@ nl{
         }
         BYN{
             "BYN",
-            "Belarussische roebel",
+            "Wit-Russische roebel",
         }
         BYR{
             "BYR",
@@ -1120,7 +1119,7 @@ nl{
             "Franse UIC-franc",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "CFA-franc BCEAO",
         }
         XPD{
@@ -1538,8 +1537,8 @@ nl{
             other{"Wit-Russische nieuwe roebel (1994–1999)"}
         }
         BYN{
-            one{"Belarussische roebel"}
-            other{"Belarussische roebel"}
+            one{"Wit-Russische roebel"}
+            other{"Wit-Russische roebel"}
         }
         BYR{
             one{"Wit-Russische roebel (2000–2016)"}
@@ -2538,4 +2537,5 @@ nl{
         one{"{0} {1}"}
         other{"{0} {1}"}
     }
+    Version{"37"}
 }

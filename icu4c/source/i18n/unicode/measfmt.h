@@ -91,8 +91,7 @@ class DateFormat;
 /**
  * <p><strong>IMPORTANT:</strong> New users are strongly encouraged to see if
  * numberformatter.h fits their use case.  Although not deprecated, this header
- * is provided for backwards compatibility only, and has much more limited
- * capabilities.
+ * is provided for backwards compatibility only.
  *
  * @see Format
  * @author Alan Liu
@@ -310,7 +309,7 @@ class U_I18N_API MeasureFormat : public Format {
     /**
      * ICU use only.
      * Allows subclass to change locale. Note that this method also changes
-     * the NumberFormat object. Returns true if locale changed; false if no
+     * the NumberFormat object. Returns TRUE if locale changed; FALSE if no
      * change was made.
      * @internal.
      */

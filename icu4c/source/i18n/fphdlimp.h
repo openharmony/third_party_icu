@@ -41,8 +41,8 @@ class U_I18N_API FieldPositionHandler: public UMemory {
 
 class FieldPositionOnlyHandler : public FieldPositionHandler {
   FieldPosition& pos;
-  UBool acceptFirstOnly = false;
-  UBool seenFirst = false;
+  UBool acceptFirstOnly = FALSE;
+  UBool seenFirst = FALSE;
 
  public:
   FieldPositionOnlyHandler(FieldPosition& pos);

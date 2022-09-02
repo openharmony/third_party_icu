@@ -1,17 +1,10 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 es_419{
+    Version{"37"}
     units{
-        acceleration{
-            g-force{
-                dnam{"fuerza G"}
-                one{"{0} unidad de fuerza gravitacional"}
-                other{"{0} unidades de fuerza gravitacional"}
-            }
-        }
         concentr{
-            milligram-ofglucose-per-deciliter{
+            milligram-per-deciliter{
                 dnam{"mg/dL"}
             }
         }
@@ -55,15 +48,10 @@ es_419{
             }
         }
         mass{
-            metric-ton{
-                dnam{"toneladas métricas"}
-                one{"{0} tonelada métrica"}
-                other{"{0} toneladas métricas"}
-            }
-            ton{
-                dnam{"toneladas"}
-                one{"{0} tonelada"}
-                other{"{0} toneladas"}
+            stone{
+                dnam{"stones"}
+                one{"{0} stone"}
+                other{"{0} stones"}
             }
         }
         power{
@@ -74,10 +62,6 @@ es_419{
             }
         }
         temperature{
-            generic{
-                one{"{0}°"}
-                other{"{0}°"}
-            }
             kelvin{
                 dnam{"kelvins"}
                 one{"{0} kelvin"}
@@ -114,6 +98,14 @@ es_419{
                 one{"{0}d."}
                 other{"{0}dd."}
                 per{"{0}/d."}
+            }
+            hour{
+                one{"{0}h"}
+                other{"{0}h"}
+            }
+            minute{
+                one{"{0}min"}
+                other{"{0}min"}
             }
             month{
                 one{"{0}m."}
@@ -157,9 +149,9 @@ es_419{
                 other{"{0}t"}
             }
             microgram{
-                dnam{"μg"}
-                one{"{0}μg"}
-                other{"{0}μg"}
+                dnam{"µg"}
+                one{"{0}µg"}
+                other{"{0}µg"}
             }
             milligram{
                 dnam{"mg"}
@@ -233,13 +225,6 @@ es_419{
                 per{"{0}/a."}
             }
         }
-        graphics{
-            dot{
-                dnam{"p"}
-                one{"{0} p"}
-                other{"{0} p"}
-            }
-        }
         length{
             astronomical-unit{
                 dnam{"ua"}
@@ -267,6 +252,11 @@ es_419{
             }
         }
         mass{
+            carat{
+                dnam{"ct"}
+                one{"{0} ct"}
+                other{"{0} ct"}
+            }
             metric-ton{
                 dnam{"t"}
                 one{"{0} t"}
@@ -294,14 +284,11 @@ es_419{
             }
         }
         volume{
-            cup{
-                one{"{0} tza."}
-                other{"{0} tza."}
+            gallon-imperial{
+                per{"{0}/gal Imp."}
             }
             pint{
                 dnam{"pintas"}
-                one{"{0} pt"}
-                other{"{0} pt"}
             }
             tablespoon{
                 dnam{"cdas."}

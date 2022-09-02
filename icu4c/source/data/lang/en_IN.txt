@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 en_IN{
     %%Parent{"en_001"}
     Languages{
@@ -17,4 +16,5 @@ en_IN{
             orya{"Oriya Digits"}
         }
     }
+    Version{"37"}
 }

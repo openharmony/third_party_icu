@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 sl{
     Countries{
         001{"svet"}
@@ -75,7 +74,7 @@ sl{
         CA{"Kanada"}
         CC{"Kokosovi otoki"}
         CD{"Demokratična republika Kongo"}
-        CF{"Srednjeafriška republika"}
+        CF{"Centralnoafriška republika"}
         CG{"Kongo - Brazzaville"}
         CH{"Švica"}
         CI{"Slonokoščena obala"}
@@ -134,7 +133,7 @@ sl{
         GU{"Guam"}
         GW{"Gvineja Bissau"}
         GY{"Gvajana"}
-        HK{"Posebno upravno območje Ljudske republike Kitajske Hongkong"}
+        HK{"Hongkong, Kitajska"}
         HM{"Heardov otok in McDonaldovi otoki"}
         HN{"Honduras"}
         HR{"Hrvaška"}
@@ -188,7 +187,7 @@ sl{
         ML{"Mali"}
         MM{"Mjanmar (Burma)"}
         MN{"Mongolija"}
-        MO{"Posebno upravno območje Ljudske republike Kitajske Macao"}
+        MO{"Macao, Kitajska"}
         MP{"Severni Marianski otoki"}
         MQ{"Martinik"}
         MR{"Mavretanija"}
@@ -228,7 +227,7 @@ sl{
         PW{"Palau"}
         PY{"Paragvaj"}
         QA{"Katar"}
-        QO{"Ostala oceanija"}
+        QO{"Ostala Oceanija"}
         RE{"Reunion"}
         RO{"Romunija"}
         RS{"Srbija"}
@@ -263,14 +262,14 @@ sl{
         TH{"Tajska"}
         TJ{"Tadžikistan"}
         TK{"Tokelau"}
-        TL{"Timor-Leste"}
+        TL{"Vzhodni Timor"}
         TM{"Turkmenistan"}
         TN{"Tunizija"}
         TO{"Tonga"}
         TR{"Turčija"}
         TT{"Trinidad in Tobago"}
         TV{"Tuvalu"}
-        TW{"Tajvan"}
+        TW{"Tajvan, Kitajska"}
         TZ{"Tanzanija"}
         UA{"Ukrajina"}
         UG{"Uganda"}
@@ -296,7 +295,7 @@ sl{
         ZA{"Južnoafriška republika"}
         ZM{"Zambija"}
         ZW{"Zimbabve"}
-        ZZ{"Neznano ali neveljavno območje"}
+        ZZ{"Neznano območje"}
     }
     Countries%short{
         GB{"ZK"}
@@ -315,4 +314,5 @@ sl{
         SZ{"Svazi"}
         TL{"Vzhodni Timor"}
     }
+    Version{"37"}
 }

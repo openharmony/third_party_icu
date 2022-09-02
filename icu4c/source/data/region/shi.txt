@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 shi{
     Countries{
         AD{"ⴰⵏⴷⵓⵔⴰ"}
@@ -128,6 +127,7 @@ shi{
         MD{"ⵎⵓⵍⴷⵓⴼⵢⴰ"}
         MG{"ⵎⴰⴷⴰⵖⴰⵛⵇⴰⵔ"}
         MH{"ⵜⵉⴳⵣⵉⵔⵉⵏ ⵏ ⵎⴰⵔⵛⴰⵍ"}
+        MK{"ⵎⴰⵙⵉⴷⵓⵏⵢⴰ"}
         ML{"ⵎⴰⵍⵉ"}
         MM{"ⵎⵢⴰⵏⵎⴰⵔ"}
         MN{"ⵎⵏⵖⵓⵍⵢⴰ"}
@@ -227,4 +227,5 @@ shi{
         ZM{"ⵣⴰⵎⴱⵢⴰ"}
         ZW{"ⵣⵉⵎⴱⴰⴱⵡⵉ"}
     }
+    Version{"37"}
 }
