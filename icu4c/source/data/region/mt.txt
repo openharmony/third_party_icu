@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 mt{
     Countries{
         001{"Dinja"}
@@ -107,7 +106,7 @@ mt{
         EU{"Unjoni Ewropea"}
         FI{"il-Finlandja"}
         FJ{"Fiġi"}
-        FK{"il-Gżejjer Falkland"}
+        FK{"Il-Gżejjer Falkland (il-Gżejjer Malvinas)"}
         FM{"Mikroneżja"}
         FO{"il-Gżejjer Faeroe"}
         FR{"Franza"}
@@ -130,10 +129,7 @@ mt{
         GU{"Guam"}
         GW{"il-Guinea-Bissau"}
         GY{"il-Guyana"}
-        HK{
-            "ir-Reġjun Amministrattiv Speċjali ta’ Hong Kong tar-Repubblika tal-Poplu"
-            " taċ-Ċina"
-        }
+        HK{"Hong Kong"}
         HM{"il-Gżejjer Heard u l-Gżejjer McDonald"}
         HN{"il-Honduras"}
         HR{"il-Kroazja"}
@@ -183,14 +179,11 @@ mt{
         MF{"Saint Martin"}
         MG{"Madagascar"}
         MH{"Gżejjer Marshall"}
-        MK{"il-Maċedonja ta’ Fuq"}
+        MK{"l-Eks Repubblika Jugoslava tal-Maċedonia"}
         ML{"il-Mali"}
         MM{"il-Myanmar/Burma"}
         MN{"il-Mongolja"}
-        MO{
-            "ir-Reġjun Amministrattiv Speċjali tal-Macao tar-Repubblika tal-Poplu taċ"
-            "-Ċina"
-        }
+        MO{"il-Macao"}
         MP{"Ġżejjer Mariana tat-Tramuntana"}
         MQ{"Martinique"}
         MR{"il-Mauritania"}
@@ -225,7 +218,7 @@ mt{
         PM{"Saint Pierre u Miquelon"}
         PN{"Gżejjer Pitcairn"}
         PR{"Puerto Rico"}
-        PS{"it-Territorji Palestinjani"}
+        PS{"il-Palestina"}
         PT{"il-Portugall"}
         PW{"Palau"}
         PY{"il-Paragwaj"}
@@ -310,4 +303,5 @@ mt{
         FK{"Il-Gżejjer Falkland (il-Gżejjer Malvinas)"}
         TL{"Timor tal-Lvant"}
     }
+    Version{"37"}
 }

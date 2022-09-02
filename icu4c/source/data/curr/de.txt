@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 de{
     Currencies{
         ADP{
@@ -97,7 +96,7 @@ de{
         }
         BAM{
             "BAM",
-            "Konvertible Mark Bosnien und Herzegowina",
+            "Bosnien und Herzegowina Konvertierbare Mark",
         }
         BAN{
             "BAN",
@@ -265,7 +264,7 @@ de{
         }
         CNH{
             "CNH",
-            "Renminbi-Yuan (Offshore)",
+            "Renminbi Yuan (Off–Shore)",
         }
         CNX{
             "CNX",
@@ -797,7 +796,7 @@ de{
         }
         PGK{
             "PGK",
-            "Papua-neuguineischer Kina",
+            "Papua-Neuguineischer Kina",
         }
         PHP{
             "PHP",
@@ -889,7 +888,7 @@ de{
         }
         SHP{
             "SHP",
-            "St.-Helena-Pfund",
+            "St. Helena-Pfund",
         }
         SIT{
             "SIT",
@@ -985,7 +984,7 @@ de{
         }
         TTD{
             "TTD",
-            "Trinidad-und-Tobago-Dollar",
+            "Trinidad und Tobago-Dollar",
         }
         TWD{
             "NT$",
@@ -1116,7 +1115,7 @@ de{
             "Französischer UIC-Franc",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "CFA-Franc (BCEAO)",
         }
         XPD{
@@ -1213,7 +1212,6 @@ de{
         }
     }
     Currencies%narrow{
-        AFN{"؋"}
         AOA{"Kz"}
         ARS{"$"}
         AUD{"$"}
@@ -1245,7 +1243,6 @@ de{
         FKP{"Fl£"}
         GBP{"£"}
         GEL{"₾"}
-        GHS{"₵"}
         GIP{"£"}
         GNF{"F.G."}
         GTQ{"Q"}
@@ -1410,8 +1407,8 @@ de{
             other{"Bosnien und Herzegowina Dinar (1992–1994)"}
         }
         BAM{
-            one{"Konvertible Mark Bosnien und Herzegowina"}
-            other{"Konvertible Mark Bosnien und Herzegowina"}
+            one{"Bosnien und Herzegowina Konvertierbare Mark"}
+            other{"Bosnien und Herzegowina Konvertierbare Mark"}
         }
         BAN{
             one{"Bosnien und Herzegowina Neuer Dinar (1994–1997)"}
@@ -1578,8 +1575,8 @@ de{
             other{"Chilenische Pesos"}
         }
         CNH{
-            one{"Renminbi-Yuan (Offshore)"}
-            other{"Renminbi-Yuan (Offshore)"}
+            one{"Renminbi Yuan (Off–Shore)"}
+            other{"Renminbi Yuan (Off–Shore)"}
         }
         CNX{
             one{"Dollar der Chinesischen Volksbank"}
@@ -2110,8 +2107,8 @@ de{
             other{"Peruanische Sol (1863–1965)"}
         }
         PGK{
-            one{"Papua-neuguineischer Kina"}
-            other{"Papua-neuguineischer Kina"}
+            one{"Papua-Neuguineischer Kina"}
+            other{"Papua-Neuguineische Kina"}
         }
         PHP{
             one{"Philippinischer Peso"}
@@ -2202,8 +2199,8 @@ de{
             other{"Singapur-Dollar"}
         }
         SHP{
-            one{"St.-Helena-Pfund"}
-            other{"St.-Helena-Pfund"}
+            one{"St. Helena-Pfund"}
+            other{"St. Helena-Pfund"}
         }
         SIT{
             one{"Slowenischer Tolar"}
@@ -2298,8 +2295,8 @@ de{
             other{"Türkische Lira"}
         }
         TTD{
-            one{"Trinidad-und-Tobago-Dollar"}
-            other{"Trinidad-und-Tobago-Dollar"}
+            one{"Trinidad und Tobago-Dollar"}
+            other{"Trinidad und Tobago-Dollar"}
         }
         TWD{
             one{"Neuer Taiwan-Dollar"}
@@ -2530,4 +2527,5 @@ de{
         one{"{0} {1}"}
         other{"{0} {1}"}
     }
+    Version{"37"}
 }

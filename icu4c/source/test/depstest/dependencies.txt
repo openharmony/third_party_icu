@@ -58,8 +58,6 @@ group: c_strings
     # We must not use tolower and toupper because they are system-locale-sensitive (Turkish i).
     strlen strchr strrchr strstr strcmp strncmp strcpy strncpy strcat strncat
     memchr memcmp memcpy memmove memset
-    # BSD version of memcmp().
-    bcmp
     # Additional symbols in an optimized build.
     __strcpy_chk __strncpy_chk __strcat_chk __strncat_chk
     __rawmemchr __memcpy_chk __memmove_chk __memset_chk
@@ -186,7 +184,7 @@ library: common
     uinit utypes errorcode
     icuplug
     platform
-    localematcher
+    localebuilder localematcher
 
 group: pluralmap
     # TODO: Move to i18n library, ticket #11926.
@@ -636,7 +634,6 @@ group: resourcebundle
     # Do we need class LocaleBased? https://unicode-org.atlassian.net/browse/ICU-8608
     locbased.o
     loclikely.o
-    localebuilder.o
   deps
     udata ucol_swp
     sort stringenumeration uhash uvector
@@ -644,10 +641,15 @@ group: resourcebundle
     bytesinkutil
     errorcode
 
+group: localebuilder
+    localebuilder.o
+  deps
+    resourcebundle
+
 group: localematcher
     localematcher.o
   deps
-    resourcebundle localeprioritylist loclikelysubtags locdistance lsr
+    localebuilder localeprioritylist loclikelysubtags locdistance lsr
 
 group: localeprioritylist
     localeprioritylist.o
@@ -867,9 +869,8 @@ library: i18n
     dayperiodrules
     listformatter
     formatting formattable_cnv regex regex_cnv translit
-    double_conversion number_representation number_output numberformatter
-    number_skeletons number_usageprefs numberparser
-    units_extra unitsformatter
+    double_conversion number_representation number_output numberformatter number_skeletons numberparser
+    units_extra
     universal_time_scale
     uclean_i18n
 
@@ -945,7 +946,7 @@ group: dayperiodrules
 group: listformatter
     listformatter.o ulistformatter.o
   deps
-    uchar resourcebundle simpleformatter format uclean_i18n formatted_value_sbimpl
+    uchar resourcebundle simpleformatter format uclean_i18n formatted_value_iterimpl
 
 group: double_conversion
     double-conversion-bignum.o double-conversion-double-to-string.o
@@ -972,10 +973,10 @@ group: number_representation
 group: number_output
     # PluralRules and FormattedNumber
     number_output.o
-    standardplural.o plurrule.o pluralranges.o
+    standardplural.o plurrule.o
   deps
     # FormattedNumber internals:
-    number_representation format formatted_value_sbimpl units
+    number_representation format formatted_value_sbimpl
     # PluralRules internals:
     unifiedcache
 
@@ -986,55 +987,23 @@ group: numberformatter
     number_decimfmtprops.o
     number_fluent.o number_formatimpl.o
     number_grouping.o number_integerwidth.o number_longnames.o
-    number_mapper.o number_modifiers.o
+    number_mapper.o number_modifiers.o number_multiplier.o
     number_notation.o number_padding.o
-    number_patternmodifier.o number_patternstring.o
+    number_patternmodifier.o number_patternstring.o number_rounding.o
     number_scientific.o
-    currpinf.o
+    currpinf.o dcfmtsym.o numsys.o
     numrange_fluent.o numrange_impl.o
   deps
-    decnumber double_conversion formattable units unitsformatter
-    listformatter number_representation number_output
-    numsys
-    number_usageprefs
-    number_rounding
-    number_symbolswrapper
+    decnumber double_conversion formattable units
+    number_representation number_output
     uclean_i18n common
-
-group: numsys
-    dcfmtsym.o
-    numsys.o
-  deps
-    currency
-    resourcebundle
-    uclean_i18n
-
-group: number_usageprefs
-    number_multiplier.o
-    number_usageprefs.o
-  deps
-    number_rounding
-    number_symbolswrapper
-    unitsformatter
-
-group: number_rounding
-    number_rounding.o
-  deps
-    currency
-    number_representation
 
 group: number_skeletons
     # Number skeleton support; separated from numberformatter
-    number_skeletons.o number_capi.o number_asformat.o numrange_capi.o
+    number_skeletons.o number_capi.o number_asformat.o
   deps
     numberformatter
     units_extra
-
-group: number_symbolswrapper
-    number_symbolswrapper.o
-  deps
-    platform
-    numsys
 
 group: numberparser
     numparse_affixes.o numparse_compositions.o numparse_currency.o
@@ -1087,7 +1056,6 @@ group: formatting
     sharedbreakiterator # for reldatefmt.o
     uclean_i18n
     region
-    formatted_value_iterimpl  # NOTE (2020-08-27): Not currently used.
 
 group: sharedbreakiterator
     sharedbreakiterator.o
@@ -1097,18 +1065,12 @@ group: sharedbreakiterator
 group: units_extra
     measunit_extra.o
   deps
-    units bytestriebuilder bytestrie resourcebundle uclean_i18n
+    units ucharstriebuilder ucharstrie uclean_i18n
 
 group: units
-    measunit.o currunit.o
+    measunit.o currunit.o nounit.o
   deps
     stringenumeration errorcode
-
-group: unitsformatter
-    units_data.o units_converter.o units_complexconverter.o units_router.o
-  deps
-    resourcebundle units_extra double_conversion number_representation formattable sort
-    number_rounding
 
 group: decnumber
     decContext.o decNumber.o

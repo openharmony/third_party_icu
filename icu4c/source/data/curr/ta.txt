@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ta{
     Currencies{
         AED{
@@ -632,7 +631,7 @@ ta{
             "கிழக்கு கரீபியன் டாலர்",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "மேற்கு ஆப்பிரிக்க CFA ஃப்ராங்க்",
         }
         XPF{
@@ -1414,4 +1413,5 @@ ta{
         one{"{0} {1}"}
         other{"{0} {1}"}
     }
+    Version{"37"}
 }

@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ce{
     Keys{
         calendar{"Календарь"}
@@ -298,6 +297,7 @@ ce{
         ro{"румынийн"}
         ro_MD{"молдавийн"}
         rof{"ромбо"}
+        root{"ораман мотт"}
         ru{"оьрсийн"}
         rup{"аруминийн"}
         rw{"киньяруанда"}
@@ -403,7 +403,9 @@ ce{
         zza{"заза"}
     }
     Languages%short{
+        az{"азербайджанийн"}
         en_GB{"ингалсан (Британи)"}
+        en_US{"ингалсан (АЦШ)"}
     }
     Scripts{
         Arab{"Ӏаьрбийн"}
@@ -451,6 +453,10 @@ ce{
         Zyyy{"массара а тӀеэцна"}
         Zzzz{"доьвзуш доцу йоза"}
     }
+    Scripts%stand-alone{
+        Hans{"атта китайн"}
+        Hant{"ламастан китайн"}
+    }
     Types{
         calendar{
             gregorian{"григорианан"}
@@ -459,6 +465,7 @@ ce{
             persian{"гӀажарийн"}
         }
     }
+    Version{"37"}
     codePatterns{
         language{"Мотт: {0}"}
         script{"Скрипт: {0}"}

@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 sg{
     Countries{
         AD{"Andôro"}
@@ -128,6 +127,7 @@ sg{
         MD{"Moldavùii"}
         MG{"Madagaskära"}
         MH{"Âzûâ Märshâl"}
+        MK{"Maseduäni"}
         ML{"Malïi"}
         MM{"Myämâra"}
         MN{"Mongolïi"}
@@ -227,4 +227,5 @@ sg{
         ZM{"Zambïi"}
         ZW{"Zimbäbwe"}
     }
+    Version{"37"}
 }

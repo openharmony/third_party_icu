@@ -1,8 +1,7 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 root{
-    Version{"39"}
+    Version{"37"}
     characterLabelPattern{
         all{"{0} — all"}
         category-list{"{0}: {1}"}
@@ -16,8 +15,6 @@ root{
         strokes{
             other{"{0} strokes"}
         }
-        subscript{"subscript {0}"}
-        superscript{"superscript {0}"}
     }
     codePatterns{
         language{"{0}"}
@@ -28,5 +25,8 @@ root{
         keyTypePattern{"{0}: {1}"}
         pattern{"{0} ({1})"}
         separator{"{0}, {1}"}
+    }
+    Scripts{
+        Qaag{"Zawgyi"}
     }
 }

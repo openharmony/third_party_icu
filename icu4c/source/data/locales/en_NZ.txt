@@ -1,8 +1,8 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 en_NZ{
     %%Parent{"en_001"}
+    Version{"37"}
     calendar{
         generic{
             DateTimePatterns{
@@ -70,7 +70,9 @@ en_NZ{
                 "{1}, {0}",
             }
             availableFormats{
-                Md{"d/M"}
+                MEd{"E, d/MM"}
+                Md{"d/MM"}
+                yMEd{"E, d/MM/y"}
                 yMd{"d/MM/y"}
             }
             intervalFormats{

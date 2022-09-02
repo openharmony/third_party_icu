@@ -1,11 +1,7 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 uz{
-    AuxExemplarCharacters{
-        "[á à ă â å ä ã ā æ c ç é è ĕ ê ë ē í ì ĭ î ï ī ñ ó ò ŏ ô ö ø ō œ ú ù ŭ û ü ū"
-        " w ÿ]"
-    }
+    AuxExemplarCharacters{"[c w]"}
     Ellipsis{
         final{"{0}…"}
         initial{"…{0}"}
@@ -14,12 +10,12 @@ uz{
         word-initial{"… {0}"}
         word-medial{"{0} … {1}"}
     }
-    ExemplarCharacters{"[a b d e f g h i j k l m n o p q r s t u v x y z {oʻ} {gʻ} {sh} {ch} ʼ]"}
-    ExemplarCharactersIndex{"[A B D E F G H I J K L M N O P Q R S T U V X Y Z {Oʻ} {Gʻ} {Sh} {Ch}]"}
+    ExemplarCharacters{"[a b d e f g h i j k l m n o p q r s t u v x y z {oʻ} {gʻ} {ch} {sh} {ng} ʼ]"}
+    ExemplarCharactersIndex{"[A B D E F G H I J K L M N O P Q R S T U V X Y Z {Oʻ} {Gʻ} {CH} {SH} {NG}]"}
     ExemplarCharactersNumbers{"[  \\- ‑ , % ‰ + 0 1 2 3 4 5 6 7 8 9]"}
     ExemplarCharactersPunctuation{
-        "[\\- ‐ ‑ – — , ; \\: ! ? . … ' ‘ ’ \u0022 “ ” ( ) \\[ \\] § @ * / \\& # † ‡ "
-        "′ ″]"
+        "[\\- ‐ ‑ – — , ; \\: ! ? . … ' ‘ ’ \u0022 “ ” „ « » ( ) \\[ \\] \\{ \\} § @ "
+        "* / \\& # ′ ″]"
     }
     MoreInformation{"?"}
     NumberElements{
@@ -229,7 +225,7 @@ uz{
         }
         minimalPairs{
             ordinal{
-                other{"{0}-chorrahadan o‘ngga buriling"}
+                other{"{0}chi chorraxada oʼngga buriling."}
             }
             plural{
                 one{"Savatingizda {0}X bor. Uni sotib olasizmi?"}
@@ -239,11 +235,12 @@ uz{
         minimumGroupingDigits{"1"}
         native{"latn"}
     }
+    Version{"37"}
     calendar{
         generic{
             DateTimePatterns{
-                "H:mm:ss (zzzz)",
-                "H:mm:ss (z)",
+                "HH:mm:ss (zzzz)",
+                "HH:mm:ss (z)",
                 "HH:mm:ss",
                 "HH:mm",
                 "EEEE, d-MMMM, y (G)",
@@ -424,8 +421,8 @@ uz{
                 "TK",
             }
             DateTimePatterns{
-                "H:mm:ss (zzzz)",
-                "H:mm:ss (z)",
+                "HH:mm:ss (zzzz)",
+                "HH:mm:ss (z)",
                 "HH:mm:ss",
                 "HH:mm",
                 "EEEE, d-MMMM, y",
@@ -714,7 +711,7 @@ uz{
                     H{"HH–HH (v)"}
                 }
                 M{
-                    M{"M–M"}
+                    M{"MM–MM"}
                 }
                 MEd{
                     M{"E, dd/MM – E, dd/MM"}

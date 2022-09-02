@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 gsw{
     Keys{
         calendar{"Kaländer"}
@@ -336,6 +335,7 @@ gsw{
         ro{"Rumänisch"}
         ro_MD{"Moldawisch"}
         rom{"Zigüünerschpraach"}
+        root{"Root"}
         ru{"Russisch"}
         rup{"Aromunisch"}
         rw{"Ruandisch"}
@@ -617,6 +617,7 @@ gsw{
         SOLBA{"Solbica-Mundart"}
         TARASK{"Taraskievica-Rächtschriibig"}
     }
+    Version{"37"}
     codePatterns{
         language{"Schpraach: {0}"}
         script{"Schrift: {0}"}

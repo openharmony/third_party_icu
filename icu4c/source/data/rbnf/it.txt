@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 it{
     RBNFRules{
         OrdinalRules{
@@ -152,7 +151,7 @@ it{
             "200: <<\u00ADcent>%%msc-with-o-nofinal>;",
             "%%msc-with-i-nofinal:",
             "0: =%%msc-with-i=;",
-            "3: i\u00ADtre;",
+            "3: a\u00ADtre;",
             "4: =%%msc-with-i=;",
             "%%msc-with-a-nofinal:",
             "0: =%%msc-with-a=;",
@@ -389,4 +388,5 @@ it{
             "10: o\u00AD=%spellout-ordinal-feminine=;",
         }
     }
+    Version{"37"}
 }

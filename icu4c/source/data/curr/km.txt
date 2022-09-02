@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 km{
     Currencies{
         AED{
@@ -73,7 +72,7 @@ km{
         }
         BND{
             "BND",
-            "ដុល្លារព្រុយណេ",
+            "ដុល្លារ​ប្រុយណេ",
         }
         BOB{
             "BOB",
@@ -125,11 +124,11 @@ km{
         }
         CNH{
             "CNH",
-            "យ័នចិន (ក្រៅប្រទេស)",
+            "យ៉ន់ចិន (ក្រៅប្រទេស)",
         }
         CNY{
             "CN¥",
-            "យ័នចិន",
+            "យ៉ន់​ចិន",
         }
         COP{
             "COP",
@@ -417,7 +416,7 @@ km{
         }
         NIO{
             "NIO",
-            "ខឌូបា​នីការ៉ាហ្កា",
+            "ខឌូបា​នីការ៉ាហ្គា",
         }
         NOK{
             "NOK",
@@ -628,7 +627,7 @@ km{
             "ដុល្លារ​ការ៉ាប៊ីន​ខាង​កើត",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "ហ្វ្រង់ CFA អាហ្វ្រិកខាងលិច",
         }
         XPF{
@@ -762,6 +761,9 @@ km{
         ALL{
             other{"លិក​អាល់បានី"}
         }
+        AMD{
+            other{"ដ្រាំ អាមេនី"}
+        }
         ANG{
             other{"ហ្គីឌិន​ហុល្លង់​អង់ទីលៀន"}
         }
@@ -802,7 +804,7 @@ km{
             other{"ដុល្លារ​ប៊ឺមុយដា"}
         }
         BND{
-            other{"ដុល្លារព្រុយណេ"}
+            other{"ដុល្លារ​ប្រុយណេ"}
         }
         BOB{
             other{"បូលីវីណូ​បូលីវី"}
@@ -841,10 +843,10 @@ km{
             other{"ប៉េសូឈីលី"}
         }
         CNH{
-            other{"យ័នចិន (ក្រៅប្រទេស)"}
+            other{"យ៉ន់ចិន (ក្រៅប្រទេស)"}
         }
         CNY{
-            other{"យ័នចិន"}
+            other{"យ៉ន់​ចិន"}
         }
         COP{
             other{"ប៉េសូកូឡុំប៊ី"}
@@ -1060,7 +1062,7 @@ km{
             other{"ណៃរ៉ា​នីហ្សេរីយ៉ា"}
         }
         NIO{
-            other{"ខឌូបា​នីការ៉ាហ្កា"}
+            other{"ខឌូបា​នីការ៉ាហ្គា"}
         }
         NOK{
             other{"ក្រូណេ​ន័រវ៉េ"}
@@ -1240,4 +1242,5 @@ km{
     CurrencyUnitPatterns{
         other{"{0} {1}"}
     }
+    Version{"37"}
 }

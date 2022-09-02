@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 naq{
     Countries{
         AD{"Andorrab"}
@@ -128,6 +127,7 @@ naq{
         MD{"Moldova"}
         MG{"Madagascari"}
         MH{"Marshall Islands"}
+        MK{"Macedoniab"}
         ML{"Malib"}
         MM{"Myanmar"}
         MN{"Mongolia"}
@@ -227,4 +227,5 @@ naq{
         ZM{"Zambiab"}
         ZW{"Zimbabweb"}
     }
+    Version{"37"}
 }

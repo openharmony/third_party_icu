@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 root{
     AuxExemplarCharacters{"[]"}
     Ellipsis{
@@ -12,8 +11,8 @@ root{
         word-medial{"{0} … {1}"}
     }
     ExemplarCharacters{"[]"}
-    ExemplarCharactersNumbers{"[\\- ‑ , . % ‰ + 0 1 2 3 4 5 6 7 8 9]"}
-    ExemplarCharactersPunctuation{"[\\- ‑ , ; \\: ! ? . ( ) \\[ \\] \\{ \\}]"}
+    ExemplarCharactersNumbers{"[\\- , . % ‰ + 0 1 2 3 4 5 6 7 8 9]"}
+    ExemplarCharactersPunctuation{"[\\- , ; \\: ! ? . ( ) \\[ \\] \\{ \\}]"}
     MoreInformation{"?"}
     NumberElements{
         arab{
@@ -23,7 +22,6 @@ root{
                 percentFormat{"#,##0%"}
             }
             symbols{
-                approximatelySign{"~"}
                 decimal{"٫"}
                 exponential{"اس"}
                 group{"٬"}
@@ -40,7 +38,6 @@ root{
         }
         arabext{
             symbols{
-                approximatelySign{"~"}
                 decimal{"٫"}
                 exponential{"×۱۰^"}
                 group{"٬"}
@@ -149,7 +146,6 @@ root{
                 }
             }
             symbols{
-                approximatelySign{"~"}
                 decimal{"."}
                 exponential{"E"}
                 group{","}
@@ -175,7 +171,7 @@ root{
         minimumGroupingDigits{"1"}
         native{"latn"}
     }
-    Version{"39"}
+    Version{"37"}
     calendar{
         buddhist{
             AmPmMarkers:alias{"/LOCALE/calendar/gregorian/AmPmMarkers"}
@@ -2622,11 +2618,11 @@ root{
         number{
             lenient{
                 "[\\-‐‒–⁻₋−➖﹣－]",
-                "[,،٫⹁、︐︑﹐﹑，､]",
+                "[,،٫、︐︑﹐﹑，､]",
                 "[+⁺₊➕﬩﹢＋]",
             }
             stricter{
-                "[,٫⹁︐﹐，]",
+                "[,٫︐﹐，]",
                 "[.․﹒．｡]",
             }
         }

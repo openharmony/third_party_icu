@@ -1,15 +1,15 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 bs{
+    Version{"37"}
     collations{
         search{
             Sequence{"[import hr-u-co-search]"}
-            Version{"39"}
+            Version{"37"}
         }
         standard{
             Sequence{"[import hr]"}
-            Version{"39"}
+            Version{"37"}
         }
     }
 }

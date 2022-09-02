@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 mua{
     Currencies{
         AED{
@@ -216,7 +215,7 @@ mua{
             "solai BEAC",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "solai BCEAO",
         }
         ZAR{
@@ -236,4 +235,5 @@ mua{
             "Solai Zimbabwe",
         }
     }
+    Version{"37"}
 }

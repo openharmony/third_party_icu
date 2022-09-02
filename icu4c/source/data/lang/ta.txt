@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ta{
     Keys{
         calendar{"நாள்காட்டி"}
@@ -49,7 +48,7 @@ ta{
         arn{"மபுச்சே"}
         arp{"அரபஹோ"}
         arw{"அராவாக்"}
-        as{"அஸ்ஸாமீஸ்"}
+        as{"அஸ்ஸாமி"}
         asa{"அசு"}
         ast{"அஸ்துரியன்"}
         av{"அவேரிக்"}
@@ -73,7 +72,7 @@ ta{
         bin{"பினி"}
         bla{"சிக்சிகா"}
         bm{"பம்பாரா"}
-        bn{"வங்காளம்"}
+        bn{"வங்காளி"}
         bo{"திபெத்தியன்"}
         bpy{"பிஷ்ணுப்பிரியா"}
         br{"பிரெட்டன்"}
@@ -398,7 +397,7 @@ ta{
         prg{"பிரஷ்யன்"}
         pro{"பழைய ப்ரோவென்சால்"}
         ps{"பஷ்தோ"}
-        pt{"போர்ச்சுக்கீஸ்"}
+        pt{"போர்ச்சுக்கீசியம்"}
         pt_BR{"பிரேசிலிய போர்ச்சுகீஸ்"}
         pt_PT{"ஐரோப்பிய போர்ச்சுகீஸ்"}
         qu{"க்வெச்சுவா"}
@@ -412,6 +411,7 @@ ta{
         ro_MD{"மோல்டாவியன்"}
         rof{"ரோம்போ"}
         rom{"ரோமானி"}
+        root{"ரூட்"}
         ru{"ரஷியன்"}
         rup{"அரோமானியன்"}
         rw{"கின்யாருவான்டா"}
@@ -513,7 +513,7 @@ ta{
         uz{"உஸ்பெக்"}
         vai{"வை"}
         ve{"வென்டா"}
-        vi{"வியட்நாமீஸ்"}
+        vi{"வியட்நாமிஸ்"}
         vo{"ஒலாபூக்"}
         vot{"வோட்க்"}
         vun{"வுன்ஜோ"}
@@ -626,7 +626,7 @@ ta{
         Laoo{"லாவோ"}
         Latf{"ஃப்ரக்டூர் லெத்தின்"}
         Latg{"கேலிக் லெத்தின்"}
-        Latn{"லத்தின்"}
+        Latn{"லத்தீன்"}
         Lepc{"லெப்சா"}
         Limb{"லிம்பு"}
         Lina{"லினியர் ஏ"}
@@ -849,6 +849,7 @@ ta{
         PINYIN{"பின்யின் ரோமானைசெஷன்"}
         WADEGILE{"வேட்-கைல்ஸ் ரோமனைஷேசன்"}
     }
+    Version{"37"}
     characterLabelPattern{
         all{"{0} — அனைத்தும்"}
         category-list{"{0}: {1}"}
@@ -863,8 +864,6 @@ ta{
             one{"{0} கோடு"}
             other{"{0} கோடுகள்"}
         }
-        subscript{"துணைஸ்கிரிப்ட் {0}"}
-        superscript{"சூப்பர்ஸ்கிரிப்ட் {0}"}
     }
     codePatterns{
         language{"மொழி: {0}"}

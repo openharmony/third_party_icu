@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ga{
     Countries{
         001{"an Domhan"}
@@ -111,7 +110,7 @@ ga{
         EZ{"Limistéar an euro"}
         FI{"an Fhionlainn"}
         FJ{"Fidsí"}
-        FK{"Oileáin Fháclainne"}
+        FK{"Oileáin Fháclainne (Islas Malvinas)"}
         FM{"an Mhicrinéis"}
         FO{"Oileáin Fharó"}
         FR{"an Fhrainc"}
@@ -134,7 +133,7 @@ ga{
         GU{"Guam"}
         GW{"Guine Bissau"}
         GY{"an Ghuáin"}
-        HK{"S.R.R. na Síne Hong Cong"}
+        HK{"Hong Cong"}
         HM{"Oileán Heard agus Oileáin McDonald"}
         HN{"Hondúras"}
         HR{"an Chróit"}
@@ -184,11 +183,11 @@ ga{
         MF{"Saint-Martin"}
         MG{"Madagascar"}
         MH{"Oileáin Marshall"}
-        MK{"an Mhacadóin Thuaidh"}
+        MK{"an Mhacadóin (PIIM)"}
         ML{"Mailí"}
         MM{"Maenmar (Burma)"}
         MN{"an Mhongóil"}
-        MO{"S.R.R. na Síne Macao"}
+        MO{"Macao"}
         MP{"na hOileáin Mháirianacha Thuaidh"}
         MQ{"Martinique"}
         MR{"an Mháratáin"}
@@ -223,7 +222,7 @@ ga{
         PM{"San Pierre agus Miquelon"}
         PN{"Oileáin Pitcairn"}
         PR{"Pórtó Ríce"}
-        PS{"na Críocha Palaistíneacha"}
+        PS{"an Phalaistín"}
         PT{"an Phortaingéil"}
         PW{"Oileáin Palau"}
         PY{"Paragua"}
@@ -254,7 +253,7 @@ ga{
         SV{"an tSalvadóir"}
         SX{"Sint Maarten"}
         SY{"an tSiria"}
-        SZ{"eSuaitíní"}
+        SZ{"an tSuasalainn"}
         TA{"Tristan da Cunha"}
         TC{"Oileáin na dTurcach agus Caicos"}
         TD{"Sead"}
@@ -275,7 +274,7 @@ ga{
         UA{"an Úcráin"}
         UG{"Uganda"}
         UM{"Oileáin Imeallacha S.A.M."}
-        UN{"na Náisiúin Aontaithe"}
+        UN{"na Náisiúin Aontaiteh"}
         US{"Stáit Aontaithe Mheiriceá"}
         UY{"Uragua"}
         UZ{"an Úisbéiceastáin"}
@@ -313,5 +312,7 @@ ga{
         CZ{"Poblacht na Seice"}
         FK{"Oileáin Fháclainne (Islas Malvinas)"}
         SZ{"an tSuasalainn"}
+        TL{"TL"}
     }
+    Version{"37"}
 }

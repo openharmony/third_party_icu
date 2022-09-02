@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 fo{
     AuxExemplarCharacters{"[c q w x z]"}
     Ellipsis{
@@ -14,15 +13,14 @@ fo{
     ExemplarCharacters{"[a á b d ð e f g h i í j k l m n o ó p r s t u ú v y ý æ ø]"}
     ExemplarCharactersIndex{"[A Á B C D Ð E F G H I Í J K L M N O Ó P Q R S T U Ú V W X Y Ý Z Æ Ø]"}
     ExemplarCharactersNumbers{"[, . % ‰ + − 0 1 2 3 4 5 6 7 8 9]"}
-    ExemplarCharactersPunctuation{"[\\- ‐ ‑ – , ; \\: ! ? . … ' ‘ ’ \u0022 “ ” ( ) \\[ \\] § @ * / \\& # † ′ ″]"}
+    ExemplarCharactersPunctuation{"[\\- ‐ – , ; \\: ! ? . … ' ‘ ’ \u0022 “ ” ( ) \\[ \\] § @ * / \\& # † ′ ″]"}
     MoreInformation{"?"}
     NumberElements{
         default{"latn"}
         latn{
             miscPatterns{
                 approximately{"~{0}"}
-                atLeast{"{0}+"}
-                atMost{"≤{0}"}
+                atLeast{"{0} ella meira"}
                 range{"{0}–{1}"}
             }
             patterns{
@@ -213,6 +211,7 @@ fo{
         minimumGroupingDigits{"1"}
         native{"latn"}
     }
+    Version{"37"}
     calendar{
         generic{
             DateTimePatterns{
@@ -481,8 +480,8 @@ fo{
                 MMM{"LLL"}
                 MMMEd{"E d. MMM"}
                 MMMMW{
-                    one{"W. 'vika' 'í' MMMM"}
-                    other{"W. 'vika' 'í' MMMM"}
+                    one{"W. 'vika' 'í' MMM"}
+                    other{"W. 'vika' 'í' MMM"}
                 }
                 MMMMd{"d. MMMM"}
                 MMMd{"d. MMM"}

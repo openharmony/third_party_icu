@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 kkj{
     AuxExemplarCharacters{"[q x z]"}
     ExemplarCharacters{
@@ -13,7 +12,7 @@ kkj{
         "[A B Ɓ C D Ɗ {Ɗy} E Ɛ F G {Gb} {Gw} H I {I\u0327} J K {Kp} {Kw} L M {Mb} N {"
         "Nd} ǋ {Ny} Ŋ {Ŋg} {Ŋgb} {Ŋgw} O Ɔ {Ɔ\u0327} P R S T U {U\u0327} V W Y]"
     }
-    ExemplarCharactersNumbers{"[\\- ‑ , . % ‰ + 0 1 2 3 4 5 6 7 8 9]"}
+    ExemplarCharactersNumbers{"[\\- , . % ‰ + 0 1 2 3 4 5 6 7 8 9]"}
     ExemplarCharactersPunctuation{"[, \\: ! ? . … ‘ ‹ › “ ” « » ( ) *]"}
     NumberElements{
         default{"latn"}
@@ -25,6 +24,7 @@ kkj{
         }
         native{"latn"}
     }
+    Version{"37"}
     calendar{
         generic{
             DateTimePatterns{
@@ -184,7 +184,7 @@ kkj{
                         "fɛ",
                         "njapi",
                         "nyukul",
-                        "M11",
+                        "11",
                         "ɓulɓusɛ",
                     }
                 }
@@ -200,7 +200,7 @@ kkj{
                         "fɛ",
                         "njapi",
                         "nyukul",
-                        "M11",
+                        "11",
                         "ɓulɓusɛ",
                     }
                 }

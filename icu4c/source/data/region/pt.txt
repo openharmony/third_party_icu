@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 pt{
     Countries{
         001{"Mundo"}
@@ -57,7 +56,7 @@ pt{
         BE{"Bélgica"}
         BF{"Burquina Faso"}
         BG{"Bulgária"}
-        BH{"Barein"}
+        BH{"Bahrein"}
         BI{"Burundi"}
         BJ{"Benin"}
         BL{"São Bartolomeu"}
@@ -108,12 +107,12 @@ pt{
         ES{"Espanha"}
         ET{"Etiópia"}
         EU{"União Europeia"}
-        EZ{"zona do euro"}
+        EZ{"Área do Euro"}
         FI{"Finlândia"}
         FJ{"Fiji"}
         FK{"Ilhas Malvinas"}
         FM{"Micronésia"}
-        FO{"Ilhas Faroé"}
+        FO{"Ilhas Faroe"}
         FR{"França"}
         GA{"Gabão"}
         GB{"Reino Unido"}
@@ -134,7 +133,7 @@ pt{
         GU{"Guam"}
         GW{"Guiné-Bissau"}
         GY{"Guiana"}
-        HK{"Hong Kong, RAE da China"}
+        HK{"Hong Kong, China"}
         HM{"Ilhas Heard e McDonald"}
         HN{"Honduras"}
         HR{"Croácia"}
@@ -179,7 +178,7 @@ pt{
         LY{"Líbia"}
         MA{"Marrocos"}
         MC{"Mônaco"}
-        MD{"Moldávia"}
+        MD{"Moldova"}
         ME{"Montenegro"}
         MF{"São Martinho"}
         MG{"Madagascar"}
@@ -188,7 +187,7 @@ pt{
         ML{"Mali"}
         MM{"Mianmar (Birmânia)"}
         MN{"Mongólia"}
-        MO{"Macau, RAE da China"}
+        MO{"Macau, China"}
         MP{"Ilhas Marianas do Norte"}
         MQ{"Martinica"}
         MR{"Mauritânia"}
@@ -254,14 +253,14 @@ pt{
         SV{"El Salvador"}
         SX{"Sint Maarten"}
         SY{"Síria"}
-        SZ{"Essuatíni"}
+        SZ{"Eswatini"}
         TA{"Tristão da Cunha"}
         TC{"Ilhas Turcas e Caicos"}
         TD{"Chade"}
         TF{"Territórios Franceses do Sul"}
         TG{"Togo"}
         TH{"Tailândia"}
-        TJ{"Tadjiquistão"}
+        TJ{"Tajiquistão"}
         TK{"Tokelau"}
         TL{"Timor-Leste"}
         TM{"Turcomenistão"}
@@ -270,7 +269,7 @@ pt{
         TR{"Turquia"}
         TT{"Trinidad e Tobago"}
         TV{"Tuvalu"}
-        TW{"Taiwan"}
+        TW{"Taiwan, China"}
         TZ{"Tanzânia"}
         UA{"Ucrânia"}
         UG{"Uganda"}
@@ -279,7 +278,7 @@ pt{
         US{"Estados Unidos"}
         UY{"Uruguai"}
         UZ{"Uzbequistão"}
-        VA{"Cidade do Vaticano"}
+        VA{"Vaticano"}
         VC{"São Vicente e Granadinas"}
         VE{"Venezuela"}
         VG{"Ilhas Virgens Britânicas"}
@@ -299,6 +298,7 @@ pt{
         ZZ{"Região desconhecida"}
     }
     Countries%short{
+        GB{"Reino Unido"}
         HK{"Hong Kong"}
         MO{"Macau"}
         PS{"Palestina"}
@@ -314,4 +314,5 @@ pt{
         SZ{"Suazilândia"}
         TL{"República Democrática de Timor-Leste"}
     }
+    Version{"37"}
 }

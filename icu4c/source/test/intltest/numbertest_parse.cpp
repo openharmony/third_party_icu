@@ -196,8 +196,7 @@ void NumberParserTest::testSeriesMatcher() {
     PercentMatcher m3(symbols);
     IgnorablesMatcher m4(0);
 
-    ArraySeriesMatcher::MatcherArray matchers(5, status);
-    status.assertSuccess();
+    ArraySeriesMatcher::MatcherArray matchers(5);
     matchers[0] = &m0;
     matchers[1] = &m1;
     matchers[2] = &m2;

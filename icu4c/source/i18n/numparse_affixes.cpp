@@ -127,8 +127,8 @@ void AffixPatternMatcherBuilder::addMatcher(NumberParseMatcher& matcher) {
     fMatchers[fMatchersLen++] = &matcher;
 }
 
-AffixPatternMatcher AffixPatternMatcherBuilder::build(UErrorCode& status) {
-    return AffixPatternMatcher(fMatchers, fMatchersLen, fPattern, status);
+AffixPatternMatcher AffixPatternMatcherBuilder::build() {
+    return AffixPatternMatcher(fMatchers, fMatchersLen, fPattern);
 }
 
 AffixTokenMatcherWarehouse::AffixTokenMatcherWarehouse(const AffixTokenMatcherSetupData* setupData)
@@ -209,13 +209,12 @@ AffixPatternMatcher AffixPatternMatcher::fromAffixPattern(const UnicodeString& a
 
     AffixPatternMatcherBuilder builder(affixPattern, tokenWarehouse, ignorables);
     AffixUtils::iterateWithConsumer(affixPattern, builder, status);
-    return builder.build(status);
+    return builder.build();
 }
 
 AffixPatternMatcher::AffixPatternMatcher(MatcherArray& matchers, int32_t matchersLen,
-                                         const UnicodeString& pattern, UErrorCode& status)
-    : ArraySeriesMatcher(matchers, matchersLen), fPattern(pattern, status) {
-}
+                                         const UnicodeString& pattern)
+        : ArraySeriesMatcher(matchers, matchersLen), fPattern(pattern) {}
 
 UnicodeString AffixPatternMatcher::getPattern() const {
     return fPattern.toAliasedUnicodeString();
@@ -447,3 +446,28 @@ UnicodeString AffixMatcher::toString() const {
 
 
 #endif /* #if !UCONFIG_NO_FORMATTING */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

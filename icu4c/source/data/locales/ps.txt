@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ps{
     AuxExemplarCharacters{"[\u200C \u200D \u200E\u200F ے]"}
     Ellipsis{
@@ -227,6 +226,7 @@ ps{
         minimumGroupingDigits{"1"}
         native{"arabext"}
     }
+    Version{"37"}
     calendar{
         default{"persian"}
         generic{
@@ -2064,10 +2064,6 @@ ps{
         characters{"right-to-left"}
     }
     listPattern{
-        or{
-            2{"{0} or {1}"}
-            end{"{0}, یا {1}"}
-        }
         standard{
             2{"{0} او {1}"}
             end{"{0}، او {1}"}
@@ -2100,7 +2096,7 @@ ps{
         }
     }
     measurementSystemNames{
-        UK{"برتانوې"}
+        UK{"بريتاني"}
         US{"متحده ايالات"}
         metric{"مېټرک"}
     }
@@ -2127,7 +2123,7 @@ ps{
         number{
             lenient{
                 "[\\-‒⁻₋−➖﹣－]",
-                "[,،٫⹁、︐︑﹐﹑，､]",
+                "[,،٫、︐︑﹐﹑，､]",
                 "[+⁺₊➕﬩﹢＋]",
             }
         }

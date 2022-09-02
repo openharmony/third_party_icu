@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 brx{
     Currencies{
         ADP{
@@ -720,7 +719,7 @@ brx{
             "पापुआ न्यु गीनी का कीना",
         }
         PHP{
-            "₱",
+            "PHP",
             "फ़िलिपीन का पेसो",
         }
         PKR{
@@ -1016,7 +1015,7 @@ brx{
             "फ्रानसीसी युआईसी फ्राँ",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "फ्रानसीसी फेदेरेशनी बीसीएआओ फ्राँ",
         }
         XPD{
@@ -1088,4 +1087,5 @@ brx{
             "ज़ीम्बाबवेई डॉलर",
         }
     }
+    Version{"37"}
 }

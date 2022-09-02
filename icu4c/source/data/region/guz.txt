@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 guz{
     Countries{
         AD{"Andora"}
@@ -128,6 +127,7 @@ guz{
         MD{"Moldova"}
         MG{"Bukini"}
         MH{"Visiwa vya Marshal"}
+        MK{"Masedonia"}
         ML{"Mali"}
         MM{"Myama"}
         MN{"Mongolia"}
@@ -227,4 +227,5 @@ guz{
         ZM{"Zambia"}
         ZW{"Zimbabwe"}
     }
+    Version{"37"}
 }

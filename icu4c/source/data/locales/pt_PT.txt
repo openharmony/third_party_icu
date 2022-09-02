@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 pt_PT{
     Ellipsis{
         final{"{0}…"}
@@ -161,15 +160,10 @@ pt_PT{
                 }
             }
             symbols{
-                approximatelySign{"~"}
                 group{" "}
             }
         }
         minimalPairs{
-            gender{
-                feminine{"a {0}"}
-                masculine{"o {0}"}
-            }
             ordinal{
                 other{"{0}.º lugar"}
             }
@@ -177,6 +171,7 @@ pt_PT{
         minimumGroupingDigits{"2"}
         native{"latn"}
     }
+    Version{"37"}
     calendar{
         buddhist{
             DateTimePatterns{
@@ -279,44 +274,6 @@ pt_PT{
                 yyyyQQQQ{"QQQQ 'de' y G"}
             }
             intervalFormats{
-                Gy{
-                    G{"y G – y G"}
-                    y{"y – y G"}
-                }
-                GyM{
-                    G{"MM/y GGGGG – MM/y GGGGG"}
-                    M{"MM/y – MM/y GGGGG"}
-                    y{"MM/y – MM/y GGGGG"}
-                }
-                GyMEd{
-                    G{"E, d/MM/y GGGGG – E, d/MM/y GGGGG"}
-                    M{"E, d/MM/y – E, d/MM/y GGGGG"}
-                    d{"E, d/MM/y – E, d/MM/y GGGGG"}
-                    y{"E, d/MM/y – E, d/MM/y GGGGG"}
-                }
-                GyMMM{
-                    G{"MMM y G – MMM y G"}
-                    M{"MMM – MMM y G"}
-                    y{"MMM y – MMM y G"}
-                }
-                GyMMMEd{
-                    G{"E, d 'de' MMMM, y G – E, d 'de' MMMM, y G"}
-                    M{"E, d 'de' MMMM – E, d 'de' MMMM, y G"}
-                    d{"E, d 'de' MMMM – E, d 'de' MMMM, y G"}
-                    y{"E, d 'de' MMMM, y – E, d 'de' MMMM, y G"}
-                }
-                GyMMMd{
-                    G{"d 'de' MMMM, y G – d 'de' MMMM, y G"}
-                    M{"d 'de' MMMM – d 'de' MMMM, y G"}
-                    d{"d – d 'de' MMMM, y G"}
-                    y{"d 'de' MMMM, y – d 'de' MMMM, y G"}
-                }
-                GyMd{
-                    G{"d/MM/y GGGGG – d/MM/y GGGGG"}
-                    M{"d/MM/y – d/MM/y GGGGG"}
-                    d{"d/MM/y – d/MM/y GGGGG"}
-                    y{"d/MM/y – d/MM/y GGGGG"}
-                }
                 M{
                     M{"MM–MM"}
                 }
@@ -356,8 +313,8 @@ pt_PT{
         }
         gregorian{
             AmPmMarkers{
-                "da manhã",
-                "da tarde",
+                "a.m.",
+                "p.m.",
             }
             AmPmMarkersAbbr{
                 "a.m.",
@@ -389,13 +346,14 @@ pt_PT{
                     one{"W.'ª' 'semana' 'de' MMMM"}
                     other{"W.'ª' 'semana' 'de' MMMM"}
                 }
-                MMMd{"d/MM"}
+                MMMMd{"d 'de' MMMM"}
+                MMMd{"d 'de' MMM"}
                 Md{"dd/MM"}
-                yMMM{"MM/y"}
-                yMMMEEEEd{"EEEE, d/MM/y"}
-                yMMMEd{"E, d/MM/y"}
+                yMMM{"MMM 'de' y"}
+                yMMMEEEEd{"EEEE, d 'de' MMM 'de' y"}
+                yMMMEd{"E, d 'de' MMM 'de' y"}
                 yMMMMEd{"ccc, d 'de' MMMM 'de' y"}
-                yMMMd{"d/MM/y"}
+                yMMMd{"d 'de' MMM 'de' y"}
                 yQQQ{"QQQQ 'de' y"}
                 yw{
                     one{"w.'ª' 'semana' 'de' Y"}
@@ -405,13 +363,13 @@ pt_PT{
             dayNames{
                 format{
                     abbreviated{
-                        "domingo",
-                        "segunda",
-                        "terça",
-                        "quarta",
-                        "quinta",
-                        "sexta",
-                        "sábado",
+                        "dom",
+                        "seg",
+                        "ter",
+                        "qua",
+                        "qui",
+                        "sex",
+                        "sáb",
                     }
                     narrow{
                         "D",
@@ -422,25 +380,16 @@ pt_PT{
                         "S",
                         "S",
                     }
-                    short{
-                        "dom.",
-                        "seg.",
-                        "ter.",
-                        "qua.",
-                        "qui.",
-                        "sex.",
-                        "sáb.",
-                    }
                 }
                 stand-alone{
                     abbreviated{
-                        "domingo",
-                        "segunda",
-                        "terça",
-                        "quarta",
-                        "quinta",
-                        "sexta",
-                        "sábado",
+                        "dom",
+                        "seg",
+                        "ter",
+                        "qua",
+                        "qui",
+                        "sex",
+                        "sáb",
                     }
                     narrow{
                         "D",
@@ -486,11 +435,25 @@ pt_PT{
                 }
             }
             intervalFormats{
+                Gy{
+                    G{"y G – y G"}
+                    y{"y – y G"}
+                }
+                GyM{
+                    G{"M/y GGGGG – M/y GGGGG"}
+                    M{"M/y – M/y GGGGG"}
+                    y{"M/y – M/y GGGGG"}
+                }
                 GyMEd{
                     G{"E, d/M/y GGGGG – E, d/M/y GGGGG"}
                     M{"E, d/M/y – E, d/M/y GGGGG"}
                     d{"E, d/M/y – E, d/M/y GGGGG"}
                     y{"E, d/M/y – E, d/M/y GGGGG"}
+                }
+                GyMMM{
+                    G{"MMM y G – MMM y G"}
+                    M{"MMM – MMM y G"}
+                    y{"MMM y – MMM y G"}
                 }
                 GyMMMEd{
                     G{"E, d MMM y G – E, d MMM y G"}
@@ -538,6 +501,7 @@ pt_PT{
                     d{"d–d"}
                 }
                 h{
+                    a{"h a – h a"}
                     h{"h–h a"}
                 }
                 hv{
@@ -555,7 +519,9 @@ pt_PT{
                     M{"MMM–MMM 'de' y"}
                 }
                 yMMMEd{
-                    d{"E, dd/MM – E, dd/MM/y"}
+                    M{"E, d 'de' MMM – E, d 'de' MMM 'de' y"}
+                    d{"E, d 'de' MMM – E, d 'de' MMM 'de' y"}
+                    y{"E, d 'de' MMM 'de' y – E, d 'de' MMM 'de' y"}
                 }
                 yMMMMEd{
                     M{"E, d 'de' MMMM – E, d 'de' MMMM 'de' y"}
@@ -711,8 +677,8 @@ pt_PT{
                     other{"+{0} dias"}
                 }
                 past{
-                    one{"-{0} dia"}
-                    other{"-{0} dias"}
+                    one{"há {0} dias"}
+                    other{"há {0} dias"}
                 }
             }
         }
@@ -756,18 +722,18 @@ pt_PT{
         }
         fri-short{
             relative{
-                "-1"{"sexta passada"}
-                "0"{"esta sexta"}
-                "1"{"próxima sexta"}
+                "-1"{"sex. passada"}
+                "0"{"esta sex."}
+                "1"{"próxima sex."}
             }
             relativeTime{
                 future{
-                    one{"dentro de {0} sexta"}
-                    other{"dentro de {0} sextas"}
+                    one{"dentro de {0} sex."}
+                    other{"dentro de {0} sex."}
                 }
                 past{
-                    one{"há {0} sexta"}
-                    other{"há {0} sextas"}
+                    one{"há {0} sex."}
+                    other{"há {0} sex."}
                 }
             }
         }
@@ -851,18 +817,18 @@ pt_PT{
         }
         mon-short{
             relative{
-                "-1"{"segunda passada"}
-                "0"{"esta segunda"}
-                "1"{"próxima segunda"}
+                "-1"{"seg. passada"}
+                "0"{"esta seg."}
+                "1"{"próxima seg."}
             }
             relativeTime{
                 future{
-                    one{"dentro de {0} segunda"}
-                    other{"dentro de {0} segundas"}
+                    one{"dentro de {0} seg."}
+                    other{"dentro de {0} seg."}
                 }
                 past{
-                    one{"há {0} segunda"}
-                    other{"há {0} segundas"}
+                    one{"há {0} seg."}
+                    other{"há {0} seg."}
                 }
             }
         }
@@ -955,18 +921,18 @@ pt_PT{
         }
         sat-short{
             relative{
-                "-1"{"sábado passado"}
-                "0"{"este sábado"}
-                "1"{"próximo sábado"}
+                "-1"{"sáb. passado"}
+                "0"{"este sáb."}
+                "1"{"próximo sáb."}
             }
             relativeTime{
                 future{
-                    one{"dentro de {0} sábado"}
-                    other{"dentro de {0} sábados"}
+                    one{"dentro de {0} sáb."}
+                    other{"dentro de {0} sáb."}
                 }
                 past{
-                    one{"há {0} sábado"}
-                    other{"há {0} sábados"}
+                    one{"há {0} sáb."}
+                    other{"há {0} sáb."}
                 }
             }
         }
@@ -1026,14 +992,14 @@ pt_PT{
         }
         sun-short{
             relative{
-                "-1"{"domingo passado"}
-                "0"{"este domingo"}
-                "1"{"próximo domingo"}
+                "-1"{"dom. passado"}
+                "0"{"este dom."}
+                "1"{"próximo dom."}
             }
             relativeTime{
                 future{
-                    one{"dentro de {0} domingo"}
-                    other{"dentro de {0} domingos"}
+                    one{"dentro de {0} dom."}
+                    other{"dentro de {0} dom."}
                 }
             }
         }
@@ -1055,18 +1021,18 @@ pt_PT{
         }
         thu-short{
             relative{
-                "-1"{"quinta passada"}
-                "0"{"esta quinta"}
-                "1"{"próxima quinta"}
+                "-1"{"qui. passada"}
+                "0"{"esta qui."}
+                "1"{"próxima qui."}
             }
             relativeTime{
                 future{
-                    one{"dentro de {0} quinta"}
-                    other{"dentro de {0} quintas"}
+                    one{"dentro de {0} qui."}
+                    other{"dentro de {0} qui."}
                 }
                 past{
-                    one{"há {0} quinta"}
-                    other{"há {0} quintas"}
+                    one{"há {0} qui."}
+                    other{"há {0} qui."}
                 }
             }
         }
@@ -1088,18 +1054,18 @@ pt_PT{
         }
         tue-short{
             relative{
-                "-1"{"terça passada"}
-                "0"{"esta terça"}
-                "1"{"próxima terça"}
+                "-1"{"ter. passada"}
+                "0"{"esta ter."}
+                "1"{"próxima ter."}
             }
             relativeTime{
                 future{
-                    one{"dentro de {0} terça"}
-                    other{"dentro de {0} terças"}
+                    one{"dentro de {0} ter."}
+                    other{"dentro de {0} ter."}
                 }
                 past{
-                    one{"há {0} terça"}
-                    other{"há {0} terças"}
+                    one{"há {0} ter."}
+                    other{"há {0} ter."}
                 }
             }
         }
@@ -1121,18 +1087,18 @@ pt_PT{
         }
         wed-short{
             relative{
-                "-1"{"quarta passada"}
-                "0"{"esta quarta"}
-                "1"{"próxima quarta"}
+                "-1"{"qua. passada"}
+                "0"{"esta qua."}
+                "1"{"próxima qua."}
             }
             relativeTime{
                 future{
-                    one{"dentro de {0} quarta"}
-                    other{"dentro de {0} quartas"}
+                    one{"dentro de {0} qua."}
+                    other{"dentro de {0} qua."}
                 }
                 past{
-                    one{"há {0} quarta"}
-                    other{"há {0} quartas"}
+                    one{"há {0} qua."}
+                    other{"há {0} qua."}
                 }
             }
         }
@@ -1164,6 +1130,12 @@ pt_PT{
                     other{"dentro de {0} sem."}
                 }
             }
+        }
+        weekday-narrow{
+            dn{"dia da semana"}
+        }
+        weekday-short{
+            dn{"dia da semana"}
         }
         year{
             relativeTime{

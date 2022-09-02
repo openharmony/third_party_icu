@@ -255,7 +255,6 @@ void StringTest::runIndexedTest(int32_t index, UBool exec, const char *&name, ch
     TESTCASE_AUTO(TestStringByteSinkAppendU8);
     TESTCASE_AUTO(TestCharString);
     TESTCASE_AUTO(TestCStr);
-    TESTCASE_AUTO(TestCharStrAppendNumber);
     TESTCASE_AUTO(Testctou);
     TESTCASE_AUTO_END;
 }
@@ -484,11 +483,11 @@ StringTest::TestStringPieceFind() {
         std::string stdhaystack(cas.haystack);
         std::string stdneedle(cas.needle);
         assertEquals(Int64ToUnicodeString(caseNumber) + u" (std)",
-            cas.expected, static_cast<int32_t>(stdhaystack.find(stdneedle, 0)));
+            cas.expected, stdhaystack.find(stdneedle, 0));
         // Test offsets against std::string::find
         for (int32_t offset = 0; offset < haystack.length(); offset++) {
             assertEquals(Int64ToUnicodeString(caseNumber) + "u @ " + Int64ToUnicodeString(offset),
-                static_cast<int32_t>(stdhaystack.find(stdneedle, offset)), haystack.find(needle, offset));
+                stdhaystack.find(stdneedle, offset), haystack.find(needle, offset));
         }
         caseNumber++;
     }
@@ -811,27 +810,6 @@ StringTest::TestCharString() {
                 "Long string over 40 characters to trigger heap allocation",
                 s3.data());
     }
-
-    {
-        // extract()
-        errorCode.reset();
-        CharString s("abc", errorCode);
-        char buffer[10];
-
-        s.extract(buffer, 10, errorCode);
-        assertEquals("abc.extract(10) success", U_ZERO_ERROR, errorCode.get());
-        assertEquals("abc.extract(10) output", "abc", buffer);
-
-        strcpy(buffer, "012345");
-        s.extract(buffer, 3, errorCode);
-        assertEquals("abc.extract(3) not terminated",
-                     U_STRING_NOT_TERMINATED_WARNING, errorCode.reset());
-        assertEquals("abc.extract(3) output", "abc345", buffer);
-
-        strcpy(buffer, "012345");
-        s.extract(buffer, 2, errorCode);
-        assertEquals("abc.extract(2) overflow", U_BUFFER_OVERFLOW_ERROR, errorCode.reset());
-    }
 }
 
 void
@@ -841,36 +819,6 @@ StringTest::TestCStr() {
     if (0 != strcmp(CStr(us)(), cs)) {
         errln("%s:%d CStr(s)() failed. Expected \"%s\", got \"%s\"", __FILE__, __LINE__, cs, CStr(us)());
     }
-}
-
-void StringTest::TestCharStrAppendNumber() {
-    IcuTestErrorCode errorCode(*this, "TestCharStrAppendNumber()");
-
-    CharString testString;
-    testString.appendNumber(1, errorCode);
-    assertEquals("TestAppendNumber 1", "1", testString.data());
-
-    testString.clear();
-    testString.appendNumber(-1, errorCode);
-    assertEquals("TestAppendNumber -1", "-1", testString.data());
-
-    testString.clear();
-    testString.appendNumber(12345, errorCode);
-    assertEquals("TestAppendNumber 12345", "12345", testString.data());
-    testString.appendNumber(123, errorCode);
-    assertEquals("TestAppendNumber 12345 and then 123", "12345123", testString.data());
-
-    testString.clear();
-    testString.appendNumber(2147483647, errorCode);
-    assertEquals("TestAppendNumber when appending the biggest int32", "2147483647", testString.data());
-
-    testString.clear();
-    testString.appendNumber(-2147483648, errorCode);
-    assertEquals("TestAppendNumber when appending the smallest int32", "-2147483648", testString.data());
-
-    testString.clear();
-    testString.appendNumber(0, errorCode);
-    assertEquals("TestAppendNumber when appending zero", "0", testString.data());
 }
 
 void

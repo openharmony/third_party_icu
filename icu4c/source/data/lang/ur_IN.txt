@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ur_IN{
     Languages{
         ar_001{"جدید معیاری عربی"}
@@ -24,4 +23,5 @@ ur_IN{
             tibt{"تبتی ہندسے"}
         }
     }
+    Version{"37"}
 }

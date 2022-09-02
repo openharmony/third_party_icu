@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 to{
     AuxExemplarCharacters{
         "[à ă â å ä æ b c ç d è ĕ ê ë g ì ĭ î ï j ñ ò ŏ ô ö ø œ q r ù ŭ û ü w x y ÿ z"
@@ -16,10 +15,10 @@ to{
     }
     ExemplarCharacters{"[a á ā e é ē f h i í ī k l m n {ng} o ó ō p s t u ú ū v ʻ]"}
     ExemplarCharactersIndex{"[A E F H I K L M N {NG} O P S T U V ʻ]"}
-    ExemplarCharactersNumbers{"[\\- ‑ , . % ‰ + 0 1 2 3 4 5 6 7 8 9]"}
+    ExemplarCharactersNumbers{"[\\- , . % ‰ + 0 1 2 3 4 5 6 7 8 9]"}
     ExemplarCharactersPunctuation{
-        "[\\- ‐ ‑ – — , ; \\: ! ? . … ' ‘ ’ \u0022 “ ” ( ) \\[ \\] § @ * / \\& # † ‡ "
-        "′ ″]"
+        "[\\- ‐ – — , ; \\: ! ? . … ' ‘ ’ \u0022 “ ” ( ) \\[ \\] § @ * / \\& # † ‡ ′ "
+        "″]"
     }
     MoreInformation{"?"}
     NumberElements{
@@ -29,6 +28,7 @@ to{
                 plusSign{"‏+"}
             }
         }
+        default{"latn"}
         latn{
             miscPatterns{
                 atLeast{"{0}+"}
@@ -170,6 +170,7 @@ to{
                 percentSign{"%"}
                 plusSign{"+"}
                 superscriptingExponent{"×"}
+                timeSeparator{":"}
             }
         }
         minimalPairs{
@@ -180,7 +181,10 @@ to{
                 other{"Ngaahi ʻaho ʻe {0}"}
             }
         }
+        minimumGroupingDigits{"1"}
+        native{"latn"}
     }
+    Version{"37"}
     calendar{
         generic{
             DateTimePatterns{
@@ -1713,8 +1717,8 @@ to{
                 "['ʼ՚᾽᾿’＇]",
                 "[%٪﹪％]",
                 "[؉‰]",
-                "[\$﹩＄$]",
-                "[£₤]",
+                "[\$﹩＄]",
+                "[£₤￡]",
                 "[¥￥]",
                 "[₩￦]",
                 "[₨₹{Rp}{Rs}]",

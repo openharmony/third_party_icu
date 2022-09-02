@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 fil{
     Currencies{
         AED{
@@ -557,7 +556,7 @@ fil{
         }
         STN{
             "STN",
-            "São Tomé & Príncipe Dobra",
+            "São Tomé & Príncipe Dobra (2018)",
         }
         SYP{
             "SYP",
@@ -656,7 +655,7 @@ fil{
             "Dolyar ng Silangang Caribbean",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "CFA Franc ng Kanlurang Africa",
         }
         XPF{
@@ -1438,4 +1437,5 @@ fil{
         one{"{0} {1}"}
         other{"{0} {1}"}
     }
+    Version{"37"}
 }

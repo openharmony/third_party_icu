@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ur{
     Currencies{
         AED{
@@ -185,7 +184,7 @@ ur{
         }
         ERN{
             "ERN",
-            "اریٹیریائی ناکفا",
+            "اریٹیریا کا نافکا",
         }
         ETB{
             "ETB",
@@ -533,7 +532,7 @@ ur{
         }
         SLL{
             "SLL",
-            "سیئرا لیونین لیون",
+            "سیئرا لیون لیون",
         }
         SOS{
             "SOS",
@@ -652,7 +651,7 @@ ur{
             "مشرقی کریبیا کا ڈالر",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "مغربی افریقی [CFA] فرانک",
         }
         XPF{
@@ -954,8 +953,8 @@ ur{
             other{"مصری پاؤنڈ"}
         }
         ERN{
-            one{"اریٹیریائی ناکفا"}
-            other{"اریٹیریائی ناکفا"}
+            one{"اریٹیریا کا نافکا"}
+            other{"اریٹیریا کا نافکا"}
         }
         ETB{
             one{"ایتھوپیائی بِرّ"}
@@ -1290,8 +1289,8 @@ ur{
             other{"سینٹ ہیلینا پاؤنڈ"}
         }
         SLL{
-            one{"سیئرا لیونین لیون"}
-            other{"سیئرا لیونین لیون"}
+            one{"سیئرا لیون لیون"}
+            other{"سیئرا لیون لیون"}
         }
         SOS{
             one{"صومالی شلنگ"}
@@ -1415,7 +1414,7 @@ ur{
         }
         XXX{
             one{"(کرنسی کی نامعلوم یونٹ)"}
-            other{"(نامعلوم کرنسی)"}
+            other{"نامعلوم کرنسی"}
         }
         YER{
             one{"یمنی ریال"}
@@ -1434,4 +1433,5 @@ ur{
         one{"{0} {1}"}
         other{"{0} {1}"}
     }
+    Version{"37"}
 }

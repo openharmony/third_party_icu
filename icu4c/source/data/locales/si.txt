@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 si{
     AuxExemplarCharacters{"[\u200B\u200C\u200D ඎ ඏ ඐ ඦ ෳ]"}
     Ellipsis{
@@ -197,7 +196,6 @@ si{
                 }
             }
             symbols{
-                approximatelySign{"~"}
                 decimal{"."}
                 exponential{"E"}
                 group{","}
@@ -223,13 +221,14 @@ si{
         minimumGroupingDigits{"1"}
         native{"latn"}
     }
+    Version{"37"}
     calendar{
         generic{
             DateTimePatterns{
-                "HH.mm.ss zzzz",
-                "HH.mm.ss z",
-                "HH.mm.ss",
-                "HH.mm",
+                "a h.mm.ss zzzz",
+                "a h.mm.ss z",
+                "a h.mm.ss",
+                "a h.mm",
                 "G y MMMM d, EEEE",
                 "G y MMMM d",
                 "G y MMM d",
@@ -440,10 +439,10 @@ si{
                 "ප",
             }
             DateTimePatterns{
-                "HH.mm.ss zzzz",
-                "HH.mm.ss z",
-                "HH.mm.ss",
-                "HH.mm",
+                "a h.mm.ss zzzz",
+                "a h.mm.ss z",
+                "a h.mm.ss",
+                "a h.mm",
                 "y MMMM d, EEEE",
                 "y MMMM d",
                 "y MMM d",
@@ -479,16 +478,16 @@ si{
                 Hmsv{"HH.mm.ss v"}
                 Hmv{"HH.mm v"}
                 M{"L"}
-                MEd{"M-d, E"}
+                MEd{"MM-dd, E"}
                 MMM{"LLL"}
-                MMMEd{"MMM d E"}
+                MMMEd{"MMM d, E"}
                 MMMMW{
                     one{"MMMM සතිය W"}
                     other{"MMMM සතිය W"}
                 }
                 MMMMd{"MMMM d"}
                 MMMd{"MMM d"}
-                Md{"M-d"}
+                Md{"MM-dd"}
                 d{"d"}
                 h{"a h"}
                 hm{"a h.mm"}
@@ -497,13 +496,13 @@ si{
                 hmv{"h.mm a v"}
                 ms{"mm.ss"}
                 y{"y"}
-                yM{"y-M"}
-                yMEd{"y-M-d, E"}
+                yM{"y-MM"}
+                yMEd{"y-MM-dd, E"}
                 yMMM{"y MMM"}
                 yMMMEd{"y MMM d, E"}
                 yMMMM{"y MMMM"}
                 yMMMd{"y MMM d"}
-                yMd{"y-M-d"}
+                yMd{"y-MM-dd"}
                 yQQQ{"y QQQ"}
                 yQQQQ{"y QQQQ"}
                 yw{
@@ -516,7 +515,7 @@ si{
                     abbreviated{
                         "ඉරිදා",
                         "සඳුදා",
-                        "අඟහ",
+                        "අඟ",
                         "බදාදා",
                         "බ්‍රහස්",
                         "සිකු",
@@ -554,7 +553,7 @@ si{
                     abbreviated{
                         "ඉරිදා",
                         "සඳුදා",
-                        "අඟහ",
+                        "අඟ",
                         "බදාදා",
                         "බ්‍රහස්",
                         "සිකු",
@@ -1909,7 +1908,7 @@ si{
         date{
             lenient{
                 "[\\--/]",
-                "[\\:∶︓﹕：]",
+                "[\\:∶]",
             }
         }
         general{
@@ -1918,8 +1917,8 @@ si{
                 "['ʼ՚᾽᾿’＇]",
                 "[%٪﹪％]",
                 "[؉‰]",
-                "[\$﹩＄]",
-                "[£₤￡]",
+                "[\$﹩＄$]",
+                "[£₤]",
                 "[¥￥]",
                 "[₩￦]",
                 "[₨₹{Rp}{Rs}]",
@@ -1927,7 +1926,7 @@ si{
         }
         number{
             lenient{
-                "[\\-‐‒–⁻₋−➖﹣－]",
+                "[\\-‒⁻₋−➖﹣－]",
                 "[,،٫、︐︑﹐﹑，､]",
                 "[+⁺₊➕﬩﹢＋]",
             }

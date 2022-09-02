@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 es_VE{
     %%Parent{"es_419"}
     NumberElements{
@@ -14,8 +13,17 @@ es_VE{
             }
         }
     }
+    Version{"37"}
     calendar{
         gregorian{
+            AmPmMarkers{
+                "a. m.",
+                "p. m.",
+            }
+            AmPmMarkersAbbr{
+                "a. m.",
+                "p. m.",
+            }
             DateTimePatterns{
                 "h:mm:ss a zzzz",
                 "h:mm:ss a z",
@@ -26,8 +34,8 @@ es_VE{
                 "d MMM y",
                 "d/M/yy",
                 "{1} {0}",
-                "{1}, {0}",
-                "{1}, {0}",
+                "{1} 'a' 'las' {0}",
+                "{1} 'a' 'las' {0}",
                 "{1} {0}",
                 "{1} {0}",
             }
@@ -60,8 +68,16 @@ es_VE{
             }
             dayPeriod{
                 stand-alone{
+                    abbreviated{
+                        am{"a. m."}
+                        pm{"p. m."}
+                    }
                     narrow{
                         noon{"m."}
+                    }
+                    wide{
+                        am{"a. m."}
+                        pm{"p. m."}
                     }
                 }
             }

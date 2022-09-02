@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 fi{
     AuxExemplarCharacters{
         "[á à ă â ã ą ā ć č ċ ç ď ð đ é è ê ě ë ė ę ē ğ ǧ ģ ǥ ȟ ħ í î ï İ į ī ı ǩ ķ ĺ"
@@ -191,7 +190,6 @@ fi{
                 }
             }
             symbols{
-                approximatelySign{"~"}
                 decimal{","}
                 exponential{"E"}
                 group{" "}
@@ -218,6 +216,7 @@ fi{
         minimumGroupingDigits{"1"}
         native{"latn"}
     }
+    Version{"37"}
     calendar{
         buddhist{
             DateTimePatterns{
@@ -941,9 +940,9 @@ fi{
                     y{"E d.M.y – E d.M.y GGGGG"}
                 }
                 GyMMM{
-                    G{"M.y G – M.y G"}
-                    M{"M.–M.y G"}
-                    y{"M.y–M.y G"}
+                    G{"MMM y G – MMM y G"}
+                    M{"MMM–MMM y G"}
+                    y{"MMM y – MMM y G"}
                 }
                 GyMMMEd{
                     G{"E d.M.y – E d.M.y G"}
@@ -1002,14 +1001,14 @@ fi{
                     d{"E d. – E d.M."}
                 }
                 MMM{
-                    M{"LLL–LLLL"}
+                    M{"LLL–LLL"}
                 }
                 MMMEd{
                     M{"E d. MMMM – E d. MMMM"}
                     d{"E d. – E d. MMMM"}
                 }
                 MMMM{
-                    M{"LLL–LLLL"}
+                    M{"LLLL–LLLL"}
                 }
                 MMMMEd{
                     M{"E d. MMMM – E d. MMMM"}
@@ -1053,8 +1052,8 @@ fi{
                     y{"y–y"}
                 }
                 yM{
-                    M{"LLL–LLLL y"}
-                    y{"LLLL y – LLLL y"}
+                    M{"M.–M.y"}
+                    y{"M.y – M.y"}
                 }
                 yMEd{
                     M{"E d.M.y – E d.M.y"}
@@ -1062,8 +1061,8 @@ fi{
                     y{"E d.M.y – E d.M.y"}
                 }
                 yMMM{
-                    M{"LLL–LLLL y"}
-                    y{"LLLL y – LLLL y"}
+                    M{"LLL–LLL y"}
+                    y{"LLL y – LLL y"}
                 }
                 yMMMEd{
                     M{"E d. MMMM – E d. MMMM y"}
@@ -1071,7 +1070,7 @@ fi{
                     y{"E d. MMMM y – E d. MMMM y"}
                 }
                 yMMMM{
-                    M{"LLL–LLLL y"}
+                    M{"LLLL–LLLL y"}
                     y{"LLLL y – LLLL y"}
                 }
                 yMMMMEd{

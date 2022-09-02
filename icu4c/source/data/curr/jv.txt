@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 jv{
     Currencies{
         AED{
@@ -436,7 +435,7 @@ jv{
             "Kina Papua Nugini",
         }
         PHP{
-            "₱",
+            "PHP",
             "Piso Filipina",
         }
         PKR{
@@ -612,7 +611,7 @@ jv{
             "Dolar Karibia Wetan",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "CFA Franc Afrika Kulon",
         }
         XPF{
@@ -1115,4 +1114,5 @@ jv{
     CurrencyUnitPatterns{
         other{"{0} {1}"}
     }
+    Version{"37"}
 }

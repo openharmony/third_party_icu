@@ -225,7 +225,10 @@ def generate_brkitr_dictionaries(config, io, common_vars):
         "brkitr/dictionaries/cjdict.txt": "--uchars",
         "brkitr/dictionaries/khmerdict.txt": "--bytes --transform offset-0x1780",
         "brkitr/dictionaries/laodict.txt": "--bytes --transform offset-0x0e80",
-        "brkitr/dictionaries/thaidict.txt": "--bytes --transform offset-0x0e00"
+        "brkitr/dictionaries/thaidict.txt": "--bytes" +
+            " --transform offset-0x0e00",
+        "brkitr/dictionaries/zawgyidict.txt": "--bytes" +
+            " --transform offset-0x1000"
     }
     extra_optionses = [extra_options_map[v.filename] for v in input_files]
     return [
@@ -362,7 +365,7 @@ def generate_misc(config, io, common_vars):
         RepeatedExecutionRequest(
             name = "misc_res",
             category = "misc",
-            dep_targets = [DepTarget("cnvalias")], # ICU-21175
+            dep_targets = [],
             input_files = input_files,
             output_files = output_files,
             tool = IcuTool("genrb"),

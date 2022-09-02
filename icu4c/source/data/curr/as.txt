@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 as{
     Currencies{
         AED{
@@ -620,7 +619,7 @@ as{
             "ইষ্ট কেৰিবিয়ান ডলাৰ",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "পশ্চিম আফ্ৰিকান CFA ফ্ৰেংক",
         }
         XPF{
@@ -1385,4 +1384,5 @@ as{
             other{"জাম্বিয়ান কোৱাচা"}
         }
     }
+    Version{"37"}
 }

@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 sr{
     Currencies{
         ADP{
@@ -1052,7 +1051,7 @@ sr{
             "Француски UIC-франак",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "ЦФА франак БЦЕАО",
         }
         XPD{
@@ -1540,7 +1539,7 @@ sr{
         CRC{
             few{"костариканска колона"}
             one{"костарикански колон"}
-            other{"костариканских колона"}
+            other{"костарикански колони"}
         }
         CSD{
             few{"стара српска динара"}
@@ -2658,4 +2657,5 @@ sr{
         one{"{0} {1}"}
         other{"{0} {1}"}
     }
+    Version{"37"}
 }

@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 et{
     Keys{
         calendar{"kalender"}
@@ -46,7 +45,7 @@ et{
         ang{"vanainglise"}
         anp{"angika"}
         ar{"araabia"}
-        ar_001{"tänapäeva araabia kirjakeel"}
+        ar_001{"araabia (tänapäevane)"}
         arc{"aramea"}
         arn{"mapudunguni"}
         aro{"araona"}
@@ -203,6 +202,7 @@ et{
         fur{"friuuli"}
         fy{"läänefriisi"}
         ga{"iiri"}
+        gaa{"gaa"}
         gag{"gagauusi"}
         gan{"kani"}
         gay{"gajo"}
@@ -381,7 +381,7 @@ et{
         mos{"more"}
         mr{"marathi"}
         mrj{"mäemari"}
-        ms{"malai"}
+        ms{"malai keel"}
         mt{"malta"}
         mua{"mundangi"}
         mul{"mitu keelt"}
@@ -414,7 +414,7 @@ et{
         nnh{"ngiembooni"}
         no{"norra"}
         nog{"nogai"}
-        non{"vanapõhja"}
+        non{"vanapõhjala"}
         nov{"noviaal"}
         nqo{"nkoo"}
         nr{"lõunandebele"}
@@ -569,7 +569,7 @@ et{
         trv{"taroko"}
         ts{"tsonga"}
         tsd{"tsakoonia"}
-        tsi{"tsimši"}
+        tsi{"tšimši"}
         tt{"tatari"}
         ttt{"lõunataadi"}
         tum{"tumbuka"}
@@ -637,24 +637,19 @@ et{
         zh_Hant{"traditsiooniline mandariinihiina"}
     }
     Languages%menu{
-        ckb{"kurdi (keskkurdi)"}
-        yue{"hiina (kantoni)"}
-        zh{"hiina (mandariinihiina)"}
+        yue{"kantoni hiina"}
+        zh{"mandariinihiina"}
     }
     Languages%short{
         az{"aseri"}
         en_GB{"Briti inglise"}
         en_US{"USA inglise"}
     }
-    Languages%variant{
-        ckb{"keskkurdi"}
-    }
     Scripts{
         Afak{"afaka"}
         Aghb{"albaani"}
         Ahom{"ahomi"}
         Arab{"araabia"}
-        Aran{"nastaliik"}
         Armi{"vanaaramea"}
         Armn{"armeenia"}
         Avst{"avesta"}
@@ -674,14 +669,12 @@ et{
         Cari{"kaaria"}
         Cham{"tšaami"}
         Cher{"tšerokii"}
-        Chrs{"horezmi"}
         Cirt{"Cirthi"}
         Copt{"kopti"}
         Cprt{"Küprose silpkiri"}
         Cyrl{"kirillitsa"}
         Cyrs{"kürilliline kirikuslaavi"}
         Deva{"devanaagari"}
-        Diak{"divehi"}
         Dsrt{"desereti"}
         Dupl{"Duployé kiirkiri"}
         Egyd{"egiptuse demootiline"}
@@ -692,7 +685,6 @@ et{
         Geok{"hutsuri"}
         Geor{"gruusia"}
         Glag{"glagoolitsa"}
-        Gong{"Gūnjāla gondi"}
         Gonm{"Masarami gondi"}
         Goth{"gooti"}
         Gran{"grantha"}
@@ -715,7 +707,7 @@ et{
         Inds{"Induse"}
         Ital{"vanaitali"}
         Jamo{"jamo"}
-        Java{"jaava"}
+        Java{"jaava keel"}
         Jpan{"jaapani"}
         Jurc{"tšurtšeni"}
         Kali{"kaja-lii"}
@@ -723,7 +715,6 @@ et{
         Khar{"kharoshthi"}
         Khmr{"khmeeri"}
         Khoj{"hodžki"}
-        Kits{"kitani väike kiri"}
         Knda{"kannada"}
         Kore{"korea segakiri"}
         Kpel{"kpelle"}
@@ -742,7 +733,6 @@ et{
         Lyci{"lüükia"}
         Lydi{"lüüdia"}
         Mahj{"mahaadžani"}
-        Maka{"makassari"}
         Mand{"mandea"}
         Mani{"mani"}
         Maya{"maaja hieroglüüfkiri"}
@@ -779,7 +769,6 @@ et{
         Plrd{"Pollardi miao"}
         Prti{"partia raidkiri"}
         Rjng{"redžangi"}
-        Rohg{"rohingja"}
         Roro{"rongorongo"}
         Runr{"ruunikiri"}
         Samr{"Samaaria"}
@@ -792,8 +781,6 @@ et{
         Sidd{"siddhami"}
         Sind{"hudavadi"}
         Sinh{"singali"}
-        Sogd{"sogdi"}
-        Sogo{"vanasogdi"}
         Sora{"sora"}
         Soyo{"sojombo"}
         Sund{"sunda"}
@@ -957,13 +944,11 @@ et{
             cham{"tšaami numbrid"}
             cyrl{"kirillitsa numbrid"}
             deva{"devanaagari numbrid"}
-            diak{"divehi numbrid"}
             ethi{"etioopia numbrid"}
             finance{"finantsnumbrid"}
             fullwide{"täislaiusega numbrid"}
             geor{"gruusia numbrid"}
-            gong{"Gūnjāla gondi numbrid"}
-            gonm{"Masarami gondi numbrid"}
+            gonm{"masaram gondi numbrid"}
             grek{"kreeka numbrid"}
             greklow{"väiketähelised kreeka numbrid"}
             gujr{"gudžarati numbrid"}
@@ -1000,7 +985,6 @@ et{
             olck{"santali numbrid"}
             orya{"oria numbrid"}
             osma{"osmani numbrid"}
-            rohg{"rohingja numbrid"}
             roman{"Rooma numbrid"}
             romanlow{"väiketähelised Rooma numbrid"}
             saur{"sauraštra numbrid"}
@@ -1063,6 +1047,7 @@ et{
         VALENCIA{"valentsia"}
         WADEGILE{"Wade’i-Gilesi latinisatsioon"}
     }
+    Version{"37"}
     characterLabelPattern{
         all{"{0} – kõik"}
         category-list{"{0}: {1}"}
@@ -1077,8 +1062,6 @@ et{
             one{"{0} kriips"}
             other{"{0} kriipsu"}
         }
-        subscript{"{0} alaindeksina"}
-        superscript{"{0} ülaindeksina"}
     }
     codePatterns{
         language{"Keel: {0}"}

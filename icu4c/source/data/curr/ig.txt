@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ig{
     Currencies{
         AED{
@@ -432,7 +431,7 @@ ig{
             "Ego Kina obodo Papua New Guinea",
         }
         PHP{
-            "₱",
+            "PHP",
             "Ego piso obodo Philippine",
         }
         PKR{
@@ -604,7 +603,7 @@ ig{
             "Ego Dollar obodo East Carribbean",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "Ego CFA Franc obodo West Africa",
         }
         XPF{
@@ -789,4 +788,5 @@ ig{
             other{"Ego kwachas obodo Zambia"}
         }
     }
+    Version{"37"}
 }

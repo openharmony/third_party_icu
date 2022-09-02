@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 zh_Hant_HK{
     Ellipsis{
         final{"{0}⋯"}
@@ -92,6 +91,7 @@ zh_Hant_HK{
             }
         }
     }
+    Version{"37"}
     calendar{
         buddhist{
             availableFormats{
@@ -101,10 +101,10 @@ zh_Hant_HK{
         }
         chinese{
             DateTimePatterns{
-                "ah:mm:ss [zzzz]",
-                "ah:mm:ss [z]",
-                "ah:mm:ss",
-                "ah:mm",
+                "HH:mm:ss [zzzz]",
+                "HH:mm:ss [z]",
+                "HH:mm:ss",
+                "HH:mm",
                 "U（r）年MMMdEEEE",
                 "U（r）年MMMd",
                 "U年MMMd",
@@ -212,10 +212,10 @@ zh_Hant_HK{
         }
         generic{
             DateTimePatterns{
-                "ah:mm:ss [zzzz]",
-                "ah:mm:ss [z]",
-                "ah:mm:ss",
-                "ah:mm",
+                "HH:mm:ss [zzzz]",
+                "HH:mm:ss [z]",
+                "HH:mm:ss",
+                "HH:mm",
                 "Gy年M月d日EEEE",
                 "Gy年M月d日",
                 "Gy年M月d日",
@@ -295,11 +295,11 @@ zh_Hant_HK{
         }
         gregorian{
             DateTimePatterns{
-                "ah:mm:ss [zzzz]",
-                "ah:mm:ss [z]",
-                "ah:mm:ss",
-                "ah:mm",
-                "y年M月d日EEEE",
+                "HH:mm:ss [zzzz]",
+                "HH:mm:ss [z]",
+                "HH:mm:ss",
+                "HH:mm",
+                "y年M月d日 EEEE",
                 "y年M月d日",
                 "y年M月d日",
                 "d/M/y",
@@ -310,9 +310,10 @@ zh_Hant_HK{
                 "{1} {0}",
             }
             availableFormats{
-                GyMMMEd{"Gy年M月d日E"}
+                Ed{"d日 E"}
+                GyMMMEd{"Gy年M月d日 E"}
                 MEd{"d/M（E）"}
-                MMMEd{"M月d日E"}
+                MMMEd{"M月d日 E"}
                 MMMMW{
                     other{"M月第W週"}
                 }
@@ -321,7 +322,7 @@ zh_Hant_HK{
                 yM{"M/y"}
                 yMEd{"d/M/y（E）"}
                 yMM{"MM/y"}
-                yMMMEd{"y年M月d日E"}
+                yMMMEd{"y年M月d日 E"}
                 yMd{"d/M/y"}
                 yw{
                     other{"Y年第w週"}

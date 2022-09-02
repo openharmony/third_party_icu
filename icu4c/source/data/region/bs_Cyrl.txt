@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 bs_Cyrl{
     %%Parent{"root"}
     Countries{
@@ -185,7 +184,7 @@ bs_Cyrl{
         MF{"Свети Мартин"}
         MG{"Мадагаскар"}
         MH{"Маршалска Острва"}
-        MK{"Сјеверна Македонија"}
+        MK{"Македонија"}
         ML{"Мали"}
         MM{"Мјанмар"}
         MN{"Монголија"}
@@ -255,7 +254,7 @@ bs_Cyrl{
         SV{"Салвадор"}
         SX{"Свети Мартин (Холандија)"}
         SY{"Сирија"}
-        SZ{"Есватини"}
+        SZ{"Свази"}
         TA{"Тристан да Куња"}
         TC{"Туркс и Кајкос Острва"}
         TD{"Чад"}
@@ -312,6 +311,8 @@ bs_Cyrl{
         CI{"Обала Слоноваче"}
         CZ{"Чешка Република"}
         FK{"Фокландска Острва (Малвинска)"}
+        SZ{"Есватини"}
         TL{"Тимор-Лесте (Источни Тимор)"}
     }
+    Version{"37"}
 }
