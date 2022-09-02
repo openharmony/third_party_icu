@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 kok{
     Currencies{
         AED{
@@ -604,7 +603,7 @@ kok{
             "उदेंत कॅरिबियन डॉलर",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "अस्तंत आफ्रिकी सीएफए फ्रँक",
         }
         XPF{
@@ -1196,4 +1195,5 @@ kok{
     CurrencyUnitPatterns{
         other{"{0} {1}"}
     }
+    Version{"37"}
 }

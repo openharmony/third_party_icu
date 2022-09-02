@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 mn{
     Keys{
         calendar{"цаглавар"}
@@ -164,7 +163,7 @@ mn{
         jbo{"ложбан"}
         jgo{"нгомба"}
         jmc{"мачамэ"}
-        jv{"ява"}
+        jv{"Ява"}
         ka{"гүрж"}
         kab{"кабиле"}
         kac{"качин"}
@@ -246,7 +245,7 @@ mn{
         moh{"мохаук"}
         mos{"мосси"}
         mr{"марати"}
-        ms{"малай"}
+        ms{"Малай"}
         mt{"малта"}
         mua{"мунданг"}
         mul{"олон хэл"}
@@ -306,6 +305,7 @@ mn{
         ro{"румын"}
         ro_MD{"молдав"}
         rof{"ромбо"}
+        root{"рут"}
         ru{"орос"}
         rup{"ароманы"}
         rw{"киньяруанда"}
@@ -416,7 +416,6 @@ mn{
         zh_Hant{"уламжлалт мандарин хятад"}
     }
     Languages%menu{
-        ckb{"Курд, Төв"}
         yue{"хятад, кантон"}
         zh{"хятад, мандарин"}
     }
@@ -424,9 +423,6 @@ mn{
         az{"азери"}
         en_GB{"британи-англи"}
         en_US{"америк-англи"}
-    }
-    Languages%variant{
-        ckb{"Курд, Сорани"}
     }
     Scripts{
         Arab{"араб"}
@@ -456,7 +452,7 @@ mn{
         Knda{"каннада"}
         Kore{"солонгос"}
         Laoo{"лаос"}
-        Latn{"латин"}
+        Latn{"Латин"}
         Mlym{"малаялам"}
         Mong{"монгол бичиг"}
         Mymr{"мьянмар"}
@@ -556,22 +552,21 @@ mn{
             tibt{"төвд тоо"}
         }
     }
+    Version{"37"}
     characterLabelPattern{
-        all{"{0} — бүгд"}
+        all{"{0} - Бүгд"}
         category-list{"{0}: {1}"}
         compatibility{"{0} - нийцэл"}
-        enclosed{"{0} — хавсаргасан"}
-        extended{"{0} — өргөтгөсөн"}
-        historic{"{0} — түүхэн"}
-        miscellaneous{"{0} — янз бүр"}
+        enclosed{"{0} — Хавсарсан"}
+        extended{"{0} — Өргөтгөсөн"}
+        historic{"{0} — Түүхэн"}
+        miscellaneous{"{0} — Бусад"}
         other{"{0} — бусад"}
-        scripts{"скрипт — {0}"}
+        scripts{"Бичвэрүүд — {0}"}
         strokes{
             one{"{0} цохилт"}
             other{"{0} цохилт"}
         }
-        subscript{"дэд скрипт {0}"}
-        superscript{"супер скрипт {0}"}
     }
     codePatterns{
         language{"{0}"}

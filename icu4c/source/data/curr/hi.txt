@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 hi{
     Currencies{
         AED{
@@ -94,10 +93,6 @@ hi{
         BTN{
             "BTN",
             "भूटानी नंगलट्रम",
-        }
-        BUK{
-            "BUK",
-            "बर्मी क्यात",
         }
         BWP{
             "BWP",
@@ -639,10 +634,6 @@ hi{
             "TOP",
             "टोंगन पांगा",
         }
-        TPE{
-            "TPE",
-            "तिमोरी एस्कूडो",
-        }
         TRL{
             "TRL",
             "पुरानी तुर्की लीरा",
@@ -707,10 +698,6 @@ hi{
             "₫",
             "वियतनामी डोंग",
         }
-        VNN{
-            "VNN",
-            "वियतनामी डोंग (1978–1985)",
-        }
         VUV{
             "VUV",
             "वनुआतू वातू",
@@ -727,12 +714,8 @@ hi{
             "EC$",
             "पूर्वी कैरिबियाई डॉलर",
         }
-        XEU{
-            "XEU",
-            "यूरोपीय मुद्रा इकाई",
-        }
         XOF{
-            "F CFA",
+            "CFA",
             "पश्चिमी अफ़्रीकी CFA फ़्रैंक",
         }
         XPF{
@@ -1485,10 +1468,6 @@ hi{
             one{"पूर्वी कैरिबियाई डॉलर"}
             other{"पूर्वी कैरिबियाई डॉलर"}
         }
-        XEU{
-            one{"यूरोपीय मुद्रा इकाई"}
-            other{"यूरोपीय मुद्रा इकाई"}
-        }
         XOF{
             one{"पश्चिमी अफ़्रीकी CFA फ़्रैंक"}
             other{"पश्चिमी अफ़्रीकी CFA फ़्रैंक"}
@@ -1518,4 +1497,5 @@ hi{
         one{"{0} {1}"}
         other{"{0} {1}"}
     }
+    Version{"37"}
 }

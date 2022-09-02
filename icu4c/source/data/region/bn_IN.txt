@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 bn_IN{
     Countries{
         UM{"মার্কিন যুক্তরাষ্ট্রের পার্শ্ববর্তী দ্বীপপুঞ্জ"}
@@ -8,4 +7,5 @@ bn_IN{
     Countries%variant{
         CD{"কঙ্গো (DRC)"}
     }
+    Version{"37"}
 }

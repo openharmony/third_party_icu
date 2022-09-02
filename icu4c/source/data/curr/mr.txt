@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 mr{
     Currencies{
         AED{
@@ -137,7 +136,7 @@ mr{
         }
         CRC{
             "CRC",
-            "कोस्टारिकन कोलोन",
+            "कोस्टा रिका कोलोन",
         }
         CUC{
             "CUC",
@@ -632,7 +631,7 @@ mr{
             "पूर्व कॅरीबियन डॉलर",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "पश्चिम आफ्रिकन [CFA] फ्रँक",
         }
         XPF{
@@ -894,8 +893,8 @@ mr{
             other{"कोलंबियन पेसोज"}
         }
         CRC{
-            one{"कोस्टारिकन कोलोन"}
-            other{"कोस्टारिकन कोलोन्स"}
+            one{"कोस्टा रिका कोलोन"}
+            other{"कोस्टा रिका कोलोन्स"}
         }
         CUC{
             one{"क्यूबन विनिमय पेसो"}
@@ -1410,4 +1409,5 @@ mr{
             other{"झांबियन क्वाचास"}
         }
     }
+    Version{"37"}
 }

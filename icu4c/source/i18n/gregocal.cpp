@@ -185,7 +185,7 @@ fIsGregorian(TRUE), fInvertGregorian(FALSE)
 // -------------------------------------
 
 GregorianCalendar::GregorianCalendar(const Locale& aLocale, UErrorCode& status)
-:   Calendar(TimeZone::forLocaleOrDefault(aLocale), aLocale, status),
+:   Calendar(TimeZone::createDefault(), aLocale, status),
 fGregorianCutover(kPapalCutover),
 fCutoverJulianDay(kCutoverJulianDay), fNormalizedGregorianCutover(fGregorianCutover), fGregorianCutoverYear(1582),
 fIsGregorian(TRUE), fInvertGregorian(FALSE)
@@ -398,7 +398,7 @@ void GregorianCalendar::handleComputeFields(int32_t julianDay, UErrorCode& statu
         // with 8 AD.  Before 8 AD the spacing is irregular; every 3 years
         // from 45 BC to 9 BC, and then none until 8 AD.  However, we don't
         // implement this historical detail; instead, we implement the
-        // computationally cleaner proleptic calendar, which assumes
+        // computatinally cleaner proleptic calendar, which assumes
         // consistent 4-year cycles throughout time.
         UBool isLeap = ((eyear&0x3) == 0); // equiv. to (eyear%4 == 0)
 

@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 fi{
     Countries{
         001{"maailma"}
@@ -23,7 +22,7 @@ fi{
         039{"Etelä-Eurooppa"}
         053{"Australaasia"}
         054{"Melanesia"}
-        057{"Mikronesian alue"}
+        057{"Mikronesia"}
         061{"Polynesia"}
         142{"Aasia"}
         143{"Keski-Aasia"}
@@ -43,7 +42,7 @@ fi{
         AL{"Albania"}
         AM{"Armenia"}
         AO{"Angola"}
-        AQ{"Antarktis"}
+        AQ{"Etelämanner"}
         AR{"Argentiina"}
         AS{"Amerikan Samoa"}
         AT{"Itävalta"}
@@ -112,7 +111,7 @@ fi{
         FI{"Suomi"}
         FJ{"Fidži"}
         FK{"Falklandinsaaret"}
-        FM{"Mikronesia"}
+        FM{"Mikronesian liittovaltio"}
         FO{"Färsaaret"}
         FR{"Ranska"}
         GA{"Gabon"}
@@ -129,12 +128,12 @@ fi{
         GP{"Guadeloupe"}
         GQ{"Päiväntasaajan Guinea"}
         GR{"Kreikka"}
-        GS{"Etelä-Georgia ja Eteläiset Sandwichinsaaret"}
+        GS{"Etelä-Georgia ja Eteläiset Sandwichsaaret"}
         GT{"Guatemala"}
         GU{"Guam"}
         GW{"Guinea-Bissau"}
         GY{"Guyana"}
-        HK{"Hongkong – Kiinan erityishallintoalue"}
+        HK{"Hongkong, Kiina"}
         HM{"Heard ja McDonaldinsaaret"}
         HN{"Honduras"}
         HR{"Kroatia"}
@@ -188,7 +187,7 @@ fi{
         ML{"Mali"}
         MM{"Myanmar (Burma)"}
         MN{"Mongolia"}
-        MO{"Macao – Kiinan erityishallintoalue"}
+        MO{"Macao, Kiina"}
         MP{"Pohjois-Mariaanit"}
         MQ{"Martinique"}
         MR{"Mauritania"}
@@ -223,12 +222,12 @@ fi{
         PM{"Saint-Pierre ja Miquelon"}
         PN{"Pitcairn"}
         PR{"Puerto Rico"}
-        PS{"Palestiinalaisalue"}
+        PS{"Palestiinalaisalueet"}
         PT{"Portugali"}
         PW{"Palau"}
         PY{"Paraguay"}
         QA{"Qatar"}
-        QO{"Oseanian erillissaaret"}
+        QO{"Oseanian ulkosaaret"}
         RE{"Réunion"}
         RO{"Romania"}
         RS{"Serbia"}
@@ -242,7 +241,7 @@ fi{
         SG{"Singapore"}
         SH{"Saint Helena"}
         SI{"Slovenia"}
-        SJ{"Svalbard ja Jan Mayen"}
+        SJ{"Huippuvuoret ja Jan Mayen"}
         SK{"Slovakia"}
         SL{"Sierra Leone"}
         SM{"San Marino"}
@@ -258,7 +257,7 @@ fi{
         TA{"Tristan da Cunha"}
         TC{"Turks- ja Caicossaaret"}
         TD{"Tšad"}
-        TF{"Ranskan eteläiset ja antarktiset alueet"}
+        TF{"Ranskan eteläiset alueet"}
         TG{"Togo"}
         TH{"Thaimaa"}
         TJ{"Tadžikistan"}
@@ -270,7 +269,7 @@ fi{
         TR{"Turkki"}
         TT{"Trinidad ja Tobago"}
         TV{"Tuvalu"}
-        TW{"Taiwan"}
+        TW{"Taiwan, Kiina"}
         TZ{"Tansania"}
         UA{"Ukraina"}
         UG{"Uganda"}
@@ -312,7 +311,8 @@ fi{
         CI{"Côte d’Ivoire"}
         CZ{"Tšekin tasavalta"}
         FK{"Falklandinsaaret (Malvinassaaret)"}
-        SZ{"Swazimaa"}
+        SZ{"Eswatini"}
         TL{"Timor-Leste"}
     }
+    Version{"37"}
 }

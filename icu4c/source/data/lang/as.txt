@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 as{
     Keys{
         calendar{"কেলেণ্ডাৰ"}
@@ -302,6 +301,7 @@ as{
         ro{"ৰোমানীয়"}
         ro_MD{"মোল্ডাভিয়ান"}
         rof{"ৰোম্বো"}
+        root{"ৰুট"}
         ru{"ৰাছিয়ান"}
         rup{"আৰোমানীয়"}
         rw{"কিনয়াৰোৱাণ্ডা"}
@@ -553,6 +553,7 @@ as{
             tibt{"তিব্বতী অংক"}
         }
     }
+    Version{"37"}
     characterLabelPattern{
         all{"{0} — সকলো"}
         category-list{"{0}: {1}"}
@@ -567,8 +568,6 @@ as{
             one{"{0} ষ্ট্ৰ’ক"}
             other{"{0} ষ্ট্ৰ’ক"}
         }
-        subscript{"ছাবস্ক্ৰিপ্ট {0}"}
-        superscript{"ছুপাৰস্ক্ৰিপ্ট {0}"}
     }
     codePatterns{
         language{"ভাষা: {0}"}

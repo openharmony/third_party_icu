@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 cs{
     AuxExemplarCharacters{"[à ă â å ä ã ā æ ç è ĕ ê ë ē ì ĭ î ï ī ľ ł ñ ò ŏ ô ö ø ō œ ŕ ù ŭ û ü ū ÿ]"}
     Ellipsis{
@@ -382,7 +381,6 @@ cs{
                 }
             }
             symbols{
-                approximatelySign{"~"}
                 decimal{","}
                 exponential{"E"}
                 group{" "}
@@ -521,6 +519,7 @@ cs{
             }
         }
     }
+    Version{"37"}
     calendar{
         buddhist{
             DateTimePatterns{
@@ -2937,19 +2936,19 @@ cs{
                 Ehms{"E h:mm:ss a"}
                 Gy{"y G"}
                 GyMMM{"LLLL y G"}
-                GyMMMEd{"E d. M. y G"}
+                GyMMMEd{"E d. MMM. y G"}
                 GyMMMMEd{"E d. MMMM y G"}
                 GyMMMMd{"d. MMMM y G"}
-                GyMMMd{"d. M. y G"}
+                GyMMMd{"d. MMM y G"}
                 H{"H"}
                 Hm{"H:mm"}
                 Hms{"H:mm:ss"}
                 Hmsv{"H:mm:ss v"}
                 Hmv{"H:mm v"}
                 M{"L"}
-                MEd{"E d. M."}
+                MEd{"E dd.MM."}
                 MMM{"LLL"}
-                MMMEd{"E d. M."}
+                MMMEd{"E d. MMM"}
                 MMMMEd{"E d. MMMM"}
                 MMMMW{
                     few{"W. 'týden' MMMM"}
@@ -2958,8 +2957,8 @@ cs{
                     other{"W. 'týden' MMMM"}
                 }
                 MMMMd{"d. MMMM"}
-                MMMd{"d. M."}
-                Md{"d. M."}
+                MMMd{"d. MMM"}
+                Md{"dd.MM."}
                 d{"d."}
                 h{"h a"}
                 hm{"h:mm a"}
@@ -2968,15 +2967,15 @@ cs{
                 hmv{"h:mm a v"}
                 ms{"mm:ss"}
                 y{"y"}
-                yM{"M/y"}
-                yMEd{"E d. M. y"}
+                yM{"MM.y"}
+                yMEd{"E dd.MM.y"}
                 yMMM{"LLLL y"}
-                yMMMEd{"E d. M. y"}
+                yMMMEd{"E d. MMM y"}
                 yMMMM{"LLLL y"}
                 yMMMMEd{"E d. MMMM y"}
                 yMMMMd{"d. MMMM y"}
-                yMMMd{"d. M. y"}
-                yMd{"d. M. y"}
+                yMMMd{"d. MMM y"}
+                yMd{"dd.MM.y"}
                 yQQQ{"QQQ y"}
                 yQQQQ{"QQQQ y"}
                 yw{
@@ -3135,6 +3134,10 @@ cs{
                     "př. n. l.",
                     "n. l.",
                 }
+                abbreviated%variant{
+                    "př. n. l.",
+                    "n. l.",
+                }
                 narrow{
                     "př.n.l.",
                     "n.l.",
@@ -3214,23 +3217,23 @@ cs{
                     M{"M–M"}
                 }
                 MEd{
-                    M{"E d. M. – E d. M."}
-                    d{"E d. M. – E d. M."}
+                    M{"E dd.MM. – E dd.MM."}
+                    d{"E dd.MM. – E dd.MM."}
                 }
                 MMM{
                     M{"MMM–MMM"}
                 }
                 MMMEd{
-                    M{"E d. M. – E d. M."}
-                    d{"E d. M. – E d. M."}
+                    M{"E d. MMM – E d. MMM"}
+                    d{"E d. MMM – E d. MMM"}
                 }
                 MMMd{
-                    M{"d. M. – d. M."}
-                    d{"d.–d. M."}
+                    M{"d. MMM – d. MMM"}
+                    d{"d.–d. MMM"}
                 }
                 Md{
-                    M{"d. M. – d. M."}
-                    d{"d. M. – d. M."}
+                    M{"dd.MM. – dd.MM."}
+                    d{"dd.MM. – dd.MM."}
                 }
                 d{
                     d{"d.–d."}
@@ -3258,8 +3261,8 @@ cs{
                     y{"y–y"}
                 }
                 yM{
-                    M{"M/y – M/y"}
-                    y{"M/y – M/y"}
+                    M{"MM.y – MM.y"}
+                    y{"MM.y – MM.y"}
                 }
                 yMEd{
                     M{"E dd.MM.y – E dd.MM.y"}
@@ -3271,18 +3274,18 @@ cs{
                     y{"MMM y – MMM y"}
                 }
                 yMMMEd{
-                    M{"E d. M. – E d. M. y"}
-                    d{"E d. M. – E d. M. y"}
-                    y{"E d. M. y – E d. M. y"}
+                    M{"E d. MMM – E d. MMM y"}
+                    d{"E d. MMM – E d. MMM y"}
+                    y{"E d. MMM y – E d. MMM y"}
                 }
                 yMMMM{
                     M{"LLLL–LLLL y"}
                     y{"LLLL y – LLLL y"}
                 }
                 yMMMd{
-                    M{"d. M. – d. M. y"}
-                    d{"d.–d. M. y"}
-                    y{"d. M. y – d. M. y"}
+                    M{"d. MMM – d. MMM y"}
+                    d{"d.–d. MMM y"}
+                    y{"d. MMM y – d. MMM y"}
                 }
                 yMd{
                     M{"dd.MM.y – dd.MM.y"}
@@ -6466,18 +6469,6 @@ cs{
             middle{"{0}, {1}"}
             start{"{0}, {1}"}
         }
-        or-narrow{
-            2{"{0} nebo {1}"}
-            end{"{0} nebo {1}"}
-            middle{"{0}, {1}"}
-            start{"{0}, {1}"}
-        }
-        or-short{
-            2{"{0} nebo {1}"}
-            end{"{0} nebo {1}"}
-            middle{"{0}, {1}"}
-            start{"{0}, {1}"}
-        }
         standard{
             2{"{0} a {1}"}
             end{"{0} a {1}"}
@@ -6517,5 +6508,37 @@ cs{
         UK{"Velká Británie"}
         US{"USA"}
         metric{"metrický"}
+    }
+    parse{
+        date{
+            lenient{
+                "[\\--/]",
+                "[\\:∶]",
+            }
+        }
+        general{
+            lenient{
+                "[.․。︒﹒．｡]",
+                "['ʼ՚᾽᾿’＇]",
+                "[%٪﹪％]",
+                "[؉‰]",
+                "[\$﹩＄$]",
+                "[£₤]",
+                "[¥￥]",
+                "[₩￦]",
+                "[₨₹{Rp}{Rs}]",
+            }
+        }
+        number{
+            lenient{
+                "[\\-‒⁻₋−➖﹣－]",
+                "[,،٫、︐︑﹐﹑，､]",
+                "[+⁺₊➕﬩﹢＋]",
+            }
+            stricter{
+                "[,٫︐﹐，]",
+                "[.․﹒．｡]",
+            }
+        }
     }
 }

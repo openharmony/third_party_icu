@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 supplementalData:table(nofallback){
     CurrencyMap{
         AC{
@@ -4728,31 +4727,24 @@ supplementalData:table(nofallback){
         ZZ{
             {
                 id{"XAG"}
-                tender{"false"}
             }
             {
                 id{"XAU"}
-                tender{"false"}
             }
             {
                 id{"XBA"}
-                tender{"false"}
             }
             {
                 id{"XBB"}
-                tender{"false"}
             }
             {
                 id{"XBC"}
-                tender{"false"}
             }
             {
                 id{"XBD"}
-                tender{"false"}
             }
             {
                 id{"XDR"}
-                tender{"false"}
             }
             {
                 from:intvector{
@@ -4760,7 +4752,6 @@ supplementalData:table(nofallback){
                     416385024,
                 }
                 id{"XFO"}
-                tender{"false"}
                 to:intvector{
                     244,
                     1269579775,
@@ -4768,7 +4759,6 @@ supplementalData:table(nofallback){
             }
             {
                 id{"XFU"}
-                tender{"false"}
                 to:intvector{
                     322,
                     -1418436609,
@@ -4776,15 +4766,12 @@ supplementalData:table(nofallback){
             }
             {
                 id{"XPD"}
-                tender{"false"}
             }
             {
                 id{"XPT"}
-                tender{"false"}
             }
             {
                 id{"XRE"}
-                tender{"false"}
                 to:intvector{
                     219,
                     -886405121,
@@ -4792,19 +4779,15 @@ supplementalData:table(nofallback){
             }
             {
                 id{"XSU"}
-                tender{"false"}
             }
             {
                 id{"XTS"}
-                tender{"false"}
             }
             {
                 id{"XUA"}
-                tender{"false"}
             }
             {
                 id{"XXX"}
-                tender{"false"}
             }
         }
     }

@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 zh_Hant_HK{
     Keys{
         ms{"度量衡系統"}
@@ -39,17 +38,18 @@ zh_Hant_HK{
         jpr{"猶太波斯文"}
         ka{"格魯吉亞文"}
         kiu{"扎扎其文"}
-        kn{"坎納達文"}
+        kn{"卡納達文"}
         kri{"克裡奧爾文"}
         lo{"老撾文"}
         luo{"盧歐文"}
         mfe{"毛里裘斯克里奧爾文"}
         mg{"馬拉加斯文"}
         ml{"馬拉雅拉姆文"}
+        mr{"馬拉地文"}
         mt{"馬耳他文"}
         nl_BE{"比利時荷蘭文"}
         nqo{"西非書面語言（N’ko）"}
-        or{"奧里雅文"}
+        or{"歐利亞文"}
         pcm{"尼日利亞皮欽文"}
         pt_BR{"巴西葡萄牙文"}
         pt_PT{"歐洲葡萄牙文"}
@@ -59,9 +59,11 @@ zh_Hant_HK{
         sl{"斯洛文尼亞文"}
         sn{"修納文"}
         so{"索馬里文"}
+        sw{"斯瓦希里文"}
         sw_CD{"剛果史瓦希里文"}
         syr{"敍利亞文"}
-        ta{"泰米爾文"}
+        ta{"坦米爾文"}
+        te{"泰盧固文"}
         tn{"突尼西亞文"}
         to{"湯加文"}
         ur{"烏爾都文"}
@@ -125,9 +127,12 @@ zh_Hant_HK{
     Variants{
         1901{"傳統德國拼字法"}
         1996{"1996 德國拼字法"}
+        ABL1943{"ABL1943"}
         REVISED{"已修訂拼字法"}
         SCOTLAND{"蘇格蘭標準英語"}
+        SOTAV{"SOTAV"}
     }
+    Version{"37"}
     characterLabelPattern{
         enclosed{"{0} — 包含"}
         historic{"{0} — 舊式"}

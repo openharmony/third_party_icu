@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 se{
     AuxExemplarCharacters{"[à ç é è í ń ñ ó ò q ú w x y ü ø æ å ä ã ö]"}
     ExemplarCharacters{"[a á b c č d đ e f g h i j k l m n ŋ o p r s š t ŧ u v z ž]"}
@@ -157,7 +156,7 @@ se{
                 infinity{"∞"}
                 list{";"}
                 minusSign{"−"}
-                nan{"NaN"}
+                nan{"¤¤¤"}
                 perMille{"‰"}
                 percentSign{"%"}
                 plusSign{"+"}
@@ -167,6 +166,7 @@ se{
         }
         minimumGroupingDigits{"1"}
     }
+    Version{"37"}
     calendar{
         gregorian{
             AmPmMarkers{
@@ -219,6 +219,11 @@ se{
                 MEd{"MM-dd, E"}
                 MMM{"LLL"}
                 MMMEd{"MMM d, E"}
+                MMMMW{
+                    one{"'week' W 'of' MMM"}
+                    other{"'week' W 'of' MMM"}
+                    two{"'week' W 'of' MMM"}
+                }
                 MMMMd{"MMMM d"}
                 MMMd{"MMM d"}
                 Md{"MM-dd"}
@@ -239,6 +244,11 @@ se{
                 yMd{"y-MM-dd"}
                 yQQQ{"y QQQ"}
                 yQQQQ{"y QQQQ"}
+                yw{
+                    one{"'week' w 'of' Y"}
+                    other{"'week' w 'of' Y"}
+                    two{"'week' w 'of' Y"}
+                }
             }
             dayNames{
                 format{

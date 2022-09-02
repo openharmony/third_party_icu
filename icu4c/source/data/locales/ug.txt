@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ug{
     AuxExemplarCharacters{"[\u200E\u200F ئ]"}
     ExemplarCharacters{
@@ -144,12 +143,13 @@ ug{
         }
         minimalPairs{
             plural{
-                one{"{0} كىتاب"}
+                one{"{0}  كىتاب"}
                 other{"{0} بېلىق كۆردۈم ۋە ئۇنى يەۋەتتىم."}
             }
         }
         native{"arabext"}
     }
+    Version{"37"}
     calendar{
         buddhist{
             eras{
@@ -339,8 +339,8 @@ ug{
         }
         gregorian{
             AmPmMarkers{
-                "چۈشتىن بۇرۇن",
-                "چۈشتىن كېيىن",
+                "چ ب",
+                "چ ك",
             }
             AmPmMarkersAbbr{
                 "چ.ب",
@@ -351,14 +351,14 @@ ug{
                 "ك",
             }
             DateTimePatterns{
-                "h:mm:ss a zzzz",
-                "h:mm:ss a z",
-                "h:mm:ss a",
-                "h:mm a",
-                "y d-MMMM، EEEE",
-                "d-MMMM، y",
-                "d-MMM، y",
-                "y-MM-dd",
+                "a h:mm:ss zzzz",
+                "a h:mm:ss z",
+                "a h:mm:ss",
+                "a h:mm",
+                "y، d-MMMM، EEEE",
+                "y، d-MMMM",
+                "y، d-MMM",
+                "M/d/y",
                 "{1}، {0}",
                 "{1} {0}",
                 "{1} {0}",
@@ -373,8 +373,8 @@ ug{
                 EHm{"E HH:mm"}
                 EHms{"E HH:mm:ss"}
                 Ed{"d E"}
-                Ehm{"E h:mm a"}
-                Ehms{"E h:mm:ss a"}
+                Ehm{"E a h:mm"}
+                Ehms{"E a h:mm:ss"}
                 Gy{"y G"}
                 GyMMM{"y MMM G"}
                 GyMMMEd{"y d-MMM، E G"}
@@ -385,7 +385,7 @@ ug{
                 Hmsv{"HH:mm:ss v"}
                 Hmv{"HH:mm v"}
                 M{"L"}
-                MEd{"d-M، E"}
+                MEd{"M/d، E"}
                 MMM{"LLL"}
                 MMMEd{"d-MMM، E"}
                 MMMMW{
@@ -394,22 +394,22 @@ ug{
                 }
                 MMMMd{"d-MMMM"}
                 MMMd{"d-MMM"}
-                Md{"d-M"}
+                Md{"M/d"}
                 d{"d"}
-                h{"h a"}
-                hm{"h:mm a"}
-                hms{"h:mm:ss a"}
-                hmsv{"h:mm:ss a v"}
-                hmv{"h:mm a v"}
+                h{"a h"}
+                hm{"a h:mm"}
+                hms{"a h:mm:ss"}
+                hmsv{"a h:mm:ss v"}
+                hmv{"a h:mm v"}
                 ms{"mm:ss"}
                 y{"y"}
-                yM{"M-y"}
-                yMEd{"y-d-M، E"}
+                yM{"M/y"}
+                yMEd{"M/d/y، E"}
                 yMMM{"y MMM"}
-                yMMMEd{"y d-MMM، E"}
+                yMMMEd{"y، d-MMM، E"}
                 yMMMM{"y MMMM"}
-                yMMMd{"y d-MMM"}
-                yMd{"y-d-M"}
+                yMMMd{"y، d-MMM"}
+                yMd{"M/d/y"}
                 yQQQ{"y QQQ"}
                 yQQQQ{"y QQQQ"}
                 yw{
@@ -544,19 +544,19 @@ ug{
                     M{"M – M"}
                 }
                 MEd{
-                    M{"E، M/d – E، M/d"}
-                    d{"E، M/d – E، M/d"}
+                    M{"M/d، E – M/d، E"}
+                    d{"M/d، E – M/d، E"}
                 }
                 MMM{
                     M{"MMM – MMM"}
                 }
                 MMMEd{
-                    M{"E، MMM d – E، MMM d"}
-                    d{"E، MMM d – E، MMM d"}
+                    M{"d-MMM، E – d-MMM، E"}
+                    d{"d-MMM، E – d-MMM، E"}
                 }
                 MMMd{
-                    M{"MMM d – MMM d"}
-                    d{"MMM d – d"}
+                    M{"d-MMM – d-MMM"}
+                    d{"d – d-MMM"}
                 }
                 Md{
                     M{"M/d – M/d"}
@@ -567,22 +567,22 @@ ug{
                 }
                 fallback{"{0} – {1}"}
                 h{
-                    a{"h a – h a"}
-                    h{"h – h a"}
+                    a{"a h – a h"}
+                    h{"h – a h"}
                 }
                 hm{
-                    a{"h:mm a – h:mm a"}
-                    h{"h:mm – h:mm a"}
-                    m{"h:mm – h:mm a"}
+                    a{"a h:mm – a h:mm"}
+                    h{"h:mm – a h:mm"}
+                    m{"h:mm – a h:mm"}
                 }
                 hmv{
-                    a{"h:mm a – h:mm a v"}
-                    h{"h:mm – h:mm a v"}
-                    m{"h:mm – h:mm a v"}
+                    a{"a h:mm – a h:mm v"}
+                    h{"h:mm – a h:mm v"}
+                    m{"h:mm – a h:mm v"}
                 }
                 hv{
-                    a{"h a – h a v"}
-                    h{"h – h a v"}
+                    a{"a h – a h v"}
+                    h{"h – a h v"}
                 }
                 y{
                     y{"y – y"}
@@ -592,27 +592,27 @@ ug{
                     y{"M/y – M/y"}
                 }
                 yMEd{
-                    M{"E، M/d/y – E، M/d/y"}
-                    d{"E، M/d/y – E، M/d/y"}
-                    y{"E، M/d/y – E، M/d/y"}
+                    M{"M/d/y، E – M/d/y، E"}
+                    d{"M/d/y، E – M/d/y، E"}
+                    y{"M/d/y، E – M/d/y، E"}
                 }
                 yMMM{
-                    M{"MMM – MMM y"}
-                    y{"MMM y – MMM y"}
+                    M{"MMM – y MMM"}
+                    y{"y MMM – y MMM"}
                 }
                 yMMMEd{
-                    M{"E، MMM d – E، MMM d، y"}
-                    d{"E، MMM d – E، MMM d، y"}
-                    y{"E، MMM d، y – E، MMM d، y"}
+                    M{"d-MMM، E – y، d-MMM، E"}
+                    d{"d-MMM، E – y، d-MMM، E"}
+                    y{"y، d-MMM، E – y، d-MMM، E"}
                 }
                 yMMMM{
-                    M{"MMMM – MMMM y"}
-                    y{"MMMM y – MMMM y"}
+                    M{"MMMM – y MMMM"}
+                    y{"y MMMM – y MMMM"}
                 }
                 yMMMd{
-                    M{"MMM d – MMM d، y"}
-                    d{"MMM d – d، y"}
-                    y{"MMM d، y – MMM d، y"}
+                    M{"d-MMM – y، d-MMM"}
+                    d{"d-MMM – y، d-MMM"}
+                    y{"y، d-MMM – y، d-MMM"}
                 }
                 yMd{
                     M{"M/d/y – M/d/y"}

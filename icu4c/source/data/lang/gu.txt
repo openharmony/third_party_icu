@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 gu{
     Keys{
         calendar{"કેલેન્ડર"}
@@ -262,7 +261,7 @@ gu{
         kkj{"કાકો"}
         kl{"કલાલ્લિસુત"}
         kln{"કલેજિન"}
-        km{"ખ્મેર"}
+        km{"ખમેર"}
         kmb{"કિમ્બન્દુ"}
         kn{"કન્નડ"}
         ko{"કોરિયન"}
@@ -415,6 +414,7 @@ gu{
         ro_MD{"મોલડાવિયન"}
         rof{"રોમ્બો"}
         rom{"રોમાની"}
+        root{"રૂટ"}
         ru{"રશિયન"}
         rup{"અરોમેનિયન"}
         rw{"કિન્યારવાન્ડા"}
@@ -800,8 +800,8 @@ gu{
             strict{"ચુસ્ત રેખા વિરામ પ્રકાર"}
         }
         m0{
-            bgn{"US BGN"}
-            ungegn{"UN GEGN"}
+            bgn{"BGN"}
+            ungegn{"UNGEGN"}
         }
         ms{
             metric{"દશાંશ પદ્ધતિ"}
@@ -855,6 +855,7 @@ gu{
         PINYIN{"પિનયિન રોમનાઇઝેશન"}
         WADEGILE{"વેડ-ગિલ્સ રોમનાઇઝેશન"}
     }
+    Version{"37"}
     characterLabelPattern{
         all{"{0} — તમામ"}
         category-list{"{0}: {1}"}
@@ -869,8 +870,6 @@ gu{
             one{"{0} સ્ટ્રોક્સ"}
             other{"{0} સ્ટ્રોક્સ"}
         }
-        subscript{"સબસ્ક્રિપ્ટ {0}"}
-        superscript{"સુપરસ્ક્રિપ્ટ {0}"}
     }
     codePatterns{
         language{"ભાષા: {0}"}

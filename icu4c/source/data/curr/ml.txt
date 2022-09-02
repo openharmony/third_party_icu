@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ml{
     Currencies{
         ADP{
@@ -1040,7 +1039,7 @@ ml{
             "ഫ്രെഞ്ച് UIC-ഫ്രാങ്ക്",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "പശ്ചിമ ആഫ്രിക്കൻ [CFA] ഫ്രാങ്ക്",
         }
         XPD{
@@ -1117,11 +1116,9 @@ ml{
         }
     }
     Currencies%narrow{
-        AMD{"֏"}
         AOA{"Kz"}
         ARS{"$"}
         AUD{"$"}
-        AZN{"₼"}
         BAM{"KM"}
         BBD{"$"}
         BDT{"৳"}
@@ -1149,7 +1146,6 @@ ml{
         FKP{"£"}
         GBP{"£"}
         GEL{"₾"}
-        GHS{"GH₵"}
         GIP{"£"}
         GNF{"FG"}
         GTQ{"Q"}
@@ -2249,4 +2245,5 @@ ml{
         one{"{0} {1}"}
         other{"{0} {1}"}
     }
+    Version{"37"}
 }

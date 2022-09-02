@@ -33,8 +33,6 @@ static void TestSimpleResourceInfo(void);
  * Use Locale to access Resource file display names and compare against expected values
  **/
 static  void TestDisplayNames(void);
-static  void TestGetDisplayScriptPreFlighting21160(void);
-
 /**
  * Test getAvailableLocales
  **/
@@ -124,11 +122,6 @@ static void TestOrientation(void);
 static void TestLikelySubtags(void);
 
 /**
- * test terminate correctly.
- */
-static void Test21157CorrectTerminating(void);
-
-/**
  * language tag
  */
 static void TestForLanguageTag(void);
@@ -141,14 +134,6 @@ static void TestToLegacyKey(void);
 static void TestToUnicodeLocaleType(void);
 static void TestToLegacyType(void);
 static void TestBug20149(void);
-static void TestCDefaultLocale(void);
-static void TestBug21449InfiniteLoop(void);
-
-
-/**
- * U_USING_DEFAULT_WARNING
- */
-static void TestUsingDefaultWarning(void);
 
 /**
  * locale data

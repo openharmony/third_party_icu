@@ -78,22 +78,15 @@ class ExclusionFilter(Filter):
         return False
 
 
-class IncludeExcludeFilter(Filter):
+class WhitelistBlacklistFilter(Filter):
     def __init__(self, json_data):
         if "whitelist" in json_data:
-            self.is_includelist = True
-            self.includelist = json_data["whitelist"]
-        elif "includelist" in json_data:
-            self.is_includelist = True
-            self.includelist = json_data["includelist"]
-        elif "blacklist" in json_data:
-            self.is_includelist = False
-            self.excludelist = json_data["blacklist"]
-        elif "excludelist" in json_data:
-            self.is_includelist = False
-            self.excludelist = json_data["excludelist"]
+            self.is_whitelist = True
+            self.whitelist = json_data["whitelist"]
         else:
-            raise AssertionError("Need either includelist or excludelist: %s" % str(json_data))
+            assert "blacklist" in json_data, "Need either whitelist or blacklist: %s" % str(json_data)
+            self.is_whitelist = False
+            self.blacklist = json_data["blacklist"]
 
     def match(self, file):
         file_stem = self._file_to_file_stem(file)
@@ -104,43 +97,43 @@ class IncludeExcludeFilter(Filter):
         pass
 
 
-class FileStemFilter(IncludeExcludeFilter):
+class FileStemFilter(WhitelistBlacklistFilter):
     def _should_include(self, file_stem):
-        if self.is_includelist:
-            return file_stem in self.includelist
+        if self.is_whitelist:
+            return file_stem in self.whitelist
         else:
-            return file_stem not in self.excludelist
+            return file_stem not in self.blacklist
 
 
-class LanguageFilter(IncludeExcludeFilter):
+class LanguageFilter(WhitelistBlacklistFilter):
     def _should_include(self, file_stem):
         language = file_stem.split("_")[0]
         if language == "root":
             # Always include root.txt
             return True
-        if self.is_includelist:
-            return language in self.includelist
+        if self.is_whitelist:
+            return language in self.whitelist
         else:
-            return language not in self.excludelist
+            return language not in self.blacklist
 
 
-class RegexFilter(IncludeExcludeFilter):
+class RegexFilter(WhitelistBlacklistFilter):
     def __init__(self, *args):
         # TODO(ICU-20301): Change this to: super().__init__(*args)
         super(RegexFilter, self).__init__(*args)
-        if self.is_includelist:
-            self.includelist = [re.compile(pat) for pat in self.includelist]
+        if self.is_whitelist:
+            self.whitelist = [re.compile(pat) for pat in self.whitelist]
         else:
-            self.excludelist = [re.compile(pat) for pat in self.excludelist]
+            self.blacklist = [re.compile(pat) for pat in self.blacklist]
 
     def _should_include(self, file_stem):
-        if self.is_includelist:
-            for pattern in self.includelist:
+        if self.is_whitelist:
+            for pattern in self.whitelist:
                 if pattern.match(file_stem):
                     return True
             return False
         else:
-            for pattern in self.excludelist:
+            for pattern in self.blacklist:
                 if pattern.match(file_stem):
                     return False
             return True
@@ -166,12 +159,7 @@ LANGUAGE_ONLY_REGEX = re.compile(r"^[a-z]{2,3}$")
 
 class LocaleFilter(Filter):
     def __init__(self, json_data, io):
-        if "whitelist" in json_data:
-            self.locales_requested = list(json_data["whitelist"])
-        elif "includelist" in json_data:
-            self.locales_requested = list(json_data["includelist"])
-        else:
-            raise AssertionError("You must have an includelist in a locale filter")
+        self.locales_requested = list(json_data["whitelist"])
         self.include_children = json_data.get("includeChildren", True)
         self.include_scripts = json_data.get("includeScripts", False)
 

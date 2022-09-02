@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ta{
     AuxExemplarCharacters{"[\u200C\u200D]"}
     Ellipsis{
@@ -15,7 +14,10 @@ ta{
         "[அ ஆ இ ஈ உ ஊ எ ஏ ஐ ஒ ஓ ஔ ஃ க ங ச ஞ ட ண த ந ப ம ய ர ல வ ழ ள ற ன ஜ ஷ ஸ ஹ ா ி "
         "\u0BC0 ு ூ ெ ே ை ொ ோ ௌ \u0BCD]"
     }
-    ExemplarCharactersIndex{"[அ ஆ இ ஈ உ ஊ எ ஏ ஐ ஒ ஓ ஔ க ங ச ஞ ட ண த ந ப ம ய ர ல வ ழ ள ற ன]"}
+    ExemplarCharactersIndex{
+        "[அ ஆ இ ஈ உ ஊ எ ஏ ஐ ஒ ஓ ஔ க ங ச ஞ ட ண த ந ப ம ய ர ல வ ழ ள ற ன ஜ ஶ ஷ ஸ ஹ {க"
+        "\u0BCDஷ}]"
+    }
     ExemplarCharactersNumbers{"[\\- ‑ , . % ‰ + 0௦ 1௧ 2௨ 3௩ 4௪ 5௫ 6௬ 7௭ 8௮ 9௯]"}
     ExemplarCharactersPunctuation{
         "[\\- ‐ ‑ – — , ; \\: ! ? . … ' ‘ ’ \u0022 “ ” ( ) \\[ \\] § @ * / \\& # † ‡ "
@@ -240,6 +242,7 @@ ta{
         }
         traditional{"taml"}
     }
+    Version{"37"}
     calendar{
         buddhist{
             eras{
@@ -688,8 +691,8 @@ ta{
                 "பிற்பகல்",
             }
             AmPmMarkersAbbr{
-                "முற்பகல்",
-                "பிற்பகல்",
+                "AM",
+                "PM",
             }
             AmPmMarkersNarrow{
                 "மு.ப",
@@ -735,9 +738,9 @@ ta{
                 Hmsv{"HH:mm:ss v"}
                 Hmv{"HH:mm v"}
                 M{"L"}
-                MEd{"dd-MM, E"}
+                MEd{"E, d/M"}
                 MMM{"LLL"}
-                MMMEd{"MMM d, E"}
+                MMMEd{"E, d MMM"}
                 MMMMW{
                     one{"MMMM W -ஆம் வாரம்"}
                     other{"MMMM W -ஆம் வாரம்"}
@@ -756,7 +759,7 @@ ta{
                 y{"y"}
                 yM{"M/y"}
                 yMEd{"E, d/M/y"}
-                yMM{"MM-y"}
+                yMM{"M/y"}
                 yMMM{"MMM y"}
                 yMMMEd{"E, d MMM, y"}
                 yMMMM{"MMMM y"}

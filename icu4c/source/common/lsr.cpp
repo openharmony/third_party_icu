@@ -1,5 +1,5 @@
 // © 2019 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
+// License & terms of use: http://www.unicode.org/copyright.html#License
 
 // lsr.cpp
 // created: 2019may08 Markus W. Scherer

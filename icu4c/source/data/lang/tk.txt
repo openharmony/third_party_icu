@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 tk{
     Keys{
         calendar{"Senenama"}
@@ -54,7 +53,7 @@ tk{
         bo{"tibet dili"}
         br{"breton dili"}
         brx{"bodo dili"}
-        bs{"bosniýa dili"}
+        bs{"boşnak dili"}
         bug{"bugiý dili"}
         byn{"blin dili"}
         ca{"katalan dili"}
@@ -80,13 +79,13 @@ tk{
         dar{"dargi dili"}
         dav{"taita dili"}
         de{"nemes dili"}
-        de_CH{"ýokarky nemes dili (Şweýsariýa)"}
+        de_CH{"Nemes dili (Daglyk Şweýsariýa)"}
         dgr{"dogrib dili"}
         dje{"zarma dili"}
         dsb{"aşaky lužits dili"}
         dua{"duala dili"}
         dv{"diwehi dili"}
-        dyo{"ýola-fonýi dili"}
+        dyo{"Ýola-Fonyi dili"}
         dz{"dzong-ke dili"}
         dzg{"daza dili"}
         ebu{"embu dili"}
@@ -168,7 +167,7 @@ tk{
         kea{"kabuwerdianu dili"}
         kfo{"koro dili"}
         kha{"khasi dili"}
-        khq{"koýra-çini dili"}
+        khq{"koýra-Çini dili"}
         ki{"kikuýu dili"}
         kj{"kwanýama dili"}
         kk{"gazak dili"}
@@ -224,7 +223,7 @@ tk{
         mer{"meru dili"}
         mfe{"morisýen dili"}
         mg{"malagasiý dili"}
-        mgh{"makuwa-mito dili"}
+        mgh{"Makua-Mitto dili"}
         mgo{"meta dili"}
         mh{"marşall dili"}
         mi{"maori dili"}
@@ -279,7 +278,7 @@ tk{
         pam{"kapampangan dili"}
         pap{"papýamento dili"}
         pau{"palau dili"}
-        pcm{"nigeriýa-pijin dili"}
+        pcm{"nigeriý-pijin dili"}
         pl{"polýak dili"}
         prg{"prussiýa dili"}
         ps{"peştun dili"}
@@ -294,8 +293,9 @@ tk{
         ro{"rumyn dili"}
         ro_MD{"moldaw dili"}
         rof{"rombo dili"}
+        root{"kök"}
         ru{"rus dili"}
-        rup{"arumyn dili"}
+        rup{"Aromun dili"}
         rw{"kinýaruanda dili"}
         rwk{"rwa dili"}
         sa{"sanskrit dili"}
@@ -407,6 +407,7 @@ tk{
     }
     Languages%short{
         az{"azeri dili"}
+        en_US{"Iňlis dili (ABŞ)"}
     }
     Scripts{
         Arab{"Arap elipbiýi"}
@@ -535,6 +536,7 @@ tk{
             tibt{"Tibet sanlary"}
         }
     }
+    Version{"37"}
     characterLabelPattern{
         all{"{0} — ähli"}
         category-list{"{0}: {1}"}
@@ -549,8 +551,6 @@ tk{
             one{"{0} ştrih"}
             other{"{0} ştrih"}
         }
-        subscript{"aşaky indeks {0}"}
-        superscript{"ýokarky indeks {0}"}
     }
     codePatterns{
         language{"Dil: {0}"}

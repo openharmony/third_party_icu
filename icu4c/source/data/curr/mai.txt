@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 mai{
     Currencies{
         BRL{
@@ -73,4 +72,5 @@ mai{
             other{"(अज्ञात मुद्रा)"}
         }
     }
+    Version{"37"}
 }

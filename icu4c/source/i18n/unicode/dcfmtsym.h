@@ -378,7 +378,7 @@ private:
      *                             back to the locale.
      */
     void initialize(const Locale& locale, UErrorCode& success,
-                    UBool useLastResortData = false, const NumberingSystem* ns = nullptr);
+        UBool useLastResortData = FALSE, const NumberingSystem* ns = nullptr);
 
     /**
      * Initialize the symbols with default values.
@@ -446,7 +446,7 @@ public:
     inline const UnicodeString& getConstDigitSymbol(int32_t digit) const;
 
     /**
-     * Returns that pattern stored in currency info. Internal API for use by NumberFormat API.
+     * Returns that pattern stored in currecy info. Internal API for use by NumberFormat API.
      * @internal
      */
     inline const char16_t* getCurrencyPattern(void) const;
@@ -543,12 +543,12 @@ inline const UnicodeString& DecimalFormatSymbols::getConstDigitSymbol(int32_t di
 // -------------------------------------
 
 inline void
-DecimalFormatSymbols::setSymbol(ENumberFormatSymbol symbol, const UnicodeString &value, const UBool propagateDigits = true) {
+DecimalFormatSymbols::setSymbol(ENumberFormatSymbol symbol, const UnicodeString &value, const UBool propogateDigits = TRUE) {
     if (symbol == kCurrencySymbol) {
-        fIsCustomCurrencySymbol = true;
+        fIsCustomCurrencySymbol = TRUE;
     }
     else if (symbol == kIntlCurrencySymbol) {
-        fIsCustomIntlCurrencySymbol = true;
+        fIsCustomIntlCurrencySymbol = TRUE;
     }
     if(symbol<kFormatSymbolCount) {
         fSymbols[symbol]=value;
@@ -559,7 +559,7 @@ DecimalFormatSymbols::setSymbol(ENumberFormatSymbol symbol, const UnicodeString 
     // Also record updates to fCodePointZero. Be conservative if in doubt.
     if (symbol == kZeroDigitSymbol) {
         UChar32 sym = value.char32At(0);
-        if ( propagateDigits && u_charDigitValue(sym) == 0 && value.countChar32() == 1 ) {
+        if ( propogateDigits && u_charDigitValue(sym) == 0 && value.countChar32() == 1 ) {
             fCodePointZero = sym;
             for ( int8_t i = 1 ; i<= 9 ; i++ ) {
                 sym++;

@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 sk{
     Countries{
         001{"svet"}
@@ -84,7 +83,7 @@ sk{
         CM{"Kamerun"}
         CN{"Čína"}
         CO{"Kolumbia"}
-        CP{"Clipperton"}
+        CP{"Ostrov Clipperton"}
         CR{"Kostarika"}
         CU{"Kuba"}
         CV{"Kapverdy"}
@@ -134,7 +133,7 @@ sk{
         GU{"Guam"}
         GW{"Guinea-Bissau"}
         GY{"Guyana"}
-        HK{"Hongkong – OAO Číny"}
+        HK{"Hongkong, Čína"}
         HM{"Heardov ostrov a Macdonaldove ostrovy"}
         HN{"Honduras"}
         HR{"Chorvátsko"}
@@ -188,7 +187,7 @@ sk{
         ML{"Mali"}
         MM{"Mjanmarsko"}
         MN{"Mongolsko"}
-        MO{"Macao – OAO Číny"}
+        MO{"Macao, Čína"}
         MP{"Severné Mariány"}
         MQ{"Martinik"}
         MR{"Mauritánia"}
@@ -270,7 +269,7 @@ sk{
         TR{"Turecko"}
         TT{"Trinidad a Tobago"}
         TV{"Tuvalu"}
-        TW{"Taiwan"}
+        TW{"Taiwan, Čína"}
         TZ{"Tanzánia"}
         UA{"Ukrajina"}
         UG{"Uganda"}
@@ -313,4 +312,5 @@ sk{
         FK{"Falklandy (Malvíny)"}
         SZ{"Svazijsko"}
     }
+    Version{"37"}
 }

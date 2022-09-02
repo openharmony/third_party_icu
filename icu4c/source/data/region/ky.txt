@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ky{
     Countries{
         001{"Дүйнө"}
@@ -184,11 +183,11 @@ ky{
         MF{"Сент-Мартин"}
         MG{"Мадагаскар"}
         MH{"Маршалл аралдары"}
-        MK{"Түндүк Македония"}
+        MK{"Македония"}
         ML{"Мали"}
         MM{"Мьянма (Бирма)"}
         MN{"Монголия"}
-        MO{"Макао Кытай ААА"}
+        MO{"Макау Кытай ААА"}
         MP{"Түндүк Мариана аралдары"}
         MQ{"Мартиника"}
         MR{"Мавритания"}
@@ -301,7 +300,7 @@ ky{
     Countries%short{
         GB{"УБ"}
         HK{"Гонконг"}
-        MO{"Макао"}
+        MO{"Макау"}
         PS{"Палестина"}
         US{"АКШ"}
     }
@@ -311,6 +310,8 @@ ky{
         CI{"Пил сөөктүү жээк"}
         CZ{"Чех Республикасы"}
         FK{"Фолкленд (Мальвина) аралдары"}
+        MK{"Македония (Мур. Югосл.)"}
         TL{"Чыгыш Тимор"}
     }
+    Version{"37"}
 }

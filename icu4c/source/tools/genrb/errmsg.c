@@ -21,7 +21,6 @@
 #include <stdio.h>
 #include "cstring.h"
 #include "errmsg.h"
-#include "toolutil.h"
 
 U_CFUNC void error(uint32_t linenumber, const char *msg, ...)
 {

@@ -1,11 +1,9 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ur{
     AuxExemplarCharacters{
         "[؀؁؂؃\u200C\u200D\u200E\u200F \u064B \u064C \u064D \u064E \u064F \u0650 "
-        "\u0651 \u0652 \u0654 \u0656 \u0657 \u0658 \u0670 أ آ ں ؤ ۂ ۃ ئ ٻ ة ٺ ټ ٽ ه ي"
-        "]"
+        "\u0651 \u0652 \u0654 \u0656 \u0657 \u0658 \u0670 ۃ ٻ ٺ ټ ٽ ي]"
     }
     Ellipsis{
         final{"{0}…"}
@@ -16,8 +14,8 @@ ur{
         word-medial{"{0} … {1}"}
     }
     ExemplarCharacters{
-        "[ا ب پ ت ٹ ث ج چ ح خ د ڈ ذ ر ڑ ز ژ س ش ص ض ط ظ ع غ ف ق ک گ ل م ن و ہ ھ ء ی ے"
-        "]"
+        "[ا أ آ ب پ ت ٹ ث ج چ ح خ د ڈ ذ ر ڑ ز ژ س ش ص ض ط ظ ع غ ف ق ک گ ل م ن ں و ؤ ہ"
+        " ۂ ھ ء ی ئ ے ة ه]"
     }
     ExemplarCharactersIndex{
         "[ا ب پ ت ٹ ث ج چ ح خ د ڈ ذ ر ڑ ز ژ س ش ص ض ط ظ ع غ ف ق ک گ ل م ن و ہ ھ ء ی ے"
@@ -35,7 +33,6 @@ ur{
                 scientificFormat{"#E0"}
             }
             symbols{
-                approximatelySign{"~"}
                 decimal{"٫"}
                 exponential{"×۱۰^"}
                 group{"٬"}
@@ -219,7 +216,6 @@ ur{
                 }
             }
             symbols{
-                approximatelySign{"~"}
                 decimal{"."}
                 exponential{"E"}
                 group{","}
@@ -246,6 +242,7 @@ ur{
         minimumGroupingDigits{"1"}
         native{"arabext"}
     }
+    Version{"37"}
     calendar{
         buddhist{
             eras{
@@ -647,7 +644,7 @@ ur{
                 "EEEE، d MMMM، y",
                 "d MMMM، y",
                 "d MMM، y",
-                "d/M/yy",
+                "y/M/d",
                 "{1} {0}",
                 "{1} {0}",
                 "{1} {0}",
@@ -679,7 +676,7 @@ ur{
                 Hmsv{"HH:mm:ss v"}
                 Hmv{"HH:mm v"}
                 M{"L"}
-                MEd{"E، d/M"}
+                MEd{"E، M/d"}
                 MMM{"LLL"}
                 MMMEd{"E، d MMM"}
                 MMMMW{
@@ -688,7 +685,7 @@ ur{
                 }
                 MMMMd{"d MMMM"}
                 MMMd{"d MMM"}
-                Md{"d/M"}
+                Md{"M/d"}
                 d{"d"}
                 h{"h a"}
                 hm{"h:mm a"}
@@ -697,13 +694,13 @@ ur{
                 hmv{"h:mm a v"}
                 ms{"mm:ss"}
                 y{"y"}
-                yM{"M/y"}
-                yMEd{"E، d/M/y"}
+                yM{"y/M"}
+                yMEd{"E، y/M/d"}
                 yMMM{"MMM y"}
                 yMMMEd{"E، d MMM، y"}
                 yMMMM{"MMMM y"}
                 yMMMd{"d MMM، y"}
-                yMd{"d/M/y"}
+                yMd{"y/M/d"}
                 yQQQ{"QQQ y"}
                 yQQQQ{"QQQQ y"}
                 yw{
@@ -933,8 +930,8 @@ ur{
                     M{"M–M"}
                 }
                 MEd{
-                    M{"E، d/M – E، d/M"}
-                    d{"E، d/M – E، d/M"}
+                    M{"E، M/d – E، M/d"}
+                    d{"E، M/d – E، M/d"}
                 }
                 MMM{
                     M{"MMM–MMM"}
@@ -948,8 +945,8 @@ ur{
                     d{"d–d MMM"}
                 }
                 Md{
-                    M{"d/M – d/M"}
-                    d{"d/M – d/M"}
+                    M{"M/d – M/d"}
+                    d{"M/d – M/d"}
                 }
                 d{
                     d{"d–d"}
@@ -977,13 +974,13 @@ ur{
                     y{"y–y"}
                 }
                 yM{
-                    M{"M/y – M/y"}
-                    y{"M/y – M/y"}
+                    M{"y/M – y/M"}
+                    y{"y/M – y/M"}
                 }
                 yMEd{
-                    M{"E، d/M/y – E، d/M/y"}
-                    d{"E، d/M/y – E، d/M/y"}
-                    y{"E، d/M/y – E، d/M/y"}
+                    M{"E، y/M/d – E، y/M/d"}
+                    d{"E، y/M/d – E، y/M/d"}
+                    y{"E، y/M/d – E، y/M/d"}
                 }
                 yMMM{
                     M{"MMM–MMM y"}
@@ -1000,13 +997,13 @@ ur{
                 }
                 yMMMd{
                     M{"d MMM – d MMM، y"}
-                    d{"d–d MMM y"}
+                    d{"d-d MMM، y"}
                     y{"d MMM، y – d MMM، y"}
                 }
                 yMd{
-                    M{"d/M/y – d/M/y"}
-                    d{"d/M/y – d/M/y"}
-                    y{"d/M/y – d/M/y"}
+                    M{"y/M/d – y/M/d"}
+                    d{"y/M/d – y/M/d"}
+                    y{"y/M/d – y/M/d"}
                 }
             }
             monthNames{
@@ -1318,9 +1315,9 @@ ur{
                         "محرم",
                         "صفر",
                         "ربیع الاوّل",
-                        "ربیع الثانی",
+                        "ربیع الثّانی",
                         "جمادی الاوّل",
-                        "جمادی الثانی",
+                        "جمادی الثّانی",
                         "رجب",
                         "شعبان",
                         "رمضان",
@@ -2442,7 +2439,7 @@ ur{
                 "[%٪﹪％]",
                 "[؉‰]",
                 "[\$﹩＄$]",
-                "[£₤￡]",
+                "[£₤]",
                 "[¥￥]",
                 "[₩￦]",
                 "[₨₹{Rp}{Rs}]",

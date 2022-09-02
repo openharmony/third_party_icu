@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 eu{
     Countries{
         001{"Mundua"}
@@ -134,7 +133,7 @@ eu{
         GU{"Guam"}
         GW{"Ginea Bissau"}
         GY{"Guyana"}
-        HK{"Hong Kong Txinako AEB"}
+        HK{"Hong Kong, Txina"}
         HM{"Heard eta McDonald uharteak"}
         HN{"Honduras"}
         HR{"Kroazia"}
@@ -188,7 +187,7 @@ eu{
         ML{"Mali"}
         MM{"Myanmar (Birmania)"}
         MN{"Mongolia"}
-        MO{"Macau Txinako AEB"}
+        MO{"Macao, Txina"}
         MP{"Ipar Mariana uharteak"}
         MQ{"Martinika"}
         MR{"Mauritania"}
@@ -261,7 +260,7 @@ eu{
         TF{"Hegoaldeko lurralde frantsesak"}
         TG{"Togo"}
         TH{"Thailandia"}
-        TJ{"Tajikistan"}
+        TJ{"Tadjikistan"}
         TK{"Tokelau"}
         TL{"Ekialdeko Timor"}
         TM{"Turkmenistan"}
@@ -270,12 +269,12 @@ eu{
         TR{"Turkia"}
         TT{"Trinidad eta Tobago"}
         TV{"Tuvalu"}
-        TW{"Taiwan"}
+        TW{"Taiwan, Txina"}
         TZ{"Tanzania"}
         UA{"Ukraina"}
         UG{"Uganda"}
         UM{"Ameriketako Estatu Batuetako Kanpoaldeko Uharte Txikiak"}
-        UN{"Nazio Batuak"}
+        UN{"Nazio Batuen Erakundea"}
         US{"Ameriketako Estatu Batuak"}
         UY{"Uruguai"}
         UZ{"Uzbekistan"}
@@ -289,7 +288,7 @@ eu{
         WF{"Wallis eta Futuna"}
         WS{"Samoa"}
         XA{"Sasiazentuak"}
-        XB{"Pseudobidia"}
+        XB{"pseudobidia"}
         XK{"Kosovo"}
         YE{"Yemen"}
         YT{"Mayotte"}
@@ -308,8 +307,10 @@ eu{
     Countries%variant{
         CD{"Kongo (DR)"}
         CG{"Kongoko Errepublika"}
-        CI{"C¨ôte d’Ivore"}
+        CI{"CI"}
         CZ{"Txekiar Errepublika"}
         FK{"Falklandak (Malvinak)"}
+        TL{"TL"}
     }
+    Version{"37"}
 }
