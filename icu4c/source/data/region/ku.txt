@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 ku{
     Countries{
         001{"Cîhan"}
@@ -85,7 +86,7 @@ ku{
         EU{"Yekîtiya Ewropayê"}
         FI{"Fînlenda"}
         FJ{"Fîjî"}
-        FK{"Giravên Falkland"}
+        FK{"Giravên Malvîn"}
         FM{"Mîkronezya"}
         FO{"Giravên Feroe"}
         FR{"Fransa"}
@@ -106,7 +107,6 @@ ku{
         GU{"Guam"}
         GW{"Gîne-Bissau"}
         GY{"Guyana"}
-        HK{"Hong Kong"}
         HN{"Hondûras"}
         HR{"Kroatya"}
         HT{"Haîtî"}
@@ -150,14 +150,12 @@ ku{
         MC{"Monako"}
         MD{"Moldova"}
         ME{"Montenegro"}
-        MF{"MF"}
         MG{"Madagaskar"}
         MH{"Giravên Marşal"}
-        MK{"MK"}
+        MK{"Makedonya"}
         ML{"Malî"}
         MM{"Myanmar (Birmanya)"}
         MN{"Mongolya"}
-        MO{"Makao"}
         MP{"Giravên Bakurê Marianan"}
         MQ{"Martinique"}
         MR{"Morîtanya"}
@@ -191,7 +189,7 @@ ku{
         PM{"Saint-Pierre û Miquelon"}
         PN{"Giravên Pitcairn"}
         PR{"Porto Rîko"}
-        PS{"Filistîn"}
+        PS{"Xakên filistînî"}
         PT{"Portûgal"}
         PW{"Palau"}
         PY{"Paraguay"}
@@ -267,5 +265,4 @@ ku{
         FK{"Giravên Falkland"}
         TL{"Tîmora Rojhilat"}
     }
-    Version{"37"}
 }

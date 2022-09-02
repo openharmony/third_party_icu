@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 az{
     Countries{
         001{"Dünya"}
@@ -42,7 +43,7 @@ az{
         AL{"Albaniya"}
         AM{"Ermənistan"}
         AO{"Anqola"}
-        AQ{"Antarktida"}
+        AQ{"Antarktika"}
         AR{"Argentina"}
         AS{"Amerika Samoası"}
         AT{"Avstriya"}
@@ -133,7 +134,7 @@ az{
         GU{"Quam"}
         GW{"Qvineya-Bisau"}
         GY{"Qayana"}
-        HK{"Honkonq, Çin"}
+        HK{"Honq Konq Xüsusi İnzibati Rayonu Çin"}
         HM{"Herd və Makdonald adaları"}
         HN{"Honduras"}
         HR{"Xorvatiya"}
@@ -187,14 +188,14 @@ az{
         ML{"Mali"}
         MM{"Myanma"}
         MN{"Monqolustan"}
-        MO{"Makao, Çin"}
+        MO{"Makao XİR Çin"}
         MP{"Şimali Marian adaları"}
         MQ{"Martinik"}
         MR{"Mavritaniya"}
         MS{"Monserat"}
         MT{"Malta"}
         MU{"Mavriki"}
-        MV{"Maldiv Adaları"}
+        MV{"Maldiv adaları"}
         MW{"Malavi"}
         MX{"Meksika"}
         MY{"Malayziya"}
@@ -254,7 +255,7 @@ az{
         SX{"Sint-Marten"}
         SY{"Suriya"}
         SZ{"Esvatini"}
-        TA{"Tristan-da-Kunya"}
+        TA{"Tristan da Kunya"}
         TC{"Törks və Kaykos adaları"}
         TD{"Çad"}
         TF{"Fransanın Cənub Əraziləri"}
@@ -269,7 +270,7 @@ az{
         TR{"Türkiyə"}
         TT{"Trinidad və Tobaqo"}
         TV{"Tuvalu"}
-        TW{"Tayvan, Çin"}
+        TW{"Tayvan"}
         TZ{"Tanzaniya"}
         UA{"Ukrayna"}
         UG{"Uqanda"}
@@ -312,7 +313,5 @@ az{
         CZ{"Çex Respublikası"}
         FK{"Folklend adaları (Malvin adaları)"}
         SZ{"Svazilend"}
-        TL{"Şərqi Timor"}
     }
-    Version{"37"}
 }

@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 uz{
     Countries{
         001{"Dunyo"}
@@ -107,7 +108,7 @@ uz{
         ES{"Ispaniya"}
         ET{"Efiopiya"}
         EU{"Yevropa Ittifoqi"}
-        EZ{"Yevrohudud"}
+        EZ{"yevrozona"}
         FI{"Finlandiya"}
         FJ{"Fiji"}
         FK{"Folklend orollari"}
@@ -133,7 +134,7 @@ uz{
         GU{"Guam"}
         GW{"Gvineya-Bisau"}
         GY{"Gayana"}
-        HK{"Gonkong, Xitoy"}
+        HK{"Gonkong (Xitoy MMH)"}
         HM{"Xerd va Makdonald orollari"}
         HN{"Gonduras"}
         HR{"Xorvatiya"}
@@ -187,7 +188,7 @@ uz{
         ML{"Mali"}
         MM{"Myanma (Birma)"}
         MN{"Mongoliya"}
-        MO{"Makao, Xitoy"}
+        MO{"Makao (Xitoy MMH)"}
         MP{"Shimoliy Mariana orollari"}
         MQ{"Martinika"}
         MR{"Mavritaniya"}
@@ -257,7 +258,7 @@ uz{
         TA{"Tristan-da-Kunya"}
         TC{"Turks va Kaykos orollari"}
         TD{"Chad"}
-        TF{"Fransiya Janubiy hududlari"}
+        TF{"Fransuz Janubiy hududlari"}
         TG{"Togo"}
         TH{"Tailand"}
         TJ{"Tojikiston"}
@@ -269,7 +270,7 @@ uz{
         TR{"Turkiya"}
         TT{"Trinidad va Tobago"}
         TV{"Tuvalu"}
-        TW{"Tayvan, Xitoy"}
+        TW{"Tayvan"}
         TZ{"Tanzaniya"}
         UA{"Ukraina"}
         UG{"Uganda"}
@@ -278,7 +279,7 @@ uz{
         US{"Amerika Qo‘shma Shtatlari"}
         UY{"Urugvay"}
         UZ{"Oʻzbekiston"}
-        VA{"Vatikan shahri"}
+        VA{"Vatikan"}
         VC{"Sent-Vinsent va Grenadin"}
         VE{"Venesuela"}
         VG{"Britaniya Virgin orollari"}
@@ -311,8 +312,6 @@ uz{
         CI{"Fil suyagi qirg‘og‘i"}
         CZ{"Chexiya Respublikasi"}
         FK{"Folklend (Malvin) orollari"}
-        SZ{"Svazilend"}
         TL{"Sharqiy Timor"}
     }
-    Version{"37"}
 }

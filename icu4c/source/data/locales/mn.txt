@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 mn{
     AuxExemplarCharacters{"[ә җ ӊ һ]"}
     Ellipsis{
@@ -215,7 +216,6 @@ mn{
         minimumGroupingDigits{"1"}
         native{"latn"}
     }
-    Version{"37"}
     calendar{
         generic{
             DateTimePatterns{
@@ -390,10 +390,10 @@ mn{
                 "HH:mm:ss (z)",
                 "HH:mm:ss",
                 "HH:mm",
-                "EEEE, y 'оны' MMMM d 'өдөр'",
-                "y 'оны' MMMM d 'өдөр'",
-                "y MMM d",
-                "y-MM-dd",
+                "y 'оны' MMMM'ын' d, EEEE 'гараг'",
+                "y 'оны' MMMM'ын' d",
+                "y 'оны' MMM'ын' d",
+                "y.MM.dd",
                 "{1} {0}",
                 "{1} {0}",
                 "{1} {0}",
@@ -422,37 +422,34 @@ mn{
                 H{"HH 'ц'"}
                 Hm{"HH:mm"}
                 Hms{"HH:mm:ss"}
-                Hmsv{"HH:mm:ss v"}
-                Hmv{"HH:mm v"}
-                M{"L"}
-                MEd{"E, M-d"}
+                Hmsv{"HH:mm:ss (v)"}
+                Hmv{"HH:mm (v)"}
+                M{"LLLLL"}
+                MEd{"MMMMM/dd. E"}
                 MMM{"LLL"}
-                MMMEd{"E, MMM d"}
-                MMMMEEEEd{"EEEE, MMMM d 'өдөр'"}
+                MMMEd{"MMM'ын' d. E"}
                 MMMMW{
                     one{"MMMM'ын' W-'р' 'долоо' 'хоног'"}
                     other{"MMMM'ын' W-'р' 'долоо' 'хоног'"}
                 }
-                MMMMd{"MMMM d 'өдөр'"}
-                MMMd{"MMM d"}
-                Md{"M-d"}
+                MMMMd{"MMMM'ын' d"}
+                MMMd{"MMM'ын' d"}
+                Md{"MMMMM/dd"}
                 d{"d"}
-                h{"h a"}
+                h{"h 'ц' a"}
                 hm{"h:mm a"}
                 hms{"h:mm:ss a"}
-                hmsv{"h:mm:ss a v"}
-                hmv{"h:mm a v"}
+                hmsv{"h:mm:ss a (v)"}
+                hmv{"h:mm a (v)"}
                 ms{"mm:ss"}
                 y{"y"}
-                yM{"y-M"}
-                yMEd{"E, y-M-d"}
-                yMMM{"y 'оны' LLL"}
-                yMMMEd{"E, y 'оны' MMM d"}
-                yMMMM{"y 'оны' LLLL"}
-                yMMMMEEEEd{"EEEE, y 'оны' MMMM d 'өдөр'"}
-                yMMMMd{"y 'оны' MMMM d 'өдөр'"}
-                yMMMd{"y 'оны' MMM d"}
-                yMd{"y-M-d"}
+                yM{"y MMMMM"}
+                yMEd{"y.MM.dd. E"}
+                yMMM{"y 'оны' MMM"}
+                yMMMEd{"y 'оны' MMM'ын' d. E"}
+                yMMMM{"y 'оны' MMMM"}
+                yMMMd{"y 'оны' MMM'ын' d"}
+                yMd{"y.MM.dd"}
                 yQQQ{"y 'оны' QQQ"}
                 yQQQQ{"y 'оны' QQQQ"}
                 yw{
@@ -625,44 +622,40 @@ mn{
                     M{"G y MMM – MMM"}
                 }
                 H{
-                    H{"HH – HH"}
+                    H{"HH – HH 'ц'"}
                 }
                 Hm{
                     H{"HH:mm – HH:mm"}
                     m{"HH:mm – HH:mm"}
                 }
                 Hmv{
-                    H{"HH:mm – HH:mm v"}
-                    m{"HH:mm – HH:mm v"}
+                    H{"HH:mm – HH:mm (v)"}
+                    m{"HH:mm – HH:mm (v)"}
                 }
                 Hv{
-                    H{"HH – HH v"}
+                    H{"HH – HH 'ц' (v)"}
                 }
                 M{
-                    M{"M – M"}
+                    M{"MMMMM – MMMMM 'сар'"}
                 }
                 MEd{
-                    M{"E, MM-dd – E, MM-dd"}
-                    d{"E, MM-dd – E, MM-dd"}
+                    M{"MMMMM/d E – MMMMM/d E"}
+                    d{"MMMMM/d E – MMMMM/d E"}
                 }
                 MMM{
-                    M{"LLL – LLL"}
+                    M{"MMMMM – MMMMM 'сар'"}
                 }
                 MMMEd{
-                    M{"E, MMM d – E, MMM d"}
-                    d{"E, MMM d – E, MMM d"}
-                }
-                MMMMd{
-                    M{"MMMM d 'өдөр' – MMMM d 'өдөр'"}
-                    d{"MMMM d–d 'өдөр'"}
+                    M{"MMMMM/d E – MMMMM/d E"}
+                    d{"MMMMM/d E – MMMMM/d E"}
                 }
                 MMMd{
-                    M{"MMM d – MMM d"}
-                    d{"MMM d–d"}
+                    M{"MMMMM/d – MMMMM/d"}
+                    d{"MMMMM/d – d"}
                 }
                 Md{
-                    M{"MM-dd – MM-dd"}
-                    d{"MM-dd – MM-dd"}
+                    M{"MMMMM/d – MMMMM/d"}
+                    d{"MMMMM/d – MMMMM/d"}
                 }
                 d{
                     d{"d – d"}
@@ -678,75 +671,65 @@ mn{
                     m{"h:mm – h:mm a"}
                 }
                 hmv{
-                    a{"h:mm a – h:mm a v"}
-                    h{"h:mm – h:mm a v"}
-                    m{"h:mm – h:mm a v"}
+                    a{"h:mm a – h:mm a (v)"}
+                    h{"h:mm – h:mm a (v)"}
+                    m{"h:mm – h:mm a (v)"}
                 }
                 hv{
-                    a{"h a – h a v"}
-                    h{"h – h a v"}
+                    a{"h a – h a (v)"}
+                    h{"h – h a (v)"}
                 }
                 y{
                     y{"y – y"}
                 }
                 yM{
-                    M{"y-MM – y-MM"}
-                    y{"y-MM – y-MM"}
+                    M{"y 'оны' MMMMM–MMMMM 'сар'"}
+                    y{"y 'оны' MMMMM 'сар' – y 'оны' MMMMM 'сар'"}
                 }
                 yMEd{
-                    M{"E, y-MM-dd – E, y-MM-dd"}
-                    d{"E, y-MM-dd – E, y-MM-dd"}
-                    y{"E, y-MM-dd – E, y-MM-dd"}
+                    M{"y 'оны' MMMMM/dd E – MMMMM/dd E"}
+                    d{"y 'оны' MMMMM/dd E – MMMMM/dd E"}
+                    y{"y 'оны' MMMMM/dd E – y 'оны' MMMMM/dd E"}
                 }
                 yMMM{
-                    M{"y 'оны' LLL – LLL"}
-                    y{"y 'оны' LLL – y 'оны' LLL"}
+                    M{"y 'оны' MMMMM – MMMMM 'сар'"}
+                    y{"y 'оны' MMMMM 'сар' – y 'оны' MMMMM 'сар'"}
                 }
                 yMMMEd{
-                    M{"E, y 'оны' MMM d – E, y 'оны' MMM d"}
-                    d{"E, y 'оны' MMM d – E, y 'оны' MMM d"}
-                    y{"E, y 'оны' MMM d – E, y 'оны' MMM d"}
+                    M{"y 'оны' MMMMM/dd E – MMMMM/dd E"}
+                    d{"y 'оны' MMMMM/dd E – MMMMM/dd E"}
+                    y{"y 'оны' MMMMM/dd E – y 'оны' MMMMM/dd E"}
                 }
                 yMMMM{
-                    M{"y 'оны' LLLL – LLLL"}
-                    y{"y 'оны' LLLL – y 'оны' LLLL"}
-                }
-                yMMMMEEEEd{
-                    M{"EEEE, y 'оны' MMMM d 'өдөр' – EEEE, y 'оны' MMMM d 'өдөр'"}
-                    d{"EEEE, y 'оны' MMMM d 'өдөр' – EEEE, y 'оны' MMMM d 'өдөр'"}
-                    y{"EEEE, y 'оны' MMMM d 'өдөр' – EEEE, y 'оны' MMMM d 'өдөр'"}
-                }
-                yMMMMd{
-                    M{"y 'оны' MMMM d 'өдөр' – MMMM d 'өдөр'"}
-                    d{"y 'оны' MMMM d–d 'өдөр'"}
-                    y{"y 'оны' MMMM d 'өдөр' – y 'оны' MMMM d 'өдөр'"}
+                    M{"y 'оны' MMMMM – MMMMM 'сар'"}
+                    y{"y 'оны' MMMMM 'сар' – y 'оны' MMMMM 'сар'"}
                 }
                 yMMMd{
-                    M{"y 'оны' MMM d – MMM d"}
-                    d{"y 'оны' MMM d–d"}
-                    y{"y 'оны' MMM d – y 'оны' MMM d"}
+                    M{"y 'оны' MMMMM/dd – MMMMM/dd"}
+                    d{"y 'оны' MMMMM/dd – dd"}
+                    y{"y 'оны' MMMMM/dd – y 'оны' MMMMM/dd"}
                 }
                 yMd{
-                    M{"y-MM-dd – y-MM-dd"}
-                    d{"y-MM-dd – y-MM-dd"}
-                    y{"y-MM-dd – y-MM-dd"}
+                    M{"y 'оны' MMMMM/dd – MMMMM/dd"}
+                    d{"y 'оны' MMMMM/dd – MMMMM/dd"}
+                    y{"y 'оны' MMMMM/dd – y 'оны' MMMMM/dd"}
                 }
             }
             monthNames{
                 format{
                     abbreviated{
-                        "1-р сарын",
-                        "2-р сарын",
-                        "3-р сарын",
-                        "4-р сарын",
-                        "5-р сарын",
-                        "6-р сарын",
-                        "7-р сарын",
-                        "8-р сарын",
-                        "9-р сарын",
-                        "10-р сарын",
-                        "11-р сарын",
-                        "12-р сарын",
+                        "1-р сар",
+                        "2-р сар",
+                        "3-р сар",
+                        "4-р сар",
+                        "5-р сар",
+                        "6-р сар",
+                        "7-р сар",
+                        "8-р сар",
+                        "9-р сар",
+                        "10-р сар",
+                        "11-р сар",
+                        "12-р сар",
                     }
                     narrow{
                         "I",
@@ -763,18 +746,18 @@ mn{
                         "XII",
                     }
                     wide{
-                        "Нэгдүгээр сарын",
-                        "Хоёрдугаар сарын",
-                        "Гуравдугаар сарын",
-                        "Дөрөвдүгээр сарын",
-                        "Тавдугаар сарын",
-                        "Зургадугаар сарын",
-                        "Долдугаар сарын",
-                        "Наймдугаар сарын",
-                        "Есдүгээр сарын",
-                        "Аравдугаар сарын",
-                        "Арван нэгдүгээр сарын",
-                        "Арван хоёрдугаар сарын",
+                        "нэгдүгээр сар",
+                        "хоёрдугаар сар",
+                        "гуравдугаар сар",
+                        "дөрөвдүгээр сар",
+                        "тавдугаар сар",
+                        "зургаадугаар сар",
+                        "долоодугаар сар",
+                        "наймдугаар сар",
+                        "есдүгээр сар",
+                        "аравдугаар сар",
+                        "арван нэгдүгээр сар",
+                        "арван хоёрдугаар сар",
                     }
                 }
                 stand-alone{
@@ -812,8 +795,8 @@ mn{
                         "Гуравдугаар сар",
                         "Дөрөвдүгээр сар",
                         "Тавдугаар сар",
-                        "Зургадугаар сар",
-                        "Долдугаар сар",
+                        "Зургаадугаар сар",
+                        "Долоодугаар сар",
                         "Наймдугаар сар",
                         "Есдүгээр сар",
                         "Аравдугаар сар",
@@ -845,10 +828,10 @@ mn{
                 }
                 stand-alone{
                     abbreviated{
-                        "I",
-                        "II",
-                        "III",
-                        "IV",
+                        "I улирал",
+                        "II улирал",
+                        "III улирал",
+                        "IV улирал",
                     }
                     narrow{
                         "I",
@@ -867,92 +850,92 @@ mn{
         }
     }
     characterLabel{
-        activities{"Үйл ажиллагаанууд"}
-        african_scripts{"Африк бичвэр"}
-        american_scripts{"Америк бичвэр"}
-        animal{"амьтан"}
-        animals_nature{"Ан амьтан ба байгаль"}
-        arrows{"Сум"}
+        activities{"үйл ажиллагаа"}
+        african_scripts{"Африкан скрипт"}
+        american_scripts{"Американ скрипт"}
+        animal{"ан амьтан"}
+        animals_nature{"ан амьтан ба байгаль"}
+        arrows{"сум"}
         body{"бие"}
-        box_drawing{"Хайрцаг зурах"}
-        braille{"Брайль"}
+        box_drawing{"хайрцаг зурах"}
+        braille{"брайль"}
         building{"барилга"}
-        bullets_stars{"Сум/од"}
-        consonantal_jamo{"Жамо гийгүүлэгчийн дараалал"}
-        currency_symbols{"Мөнгөн тэмдэгтийн дүрс"}
-        dash_connector{"Зураас/холбоос"}
+        bullets_stars{"сум ба од"}
+        consonantal_jamo{"жамо гийгүүлэгчийн дараалал"}
+        currency_symbols{"валютын тэмдэг"}
+        dash_connector{"зураас ба холбоос"}
         digits{"орон"}
-        dingbats{"Дүрс тэмдгүүд"}
-        divination_symbols{"Мэргийн тэмдгүүд"}
-        downwards_arrows{"Доош заасан сум"}
-        downwards_upwards_arrows{"Доош, дээш заасан сум"}
+        dingbats{"чимэг тэмдэг"}
+        divination_symbols{"мэргийн тэмдэг"}
+        downwards_arrows{"доош заасан сум"}
+        downwards_upwards_arrows{"доош, дээш заасан сум"}
         east_asian_scripts{"Зүүн Азийн бичвэр"}
-        emoji{"Эможи"}
-        european_scripts{"Европ бичвэр"}
+        emoji{"эможи"}
+        european_scripts{"Европийн скрипт"}
         female{"эмэгтэй"}
         flag{"туг"}
-        flags{"Туг"}
-        food_drink{"Хоол, унд"}
-        format{"Формат"}
-        format_whitespace{"Формат, хоосон зай"}
-        full_width_form_variant{"Бүтэн өргөн загварын хувилбар"}
-        geometric_shapes{"Геометрийн дүрсүүд"}
-        half_width_form_variant{"Өргөөшөө загварын хувилбарууд"}
-        han_characters{"Хан ханзнууд"}
+        flags{"туг"}
+        food_drink{"хоол, унд"}
+        format{"формат"}
+        format_whitespace{"формат, хоосон зай"}
+        full_width_form_variant{"бүтэн өргөн хувилбар"}
+        geometric_shapes{"геометрийн дүрс"}
+        half_width_form_variant{"хагас өргөн хувилбар"}
+        han_characters{"Хан ханз"}
         han_radicals{"Хятад язгуур"}
-        hanja{"Ханз"}
+        hanja{"ханз"}
         hanzi_simplified{"Ханз (Хялбаршуулсан)"}
         hanzi_traditional{"Ханз (Уламжлалт)"}
         heart{"зүрх"}
-        historic_scripts{"Түүхэн бичвэр"}
-        ideographic_desc_characters{"Идеографик буурах тэмдэгтүүд"}
+        historic_scripts{"түүхэн скрипт"}
+        ideographic_desc_characters{"идеографик буурах тэмдэгт"}
         japanese_kana{"Япон кана"}
-        kanbun{"Канбун"}
-        kanji{"Канжи"}
+        kanbun{"канбун"}
+        kanji{"канжи"}
         keycap{"түлхүүрийн гэр"}
-        leftwards_arrows{"Зүүн харсан сум"}
-        leftwards_rightwards_arrows{"Зүүн, баруун харсан сум"}
-        letterlike_symbols{"Үсгэн тэмдэгтүүд"}
-        limited_use{"Хязгаарлагдмал хэрэглээ"}
+        leftwards_arrows{"зүүн харсан сум"}
+        leftwards_rightwards_arrows{"зүүн, баруун харсан сум"}
+        letterlike_symbols{"үсгэн тэмдэгт"}
+        limited_use{"хязгаарлагдмал хэрэглээ"}
         male{"эрэгтэй"}
-        math_symbols{"Математикийн тэмдэгтүүд"}
+        math_symbols{"математикийн тэмдэгт"}
         middle_eastern_scripts{"Ойрх дорнодын бичвэр"}
-        miscellaneous{"Бусад"}
-        modern_scripts{"Орчин цагийн бичвэр"}
-        modifier{"Өөрчлөгч"}
-        musical_symbols{"Хөгжмийн тэмдэгтүүд"}
+        miscellaneous{"янз бүрийн"}
+        modern_scripts{"орчин цагийн скрипт"}
+        modifier{"өөрчлөгч"}
+        musical_symbols{"хөгжмийн тэмдэг"}
         nature{"байгаль"}
-        nonspacing{"Зайгүй"}
-        numbers{"Тоонууд"}
-        objects{"Дүрснүүд"}
-        other{"Бусад"}
-        paired{"Хослосон"}
+        nonspacing{"зайгүй"}
+        numbers{"тоо"}
+        objects{"объект"}
+        other{"бусад"}
+        paired{"хослосон"}
         person{"хүн"}
-        phonetic_alphabet{"Дуудлагын үсэг"}
-        pictographs{"Пиктограм"}
+        phonetic_alphabet{"дуудлагын үсэг"}
+        pictographs{"пиктограм"}
         place{"газар"}
         plant{"ургамал"}
-        punctuation{"Цэг, таслал"}
-        rightwards_arrows{"Баруун заасан сум"}
-        sign_standard_symbols{"Тэмдэг/стандарт тэмдэгт"}
-        small_form_variant{"Жижиг загварын хувилбарууд"}
+        punctuation{"цэг, таслал"}
+        rightwards_arrows{"баруун заасан сум"}
+        sign_standard_symbols{"дүрс ба тэмдэг"}
+        small_form_variant{"жижиг загварын хувилбар"}
         smiley{"инээмсэглэл"}
-        smileys_people{"Инээмсэглэлүүд ба хүмүүс"}
-        south_asian_scripts{"Өмнөд Азийн бичвэр"}
-        southeast_asian_scripts{"Зүүн өмнөд азийн бичвэр"}
-        spacing{"Зай авалт"}
+        smileys_people{"инээмсэглэл ба хүн"}
+        south_asian_scripts{"Өмнөд Азийн скрипт"}
+        southeast_asian_scripts{"Зүүн өмнөд азийн скрипт"}
+        spacing{"зай авалт"}
         sport{"спорт"}
-        symbols{"Тэмдэгүүд"}
-        technical_symbols{"Техникийн тэмдэгүүд"}
-        tone_marks{"Дууны өнгөний тэмдэглэгээ"}
+        symbols{"тэмдэг"}
+        technical_symbols{"техникийн тэмдэг"}
+        tone_marks{"дууны өнгөний тэмдэглэгээ"}
         travel{"аялал"}
-        travel_places{"Аялал, газар нутгууд"}
-        upwards_arrows{"Дээш заасан сум"}
-        variant_forms{"Хувилбарын хэлбэрүүд"}
-        vocalic_jamo{"Эгшгийн Жамо"}
+        travel_places{"аялал ба газар нутаг"}
+        upwards_arrows{"дээш заасан сум"}
+        variant_forms{"хувилбар"}
+        vocalic_jamo{"эгшгийн жамо"}
         weather{"цаг агаар"}
-        western_asian_scripts{"Баруун азийн бичвэр"}
-        whitespace{"Хоосон зай"}
+        western_asian_scripts{"Баруун азийн скрипт"}
+        whitespace{"хоосон зай"}
     }
     delimiters{
         alternateQuotationEnd{"’"}
