@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 lb{
     Countries{
         001{"Welt"}
@@ -131,7 +132,7 @@ lb{
         GU{"Guam"}
         GW{"Guinea-Bissau"}
         GY{"Guyana"}
-        HK{"Hong Kong"}
+        HK{"Spezialverwaltungszon Hong Kong"}
         HM{"Heard- a McDonald-Inselen"}
         HN{"Honduras"}
         HR{"Kroatien"}
@@ -181,11 +182,11 @@ lb{
         MF{"St. Martin"}
         MG{"Madagaskar"}
         MH{"Marshallinselen"}
-        MK{"Mazedonien (EJR)"}
+        MK{"Nordmazedonien"}
         ML{"Mali"}
         MM{"Myanmar"}
         MN{"Mongolei"}
-        MO{"Macau"}
+        MO{"Spezialverwaltungszon Macau"}
         MP{"Nërdlech Marianen"}
         MQ{"Martinique"}
         MR{"Mauretanien"}
@@ -220,7 +221,7 @@ lb{
         PM{"St. Pierre a Miquelon"}
         PN{"Pitcairninselen"}
         PR{"Puerto Rico"}
-        PS{"Palestina"}
+        PS{"Palestinensesch Autonomiegebidder"}
         PT{"Portugal"}
         PW{"Palau"}
         PY{"Paraguay"}
@@ -304,5 +305,4 @@ lb{
         CG{"Kongo (Republik)"}
         CI{"Elfebeeküst"}
     }
-    Version{"37"}
 }

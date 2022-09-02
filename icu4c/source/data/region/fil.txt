@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 fil{
     Countries{
         001{"Mundo"}
@@ -33,7 +34,7 @@ fil{
         155{"Kanlurang Europe"}
         202{"Sub-Saharan Africa"}
         419{"Latin America"}
-        AC{"Ascension Island"}
+        AC{"Acsencion island"}
         AD{"Andorra"}
         AE{"United Arab Emirates"}
         AF{"Afghanistan"}
@@ -102,7 +103,7 @@ fil{
         EC{"Ecuador"}
         EE{"Estonia"}
         EG{"Egypt"}
-        EH{"Western Sahara"}
+        EH{"Kanlurang Sahara"}
         ER{"Eritrea"}
         ES{"Spain"}
         ET{"Ethiopia"}
@@ -133,7 +134,7 @@ fil{
         GU{"Guam"}
         GW{"Guinea-Bissau"}
         GY{"Guyana"}
-        HK{"Hong Kong, China"}
+        HK{"Hong Kong SAR China"}
         HM{"Heard & McDonald Islands"}
         HN{"Honduras"}
         HR{"Croatia"}
@@ -160,7 +161,7 @@ fil{
         KI{"Kiribati"}
         KM{"Comoros"}
         KN{"St. Kitts & Nevis"}
-        KP{"North Korea"}
+        KP{"Hilagang Korea"}
         KR{"Timog Korea"}
         KW{"Kuwait"}
         KY{"Cayman Islands"}
@@ -187,7 +188,7 @@ fil{
         ML{"Mali"}
         MM{"Myanmar (Burma)"}
         MN{"Mongolia"}
-        MO{"Macao, China"}
+        MO{"Macau SAR China"}
         MP{"Northern Mariana Islands"}
         MQ{"Martinique"}
         MR{"Mauritania"}
@@ -269,7 +270,7 @@ fil{
         TR{"Turkey"}
         TT{"Trinidad & Tobago"}
         TV{"Tuvalu"}
-        TW{"Taiwan, China"}
+        TW{"Taiwan"}
         TZ{"Tanzania"}
         UA{"Ukraine"}
         UG{"Uganda"}
@@ -311,8 +312,6 @@ fil{
         CI{"Ivory Coast"}
         CZ{"Czech Republic"}
         FK{"Falkland Islands (Islas Malvinas)"}
-        SZ{"Swaziland"}
         TL{"East Timor"}
     }
-    Version{"37"}
 }
