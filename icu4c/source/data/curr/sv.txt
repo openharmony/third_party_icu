@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 sv{
     Currencies{
         ADP{
@@ -9,7 +8,7 @@ sv{
         }
         AED{
             "AED",
-            "emiratisk dirham",
+            "Förenade Arabemiratens dirham",
         }
         AFA{
             "AFA",
@@ -33,7 +32,7 @@ sv{
         }
         ANG{
             "ANG",
-            "Antillergulden",
+            "Nederländska Antillernas gulden",
         }
         AOA{
             "AOA",
@@ -105,7 +104,7 @@ sv{
         }
         BBD{
             "Bds$",
-            "barbadisk dollar",
+            "Barbados-dollar",
         }
         BDT{
             "BDT",
@@ -149,7 +148,7 @@ sv{
         }
         BMD{
             "BM$",
-            "bermudisk dollar",
+            "Bermuda-dollar",
         }
         BND{
             "BND",
@@ -525,7 +524,7 @@ sv{
         }
         JMD{
             "JM$",
-            "jamaicansk dollar",
+            "Jamaica-dollar",
         }
         JOD{
             "JOD",
@@ -573,7 +572,7 @@ sv{
         }
         KYD{
             "KYD",
-            "caymansk dollar",
+            "Cayman-dollar",
         }
         KZT{
             "KZT",
@@ -889,7 +888,7 @@ sv{
         }
         SHP{
             "SHP",
-            "sankthelenskt pund",
+            "S:t Helena-pund",
         }
         SIT{
             "SIT",
@@ -985,11 +984,11 @@ sv{
         }
         TTD{
             "TTD",
-            "Trinidaddollar",
+            "Trinidad och Tobago-dollar",
         }
         TWD{
             "TWD",
-            "taiwanesisk dollar",
+            "Taiwandollar",
         }
         TZS{
             "TZS",
@@ -1013,7 +1012,7 @@ sv{
         }
         USD{
             "US$",
-            "amerikansk dollar",
+            "US-dollar",
         }
         USN{
             "USN",
@@ -1120,7 +1119,7 @@ sv{
             "internationella järnvägsunionens franc",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "västafrikansk franc",
         }
         XPD{
@@ -1322,8 +1321,8 @@ sv{
             other{"andorranska pesetas"}
         }
         AED{
-            one{"emiratisk dirham"}
-            other{"emiratisk dirham"}
+            one{"Förenade Arabemiratens dirham"}
+            other{"Förenade Arabemiratens dirham"}
         }
         AFA{
             one{"afghani (1927–2002)"}
@@ -1346,8 +1345,8 @@ sv{
             other{"armeniska dram"}
         }
         ANG{
-            one{"Antillergulden"}
-            other{"Antillergulden"}
+            one{"Nederländska Antillernas gulden"}
+            other{"Nederländska Antillernas gulden"}
         }
         AOA{
             one{"angolansk kwanza"}
@@ -1418,8 +1417,8 @@ sv{
             other{"bosnisk-hercegovinska dinarer (1994–1998)"}
         }
         BBD{
-            one{"barbadisk dollar"}
-            other{"barbadisk dollar"}
+            one{"Barbados-dollar"}
+            other{"Barbados-dollar"}
         }
         BDT{
             one{"bangladeshisk taka"}
@@ -1462,8 +1461,8 @@ sv{
             other{"burundiska franc"}
         }
         BMD{
-            one{"bermudisk dollar"}
-            other{"bermudisk dollar"}
+            one{"Bermuda-dollar"}
+            other{"Bermuda-dollar"}
         }
         BND{
             one{"bruneisk dollar"}
@@ -1839,7 +1838,7 @@ sv{
         }
         JMD{
             one{"Jamaica-dollar"}
-            other{"jamaicansk dollar"}
+            other{"Jamaica-dollar"}
         }
         JOD{
             one{"jordansk dinar"}
@@ -1886,8 +1885,8 @@ sv{
             other{"kuwaitiska dinarer"}
         }
         KYD{
-            one{"caymansk dollar"}
-            other{"caymansk dollar"}
+            one{"Cayman-dollar"}
+            other{"Cayman-dollar"}
         }
         KZT{
             one{"kazakisk tenge"}
@@ -2202,8 +2201,8 @@ sv{
             other{"singaporianska dollar"}
         }
         SHP{
-            one{"sankthelenskt pund"}
-            other{"sankthelenskt pund"}
+            one{"S:t Helena-pund"}
+            other{"S:t Helena-pund"}
         }
         SIT{
             one{"slovensk tolar"}
@@ -2298,12 +2297,12 @@ sv{
             other{"turkiska lira"}
         }
         TTD{
-            one{"Trinidaddollar"}
-            other{"Trinidaddollar"}
+            one{"Trinidad och Tobago-dollar"}
+            other{"Trinidad och Tobago-dollar"}
         }
         TWD{
-            one{"taiwanesisk dollar"}
-            other{"taiwanesisk dollar"}
+            one{"Taiwandollar"}
+            other{"Taiwandollar"}
         }
         TZS{
             one{"tanzanisk shilling"}
@@ -2326,8 +2325,8 @@ sv{
             other{"ugandiska shilling"}
         }
         USD{
-            one{"amerikansk dollar"}
-            other{"amerikansk dollar"}
+            one{"US-dollar"}
+            other{"US-dollar"}
         }
         USN{
             one{"US-dollar (nästa dag)"}
@@ -2534,4 +2533,5 @@ sv{
         one{"{0} {1}"}
         other{"{0} {1}"}
     }
+    Version{"37"}
 }

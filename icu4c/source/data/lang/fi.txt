@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 fi{
     Keys{
         calendar{"kalenteri"}
@@ -124,7 +123,7 @@ fi{
         chp{"chipewyan"}
         chr{"cherokee"}
         chy{"cheyenne"}
-        ckb{"soranî"}
+        ckb{"sorani"}
         co{"korsika"}
         cop{"kopti"}
         cps{"capiznon"}
@@ -479,6 +478,7 @@ fi{
         ro_MD{"moldova"}
         rof{"rombo"}
         rom{"romani"}
+        root{"juuri"}
         rtm{"rotuma"}
         ru{"venäjä"}
         rue{"ruteeni"}
@@ -634,14 +634,12 @@ fi{
         zen{"zenaga"}
         zgh{"vakioitu tamazight"}
         zh{"kiina"}
+        zh_Hans{"yksinkertaistettu kiina"}
+        zh_Hant{"perinteinen kiina"}
         zu{"zulu"}
         zun{"zuni"}
         zxx{"ei kielellistä sisältöä"}
         zza{"zaza"}
-    }
-    Languages%long{
-        zh_Hans{"mandariinikiina (yksinkertaistettu)"}
-        zh_Hant{"mandariinikiina (perinteinen)"}
     }
     Languages%menu{
         ckb{"kurdi – soranî"}
@@ -650,8 +648,12 @@ fi{
     }
     Languages%secondary{
         crh{"kriminturkki"}
+        fa{"persia"}
         kl{"grönlanti"}
         lad{"juutalaisespanja"}
+    }
+    Languages%short{
+        az{"azeri"}
     }
     Scripts{
         Adlm{"fulanin adlam-aakkosto"}
@@ -907,7 +909,7 @@ fi{
             yes{"isojen ja pienten kirjainten lajittelu erikseen"}
         }
         colNormalization{
-            no{"lajittelu ilman normalisointia"}
+            no{"lajittelu ilman normalisoinrtia"}
             yes{"lajittelu Unicode-normalisoituna"}
         }
         colNumeric{
@@ -1162,6 +1164,7 @@ fi{
     Variants%secondary{
         FONUPA{"suomalais-ugrilainen tarkekirjoitus"}
     }
+    Version{"37"}
     characterLabelPattern{
         all{"{0} – kaikki"}
         category-list{"{0}: {1}"}
@@ -1176,8 +1179,6 @@ fi{
             one{"{0} piirtoviiva"}
             other{"{0} piirtoviivaa"}
         }
-        subscript{"alaindeksi {0}"}
-        superscript{"yläindeksi {0}"}
     }
     codePatterns{
         language{"kieli: {0}"}

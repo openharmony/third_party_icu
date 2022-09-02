@@ -1,6 +1,6 @@
 /*************************************************************************
  * © 2016 and later: Unicode, Inc. and others.
- * License & terms of use: http://www.unicode.org/copyright.html
+ * License & terms of use: http://www.unicode.org/copyright.html#License
  *
  *************************************************************************
  *************************************************************************
@@ -49,15 +49,15 @@ const char gHelpString[] =
  */
 char * opt_locale      = "en_US";
 char * opt_rules       = 0;
-UBool  opt_help        = false;
-UBool  opt_norm        = false;
-UBool  opt_french      = false;
-UBool  opt_shifted     = false;
-UBool  opt_lower       = false;
-UBool  opt_upper       = false;
-UBool  opt_case        = false;
-UBool  opt_overlap     = false;
-UBool  opt_canonical   = false;
+UBool  opt_help        = FALSE;
+UBool  opt_norm        = FALSE;
+UBool  opt_french      = FALSE;
+UBool  opt_shifted     = FALSE;
+UBool  opt_lower       = FALSE;
+UBool  opt_upper       = FALSE;
+UBool  opt_case        = FALSE;
+UBool  opt_overlap     = FALSE;
+UBool  opt_canonical   = FALSE;
 int    opt_level       = 0;
 char * opt_source      = "International Components for Unicode";
 char * opt_pattern     = "Unicode";
@@ -107,14 +107,14 @@ UBool processOptions(int argc, const char **argv, OptSpec opts[])
             if (strcmp(pOpt->name, pArgName) == 0) {
                 switch (pOpt->type) {
                 case OptSpec::FLAG:
-                    *(UBool *)(pOpt->pVar) = true;
+                    *(UBool *)(pOpt->pVar) = TRUE;
                     break;
                 case OptSpec::STRING:
                     argNum ++;
                     if (argNum >= argc) {
                         fprintf(stderr, "value expected for \"%s\" option.\n", 
 							    pOpt->name);
-                        return false;
+                        return FALSE;
                     }
                     *(const char **)(pOpt->pVar) = argv[argNum];
                     break;
@@ -123,7 +123,7 @@ UBool processOptions(int argc, const char **argv, OptSpec opts[])
                     if (argNum >= argc) {
                         fprintf(stderr, "value expected for \"%s\" option.\n", 
 							    pOpt->name);
-                        return false;
+                        return FALSE;
                     }
                     char *endp;
                     int i = strtol(argv[argNum], &endp, 0);
@@ -131,7 +131,7 @@ UBool processOptions(int argc, const char **argv, OptSpec opts[])
                         fprintf(stderr, 
 							    "integer value expected for \"%s\" option.\n", 
 								pOpt->name);
-                        return false;
+                        return FALSE;
                     }
                     *(int *)(pOpt->pVar) = i;
                 }
@@ -141,10 +141,10 @@ UBool processOptions(int argc, const char **argv, OptSpec opts[])
         if (pOpt->name == 0)
         {
             fprintf(stderr, "Unrecognized option \"%s\"\n", pArgName);
-            return false;
+            return FALSE;
         }
     }
-	return true;
+	return TRUE;
 }
 
 /**
@@ -165,7 +165,7 @@ UBool processCollator()
     }
 	if (U_FAILURE(status)) {
         fprintf(stderr, "Collator creation failed.: %d\n", status);
-        return false;
+        return FALSE;
     }
     if (status == U_USING_DEFAULT_WARNING) {
         fprintf(stderr, "Warning, U_USING_DEFAULT_WARNING for %s\n", 
@@ -218,14 +218,14 @@ UBool processCollator()
             break;
         default:
             fprintf(stderr, "-level param must be between 1 and 5\n");
-            return false;
+            return FALSE;
         }
     }
     if (U_FAILURE(status)) {
         fprintf(stderr, "Collator attribute setting failed.: %d\n", status);
-        return false;
+        return FALSE;
     }
-	return true;
+	return TRUE;
 }
 
 /**
@@ -239,20 +239,20 @@ UBool processStringSearch()
 	search = usearch_openFromCollator(pattern, -1, source, -1, collator, NULL, 
 		                              &status);
 	if (U_FAILURE(status)) {
-		return false;
+		return FALSE;
 	}
-	if (static_cast<bool>(opt_overlap)) {
+	if (opt_overlap == TRUE) {
 		usearch_setAttribute(search, USEARCH_OVERLAP, USEARCH_ON, &status);
 	}
-	if (static_cast<bool>(opt_canonical)) {
+	if (opt_canonical == TRUE) {
 		usearch_setAttribute(search, USEARCH_CANONICAL_MATCH, USEARCH_ON, 
 			                 &status);
 	}
 	if (U_FAILURE(status)) {
 		fprintf(stderr, "Error setting search attributes\n");
-		return false;
+		return FALSE;
 	}
-	return true;
+	return TRUE;
 }
 
 UBool findPattern()
@@ -269,10 +269,10 @@ UBool findPattern()
 	}
 	if (U_FAILURE(status)) {
 		fprintf(stderr, "Error in searching for pattern %d\n", status);
-		return false;
+		return FALSE;
 	}
 	fprintf(stdout, "End of search\n");
-	return true;
+	return TRUE;
 }
 
 /** 
@@ -281,17 +281,17 @@ UBool findPattern()
  */
 int main(int argc, const char** argv) 
 {
-    if (!static_cast<bool>(processOptions(argc, argv, opts)) || static_cast<bool>(opt_help)) {
+    if (processOptions(argc, argv, opts) != TRUE || opt_help) {
         printf(gHelpString);
         return -1;
     }
 
-    if (!static_cast<bool>(processCollator())) {
+    if (processCollator() != TRUE) {
 		fprintf(stderr, "Error creating collator\n");
 		return -1;
 	}
 
-	if (!static_cast<bool>(processStringSearch())) {
+	if (processStringSearch() != TRUE) {
 		fprintf(stderr, "Error creating string search\n");
 		return -1;
 	}

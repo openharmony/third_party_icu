@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ja{
     Currencies{
         ADP{
@@ -81,7 +80,7 @@ ja{
         }
         AWG{
             "AWG",
-            "アルバ フロリン",
+            "アルバ ギルダー",
         }
         AZM{
             "AZM",
@@ -1116,7 +1115,7 @@ ja{
             "フランス フラン (UIC)",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "西アフリカ CFA フラン",
         }
         XPD{
@@ -1372,7 +1371,7 @@ ja{
             other{"オーストラリア ドル"}
         }
         AWG{
-            other{"アルバ フロリン"}
+            other{"アルバ ギルダー"}
         }
         AZM{
             other{"アゼルバイジャン マナト (1993–2006)"}
@@ -2224,4 +2223,5 @@ ja{
     CurrencyUnitPatterns{
         other{"{0}{1}"}
     }
+    Version{"37"}
 }

@@ -142,15 +142,13 @@ void RuleBasedBreakIterator::DictionaryCache::populateDictionary(int32_t startPo
 
     utext_setNativeIndex(text, rangeStart);
     UChar32     c = utext_current32(text);
-    category = ucptrie_get(fBI->fData->fTrie, c);
-    uint32_t dictStart = fBI->fData->fForwardTable->fDictCategoriesStart;
+    category = UTRIE2_GET16(fBI->fData->fTrie, c);
 
     while(U_SUCCESS(status)) {
-        while((current = (int32_t)UTEXT_GETNATIVEINDEX(text)) < rangeEnd
-                && (category < dictStart)) {
+        while((current = (int32_t)UTEXT_GETNATIVEINDEX(text)) < rangeEnd && (category & 0x4000) == 0) {
             utext_next32(text);           // TODO: cleaner loop structure.
             c = utext_current32(text);
-            category = ucptrie_get(fBI->fData->fTrie, c);
+            category = UTRIE2_GET16(fBI->fData->fTrie, c);
         }
         if (current >= rangeEnd) {
             break;
@@ -168,7 +166,7 @@ void RuleBasedBreakIterator::DictionaryCache::populateDictionary(int32_t startPo
 
         // Reload the loop variables for the next go-round
         c = utext_current32(text);
-        category = ucptrie_get(fBI->fData->fTrie, c);
+        category = UTRIE2_GET16(fBI->fData->fTrie, c);
     }
 
     // If we found breaks, ensure that the first and last entries are
@@ -258,7 +256,7 @@ void RuleBasedBreakIterator::BreakCache::preceding(int32_t startPos, UErrorCode 
             previous(status);
         } else {
             // seek() leaves the BreakCache positioned at the preceding boundary
-            //        if the requested position is between two boundaries.
+            //        if the requested position is between two bounaries.
             // current() pushes the BreakCache position out to the BreakIterator itself.
             U_ASSERT(startPos > fTextIdx);
             current();

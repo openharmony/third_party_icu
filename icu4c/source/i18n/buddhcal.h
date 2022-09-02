@@ -174,7 +174,7 @@ private:
                                             UBool useMonth) const;
 
     /**
-     * Returns true because the Buddhist Calendar does have a default century
+     * Returns TRUE because the Buddhist Calendar does have a default century
      * @internal
      */
     virtual UBool haveDefaultCentury() const;

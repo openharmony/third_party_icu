@@ -1,6 +1,6 @@
 /********************************************************************************
 * © 2016 and later: Unicode, Inc. and others.
-* License & terms of use: http://www.unicode.org/copyright.html
+* License & terms of use: http://www.unicode.org/copyright.html#License
 ********************************************************************************
 ********************************************************************************
 * Copyright (C) 2008-2013, International Business Machines Corporation and

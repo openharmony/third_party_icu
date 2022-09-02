@@ -143,6 +143,7 @@ static void freeCurrencyFormat(CURRENCYFMTW *fmt)
 // be factored out into a common helper for both.
 static UErrorCode GetEquivalentWindowsLocaleName(const Locale& locale, UnicodeString** buffer)
 {
+#if defined(WINVER) && (WINVER >= 0x0601)
     UErrorCode status = U_ZERO_ERROR;
     char asciiBCP47Tag[LOCALE_NAME_MAX_LENGTH] = {};
 
@@ -201,6 +202,10 @@ static UErrorCode GetEquivalentWindowsLocaleName(const Locale& locale, UnicodeSt
         }
     }
     return status;
+#else
+    UErrorCode status = U_UNSUPPORTED_ERROR;
+    return status;
+#endif
 }
 
 Win32NumberFormat::Win32NumberFormat(const Locale &locale, UBool currency, UErrorCode &status)
@@ -268,7 +273,6 @@ Win32NumberFormat::~Win32NumberFormat()
 
 Win32NumberFormat &Win32NumberFormat::operator=(const Win32NumberFormat &other)
 {
-    if (this == &other) { return *this; }  // self-assignment: no-op
     NumberFormat::operator=(other);
 
     this->fCurrency          = other.fCurrency;

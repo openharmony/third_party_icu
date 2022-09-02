@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 zu{
     Currencies{
         AED{
@@ -122,10 +121,6 @@ zu{
         CLP{
             "CLP",
             "i-Chilean Peso",
-        }
-        CNH{
-            "CNH",
-            "i-CNH",
         }
         CNY{
             "CN¥",
@@ -632,7 +627,7 @@ zu{
             "i-East Caribbean Dollar",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "i-West African CFA Franc",
         }
         XPF{
@@ -1405,4 +1400,5 @@ zu{
         one{"{0} {1}"}
         other{"{0} {1}"}
     }
+    Version{"37"}
 }

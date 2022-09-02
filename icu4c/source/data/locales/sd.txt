@@ -1,8 +1,7 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 sd{
-    AuxExemplarCharacters{"[\u064E \u064F \u0650 ئ]"}
+    AuxExemplarCharacters{"[ئ]"}
     Ellipsis{
         final{"{0}…"}
         initial{"…{0}"}
@@ -12,15 +11,16 @@ sd{
         word-medial{"{0} … {1}"}
     }
     ExemplarCharacters{
-        "[ء آ ا ب ٻ پ ڀ ت ث ٺ ٽ ٿ ج {جھ} ڃ ڄ چ ڇ ح خ د ذ ڊ ڌ ڍ ڏ ر ز ڙ س ش ص ض ط ظ ع "
-        "غ ف ڦ ق ک ڪ گ {گھ} ڱ ڳ ل م ن ڻ ه ھ و ي]"
+        "[آ ا ب ٻ پ ڀ ت ث ٺ ٽ ٿ ج {جھ} ڃ ڄ چ ڇ ح خ د ذ ڊ ڌ ڍ ڏ ر ز ڙ س ش ص ض ط ظ ع غ "
+        "ف ڦ ق ک ڪ گ {گھ} ڱ ڳ ل م ن ڻ ه ھ و ي]"
     }
     ExemplarCharactersIndex{
         "[ا ب ٻ پ ڀ ت ث ٺ ٽ ٿ ج {جھ} ڃ ڄ چ ڇ ح خ د ذ ڊ ڌ ڍ ڏ ر ز ڙ س ش ص ض ط ظ ع غ ف "
         "ڦ ق ک ڪ گ {گھ} ڱ ڳ ل م ن ڻ ه ھ و ي]"
     }
-    ExemplarCharactersNumbers{"[\\- ‑ , . % ‰ + 0 1 2 3 4 5 6 7 8 9]"}
+    ExemplarCharactersNumbers{"[\\- , . % ‰ + 0 1 2 3 4 5 6 7 8 9]"}
     ExemplarCharactersPunctuation{"[⹁ ⁏ \\: ! ۔ ‘ ( ) \\[ \\] \\{ \\} /]"}
+    MoreInformation{"?"}
     NumberElements{
         default{"arab"}
         latn{
@@ -45,149 +45,149 @@ sd{
                     }
                     10000{
                         one{"00 ھزار"}
-                        other{"00 هزار"}
+                        other{"00K"}
                     }
                     100000{
-                        one{"000 هزار"}
-                        other{"000 هزار"}
+                        one{"000K"}
+                        other{"000K"}
                     }
                     1000000{
-                        one{"0 ملين"}
-                        other{"0 ملين"}
+                        one{"0M"}
+                        other{"0M"}
                     }
                     10000000{
-                        one{"00 ملين"}
-                        other{"00 ملين"}
+                        one{"00M"}
+                        other{"00M"}
                     }
                     100000000{
-                        one{"000 ملين"}
-                        other{"000 ملين"}
+                        one{"000M"}
+                        other{"000M"}
                     }
                     1000000000{
-                        one{"0 بلين"}
-                        other{"0 بلين"}
+                        one{"0G"}
+                        other{"0G"}
                     }
                     10000000000{
-                        one{"00 بلين"}
-                        other{"00 بلين"}
+                        one{"00G"}
+                        other{"00G"}
                     }
                     100000000000{
-                        one{"000 بلين"}
-                        other{"000 بلين"}
+                        one{"000G"}
+                        other{"000G"}
                     }
                     1000000000000{
-                        one{"0 ٽرلين"}
-                        other{"0 ٽرلين"}
+                        one{"0T"}
+                        other{"0T"}
                     }
                     10000000000000{
-                        one{"00 ٽرلين"}
-                        other{"00 ٽرلين"}
+                        one{"00T"}
+                        other{"00T"}
                     }
                     100000000000000{
-                        one{"000 ٽرلين"}
-                        other{"000 ٽرلين"}
+                        one{"000T"}
+                        other{"000T"}
                     }
                 }
             }
             patternsShort{
                 currencyFormat{
                     1000{
-                        one{"¤0هزار"}
-                        other{"¤0هزار"}
+                        one{"¤ 0K"}
+                        other{"¤ 0K"}
                     }
                     10000{
-                        one{"¤00هزار"}
-                        other{"¤00هزار"}
+                        one{"¤ 00K"}
+                        other{"¤ 00K"}
                     }
                     100000{
-                        one{"¤000لک"}
-                        other{"¤000لک"}
+                        one{"¤ 000K"}
+                        other{"¤ 000K"}
                     }
                     1000000{
-                        one{"¤00لک"}
-                        other{"¤00لک"}
+                        one{"¤ 0M"}
+                        other{"¤ 0M"}
                     }
                     10000000{
-                        one{"¤0ڪروڙ"}
-                        other{"¤0ڪروڙ"}
+                        one{"¤ 00M"}
+                        other{"¤ 00M"}
                     }
                     100000000{
-                        one{"¤00ڪروڙ"}
-                        other{"¤00ڪروڙ"}
+                        one{"¤ 000M"}
+                        other{"¤ 000M"}
                     }
                     1000000000{
-                        one{"¤0ارب"}
-                        other{"¤0ارب"}
+                        one{"¤ 0G"}
+                        other{"¤ 0G"}
                     }
                     10000000000{
-                        one{"¤00ارب"}
-                        other{"¤00ارب"}
+                        one{"¤ 00G"}
+                        other{"¤ 00G"}
                     }
                     100000000000{
-                        one{"¤0کرب"}
-                        other{"¤0کرب"}
+                        one{"¤ 000G"}
+                        other{"¤ 000G"}
                     }
                     1000000000000{
-                        one{"¤0ٽرلين"}
-                        other{"¤0ٽرلين"}
+                        one{"¤ 0T"}
+                        other{"¤ 0T"}
                     }
                     10000000000000{
-                        one{"¤00ٽرلين"}
-                        other{"¤00ٽرلين"}
+                        one{"¤ 00T"}
+                        other{"¤ 00T"}
                     }
                     100000000000000{
-                        one{"¤000ٽرلين"}
-                        other{"¤000ٽرلين"}
+                        one{"¤ 000T"}
+                        other{"¤ 000T"}
                     }
                 }
                 decimalFormat{
                     1000{
-                        one{"0 هزار"}
-                        other{"0 هزار"}
+                        one{"0K"}
+                        other{"0K"}
                     }
                     10000{
-                        one{"00 هزار"}
-                        other{"00 هزار"}
+                        one{"00K"}
+                        other{"00K"}
                     }
                     100000{
-                        one{"000 هزار"}
-                        other{"000 هزار"}
+                        one{"000K"}
+                        other{"000K"}
                     }
                     1000000{
-                        one{"0 ملين"}
-                        other{"0 ملين"}
+                        one{"0M"}
+                        other{"0M"}
                     }
                     10000000{
-                        one{"00 ملين"}
-                        other{"00 ملين"}
+                        one{"00M"}
+                        other{"00M"}
                     }
                     100000000{
-                        one{"000 ملين"}
-                        other{"000 ملين"}
+                        one{"000M"}
+                        other{"000M"}
                     }
                     1000000000{
-                        one{"0 بلين"}
-                        other{"0 بلين"}
+                        one{"0G"}
+                        other{"0G"}
                     }
                     10000000000{
-                        one{"00 بلين"}
-                        other{"00 بلين"}
+                        one{"00G"}
+                        other{"00G"}
                     }
                     100000000000{
-                        one{"000 بلين"}
-                        other{"000 بلين"}
+                        one{"000G"}
+                        other{"000G"}
                     }
                     1000000000000{
-                        one{"0 ٽرلين"}
-                        other{"0 ٽرلين"}
+                        one{"0T"}
+                        other{"0T"}
                     }
                     10000000000000{
-                        one{"00 ٽرلين"}
-                        other{"00 ٽرلين"}
+                        one{"00T"}
+                        other{"00T"}
                     }
                     100000000000000{
-                        one{"000 ٽرلين"}
-                        other{"000 ٽرلين"}
+                        one{"000T"}
+                        other{"000T"}
                     }
                 }
             }
@@ -206,7 +206,7 @@ sd{
         }
         minimalPairs{
             ordinal{
-                other{"{0} ساڄو پاسو وٺو"}
+                other{"کاٻي تي {0} نمبر گهر."}
             }
             plural{
                 one{"{0} ڪتاب"}
@@ -216,6 +216,7 @@ sd{
         minimumGroupingDigits{"1"}
         native{"arab"}
     }
+    Version{"37"}
     calendar{
         generic{
             DateTimePatterns{
@@ -538,7 +539,7 @@ sd{
                     "CE",
                 }
                 wide{
-                    "قبل مسيح",
+                    "مسيح کان اڳ",
                     "عيسوي کان پهرين",
                 }
                 wide%variant{
@@ -821,56 +822,6 @@ sd{
                 }
             }
         }
-        islamic{
-            monthNames{
-                format{
-                    abbreviated{
-                        "محرم",
-                        "صفر",
-                        "ربيع الاول",
-                        "ربیع الاخر",
-                        "جمادی الاول",
-                        "جمادي الاخر",
-                        "رجب",
-                        "شعبان",
-                        "رمضان",
-                        "شوال",
-                        "ذوالقعد",
-                        "ذوالحجہ",
-                    }
-                    wide{
-                        "محرم",
-                        "صفر",
-                        "ربيع الاول",
-                        "ربیع الاخر",
-                        "جمادی الاول",
-                        "جمادي الاخر",
-                        "رجب",
-                        "شعبان",
-                        "رمضان",
-                        "شوال",
-                        "ذوالقعد",
-                        "ذوالحجہ",
-                    }
-                }
-                stand-alone{
-                    wide{
-                        "محرم",
-                        "صفر",
-                        "ربيع الاول",
-                        "ربیع الاخر",
-                        "جمادی الاول",
-                        "جمادي الاخر",
-                        "رجب",
-                        "شعبان",
-                        "رمضان",
-                        "شوال",
-                        "ذوالقعد",
-                        "ذوالحجہ",
-                    }
-                }
-            }
-        }
     }
     characterLabel{
         activities{"سرگرمي"}
@@ -934,7 +885,7 @@ sd{
         other{"ٻيا"}
         paired{"جوڙو"}
         person{"شخص"}
-        phonetic_alphabet{"صوتي رسم الخط"}
+        phonetic_alphabet{"صوتياتي رسم الخط"}
         pictographs{"تصويري نشاني"}
         place{"جڳھَ"}
         plant{"ٻوٽو"}
@@ -957,11 +908,12 @@ sd{
         variant_forms{"ويريئنٽ"}
         vocalic_jamo{"ووڪلڪ جامو"}
         weather{"موسم"}
-        western_asian_scripts{"اولهه ايشيائي رسم الخط"}
+        western_asian_scripts{"مغربي ايشيائي رسم الخط"}
         whitespace{"خالي جڳھَ"}
     }
     delimiters{
         alternateQuotationEnd{"’"}
+        alternateQuotationStart{"‘"}
         quotationEnd{"”"}
         quotationStart{"“"}
     }
@@ -1720,11 +1672,6 @@ sd{
         }
         year-short{
             dn{"سال"}
-            relative{
-                "-1"{"پوئين سال"}
-                "0"{"هن سال"}
-                "1"{"اڳين سال"}
-            }
             relativeTime{
                 future{
                     one{"{0} سالن ۾"}
@@ -1768,6 +1715,8 @@ sd{
             end{"{0}, {1}"}
         }
         standard-short{
+            2{"{0} ۽ {1}"}
+            end{"{0}، ۽ {1}"}
             middle{"{0}, {1}"}
             start{"{0}, {1}"}
         }
@@ -1796,6 +1745,12 @@ sd{
         metric{"ميٽرڪ"}
     }
     parse{
+        date{
+            lenient{
+                "[\\--/]",
+                "[\\:∶]",
+            }
+        }
         general{
             lenient{
                 "[.․。︒﹒．｡]",
@@ -1812,7 +1767,7 @@ sd{
         number{
             lenient{
                 "[\\-‒⁻₋−➖﹣－]",
-                "[,،٫⹁、︐︑﹐﹑，､]",
+                "[,،٫、︐︑﹐﹑，､]",
                 "[+⁺₊➕﬩﹢＋]",
             }
             stricter{

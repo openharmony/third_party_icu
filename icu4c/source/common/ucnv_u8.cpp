@@ -707,9 +707,9 @@ ucnv_UTF8FromUTF8(UConverterFromUnicodeArgs *pFromUArgs,
 
         // Do not go back into the bytes that will be read for finishing a partial
         // sequence from the previous buffer.
-        int32_t length=count-toULength;
+        int32_t length=count-toULimit;
         U8_TRUNCATE_IF_INCOMPLETE(source, 0, length);
-        count=toULength+length;
+        count=toULimit+length;
     }
 
     if(c!=0) {

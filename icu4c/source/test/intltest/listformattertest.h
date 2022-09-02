@@ -52,10 +52,9 @@ class ListFormatterTest : public IntlTestWithFieldPosition {
     void TestFieldPositionIteratorWith3ItemsPatternShift();
     void TestFormattedValue();
     void TestDifferentStyles();
+    void TestBadStylesFail();
     void TestCreateStyled();
     void TestContextual();
-    void TestNextPosition();
-    void TestInt32Overflow();
 
   private:
     void CheckFormatting(
@@ -110,9 +109,8 @@ class ListFormatterTest : public IntlTestWithFieldPosition {
     void DoTheRealListStyleTesting(
         Locale locale,
         UnicodeString items[],
-        int itemCount,
-        UListFormatterType type,
-        UListFormatterWidth width,
+        int32_t itemCount,
+        const char* style,
         const char* expected,
         IcuTestErrorCode status);
 

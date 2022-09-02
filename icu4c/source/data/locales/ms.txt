@@ -1,7 +1,7 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ms{
+    AuxExemplarCharacters{"[]"}
     Ellipsis{
         final{"{0}…"}
         initial{"…{0}"}
@@ -10,7 +10,10 @@ ms{
         word-initial{"… {0}"}
         word-medial{"{0} … {1}"}
     }
-    ExemplarCharacters{"[a b c d e f g h i j k l m n o p q r s t u v w x y z]"}
+    ExemplarCharacters{
+        "[a {ai} {au} b c d {dz} e f g h i j k {kh} l m n {ng} {ngg} {ny} o p q r s {"
+        "sy} t {ts} u {ua} v w x y z]"
+    }
     ExemplarCharactersIndex{"[A B C D E F G H I J K L M N O P Q R S T U V W X Y Z]"}
     ExemplarCharactersNumbers{"[\\- ‑ , . % ‰ + 0 1 2 3 4 5 6 7 8 9]"}
     ExemplarCharactersPunctuation{
@@ -19,11 +22,6 @@ ms{
     }
     MoreInformation{"?"}
     NumberElements{
-        arabext{
-            symbols{
-                decimal{"."}
-            }
-        }
         default{"latn"}
         latn{
             miscPatterns{
@@ -174,7 +172,7 @@ ms{
         }
         minimalPairs{
             ordinal{
-                one{"Ambil belokan kanan {0}."}
+                one{"Ambil belokan kanan yang pertama."}
                 other{"Ambil belokan kanan yang ke-{0}."}
             }
             plural{
@@ -184,6 +182,7 @@ ms{
         minimumGroupingDigits{"1"}
         native{"latn"}
     }
+    Version{"37"}
     calendar{
         buddhist{
             eras{
@@ -788,13 +787,13 @@ ms{
                 Hmsv{"HH:mm:ss v"}
                 Hmv{"HH:mm v"}
                 M{"L"}
-                MEd{"E, d-M"}
+                MEd{"E, d/MM"}
                 MMM{"LLL"}
                 MMMEd{"E, d MMM"}
                 MMMMd{"d MMMM"}
                 MMMd{"d MMM"}
                 MMdd{"dd/MM"}
-                Md{"d-M"}
+                Md{"d/MM"}
                 d{"d"}
                 h{"h a"}
                 hm{"h:mm a"}
@@ -803,13 +802,13 @@ ms{
                 hmv{"h:mm a v"}
                 ms{"mm:ss"}
                 y{"y"}
-                yM{"M-y"}
-                yMEd{"E, d/M/y"}
+                yM{"MM/y"}
+                yMEd{"E, d/MM/y"}
                 yMMM{"MMM y"}
                 yMMMEd{"E, d MMM y"}
                 yMMMM{"MMMM y"}
                 yMMMd{"d MMM y"}
-                yMd{"d/M/y"}
+                yMd{"d/MM/y"}
                 yQQQ{"QQQ y"}
                 yQQQQ{"QQQQ y"}
                 yw{
@@ -969,7 +968,7 @@ ms{
                 }
                 GyM{
                     G{"M/y GGGGG – M/y GGGGG"}
-                    M{"M/y – M/y GGGGG"}
+                    M{"M/y –M/y GGGGG"}
                     y{"M/y – M/y GGGGG"}
                 }
                 GyMEd{
@@ -1019,8 +1018,8 @@ ms{
                     M{"M–M"}
                 }
                 MEd{
-                    M{"E, d/M – E, d/M"}
-                    d{"E, d/M – E, d/M"}
+                    M{"E, d/MM – E, d/MM"}
+                    d{"E, d/MM – E, d/MM"}
                 }
                 MMM{
                     M{"MMM–MMM"}
@@ -1034,8 +1033,8 @@ ms{
                     d{"d–d MMM"}
                 }
                 Md{
-                    M{"d/M – d/M"}
-                    d{"d/M – d/M"}
+                    M{"d/MM – d/MM"}
+                    d{"d/MM – d/MM"}
                 }
                 d{
                     d{"d–d"}
@@ -1063,13 +1062,13 @@ ms{
                     y{"y–y"}
                 }
                 yM{
-                    M{"M/y – M/y"}
-                    y{"M/y – M/y"}
+                    M{"MM/y – MM/y"}
+                    y{"MM/y – MM/y"}
                 }
                 yMEd{
-                    M{"E, d/M/y – E, d/M/y"}
-                    d{"E, d/M/y – E, d/M/y"}
-                    y{"E, d/M/y – E, d/M/y"}
+                    M{"E, d/MM/y – E, d/MM/y"}
+                    d{"E, d/MM/y – E, d/MM/y"}
+                    y{"E, d/MM/y – E, d/MM/y"}
                 }
                 yMMM{
                     M{"MMM–MMM y"}
@@ -1085,14 +1084,14 @@ ms{
                     y{"MMMM y – MMMM y"}
                 }
                 yMMMd{
-                    M{"d MMM – d MMM, y"}
+                    M{"d MMM – d MMM y"}
                     d{"d–d MMM y"}
                     y{"d MMM y – d MMM y"}
                 }
                 yMd{
-                    M{"d/M/y – d/M/y"}
-                    d{"d/M/y – d/M/y"}
-                    y{"d/M/y – d/M/y"}
+                    M{"d/MM/y – d/MM/y"}
+                    d{"d/MM/y – d/MM/y"}
+                    y{"d/MM/y – d/MM/y"}
                 }
             }
             monthNames{

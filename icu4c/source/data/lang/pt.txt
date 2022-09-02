@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 pt{
     Keys{
         calendar{"Calendário"}
@@ -140,7 +139,7 @@ pt{
         dz{"dzonga"}
         dzg{"dazaga"}
         ebu{"embu"}
-        ee{"ewe"}
+        ee{"eve"}
         efi{"efique"}
         egy{"egípcio arcaico"}
         eka{"ekajuk"}
@@ -409,6 +408,7 @@ pt{
         ro_MD{"moldávio"}
         rof{"rombo"}
         rom{"romani"}
+        root{"raiz"}
         ru{"russo"}
         rup{"aromeno"}
         rw{"quiniaruanda"}
@@ -445,7 +445,7 @@ pt{
         sm{"samoano"}
         sma{"sami meridional"}
         smj{"sami de Lule"}
-        smn{"lapão de Inari"}
+        smn{"sami de Inari"}
         sms{"sami de Skolt"}
         sn{"xona"}
         snk{"soninquê"}
@@ -500,7 +500,7 @@ pt{
         twq{"tasawaq"}
         ty{"taitiano"}
         tyv{"tuviniano"}
-        tzm{"tamazight do Atlas Central"}
+        tzm{"tamazirte do Atlas Central"}
         udm{"udmurte"}
         ug{"uigur"}
         uga{"ugarítico"}
@@ -554,6 +554,9 @@ pt{
         yue{"cantonês (tradicional)"}
         zh{"chinês, mandarim"}
     }
+    Languages%short{
+        az{"azerbaijano"}
+    }
     Languages%variant{
         ckb{"curdo sorâni"}
         ps{"pushto"}
@@ -596,7 +599,7 @@ pt{
         Goth{"gótico"}
         Grek{"grego"}
         Gujr{"guzerate"}
-        Guru{"gurmuqui"}
+        Guru{"gurmukhi"}
         Hanb{"hanb"}
         Hang{"hangul"}
         Hani{"han"}
@@ -624,7 +627,7 @@ pt{
         Laoo{"lao"}
         Latf{"latim fraktur"}
         Latg{"latim gaélico"}
-        Latn{"latim"}
+        Latn{"latino"}
         Lepc{"lepcha"}
         Limb{"limbu"}
         Lina{"linear A"}
@@ -817,7 +820,7 @@ pt{
             grek{"Algarismos gregos"}
             greklow{"Algarismos gregos minúsculos"}
             gujr{"Algarismos guzerate"}
-            guru{"Algarismos gurmuqui"}
+            guru{"Algarismos gurmukhi"}
             hanidec{"Algarismos decimais chineses"}
             hans{"Algarismos chineses simplificados"}
             hansfin{"Algarismos financeiros chineses simplificados"}
@@ -832,7 +835,7 @@ pt{
             latn{"Algarismos ocidentais"}
             mlym{"Algarismos malaialos"}
             mong{"Algarismos mongóis"}
-            mymr{"Algarismos mianmarenses"}
+            mymr{"Algarismos de Myanmar"}
             native{"Dígitos nativos"}
             orya{"Algarismos oriá"}
             roman{"Algarismos romanos"}
@@ -889,6 +892,7 @@ pt{
         VALENCIA{"valenciano"}
         WADEGILE{"romanização Wade-Giles"}
     }
+    Version{"37"}
     characterLabelPattern{
         all{"{0} — todos"}
         category-list{"{0}: {1}"}
@@ -903,8 +907,6 @@ pt{
             one{"{0} traço"}
             other{"{0} traços"}
         }
-        subscript{"{0} subscrito"}
-        superscript{"{0} sobrescrito"}
     }
     codePatterns{
         language{"Idioma: {0}"}

@@ -42,7 +42,7 @@ public:
     CollationBuilder(const CollationTailoring *base, UErrorCode &errorCode);
     virtual ~CollationBuilder();
 
-    void disableFastLatin() { fastLatinEnabled = false; }
+    void disableFastLatin() { fastLatinEnabled = FALSE; }
 
     CollationTailoring *parseAndBuild(const UnicodeString &ruleString,
                                       const UVersionInfo rulesVersion,

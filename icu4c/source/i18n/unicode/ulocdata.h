@@ -22,10 +22,7 @@
 #include "unicode/ures.h"
 #include "unicode/uloc.h"
 #include "unicode/uset.h"
-
-#if U_SHOW_CPLUSPLUS_API
 #include "unicode/localpointer.h"
-#endif   // U_SHOW_CPLUSPLUS_API
 
 /**
  * \file
@@ -90,7 +87,7 @@ typedef enum ULocaleDataDelimiterType {
  * @param status    Pointer to error status code.
  * @stable ICU 3.4
  */
-U_CAPI ULocaleData* U_EXPORT2
+U_STABLE ULocaleData* U_EXPORT2
 ulocdata_open(const char *localeID, UErrorCode *status);
 
 /**
@@ -99,7 +96,7 @@ ulocdata_open(const char *localeID, UErrorCode *status);
  * @param uld       The locale data object to close
  * @stable ICU 3.4
  */
-U_CAPI void U_EXPORT2
+U_STABLE void U_EXPORT2
 ulocdata_close(ULocaleData *uld);
 
 #if U_SHOW_CPLUSPLUS_API
@@ -132,7 +129,7 @@ U_NAMESPACE_END
  * @param setting   Value of the "no substitute" attribute.
  * @stable ICU 3.4
  */
-U_CAPI void U_EXPORT2
+U_STABLE void U_EXPORT2
 ulocdata_setNoSubstitute(ULocaleData *uld, UBool setting);
 
 /**
@@ -146,7 +143,7 @@ ulocdata_setNoSubstitute(ULocaleData *uld, UBool setting);
  * @return UBool    Value of the "no substitute" attribute.
  * @stable ICU 3.4
  */
-U_CAPI UBool U_EXPORT2
+U_STABLE UBool U_EXPORT2
 ulocdata_getNoSubstitute(ULocaleData *uld);
 
 /**
@@ -176,7 +173,7 @@ ulocdata_getNoSubstitute(ULocaleData *uld);
  *                  In case of error, NULL is returned.
  * @stable ICU 3.4
  */
-U_CAPI USet* U_EXPORT2
+U_STABLE USet* U_EXPORT2
 ulocdata_getExemplarSet(ULocaleData *uld, USet *fillIn,
                         uint32_t options, ULocaleDataExemplarSetType extype, UErrorCode *status);
 
@@ -193,7 +190,7 @@ ulocdata_getExemplarSet(ULocaleData *uld, USet *fillIn,
  *                      the output was truncated.
  * @stable ICU 3.4
  */
-U_CAPI int32_t U_EXPORT2
+U_STABLE int32_t U_EXPORT2
 ulocdata_getDelimiter(ULocaleData *uld, ULocaleDataDelimiterType type, UChar *result, int32_t resultLength, UErrorCode *status);
 
 /**
@@ -223,7 +220,7 @@ typedef enum UMeasurementSystem {
  * @return UMeasurementSystem the measurement system used in the locale.
  * @stable ICU 2.8
  */
-U_CAPI UMeasurementSystem U_EXPORT2
+U_STABLE UMeasurementSystem U_EXPORT2
 ulocdata_getMeasurementSystem(const char *localeID, UErrorCode *status);
 
 /**
@@ -242,7 +239,7 @@ ulocdata_getMeasurementSystem(const char *localeID, UErrorCode *status);
  *                      which must not indicate a failure before the function call.
  * @stable ICU 2.8
  */
-U_CAPI void U_EXPORT2
+U_STABLE void U_EXPORT2
 ulocdata_getPaperSize(const char *localeID, int32_t *height, int32_t *width, UErrorCode *status);
 
 /**
@@ -251,7 +248,7 @@ ulocdata_getPaperSize(const char *localeID, int32_t *height, int32_t *width, UEr
  * @param status error code - could be U_MISSING_RESOURCE_ERROR if the version was not found.
  * @stable ICU 4.2
  */
-U_CAPI void U_EXPORT2
+U_STABLE void U_EXPORT2
 ulocdata_getCLDRVersion(UVersionInfo versionArray, UErrorCode *status);
 
 /**
@@ -269,7 +266,7 @@ ulocdata_getCLDRVersion(UVersionInfo versionArray, UErrorCode *status);
  *
  * @stable ICU 4.2
  */
-U_CAPI int32_t U_EXPORT2
+U_STABLE int32_t U_EXPORT2
 ulocdata_getLocaleDisplayPattern(ULocaleData *uld,
                                  UChar *pattern,
                                  int32_t patternCapacity,
@@ -291,7 +288,7 @@ ulocdata_getLocaleDisplayPattern(ULocaleData *uld,
  *
  * @stable ICU 4.2
  */
-U_CAPI int32_t U_EXPORT2
+U_STABLE int32_t U_EXPORT2
 ulocdata_getLocaleSeparator(ULocaleData *uld,
                             UChar *separator,
                             int32_t separatorCapacity,

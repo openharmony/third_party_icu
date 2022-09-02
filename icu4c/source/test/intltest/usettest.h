@@ -94,7 +94,6 @@ private:
     void TestIntOverflow();
     void TestUnusedCcc();
     void TestDeepPattern();
-    void TestEmptyString();
 
 private:
 

@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 sr_Latn{
     %%Parent{"root"}
     Keys{
@@ -115,7 +114,6 @@ sr_Latn{
         dar{"darginski"}
         dav{"taita"}
         de{"nemački"}
-        de_AT{"austrijski nemački"}
         de_CH{"švajcarski visoki nemački"}
         del{"delaverski"}
         den{"slejvi"}
@@ -366,7 +364,7 @@ sr_Latn{
         oc{"oksitanski"}
         oj{"odžibve"}
         om{"oromo"}
-        or{"odija"}
+        or{"orija"}
         os{"osetinski"}
         osa{"osage"}
         ota{"osmanski turski"}
@@ -398,6 +396,7 @@ sr_Latn{
         ro_MD{"moldavski"}
         rof{"rombo"}
         rom{"romski"}
+        root{"rut"}
         ru{"ruski"}
         rup{"cincarski"}
         rw{"kinjaruanda"}
@@ -531,10 +530,6 @@ sr_Latn{
         zun{"zuni"}
         zxx{"bez lingvističkog sadržaja"}
         zza{"zaza"}
-    }
-    Languages%long{
-        zh_Hans{"pojednostavljeni mandarinski kineski"}
-        zh_Hant{"tradicionalni mandarinski kineski"}
     }
     Languages%menu{
         yue{"kantonski kineski"}
@@ -858,6 +853,7 @@ sr_Latn{
         TARASK{"Taraskijevička ortografija"}
         VALENCIA{"Valencijska"}
     }
+    Version{"37"}
     characterLabelPattern{
         all{"{0} — sve"}
         category-list{"{0}: {1}"}
@@ -873,8 +869,6 @@ sr_Latn{
             one{"{0} potez"}
             other{"{0} poteza"}
         }
-        subscript{"napisano ispod {0}"}
-        superscript{"napisano iznad {0}"}
     }
     codePatterns{
         language{"Jezik: {0}"}

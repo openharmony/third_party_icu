@@ -175,17 +175,19 @@ typedef enum UDateAbsoluteUnit {
      */
     UDAT_ABSOLUTE_QUARTER,
 
+#ifndef U_HIDE_DRAFT_API
     /**
      * Hour
-     * @stable ICU 65
+     * @draft ICU 65
      */
     UDAT_ABSOLUTE_HOUR,
 
     /**
      * Minute
-     * @stable ICU 65
+     * @draft ICU 65
      */
     UDAT_ABSOLUTE_MINUTE,
+#endif // U_HIDE_DRAFT_API
 
 #ifndef U_HIDE_DEPRECATED_API
     /**

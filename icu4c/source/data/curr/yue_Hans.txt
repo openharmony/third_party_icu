@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 yue_Hans{
     %%Parent{"root"}
     Currencies{
@@ -1117,7 +1116,7 @@ yue_Hans{
             "法国法郎 (UIC)",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "法郎 (CFA–BCEAO)",
         }
         XPD{
@@ -2223,4 +2222,5 @@ yue_Hans{
     CurrencyUnitPatterns{
         other{"{0} {1}"}
     }
+    Version{"37"}
 }

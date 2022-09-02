@@ -22,7 +22,6 @@
 #include "unicode/uniset.h"
 #include "unicode/uchar.h"
 #include "unicode/uchriter.h"
-#include "unicode/ustring.h"
 #include "unicode/parsepos.h"
 #include "unicode/parseerr.h"
 
@@ -155,14 +154,7 @@ RBBIDataHeader *RBBIRuleBuilder::flattenData() {
     int32_t reverseTableSize  = align8(fForwardTable->getSafeTableSize());
     int32_t trieSize          = align8(fSetBuilder->getTrieSize());
     int32_t statusTableSize   = align8(fRuleStatusVals->size() * sizeof(int32_t));
-
-    int32_t rulesLengthInUTF8 = 0;
-    u_strToUTF8WithSub(0, 0, &rulesLengthInUTF8,
-                       fStrippedRules.getBuffer(), fStrippedRules.length(),
-                       0xfffd, nullptr, fStatus);
-    *fStatus = U_ZERO_ERROR;
-
-    int32_t rulesSize         = align8((rulesLengthInUTF8+1));
+    int32_t rulesSize         = align8((fStrippedRules.length()+1) * sizeof(UChar));
 
     int32_t         totalSize = headerSize
                                 + forwardTableSize
@@ -205,11 +197,11 @@ RBBIDataHeader *RBBIRuleBuilder::flattenData() {
     data->fRTableLen     = reverseTableSize;
 
     data->fTrie          = data->fRTable + data->fRTableLen;
-    data->fTrieLen       = trieSize;
-    data->fStatusTable   = data->fTrie    + data->fTrieLen;
+    data->fTrieLen       = fSetBuilder->getTrieSize();
+    data->fStatusTable   = data->fTrie    + trieSize;
     data->fStatusTableLen= statusTableSize;
     data->fRuleSource    = data->fStatusTable + statusTableSize;
-    data->fRuleSourceLen = rulesLengthInUTF8;
+    data->fRuleSourceLen = fStrippedRules.length() * sizeof(UChar);
 
     uprv_memset(data->fReserved, 0, sizeof(data->fReserved));
 
@@ -222,12 +214,7 @@ RBBIDataHeader *RBBIRuleBuilder::flattenData() {
         ruleStatusTable[i] = fRuleStatusVals->elementAti(i);
     }
 
-    u_strToUTF8WithSub((char *)data+data->fRuleSource, rulesSize, &rulesLengthInUTF8,
-                       fStrippedRules.getBuffer(), fStrippedRules.length(),
-                       0xfffd, nullptr, fStatus);
-    if (U_FAILURE(*fStatus)) {
-        return NULL;
-    }
+    fStrippedRules.extract((UChar *)((uint8_t *)data+data->fRuleSource), rulesSize/2+1, *fStatus);
 
     return data;
 }
@@ -287,7 +274,9 @@ RBBIDataHeader *RBBIRuleBuilder::build(UErrorCode &status) {
 
     //
     // UnicodeSet processing.
-    //    Munge the Unicode Sets to create an initial set of character categories.
+    //    Munge the Unicode Sets to create a set of character categories.
+    //    Generate the mapping tables (TRIE) from input code points to
+    //    the character categories.
     //
     fSetBuilder->buildRanges();
 
@@ -301,12 +290,6 @@ RBBIDataHeader *RBBIRuleBuilder::build(UErrorCode &status) {
     }
 
     fForwardTable->buildForwardTable();
-
-    // State table and character category optimization.
-    // Merge equivalent rows and columns.
-    // Note that this process alters the initial set of character categories,
-    // causing the representation of UnicodeSets in the parse tree to become invalid.
-
     optimizeTables();
     fForwardTable->buildSafeReverseTable(status);
 
@@ -319,9 +302,6 @@ RBBIDataHeader *RBBIRuleBuilder::build(UErrorCode &status) {
     }
 #endif
 
-    //    Generate the mapping tables (TRIE) from input code points to
-    //    the character categories.
-    //
     fSetBuilder->buildTrie();
 
     //

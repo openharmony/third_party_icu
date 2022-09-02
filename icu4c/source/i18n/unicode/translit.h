@@ -375,7 +375,7 @@ class TransliteratorIDParser;
  *
  * <p>It is also possible to match the beginning or the end of the text using a <code>UnicodeSet</code>.
  * This is done by including a virtual anchor character '<code>$</code>' at the end of the
- * set pattern. Although this is usually the match character for the end anchor, the set will
+ * set pattern. Although this is usually the match chafacter for the end anchor, the set will
  * match either the beginning or the end of the text, depending on its placement. For
  * example:
  *
@@ -683,8 +683,8 @@ public:
      * unambiguous transliterations.  After the last call to this
      * method, there may be untransliterated text that is waiting for
      * more input to resolve an ambiguity.  In order to perform these
-     * pending transliterations, clients should call
-     * {@link #finishTransliteration } after the last call to this
+     * pending transliterations, clients should call {@link
+     * #finishTransliteration } after the last call to this
      * method has been made.
      *
      * @param text the buffer holding transliterated and untransliterated text
@@ -741,7 +741,8 @@ public:
     /**
      * Transliterates the portion of the text buffer that can be
      * transliterated unambiguosly.  This is a convenience method; see
-     * {@link #transliterate(Replaceable&, UTransPosition&, const UnicodeString&, UErrorCode&) const }
+     * {@link
+     * #transliterate(Replaceable&, UTransPosition&, const UnicodeString&, UErrorCode&) const }
      * for details.
      * @param text the buffer holding transliterated and
      * untransliterated text
@@ -760,7 +761,8 @@ public:
      * <code>transliterate()</code>.
      * @param text the buffer holding transliterated and
      * untransliterated text.
-     * @param index the array of indices previously passed to {@link #transliterate }
+     * @param index the array of indices previously passed to {@link
+     * #transliterate }
      * @stable ICU 2.0
      */
     virtual void finishTransliteration(Replaceable& text,
@@ -880,8 +882,8 @@ public:
      * another transliterator.
      * @param text the text to be transliterated
      * @param index the position indices
-     * @param incremental if true, then assume more characters may be inserted
-     * at index.limit, and postpone processing to accommodate future incoming
+     * @param incremental if TRUE, then assume more characters may be inserted
+     * at index.limit, and postpone processing to accomodate future incoming
      * characters
      * @stable ICU 2.4
      */
@@ -895,14 +897,14 @@ private:
      * Top-level transliteration method, handling filtering, incremental and
      * non-incremental transliteration, and rollback.  All transliteration
      * public API methods eventually call this method with a rollback argument
-     * of true.  Other entities may call this method but rollback should be
-     * false.
+     * of TRUE.  Other entities may call this method but rollback should be
+     * FALSE.
      *
      * <p>If this transliterator has a filter, break up the input text into runs
      * of unfiltered characters.  Pass each run to
      * subclass.handleTransliterate().
      *
-     * <p>In incremental mode, if rollback is true, perform a special
+     * <p>In incremental mode, if rollback is TRUE, perform a special
      * incremental procedure in which several passes are made over the input
      * text, adding one character at a time, and committing successful
      * transliterations as they occur.  Unsuccessful transliterations are rolled
@@ -910,12 +912,12 @@ private:
      *
      * @param text the text to be transliterated
      * @param index the position indices
-     * @param incremental if true, then assume more characters may be inserted
-     * at index.limit, and postpone processing to accommodate future incoming
+     * @param incremental if TRUE, then assume more characters may be inserted
+     * at index.limit, and postpone processing to accomodate future incoming
      * characters
-     * @param rollback if true and if incremental is true, then perform special
+     * @param rollback if TRUE and if incremental is TRUE, then perform special
      * incremental processing, as described above, and undo partial
-     * transliterations where necessary.  If incremental is false then this
+     * transliterations where necessary.  If incremental is FALSE then this
      * parameter is ignored.
      */
     virtual void filteredTransliterate(Replaceable& text,
@@ -966,8 +968,8 @@ public:
 
     /**
      * Returns a name for this transliterator that is appropriate for
-     * display to the user in the default locale.  See {@link #getDisplayName }
-     * for details.
+     * display to the user in the default locale.  See {@link
+     * #getDisplayName } for details.
      * @param ID     the string identifier for this transliterator
      * @param result Output param to receive the display name
      * @return       A reference to 'result'.
@@ -1117,7 +1119,7 @@ public:
      * to recreate this transliterator.
      * @param result the string to receive the rules.  Previous
      * contents will be deleted.
-     * @param escapeUnprintable if true then convert unprintable
+     * @param escapeUnprintable if TRUE then convert unprintable
      * character to their hex escape representations, \\uxxxx or
      * \\Uxxxxxxxx.  Unprintable characters are those other than
      * U+000A, U+0020..U+007E.
@@ -1166,8 +1168,8 @@ public:
      * input text by this Transliterator.  This incorporates this
      * object's current filter; if the filter is changed, the return
      * value of this function will change.  The default implementation
-     * returns an empty set.  Some subclasses may override
-     * {@link #handleGetSourceSet } to return a more precise result. The
+     * returns an empty set.  Some subclasses may override {@link
+     * #handleGetSourceSet } to return a more precise result.  The
      * return result is approximate in any case and is intended for
      * use by tests, tools, or utilities.
      * @param result receives result set; previous contents lost

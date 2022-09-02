@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 yo{
     Currencies{
         AED{
@@ -25,7 +24,7 @@ yo{
         }
         AOA{
             "AOA",
-            "kíwánsà Angola",
+            "Wansa ti Orílẹ́ède Àngólà",
         }
         ARS{
             "ARS",
@@ -65,7 +64,7 @@ yo{
         }
         BIF{
             "BIF",
-            "Faransi Bùùrúndì",
+            "Faransi ti Orílẹ́ède Bùùrúndì",
         }
         BMD{
             "BMD",
@@ -93,7 +92,7 @@ yo{
         }
         BWP{
             "BWP",
-            "Pula Bọ̀tìsúwánà",
+            "Pula ti Orílẹ́ède Bọ̀tìsúwánà",
         }
         BYN{
             "BYN",
@@ -105,11 +104,11 @@ yo{
         }
         CAD{
             "CA$",
-            "Dọ́là Kánádà",
+            "Dọla ti Orílẹ́ède Kánádà",
         }
         CDF{
             "CDF",
-            "Firanki Kongo",
+            "Faransi ti Orílẹ́ède Kóngò",
         }
         CHF{
             "CHF",
@@ -145,7 +144,7 @@ yo{
         }
         CVE{
             "CVE",
-            "Èsìkúdò Kapú Faadì",
+            "Kabofediano ti Orílẹ́ède Esuodo",
         }
         CZK{
             "CZK",
@@ -153,7 +152,7 @@ yo{
         }
         DJF{
             "DJF",
-            "Faransi Dibouti",
+            "Faransi ti Orílẹ́ède Dibouti",
         }
         DKK{
             "DKK",
@@ -173,11 +172,11 @@ yo{
         }
         ERN{
             "ERN",
-            "Nakifasì Eritira",
+            "Nakifa ti Orílẹ́ède Eriteriani",
         }
         ETB{
             "ETB",
-            "Báà Etópíà",
+            "Biri ti Orílẹ́ède Eutopia",
         }
         EUR{
             "€",
@@ -205,7 +204,7 @@ yo{
         }
         GHS{
             "GHS",
-            "sídì Gana",
+            "Sídì Ghanaian",
         }
         GIP{
             "GIP",
@@ -213,11 +212,11 @@ yo{
         }
         GMD{
             "GMD",
-            "Dalasi Gamibia",
+            "Dalasi ti Orílẹ́ède Gamibia",
         }
         GNF{
             "GNF",
-            "Fírànkì Gínì",
+            "Fírànkì Gíníànì",
         }
         GNS{
             "GNS",
@@ -289,7 +288,7 @@ yo{
         }
         KES{
             "KES",
-            "Ṣiili Kenya",
+            "ṣiili ti Orílẹ́ède Kenya",
         }
         KGS{
             "KGS",
@@ -301,7 +300,7 @@ yo{
         }
         KMF{
             "KMF",
-            "Faransi Komori",
+            "Faransi ti Orílẹ́ède ṣomoriani",
         }
         KPW{
             "KPW",
@@ -337,7 +336,7 @@ yo{
         }
         LRD{
             "LRD",
-            "Dọla Liberia",
+            "Dọla ti Orílẹ́ède Liberia",
         }
         LSL{
             "LSL",
@@ -345,11 +344,11 @@ yo{
         }
         LYD{
             "LYD",
-            "Dínà Líbíyà",
+            "Dina ti Orílẹ́ède Libiya",
         }
         MAD{
             "MAD",
-            "Dírámì Morokò",
+            "Dirami ti Orílẹ́ède Moroko",
         }
         MDL{
             "MDL",
@@ -357,7 +356,7 @@ yo{
         }
         MGA{
             "MGA",
-            "Faransi Malagasi",
+            "Faransi ti Orílẹ́ède Malagasi",
         }
         MKD{
             "MKD",
@@ -385,7 +384,7 @@ yo{
         }
         MUR{
             "MUR",
-            "Rupi Maritusi",
+            "Rupi ti Orílẹ́ède Maritiusi",
         }
         MVR{
             "MVR",
@@ -393,7 +392,7 @@ yo{
         }
         MWK{
             "MWK",
-            "Kásà Màláwì",
+            "Kaṣa ti Orílẹ́ède Malawi",
         }
         MXN{
             "MX$",
@@ -413,11 +412,11 @@ yo{
         }
         NAD{
             "NAD",
-            "Dọla Namibíà",
+            "Dọla ti Orílẹ́ède Namibia",
         }
         NGN{
             "₦",
-            "Náírà Nàìjíríà",
+            "Náìrà ti Orílẹ̀-èdè Nàìjíríà",
         }
         NIO{
             "NIO",
@@ -452,7 +451,7 @@ yo{
             "Kínà Papua Guinea Tuntun",
         }
         PHP{
-            "₱",
+            "PHP",
             "Písò Fílípìnì",
         }
         PKR{
@@ -485,7 +484,7 @@ yo{
         }
         RWF{
             "RWF",
-            "Faransi Ruwanda",
+            "Faransi ti Orílẹ́ède Ruwanda",
         }
         SAR{
             "SAR",
@@ -497,11 +496,11 @@ yo{
         }
         SCR{
             "SCR",
-            "Rúpì Sayiselesi",
+            "Rupi ti Orílẹ́ède Sayiselesi",
         }
         SDG{
             "SDG",
-            "Pọ́n-ùn Sùdáànì",
+            "Dina ti Orílẹ́ède Sudani",
         }
         SDP{
             "SDP",
@@ -517,15 +516,15 @@ yo{
         }
         SHP{
             "SHP",
-            "Pọ́n-un Elena",
+            "Pọọun ti Orílẹ́ède ̣Elena",
         }
         SLL{
             "SLL",
-            "Líónì Sira Líonì",
+            "Lioni",
         }
         SOS{
             "SOS",
-            "Ṣílè Somali",
+            "Sile ti Orílẹ́ède Somali",
         }
         SRD{
             "SRD",
@@ -533,7 +532,7 @@ yo{
         }
         SSP{
             "SSP",
-            "Pọ́n-un Gúúsù Sùdáànì",
+            "Pọ́n-ùn Gúúsù Sùdáànì",
         }
         STD{
             "STD",
@@ -541,7 +540,7 @@ yo{
         }
         STN{
             "STN",
-            "Dọbíra Sao tome àti Pirisipi",
+            "Dobira ti Orílẹ́ède Sao tome Ati Pirisipe",
         }
         SYP{
             "SYP",
@@ -549,7 +548,7 @@ yo{
         }
         SZL{
             "SZL",
-            "Lilangeni Suwasi",
+            "Lilangeni",
         }
         THB{
             "THB",
@@ -565,7 +564,7 @@ yo{
         }
         TND{
             "TND",
-            "Dínà Tuniṣíà",
+            "Dina ti Orílẹ́ède Tunisia",
         }
         TOP{
             "TOP",
@@ -585,7 +584,7 @@ yo{
         }
         TZS{
             "TZS",
-            "Sile Tansania",
+            "Sile ti Orílẹ́ède Tansania",
         }
         UAH{
             "UAH",
@@ -593,7 +592,7 @@ yo{
         }
         UGX{
             "UGX",
-            "Ṣile Uganda",
+            "Siile ti Orílẹ́ède Uganda",
         }
         USD{
             "$",
@@ -625,15 +624,15 @@ yo{
         }
         XAF{
             "FCFA",
-            "Firanki àárín Afíríkà",
+            "Faransi ti Orílẹ́ède BEKA",
         }
         XCD{
             "EC$",
             "Dọ́là Ilà Oòrùn Karíbíà",
         }
         XOF{
-            "F CFA",
-            "Faransì ìwọ̀-oorùn Afíríkà",
+            "CFA",
+            "Faransi ti Orílẹ́ède BIKEAO",
         }
         XPF{
             "CFPF",
@@ -649,7 +648,7 @@ yo{
         }
         ZAR{
             "ZAR",
-            "Rándì Gúúsù Afíríkà",
+            "Randi ti Orílẹ́ède Ariwa Afirika",
         }
         ZMK{
             "ZMK",
@@ -657,7 +656,7 @@ yo{
         }
         ZMW{
             "ZMW",
-            "Kàwasà Sámbíà",
+            "Kawaṣa ti Orílẹ́ède Saabia",
         }
         ZWD{
             "ZWD",
@@ -668,290 +667,30 @@ yo{
         KRW{"₩"}
     }
     CurrencyPlurals{
-        ALL{
-            other{"lẹ́kè Àlìbéníà"}
-        }
-        ANG{
-            other{"àwọn gílídà Netherlands Antillean"}
-        }
-        AOA{
-            other{"àwọn kíwánsà Angola"}
-        }
-        ARS{
-            other{"àwọn pẹ́sò Agẹntínà"}
-        }
-        AWG{
-            other{"àwọn fuloríìnì Àrúbà"}
-        }
-        BAM{
-            other{"àwọn àmi Yíyípadà Bosnia-Herzegovina"}
-        }
-        BBD{
-            other{"àwọn dọ́là Bábádọ̀ọ̀sì"}
-        }
-        BGN{
-            other{"Lẹ́fà Bọ̀lìgéríà"}
-        }
-        BIF{
-            other{"àwọn faransi Bùùrúndì"}
-        }
-        BMD{
-            other{"àwọ́n dọ́là Bẹ̀múdà"}
-        }
-        BOB{
-            other{"àwọn bọlifiánò Bọ̀lífíà"}
-        }
         BRL{
             other{"Awon owó ti Orílẹ̀-èdè Brazil"}
         }
-        BSD{
-            other{"àwọn dọ́là Bàhámà"}
-        }
-        BWP{
-            other{"àwọn pula Bọ̀tìsúwánà"}
-        }
-        BYN{
-            other{"àwọn rọ́bù Bẹ̀lárùùsì"}
-        }
-        BZD{
-            other{"àwọn Dọ́là Bẹ́lìsè"}
-        }
-        CAD{
-            other{"àwọn dọ́là Kánádà"}
-        }
-        CDF{
-            other{"àwọn firanki Kongo"}
-        }
-        CHF{
-            other{"Faransi Siwisi"}
-        }
-        CLP{
-            other{"àwọn pẹ́sò Ṣílè"}
-        }
-        COP{
-            other{"àwọn pẹ́sò Kòlóḿbíà"}
-        }
-        CRC{
-            other{"àwọ́n kólọ́ọ̀nì Kosita Ríkà"}
-        }
-        CUC{
-            other{"àwọn pẹ́sò yíyípadà Kúbà"}
-        }
-        CVE{
-            other{"àwọn èsìkúdò Kapú Faadì"}
-        }
-        CZK{
-            other{"àwọn koruna Ṣẹ́ẹ̀kì"}
-        }
-        DJF{
-            other{"àwọn faransi Dibouti"}
-        }
-        DKK{
-            other{"Kírònà Dáníìṣì"}
-        }
-        DOP{
-            other{"àwọn pẹ́sò Dòníníkà"}
-        }
-        DZD{
-            other{"àwọn dínà Àlùgèríánì"}
-        }
         EGP{
-            other{"àwọn pọ́n-ún Ejipítì"}
-        }
-        ERN{
-            other{"àwọn nakifasì Eritira"}
-        }
-        ETB{
-            other{"àwọn báà Etópíà"}
+            other{"pọ́nùn"}
         }
         EUR{
             other{"Awon owó Yúrò"}
         }
-        FKP{
-            other{
-                "àwọn Pọ́n-ùn Erékùsù Falkland [ Pɔ́n-ùn Erékùsù Falkland ] 1.23 Pọ́n"
-                "-ùn Erékùsù Falkland 0.00 pọ́n-ùn Erékùsù Falkland"
-            }
-        }
-        GHS{
-            other{"àwọn sídì Gana"}
-        }
-        GIP{
-            other{"àwọn pọ́n-ùn Gibraltar"}
-        }
-        GMD{
-            other{"àwọn dalasi Gamibia"}
-        }
-        GNF{
-            other{"àwọn fírànkì Gínì"}
-        }
-        GTQ{
-            other{"àwọn kúẹ́tísààlì Guatimílà"}
-        }
-        GYD{
-            other{"àwọn dọ́là Gùyánà"}
-        }
-        HNL{
-            other{"àwọn Lẹmipírà Ọ́ńdúrà"}
-        }
-        HRK{
-            other{"àwọn kúnà Croatian"}
-        }
-        HTG{
-            other{"àwọn gọ́dì Àítì"}
-        }
-        HUF{
-            other{"àwọn fọ́ríǹtì Họ̀ngérí"}
-        }
-        ISK{
-            other{"kòrónà aílandíìkì"}
-        }
-        JMD{
-            other{"àwọn dọ́là Jàmáíkà"}
-        }
-        KES{
-            other{"àwọ́n ṣiili Kenya"}
-        }
-        KMF{
-            other{"àwọn faransi Komori"}
-        }
-        KYD{
-            other{"àwọn dọ́là Erékùsù Cayman"}
-        }
-        LRD{
-            other{"àwọn dọla Liberia"}
-        }
-        LYD{
-            other{"àwọn dínà Líbíyà"}
-        }
-        MAD{
-            other{"àwọn dírámì Morokò"}
-        }
-        MDL{
-            other{"Léhì Moldovan"}
-        }
-        MGA{
-            other{"àwọn faransi Malagasi"}
-        }
-        MKD{
-            other{"dẹ́nàrì Masidóníà"}
-        }
-        MUR{
-            other{"àwọn rupi Maritusi"}
-        }
-        MWK{
-            other{"àwọn kásà Màláwì"}
-        }
-        MXN{
-            other{"àwọn pẹ́sò Mẹ́síkò"}
-        }
-        MZN{
-            other{"àwọn mẹ́tíkààlì Mòsáḿbíìkì"}
-        }
-        NAD{
-            other{"àwọn dọla Namibíà"}
-        }
         NGN{
             other{"Náírà Nàìjíríà"}
-        }
-        NIO{
-            other{"àwọn kọ̀dóbà Naikarágúà"}
-        }
-        NOK{
-            other{"kìrónà Nọ́ọ́wè"}
-        }
-        PAB{
-            other{"àwọn bálíbóà Pànámà"}
-        }
-        PEN{
-            other{"àwọn sólì Pèrúù"}
-        }
-        PLN{
-            other{"àwọn sílọ̀tì Pọ́líṣì"}
-        }
-        PYG{
-            other{"àwọn gúáránì Párágúwè"}
-        }
-        RON{
-            other{"Léhì Ròméníà"}
-        }
-        RSD{
-            other{"àwọn dínárì Sàbíà"}
         }
         RUB{
             other{"Owó ruble ti ilẹ̀ Rọ́ṣíà"}
         }
-        RWF{
-            other{"àwọn faransi Ruwanda"}
-        }
-        SCR{
-            other{"àwọ́n rúpì Sayiselesi"}
-        }
-        SDG{
-            other{"àwọn pọ́n-ùn Sùdáànì"}
-        }
-        SEK{
-            other{"Kòrónọ̀ Súwídìn"}
-        }
-        SHP{
-            other{"àwọn pọ́n-un Elena"}
-        }
-        SLL{
-            other{"àwọn líónì Sira Líonì"}
-        }
-        SOS{
-            other{"àwọ́n ṣílè Somali"}
-        }
-        SRD{
-            other{"àwọn Dọ́là Súrínámì"}
-        }
-        SSP{
-            other{"àwọn pọ́n-un Gúúsù Sùdáànì"}
-        }
-        SZL{
-            other{"emalangeni Suwasi"}
-        }
-        TND{
-            other{"àwọn dínà Tuniṣíà"}
-        }
-        TTD{
-            other{"àwọn dọ́là Trinidad àti Tobago"}
-        }
-        TZS{
-            other{"àwọn ṣile Tansania"}
-        }
-        UGX{
-            other{"àwọn ṣile Uganda"}
-        }
         USD{
             other{"Dọ́là ti Orílẹ̀-Èdè Amẹ́ríkà"}
         }
-        UYU{
-            other{"àwọn pẹ́sò Úrúgúwè"}
-        }
-        VES{
-            other{"àwọn bọ̀lífà Fẹnẹsuẹ́là"}
-        }
-        XAF{
-            other{"àwọn firanki àárín Afíríkà"}
-        }
-        XCD{
-            other{"àwọn dọ́là Ilà Oòrùn Karíbíà"}
-        }
-        XOF{
-            other{"àwọn faransì ìwọ̀-oorùn Afíríkà"}
-        }
         XXX{
             other{"owóníná àìmọ̀"}
-        }
-        ZAR{
-            other{"rándì Gúúsù Afíríkà"}
-        }
-        ZMW{
-            other{"àwọn kàwasà Sámbíà"}
         }
     }
     CurrencyUnitPatterns{
         other{"{0} {1}"}
     }
+    Version{"37"}
 }

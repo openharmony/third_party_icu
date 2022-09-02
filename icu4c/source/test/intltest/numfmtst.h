@@ -153,7 +153,7 @@ class NumberFormatTest: public CalendarTimeZoneTest {
 
     void TestCurrencyNames(void);
 
-    void TestCurrencyVariants(void);
+    void Test20484_NarrowSymbolFallback(void);
 
     void TestCurrencyAmount(void);
 
@@ -301,10 +301,6 @@ class NumberFormatTest: public CalendarTimeZoneTest {
     void Test13735_GroupingSizeGetter();
     void Test13734_StrictFlexibleWhitespace();
     void Test20961_CurrencyPluralPattern();
-    void Test21134_ToNumberFormatter();
-    void Test13733_StrictAndLenient();
-    void Test21232_ParseTimeout();
-    void Test10997_FormatCurrency();
 
  private:
     UBool testFormattableAsUFormattable(const char *file, int line, Formattable &f);

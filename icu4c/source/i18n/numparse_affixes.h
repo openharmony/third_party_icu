@@ -128,7 +128,7 @@ class AffixPatternMatcherBuilder : public TokenConsumer, public MutableMatcherCo
     void consumeToken(::icu::number::impl::AffixPatternType type, UChar32 cp, UErrorCode& status) override;
 
     /** NOTE: You can build only once! */
-    AffixPatternMatcher build(UErrorCode& status);
+    AffixPatternMatcher build();
 
   private:
     ArraySeriesMatcher::MatcherArray fMatchers;
@@ -160,8 +160,7 @@ class U_I18N_API AffixPatternMatcher : public ArraySeriesMatcher {
   private:
     CompactUnicodeString<4> fPattern;
 
-    AffixPatternMatcher(MatcherArray& matchers, int32_t matchersLen, const UnicodeString& pattern,
-                        UErrorCode& status);
+    AffixPatternMatcher(MatcherArray& matchers, int32_t matchersLen, const UnicodeString& pattern);
 
     friend class AffixPatternMatcherBuilder;
 };

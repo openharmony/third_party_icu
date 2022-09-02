@@ -1,12 +1,11 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 cy{
     Keys{
         calendar{"Calendr"}
         cf{"Fformat Arian"}
         collation{"Trefn"}
-        currency{"Math o Arian"}
+        currency{"Arian Breiniol"}
         hc{"Cylched Awr (12 vs 24)"}
         lb{"Arddull Toriad Llinell"}
         ms{"System Fesur"}
@@ -389,9 +388,9 @@ cy{
         prg{"Prwseg"}
         pro{"Hen Brofensaleg"}
         ps{"Pashto"}
-        pt{"Portiwgaleg"}
-        pt_BR{"Portiwgaleg Brasil"}
-        pt_PT{"Portiwgaleg Ewrop"}
+        pt{"Portiwgeeg"}
+        pt_BR{"Portiwgeeg Brasil"}
+        pt_PT{"Portiwgeeg Ewrop"}
         qu{"Quechua"}
         quc{"K’iche’"}
         raj{"Rajasthaneg"}
@@ -403,6 +402,7 @@ cy{
         ro_MD{"Moldofeg"}
         rof{"Rombo"}
         rom{"Romani"}
+        root{"Y Gwraidd"}
         rtm{"Rotumaneg"}
         ru{"Rwseg"}
         rup{"Aromaneg"}
@@ -444,7 +444,7 @@ cy{
         sm{"Samöeg"}
         sma{"Sami Deheuol"}
         smj{"Sami Lwle"}
-        smn{"Inari Sami"}
+        smn{"Sami Inari"}
         sms{"Sami Scolt"}
         sn{"Shona"}
         snk{"Soninceg"}
@@ -481,7 +481,7 @@ cy{
         ti{"Tigrinya"}
         tig{"Tigreg"}
         tiv{"Tifeg"}
-        tk{"Tyrcmeneg"}
+        tk{"Twrcmeneg"}
         tkl{"Tocelaweg"}
         tkr{"Tsakhureg"}
         tl{"Tagalog"}
@@ -503,7 +503,7 @@ cy{
         twq{"Tasawaq"}
         ty{"Tahitïeg"}
         tyv{"Twfwnieg"}
-        tzm{"Tamazight Canol yr Atlas"}
+        tzm{"Tamaseit Canolbarth Moroco"}
         udm{"Fotiaceg"}
         ug{"Uighur"}
         uga{"Wgariteg"}
@@ -539,10 +539,10 @@ cy{
         zap{"Zapoteceg"}
         zbl{"Blisssymbols"}
         zea{"Zêlandeg"}
-        zgh{"Tamaseit Moroco Safonol"}
-        zh{"Tsieinëeg"}
-        zh_Hans{"Tsieinëeg Symledig"}
-        zh_Hant{"Tsieinëeg Traddodiadol"}
+        zgh{"Tamaseit Safonol"}
+        zh{"Tsieineeg"}
+        zh_Hans{"Tsieineeg Symledig"}
+        zh_Hant{"Tsieineeg Traddodiadol"}
         zu{"Swlw"}
         zun{"Swni"}
         zxx{"Dim cynnwys ieithyddol"}
@@ -558,6 +558,8 @@ cy{
     }
     Languages%short{
         az{"Aseri"}
+        en_GB{"Saesneg (DU)"}
+        en_US{"Saesneg (UDA)"}
     }
     Scripts{
         Arab{"Arabaidd"}
@@ -591,6 +593,7 @@ cy{
         Mlym{"Malayalamaidd"}
         Mong{"Mongolaidd"}
         Mymr{"Myanmaraidd"}
+        Ogam{"Ogam"}
         Orya{"Orïaidd"}
         Sinh{"Sinhanaidd"}
         Taml{"Tamilaidd"}
@@ -611,14 +614,14 @@ cy{
     }
     Types{
         calendar{
-            buddhist{"Calendr Bwdaidd"}
+            buddhist{"Calendr y Bwdiaid"}
             chinese{"Calendr Tseina"}
             coptic{"Calendr y Coptiaid"}
             dangi{"Calendr Dangi"}
             ethiopic{"Calendr Ethiopia"}
             ethiopic-amete-alem{"Calendr Amete Alem Ethiopia"}
             gregorian{"Calendr Gregori"}
-            hebrew{"Calendr Hebreaidd"}
+            hebrew{"Calendr yr Hebraed"}
             indian{"Calendr Cenedlaethol India"}
             islamic{"Calendr Islam"}
             iso8601{"Calendr ISO-8601"}
@@ -708,13 +711,23 @@ cy{
         ALUKU{"tafodiaith Aluku"}
         AREVELA{"Armeneg Dwyreiniol"}
         AREVMDA{"Armeneg Gorllewinol"}
+        BAUDDHA{"BAUDDHA"}
+        BISCAYAN{"BISCAYAN"}
         BOHORIC{"Gwyddor Bohorič"}
         DAJNKO{"gwyddor Dajnko"}
         EMODENG{"Saesneg Modern Cynnar"}
         FONIPA{"Seineg IPA"}
         FONUPA{"Seineg UPA"}
+        FONXSAMP{"FONXSAMP"}
+        HOGNORSK{"HOGNORSK"}
+        ITIHASA{"ITIHASA"}
+        JAUER{"JAUER"}
+        JYUTPING{"JYUTPING"}
         KKCOR{"yr Orgraff Gyffredin"}
+        KOCIEWIE{"KOCIEWIE"}
         KSCOR{"yr Orgraff Safonol"}
+        LAUKIKA{"LAUKIKA"}
+        LUNA1918{"LUNA1918"}
         METELKO{"gwyddor Metelko"}
         NDYUKA{"tafodiaith Ndyuka"}
         NEDIS{"tafodiaith Natisone"}
@@ -723,7 +736,13 @@ cy{
         PAMAKA{"tafodiaith Pamaka"}
         POSIX{"Cyfrifiadur"}
         SCOTLAND{"Saesneg Safonol yr Alban"}
+        SURMIRAN{"SURMIRAN"}
+        SURSILV{"SURSILV"}
+        SUTSILV{"SUTSILV"}
+        VAIDIKA{"VAIDIKA"}
+        VALLADER{"VALLADER"}
     }
+    Version{"37"}
     characterLabelPattern{
         all{"{0} — y cwbl"}
         category-list{"{0}: {1}"}
@@ -742,8 +761,6 @@ cy{
             two{"{0} strôc"}
             zero{"{0} strôc"}
         }
-        subscript{"is-sgript {0}"}
-        superscript{"uwch-sgript {0}"}
     }
     codePatterns{
         language{"Iaith: {0}"}

@@ -32,7 +32,6 @@
 #include "cstring.h"
 #include "uinvchar.h"
 #include "filestrm.h"
-#include "toolutil.h"
 #include "unicode/uclean.h"
 #include "unewdata.h"
 #include "uoptions.h"
@@ -45,7 +44,7 @@
 
 /* STRING_STORE_SIZE + TAG_STORE_SIZE <= ((2^16 - 1) * 2)
  That is the maximum size for the string stores combined
- because the strings are indexed at 16-bit boundaries by a
+ because the strings are index at 16-bit boundries by a
  16-bit index, and there is only one section for the 
  strings.
  */

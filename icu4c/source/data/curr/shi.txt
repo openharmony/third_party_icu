@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 shi{
     Currencies{
         AED{
@@ -216,7 +215,7 @@ shi{
             "ⴼⵔⴰⵏⴽ ⵚⵉⴼⴰ",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "ⴼⵔⴰⵏⴽ ⵚⵉⴼⴰ ⴱⵉⵙⴰⵡ",
         }
         ZAR{
@@ -236,4 +235,5 @@ shi{
             "ⴰⴷⵓⵍⴰⵔ ⵏ ⵣⵉⵎⴱⴰⴱⵡⵉ",
         }
     }
+    Version{"37"}
 }

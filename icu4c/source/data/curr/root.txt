@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 root{
     Currencies{
         AUD{
@@ -55,10 +54,6 @@ root{
             "NZ$",
             "NZD",
         }
-        PHP{
-            "₱",
-            "PHP",
-        }
         TWD{
             "NT$",
             "TWD",
@@ -80,7 +75,7 @@ root{
             "XCD",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "XOF",
         }
         XPF{
@@ -93,12 +88,9 @@ root{
         }
     }
     Currencies%narrow{
-        AFN{"؋"}
-        AMD{"֏"}
         AOA{"Kz"}
         ARS{"$"}
         AUD{"$"}
-        AZN{"₼"}
         BAM{"KM"}
         BBD{"$"}
         BDT{"৳"}
@@ -127,7 +119,6 @@ root{
         FKP{"£"}
         GBP{"£"}
         GEL{"₾"}
-        GHS{"GH₵"}
         GIP{"£"}
         GNF{"FG"}
         GTQ{"Q"}
@@ -202,15 +193,15 @@ root{
     CurrencyUnitPatterns{
         other{"{0} {1}"}
     }
-    Version{"39"}
+    Version{"37"}
     currencySpacing{
         afterCurrency{
-            currencyMatch{"[[:^S:]&[:^Z:]]"}
+            currencyMatch{"[:^S:]"}
             insertBetween{" "}
             surroundingMatch{"[:digit:]"}
         }
         beforeCurrency{
-            currencyMatch{"[[:^S:]&[:^Z:]]"}
+            currencyMatch{"[:^S:]"}
             insertBetween{" "}
             surroundingMatch{"[:digit:]"}
         }

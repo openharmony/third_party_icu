@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 es_419{
     Keys{
         colNormalization{"orden normalizado"}
@@ -69,14 +68,13 @@ es_419{
         Hanb{"han con bopomofo"}
         Hrkt{"katakana o hiragana"}
         Laoo{"lao"}
-        Latn{"latín"}
+        Latn{"alfabeto latino"}
         Mlym{"malayalam"}
         Olck{"ol chiki"}
     }
     Types{
         calendar{
-            islamic-rgsa{"calendario islámico (Arabia Saudita)"}
-            islamic-tbla{"calendario islámico tabular"}
+            islamic-umalqura{"islamic-umalqura"}
         }
         colAlternate{
             non-ignorable{"ordenar símbolos"}
@@ -106,6 +104,7 @@ es_419{
             wara{"dígitos en Warang Citi"}
         }
     }
+    Version{"37"}
     characterLabelPattern{
         enclosed{"{0} — Adjunto"}
         extended{"{0} — Extendido"}

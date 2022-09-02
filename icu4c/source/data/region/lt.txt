@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 lt{
     Countries{
         001{"pasaulis"}
@@ -134,7 +133,7 @@ lt{
         GU{"Guamas"}
         GW{"Bisau Gvinėja"}
         GY{"Gajana"}
-        HK{"Ypatingasis Administracinis Kinijos Regionas Honkongas"}
+        HK{"Honkongas, Kinija"}
         HM{"Herdo ir Makdonaldo Salos"}
         HN{"Hondūras"}
         HR{"Kroatija"}
@@ -188,7 +187,7 @@ lt{
         ML{"Malis"}
         MM{"Mianmaras (Birma)"}
         MN{"Mongolija"}
-        MO{"Ypatingasis Administracinis Kinijos Regionas Makao"}
+        MO{"Makao, Kinija"}
         MP{"Marianos Šiaurinės Salos"}
         MQ{"Martinika"}
         MR{"Mauritanija"}
@@ -255,7 +254,7 @@ lt{
         SX{"Sint Martenas"}
         SY{"Sirija"}
         SZ{"Svazilandas"}
-        TA{"Tristano da Kunjos"}
+        TA{"Tristanas da Kunja"}
         TC{"Terkso ir Kaikoso Salos"}
         TD{"Čadas"}
         TF{"Prancūzijos Pietų sritys"}
@@ -270,7 +269,7 @@ lt{
         TR{"Turkija"}
         TT{"Trinidadas ir Tobagas"}
         TV{"Tuvalu"}
-        TW{"Taivanas"}
+        TW{"Taivanas, Kinija"}
         TZ{"Tanzanija"}
         UA{"Ukraina"}
         UG{"Uganda"}
@@ -279,7 +278,7 @@ lt{
         US{"Jungtinės Valstijos"}
         UY{"Urugvajus"}
         UZ{"Uzbekistanas"}
-        VA{"Vatikano Miesto Valstybė"}
+        VA{"Vatikanas"}
         VC{"Šventasis Vincentas ir Grenadinai"}
         VE{"Venesuela"}
         VG{"Didžiosios Britanijos Mergelių Salos"}
@@ -312,5 +311,7 @@ lt{
         CI{"Dramblio Kaulo Kranto Respublika"}
         CZ{"Čekijos Respublika"}
         FK{"Folklando (Malvinų) Salos"}
+        SZ{"Svazilandas"}
     }
+    Version{"37"}
 }

@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 smn{
     Languages{
         aa{"afar"}
@@ -293,6 +292,7 @@ smn{
         ro{"romaniakielâ"}
         rof{"rombo"}
         rom{"roomaankielâ"}
+        root{"ruotâs"}
         ru{"ruošâkielâ"}
         rup{"aromaniakielâ"}
         rw{"ruandakielâ"}
@@ -397,6 +397,11 @@ smn{
         zxx{"ij kielâlâš siskáldâs"}
         zza{"zazakielâ"}
     }
+    Languages%short{
+        en_GB{"eŋgâlâskielâ (OK)"}
+        en_US{"eŋgâlâskielâ (USA)"}
+    }
+    Version{"37"}
     codePatterns{
         language{"kielâ: {0}"}
         script{"čäällimvuáhádâh: {0}"}

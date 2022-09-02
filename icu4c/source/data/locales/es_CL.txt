@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 es_CL{
     %%Parent{"es_419"}
     NumberElements{
@@ -14,6 +13,7 @@ es_CL{
             }
         }
     }
+    Version{"37"}
     calendar{
         generic{
             DateTimePatterns{
@@ -84,6 +84,14 @@ es_CL{
             }
         }
         gregorian{
+            AmPmMarkers{
+                "a. m.",
+                "p. m.",
+            }
+            AmPmMarkersAbbr{
+                "a. m.",
+                "p. m.",
+            }
             DateTimePatterns{
                 "HH:mm:ss zzzz",
                 "HH:mm:ss z",
@@ -94,8 +102,8 @@ es_CL{
                 "dd-MM-y",
                 "dd-MM-yy",
                 "{1} {0}",
-                "{1}, {0}",
-                "{1}, {0}",
+                "{1} 'a' 'las' {0}",
+                "{1} 'a' 'las' {0}",
                 "{1} {0}",
                 "{1} {0}",
             }
@@ -117,6 +125,18 @@ es_CL{
                         "ju",
                         "vi",
                         "sá",
+                    }
+                }
+            }
+            dayPeriod{
+                stand-alone{
+                    abbreviated{
+                        am{"a. m."}
+                        pm{"p. m."}
+                    }
+                    wide{
+                        am{"a. m."}
+                        pm{"p. m."}
                     }
                 }
             }
@@ -195,6 +215,11 @@ es_CL{
                     }
                 }
             }
+        }
+    }
+    fields{
+        dayperiod{
+            dn{"a. m./p. m."}
         }
     }
 }

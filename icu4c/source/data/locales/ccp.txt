@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 ccp{
     AuxExemplarCharacters{"[]"}
     ExemplarCharacters{
@@ -13,9 +12,10 @@ ccp{
         "[𑄃 𑄄 𑄅 𑄆 𑄇 𑄈 𑄉 𑄊 𑄋 𑄌 𑄍 𑄎 𑄏 𑄐 𑄑 𑄒 𑄓 𑄔 𑄕 𑄖 𑄗 𑄘 𑄙 𑄚 𑄛 "
         "𑄜 𑄝 𑄞 𑄟 𑄠 𑄡 𑄢 𑄣 𑄤 𑄥 𑄦]"
     }
+    ExemplarCharactersNumbers{"[\\- , . % ‰ + 0০ 1১ 2২ 3৩ 4৪ 5৫ 6৬ 7৭ 8৮ 9৯]"}
     ExemplarCharactersPunctuation{
-        "[\\- ‐ ‑ – — , ; \\: ! ? 𑅃 . … 𑅁 𑅂 𑅀 ' ‘ ’ \u0022 “ ” ( ) \\[ \\] § @ * "
-        "/ \\& # † ‡ ′ ″]"
+        "[\\- ‐ – — , ; \\: ! ? 𑅃 . … 𑅁 𑅂 𑅀 ' ‘ ’ \u0022 “ ” ( ) \\[ \\] § @ * / "
+        "\\& # † ‡ ′ ″]"
     }
     NumberElements{
         cakm{
@@ -84,6 +84,7 @@ ccp{
         minimumGroupingDigits{"1"}
         native{"cakm"}
     }
+    Version{"37"}
     calendar{
         generic{
             DateTimePatterns{
@@ -444,7 +445,7 @@ ccp{
                 }
                 abbreviated%variant{
                     "𑄈𑄳𑄢𑄨𑄌𑄴𑄑𑄧𑄛𑄫𑄢𑄴𑄝𑄛𑄴𑄘𑄧",
-                    "𑄈𑄳𑄢𑄨𑄌𑄴𑄑𑄛𑄴𑄘𑄧",
+                    "CE",
                 }
                 wide{
                     "𑄈𑄳𑄢𑄨𑄌𑄴𑄑𑄴𑄛𑄫𑄢𑄴𑄝𑄧",
@@ -452,7 +453,7 @@ ccp{
                 }
                 wide%variant{
                     "𑄈𑄳𑄢𑄨𑄌𑄴𑄑𑄴𑄛𑄫𑄢𑄴𑄝𑄛𑄴𑄘𑄧",
-                    "𑄈𑄳𑄢𑄨𑄌𑄴𑄑𑄛𑄴𑄘𑄧",
+                    "CE",
                 }
             }
             intervalFormats{

@@ -92,8 +92,6 @@ MacroProps NumberPropertyMapper::oldToNew(const DecimalFormatProperties& propert
     int32_t minSig = properties.minimumSignificantDigits;
     int32_t maxSig = properties.maximumSignificantDigits;
     double roundingIncrement = properties.roundingIncrement;
-    // Not assigning directly to macros.roundingMode here: we change
-    // roundingMode if and when we also change macros.precision.
     RoundingMode roundingMode = properties.roundingMode.getOrDefault(UNUM_ROUND_HALFEVEN);
     bool explicitMinMaxFrac = minFrac != -1 || maxFrac != -1;
     bool explicitMinMaxSig = minSig != -1 || maxSig != -1;
@@ -147,7 +145,7 @@ MacroProps NumberPropertyMapper::oldToNew(const DecimalFormatProperties& propert
         precision = Precision::constructCurrency(currencyUsage);
     }
     if (!precision.isBogus()) {
-        macros.roundingMode = roundingMode;
+        precision.fRoundingMode = roundingMode;
         macros.precision = precision;
     }
 
@@ -241,7 +239,7 @@ MacroProps NumberPropertyMapper::oldToNew(const DecimalFormatProperties& propert
                 // TODO: Reset maxSig_ = 1 + minFrac_ to follow the spec.
                 macros.precision = Precision::constructSignificant(minSig_, maxSig_);
             }
-            macros.roundingMode = roundingMode;
+            macros.precision.fRoundingMode = roundingMode;
         }
     }
 

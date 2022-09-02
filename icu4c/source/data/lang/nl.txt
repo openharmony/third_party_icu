@@ -1,6 +1,5 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
+// License & terms of use: http://www.unicode.org/copyright.html#License
 nl{
     Keys{
         calendar{"kalender"}
@@ -72,7 +71,7 @@ nl{
         bax{"Bamoun"}
         bbc{"Batak Toba"}
         bbj{"Ghomala’"}
-        be{"Belarussisch"}
+        be{"Wit-Russisch"}
         bej{"Beja"}
         bem{"Bemba"}
         bew{"Betawi"}
@@ -379,7 +378,7 @@ nl{
         ms{"Maleis"}
         mt{"Maltees"}
         mua{"Mundang"}
-        mul{"meerdere talen"}
+        mul{"Meerdere talen"}
         mus{"Creek"}
         mwl{"Mirandees"}
         mwr{"Marwari"}
@@ -463,6 +462,7 @@ nl{
         ro{"Roemeens"}
         rof{"Rombo"}
         rom{"Romani"}
+        root{"Root"}
         rtm{"Rotumaans"}
         ru{"Russisch"}
         rue{"Roetheens"}
@@ -627,15 +627,13 @@ nl{
         zh_Hant{"Mandarijn (traditioneel)"}
     }
     Languages%menu{
-        ars{"Arabisch, Nadjdi"}
-        ckb{"Koerdisch, Soranî"}
+        yue{"Kantonees"}
         zh{"Mandarijn"}
     }
     Languages%short{
         az{"Azeri"}
     }
     Languages%variant{
-        ckb{"Koerdisch, Soranî"}
         ps{"Pashto"}
     }
     Scripts{
@@ -657,7 +655,7 @@ nl{
         Blis{"Blissymbolen"}
         Bopo{"Bopomofo"}
         Brah{"Brahmi"}
-        Brai{"braille"}
+        Brai{"Braille"}
         Bugi{"Buginees"}
         Buhd{"Buhid"}
         Cakm{"Chakma"}
@@ -692,7 +690,7 @@ nl{
         Grek{"Grieks"}
         Gujr{"Gujarati"}
         Guru{"Gurmukhi"}
-        Hanb{"Han met Bopomofo"}
+        Hanb{"Hanb"}
         Hang{"Hangul"}
         Hani{"Han"}
         Hano{"Hanunoo"}
@@ -776,7 +774,7 @@ nl{
         Phnx{"Foenicisch"}
         Plrd{"Pollard-fonetisch"}
         Prti{"Inscriptioneel Parthisch"}
-        Qaag{"Zawgyi"}
+        Qaag{"Qaag"}
         Rjng{"Rejang"}
         Rohg{"Hanifi Rohingya"}
         Roro{"Rongorongo"}
@@ -828,9 +826,9 @@ nl{
         Yiii{"Yi"}
         Zanb{"vierkant Zanabazar"}
         Zinh{"Overgeërfd"}
-        Zmth{"wiskundige notatie"}
+        Zmth{"Wiskundige notatie"}
         Zsye{"emoji"}
-        Zsym{"symbolen"}
+        Zsym{"Symbolen"}
         Zxxx{"ongeschreven"}
         Zyyy{"algemeen"}
         Zzzz{"onbekend schriftsysteem"}
@@ -1134,6 +1132,7 @@ nl{
         WADEGILE{"Wade-Giles-romanisering"}
         XSISTEMO{"X-sistemo"}
     }
+    Version{"37"}
     characterLabelPattern{
         all{"{0} — alle"}
         category-list{"{0}: {1}"}
