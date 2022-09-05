@@ -16,6 +16,18 @@ if (defined(ohos_lite)) {
 
 config("icu_config") {
   include_dirs = [ "//third_party/icu/icu4c/source/common" ]
+
+  # IAR toolchain compilation does not support multithreaded libraries.
+  # The modification here will not affect the native function of icu.
+  # Build-system should pre-define UMUTEX_H to inactive umutex.h and active this mock header.
+  # The source of modification and the corresponding responsibilities can be found in foundation/graphic/ui/BUILD.gn.
+  if (defined(board_toolchain_type) && board_toolchain_type == "iccarm") {
+    defines = [
+      "U_PLATFORM_IMPLEMENTS_POSIX=0",
+      "UMUTEX_H",
+      "MUTEX_H",  # ICC do not support mutex
+    ]
+  }
 }
 
 icu_source = [
@@ -35,9 +47,13 @@ icu_source = [
 
 if (defined(ohos_lite)) {
   lite_library("icu_font") {
-    target_type = "shared_library"
     sources = icu_source
     public_configs = [ ":icu_config" ]
+    if (board_toolchain_type == "iccarm") {
+      target_type = "static_library"
+    } else {
+      target_type = "shared_library"
+    }
   }
 } else {
   ohos_static_library("icu_font") {
