@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 he{
     Keys{
         calendar{"לוח שנה"}
@@ -189,8 +190,8 @@ he{
         got{"גותית"}
         grb{"גרבו"}
         grc{"יוונית עתיקה"}
-        gsw{"גרמנית (בשוויץ)"}
-        gu{"גוג׳ארטית"}
+        gsw{"גרמנית שוויצרית"}
+        gu{"גוג׳ארטי"}
         guz{"גוסי"}
         gv{"מאנית"}
         gwi{"גוויצ׳ן"}
@@ -199,7 +200,7 @@ he{
         hak{"סינית האקה"}
         haw{"הוואית"}
         he{"עברית"}
-        hi{"הינדית"}
+        hi{"הינדי"}
         hil{"היליגאינון"}
         hit{"חתית"}
         hmn{"המונג"}
@@ -331,7 +332,7 @@ he{
         mni{"מניפורית"}
         moh{"מוהוק"}
         mos{"מוסי"}
-        mr{"מראטהית"}
+        mr{"מראטהי"}
         ms{"מלאית"}
         mt{"מלטית"}
         mua{"מונדאנג"}
@@ -409,7 +410,6 @@ he{
         ro_MD{"מולדבית"}
         rof{"רומבו"}
         rom{"רומאני"}
-        root{"רוט"}
         ru{"רוסית"}
         rup{"ארומנית"}
         rw{"קנירואנדית"}
@@ -464,7 +464,7 @@ he{
         sus{"סוסו"}
         sux{"שומרית"}
         sv{"שוודית"}
-        sw{"סוואהילית"}
+        sw{"סווהילי"}
         sw_CD{"סווהילי קונגו"}
         swb{"קומורית"}
         syc{"סירית קלאסית"}
@@ -555,9 +555,6 @@ he{
         yue{"סינית, קנטונזית"}
         zh{"סינית, מנדרינית"}
     }
-    Languages%short{
-        az{"אזרית"}
-    }
     Languages%variant{
         ps{"פושטו"}
     }
@@ -604,7 +601,7 @@ he{
         Kore{"קוריאני"}
         Laoo{"לאי"}
         Latg{"לטיני גאלי"}
-        Latn{"לטינית"}
+        Latn{"לטיני"}
         Maya{"מאיה"}
         Mlym{"מליאלאם"}
         Mong{"מונגולי"}
@@ -796,7 +793,6 @@ he{
         SCOTLAND{"אנגלית סקוטית סטנדרטית"}
         WADEGILE{"ווייד-גיילס, שיטה לתעתוק סינית לאותיות לטיניות"}
     }
-    Version{"37"}
     characterLabelPattern{
         all{"{0} - הכל"}
         category-list{"{0}: {1}"}
@@ -813,6 +809,8 @@ he{
             other{"{0} משיכות מכחול"}
             two{"{0} משיכות מכחול"}
         }
+        subscript{"כתב תחתי {0}"}
+        superscript{"כתב עילי {0}"}
     }
     codePatterns{
         language{"שפה:‏ {0}"}

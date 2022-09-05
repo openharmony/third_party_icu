@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 kea{
     AuxExemplarCharacters{
         "[ª á à ă â å ä ã ā æ c ç é è ĕ ê ë ẽ ē í ì ĭ î ï ĩ ī {n\u0308} º ó ò ŏ ô ö õ"
@@ -15,10 +16,10 @@ kea{
     }
     ExemplarCharacters{"[a b d {dj} e f g h i j k l {lh} m n ñ {nh} o p r s t {tx} u v x y z]"}
     ExemplarCharactersIndex{"[A B D E F G H I J K L M N O P R S T U V X Z]"}
-    ExemplarCharactersNumbers{"[  \\- , % ‰ + 0 1 2 3 4 5 6 7 8 9]"}
+    ExemplarCharactersNumbers{"[  \\- ‑ , % ‰ + 0 1 2 3 4 5 6 7 8 9]"}
     ExemplarCharactersPunctuation{
-        "[\\- ‐ – — , ; \\: ! ? . … ' ‘ ’ \u0022 “ ” « » ( ) \\[ \\] § @ * / \\& # † "
-        "‡]"
+        "[\\- ‐ ‑ – — , ; \\: ! ? . … ' ‘ ’ \u0022 “ ” « » ( ) \\[ \\] § @ * / \\& # "
+        "† ‡]"
     }
     MoreInformation{"?"}
     NumberElements{
@@ -141,7 +142,6 @@ kea{
         minimumGroupingDigits{"1"}
         native{"latn"}
     }
-    Version{"37"}
     calendar{
         generic{
             DateTimePatterns{
@@ -152,7 +152,7 @@ kea{
                 "EEEE, d 'di' MMMM 'di' y G",
                 "d 'di' MMMM 'di' y G",
                 "d MMM y G",
-                "d/M/y GGGGG",
+                "dd/MM/y GGGGG",
                 "{1}, {0}",
                 "{1}, {0}",
                 "{1}, {0}",
@@ -167,7 +167,7 @@ kea{
                 Ehm{"E, h:mm a"}
                 Ehms{"E, h:mm:ss a"}
                 Gy{"y G"}
-                GyMMM{"MMM y G"}
+                GyMMM{"LLL y G"}
                 GyMMMEd{"E, d MMM y G"}
                 GyMMMd{"d MMM y G"}
                 H{"HH"}
@@ -189,22 +189,22 @@ kea{
                 mmss{"mm:ss"}
                 ms{"mm:ss"}
                 y{"y"}
-                yM{"MM/y"}
+                yM{"LL/y"}
                 yMEd{"E, dd/MM/y"}
                 yMM{"MM/y"}
-                yMMM{"MMM y"}
+                yMMM{"LLL y"}
                 yMMMEd{"E, d MMM y"}
-                yMMMM{"MMMM 'di' y"}
+                yMMMM{"LLLL 'di' y"}
                 yMMMd{"d MMM y"}
                 yMd{"dd/MM/y"}
                 yQQQ{"QQQ y"}
                 yQQQQ{"QQQQ 'di' y"}
                 yyyy{"y G"}
-                yyyyM{"MM/y GGGGG"}
+                yyyyM{"LL/y GGGGG"}
                 yyyyMEd{"E, dd/MM/y GGGGG"}
-                yyyyMMM{"MMM y G"}
+                yyyyMMM{"LLL y G"}
                 yyyyMMMEd{"E, d MMM y G"}
-                yyyyMMMM{"MMMM y G"}
+                yyyyMMMM{"LLLL y G"}
                 yyyyMMMd{"d MMM y G"}
                 yyyyMd{"dd/MM/y GGGGG"}
                 yyyyQQQ{"QQQ y G"}
@@ -264,14 +264,14 @@ kea{
                     H{"HH–HH v"}
                 }
                 M{
-                    M{"M – M"}
+                    M{"L – L"}
                 }
                 MEd{
                     M{"E, dd/MM – E, dd/MM"}
                     d{"E, dd/MM – E, dd/MM"}
                 }
                 MMM{
-                    M{"MMM – MMM"}
+                    M{"LLL – LLL"}
                 }
                 MMMEd{
                     M{"E, d MMM – E, d MMM"}
@@ -312,7 +312,7 @@ kea{
                 }
                 yM{
                     M{"MM/y – MM/y"}
-                    y{"MM/y – MM/y"}
+                    y{"LL/y – LL/y"}
                 }
                 yMEd{
                     M{"E, dd/MM/y – E, dd/MM/y"}
@@ -320,8 +320,8 @@ kea{
                     y{"E, dd/MM/y – E, dd/MM/y"}
                 }
                 yMMM{
-                    M{"MMM – MMM y"}
-                    y{"MMM y – MMM y"}
+                    M{"LLL – LLL y"}
+                    y{"LLL y – LLL y"}
                 }
                 yMMMEd{
                     M{"E, d MMM – E, d MMM y"}
@@ -329,8 +329,8 @@ kea{
                     y{"E, d MMM y – E, d MMM y"}
                 }
                 yMMMM{
-                    M{"MMMM – MMMM 'di' y G"}
-                    y{"MMMM 'di' y – MMMM 'di' y G"}
+                    M{"LLLL – LLLL 'di' y G"}
+                    y{"LLLL 'di' y – LLLL 'di' y G"}
                 }
                 yMMMd{
                     M{"d MMM – d MMM y"}
@@ -353,10 +353,6 @@ kea{
                 "am",
                 "pm",
             }
-            AmPmMarkersNarrow{
-                "a",
-                "p",
-            }
             DateTimePatterns{
                 "HH:mm:ss zzzz",
                 "HH:mm:ss z",
@@ -365,12 +361,12 @@ kea{
                 "EEEE, d 'di' MMMM 'di' y",
                 "d 'di' MMMM 'di' y",
                 "d MMM y",
-                "d/M/y",
-                "{1} {0}",
-                "{1} {0}",
-                "{1} {0}",
-                "{1} {0}",
-                "{1} {0}",
+                "dd/MM/y",
+                "{1}, {0}",
+                "{1}, {0}",
+                "{1}, {0}",
+                "{1}, {0}",
+                "{1}, {0}",
             }
             appendItems{
                 Timezone{"{0} {1}"}
@@ -385,7 +381,7 @@ kea{
                 Ehm{"E, h:mm a"}
                 Ehms{"E, h:mm:ss a"}
                 Gy{"y G"}
-                GyMMM{"MMM y G"}
+                GyMMM{"LLL y G"}
                 GyMMMEd{"E, d MMM y G"}
                 GyMMMd{"d MMM y G"}
                 H{"HH"}
@@ -395,7 +391,6 @@ kea{
                 Hmv{"HH:mm (v)"}
                 M{"L"}
                 MEd{"E, dd/MM"}
-                MMM{"LLL"}
                 MMMEd{"E, d MMM"}
                 MMMMEd{"E, d 'di' MMMM"}
                 MMMMW{
@@ -414,12 +409,12 @@ kea{
                 mmss{"mm:ss"}
                 ms{"mm:ss"}
                 y{"y"}
-                yM{"MM/y"}
+                yM{"LL/y"}
                 yMEd{"E, dd/MM/y"}
-                yMM{"MM/y"}
-                yMMM{"MMM y"}
+                yMM{"LL/y"}
+                yMMM{"LLL y"}
                 yMMMEd{"E, d MMM y"}
-                yMMMM{"MMMM 'di' y"}
+                yMMMM{"LLLL 'di' y"}
                 yMMMd{"d MMM y"}
                 yMd{"dd/MM/y"}
                 yQQQ{"QQQ y"}
@@ -464,7 +459,7 @@ kea{
                         "kuarta-fera",
                         "kinta-fera",
                         "sesta-fera",
-                        "sabadu",
+                        "sábadu",
                     }
                 }
                 stand-alone{
@@ -585,7 +580,7 @@ kea{
                     H{"HH – HH v"}
                 }
                 M{
-                    M{"M – M"}
+                    M{"L – L"}
                 }
                 MEd{
                     M{"E, dd/MM – E, dd/MM"}
@@ -632,8 +627,8 @@ kea{
                     y{"y – y"}
                 }
                 yM{
-                    M{"MM/y – MM/y"}
-                    y{"MM/y – MM/y"}
+                    M{"LL/y – LL/y"}
+                    y{"LL/y – LL/y"}
                 }
                 yMEd{
                     M{"E, dd/MM/y – E, dd/MM/y"}
@@ -641,8 +636,8 @@ kea{
                     y{"E, dd/MM/y – E, dd/MM/y"}
                 }
                 yMMM{
-                    M{"MMM – MMM y"}
-                    y{"MMM y – MMM y"}
+                    M{"LLL – LLL y"}
+                    y{"LLL y – LLL y"}
                 }
                 yMMMEd{
                     M{"E, d MMM – E, d MMM y"}
@@ -650,8 +645,8 @@ kea{
                     y{"E, d MMM y – E, d MMM y"}
                 }
                 yMMMM{
-                    M{"MMMM – MMMM 'di' y"}
-                    y{"MMMM y – MMMM y"}
+                    M{"LLLL – LLLL 'di' y"}
+                    y{"LLLL y – LLLL y"}
                 }
                 yMMMd{
                     M{"d MMM – d MMM y"}
@@ -810,7 +805,7 @@ kea{
             relative{
                 "-1"{"onti"}
                 "0"{"oji"}
-                "1"{"manha"}
+                "1"{"manhan"}
             }
             relativeTime{
                 future{
@@ -1513,7 +1508,7 @@ kea{
         }
     }
     measurementSystemNames{
-        UK{"Ingles"}
+        UK{"Britániku"}
         US{"Merkanu"}
         metric{"Métriku"}
     }

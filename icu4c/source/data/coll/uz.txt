@@ -1,14 +1,16 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 uz{
-    Version{"37"}
     collations{
         standard{
             Sequence{
-                "[caseFirst upper]"
-                "&Z<oʻ<<<Oʻ<gʻ<<<Gʻ<CH<<<Ch<<<cH<<<ch<SH<<<Sh<<<sH<<<sh<NG<<<Ng<<<nG<<<ng"
+                "&[before 1]ʒ<oʻ=o‘=o''<<<Oʻ=O‘=O''"
+                "<gʻ=g‘=g''<<<Gʻ=G‘=G''"
+                "<sh<<<Sh<<<SH"
+                "<ch<<<Ch<<<CH"
             }
-            Version{"37"}
+            Version{"39"}
         }
     }
 }

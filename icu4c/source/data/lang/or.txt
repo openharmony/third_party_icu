@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 or{
     Keys{
         calendar{"କ୍ୟାଲେଣ୍ଡର୍"}
@@ -137,7 +138,7 @@ or{
         es_ES{"ୟୁରୋପୀୟ ସ୍ପାନିସ୍‌"}
         es_MX{"ମେକ୍ସିକାନ ସ୍ପାନିସ୍‌"}
         et{"ଏସ୍ତୋନିଆନ୍"}
-        eu{"ବାସ୍କେ"}
+        eu{"ବାସ୍କ୍ୱି"}
         ewo{"ଇୱୋଣ୍ଡୋ"}
         fa{"ପର୍ସିଆନ୍"}
         fa_AF{"ଦାରି"}
@@ -310,7 +311,7 @@ or{
         moh{"ମୋହୌକ"}
         mos{"ମୋସି"}
         mr{"ମରାଠୀ"}
-        ms{"ମଳୟ"}
+        ms{"ମାଲୟ"}
         mt{"ମାଲଟୀଜ୍"}
         mua{"ମୁନଡାଂ"}
         mul{"ବିବିଧ ଭାଷାମାନ"}
@@ -386,7 +387,6 @@ or{
         ro_MD{"ମୋଲଡୋଭିଆନ୍"}
         rof{"ରୋମ୍ବୋ"}
         rom{"ରୋମାନି"}
-        root{"ରୋଟ୍"}
         ru{"ରୁଷିୟ"}
         rup{"ଆରୋମାନିଆନ୍"}
         rw{"କିନ୍ୟାରୱାଣ୍ଡା"}
@@ -413,7 +413,7 @@ or{
         sh{"ସର୍ବୋ-କ୍ରୋଆଟିଆନ୍"}
         shi{"ତାଚେଲହିଟ୍"}
         shn{"ଶାନ୍"}
-        si{"ସିଂହଳା"}
+        si{"ସିଂହଳ"}
         sid{"ସିଦାମୋ"}
         sk{"ସ୍ଲୋଭାକ୍"}
         sl{"ସ୍ଲୋଭେନିଆନ୍"}
@@ -759,7 +759,6 @@ or{
         VAIDIKA{"ବୈଦିକ"}
         VALENCIA{"ଭେଲେନସିଆନ୍"}
     }
-    Version{"37"}
     characterLabelPattern{
         all{"{0} — ସମସ୍ତ"}
         category-list{"{0}: {1}"}

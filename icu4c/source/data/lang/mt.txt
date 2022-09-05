@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 mt{
     Keys{
         calendar{"Kalendarju"}
@@ -378,7 +379,6 @@ mt{
         ro_MD{"Moldovan"}
         rof{"Rombo"}
         rom{"Romanesk"}
-        root{"Root"}
         ru{"Russu"}
         rup{"Aromanjan"}
         rw{"Kinjarwanda"}
@@ -511,8 +511,6 @@ mt{
     }
     Languages%short{
         az{"Ażeri"}
-        en_GB{"Ingliż (UK)"}
-        en_US{"Ingliż (US)"}
     }
     Scripts{
         Arab{"Għarbi"}
@@ -559,7 +557,6 @@ mt{
     Variants{
         REVISED{"Ortografija Irriveda"}
     }
-    Version{"37"}
     codePatterns{
         language{"Lingwa: {0}"}
         script{"Skript: {0}"}
