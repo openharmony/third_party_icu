@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 hr{
     AuxExemplarCharacters{"[q w x y]"}
     Ellipsis{
@@ -101,9 +102,9 @@ hr{
             patternsShort{
                 currencyFormat{
                     1000{
-                        few{"0000¤"}
-                        one{"0000¤"}
-                        other{"0000¤"}
+                        few{"0"}
+                        one{"0"}
+                        other{"0"}
                     }
                     10000{
                         few{"00 tis'.' ¤"}
@@ -225,12 +226,13 @@ hr{
                 }
             }
             symbols{
+                approximatelySign{"~"}
                 decimal{","}
                 exponential{"E"}
                 group{"."}
                 infinity{"∞"}
                 list{";"}
-                minusSign{"-"}
+                minusSign{"−"}
                 nan{"NaN"}
                 perMille{"‰"}
                 percentSign{"%"}
@@ -252,7 +254,6 @@ hr{
         minimumGroupingDigits{"1"}
         native{"latn"}
     }
-    Version{"37"}
     calendar{
         buddhist{
             eras{
@@ -937,12 +938,12 @@ hr{
                     M{"LLL – LLL"}
                 }
                 MMMEd{
-                    M{"E, d. MMM – E, d. MMM"}
-                    d{"E, d. – E, d. MMM"}
+                    M{"E, dd. MMM – E, dd. MMM"}
+                    d{"E, dd. – E, dd. MMM"}
                 }
                 MMMd{
-                    M{"d. MMM – d. MMM"}
-                    d{"d. – d. MMM"}
+                    M{"dd. MMM – dd. MMM"}
+                    d{"dd. – dd. MMM"}
                 }
                 Md{
                     M{"dd. MM. – dd. MM."}
@@ -987,18 +988,18 @@ hr{
                     y{"LLL y. – LLL y."}
                 }
                 yMMMEd{
-                    M{"E, d. MMM – E, d. MMM y."}
-                    d{"E, d. – E, d. MMM y."}
-                    y{"E, d. MMM y. – E, d. MMM y."}
+                    M{"E, dd. MMM – E, dd. MMM y."}
+                    d{"E, dd. – E, dd. MMM y."}
+                    y{"E, dd. MMM y. – E, dd. MMM y."}
                 }
                 yMMMM{
                     M{"LLLL – LLLL y."}
                     y{"LLLL y. – LLLL y."}
                 }
                 yMMMd{
-                    M{"d. MMM - d. MMM y."}
-                    d{"d. - d. MMM y."}
-                    y{"d. MMM y. - d. MMM y."}
+                    M{"dd. MMM – dd. MMM y."}
+                    d{"dd. – dd. MMM y."}
+                    y{"dd. MMM y. – dd. MMM y."}
                 }
                 yMd{
                     M{"dd. MM. y. – dd. MM. y."}

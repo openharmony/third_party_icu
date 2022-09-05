@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 el{
     AuxExemplarCharacters{
         "[ἀ ἄ ἂ ἆ ἁ ἅ ἃ ἇ ὰ ᾶ ἐ ἔ ἒ ἑ ἕ ἓ ὲ ἠ ἤ ἢ ἦ ἡ ἥ ἣ ἧ ὴ ῆ ἰ ἴ ἲ ἶ ἱ ἵ ἳ ἷ ὶ ῖ ῒ"
@@ -216,7 +217,6 @@ el{
         native{"latn"}
         traditional{"grek"}
     }
-    Version{"37"}
     calendar{
         buddhist{
             DateTimePatterns{
@@ -790,7 +790,7 @@ el{
                 Hmv{"HH:mm v"}
                 M{"L"}
                 MEd{"E, d/M"}
-                MMM{"LLL"}
+                MMM{"MMM"}
                 MMMEd{"E, d MMM"}
                 MMMMEd{"E, d MMMM"}
                 MMMMW{
@@ -810,7 +810,7 @@ el{
                 y{"y"}
                 yM{"M/y"}
                 yMEd{"E, d/M/y"}
-                yMMM{"LLL y"}
+                yMMM{"MMM y"}
                 yMMMEd{"E, d MMM y"}
                 yMMMM{"LLLL y"}
                 yMMMd{"d MMM y"}
@@ -1036,7 +1036,7 @@ el{
                     d{"E, dd/MM – E, dd/MM"}
                 }
                 MMM{
-                    M{"LLL–LLL"}
+                    M{"MMM–MMM"}
                 }
                 MMMEd{
                     M{"E, dd MMM – E, dd MMM"}
@@ -1085,8 +1085,8 @@ el{
                     y{"E, dd/MM/y – E, dd/MM/y"}
                 }
                 yMMM{
-                    M{"LLL–LLL y"}
-                    y{"LLL y – LLL y"}
+                    M{"MMM–MMM y"}
+                    y{"MMM y – MMM y"}
                 }
                 yMMMEd{
                     M{"E, dd MMM – E, dd MMM y"}

@@ -1,7 +1,7 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 nl_BE{
-    Version{"37"}
     calendar{
         generic{
             DateTimePatterns{
@@ -68,11 +68,11 @@ nl_BE{
                 "{1} {0}",
             }
             availableFormats{
-                MEd{"E d/MM"}
-                Md{"d/MM"}
-                yM{"MM/y"}
-                yMEd{"E d/MM/yy"}
-                yMd{"d/MM/yy"}
+                MEd{"E d/M"}
+                Md{"d/M"}
+                yM{"M/y"}
+                yMEd{"E d/M/y"}
+                yMd{"d/M/y"}
             }
             intervalFormats{
                 MEd{

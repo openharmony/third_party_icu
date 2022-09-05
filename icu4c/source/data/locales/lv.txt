@@ -1,5 +1,6 @@
 ﻿// © 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html#License
+// License & terms of use: http://www.unicode.org/copyright.html
+// Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 lv{
     AuxExemplarCharacters{"[y ō q ŗ w x]"}
     Ellipsis{
@@ -251,7 +252,6 @@ lv{
         minimumGroupingDigits{"2"}
         native{"latn"}
     }
-    Version{"37"}
     calendar{
         buddhist{
             eras{
@@ -644,14 +644,14 @@ lv{
                 hmv{"h:mm a v"}
                 mmss{"mm:ss"}
                 ms{"mm:ss"}
-                y{"y. 'gada'"}
+                y{"y. 'g'."}
                 yM{"MM.y."}
-                yMEd{"E, dd.MM.y."}
-                yMMM{"y. 'gada' MMM"}
-                yMMMEd{"E, y. 'gada' d. MMM"}
-                yMMMM{"y. 'gada' MMMM"}
-                yMMMd{"y. 'gada' d. MMM"}
-                yMd{"dd.MM.y."}
+                yMEd{"E, d.M.y."}
+                yMMM{"y. 'g'. MMM"}
+                yMMMEd{"E, y. 'g'. d. MMM"}
+                yMMMM{"y. 'g'. MMMM"}
+                yMMMd{"y. 'g'. d. MMM"}
+                yMd{"y.MM.d."}
                 yQQQ{"y. 'g'. QQQ"}
                 yQQQQ{"y. 'g'. QQQQ"}
                 yw{
@@ -767,7 +767,7 @@ lv{
                 }
                 stand-alone{
                     abbreviated{
-                        afternoon1{"pēcpusdiena"}
+                        afternoon1{"pēcpusd."}
                         am{"priekšp."}
                         evening1{"vakars"}
                         midnight{"pusnakts"}
@@ -800,10 +800,6 @@ lv{
             }
             eras{
                 abbreviated{
-                    "p.m.ē.",
-                    "m.ē.",
-                }
-                abbreviated%variant{
                     "p.m.ē.",
                     "m.ē.",
                 }
@@ -890,7 +886,7 @@ lv{
                 hmv{
                     a{"h:mm a – h:mm a v"}
                     h{"h:mm–h:mm a v"}
-                    m{"h:mm–h:mm a v"}
+                    m{"h:mm–h:mm a, v"}
                 }
                 hv{
                     a{"h a – h a v"}
@@ -963,18 +959,18 @@ lv{
                         "D",
                     }
                     wide{
-                        "janvārī",
-                        "februārī",
-                        "martā",
-                        "aprīlī",
-                        "maijā",
-                        "jūnijā",
-                        "jūlijā",
-                        "augustā",
-                        "septembrī",
-                        "oktobrī",
-                        "novembrī",
-                        "decembrī",
+                        "janvāris",
+                        "februāris",
+                        "marts",
+                        "aprīlis",
+                        "maijs",
+                        "jūnijs",
+                        "jūlijs",
+                        "augusts",
+                        "septembris",
+                        "oktobris",
+                        "novembris",
+                        "decembris",
                     }
                 }
                 stand-alone{
@@ -1355,7 +1351,7 @@ lv{
         currency_symbols{"valūtu simboli"}
         dash_connector{"svītras un savienotāji"}
         digits{"cipari"}
-        dingbats{"drukas ornamenti"}
+        dingbats{"dekorzīme"}
         divination_symbols{"okultie simboli"}
         downwards_arrows{"lejupvērstās bultiņas"}
         downwards_upwards_arrows{"lejupvērstās un augšupvērstās bultiņas"}
@@ -1651,7 +1647,7 @@ lv{
             }
         }
         minute-short{
-            dn{"min."}
+            dn{"min"}
             relativeTime{
                 future{
                     one{"pēc {0} min."}

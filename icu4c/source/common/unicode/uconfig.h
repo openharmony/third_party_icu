@@ -256,8 +256,6 @@
 #   define UCONFIG_NO_FILE_IO 0
 #endif
 
-#define U_TIMEZONE_FILES_DIR /etc/icu_tzdata
-
 #if UCONFIG_NO_FILE_IO && defined(U_TIMEZONE_FILES_DIR) 
 #   error Contradictory file io switches in uconfig.h.
 #endif
