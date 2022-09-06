@@ -5,7 +5,7 @@
     "License File": "icu4c/LICENSE",
     "Version Number": "69.1",
     "Owner": "zhengbin5@huawei.com",
-    "Upstream URL": "https://github.com/unicode-org/icu/archive/release-67-1.tar.gz",
+    "Upstream URL": "https://github.com/unicode-org/icu/archive/release-69-1.tar.gz",
     "Description": "ICU is a mature, widely used set of portable C/C++ and Java libraries for Unicode support, software internationalization and globalization (i18n/g11n). The packages are mirrors of the main website."
   }
 ]
