@@ -27,10 +27,11 @@ Fuzzing | [![Fuzzing Status](https://oss-fuzz-build-logs.storage.googleapis.com/
 
 ### Subdirectories and Information
 
-- [`icu4c/`](./icu4c/) [ICU for C/C++](./icu4c/readme.html)
+- [`icu4c/`](./icu4c/) [ICU for C/C++](./icu4c/readme.html) with OHOS code modification and data customization
 - [`icu4j/`](./icu4j/) [ICU for Java](./icu4j/readme.html)
 - [`tools/`](./tools/) Tools
 - [`vendor/`](./vendor/) Vendor dependencies
+- [`ohos_icu4j/`](./ohos_icu4j/) This is a copy of icu4j with package name changed from com.ibm.icu to ohos.global.icu
 
 ### License
 
