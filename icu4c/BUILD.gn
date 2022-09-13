@@ -21,6 +21,10 @@ config("icu_config") {
   ]
 }
 
+config("static_icustubdata_all_deps_config") {
+  include_dirs = [ "//third_party/icu/icu4c/source/common" ]
+}
+
 ohos_static_library("static_icustubdata") {
   configs = [
     ":icu_config",
@@ -497,6 +501,7 @@ ohos_shared_library("shared_icuuc") {
     ":icu_config",
     "//build/config/compiler:rtti",
   ]
+  all_dependent_configs = [ ":static_icustubdata_all_deps_config" ]
   deps = [ ":static_icustubdata" ]
   defines = [
     "U_ATTRIBUTE_DEPRECATED=",
