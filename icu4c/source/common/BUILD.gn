@@ -27,6 +27,10 @@ config("icu_config") {
       "UMUTEX_H",
       "MUTEX_H",  # ICC do not support mutex
     ]
+    cflags_cc = [
+      "--diag_suppress",
+      "Pe186",
+    ]
   }
 }
 
