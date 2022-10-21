@@ -48,7 +48,7 @@ ohos_static_library("static_icustubdata") {
 }
 
 ohos_prebuilt_etc("ohos_icudat") {
-  if (support_locales) {
+  if (icu_support_locales) {
     source = "//third_party/icu/ohos_icu4j/data/icudt69l.dat"
   } else {
     source = "//third_party/icu/ohos_icu4j/data/lite/icudt69l.dat"

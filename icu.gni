@@ -12,5 +12,5 @@
 # limitations under the License.
 
 declare_args() {
-  support_locales = true
+  icu_support_locales = true
 }
