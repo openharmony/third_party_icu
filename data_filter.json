@@ -1,0 +1,15 @@
+{
+    "localeFilter" : {
+      "filterType" : "locale",
+      "whitelist" : [
+        "en",
+        "zh_Hans"
+      ]
+    },
+    "featureFilters": {
+      "confusables" : "exclude",
+      "conversion_mappings" : "exclude",
+      "normalization" : "exclude",
+      "stringprep" : "exclude",
+    }
+}
