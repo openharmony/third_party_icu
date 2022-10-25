@@ -13,7 +13,7 @@
         "name": "icu",
         "subsystem": "thirdparty",
         "syscap": [],
-        "features": [],
+        "features": ["icu_support_locales"],
         "adapted_system_type": [ "standard" ],
         "rom": "",
         "ram": "",
