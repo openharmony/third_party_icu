@@ -49,7 +49,7 @@ ohos_static_library("static_icustubdata") {
 
 ohos_prebuilt_etc("ohos_icudat") {
   if (icu_support_locales) {
-    source = "//third_party/icu/ohos_icu4j/data/icudt69l.dat"
+    source = "//third_party/icu/ohos_icu4j/data/icudt68l.dat"
   } else {
     source = "//third_party/icu/ohos_icu4j/data/lite/icudt69l.dat"
   }
