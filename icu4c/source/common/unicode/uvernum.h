@@ -86,9 +86,7 @@
  *  This value will change in the subsequent releases of ICU
  *  @stable ICU 2.6
  */
-#ifndef U_ICU_VERSION_SUFFIX
 #define U_ICU_VERSION_SUFFIX _69
-#endif
 
 /**
  * \def U_DEF2_ICU_ENTRY_POINT_RENAME
@@ -154,9 +152,7 @@
  *
  * @stable ICU 2.6
  */
-#ifndef U_ICU_VERSION_SHORT
 #define U_ICU_VERSION_SHORT "69"
-#endif
 
 #ifndef U_HIDE_INTERNAL_API
 /** Data version in ICU4C.
