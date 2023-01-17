@@ -21,10 +21,7 @@ config("icu_config") {
     "//third_party/icu/icu4c/source",
   ]
   if (icu_support_locales) {
-    defines = [
-      "U_ICU_VERSION_SUFFIX=_68",
-      "U_ICU_VERSION_SHORT=\"68\"",
-    ]
+    defines = [ "U_ICU_USE_OLD_DATA" ]
   }
 }
 
