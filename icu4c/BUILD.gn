@@ -12,6 +12,7 @@
 # limitations under the License.
 
 import("//build/ohos.gni")
+import("//build/ohos_var.gni")
 import("//third_party/icu/icu.gni")
 config("icu_config") {
   visibility = [ ":*" ]
@@ -20,7 +21,7 @@ config("icu_config") {
     "//third_party/icu/icu4c/source/i18n",
     "//third_party/icu/icu4c/source",
   ]
-  if (icu_support_locales) {
+  if (build_ohenv_targets) {
     defines = [ "U_ICU_USE_OLD_DATA" ]
   }
 }
@@ -51,8 +52,10 @@ ohos_static_library("static_icustubdata") {
 }
 
 ohos_prebuilt_etc("ohos_icudat") {
-  if (icu_support_locales) {
+  if (build_ohenv_targets) {
     source = "//third_party/icu/ohos_icu4j/data/icudt68l.dat"
+  } else if (icu_support_locales) {
+    source = "//third_party/icu/ohos_icu4j/data/icudt69l.dat"
   } else {
     source = "//third_party/icu/ohos_icu4j/data/lite/icudt69l.dat"
   }
