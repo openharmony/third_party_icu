@@ -482,8 +482,13 @@ typedef HANDLE MemoryMap;
             /* PROJECT!!!!! */
             uprv_strcpy(pathBuffer, "IXMI" U_ICU_VERSION_SHORT "DA");
 #       else
+#       ifdef U_ICU_USE_OLD_DATA
+            /* set up the library name */
+            uprv_strcpy(basename, LIB_PREFIX U_LIBICUDATA_NAME "68" LIB_SUFFIX);
+#       else
             /* set up the library name */
             uprv_strcpy(basename, LIB_PREFIX U_LIBICUDATA_NAME U_ICU_VERSION_SHORT LIB_SUFFIX);
+#       endif
 #       endif
 
 #       ifdef UDATA_DEBUG
