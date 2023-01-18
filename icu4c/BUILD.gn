@@ -21,7 +21,7 @@ config("icu_config") {
     "//third_party/icu/icu4c/source/i18n",
     "//third_party/icu/icu4c/source",
   ]
-  if (build_ohenv_targets) {
+  if ("${product_name}" == "ohcore") {
     defines = [ "U_ICU_USE_OLD_DATA" ]
   }
 }
@@ -52,7 +52,7 @@ ohos_static_library("static_icustubdata") {
 }
 
 ohos_prebuilt_etc("ohos_icudat") {
-  if (build_ohenv_targets) {
+  if ("${product_name}" == "ohcore") {
     source = "//third_party/icu/ohos_icu4j/data/icudt68l.dat"
   } else if (icu_support_locales) {
     source = "//third_party/icu/ohos_icu4j/data/icudt69l.dat"
