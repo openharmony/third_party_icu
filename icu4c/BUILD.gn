@@ -62,13 +62,6 @@ ohos_prebuilt_etc("ohos_icudat") {
   subsystem_name = "thirdparty"
 }
 
-ohos_prebuilt_etc2("ohos_icudat2") {
-  source = "//third_party/icu/ohos_icu4j/data/icudt69l.dat"
-  module_install_dir = "usr/ohos_icu/"
-  part_name = "icu"
-  subsystem_name = "thirdparty"
-}
-
 icu_common_source = [
   "//third_party/icu/icu4c/source/common/ubiditransform.cpp",
   "//third_party/icu/icu4c/source/common/locutil.cpp",
