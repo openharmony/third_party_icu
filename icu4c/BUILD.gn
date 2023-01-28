@@ -20,6 +20,9 @@ config("icu_config") {
     "//third_party/icu/icu4c/source/i18n",
     "//third_party/icu/icu4c/source",
   ]
+  if ("${product_name}" == "ohcore") {
+    defines = [ "U_ICU_USE_OLD_DATA" ]
+  }
 }
 
 config("static_icustubdata_all_deps_config") {
@@ -48,7 +51,9 @@ ohos_static_library("static_icustubdata") {
 }
 
 ohos_prebuilt_etc("ohos_icudat") {
-  if (icu_support_locales) {
+  if ("${product_name}" == "ohcore") {
+    source = "//third_party/icu/ohos_icu4j/data/icudt68l.dat"
+  } else if (icu_support_locales) {
     source = "//third_party/icu/ohos_icu4j/data/icudt69l.dat"
   } else {
     source = "//third_party/icu/ohos_icu4j/data/lite/icudt69l.dat"
