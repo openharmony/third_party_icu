@@ -44,6 +44,7 @@ ohos_static_library("static_icustubdata") {
     "-Wwrite-strings",
     "-std=c++11",
     "-Wno-ignored-attributes",
+    "-Wno-deprecated-declarations",
   ]
   output_dir = "${root_out_dir}/third_party/icu/stubdata"
   output_name = "stubdata"
@@ -534,6 +535,7 @@ ohos_shared_library("shared_icuuc") {
     "-Wno-error=unneeded-internal-declaration",
     "-std=c++11",
     "-Wno-ignored-attributes",
+    "-Wno-deprecated-declarations",
   ]
   ldflags = [
     "-shared",
@@ -580,6 +582,7 @@ ohos_shared_library("shared_icui18n") {
     "-Wwrite-strings",
     "-std=c++11",
     "-Wno-ignored-attributes",
+    "-Wno-deprecated-declarations",
   ]
   ldflags = [
     "-shared",
@@ -632,6 +635,7 @@ ohos_static_library("static_icuuc") {
     "-fvisibility-inlines-hidden",
     "-Wno-unused-function",
     "-Wno-ignored-attributes",
+    "-Wno-deprecated-declarations",
   ]
 
   cflags = [
@@ -683,6 +687,7 @@ ohos_static_library("static_icui18n") {
     "-fvisibility-inlines-hidden",
     "-fno-exceptions",
     "-Wno-ignored-attributes",
+    "-Wno-deprecated-declarations",
   ]
 
   if (is_mingw) {
