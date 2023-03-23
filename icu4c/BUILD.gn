@@ -14,7 +14,6 @@
 import("//build/ohos.gni")
 import("//third_party/icu/icu.gni")
 config("icu_config") {
-  visibility = [ ":*" ]
   include_dirs = [
     "//third_party/icu/icu4c/source/common",
     "//third_party/icu/icu4c/source/i18n",
@@ -45,6 +44,7 @@ ohos_static_library("static_icustubdata") {
     "-Wwrite-strings",
     "-std=c++11",
     "-Wno-ignored-attributes",
+    "-Wno-deprecated-declarations",
   ]
   output_dir = "${root_out_dir}/third_party/icu/stubdata"
   output_name = "stubdata"
@@ -536,6 +536,7 @@ ohos_shared_library("shared_icuuc") {
     "-std=c++11",
     "-Wno-ignored-attributes",
     "-Wno-unused-but-set-variable",
+    "-Wno-deprecated-declarations",
   ]
   ldflags = [
     "-shared",
@@ -583,6 +584,7 @@ ohos_shared_library("shared_icui18n") {
     "-std=c++11",
     "-Wno-ignored-attributes",
     "-Wno-unused-but-set-variable",
+    "-Wno-deprecated-declarations",
   ]
   ldflags = [
     "-shared",
@@ -636,6 +638,7 @@ ohos_static_library("static_icuuc") {
     "-Wno-unused-function",
     "-Wno-ignored-attributes",
     "-Wno-unused-but-set-variable",
+    "-Wno-deprecated-declarations",
   ]
 
   cflags = [
@@ -688,6 +691,7 @@ ohos_static_library("static_icui18n") {
     "-fno-exceptions",
     "-Wno-ignored-attributes",
     "-Wno-unused-but-set-variable",
+    "-Wno-deprecated-declarations",
   ]
 
   if (is_mingw) {
