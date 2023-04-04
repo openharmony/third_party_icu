@@ -612,7 +612,14 @@ ohos_static_library("static_icuuc") {
     ":icu_config",
     "//build/config/compiler:rtti",
   ]
-  deps = [ ":static_icustubdata" ]
+
+  is_cross_platform_build =
+      defined(build_cross_platform_version) && build_cross_platform_version
+
+  if (!is_cross_platform_build || current_toolchain == host_toolchain) {
+    deps = [ ":static_icustubdata" ]
+  }
+
   defines = [
     "U_ATTRIBUTE_DEPRECATED=",
     "U_COMMON_IMPLEMENTATION",
