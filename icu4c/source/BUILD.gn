@@ -12,6 +12,8 @@
 # limitations under the License.
 
 import("//build/ohos.gni")
+import("//third_party/icu/icu4c/icu4c_config.gni")
+
 config("icu_config") {
   visibility = [ ":*" ]
   include_dirs = [
@@ -256,7 +258,7 @@ ohos_shared_library("shared_icuuc_host") {
     "-shared",
     "-lm",
   ]
-  subsystem_name = "global"
+  subsystem_name = "$icu_lib_host_subsystem_name"
   output_name = "hmicuuchost"
 }
 
@@ -341,7 +343,7 @@ ohos_shared_library("shared_icutu") {
     "-shared",
     "-lm",
   ]
-  subsystem_name = "global"
+  subsystem_name = "$icu_lib_host_subsystem_name"
   output_name = "hmicutuhost"
 }
 
@@ -392,7 +394,7 @@ ohos_shared_library("shared_icuio") {
     "-shared",
     "-lm",
   ]
-  subsystem_name = "global"
+  subsystem_name = "$icu_lib_host_subsystem_name"
   output_name = "hmicuio"
 }
 
@@ -422,7 +424,7 @@ ohos_executable("genbrk") {
     "-ldl",
     "-lm",
   ]
-  subsystem_name = "global"
+  subsystem_name = "$icu_bin_host_subsystem_name"
   output_name = "genbrk"
 }
 
@@ -443,7 +445,7 @@ ohos_executable("genccode") {
     "-ldl",
     "-lm",
   ]
-  subsystem_name = "global"
+  subsystem_name = "$icu_bin_host_subsystem_name"
   output_name = "genccode"
 }
 
@@ -464,7 +466,7 @@ ohos_executable("gencfu") {
     "-ldl",
     "-lm",
   ]
-  subsystem_name = "global"
+  subsystem_name = "$icu_bin_host_subsystem_name"
   output_name = "gencfu"
 }
 
@@ -485,7 +487,7 @@ ohos_executable("gencnval") {
     "-ldl",
     "-lm",
   ]
-  subsystem_name = "global"
+  subsystem_name = "$icu_bin_host_subsystem_name"
   output_name = "gencnval"
 }
 
@@ -506,7 +508,7 @@ ohos_executable("gendict") {
     "-ldl",
     "-lm",
   ]
-  subsystem_name = "global"
+  subsystem_name = "$icu_bin_host_subsystem_name"
   output_name = "gendict"
 }
 
@@ -575,7 +577,7 @@ ohos_executable("genrb") {
     "-ldl",
     "-lm",
   ]
-  subsystem_name = "global"
+  subsystem_name = "$icu_bin_host_subsystem_name"
   output_name = "genrb"
 }
 
@@ -596,7 +598,7 @@ ohos_executable("derb") {
     "-ldl",
     "-lm",
   ]
-  subsystem_name = "global"
+  subsystem_name = "$icu_bin_host_subsystem_name"
   output_name = "derb"
 }
 
@@ -622,7 +624,7 @@ ohos_executable("makeconv") {
     "-ldl",
     "-lm",
   ]
-  subsystem_name = "global"
+  subsystem_name = "$icu_bin_host_subsystem_name"
   output_name = "makeconv"
 }
 
@@ -646,7 +648,7 @@ ohos_executable("gensprep") {
     "-ldl",
     "-lm",
   ]
-  subsystem_name = "global"
+  subsystem_name = "$icu_bin_host_subsystem_name"
   output_name = "gensprep"
 }
 
@@ -667,7 +669,7 @@ ohos_executable("icupkg") {
     "-ldl",
     "-lm",
   ]
-  subsystem_name = "global"
+  subsystem_name = "$icu_bin_host_subsystem_name"
   output_name = "icupkg"
 }
 
@@ -694,7 +696,7 @@ ohos_executable("pkgdata") {
     "-ldl",
     "-lm",
   ]
-  subsystem_name = "global"
+  subsystem_name = "$icu_bin_host_subsystem_name"
   output_name = "pkgdata"
 }
 group("bin_host") {

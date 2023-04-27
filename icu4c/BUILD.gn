@@ -13,6 +13,7 @@
 
 import("//build/ohos.gni")
 import("//third_party/icu/icu.gni")
+import("//third_party/icu/icu4c/icu4c_config.gni")
 config("icu_config") {
   include_dirs = [
     "//third_party/icu/icu4c/source/common",
@@ -542,13 +543,10 @@ ohos_shared_library("shared_icuuc") {
     "-shared",
     "-lm",
   ]
-  if (is_standard_system) {
-    part_name = "icu"
-    subsystem_name = "thirdparty"
-  } else {
-    part_name = "i18n"
-    subsystem_name = "global"
-  }
+
+  part_name = "$icu_part_name"
+  subsystem_name = "$icu_subsystem_name"
+
   install_images = [ system_base_dir ]
   relative_install_dir = "platformsdk"
   output_name = "hmicuuc"
@@ -594,13 +592,10 @@ ohos_shared_library("shared_icui18n") {
     cflags_cc += [ "-fPIC" ]
     ldflags += [ "-ldl" ]
   }
-  if (is_standard_system) {
-    part_name = "icu"
-    subsystem_name = "thirdparty"
-  } else {
-    part_name = "i18n"
-    subsystem_name = "global"
-  }
+
+  part_name = "$icu_part_name"
+  subsystem_name = "$icu_subsystem_name"
+
   install_images = [ system_base_dir ]
   relative_install_dir = "platformsdk"
   output_name = "hmicui18n"
