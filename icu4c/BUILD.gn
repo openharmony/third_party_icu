@@ -514,7 +514,6 @@ ohos_shared_library("shared_icuuc") {
     "//build/config/compiler:rtti",
   ]
   all_dependent_configs = [ ":static_icustubdata_all_deps_config" ]
-  deps = [ ":static_icustubdata" ]
   defines = [
     "U_ATTRIBUTE_DEPRECATED=",
     "U_COMMON_IMPLEMENTATION",
@@ -524,6 +523,14 @@ ohos_shared_library("shared_icuuc") {
     "_REENTRANT",
   ]
   sources = icu_common_source
+  is_cross_platform_build =
+      defined(build_cross_platform_version) && build_cross_platform_version
+
+  if (!is_cross_platform_build || current_toolchain == host_toolchain) {
+    deps = [ ":static_icustubdata" ]
+  } else {
+    sources += [ "//third_party/icu/ohos_icu4j/data/lite/icudt69l_dat.S" ]
+  }
   cflags_cc = [
     "-O3",
     "-W",
