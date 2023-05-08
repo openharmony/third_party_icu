@@ -20,7 +20,7 @@ config("icu_config") {
   # IAR toolchain compilation does not support multithreaded libraries.
   # The modification here will not affect the native function of icu.
   # Build-system should pre-define UMUTEX_H to inactive umutex.h and active this mock header.
-  # The source of modification and the corresponding responsibilities can be found in foundation/graphic/ui/BUILD.gn.
+  # The source of modification and the corresponding responsibilities can be found in foundation/arkui/ui_lite/BUILD.gn.
   if (defined(board_toolchain_type) && board_toolchain_type == "iccarm") {
     defines = [
       "U_PLATFORM_IMPLEMENTS_POSIX=0",
