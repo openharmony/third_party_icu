@@ -726,6 +726,7 @@ ohos_static_library("static_icu") {
   defines = [
     "U_ATTRIBUTE_DEPRECATED=",
     "U_COMMON_IMPLEMENTATION",
+    "U_I18N_IMPLEMENTATION",
     "U_STATIC_IMPLEMENTATION",
     "UPRV_BLOCK_MACRO_BEGIN=",
     "UPRV_BLOCK_MACRO_END=",
