@@ -49,6 +49,8 @@ ohos_static_library("static_icustubdata") {
   ]
   output_dir = "${root_out_dir}/third_party/icu/stubdata"
   output_name = "stubdata"
+  part_name = "icu"
+  subsystem_name = "thirdparty"
 }
 
 ohos_prebuilt_etc("ohos_icudat") {
