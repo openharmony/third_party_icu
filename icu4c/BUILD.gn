@@ -660,6 +660,8 @@ ohos_static_library("static_icuuc") {
   ]
 
   output_name = "hmicuuc"
+  part_name = "$icu_part_name"
+  subsystem_name = "$icu_subsystem_name"
 }
 
 ohos_static_library("static_icui18n") {
@@ -717,6 +719,8 @@ ohos_static_library("static_icui18n") {
     "-lm",
   ]
   output_name = "hmicui18n"
+  part_name = "$icu_part_name"
+  subsystem_name = "$icu_subsystem_name"
 }
 
 ohos_static_library("static_icu") {
@@ -771,4 +775,6 @@ ohos_static_library("static_icu") {
   ]
 
   output_name = "hmicu"
+  part_name = "$icu_part_name"
+  subsystem_name = "$icu_subsystem_name"
 }
