@@ -549,6 +549,7 @@ ohos_shared_library("shared_icuuc") {
   part_name = "$icu_part_name"
   subsystem_name = "$icu_subsystem_name"
 
+  innerapi_tags = [ "platformsdk" ]
   install_images = [ system_base_dir ]
   relative_install_dir = "platformsdk"
   output_name = "hmicuuc"
@@ -598,6 +599,7 @@ ohos_shared_library("shared_icui18n") {
   part_name = "$icu_part_name"
   subsystem_name = "$icu_subsystem_name"
 
+  innerapi_tags = [ "platformsdk" ]
   install_images = [ system_base_dir ]
   relative_install_dir = "platformsdk"
   output_name = "hmicui18n"
