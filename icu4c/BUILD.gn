@@ -602,7 +602,7 @@ ohos_shared_library("shared_icui18n") {
   install_enable = true
 }
 
-ohos_static_library("static_icuuc") {
+ohos_source_set("static_icuuc") {
   configs = [
     ":icu_config",
     "//build/config/compiler:rtti",
@@ -644,7 +644,6 @@ ohos_static_library("static_icuuc") {
   ]
 
   cflags = [
-    "-fvisibility=hidden",
     "-fdata-sections",
     "-ffunction-sections",
     "-Os",
@@ -660,7 +659,7 @@ ohos_static_library("static_icuuc") {
   output_name = "hmicuuc"
 }
 
-ohos_static_library("static_icui18n") {
+ohos_source_set("static_icui18n") {
   sources = icu_i18n_source
   configs = [
     ":icu_config",
@@ -703,7 +702,6 @@ ohos_static_library("static_icui18n") {
   }
 
   cflags = [
-    "-fvisibility=hidden",
     "-fdata-sections",
     "-ffunction-sections",
     "-Os",
