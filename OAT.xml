@@ -66,7 +66,10 @@ Note:If the text contains special characters, please escape them according to th
                 <filteritem type="filepath" name="ohos_icu4j/data/.*" desc="icudt file"/>
                 <filteritem type="filepath" name="ohos_icu4j/src/main/tests/.*" desc="test binary"/>
                 <filteritem type="filepath" name="icu4c/.*" desc="icu source binary file"/>
-                <filteritem type="filepath" name="icu4j/main/tests/.*" desc="icu source binary file"/>
+                <filteritem type="filepath" name="icu4j/.*" desc="icu source binary file"/>
+                <filteritem type="filepath" name="tools/unicodetools/.*" desc="icu source binary file"/>
+                <filteritem type="filepath" name="tools/multi/.*" desc="icu source binary file"/>
+                <filteritem type="filepath" name="tools/images/.*" desc="icu source binary file"/>
             </filefilter>
             <filefilter name="defaultPolicyFilter" desc="compatibility, license">
                 <filteritem type="filepath" name="KEYS" desc="open source orgin file, confirmed"/>
@@ -80,6 +83,10 @@ Note:If the text contains special characters, please escape them according to th
             <filefilter name="copyrightPolicyFilter" desc="compatibility, license">
                 <filteritem type="filepath" name="icu4c/.*" desc="open source orgin file, confirmed"/>
                 <filteritem type="filepath" name="ohos_icu4j/.*" desc="open source orgin file, confirmed"/>
+                <filteritem type="filepath" name="icu4j/.*" desc="open source orgin file, confirmed"/>
+                <filteritem type="filepath" name="tools/.*" desc="open source orgin file, confirmed"/>
+                <filteritem type="filepath" name="vendor/.*" desc="open source orgin file, confirmed"/>
+                <filteritem type="filepath" name="docs/.*" desc="open source orgin file, confirmed"/>
             </filefilter>
         </filefilterlist>
     </oatconfig>
