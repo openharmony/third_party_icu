@@ -630,7 +630,6 @@ ohos_source_set("static_icuuc") {
   ]
   sources = icu_common_source
   cflags_cc = [
-    "-Os",
     "-W",
     "-Wall",
     "-pedantic",
@@ -650,7 +649,6 @@ ohos_source_set("static_icuuc") {
   cflags = [
     "-fdata-sections",
     "-ffunction-sections",
-    "-Os",
     "-Wno-unused-function",
   ]
 
@@ -683,7 +681,6 @@ ohos_source_set("static_icui18n") {
   ]
 
   cflags_cc = [
-    "-Os",
     "-W",
     "-Wall",
     "-pedantic",
@@ -710,7 +707,6 @@ ohos_source_set("static_icui18n") {
   cflags = [
     "-fdata-sections",
     "-ffunction-sections",
-    "-Os",
   ]
 
   ldflags = [
@@ -743,7 +739,6 @@ ohos_static_library("static_icu") {
   sources += icu_i18n_source
   sources += [ "//third_party/icu/ohos_icu4j/data/lite/icudt69l_dat.S" ]
   cflags_cc = [
-    "-Os",
     "-W",
     "-Wall",
     "-pedantic",
@@ -764,7 +759,6 @@ ohos_static_library("static_icu") {
     "-fvisibility=hidden",
     "-fdata-sections",
     "-ffunction-sections",
-    "-Os",
     "-Wno-unused-function",
   ]
 
