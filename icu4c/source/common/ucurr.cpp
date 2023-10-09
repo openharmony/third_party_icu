@@ -20,6 +20,7 @@
 #include "unicode/usetiter.h"
 #include "unicode/utf16.h"
 #include "ustr_imp.h"
+#include "bytesinkutil.h"
 #include "charstr.h"
 #include "cmemory.h"
 #include "cstring.h"
@@ -520,14 +521,18 @@ ucurr_forLocale(const char* locale,
         return 0;
     }
 
-    char currency[4];  // ISO currency codes are alpha3 codes.
     UErrorCode localStatus = U_ZERO_ERROR;
-    int32_t resLen = uloc_getKeywordValue(locale, "currency",
-                                          currency, UPRV_LENGTHOF(currency), &localStatus);
-    if (U_SUCCESS(localStatus) && resLen == 3 && uprv_isInvariantString(currency, resLen)) {
+    CharString currency;
+    {
+        CharStringByteSink sink(&currency);
+        ulocimp_getKeywordValue(locale, "currency", sink, &localStatus);
+    }
+    int32_t resLen = currency.length();
+
+    if (U_SUCCESS(localStatus) && resLen == 3 && uprv_isInvariantString(currency.data(), resLen)) {
         if (resLen < buffCapacity) {
-            T_CString_toUpperCase(currency);
-            u_charsToUChars(currency, buff, resLen);
+            T_CString_toUpperCase(currency.data());
+            u_charsToUChars(currency.data(), buff, resLen);
         }
         return u_terminateUChars(buff, buffCapacity, resLen, ec);
     }
@@ -669,9 +674,12 @@ ucurr_getName(const UChar* currency,
     // this function.
     UErrorCode ec2 = U_ZERO_ERROR;
 
-    char loc[ULOC_FULLNAME_CAPACITY];
-    uloc_getName(locale, loc, sizeof(loc), &ec2);
-    if (U_FAILURE(ec2) || ec2 == U_STRING_NOT_TERMINATED_WARNING) {
+    CharString loc;
+    {
+        CharStringByteSink sink(&loc);
+        ulocimp_getName(locale, sink, &ec2);
+    }
+    if (U_FAILURE(ec2)) {
         *ec = U_ILLEGAL_ARGUMENT_ERROR;
         return 0;
     }
@@ -684,7 +692,7 @@ ucurr_getName(const UChar* currency,
     
     const UChar* s = NULL;
     ec2 = U_ZERO_ERROR;
-    LocalUResourceBundlePointer rb(ures_open(U_ICUDATA_CURR, loc, &ec2));
+    LocalUResourceBundlePointer rb(ures_open(U_ICUDATA_CURR, loc.data(), &ec2));
 
     if (nameStyle == UCURR_NARROW_SYMBOL_NAME || nameStyle == UCURR_FORMAL_SYMBOL_NAME || nameStyle == UCURR_VARIANT_SYMBOL_NAME) {
         CharString key;
@@ -768,9 +776,12 @@ ucurr_getPluralName(const UChar* currency,
     // this function.
     UErrorCode ec2 = U_ZERO_ERROR;
 
-    char loc[ULOC_FULLNAME_CAPACITY];
-    uloc_getName(locale, loc, sizeof(loc), &ec2);
-    if (U_FAILURE(ec2) || ec2 == U_STRING_NOT_TERMINATED_WARNING) {
+    CharString loc;
+    {
+        CharStringByteSink sink(&loc);
+        ulocimp_getName(locale, sink, &ec2);
+    }
+    if (U_FAILURE(ec2)) {
         *ec = U_ILLEGAL_ARGUMENT_ERROR;
         return 0;
     }
@@ -780,7 +791,7 @@ ucurr_getPluralName(const UChar* currency,
 
     const UChar* s = NULL;
     ec2 = U_ZERO_ERROR;
-    UResourceBundle* rb = ures_open(U_ICUDATA_CURR, loc, &ec2);
+    UResourceBundle* rb = ures_open(U_ICUDATA_CURR, loc.data(), &ec2);
 
     rb = ures_getByKey(rb, CURRENCYPLURALS, rb, &ec2);
 
@@ -956,14 +967,17 @@ collectCurrencyNames(const char* locale,
     // Look up the Currencies resource for the given locale.
     UErrorCode ec2 = U_ZERO_ERROR;
 
-    char loc[ULOC_FULLNAME_CAPACITY] = "";
-    uloc_getName(locale, loc, sizeof(loc), &ec2);
-    if (U_FAILURE(ec2) || ec2 == U_STRING_NOT_TERMINATED_WARNING) {
+    CharString loc;
+    {
+        CharStringByteSink sink(&loc);
+        ulocimp_getName(locale, sink, &ec2);
+    }
+    if (U_FAILURE(ec2)) {
         ec = U_ILLEGAL_ARGUMENT_ERROR;
     }
 
     // Get maximum currency name count first.
-    getCurrencyNameCount(loc, total_currency_name_count, total_currency_symbol_count);
+    getCurrencyNameCount(loc.data(), total_currency_name_count, total_currency_symbol_count);
 
     *currencyNames = (CurrencyNameStruct*)uprv_malloc
         (sizeof(CurrencyNameStruct) * (*total_currency_name_count));
@@ -991,7 +1005,7 @@ collectCurrencyNames(const char* locale,
     for (int32_t localeLevel = 0; ; ++localeLevel) {
         ec2 = U_ZERO_ERROR;
         // TODO: ures_openDirect
-        UResourceBundle* rb = ures_open(U_ICUDATA_CURR, loc, &ec2);
+        UResourceBundle* rb = ures_open(U_ICUDATA_CURR, loc.data(), &ec2);
         UResourceBundle* curr = ures_getByKey(rb, CURRENCIES, NULL, &ec2);
         int32_t n = ures_getSize(curr);
         for (int32_t i=0; i<n; ++i) {

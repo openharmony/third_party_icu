@@ -1181,33 +1181,6 @@ error:
     }
 }
 
-static UBool
-do_canonicalize(const char*    localeID,
-         char* buffer,
-         int32_t bufferCapacity,
-         UErrorCode* err)
-{
-    uloc_canonicalize(
-        localeID,
-        buffer,
-        bufferCapacity,
-        err);
-
-    if (*err == U_STRING_NOT_TERMINATED_WARNING ||
-        *err == U_BUFFER_OVERFLOW_ERROR) {
-        *err = U_ILLEGAL_ARGUMENT_ERROR;
-
-        return FALSE;
-    }
-    else if (U_FAILURE(*err)) {
-
-        return FALSE;
-    }
-    else {
-        return TRUE;
-    }
-}
-
 U_CAPI int32_t U_EXPORT2
 uloc_addLikelySubtags(const char* localeID,
                       char* maximizedLocaleID,
@@ -1241,12 +1214,16 @@ static UBool
 _ulocimp_addLikelySubtags(const char* localeID,
                           icu::ByteSink& sink,
                           UErrorCode* status) {
-    char localeBuffer[ULOC_FULLNAME_CAPACITY];
-
-    if (do_canonicalize(localeID, localeBuffer, sizeof localeBuffer, status)) {
-        return _uloc_addLikelySubtags(localeBuffer, sink, status);
+    icu::CharString localeBuffer;
+    {
+        icu::CharStringByteSink localeSink(&localeBuffer);
+        ulocimp_canonicalize(localeID, localeSink, status);
     }
-    return FALSE;
+    if (U_SUCCESS(*status)) {
+        return _uloc_addLikelySubtags(localeBuffer.data(), sink, status);
+    } else {
+        return false;
+    }
 }
 
 U_CAPI void U_EXPORT2
@@ -1288,12 +1265,14 @@ uloc_minimizeSubtags(const char* localeID,
 U_CAPI void U_EXPORT2
 ulocimp_minimizeSubtags(const char* localeID,
                         icu::ByteSink& sink,
+                        bool favorScript,
                         UErrorCode* status) {
-    char localeBuffer[ULOC_FULLNAME_CAPACITY];
-
-    if (do_canonicalize(localeID, localeBuffer, sizeof localeBuffer, status)) {
-        _uloc_minimizeSubtags(localeBuffer, sink, status);
+    icu::CharString localeBuffer;
+    {
+        icu::CharStringByteSink localeSink(&localeBuffer);
+        ulocimp_canonicalize(localeID, localeSink, status);
     }
+    _uloc_minimizeSubtags(localeBuffer.data(), sink, favorScript, status);
 }
 
 // Pairs of (language subtag, + or -) for finding out fast if common languages
@@ -1369,16 +1348,26 @@ ulocimp_getRegionForSupplementalData(const char *localeID, UBool inferRegion,
     UErrorCode rgStatus = U_ZERO_ERROR;
 
     // First check for rg keyword value
-    int32_t rgLen = uloc_getKeywordValue(localeID, "rg", rgBuf, ULOC_RG_BUFLEN, &rgStatus);
+    icu::CharString rg;
+    {
+        icu::CharStringByteSink sink(&rg);
+        ulocimp_getKeywordValue(localeID, "rg", sink, &rgStatus);
+    }
+    int32_t rgLen = rg.length();
     if (U_FAILURE(rgStatus) || rgLen != 6) {
         rgLen = 0;
     } else {
-        // rgBuf guaranteed to be zero terminated here, with text len 6
-        char *rgPtr = rgBuf;
-        for (; *rgPtr!= 0; rgPtr++) {
-            *rgPtr = uprv_toupper(*rgPtr);
+        // chop off the subdivision code (which will generally be "zzzz" anyway)
+        const char* const data = rg.data();
+        if (uprv_isASCIILetter(data[0])) {
+            rgLen = 2;
+            rgBuf[0] = uprv_toupper(data[0]);
+            rgBuf[1] = uprv_toupper(data[1]);
+        } else {
+            // assume three-digit region code
+            rgLen = 3;
+            uprv_memcpy(rgBuf, data, rgLen);
         }
-        rgLen = (uprv_strcmp(rgBuf+2, "ZZZZ") == 0)? 2: 0;
     }
 
     if (rgLen == 0) {
@@ -1387,7 +1376,7 @@ ulocimp_getRegionForSupplementalData(const char *localeID, UBool inferRegion,
         if (U_FAILURE(*status)) {
             rgLen = 0;
         } else if (rgLen == 0 && inferRegion) {
-            // no unicode_region_subtag but inferRegion TRUE, try likely subtags
+            // no unicode_region_subtag but inferRegion true, try likely subtags
             rgStatus = U_ZERO_ERROR;
             icu::CharString locBuf;
             {
