@@ -634,7 +634,7 @@ CollationRuleParser::parseSetting(UErrorCode &errorCode) {
             CharString collationType;
             {
                 CharStringByteSink sink(&collationType);
-                ulocimp_getKeywordValue(localeID.data(), "collation", sink, &errorCode);
+                ulocimp_getKeywordValue(localeID, "collation", sink, &errorCode);
             }
             if(U_FAILURE(errorCode)) {
                 errorCode = U_ZERO_ERROR;
