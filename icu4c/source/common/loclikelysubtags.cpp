@@ -631,53 +631,64 @@ int32_t XLikelySubtags::trieNext(BytesTrie &iter, const char *s, int32_t i) {
 // TODO(ICU-20777): Switch Locale/uloc_ likely-subtags API from the old code
 // in loclikely.cpp to this new code, including activating this
 // minimizeSubtags() function. The LocaleMatcher does not minimize.
-#if 0
-LSR XLikelySubtags::minimizeSubtags(const char *languageIn, const char *scriptIn,
-                                    const char *regionIn, ULocale.Minimize fieldToFavor,
+
+LSR XLikelySubtags::minimizeSubtags(StringPiece language, StringPiece script,
+                                    StringPiece region,
+                                    bool favorScript,
                                     UErrorCode &errorCode) const {
-    LSR result = maximize(languageIn, scriptIn, regionIn);
+    LSR max = maximize(language, script, region, true, errorCode);
+    if (U_FAILURE(errorCode)) {
+        return max;
+    }
+    // If no match, return it.
+    if (uprv_strlen(max.language) == 0 &&
+        uprv_strlen(max.script) == 0 &&
+        uprv_strlen(max.region) == 0) {
+        // No match. ICU API mandate us to
+        // "If this Locale is already in the minimal form, or not valid, or
+        // there is no data available for minimization, the Locale will be
+        // unchanged."
+        return LSR(language, script, region, LSR::EXPLICIT_LSR, errorCode);
+    }
+    // try language
+    LSR test = maximize(max.language, "", "", true, errorCode);
+    if (U_FAILURE(errorCode)) {
+        return max;
+    }
+    if (test.isEquivalentTo(max)) {
+        return LSR(max.language, "", "", LSR::DONT_CARE_FLAGS, errorCode);
+    }
 
-    // We could try just a series of checks, like:
-    // LSR result2 = addLikelySubtags(languageIn, "", "");
-    // if result.equals(result2) return result2;
-    // However, we can optimize 2 of the cases:
-    //   (languageIn, "", "")
-    //   (languageIn, "", regionIn)
-
-    // value00 = lookup(result.language, "", "")
-    BytesTrie iter = new BytesTrie(trie);
-    int value = trieNext(iter, result.language, 0);
-    U_ASSERT(value >= 0);
-    if (value == 0) {
-        value = trieNext(iter, "", 0);
-        U_ASSERT(value >= 0);
-        if (value == 0) {
-            value = trieNext(iter, "", 0);
+    if (!favorScript) {
+        // favor Region
+        // try language and region
+        test = maximize(max.language, "", max.region, true, errorCode);
+        if (U_FAILURE(errorCode)) {
+            return max;
+        }
+        if (test.isEquivalentTo(max)) {
+            return LSR(max.language, "", max.region, LSR::DONT_CARE_FLAGS, errorCode);
         }
     }
-    U_ASSERT(value > 0);
-    LSR value00 = lsrs[value];
-    boolean favorRegionOk = false;
-    if (result.script.equals(value00.script)) { //script is default
-        if (result.region.equals(value00.region)) {
-            return new LSR(result.language, "", "", LSR.DONT_CARE_FLAGS);
-        } else if (fieldToFavor == ULocale.Minimize.FAVOR_REGION) {
-            return new LSR(result.language, "", result.region, LSR.DONT_CARE_FLAGS);
-        } else {
-            favorRegionOk = true;
+    // try language and script
+    test = maximize(max.language, max.script, "", true, errorCode);
+    if (U_FAILURE(errorCode)) {
+        return max;
+    }
+    if (test.isEquivalentTo(max)) {
+        return LSR(max.language, max.script, "", LSR::DONT_CARE_FLAGS, errorCode);
+    }
+    if (favorScript) {
+        // try language and region
+        test = maximize(max.language, "", max.region, true, errorCode);
+        if (U_FAILURE(errorCode)) {
+            return max;
+        }
+        if (test.isEquivalentTo(max)) {
+            return LSR(max.language, "", max.region, LSR::DONT_CARE_FLAGS, errorCode);
         }
     }
-
-    // The last case is not as easy to optimize.
-    // Maybe do later, but for now use the straightforward code.
-    LSR result2 = maximize(languageIn, scriptIn, "");
-    if (result2.equals(result)) {
-        return new LSR(result.language, result.script, "", LSR.DONT_CARE_FLAGS);
-    } else if (favorRegionOk) {
-        return new LSR(result.language, "", result.region, LSR.DONT_CARE_FLAGS);
-    }
-    return result;
+    return LSR(max.language, max.script, max.region, LSR::DONT_CARE_FLAGS, errorCode);
 }
-#endif
 
 U_NAMESPACE_END

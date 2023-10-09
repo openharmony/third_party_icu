@@ -82,7 +82,12 @@ private:
     /**
      * Raw access to addLikelySubtags. Input must be in canonical format, eg "en", not "eng" or "EN".
      */
-    LSR maximize(const char *language, const char *script, const char *region) const;
+    LSR maximize(const char *language, const char *script, const char *region,
+                 bool returnInputIfUnmatch,
+                 UErrorCode &errorCode) const;
+    LSR maximize(StringPiece language, StringPiece script, StringPiece region,
+                 bool returnInputIfUnmatch,
+                 UErrorCode &errorCode) const;
 
     int32_t getLikelyIndex(const char *language, const char *script) const;
 
