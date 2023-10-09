@@ -2113,6 +2113,10 @@ Locale::addLikelySubtags(UErrorCode& status) {
 
 void
 Locale::minimizeSubtags(UErrorCode& status) {
+    Locale::minimizeSubtags(false, status);
+}
+void
+Locale::minimizeSubtags(bool favorScript, UErrorCode& status) {
     if (U_FAILURE(status)) {
         return;
     }
@@ -2120,7 +2124,7 @@ Locale::minimizeSubtags(UErrorCode& status) {
     CharString minimizedLocaleID;
     {
         CharStringByteSink sink(&minimizedLocaleID);
-        ulocimp_minimizeSubtags(fullName, sink, &status);
+        ulocimp_minimizeSubtags(fullName, sink, favorScript, &status);
     }
 
     if (U_FAILURE(status)) {
