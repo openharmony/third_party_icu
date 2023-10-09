@@ -11,6 +11,7 @@
 #include "unicode/utypes.h"
 #include "unicode/bytestrie.h"
 #include "unicode/locid.h"
+#include "unicode/stringpiece.h"
 #include "unicode/uobject.h"
 #include "unicode/ures.h"
 #include "charstrmap.h"
@@ -61,13 +62,9 @@ public:
      */
     int32_t compareLikely(const LSR &lsr, const LSR &other, int32_t likelyInfo) const;
 
-    // TODO(ICU-20777): Switch Locale/uloc_ likely-subtags API from the old code
-    // in loclikely.cpp to this new code, including activating this
-    // minimizeSubtags() function. The LocaleMatcher does not minimize.
-#if 0
-    LSR minimizeSubtags(const char *languageIn, const char *scriptIn, const char *regionIn,
-                        ULocale.Minimize fieldToFavor, UErrorCode &errorCode) const;
-#endif
+    LSR minimizeSubtags(StringPiece language, StringPiece script, StringPiece region,
+                        bool favorScript,
+                        UErrorCode &errorCode) const;
 
     // visible for LocaleDistance
     const LocaleDistanceData &getDistanceData() const { return distanceData; }
