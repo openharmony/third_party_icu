@@ -926,12 +926,11 @@ _uloc_minimizeSubtags(const char* localeID,
     const char* trailing = "";
     int32_t trailingLength = 0;
     int32_t trailingIndex = 0;
-    UBool successGetMax = FALSE;
 
     if(U_FAILURE(*err)) {
         goto error;
     }
-    else if (localeID == NULL) {
+    else if (localeID == nullptr) {
         goto error;
     }
 
@@ -965,213 +964,38 @@ _uloc_minimizeSubtags(const char* localeID,
     CHECK_TRAILING_VARIANT_SIZE(trailing, trailingLength);
 
     {
-        icu::CharString base;
-        {
-            icu::CharStringByteSink baseSink(&base);
-            createTagString(
-                lang,
-                langLength,
-                script,
-                scriptLength,
-                region,
-                regionLength,
-                NULL,
-                0,
-                baseSink,
-                err);
-        }
-
-        /**
-         * First, we need to first get the maximization
-         * from AddLikelySubtags.
-         **/
-        {
-            icu::CharStringByteSink maxSink(&maximizedTagBuffer);
-            successGetMax = _ulocimp_addLikelySubtags(base.data(), maxSink, err);
-        }
-    }
-
-    if(U_FAILURE(*err)) {
-        goto error;
-    }
-
-    if (!successGetMax) {
-        /**
-         * If we got here, return the locale ID parameter unchanged.
-         **/
-        const int32_t localeIDLength = (int32_t)uprv_strlen(localeID);
-        sink.Append(localeID, localeIDLength);
-        return;
-    }
-
-    // In the following, the lang, script, region are referring to those in
-    // the maximizedTagBuffer, not the one in the localeID.
-    langLength = sizeof(lang);
-    scriptLength = sizeof(script);
-    regionLength = sizeof(region);
-    parseTagString(
-        maximizedTagBuffer.data(),
-        lang,
-        &langLength,
-        script,
-        &scriptLength,
-        region,
-        &regionLength,
-        err);
-    if(U_FAILURE(*err)) {
-        goto error;
-    }
-
-    /**
-     * Start first with just the language.
-     **/
-    {
-        icu::CharString tagBuffer;
-        {
-            icu::CharStringByteSink tagSink(&tagBuffer);
-            createLikelySubtagsString(
-                lang,
-                langLength,
-                NULL,
-                0,
-                NULL,
-                0,
-                NULL,
-                0,
-                tagSink,
-                err);
-        }
-
+        const icu::XLikelySubtags* likelySubtags = icu::XLikelySubtags::getSingleton(*err);
         if(U_FAILURE(*err)) {
             goto error;
         }
-        else if (!tagBuffer.isEmpty() &&
-                 uprv_strnicmp(
-                    maximizedTagBuffer.data(),
-                    tagBuffer.data(),
-                    tagBuffer.length()) == 0) {
-
-            createTagString(
-                        lang,
-                        langLength,
-                        NULL,
-                        0,
-                        NULL,
-                        0,
-                        trailing,
-                        trailingLength,
-                        sink,
-                        err);
-            return;
-        }
-    }
-
-    /**
-     * Next, try the language and region.
-     **/
-    if (regionLength > 0) {
-
-        icu::CharString tagBuffer;
-        {
-            icu::CharStringByteSink tagSink(&tagBuffer);
-            createLikelySubtagsString(
-                lang,
-                langLength,
-                NULL,
-                0,
-                region,
-                regionLength,
-                NULL,
-                0,
-                tagSink,
-                err);
-        }
-
+        icu::LSR lsr = likelySubtags->minimizeSubtags(
+            {lang, langLength},
+            {script, scriptLength},
+            {region, regionLength},
+            favorScript,
+            *err);
         if(U_FAILURE(*err)) {
             goto error;
         }
-        else if (!tagBuffer.isEmpty() &&
-                 uprv_strnicmp(
-                    maximizedTagBuffer.data(),
-                    tagBuffer.data(),
-                    tagBuffer.length()) == 0) {
-
-            createTagString(
-                        lang,
-                        langLength,
-                        NULL,
-                        0,
-                        region,
-                        regionLength,
-                        trailing,
-                        trailingLength,
-                        sink,
-                        err);
-            return;
+        const char* language = lsr.language;
+        if (uprv_strcmp(language, "und") == 0) {
+            language = "";
         }
-    }
-
-    /**
-     * Finally, try the language and script.  This is our last chance,
-     * since trying with all three subtags would only yield the
-     * maximal version that we already have.
-     **/
-    if (scriptLength > 0) {
-        icu::CharString tagBuffer;
-        {
-            icu::CharStringByteSink tagSink(&tagBuffer);
-            createLikelySubtagsString(
-                lang,
-                langLength,
-                script,
-                scriptLength,
-                NULL,
-                0,
-                NULL,
-                0,
-                tagSink,
-                err);
-        }
-
+        createTagStringWithAlternates(
+            language,
+            (int32_t)uprv_strlen(language),
+            lsr.script,
+            (int32_t)uprv_strlen(lsr.script),
+            lsr.region,
+            (int32_t)uprv_strlen(lsr.region),
+            trailing,
+            trailingLength,
+            nullptr,
+            sink,
+            err);
         if(U_FAILURE(*err)) {
             goto error;
         }
-        else if (!tagBuffer.isEmpty() &&
-                 uprv_strnicmp(
-                    maximizedTagBuffer.data(),
-                    tagBuffer.data(),
-                    tagBuffer.length()) == 0) {
-
-            createTagString(
-                        lang,
-                        langLength,
-                        script,
-                        scriptLength,
-                        NULL,
-                        0,
-                        trailing,
-                        trailingLength,
-                        sink,
-                        err);
-            return;
-        }
-    }
-
-    {
-        /**
-         * If we got here, return the max + trail.
-         **/
-        createTagString(
-                    lang,
-                    langLength,
-                    script,
-                    scriptLength,
-                    region,
-                    regionLength,
-                    trailing,
-                    trailingLength,
-                    sink,
-                    err);
         return;
     }
 
