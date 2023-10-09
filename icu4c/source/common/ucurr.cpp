@@ -1099,7 +1099,7 @@ collectCurrencyNames(const char* locale,
         ures_close(curr);
         ures_close(rb);
 
-        if (!fallback(loc)) {
+        if (!fallback(loc.data())) {
             break;
         }
     }

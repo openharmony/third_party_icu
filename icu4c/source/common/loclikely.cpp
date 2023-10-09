@@ -913,6 +913,7 @@ static UBool _ulocimp_addLikelySubtags(const char*, icu::ByteSink&, UErrorCode*)
 static void
 _uloc_minimizeSubtags(const char* localeID,
                       icu::ByteSink& sink,
+                      bool favorScript,
                       UErrorCode* err) {
     icu::CharString maximizedTagBuffer;
 
