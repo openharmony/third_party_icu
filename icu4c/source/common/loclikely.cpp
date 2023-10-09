@@ -31,6 +31,7 @@
 #include "charstr.h"
 #include "cmemory.h"
 #include "cstring.h"
+#include "loclikelysubtags.h"
 #include "ulocimp.h"
 #include "ustr_imp.h"
 
@@ -1070,7 +1071,7 @@ uloc_minimizeSubtags(const char* localeID,
     icu::CheckedArrayByteSink sink(
             minimizedLocaleID, minimizedLocaleIDCapacity);
 
-    ulocimp_minimizeSubtags(localeID, sink, status);
+    ulocimp_minimizeSubtags(localeID, sink, false, status);
     int32_t reslen = sink.NumberOfBytesAppended();
 
     if (U_FAILURE(*status)) {
