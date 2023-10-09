@@ -45,6 +45,8 @@ struct LSR final : public UMemory {
      */
     LSR(char prefix, const char *lang, const char *scr, const char *r, int32_t f,
         UErrorCode &errorCode);
+    LSR(StringPiece lang, StringPiece scr, StringPiece r, int32_t f,
+        UErrorCode &errorCode);
     LSR(LSR &&other) U_NOEXCEPT;
     LSR(const LSR &other) = delete;
     inline ~LSR() {
