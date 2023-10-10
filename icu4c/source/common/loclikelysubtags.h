@@ -90,6 +90,7 @@ private:
                  UErrorCode &errorCode) const;
 
     int32_t getLikelyIndex(const char *language, const char *script) const;
+    bool isMacroregion(StringPiece& region, UErrorCode &errorCode) const;
 
     static int32_t trieNext(BytesTrie &iter, const char *s, int32_t i);
 

@@ -378,64 +378,91 @@ LSR XLikelySubtags::makeMaximizedLsr(const char *language, const char *script, c
     language = getCanonical(languageAliases, language);
     // (We have no script mappings.)
     region = getCanonical(regionAliases, region);
-    return maximize(language, script, region);
+    return maximize(language, script, region, false, errorCode);
 }
 
-LSR XLikelySubtags::maximize(const char *language, const char *script, const char *region) const {
-    if (uprv_strcmp(language, "und") == 0) {
+LSR XLikelySubtags::maximize(const char *language, const char *script, const char *region,
+                             bool returnInputIfUnmatch,
+                             UErrorCode &errorCode) const {
+    return maximize({language, (int32_t)uprv_strlen(language)},
+                    {script, (int32_t)uprv_strlen(script)},
+                    {region, (int32_t)uprv_strlen(region)},
+                    returnInputIfUnmatch,
+                    errorCode);
+}
+
+bool XLikelySubtags::isMacroregion(StringPiece& region, UErrorCode& errorCode) const {
+    // In Java, we use Region class. In C++, since Region is under i18n,
+    // we read the same data used by Region into gMacroregions avoid dependency
+    // from common to i18n/region.cpp
+    if (U_FAILURE(errorCode)) { return false; }
+    umtx_initOnce(gInitOnce, &XLikelySubtags::initLikelySubtags, errorCode);
+    if (U_FAILURE(errorCode)) { return false; }
+    UnicodeString str(UnicodeString::fromUTF8(region));
+    return gMacroregions->contains((void *)&str);
+}
+
+LSR XLikelySubtags::maximize(StringPiece language, StringPiece script, StringPiece region,
+                             bool returnInputIfUnmatch,
+                             UErrorCode &errorCode) const {
+    if (U_FAILURE(errorCode)) {
+        return LSR(language, script, region, LSR::EXPLICIT_LSR, errorCode);
+    }
+    if (language.compare("und") == 0) {
         language = "";
     }
-    if (uprv_strcmp(script, "Zzzz") == 0) {
+    if (script.compare("Zzzz") == 0) {
         script = "";
     }
-    if (uprv_strcmp(region, "ZZ") == 0) {
+    if (region.compare("ZZ") == 0) {
         region = "";
     }
-    if (*script != 0 && *region != 0 && *language != 0) {
-        return LSR(language, script, region, LSR::EXPLICIT_LSR);  // already maximized
+    if (!script.empty() && !region.empty() && !language.empty()) {
+        return LSR(language, script, region, LSR::EXPLICIT_LSR, errorCode);  // already maximized
     }
+    bool retainLanguage = false;
+    bool retainScript = false;
+    bool retainRegion = false;
 
-    uint32_t retainOldMask = 0;
     BytesTrie iter(trie);
     uint64_t state;
     int32_t value;
     // Small optimization: Array lookup for first language letter.
     int32_t c0;
-    if (0 <= (c0 = uprv_lowerOrdinal(language[0])) && c0 <= 25 &&
-            language[1] != 0 &&  // language.length() >= 2
+    if (0 <= (c0 = uprv_lowerOrdinal(language.data()[0])) && c0 <= 25 &&
+            language.length() >= 2 &&
             (state = trieFirstLetterStates[c0]) != 0) {
         value = trieNext(iter.resetToState64(state), language, 1);
     } else {
         value = trieNext(iter, language, 0);
     }
+    bool matchLanguage = (value >= 0);
+    bool matchScript = false;
     if (value >= 0) {
-        if (*language != 0) {
-            retainOldMask |= 4;
-        }
+        retainLanguage = !language.empty();
         state = iter.getState64();
     } else {
-        retainOldMask |= 4;
+        retainLanguage = true;
         iter.resetToState64(trieUndState);  // "und" ("*")
         state = 0;
     }
 
+    if (value >= 0 && !script.empty()) {
+        matchScript = true;
+    }
     if (value > 0) {
         // Intermediate or final value from just language.
         if (value == SKIP_SCRIPT) {
             value = 0;
         }
-        if (*script != 0) {
-            retainOldMask |= 2;
-        }
+        retainScript = !script.empty();
     } else {
         value = trieNext(iter, script, 0);
         if (value >= 0) {
-            if (*script != 0) {
-                retainOldMask |= 2;
-            }
+            retainScript = !script.empty();
             state = iter.getState64();
         } else {
-            retainOldMask |= 2;
+            retainScript = true;
             if (state == 0) {
                 iter.resetToState64(trieUndZzzzState);  // "und-Zzzz" ("**")
             } else {
@@ -447,19 +474,19 @@ LSR XLikelySubtags::maximize(const char *language, const char *script, const cha
         }
     }
 
+    bool matchRegion = false;
     if (value > 0) {
         // Final value from just language or language+script.
-        if (*region != 0) {
-            retainOldMask |= 1;
-        }
+        retainRegion = !region.empty();
     } else {
         value = trieNext(iter, region, 0);
         if (value >= 0) {
-            if (*region != 0) {
-                retainOldMask |= 1;
+            if (!region.empty() && !isMacroregion(region, errorCode)) {
+                retainRegion = true;
+                matchRegion = true;
             }
         } else {
-            retainOldMask |= 1;
+            retainRegion = true;
             if (state == 0) {
                 value = defaultLsrIndex;
             } else {
@@ -470,28 +497,33 @@ LSR XLikelySubtags::maximize(const char *language, const char *script, const cha
         }
     }
     U_ASSERT(value < lsrsLength);
-    const LSR &result = lsrs[value];
+    const LSR &matched = lsrs[value];
 
-    if (*language == 0) {
-        language = "und";
+    if (returnInputIfUnmatch &&
+        (!(matchLanguage || matchScript || (matchRegion && language.empty())))) {
+      return LSR("", "", "", LSR::EXPLICIT_LSR, errorCode);  // no matching.
+    }
+    if (language.empty()) {
+        language = StringPiece("und");
     }
 
-    if (retainOldMask == 0) {
+    if (!(retainLanguage || retainScript || retainRegion)) {
         // Quickly return a copy of the lookup-result LSR
         // without new allocation of the subtags.
-        return LSR(result.language, result.script, result.region, result.flags);
+        return LSR(matched.language, matched.script, matched.region, matched.flags);
     }
-    if ((retainOldMask & 4) == 0) {
-        language = result.language;
+    if (!retainLanguage) {
+        language = matched.language;
     }
-    if ((retainOldMask & 2) == 0) {
-        script = result.script;
+    if (!retainScript) {
+        script = matched.script;
     }
-    if ((retainOldMask & 1) == 0) {
-        region = result.region;
+    if (!retainRegion) {
+        region = matched.region;
     }
+    int32_t retainMask = (retainLanguage ? 4 : 0) + (retainScript ? 2 : 0) + (retainRegion ? 1 : 0);
     // retainOldMask flags = LSR explicit-subtag flags
-    return LSR(language, script, region, retainOldMask);
+    return LSR(language, script, region, retainMask, errorCode);
 }
 
 int32_t XLikelySubtags::compareLikely(const LSR &lsr, const LSR &other, int32_t likelyInfo) const {
