@@ -157,19 +157,19 @@ public:
 
     UBool equals(const UVector &other) const;
 
-    inline void* firstElement(void) const;
+    inline void* firstElement() const {return elementAt(0);}
 
-    inline void* lastElement(void) const;
+    inline void* lastElement() const {return elementAt(count-1);}
 
-    inline int32_t lastElementi(void) const;
+    inline int32_t lastElementi() const {return elementAti(count-1);}
 
     int32_t indexOf(void* obj, int32_t startIndex = 0) const;
 
     int32_t indexOf(int32_t obj, int32_t startIndex = 0) const;
 
-    inline UBool contains(void* obj) const;
+    inline UBool contains(void* obj) const {return indexOf(obj) >= 0;}
 
-    inline UBool contains(int32_t obj) const;
+    inline UBool contains(int32_t obj) const {return indexOf(obj) >= 0;}
 
     UBool containsAll(const UVector& other) const;
 
@@ -210,7 +210,7 @@ public:
 
     UElementsAreEqual *setComparer(UElementsAreEqual *c);
 
-    inline void* operator[](int32_t index) const;
+    inline void* operator[](int32_t index) const {return elementAt(index);}
 
     /**
      * Removes the element at the given index from this vector and
@@ -275,7 +275,7 @@ public:
     /**
      * ICU "poor man's RTTI", returns a UClassID for the actual class.
      */
-    virtual UClassID getDynamicClassID() const;
+    virtual UClassID getDynamicClassID() const override;
 
 private:
     void _init(int32_t initialCapacity, UErrorCode &status);
@@ -284,11 +284,12 @@ private:
 
     void sortedInsert(UElement e, UElementComparator *compare, UErrorCode& ec);
 
+public:
     // Disallow
-    UVector(const UVector&);
+    UVector(const UVector&) = delete;
 
     // Disallow
-    UVector& operator=(const UVector&);
+    UVector& operator=(const UVector&) = delete;
 
 };
 
@@ -324,19 +325,30 @@ public:
     // It's okay not to have a virtual destructor (in UVector)
     // because UStack has no special cleanup to do.
 
-    inline UBool empty(void) const;
+    inline UBool empty() const {return isEmpty();}
 
-    inline void* peek(void) const;
+    inline void* peek() const {return lastElement();}
 
-    inline int32_t peeki(void) const;
+    inline int32_t peeki() const {return lastElementi();}
     
     void* pop(void);
     
     int32_t popi(void);
     
-    inline void* push(void* obj, UErrorCode &status);
+    inline void* push(void* obj, UErrorCode &status) {
+        if (hasDeleter()) {
+            adoptElement(obj, status);
+            return (U_SUCCESS(status)) ? obj : nullptr;
+        } else {
+            addElement(obj, status);
+            return obj;
+        }
+    }
 
-    inline int32_t push(int32_t i, UErrorCode &status);
+    inline int32_t push(int32_t i, UErrorCode &status) {
+        addElement(i, status);
+        return i;
+    }
 
     /*
     If the object o occurs as an item in this stack,
@@ -352,78 +364,14 @@ public:
     /**
      * ICU "poor man's RTTI", returns a UClassID for the actual class.
      */
-    virtual UClassID getDynamicClassID() const;
-
-private:
-    // Disallow
-    UStack(const UStack&);
+    virtual UClassID getDynamicClassID() const override;
 
     // Disallow
-    UStack& operator=(const UStack&);
+    UStack(const UStack&) = delete;
+
+    // Disallow
+    UStack& operator=(const UStack&) = delete;
 };
-
-
-// UVector inlines
-
-inline int32_t UVector::size(void) const {
-    return count;
-}
-
-inline UBool UVector::isEmpty(void) const {
-    return count == 0;
-}
-
-inline UBool UVector::contains(void* obj) const {
-    return indexOf(obj) >= 0;
-}
-
-inline UBool UVector::contains(int32_t obj) const {
-    return indexOf(obj) >= 0;
-}
-
-inline void* UVector::firstElement(void) const {
-    return elementAt(0);
-}
-
-inline void* UVector::lastElement(void) const {
-    return elementAt(count-1);
-}
-
-inline int32_t UVector::lastElementi(void) const {
-    return elementAti(count-1);
-}
-
-inline void* UVector::operator[](int32_t index) const {
-    return elementAt(index);
-}
-
-inline UBool UVector::operator!=(const UVector& other) {
-    return !operator==(other);
-}
-
-// UStack inlines
-
-inline UBool UStack::empty(void) const {
-    return isEmpty();
-}
-
-inline void* UStack::peek(void) const {
-    return lastElement();
-}
-
-inline int32_t UStack::peeki(void) const {
-    return lastElementi();
-}
-
-inline void* UStack::push(void* obj, UErrorCode &status) {
-    addElement(obj, status);
-    return obj;
-}
-
-inline int32_t UStack::push(int32_t i, UErrorCode &status) {
-    addElement(i, status);
-    return i;
-}
 
 U_NAMESPACE_END
 
