@@ -32,9 +32,10 @@ LSR::LSR(char prefix, const char *lang, const char *scr, const char *r, int32_t 
 }
 
 LSR::LSR(StringPiece lang, StringPiece scr, StringPiece r, int32_t f,
-         UErrorCode &errorCode) :
-        language(nullptr), script(nullptr), region(nullptr),
-        regionIndex(indexForRegion(r.data())), flags(f) {
+         UErrorCode &errorCode)
+    : language(nullptr), script(nullptr), region(nullptr),
+    regionIndex(indexForRegion(r.data())), flags(f)
+{
     if (U_SUCCESS(errorCode)) {
         CharString data;
         data.append(lang, errorCode).append('\0', errorCode);

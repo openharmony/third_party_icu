@@ -130,7 +130,8 @@ void UVector::addElement(void* obj, UErrorCode &status) {
     }
 }
 
-void UVector::adoptElement(void* obj, UErrorCode &status) {
+void UVector::adoptElement(void* obj, UErrorCode &status)
+{
     U_ASSERT(deleter != nullptr);
     if (ensureCapacity(count + 1, status)) {
         elements[count++].pointer = obj;
@@ -138,6 +139,7 @@ void UVector::adoptElement(void* obj, UErrorCode &status) {
         (*deleter)(obj);
     }
 }
+
 void UVector::addElement(int32_t elem, UErrorCode &status) {
     if (ensureCapacity(count + 1, status)) {
         elements[count].pointer = NULL;     // Pointers may be bigger than ints.
