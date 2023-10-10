@@ -508,8 +508,6 @@ ucol_openFromShortString( const char *definition,
     parseError->offset = 0;
     parseError->preContext[0] = 0;
     parseError->postContext[0] = 0;
-
-
     // first we want to pick stuff out of short string.
     // we'll end up with an UCA version, locale and a bunch of
     // settings
@@ -543,7 +541,6 @@ ucol_openFromShortString( const char *definition,
                 ucol_close(result);
                 return NULL;
             }
-
         }
     }
     if(s.variableTopSet) {
@@ -553,8 +550,6 @@ ucol_openFromShortString( const char *definition,
             ucol_restoreVariableTop(result, s.variableTopValue, status);
         }
     }
-
-
     if(U_FAILURE(*status)) { // here it can only be a bogus value
         ucol_close(result);
         result = NULL;

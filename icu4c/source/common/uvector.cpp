@@ -110,10 +110,10 @@ void UVector::assign(const UVector& other, UElementAssigner *assign, UErrorCode 
 }
 
 // This only does something sensible if this object has a non-null comparer
-UBool UVector::operator==(const UVector& other) {
+UBool UVector::operator==(const UVector& other) const {
     int32_t i;
     if (count != other.count) return FALSE;
-    if (comparer != NULL) {
+    if (comparer != nullptr) {
         // Compare using this object's comparer
         for (i=0; i<count; ++i) {
             if (!(*comparer)(elements[i], other.elements[i])) {

@@ -51,6 +51,7 @@ LSR::LSR(StringPiece lang, StringPiece scr, StringPiece r, int32_t f,
         }
     }
 }
+
 LSR::LSR(LSR &&other) U_NOEXCEPT :
         language(other.language), script(other.script), region(other.region), owned(other.owned),
         regionIndex(other.regionIndex), flags(other.flags),
