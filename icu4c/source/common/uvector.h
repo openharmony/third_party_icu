@@ -113,12 +113,12 @@ public:
      * equal if they are of the same size and all elements are equal,
      * as compared using this object's comparer.
      */
-    UBool operator==(const UVector& other);
+    UBool operator==(const UVector& other) const;
 
     /**
      * Equivalent to !operator==()
      */
-    inline UBool operator!=(const UVector& other);
+    inline UBool operator!=(const UVector& other) const {return !operator==(other);}
 
     //------------------------------------------------------------
     // java.util.Vector API
@@ -207,6 +207,7 @@ public:
     //------------------------------------------------------------
 
     UObjectDeleter *setDeleter(UObjectDeleter *d);
+    bool hasDeleter() {return deleter != nullptr;}
 
     UElementsAreEqual *setComparer(UElementsAreEqual *c);
 
