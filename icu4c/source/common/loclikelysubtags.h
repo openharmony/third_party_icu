@@ -93,6 +93,7 @@ private:
     bool isMacroregion(StringPiece& region, UErrorCode &errorCode) const;
 
     static int32_t trieNext(BytesTrie &iter, const char *s, int32_t i);
+    static int32_t trieNext(BytesTrie &iter, StringPiece s, int32_t i);
 
     UResourceBundle *langInfoBundle;
     // We could store the strings by value, except that if there were few enough strings,

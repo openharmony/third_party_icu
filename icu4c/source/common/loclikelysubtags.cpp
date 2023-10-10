@@ -11,6 +11,7 @@
 #include "unicode/locid.h"
 #include "unicode/uobject.h"
 #include "unicode/ures.h"
+#include "unicode/uscript.h"
 #include "charstr.h"
 #include "cstring.h"
 #include "loclikelysubtags.h"
@@ -23,6 +24,7 @@
 #include "uniquecharstr.h"
 #include "uresdata.h"
 #include "uresimp.h"
+#include "uvector.h"
 
 U_NAMESPACE_BEGIN
 
@@ -245,13 +247,50 @@ private:
 namespace {
 
 XLikelySubtags *gLikelySubtags = nullptr;
-UInitOnce gInitOnce = U_INITONCE_INITIALIZER;
+UVector *gMacroregions = nullptr;
+UInitOnce gInitOnce {};
 
 UBool U_CALLCONV cleanup() {
     delete gLikelySubtags;
     gLikelySubtags = nullptr;
+    delete gMacroregions;
+    gMacroregions = nullptr;
     gInitOnce.reset();
-    return TRUE;
+    return true;
+}
+
+static const char16_t RANGE_MARKER = 0x7E; /* '~' */
+UVector* loadMacroregions(UErrorCode &status) {
+    LocalPointer<UVector> newMacroRegions(new UVector(uprv_deleteUObject, uhash_compareUnicodeString, status), status);
+
+    LocalUResourceBundlePointer supplementalData(ures_openDirect(nullptr,"supplementalData",&status));
+    LocalUResourceBundlePointer idValidity(ures_getByKey(supplementalData.getAlias(),"idValidity",nullptr,&status));
+    LocalUResourceBundlePointer regionList(ures_getByKey(idValidity.getAlias(),"region",nullptr,&status));
+    LocalUResourceBundlePointer regionMacro(ures_getByKey(regionList.getAlias(),"macroregion",nullptr,&status));
+
+    if (U_FAILURE(status)) {
+        return nullptr;
+    }
+
+    while (U_SUCCESS(status) && ures_hasNext(regionMacro.getAlias())) {
+        UnicodeString regionName = ures_getNextUnicodeString(regionMacro.getAlias(),nullptr,&status);
+        int32_t rangeMarkerLocation = regionName.indexOf(RANGE_MARKER);
+        char16_t buf[6];
+        regionName.extract(buf,6,status);
+        if ( rangeMarkerLocation > 0 ) {
+            char16_t endRange = regionName.charAt(rangeMarkerLocation+1);
+            buf[rangeMarkerLocation] = 0;
+            while ( buf[rangeMarkerLocation-1] <= endRange && U_SUCCESS(status)) {
+                LocalPointer<UnicodeString> newRegion(new UnicodeString(buf), status);
+                newMacroRegions->adoptElement(newRegion.orphan(),status);
+                buf[rangeMarkerLocation-1]++;
+            }
+        } else {
+            LocalPointer<UnicodeString> newRegion(new UnicodeString(regionName), status);
+            newMacroRegions->adoptElement(newRegion.orphan(),status);
+        }
+    }
+    return newMacroRegions.orphan();
 }
 
 }  // namespace
@@ -263,10 +302,14 @@ void U_CALLCONV XLikelySubtags::initLikelySubtags(UErrorCode &errorCode) {
     data.load(errorCode);
     if (U_FAILURE(errorCode)) { return; }
     gLikelySubtags = new XLikelySubtags(data);
-    if (gLikelySubtags == nullptr) {
+    gMacroregions = loadMacroregions(errorCode);
+    if (U_FAILURE(errorCode) || gLikelySubtags == nullptr || gMacroregions == nullptr) {
+        delete gLikelySubtags;
+        delete gMacroregions;
         errorCode = U_MEMORY_ALLOCATION_ERROR;
         return;
     }
+
     ucln_common_registerCleanup(UCLN_COMMON_LIKELY_SUBTAGS, cleanup);
 }
 
@@ -659,10 +702,39 @@ int32_t XLikelySubtags::trieNext(BytesTrie &iter, const char *s, int32_t i) {
     default: return -1;
     }
 }
-
-// TODO(ICU-20777): Switch Locale/uloc_ likely-subtags API from the old code
-// in loclikely.cpp to this new code, including activating this
-// minimizeSubtags() function. The LocaleMatcher does not minimize.
+int32_t XLikelySubtags::trieNext(BytesTrie &iter, StringPiece s, int32_t i) {
+    UStringTrieResult result;
+    uint8_t c;
+    if (s.length() == i) {
+        result = iter.next(u'*');
+    } else {
+        c = s.data()[i];
+        for (;;) {
+            c = uprv_invCharToAscii(c);
+            // EBCDIC: If s[i] is not an invariant character,
+            // then c is now 0 and will simply not match anything, which is harmless.
+            if (i+1 != s.length()) {
+                if (!USTRINGTRIE_HAS_NEXT(iter.next(c))) {
+                    return -1;
+                }
+                c = s.data()[++i];
+            } else {
+                // last character of this subtag
+                result = iter.next(c | 0x80);
+                break;
+            }
+        }
+    }
+    switch (result) {
+        case USTRINGTRIE_NO_MATCH: return -1;
+        case USTRINGTRIE_NO_VALUE: return 0;
+        case USTRINGTRIE_INTERMEDIATE_VALUE:
+            U_ASSERT(iter.getValue() == SKIP_SCRIPT);
+            return SKIP_SCRIPT;
+        case USTRINGTRIE_FINAL_VALUE: return iter.getValue();
+        default: return -1;
+    }
+}
 
 LSR XLikelySubtags::minimizeSubtags(StringPiece language, StringPiece script,
                                     StringPiece region,
