@@ -706,6 +706,7 @@ int32_t XLikelySubtags::trieNext(BytesTrie &iter, const char *s, int32_t i) {
     default: return -1;
     }
 }
+
 int32_t XLikelySubtags::trieNext(BytesTrie &iter, StringPiece s, int32_t i) {
     UStringTrieResult result;
     uint8_t c;
