@@ -260,34 +260,35 @@ UBool U_CALLCONV cleanup() {
 }
 
 static const char16_t RANGE_MARKER = 0x7E; /* '~' */
-UVector* loadMacroregions(UErrorCode &status) {
+UVector* loadMacroregions(UErrorCode &status)
+{
     LocalPointer<UVector> newMacroRegions(new UVector(uprv_deleteUObject, uhash_compareUnicodeString, status), status);
 
-    LocalUResourceBundlePointer supplementalData(ures_openDirect(nullptr,"supplementalData",&status));
-    LocalUResourceBundlePointer idValidity(ures_getByKey(supplementalData.getAlias(),"idValidity",nullptr,&status));
-    LocalUResourceBundlePointer regionList(ures_getByKey(idValidity.getAlias(),"region",nullptr,&status));
-    LocalUResourceBundlePointer regionMacro(ures_getByKey(regionList.getAlias(),"macroregion",nullptr,&status));
+    LocalUResourceBundlePointer supplementalData(ures_openDirect(nullptr, "supplementalData", &status));
+    LocalUResourceBundlePointer idValidity(ures_getByKey(supplementalData.getAlias(), "idValidity", nullptr, &status));
+    LocalUResourceBundlePointer regionList(ures_getByKey(idValidity.getAlias(), "region", nullptr, &status));
+    LocalUResourceBundlePointer regionMacro(ures_getByKey(regionList.getAlias(), "macroregion", nullptr, &status));
 
     if (U_FAILURE(status)) {
         return nullptr;
     }
 
     while (U_SUCCESS(status) && ures_hasNext(regionMacro.getAlias())) {
-        UnicodeString regionName = ures_getNextUnicodeString(regionMacro.getAlias(),nullptr,&status);
+        UnicodeString regionName = ures_getNextUnicodeString(regionMacro.getAlias(), nullptr, &status);
         int32_t rangeMarkerLocation = regionName.indexOf(RANGE_MARKER);
         char16_t buf[6];
-        regionName.extract(buf,6,status);
-        if ( rangeMarkerLocation > 0 ) {
+        regionName.extract(buf, 6, status);
+        if (rangeMarkerLocation > 0) {
             char16_t endRange = regionName.charAt(rangeMarkerLocation+1);
             buf[rangeMarkerLocation] = 0;
-            while ( buf[rangeMarkerLocation-1] <= endRange && U_SUCCESS(status)) {
+            while (buf[rangeMarkerLocation-1] <= endRange && U_SUCCESS(status)) {
                 LocalPointer<UnicodeString> newRegion(new UnicodeString(buf), status);
-                newMacroRegions->adoptElement(newRegion.orphan(),status);
+                newMacroRegions->adoptElement(newRegion.orphan(), status);
                 buf[rangeMarkerLocation-1]++;
             }
         } else {
             LocalPointer<UnicodeString> newRegion(new UnicodeString(regionName), status);
-            newMacroRegions->adoptElement(newRegion.orphan(),status);
+            newMacroRegions->adoptElement(newRegion.orphan(), status);
         }
     }
     return newMacroRegions.orphan();
@@ -426,7 +427,8 @@ LSR XLikelySubtags::makeMaximizedLsr(const char *language, const char *script, c
 
 LSR XLikelySubtags::maximize(const char *language, const char *script, const char *region,
                              bool returnInputIfUnmatch,
-                             UErrorCode &errorCode) const {
+                             UErrorCode &errorCode) const
+{
     return maximize({language, (int32_t)uprv_strlen(language)},
                     {script, (int32_t)uprv_strlen(script)},
                     {region, (int32_t)uprv_strlen(region)},
@@ -434,7 +436,8 @@ LSR XLikelySubtags::maximize(const char *language, const char *script, const cha
                     errorCode);
 }
 
-bool XLikelySubtags::isMacroregion(StringPiece& region, UErrorCode& errorCode) const {
+bool XLikelySubtags::isMacroregion(StringPiece& region, UErrorCode& errorCode) const
+{
     // In Java, we use Region class. In C++, since Region is under i18n,
     // we read the same data used by Region into gMacroregions avoid dependency
     // from common to i18n/region.cpp
@@ -447,7 +450,8 @@ bool XLikelySubtags::isMacroregion(StringPiece& region, UErrorCode& errorCode) c
 
 LSR XLikelySubtags::maximize(StringPiece language, StringPiece script, StringPiece region,
                              bool returnInputIfUnmatch,
-                             UErrorCode &errorCode) const {
+                             UErrorCode &errorCode) const
+{
     if (U_FAILURE(errorCode)) {
         return LSR(language, script, region, LSR::EXPLICIT_LSR, errorCode);
     }
@@ -544,7 +548,7 @@ LSR XLikelySubtags::maximize(StringPiece language, StringPiece script, StringPie
 
     if (returnInputIfUnmatch &&
         (!(matchLanguage || matchScript || (matchRegion && language.empty())))) {
-      return LSR("", "", "", LSR::EXPLICIT_LSR, errorCode);  // no matching.
+        return LSR("", "", "", LSR::EXPLICIT_LSR, errorCode);  // no matching.
     }
     if (language.empty()) {
         language = StringPiece("und");
@@ -739,7 +743,8 @@ int32_t XLikelySubtags::trieNext(BytesTrie &iter, StringPiece s, int32_t i) {
 LSR XLikelySubtags::minimizeSubtags(StringPiece language, StringPiece script,
                                     StringPiece region,
                                     bool favorScript,
-                                    UErrorCode &errorCode) const {
+                                    UErrorCode &errorCode) const
+{
     LSR max = maximize(language, script, region, true, errorCode);
     if (U_FAILURE(errorCode)) {
         return max;

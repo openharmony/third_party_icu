@@ -2116,7 +2116,8 @@ Locale::minimizeSubtags(UErrorCode& status) {
     Locale::minimizeSubtags(false, status);
 }
 void
-Locale::minimizeSubtags(bool favorScript, UErrorCode& status) {
+Locale::minimizeSubtags(bool favorScript, UErrorCode& status)
+{
     if (U_FAILURE(status)) {
         return;
     }
