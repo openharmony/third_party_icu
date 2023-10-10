@@ -81,15 +81,15 @@ class U_COMMON_API UVector : public UObject {
     // support functions.
 
 private:
-    int32_t count;
+    int32_t count = 0;
 
-    int32_t capacity;
+    int32_t capacity = 0;
 
-    UElement* elements;
+    UElement* elements = nullptr;
 
-    UObjectDeleter *deleter;
+    UObjectDeleter *deleter = nullptr;
 
-    UElementsAreEqual *comparer;
+    UElementsAreEqual *comparer = nullptr;
 
 public:
     UVector(UErrorCode &status);
@@ -125,6 +125,21 @@ public:
     //------------------------------------------------------------
 
     void addElement(void* obj, UErrorCode &status);
+
+    /**
+     * Add an element at the end of the vector.
+     * For use only with vectors that adopt their elements, which is to say,
+     * have set an element deleter function. See `addElement()`.
+     *
+     * If the element cannot be successfully added, it will be deleted. This is
+     * normal ICU _adopt_ behavior - one way or another ownership of the incoming
+     * object is transferred from the caller.
+     *
+     * `addElement()` and `adoptElement()` are separate functions to make it easier
+     * to see what the function is doing at call sites. Having a single combined function,
+     * as in earlier versions of UVector, had proved to be error-prone.
+     */
+    void adoptElement(void *obj, UErrorCode &status);
 
     void addElement(int32_t elem, UErrorCode &status);
 
@@ -168,9 +183,9 @@ public:
 
     void removeAllElements();
 
-    inline int32_t size(void) const;
+    inline int32_t size() const {return count;}
 
-    inline UBool isEmpty(void) const;
+    inline UBool isEmpty() const {return count == 0;}
 
     UBool ensureCapacity(int32_t minimumCapacity, UErrorCode &status);
 
