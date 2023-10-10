@@ -317,13 +317,13 @@ int32_t UVector::indexOf(int32_t obj, int32_t startIndex) const {
 
 int32_t UVector::indexOf(UElement key, int32_t startIndex, int8_t hint) const {
     if (comparer != nullptr) {
-        for (int32_t i=startIndex; i<count; ++i) {
+        for (int32_t i = startIndex; i < count; ++i) {
             if ((*comparer)(key, elements[i])) {
                 return i;
             }
         }
     } else {
-        for (int32_t i=startIndex; i<count; ++i) {
+        for (int32_t i = startIndex; i < count; ++i) {
             /* Pointers are not always the same size as ints so to perform
              * a valid comparison we need to know whether we are being
              * provided an int or a pointer. */
@@ -389,12 +389,12 @@ void UVector::setSize(int32_t newSize, UErrorCode &status) {
         UElement empty;
         empty.pointer = nullptr;
         empty.integer = 0;
-        for (int32_t i=count; i<newSize; ++i) {
+        for (int32_t i = count; i < newSize; ++i) {
             elements[i] = empty;
         }
     } else {
         /* Most efficient to count down */
-        for (int32_t i=count-1; i>=newSize; --i) {
+        for (int32_t i = count-1; i >= newSize; --i) {
             removeElementAt(i);
         }
     }

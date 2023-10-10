@@ -697,13 +697,13 @@ int32_t XLikelySubtags::trieNext(BytesTrie &iter, const char *s, int32_t i) {
         }
     }
     switch (result) {
-    case USTRINGTRIE_NO_MATCH: return -1;
-    case USTRINGTRIE_NO_VALUE: return 0;
-    case USTRINGTRIE_INTERMEDIATE_VALUE:
-        U_ASSERT(iter.getValue() == SKIP_SCRIPT);
-        return SKIP_SCRIPT;
-    case USTRINGTRIE_FINAL_VALUE: return iter.getValue();
-    default: return -1;
+        case USTRINGTRIE_NO_MATCH: return -1;
+        case USTRINGTRIE_NO_VALUE: return 0;
+        case USTRINGTRIE_INTERMEDIATE_VALUE:
+            U_ASSERT(iter.getValue() == SKIP_SCRIPT);
+            return SKIP_SCRIPT;
+        case USTRINGTRIE_FINAL_VALUE: return iter.getValue();
+        default: return -1;
     }
 }
 
