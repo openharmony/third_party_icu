@@ -81,15 +81,15 @@ class U_COMMON_API UVector : public UObject {
     // support functions.
 
 private:
-    int32_t count = 0;
+    int32_t count;
 
-    int32_t capacity = 0;
+    int32_t capacity;
 
-    UElement* elements = nullptr;
+    UElement* elements;
 
-    UObjectDeleter *deleter = nullptr;
+    UObjectDeleter *deleter;
 
-    UElementsAreEqual *comparer = nullptr;
+    UElementsAreEqual *comparer;
 
 public:
     UVector(UErrorCode &status);
@@ -113,33 +113,18 @@ public:
      * equal if they are of the same size and all elements are equal,
      * as compared using this object's comparer.
      */
-    UBool operator==(const UVector& other) const;
+    UBool operator==(const UVector& other);
 
     /**
      * Equivalent to !operator==()
      */
-    inline UBool operator!=(const UVector& other) const {return !operator==(other);}
+    inline UBool operator!=(const UVector& other);
 
     //------------------------------------------------------------
     // java.util.Vector API
     //------------------------------------------------------------
 
     void addElement(void* obj, UErrorCode &status);
-
-    /**
-     * Add an element at the end of the vector.
-     * For use only with vectors that adopt their elements, which is to say,
-     * have set an element deleter function. See `addElement()`.
-     *
-     * If the element cannot be successfully added, it will be deleted. This is
-     * normal ICU _adopt_ behavior - one way or another ownership of the incoming
-     * object is transferred from the caller.
-     *
-     * `addElement()` and `adoptElement()` are separate functions to make it easier
-     * to see what the function is doing at call sites. Having a single combined function,
-     * as in earlier versions of UVector, had proved to be error-prone.
-     */
-    void adoptElement(void *obj, UErrorCode &status);
 
     void addElement(int32_t elem, UErrorCode &status);
 
@@ -157,19 +142,19 @@ public:
 
     UBool equals(const UVector &other) const;
 
-    inline void* firstElement() const {return elementAt(0);}
+    inline void* firstElement(void) const;
 
-    inline void* lastElement() const {return elementAt(count-1);}
+    inline void* lastElement(void) const;
 
-    inline int32_t lastElementi() const {return elementAti(count-1);}
+    inline int32_t lastElementi(void) const;
 
     int32_t indexOf(void* obj, int32_t startIndex = 0) const;
 
     int32_t indexOf(int32_t obj, int32_t startIndex = 0) const;
 
-    inline UBool contains(void* obj) const {return indexOf(obj) >= 0;}
+    inline UBool contains(void* obj) const;
 
-    inline UBool contains(int32_t obj) const {return indexOf(obj) >= 0;}
+    inline UBool contains(int32_t obj) const;
 
     UBool containsAll(const UVector& other) const;
 
@@ -183,9 +168,9 @@ public:
 
     void removeAllElements();
 
-    inline int32_t size() const {return count;}
+    inline int32_t size(void) const;
 
-    inline UBool isEmpty() const {return count == 0;}
+    inline UBool isEmpty(void) const;
 
     UBool ensureCapacity(int32_t minimumCapacity, UErrorCode &status);
 
@@ -207,11 +192,10 @@ public:
     //------------------------------------------------------------
 
     UObjectDeleter *setDeleter(UObjectDeleter *d);
-    bool hasDeleter() {return deleter != nullptr;}
 
     UElementsAreEqual *setComparer(UElementsAreEqual *c);
 
-    inline void* operator[](int32_t index) const {return elementAt(index);}
+    inline void* operator[](int32_t index) const;
 
     /**
      * Removes the element at the given index from this vector and
@@ -276,7 +260,7 @@ public:
     /**
      * ICU "poor man's RTTI", returns a UClassID for the actual class.
      */
-    virtual UClassID getDynamicClassID() const override;
+    virtual UClassID getDynamicClassID() const;
 
 private:
     void _init(int32_t initialCapacity, UErrorCode &status);
@@ -285,12 +269,11 @@ private:
 
     void sortedInsert(UElement e, UElementComparator *compare, UErrorCode& ec);
 
-public:
     // Disallow
-    UVector(const UVector&) = delete;
+    UVector(const UVector&);
 
     // Disallow
-    UVector& operator=(const UVector&) = delete;
+    UVector& operator=(const UVector&);
 
 };
 
@@ -326,30 +309,19 @@ public:
     // It's okay not to have a virtual destructor (in UVector)
     // because UStack has no special cleanup to do.
 
-    inline UBool empty() const {return isEmpty();}
+    inline UBool empty(void) const;
 
-    inline void* peek() const {return lastElement();}
+    inline void* peek(void) const;
 
-    inline int32_t peeki() const {return lastElementi();}
+    inline int32_t peeki(void) const;
     
     void* pop(void);
     
     int32_t popi(void);
     
-    inline void* push(void* obj, UErrorCode &status) {
-        if (hasDeleter()) {
-            adoptElement(obj, status);
-            return (U_SUCCESS(status)) ? obj : nullptr;
-        } else {
-            addElement(obj, status);
-            return obj;
-        }
-    }
+    inline void* push(void* obj, UErrorCode &status);
 
-    inline int32_t push(int32_t i, UErrorCode &status) {
-        addElement(i, status);
-        return i;
-    }
+    inline int32_t push(int32_t i, UErrorCode &status);
 
     /*
     If the object o occurs as an item in this stack,
@@ -365,14 +337,78 @@ public:
     /**
      * ICU "poor man's RTTI", returns a UClassID for the actual class.
      */
-    virtual UClassID getDynamicClassID() const override;
+    virtual UClassID getDynamicClassID() const;
+
+private:
+    // Disallow
+    UStack(const UStack&);
 
     // Disallow
-    UStack(const UStack&) = delete;
-
-    // Disallow
-    UStack& operator=(const UStack&) = delete;
+    UStack& operator=(const UStack&);
 };
+
+
+// UVector inlines
+
+inline int32_t UVector::size(void) const {
+    return count;
+}
+
+inline UBool UVector::isEmpty(void) const {
+    return count == 0;
+}
+
+inline UBool UVector::contains(void* obj) const {
+    return indexOf(obj) >= 0;
+}
+
+inline UBool UVector::contains(int32_t obj) const {
+    return indexOf(obj) >= 0;
+}
+
+inline void* UVector::firstElement(void) const {
+    return elementAt(0);
+}
+
+inline void* UVector::lastElement(void) const {
+    return elementAt(count-1);
+}
+
+inline int32_t UVector::lastElementi(void) const {
+    return elementAti(count-1);
+}
+
+inline void* UVector::operator[](int32_t index) const {
+    return elementAt(index);
+}
+
+inline UBool UVector::operator!=(const UVector& other) {
+    return !operator==(other);
+}
+
+// UStack inlines
+
+inline UBool UStack::empty(void) const {
+    return isEmpty();
+}
+
+inline void* UStack::peek(void) const {
+    return lastElement();
+}
+
+inline int32_t UStack::peeki(void) const {
+    return lastElementi();
+}
+
+inline void* UStack::push(void* obj, UErrorCode &status) {
+    addElement(obj, status);
+    return obj;
+}
+
+inline int32_t UStack::push(int32_t i, UErrorCode &status) {
+    addElement(i, status);
+    return i;
+}
 
 U_NAMESPACE_END
 

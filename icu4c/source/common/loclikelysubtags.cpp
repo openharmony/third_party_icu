@@ -11,7 +11,6 @@
 #include "unicode/locid.h"
 #include "unicode/uobject.h"
 #include "unicode/ures.h"
-#include "unicode/uscript.h"
 #include "charstr.h"
 #include "cstring.h"
 #include "loclikelysubtags.h"
@@ -24,7 +23,6 @@
 #include "uniquecharstr.h"
 #include "uresdata.h"
 #include "uresimp.h"
-#include "uvector.h"
 
 U_NAMESPACE_BEGIN
 
@@ -247,51 +245,13 @@ private:
 namespace {
 
 XLikelySubtags *gLikelySubtags = nullptr;
-UVector *gMacroregions = nullptr;
-UInitOnce gInitOnce {};
+UInitOnce gInitOnce = U_INITONCE_INITIALIZER;
 
 UBool U_CALLCONV cleanup() {
     delete gLikelySubtags;
     gLikelySubtags = nullptr;
-    delete gMacroregions;
-    gMacroregions = nullptr;
     gInitOnce.reset();
-    return true;
-}
-
-static const char16_t RANGE_MARKER = 0x7E; /* '~' */
-UVector* loadMacroregions(UErrorCode &status)
-{
-    LocalPointer<UVector> newMacroRegions(new UVector(uprv_deleteUObject, uhash_compareUnicodeString, status), status);
-
-    LocalUResourceBundlePointer supplementalData(ures_openDirect(nullptr, "supplementalData", &status));
-    LocalUResourceBundlePointer idValidity(ures_getByKey(supplementalData.getAlias(), "idValidity", nullptr, &status));
-    LocalUResourceBundlePointer regionList(ures_getByKey(idValidity.getAlias(), "region", nullptr, &status));
-    LocalUResourceBundlePointer regionMacro(ures_getByKey(regionList.getAlias(), "macroregion", nullptr, &status));
-
-    if (U_FAILURE(status)) {
-        return nullptr;
-    }
-
-    while (U_SUCCESS(status) && ures_hasNext(regionMacro.getAlias())) {
-        UnicodeString regionName = ures_getNextUnicodeString(regionMacro.getAlias(), nullptr, &status);
-        int32_t rangeMarkerLocation = regionName.indexOf(RANGE_MARKER);
-        char16_t buf[6];
-        regionName.extract(buf, 6, status);
-        if (rangeMarkerLocation > 0) {
-            char16_t endRange = regionName.charAt(rangeMarkerLocation+1);
-            buf[rangeMarkerLocation] = 0;
-            while (buf[rangeMarkerLocation-1] <= endRange && U_SUCCESS(status)) {
-                LocalPointer<UnicodeString> newRegion(new UnicodeString(buf), status);
-                newMacroRegions->adoptElement(newRegion.orphan(), status);
-                buf[rangeMarkerLocation-1]++;
-            }
-        } else {
-            LocalPointer<UnicodeString> newRegion(new UnicodeString(regionName), status);
-            newMacroRegions->adoptElement(newRegion.orphan(), status);
-        }
-    }
-    return newMacroRegions.orphan();
+    return TRUE;
 }
 
 }  // namespace
@@ -303,14 +263,10 @@ void U_CALLCONV XLikelySubtags::initLikelySubtags(UErrorCode &errorCode) {
     data.load(errorCode);
     if (U_FAILURE(errorCode)) { return; }
     gLikelySubtags = new XLikelySubtags(data);
-    gMacroregions = loadMacroregions(errorCode);
-    if (U_FAILURE(errorCode) || gLikelySubtags == nullptr || gMacroregions == nullptr) {
-        delete gLikelySubtags;
-        delete gMacroregions;
+    if (gLikelySubtags == nullptr) {
         errorCode = U_MEMORY_ALLOCATION_ERROR;
         return;
     }
-
     ucln_common_registerCleanup(UCLN_COMMON_LIKELY_SUBTAGS, cleanup);
 }
 
@@ -422,94 +378,64 @@ LSR XLikelySubtags::makeMaximizedLsr(const char *language, const char *script, c
     language = getCanonical(languageAliases, language);
     // (We have no script mappings.)
     region = getCanonical(regionAliases, region);
-    return maximize(language, script, region, false, errorCode);
+    return maximize(language, script, region);
 }
 
-LSR XLikelySubtags::maximize(const char *language, const char *script, const char *region,
-                             bool returnInputIfUnmatch,
-                             UErrorCode &errorCode) const
-{
-    return maximize({language, (int32_t)uprv_strlen(language)},
-                    {script, (int32_t)uprv_strlen(script)},
-                    {region, (int32_t)uprv_strlen(region)},
-                    returnInputIfUnmatch,
-                    errorCode);
-}
-
-bool XLikelySubtags::isMacroregion(StringPiece& region, UErrorCode& errorCode) const
-{
-    // In Java, we use Region class. In C++, since Region is under i18n,
-    // we read the same data used by Region into gMacroregions avoid dependency
-    // from common to i18n/region.cpp
-    if (U_FAILURE(errorCode)) { return false; }
-    umtx_initOnce(gInitOnce, &XLikelySubtags::initLikelySubtags, errorCode);
-    if (U_FAILURE(errorCode)) { return false; }
-    UnicodeString str(UnicodeString::fromUTF8(region));
-    return gMacroregions->contains((void *)&str);
-}
-
-LSR XLikelySubtags::maximize(StringPiece language, StringPiece script, StringPiece region,
-                             bool returnInputIfUnmatch,
-                             UErrorCode &errorCode) const
-{
-    if (U_FAILURE(errorCode)) {
-        return LSR(language, script, region, LSR::EXPLICIT_LSR, errorCode);
-    }
-    if (language.compare("und") == 0) {
+LSR XLikelySubtags::maximize(const char *language, const char *script, const char *region) const {
+    if (uprv_strcmp(language, "und") == 0) {
         language = "";
     }
-    if (script.compare("Zzzz") == 0) {
+    if (uprv_strcmp(script, "Zzzz") == 0) {
         script = "";
     }
-    if (region.compare("ZZ") == 0) {
+    if (uprv_strcmp(region, "ZZ") == 0) {
         region = "";
     }
-    if (!script.empty() && !region.empty() && !language.empty()) {
-        return LSR(language, script, region, LSR::EXPLICIT_LSR, errorCode);  // already maximized
+    if (*script != 0 && *region != 0 && *language != 0) {
+        return LSR(language, script, region, LSR::EXPLICIT_LSR);  // already maximized
     }
-    bool retainLanguage = false;
-    bool retainScript = false;
-    bool retainRegion = false;
 
+    uint32_t retainOldMask = 0;
     BytesTrie iter(trie);
     uint64_t state;
     int32_t value;
     // Small optimization: Array lookup for first language letter.
     int32_t c0;
-    if (0 <= (c0 = uprv_lowerOrdinal(language.data()[0])) && c0 <= 25 &&
-            language.length() >= 2 &&
+    if (0 <= (c0 = uprv_lowerOrdinal(language[0])) && c0 <= 25 &&
+            language[1] != 0 &&  // language.length() >= 2
             (state = trieFirstLetterStates[c0]) != 0) {
         value = trieNext(iter.resetToState64(state), language, 1);
     } else {
         value = trieNext(iter, language, 0);
     }
-    bool matchLanguage = (value >= 0);
-    bool matchScript = false;
     if (value >= 0) {
-        retainLanguage = !language.empty();
+        if (*language != 0) {
+            retainOldMask |= 4;
+        }
         state = iter.getState64();
     } else {
-        retainLanguage = true;
+        retainOldMask |= 4;
         iter.resetToState64(trieUndState);  // "und" ("*")
         state = 0;
     }
 
-    if (value >= 0 && !script.empty()) {
-        matchScript = true;
-    }
     if (value > 0) {
         // Intermediate or final value from just language.
         if (value == SKIP_SCRIPT) {
             value = 0;
         }
-        retainScript = !script.empty();
+        if (*script != 0) {
+            retainOldMask |= 2;
+        }
     } else {
         value = trieNext(iter, script, 0);
         if (value >= 0) {
-            retainScript = !script.empty();
+            if (*script != 0) {
+                retainOldMask |= 2;
+            }
             state = iter.getState64();
         } else {
-            retainScript = true;
+            retainOldMask |= 2;
             if (state == 0) {
                 iter.resetToState64(trieUndZzzzState);  // "und-Zzzz" ("**")
             } else {
@@ -521,19 +447,19 @@ LSR XLikelySubtags::maximize(StringPiece language, StringPiece script, StringPie
         }
     }
 
-    bool matchRegion = false;
     if (value > 0) {
         // Final value from just language or language+script.
-        retainRegion = !region.empty();
+        if (*region != 0) {
+            retainOldMask |= 1;
+        }
     } else {
         value = trieNext(iter, region, 0);
         if (value >= 0) {
-            if (!region.empty() && !isMacroregion(region, errorCode)) {
-                retainRegion = true;
-                matchRegion = true;
+            if (*region != 0) {
+                retainOldMask |= 1;
             }
         } else {
-            retainRegion = true;
+            retainOldMask |= 1;
             if (state == 0) {
                 value = defaultLsrIndex;
             } else {
@@ -544,33 +470,28 @@ LSR XLikelySubtags::maximize(StringPiece language, StringPiece script, StringPie
         }
     }
     U_ASSERT(value < lsrsLength);
-    const LSR &matched = lsrs[value];
+    const LSR &result = lsrs[value];
 
-    if (returnInputIfUnmatch &&
-        (!(matchLanguage || matchScript || (matchRegion && language.empty())))) {
-        return LSR("", "", "", LSR::EXPLICIT_LSR, errorCode);  // no matching.
-    }
-    if (language.empty()) {
-        language = StringPiece("und");
+    if (*language == 0) {
+        language = "und";
     }
 
-    if (!(retainLanguage || retainScript || retainRegion)) {
+    if (retainOldMask == 0) {
         // Quickly return a copy of the lookup-result LSR
         // without new allocation of the subtags.
-        return LSR(matched.language, matched.script, matched.region, matched.flags);
+        return LSR(result.language, result.script, result.region, result.flags);
     }
-    if (!retainLanguage) {
-        language = matched.language;
+    if ((retainOldMask & 4) == 0) {
+        language = result.language;
     }
-    if (!retainScript) {
-        script = matched.script;
+    if ((retainOldMask & 2) == 0) {
+        script = result.script;
     }
-    if (!retainRegion) {
-        region = matched.region;
+    if ((retainOldMask & 1) == 0) {
+        region = result.region;
     }
-    int32_t retainMask = (retainLanguage ? 4 : 0) + (retainScript ? 2 : 0) + (retainRegion ? 1 : 0);
     // retainOldMask flags = LSR explicit-subtag flags
-    return LSR(language, script, region, retainMask, errorCode);
+    return LSR(language, script, region, retainOldMask);
 }
 
 int32_t XLikelySubtags::compareLikely(const LSR &lsr, const LSR &other, int32_t likelyInfo) const {
@@ -697,108 +618,66 @@ int32_t XLikelySubtags::trieNext(BytesTrie &iter, const char *s, int32_t i) {
         }
     }
     switch (result) {
-        case USTRINGTRIE_NO_MATCH: return -1;
-        case USTRINGTRIE_NO_VALUE: return 0;
-        case USTRINGTRIE_INTERMEDIATE_VALUE:
-            U_ASSERT(iter.getValue() == SKIP_SCRIPT);
-            return SKIP_SCRIPT;
-        case USTRINGTRIE_FINAL_VALUE: return iter.getValue();
-        default: return -1;
+    case USTRINGTRIE_NO_MATCH: return -1;
+    case USTRINGTRIE_NO_VALUE: return 0;
+    case USTRINGTRIE_INTERMEDIATE_VALUE:
+        U_ASSERT(iter.getValue() == SKIP_SCRIPT);
+        return SKIP_SCRIPT;
+    case USTRINGTRIE_FINAL_VALUE: return iter.getValue();
+    default: return -1;
     }
 }
 
-int32_t XLikelySubtags::trieNext(BytesTrie &iter, StringPiece s, int32_t i) {
-    UStringTrieResult result;
-    uint8_t c;
-    if (s.length() == i) {
-        result = iter.next(u'*');
-    } else {
-        c = s.data()[i];
-        for (;;) {
-            c = uprv_invCharToAscii(c);
-            // EBCDIC: If s[i] is not an invariant character,
-            // then c is now 0 and will simply not match anything, which is harmless.
-            if (i+1 != s.length()) {
-                if (!USTRINGTRIE_HAS_NEXT(iter.next(c))) {
-                    return -1;
-                }
-                c = s.data()[++i];
-            } else {
-                // last character of this subtag
-                result = iter.next(c | 0x80);
-                break;
-            }
+// TODO(ICU-20777): Switch Locale/uloc_ likely-subtags API from the old code
+// in loclikely.cpp to this new code, including activating this
+// minimizeSubtags() function. The LocaleMatcher does not minimize.
+#if 0
+LSR XLikelySubtags::minimizeSubtags(const char *languageIn, const char *scriptIn,
+                                    const char *regionIn, ULocale.Minimize fieldToFavor,
+                                    UErrorCode &errorCode) const {
+    LSR result = maximize(languageIn, scriptIn, regionIn);
+
+    // We could try just a series of checks, like:
+    // LSR result2 = addLikelySubtags(languageIn, "", "");
+    // if result.equals(result2) return result2;
+    // However, we can optimize 2 of the cases:
+    //   (languageIn, "", "")
+    //   (languageIn, "", regionIn)
+
+    // value00 = lookup(result.language, "", "")
+    BytesTrie iter = new BytesTrie(trie);
+    int value = trieNext(iter, result.language, 0);
+    U_ASSERT(value >= 0);
+    if (value == 0) {
+        value = trieNext(iter, "", 0);
+        U_ASSERT(value >= 0);
+        if (value == 0) {
+            value = trieNext(iter, "", 0);
         }
     }
-    switch (result) {
-        case USTRINGTRIE_NO_MATCH: return -1;
-        case USTRINGTRIE_NO_VALUE: return 0;
-        case USTRINGTRIE_INTERMEDIATE_VALUE:
-            U_ASSERT(iter.getValue() == SKIP_SCRIPT);
-            return SKIP_SCRIPT;
-        case USTRINGTRIE_FINAL_VALUE: return iter.getValue();
-        default: return -1;
-    }
-}
-
-LSR XLikelySubtags::minimizeSubtags(StringPiece language, StringPiece script,
-                                    StringPiece region,
-                                    bool favorScript,
-                                    UErrorCode &errorCode) const
-{
-    LSR max = maximize(language, script, region, true, errorCode);
-    if (U_FAILURE(errorCode)) {
-        return max;
-    }
-    // If no match, return it.
-    if (uprv_strlen(max.language) == 0 &&
-        uprv_strlen(max.script) == 0 &&
-        uprv_strlen(max.region) == 0) {
-        // No match. ICU API mandate us to
-        // "If this Locale is already in the minimal form, or not valid, or
-        // there is no data available for minimization, the Locale will be
-        // unchanged."
-        return LSR(language, script, region, LSR::EXPLICIT_LSR, errorCode);
-    }
-    // try language
-    LSR test = maximize(max.language, "", "", true, errorCode);
-    if (U_FAILURE(errorCode)) {
-        return max;
-    }
-    if (test.isEquivalentTo(max)) {
-        return LSR(max.language, "", "", LSR::DONT_CARE_FLAGS, errorCode);
+    U_ASSERT(value > 0);
+    LSR value00 = lsrs[value];
+    boolean favorRegionOk = false;
+    if (result.script.equals(value00.script)) { //script is default
+        if (result.region.equals(value00.region)) {
+            return new LSR(result.language, "", "", LSR.DONT_CARE_FLAGS);
+        } else if (fieldToFavor == ULocale.Minimize.FAVOR_REGION) {
+            return new LSR(result.language, "", result.region, LSR.DONT_CARE_FLAGS);
+        } else {
+            favorRegionOk = true;
+        }
     }
 
-    if (!favorScript) {
-        // favor Region
-        // try language and region
-        test = maximize(max.language, "", max.region, true, errorCode);
-        if (U_FAILURE(errorCode)) {
-            return max;
-        }
-        if (test.isEquivalentTo(max)) {
-            return LSR(max.language, "", max.region, LSR::DONT_CARE_FLAGS, errorCode);
-        }
+    // The last case is not as easy to optimize.
+    // Maybe do later, but for now use the straightforward code.
+    LSR result2 = maximize(languageIn, scriptIn, "");
+    if (result2.equals(result)) {
+        return new LSR(result.language, result.script, "", LSR.DONT_CARE_FLAGS);
+    } else if (favorRegionOk) {
+        return new LSR(result.language, "", result.region, LSR.DONT_CARE_FLAGS);
     }
-    // try language and script
-    test = maximize(max.language, max.script, "", true, errorCode);
-    if (U_FAILURE(errorCode)) {
-        return max;
-    }
-    if (test.isEquivalentTo(max)) {
-        return LSR(max.language, max.script, "", LSR::DONT_CARE_FLAGS, errorCode);
-    }
-    if (favorScript) {
-        // try language and region
-        test = maximize(max.language, "", max.region, true, errorCode);
-        if (U_FAILURE(errorCode)) {
-            return max;
-        }
-        if (test.isEquivalentTo(max)) {
-            return LSR(max.language, "", max.region, LSR::DONT_CARE_FLAGS, errorCode);
-        }
-    }
-    return LSR(max.language, max.script, max.region, LSR::DONT_CARE_FLAGS, errorCode);
+    return result;
 }
+#endif
 
 U_NAMESPACE_END
