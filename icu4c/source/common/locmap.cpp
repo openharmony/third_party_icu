@@ -1170,7 +1170,7 @@ uprv_convertToLCIDPlatform(const char* localeID, UErrorCode* status)
     // conversion functionality when available.
 #if U_PLATFORM_HAS_WIN32_API && UCONFIG_USE_WINDOWS_LCID_MAPPING_API
     int32_t len;
-    icu::CharString baseName;
+    char baseName[ULOC_FULLNAME_CAPACITY] = {};
     const char * mylocaleID = localeID;
 
     // Check any for keywords.
@@ -1189,13 +1189,12 @@ uprv_convertToLCIDPlatform(const char* localeID, UErrorCode* status)
         else
         {
             // If the locale ID contains keywords other than collation, just use the base name.
+            len = uloc_getBaseName(localeID, baseName, UPRV_LENGTHOF(baseName) - 1, status);
+
+            if (U_SUCCESS(*status) && len > 0)
             {
-                icu::CharStringByteSink sink(&baseName);
-                ulocimp_getBaseName(localeID, sink, status);
-            }
-            if (U_SUCCESS(*status) && !baseName.isEmpty())
-            {
-                mylocaleID = baseName.data();
+                baseName[len] = 0;
+                mylocaleID = baseName;
             }
         }
     }
