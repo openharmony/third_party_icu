@@ -62,8 +62,6 @@
 #include "sharedcalendar.h"
 #include "unifiedcache.h"
 #include "ulocimp.h"
-#include "bytesinkutil.h"
-#include "charstr.h"
 
 #if !UCONFIG_NO_SERVICE
 static icu::ICULocaleService* gService = NULL;
@@ -265,26 +263,26 @@ static ECalType getCalendarTypeForLocale(const char *locid) {
     UErrorCode status = U_ZERO_ERROR;
     ECalType calType = CALTYPE_UNKNOWN;
 
+    //TODO: ULOC_FULL_NAME is out of date and too small..
+    char canonicalName[256];
+
     // Canonicalize, so that an old-style variant will be transformed to keywords.
     // e.g ja_JP_TRADITIONAL -> ja_JP@calendar=japanese
     // NOTE: Since ICU-20187, ja_JP_TRADITIONAL no longer canonicalizes, and
     // the Gregorian calendar is returned instead.
-    CharString canonicalName;
-    {
-        CharStringByteSink sink(&canonicalName);
-        ulocimp_canonicalize(locid, sink, &status);
-    }
+    int32_t canonicalLen = uloc_canonicalize(locid, canonicalName, sizeof(canonicalName) - 1, &status);
     if (U_FAILURE(status)) {
         return CALTYPE_GREGORIAN;
     }
+    canonicalName[canonicalLen] = 0;    // terminate
 
-    CharString calTypeBuf;
-    {
-        CharStringByteSink sink(&calTypeBuf);
-        ulocimp_getKeywordValue(canonicalName.data(), "calendar", sink, &status);
-    }
+    char calTypeBuf[32];
+    int32_t calTypeBufLen;
+
+    calTypeBufLen = uloc_getKeywordValue(canonicalName, "calendar", calTypeBuf, sizeof(calTypeBuf) - 1, &status);
     if (U_SUCCESS(status)) {
-        calType = getCalendarType(calTypeBuf.data());
+        calTypeBuf[calTypeBufLen] = 0;
+        calType = getCalendarType(calTypeBuf);
         if (calType != CALTYPE_UNKNOWN) {
             return calType;
         }
@@ -294,7 +292,7 @@ static ECalType getCalendarTypeForLocale(const char *locid) {
     // when calendar keyword is not available or not supported, read supplementalData
     // to get the default calendar type for the locale's region
     char region[ULOC_COUNTRY_CAPACITY];
-    (void)ulocimp_getRegionForSupplementalData(canonicalName.data(), TRUE, region, sizeof(region), &status);
+    (void)ulocimp_getRegionForSupplementalData(canonicalName, TRUE, region, sizeof(region), &status);
     if (U_FAILURE(status)) {
         return CALTYPE_GREGORIAN;
     }
@@ -308,13 +306,16 @@ static ECalType getCalendarTypeForLocale(const char *locid) {
         order = ures_getByKey(rb, "001", NULL, &status);
     }
 
-    calTypeBuf.clear();
+    calTypeBuf[0] = 0;
     if (U_SUCCESS(status) && order != NULL) {
         // the first calendar type is the default for the region
         int32_t len = 0;
         const UChar *uCalType = ures_getStringByIndex(order, 0, &len, &status);
-        calTypeBuf.appendInvariantChars(uCalType, len, status);
-        calType = getCalendarType(calTypeBuf.data());
+        if (len < (int32_t)sizeof(calTypeBuf)) {
+            u_UCharsToChars(uCalType, calTypeBuf, len);
+            *(calTypeBuf + len) = 0; // terminate;
+            calType = getCalendarType(calTypeBuf);
+        }
     }
 
     ures_close(order);
