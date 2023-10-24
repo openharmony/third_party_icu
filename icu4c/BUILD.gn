@@ -59,7 +59,7 @@ ohos_prebuilt_etc("ohos_icudat") {
   } else if (icu_support_locales) {
     source = "//third_party/icu/ohos_icu4j/data/icudt72l.dat"
   } else {
-    source = "//third_party/icu/ohos_icu4j/data/lite/icudt69l.dat"
+    source = "//third_party/icu/ohos_icu4j/data/lite/icudt72l.dat"
   }
 
   module_install_dir = "usr/ohos_icu/"
