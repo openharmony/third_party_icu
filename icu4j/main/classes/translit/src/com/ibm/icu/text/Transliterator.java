@@ -129,7 +129,7 @@ import com.ibm.icu.util.UResourceBundle;
  * Pairs of transliterators may be inverses of one another. For example, if transliterator <b>A</b> transliterates
  * characters by incrementing their Unicode value (so "abc" -&gt; "def"), and transliterator <b>B</b> decrements character
  * values, then <b>A</b> is an inverse of <b>B</b> and vice versa. If we compose <b>A</b> with <b>B</b> in a compound
- * transliterator, the result is the indentity transliterator, that is, a transliterator that does not change its input
+ * transliterator, the result is the identity transliterator, that is, a transliterator that does not change its input
  * text.
  *
  * The <code>Transliterator</code> method <code>getInverse()</code> returns a transliterator's inverse, if one exists,
@@ -1022,14 +1022,14 @@ public abstract class Transliterator implements StringTransform  {
      * Top-level transliteration method, handling filtering, incremental and
      * non-incremental transliteration, and rollback.  All transliteration
      * public API methods eventually call this method with a rollback argument
-     * of TRUE.  Other entities may call this method but rollback should be
-     * FALSE.
+     * of true.  Other entities may call this method but rollback should be
+     * false.
      *
      * <p>If this transliterator has a filter, break up the input text into runs
      * of unfiltered characters.  Pass each run to
      * <subclass>.handleTransliterate().
      *
-     * <p>In incremental mode, if rollback is TRUE, perform a special
+     * <p>In incremental mode, if rollback is true, perform a special
      * incremental procedure in which several passes are made over the input
      * text, adding one character at a time, and committing successful
      * transliterations as they occur.  Unsuccessful transliterations are rolled
@@ -1037,12 +1037,12 @@ public abstract class Transliterator implements StringTransform  {
      *
      * @param text the text to be transliterated
      * @param index the position indices
-     * @param incremental if TRUE, then assume more characters may be inserted
+     * @param incremental if true, then assume more characters may be inserted
      * at index.limit, and postpone processing to accommodate future incoming
      * characters
-     * @param rollback if TRUE and if incremental is TRUE, then perform special
+     * @param rollback if true and if incremental is true, then perform special
      * incremental processing, as described above, and undo partial
-     * transliterations where necessary.  If incremental is FALSE then this
+     * transliterations where necessary.  If incremental is false then this
      * parameter is ignored.
      */
     private void filteredTransliterate(Replaceable text,
@@ -1127,7 +1127,7 @@ public abstract class Transliterator implements StringTransform  {
 
             // Is this run incremental?  If there is additional
             // filtered text (if limit < globalLimit) then we pass in
-            // an incremental value of FALSE to force the subclass to
+            // an incremental value of false to force the subclass to
             // complete the transliteration for this run.
             boolean isIncrementalRun =
                 (index.limit < globalLimit ? false : incremental);
@@ -1354,7 +1354,7 @@ public abstract class Transliterator implements StringTransform  {
      * another transliterator.
      * @param text the text to be transliterated
      * @param index the position indices
-     * @param incremental if TRUE, then assume more characters may be inserted
+     * @param incremental if true, then assume more characters may be inserted
      * at index.limit, and postpone processing to accommodate future incoming
      * characters
      * @stable ICU 2.0
@@ -1857,7 +1857,7 @@ public abstract class Transliterator implements StringTransform  {
     /**
      * Returns the set of all characters that may be generated as
      * replacement text by this transliterator, filtered by BOTH the input filter, and the current getFilter().
-     * <p>SHOULD BE OVERRIDEN BY SUBCLASSES.
+     * <p>SHOULD BE OVERRIDDEN BY SUBCLASSES.
      * It is probably an error for any transliterator to NOT override this, but we can't force them to
      * for backwards compatibility.
      * <p>Other methods vector through this.
@@ -2208,7 +2208,7 @@ public abstract class Transliterator implements StringTransform  {
                 registry.put(ID, resString, true);
             } else {
                 // Unknown type
-                throw new RuntimeException("Unknow type: " + type);
+                throw new RuntimeException("Unknown type: " + type);
             }
         }
 

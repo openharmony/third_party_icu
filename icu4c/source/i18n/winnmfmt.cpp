@@ -143,12 +143,11 @@ static void freeCurrencyFormat(CURRENCYFMTW *fmt)
 // be factored out into a common helper for both.
 static UErrorCode GetEquivalentWindowsLocaleName(const Locale& locale, UnicodeString** buffer)
 {
-#if defined(WINVER) && (WINVER >= 0x0601)
     UErrorCode status = U_ZERO_ERROR;
     char asciiBCP47Tag[LOCALE_NAME_MAX_LENGTH] = {};
 
     // Convert from names like "en_CA" and "de_DE@collation=phonebook" to "en-CA" and "de-DE-u-co-phonebk".
-    (void) uloc_toLanguageTag(locale.getName(), asciiBCP47Tag, UPRV_LENGTHOF(asciiBCP47Tag), FALSE, &status);
+    (void) uloc_toLanguageTag(locale.getName(), asciiBCP47Tag, UPRV_LENGTHOF(asciiBCP47Tag), false, &status);
 
     if (U_SUCCESS(status))
     {
@@ -202,14 +201,10 @@ static UErrorCode GetEquivalentWindowsLocaleName(const Locale& locale, UnicodeSt
         }
     }
     return status;
-#else
-    UErrorCode status = U_UNSUPPORTED_ERROR;
-    return status;
-#endif
 }
 
 Win32NumberFormat::Win32NumberFormat(const Locale &locale, UBool currency, UErrorCode &status)
-  : NumberFormat(), fCurrency(currency), fFormatInfo(NULL), fFractionDigitsSet(FALSE), fWindowsLocaleName(nullptr)
+  : NumberFormat(), fCurrency(currency), fFormatInfo(NULL), fFractionDigitsSet(false), fWindowsLocaleName(nullptr)
 {
     if (!U_FAILURE(status)) {
         fLCID = locale.getLCID();
@@ -330,13 +325,13 @@ void Win32NumberFormat::parse(const UnicodeString& text, Formattable& result, Pa
 }
 void Win32NumberFormat::setMaximumFractionDigits(int32_t newValue)
 {
-    fFractionDigitsSet = TRUE;
+    fFractionDigitsSet = true;
     NumberFormat::setMaximumFractionDigits(newValue);
 }
 
 void Win32NumberFormat::setMinimumFractionDigits(int32_t newValue)
 {
-    fFractionDigitsSet = TRUE;
+    fFractionDigitsSet = true;
     NumberFormat::setMinimumFractionDigits(newValue);
 }
 
