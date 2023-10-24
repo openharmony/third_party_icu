@@ -83,14 +83,15 @@ binarySearch(const UVector64 &list, int64_t ce) {
 
 }  // namespace
 
-CollationBaseDataBuilder::CollationBaseDataBuilder(UErrorCode &errorCode)
-        : CollationDataBuilder(errorCode),
+CollationBaseDataBuilder::CollationBaseDataBuilder(UBool icu4xMode, UErrorCode &errorCode)
+        : CollationDataBuilder(icu4xMode, errorCode),
           numericPrimary(0x12000000),
           firstHanPrimary(0), lastHanPrimary(0), hanStep(2),
           rootElements(errorCode),
           scriptStartsLength(1) {
     uprv_memset(scriptsIndex, 0, sizeof(scriptsIndex));
     uprv_memset(scriptStarts, 0, sizeof(scriptStarts));
+    this->icu4xMode = icu4xMode;
 }
 
 CollationBaseDataBuilder::~CollationBaseDataBuilder() {
@@ -110,8 +111,8 @@ CollationBaseDataBuilder::init(UErrorCode &errorCode) {
     // - Hani
     // - trail weights
     // Some scripts are compressible, some are not.
-    uprv_memset(compressibleBytes, FALSE, 256);
-    compressibleBytes[Collation::UNASSIGNED_IMPLICIT_BYTE] = TRUE;
+    uprv_memset(compressibleBytes, false, 256);
+    compressibleBytes[Collation::UNASSIGNED_IMPLICIT_BYTE] = true;
 
     // For a base, the default is to compute an unassigned-character implicit CE.
     // This includes surrogate code points; see the last option in
@@ -119,7 +120,9 @@ CollationBaseDataBuilder::init(UErrorCode &errorCode) {
     trie = utrie2_open(Collation::UNASSIGNED_CE32, Collation::FFFD_CE32, &errorCode);
 
     // Preallocate trie blocks for Latin in the hope that proximity helps with CPU caches.
-    for(UChar32 c = 0; c < 0x180; ++c) {
+    // In the ICU4X case, only preallocate ASCII, because we don't store CE32s for
+    // precomposed characters.
+    for(UChar32 c = 0; c < (icu4xMode ? 0x80 : 0x180); ++c) {
         utrie2_set32(trie, c, Collation::UNASSIGNED_CE32, &errorCode);
     }
 
@@ -128,8 +131,10 @@ CollationBaseDataBuilder::init(UErrorCode &errorCode) {
     // Some code assumes that the root first primary CE is the "space first primary"
     // from FractionalUCA.txt.
 
-    uint32_t hangulCE32 = Collation::makeCE32FromTagAndIndex(Collation::HANGUL_TAG, 0);
-    utrie2_setRange32(trie, Hangul::HANGUL_BASE, Hangul::HANGUL_END, hangulCE32, TRUE, &errorCode);
+    if (!icu4xMode) {
+        uint32_t hangulCE32 = Collation::makeCE32FromTagAndIndex(Collation::HANGUL_TAG, 0);
+        utrie2_setRange32(trie, Hangul::HANGUL_BASE, Hangul::HANGUL_END, hangulCE32, true, &errorCode);
+    }
 
     // Add a mapping for the first-unassigned boundary,
     // which is the AlphabeticIndex overflow boundary.
@@ -201,7 +206,7 @@ CollationBaseDataBuilder::isCompressibleLeadByte(uint32_t b) const {
 
 void
 CollationBaseDataBuilder::setCompressibleLeadByte(uint32_t b) {
-    compressibleBytes[b] = TRUE;
+    compressibleBytes[b] = true;
 }
 
 int32_t
@@ -344,7 +349,7 @@ CollationBaseDataBuilder::addScriptStart(int32_t script, uint32_t p) {
     }
     if(script == USCRIPT_UNKNOWN) {
         // The last script start is for unassigned code points
-        // (with high implict primary weights).
+        // (with high implicit primary weights).
         // Add one more entry with the limit of this range,
         // which is the start of the trailing-weights range.
         U_ASSERT(scriptStartsLength < UPRV_LENGTHOF(scriptStarts));
@@ -381,8 +386,8 @@ CollationBaseDataBuilder::buildRootElementsTable(UVector32 &table, UErrorCode &e
     if(U_FAILURE(errorCode)) { return; }
     uint32_t nextHanPrimary = firstHanPrimary;  // Set to 0xffffffff after the last Han range.
     uint32_t prevPrimary = 0;  // Start with primary ignorable CEs.
-    UBool needCommonSecTerUnit = FALSE;
-    UBool hasDeltaUnit = FALSE;
+    UBool needCommonSecTerUnit = false;
+    UBool hasDeltaUnit = false;
     for(int32_t i = 0; i < rootElements.size(); ++i) {
         int64_t ce = rootElements.elementAti(i);
         uint32_t p = (uint32_t)(ce >> 32);
@@ -408,7 +413,7 @@ CollationBaseDataBuilder::buildRootElementsTable(UVector32 &table, UErrorCode &e
                     table.addElement((int32_t)p, errorCode);
                     if(p < lastHanPrimary) {
                         // Prepare for the next Han range.
-                        nextHanPrimary = Collation::incThreeBytePrimaryByOffset(p, FALSE, hanStep);
+                        nextHanPrimary = Collation::incThreeBytePrimaryByOffset(p, false, hanStep);
                     } else {
                         // p is the last Han primary.
                         nextHanPrimary = 0xffffffff;
@@ -425,7 +430,7 @@ CollationBaseDataBuilder::buildRootElementsTable(UVector32 &table, UErrorCode &e
                         // nextHanPrimary < p < lastHanPrimary
                         // End the Han range on p, prepare for the next range.
                         table.addElement((int32_t)p | hanStep, errorCode);
-                        nextHanPrimary = Collation::incThreeBytePrimaryByOffset(p, FALSE, hanStep);
+                        nextHanPrimary = Collation::incThreeBytePrimaryByOffset(p, false, hanStep);
                     } else if(p == lastHanPrimary) {
                         // nextHanPrimary < p == lastHanPrimary
                         // End the last Han range on p.
@@ -460,8 +465,8 @@ CollationBaseDataBuilder::buildRootElementsTable(UVector32 &table, UErrorCode &e
                 table.addElement((int32_t)p, errorCode);
             }
             prevPrimary = p;
-            needCommonSecTerUnit = FALSE;
-            hasDeltaUnit = FALSE;
+            needCommonSecTerUnit = false;
+            hasDeltaUnit = false;
         }
         if(secTer == Collation::COMMON_SEC_AND_TER_CE && !needCommonSecTerUnit) {
             // The common secondar/tertiary weights are implied in the primary unit.
@@ -471,11 +476,11 @@ CollationBaseDataBuilder::buildRootElementsTable(UVector32 &table, UErrorCode &e
                 needCommonSecTerUnit = p != 0;
             } else if(secTer == Collation::COMMON_SEC_AND_TER_CE) {
                 // Real common sec/ter unit, no need to insert an artificial one.
-                needCommonSecTerUnit = FALSE;
+                needCommonSecTerUnit = false;
             }
             // For each new set of secondary/tertiary weights we write a delta unit.
             table.addElement((int32_t)secTer | CollationRootElements::SEC_TER_DELTA_FLAG, errorCode);
-            hasDeltaUnit = TRUE;
+            hasDeltaUnit = true;
         }
     }
 }
@@ -501,12 +506,12 @@ CollationBaseDataBuilder::writeRootElementsRange(
     if((p & 0xff00) == 0) {
         // 2-byte primary
         if((prevPrimary & 0xff00) != 0) { return 0; }  // length mismatch
-        twoBytes = TRUE;
+        twoBytes = true;
         step = diffTwoBytePrimaries(prevPrimary, p, isCompressible);
     } else {
         // 3-byte primary
         if((prevPrimary & 0xff00) == 0) { return 0; }  // length mismatch
-        twoBytes = FALSE;
+        twoBytes = false;
         step = diffThreeBytePrimaries(prevPrimary, p, isCompressible);
     }
     if(step > (int32_t)CollationRootElements::PRIMARY_STEP_MASK) { return 0; }

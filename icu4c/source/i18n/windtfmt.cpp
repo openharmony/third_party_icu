@@ -84,7 +84,7 @@ UnicodeString* Win32DateFormat::getTimeDateFormat(const Calendar *cal, const Loc
     }
     const UChar *resStr = ures_getStringByIndex(patBundle, glueIndex, &resStrLen, &status);
 
-    result = new UnicodeString(TRUE, resStr, resStrLen);
+    result = new UnicodeString(true, resStr, resStrLen);
 
     ures_close(patBundle);
     ures_close(typBundle);
@@ -98,12 +98,11 @@ UnicodeString* Win32DateFormat::getTimeDateFormat(const Calendar *cal, const Loc
 // be factored out into a common helper for both.
 static UErrorCode GetEquivalentWindowsLocaleName(const Locale& locale, UnicodeString** buffer)
 {
-#if defined(WINVER) && (WINVER >= 0x0601)
     UErrorCode status = U_ZERO_ERROR;
     char asciiBCP47Tag[LOCALE_NAME_MAX_LENGTH] = {};
 
     // Convert from names like "en_CA" and "de_DE@collation=phonebook" to "en-CA" and "de-DE-u-co-phonebk".
-    (void)uloc_toLanguageTag(locale.getName(), asciiBCP47Tag, UPRV_LENGTHOF(asciiBCP47Tag), FALSE, &status);
+    (void)uloc_toLanguageTag(locale.getName(), asciiBCP47Tag, UPRV_LENGTHOF(asciiBCP47Tag), false, &status);
 
     if (U_SUCCESS(status))
     {
@@ -157,10 +156,6 @@ static UErrorCode GetEquivalentWindowsLocaleName(const Locale& locale, UnicodeSt
         }
     }
     return status;
-#else
-    UErrorCode status = U_UNSUPPORTED_ERROR;
-    return status;
-#endif
 }
 
 // TODO: Range-check timeStyle, dateStyle
@@ -385,7 +380,7 @@ UnicodeString Win32DateFormat::setTimeZoneInfo(TIME_ZONE_INFORMATION *tzi, const
 
         zone.getID(icuid);
         if (! uprv_getWindowsTimeZoneInfo(tzi, icuid.getBuffer(), icuid.length())) {
-            UBool found = FALSE;
+            UBool found = false;
             int32_t ec = TimeZone::countEquivalentIDs(icuid);
 
             for (int z = 0; z < ec; z += 1) {
