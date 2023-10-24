@@ -740,7 +740,7 @@ ohos_static_library("static_icu") {
   ]
   sources = icu_common_source
   sources += icu_i18n_source
-  sources += [ "//third_party/icu/ohos_icu4j/data/lite/icudt69l_dat.S" ]
+  sources += [ "//third_party/icu/ohos_icu4j/data/lite/icudt72l_dat.S" ]
   cflags_cc = [
     "-W",
     "-Wall",
