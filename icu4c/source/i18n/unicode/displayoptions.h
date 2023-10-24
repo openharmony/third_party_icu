@@ -58,8 +58,8 @@ public:
          * @return Builder
          * @draft ICU 72
          */
-        Builder &setGrammaticalCase(UDisplayOptionsGrammaticalCase grammaticalCase) {
-            this->grammaticalCase = grammaticalCase;
+        Builder &setGrammaticalCase(UDisplayOptionsGrammaticalCase optGrammaticalCase) {
+            this->grammaticalCase = optGrammaticalCase;
             return *this;
         }
 
@@ -70,8 +70,8 @@ public:
          * @return Builder
          * @draft ICU 72
          */
-        Builder &setNounClass(UDisplayOptionsNounClass nounClass) {
-            this->nounClass = nounClass;
+        Builder &setNounClass(UDisplayOptionsNounClass optNounClass) {
+            this->nounClass = optNounClass;
             return *this;
         }
 
@@ -82,8 +82,8 @@ public:
          * @return Builder
          * @draft ICU 72
          */
-        Builder &setPluralCategory(UDisplayOptionsPluralCategory pluralCategory) {
-            this->pluralCategory = pluralCategory;
+        Builder &setPluralCategory(UDisplayOptionsPluralCategory optPluralCategory) {
+            this->pluralCategory = optPluralCategory;
             return *this;
         }
 
@@ -94,8 +94,8 @@ public:
          * @return Builder
          * @draft ICU 72
          */
-        Builder &setCapitalization(UDisplayOptionsCapitalization capitalization) {
-            this->capitalization = capitalization;
+        Builder &setCapitalization(UDisplayOptionsCapitalization optCapitalization) {
+            this->capitalization = optCapitalization;
             return *this;
         }
 
@@ -106,8 +106,8 @@ public:
          * @return Builder
          * @draft ICU 72
          */
-        Builder &setNameStyle(UDisplayOptionsNameStyle nameStyle) {
-            this->nameStyle = nameStyle;
+        Builder &setNameStyle(UDisplayOptionsNameStyle optNameStyle) {
+            this->nameStyle = optNameStyle;
             return *this;
         }
 
@@ -118,8 +118,8 @@ public:
          * @return Builder
          * @draft ICU 72
          */
-        Builder &setDisplayLength(UDisplayOptionsDisplayLength displayLength) {
-            this->displayLength = displayLength;
+        Builder &setDisplayLength(UDisplayOptionsDisplayLength optDisplayLength) {
+            this->displayLength = optDisplayLength;
             return *this;
         }
 
@@ -130,8 +130,8 @@ public:
          * @return Builder
          * @draft ICU 72
          */
-        Builder &setSubstituteHandling(UDisplayOptionsSubstituteHandling substituteHandling) {
-            this->substituteHandling = substituteHandling;
+        Builder &setSubstituteHandling(UDisplayOptionsSubstituteHandling optSubstituteHandling) {
+            this->substituteHandling = optSubstituteHandling;
             return *this;
         }
 
