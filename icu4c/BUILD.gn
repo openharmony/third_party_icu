@@ -57,9 +57,9 @@ ohos_prebuilt_etc("ohos_icudat") {
   if ("${product_name}" == "ohcore") {
     source = "//third_party/icu/ohos_icu4j/data/icudt68l.dat"
   } else if (icu_support_locales) {
-    source = "//third_party/icu/ohos_icu4j/data/icudt72l.dat"
+    source = "//third_party/icu/ohos_icu4j/data/icudt69l.dat"
   } else {
-    source = "//third_party/icu/ohos_icu4j/data/lite/icudt72l.dat"
+    source = "//third_party/icu/ohos_icu4j/data/lite/icudt69l.dat"
   }
 
   module_install_dir = "usr/ohos_icu/"
@@ -740,7 +740,7 @@ ohos_static_library("static_icu") {
   ]
   sources = icu_common_source
   sources += icu_i18n_source
-  sources += [ "//third_party/icu/ohos_icu4j/data/lite/icudt72l_dat.S" ]
+  sources += [ "//third_party/icu/ohos_icu4j/data/lite/icudt69l_dat.S" ]
   cflags_cc = [
     "-W",
     "-Wall",
