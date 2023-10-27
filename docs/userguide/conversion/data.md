@@ -116,7 +116,7 @@ stateful encodings:
 The following sections in this chapter discuss the mapping data tables that are
 used in ICU. For related material, please see:
 
-1.  [ICU character set collection](http://icu-project.org/charts/charset/)
+1.  [ICU character set collection](https://icu.unicode.org/charts/charset)
 
 2.  [Unicode Technical Report 22](http://www.unicode.org/reports/tr22/)
 
@@ -529,7 +529,7 @@ all shared mappings should be in the base table. (The base table data structure
 is more compact than the extension table data structure.)
 
 ICU provides the ucmkbase tool in the
-[ucmtools](https://github.com/unicode-org/icu-data/tree/master/charset/source/ucmtools)
+[ucmtools](https://github.com/unicode-org/icu-data/tree/main/charset/source/ucmtools)
 collection to do this.
 
 For example, the following illustrates how to use ucmkbase to make a base .ucm
