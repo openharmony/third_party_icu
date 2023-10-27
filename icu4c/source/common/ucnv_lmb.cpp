@@ -149,7 +149,7 @@ Next, you will notice that the list of group bytes has some gaps.
 These are used in various ways.
 
 We reserve a few special single byte values for common control 
-characters. These are in the same place as their ANSI eqivalents for speed.
+characters. These are in the same place as their ANSI equivalents for speed.
 */
                      
 #define ULMBCS_HT    0x09   /* Fixed control char - Horizontal Tab */
@@ -192,7 +192,7 @@ LMBCS, was to use up the spaces of the form
  LOTUS added a new group 0x14 to hold Unicode values not otherwise 
  represented in LMBCS: */
 #define ULMBCS_GRP_UNICODE    0x14   
-/* The two bytes appearing after a 0x14 are intrepreted as UFT-16 BE
+/* The two bytes appearing after a 0x14 are interpreted as UFT-16 BE
 (Big-Endian) characters. The exception comes when the UTF16 
 representation would have a zero as the second byte. In that case,
 'F6' is used in its place, and the bytes are swapped. (This prevents 
@@ -610,7 +610,7 @@ static const UConverterStaticData _LMBCSStaticData##n={\
   sizeof(UConverterStaticData),\
  "LMBCS-"  #n,\
     0, UCNV_IBM, UCNV_LMBCS_##n, 1, 3,\
-    { 0x3f, 0, 0, 0 },1,FALSE,FALSE,0,0,{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0} \
+    { 0x3f, 0, 0, 0 },1,false,false,0,0,{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0} \
 };\
 const UConverterSharedData _LMBCSData##n= \
         UCNV_IMMUTABLE_SHARED_DATA_INITIALIZER(&_LMBCSStaticData##n, &_LMBCSImpl##n);
@@ -721,7 +721,7 @@ _LMBCSSafeClone(const UConverter *cnv,
     }
 
     newLMBCS->cnv.extraInfo = &newLMBCS->lmbcs;
-    newLMBCS->cnv.isExtraLocal = TRUE;
+    newLMBCS->cnv.isExtraLocal = true;
     return &newLMBCS->cnv;
 }
 
@@ -763,14 +763,14 @@ LMBCSConversionWorker (
    U_ASSERT(xcnv);
    U_ASSERT(group<ULMBCS_GRP_UNICODE);
 
-   bytesConverted = ucnv_MBCSFromUChar32(xcnv, *pUniChar, &value, FALSE);
+   bytesConverted = ucnv_MBCSFromUChar32(xcnv, *pUniChar, &value, false);
 
    /* get the first result byte */
    if(bytesConverted > 0) {
       firstByte = (ulmbcs_byte_t)(value >> ((bytesConverted - 1) * 8));
    } else {
       /* most common failure mode is an unassigned character */
-      groups_tried[group] = TRUE;
+      groups_tried[group] = true;
       return 0;
    }
 
@@ -878,7 +878,7 @@ _LMBCSFromUnicode(UConverterFromUnicodeArgs*     args,
          A) The optimization group
          B) The locale group
          C) The last group that succeeded with this string.
-         D) every other group that's relevent (single or double)
+         D) every other group that's relevant (single or double)
          E) If its single-byte ambiguous, try the exceptions group
 
       4. And as a grand fallback: Unicode
@@ -1049,7 +1049,7 @@ _LMBCSFromUnicode(UConverterFromUnicodeArgs*     args,
          }
       }
   
-      /* we have a translation. increment source and write as much as posible to target */
+      /* we have a translation. increment source and write as much as possible to target */
       args->source++;
       pLMBCS = LMBCS;
       while (args->target < args->targetLimit && bytes_written--)
@@ -1191,11 +1191,11 @@ _LMBCSGetNextUCharWorker(UConverterToUnicodeArgs*   args,
                 if (*args->source == group) {
                     /* single byte */
                     ++args->source;
-                    uniChar = ucnv_MBCSSimpleGetNextUChar(cnv, args->source, 1, FALSE);
+                    uniChar = ucnv_MBCSSimpleGetNextUChar(cnv, args->source, 1, false);
                     ++args->source;
                 } else {
                     /* double byte */
-                    uniChar = ucnv_MBCSSimpleGetNextUChar(cnv, args->source, 2, FALSE);
+                    uniChar = ucnv_MBCSSimpleGetNextUChar(cnv, args->source, 2, false);
                     args->source += 2;
                 }
             }
@@ -1220,7 +1220,7 @@ _LMBCSGetNextUCharWorker(UConverterToUnicodeArgs*   args,
                     /* Lookup value must include opt group */
                     bytes[0] = group;
                     bytes[1] = CurByte;
-                    uniChar = ucnv_MBCSSimpleGetNextUChar(cnv, bytes, 2, FALSE);
+                    uniChar = ucnv_MBCSSimpleGetNextUChar(cnv, bytes, 2, false);
                 }
             }
         }
@@ -1236,13 +1236,13 @@ _LMBCSGetNextUCharWorker(UConverterToUnicodeArgs*   args,
                     CHECK_SOURCE_LIMIT(0);
 
                     /* let the MBCS conversion consume CurByte again */
-                    uniChar = ucnv_MBCSSimpleGetNextUChar(cnv, args->source - 1, 1, FALSE);
+                    uniChar = ucnv_MBCSSimpleGetNextUChar(cnv, args->source - 1, 1, false);
                 }
                 else
                 {
                     CHECK_SOURCE_LIMIT(1);
                     /* let the MBCS conversion consume CurByte again */
-                    uniChar = ucnv_MBCSSimpleGetNextUChar(cnv, args->source - 1, 2, FALSE);
+                    uniChar = ucnv_MBCSSimpleGetNextUChar(cnv, args->source - 1, 2, false);
                     ++args->source;
                 }
             }

@@ -18,7 +18,7 @@ import java.util.NoSuchElementException;
  * ICUResourceBundleIterator iterator = resB.getIterator();
  * ICUResourceBundle temp;
  * while (iterator.hasNext()) {
- *    temp = iterartor.next();  
+ *    temp = iterator.next();  
  *    int type = temp.getType();
  *    switch(type){
  *      case UResourceBundle.STRING:
@@ -88,7 +88,7 @@ public class UResourceBundleIterator{
     
     /**
      * Checks whether the given resource has another element to iterate over.
-     * @return TRUE if there are more elements, FALSE if there is no more elements
+     * @return true if there are more elements, false if there is no more elements
      * @stable ICU 3.8
      */
     public boolean hasNext(){
