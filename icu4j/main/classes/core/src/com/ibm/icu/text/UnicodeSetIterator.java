@@ -14,9 +14,7 @@ import java.util.Iterator;
  * UnicodeSetIterator iterates over the contents of a UnicodeSet.  It
  * iterates over either code points or code point ranges.  After all
  * code points or ranges have been returned, it returns the
- * multicharacter strings of the UnicodeSet, if any.
- *
- * <p>This class is not intended for public subclassing.
+ * multicharacter strings of the UnicodSet, if any.
  *
  * <p>To iterate over code points and multicharacter strings,
  * use a loop like this:
@@ -36,18 +34,12 @@ import java.util.Iterator;
  *   }
  * }
  * </pre>
- *
- * <p>To iterate over only the strings, start with <code>new UnicodeSetIterator(set).skipToStrings()</code>.
- *
  * <p><b>Warning: </b>For speed, UnicodeSet iteration does not check for concurrent modification.
  * Do not alter the UnicodeSet while iterating.
  * @author M. Davis
  * @stable ICU 2.0
- * @see UnicodeSet#ranges()
- * @see UnicodeSet#strings()
- * @see UnicodeSet#iterator()
  */
-public final class UnicodeSetIterator {
+public class UnicodeSetIterator {
 
     /**
      * Value of <tt>codepoint</tt> if the iterator points to a string.
@@ -55,7 +47,7 @@ public final class UnicodeSetIterator {
      * <tt>string</tt> for the current iteration result.
      * @stable ICU 2.0
      */
-    public static final int IS_STRING = -1;
+    public static int IS_STRING = -1;
 
     /**
      * Current code point, or the special value <tt>IS_STRING</tt>, if
@@ -100,23 +92,6 @@ public final class UnicodeSetIterator {
      */
     public UnicodeSetIterator() {
         reset(new UnicodeSet());
-    }
-
-    /**
-     * Skips over the remaining code points/ranges, if any.
-     * A following call to next() or nextRange() will yield a string, if there is one.
-     * No-op if next() would return false, or if it would yield a string anyway.
-     *
-     * @return this
-     * @stable ICU 70
-     * @see UnicodeSet#strings()
-     */
-    public UnicodeSetIterator skipToStrings() {
-        // Finish code point/range iteration.
-        range = endRange;
-        endElement = -1;
-        nextElement = 0;
-        return this;
     }
 
     /**
@@ -259,15 +234,39 @@ public final class UnicodeSetIterator {
     private int endRange = 0;
     private int range = 0;
 
-    private int endElement;
-    private int nextElement;
+    /**
+     * @internal
+     * @deprecated This API is ICU internal only.
+     */
+    @Deprecated
+    public UnicodeSet getSet() {
+        return set;
+    }
+
+    /**
+     * @internal
+     * @deprecated This API is ICU internal only.
+     */
+    @Deprecated
+    protected int endElement;
+    /**
+     * @internal
+     * @deprecated This API is ICU internal only.
+     */
+    @Deprecated
+    protected int nextElement;
+    private Iterator<String> stringIterator = null;
 
     /**
      * Invariant: stringIterator is null when there are no (more) strings remaining
      */
-    private Iterator<String> stringIterator = null;
 
-    private void loadRange(int aRange) {
+    /**
+     * @internal
+     * @deprecated This API is ICU internal only.
+     */
+    @Deprecated
+    protected void loadRange(int aRange) {
         nextElement = set.getRangeStart(aRange);
         endElement = set.getRangeEnd(aRange);
     }

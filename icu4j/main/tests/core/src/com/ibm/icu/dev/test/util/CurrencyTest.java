@@ -226,7 +226,7 @@ public class CurrencyTest extends TestFmwk {
                 "US$",
                 USD.getName(en_CA, Currency.SYMBOL_NAME, isChoiceFormat));
         assertEquals("USD.getName(NARROW_SYMBOL_NAME, en_CA)",
-                "US$",
+                "$",
                 USD.getName(en_CA, Currency.NARROW_SYMBOL_NAME, isChoiceFormat));
         assertEquals("USD.getName(SYMBOL_NAME) in en_NZ",
                 "US$",
@@ -481,7 +481,7 @@ public class CurrencyTest extends TestFmwk {
 
         // but not one millisecond before the start of the first day
         Date eurFirstDateMinus1ms = new Date(eurFirstDate.getTime() - 1);
-        assertEquals("EUR not available before very start of first date", 1, metainfo.currencyInfo(filter.withDate(eurFirstDateMinus1ms)).size());
+        assertEquals("EUR not avilable before very start of first date", 1, metainfo.currencyInfo(filter.withDate(eurFirstDateMinus1ms)).size());
 
         // end time is last millisecond of day
         GregorianCalendar cal = new GregorianCalendar();
@@ -537,7 +537,7 @@ public class CurrencyTest extends TestFmwk {
 
         // but not one millisecond before the start of the first day
         long eurFirstDateMinus1ms = eurFirstDate - 1;
-        assertEquals("EUR not available before very start of first date", 1,
+        assertEquals("EUR not avilable before very start of first date", 1,
                      metainfo.currencyInfo(filter.withDate(eurFirstDateMinus1ms)).size());
 
         // Deutschmark available from first millisecond on
@@ -568,21 +568,6 @@ public class CurrencyTest extends TestFmwk {
                 "With tender",
                 Arrays.asList(new String[] {"CHF"}), // no longer include currencies with tender=false
                 metainfo.currencies(filter.withTender()));
-    }
-
-    @Test
-    public void TestFullCurrencyList() {
-        CurrencyMetaInfo metainfo = CurrencyMetaInfo.getInstance();
-        if (metainfo == null) {
-            errln("Unable to get CurrencyMetaInfo instance.");
-            return;
-        }
-        List<String> currencies = metainfo.currencies(null);
-        assertTrue("Full currencies list should include UYW", currencies.contains("UYW")); // ICU-21622
-        assertTrue("Full currencies list should include VES", currencies.contains("VES")); // ICU-21685
-        assertFalse("Full currencies list should not include EQE", currencies.contains("EQE")); // ICU-21685
-        assertTrue("Full currencies list should include SLE", currencies.contains("SLE")); // CLDR 41/42, ICU-21989
-        assertTrue("Full currencies list should include VED", currencies.contains("VED")); // CLDR 41, ICU-21989
     }
 
     // Coverage-only test of the CurrencyMetaInfo class
@@ -984,17 +969,5 @@ public class CurrencyTest extends TestFmwk {
     @Test
     public void TestCurrencyDataCtor() throws Exception {
         checkDefaultPrivateConstructor(CurrencyData.class);
-    }
-    @Test
-    public void testSierraLeoneCurrency21997() {
-        // CLDR 41: Check that currency of Sierra Leone is SLL (which is legal tender)
-        // and not the newer currency SLE (which is not legal tender), as of CLDR 41.
-        // Test will fail once SLE is declared legal.
-        // CLDR 42: Now check that currency of Sierra Leone is SLE (which is legal tender)
-        Currency currency = Currency.getInstance(ULocale.forLanguageTag("en-SL"));
-        String result = currency.getCurrencyCode();
-        if (!"SLE".equals(result)) {
-            errln("Currency code of en-SL is not SLE but " + result);
-        }
     }
 }

@@ -58,7 +58,7 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
-      <OutputFile>..\..\$(IcuBinOutputDir)\icuuc$(IcuMajorVersion)d.dll</OutputFile>
+      <OutputFile>..\..\$(IcuBinOutputDir)\icuuc69d.dll</OutputFile>
       <ProgramDatabaseFile>.\..\..\$(IcuLibOutputDir)\icuucd.pdb</ProgramDatabaseFile>
       <ImportLibrary>..\..\$(IcuLibOutputDir)\icuucd.lib</ImportLibrary>
     </Link>
@@ -70,7 +70,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
     </ClCompile>
     <Link>
-      <OutputFile>..\..\$(IcuBinOutputDir)\icuuc$(IcuMajorVersion).dll</OutputFile>
+      <OutputFile>..\..\$(IcuBinOutputDir)\icuuc69.dll</OutputFile>
       <ProgramDatabaseFile>.\..\..\$(IcuLibOutputDir)\icuuc.pdb</ProgramDatabaseFile>
       <ImportLibrary>..\..\$(IcuLibOutputDir)\icuuc.lib</ImportLibrary>
     </Link>
@@ -87,7 +87,6 @@
     <ClCompile Include="brkeng.cpp" />
     <ClCompile Include="brkiter.cpp" />
     <ClCompile Include="dictbe.cpp" />
-    <ClCompile Include="lstmbe.cpp" />
     <ClCompile Include="pluralmap.cpp" />
     <ClCompile Include="rbbi.cpp" />
     <ClCompile Include="rbbidata.cpp" />
@@ -204,7 +203,6 @@
     <ClCompile Include="ucase.cpp" />
     <ClCompile Include="uchar.cpp" />
     <ClCompile Include="characterproperties.cpp" />
-    <ClCompile Include="emojiprops.cpp" />
     <ClCompile Include="unames.cpp" />
     <ClCompile Include="unifiedcache.cpp" />
     <ClCompile Include="unifilt.cpp" />
@@ -281,7 +279,6 @@
     <ClInclude Include="ubidiimp.h" />
     <ClInclude Include="brkeng.h" />
     <ClInclude Include="dictbe.h" />
-    <ClInclude Include="lstmbe.h" />
     <ClInclude Include="rbbidata.h" />
     <ClInclude Include="rbbinode.h" />
     <ClInclude Include="rbbirb.h" />
@@ -366,7 +363,6 @@
     <ClInclude Include="patternprops.h" />
     <ClInclude Include="propname.h" />
     <ClInclude Include="ruleiter.h" />
-    <ClInclude Include="emojiprops.h" />
     <ClInclude Include="ucase.h" />
     <ClInclude Include="ulayout_props.h" />
     <ClInclude Include="unisetspan.h" />

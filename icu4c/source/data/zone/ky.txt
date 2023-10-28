@@ -1223,9 +1223,6 @@ ky{
         "Pacific:Johnston"{
             ec{"Жонстон"}
         }
-        "Pacific:Kanton"{
-            ec{"Кантон"}
-        }
         "Pacific:Kiritimati"{
             ec{"Киритимати"}
         }
@@ -1885,9 +1882,6 @@ ky{
             ld{"Екатеринбург жайкы убактысы"}
             lg{"Екатеринбург убактысы"}
             ls{"Екатеринбург кышкы убакыты"}
-        }
-        "meta:Yukon"{
-            ls{"Юкон убактысы"}
         }
         fallbackFormat{"{1} ({0})"}
         gmtFormat{"GMT{0}"}

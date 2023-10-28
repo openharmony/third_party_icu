@@ -33,15 +33,6 @@
 
 CcTest* CcTest::last_ = NULL;
 
-// The windows compiler doesn't like to use `strdup`, and claims it's a
-// deprecated name.
-// For simplicity just implement it ourselves.
-static char* Strdup(const char* str) {
-  size_t len = strlen(str);
-  char* result = reinterpret_cast<char*>(malloc(len + 1));
-  memcpy(result, str, len + 1);
-  return result;
-}
 
 CcTest::CcTest(TestFunction* callback, const char* test_file,
                const char* test_name, const char* test_dependency,
@@ -54,9 +45,9 @@ CcTest::CcTest(TestFunction* callback, const char* test_file,
     basename = strrchr(const_cast<char *>(test_file), '\\');
   }
   if (!basename) {
-    basename = Strdup(test_file);
+    basename = strdup(test_file);
   } else {
-    basename = Strdup(basename + 1);
+    basename = strdup(basename + 1);
   }
   // Drop the extension, if there is one.
   char *extension = strrchr(basename, '.');
@@ -84,17 +75,6 @@ static void PrintTestList(CcTest* current) {
 int main(int argc, char* argv[]) {
   int tests_run = 0;
   bool print_run_count = true;
-  if (argc == 1) {
-    // Just run all the tests.
-    CcTest* test = CcTest::last();
-    while (test != NULL) {
-      if (test->enabled()) {
-        test->Run();
-        tests_run++;
-      }
-      test = test->prev();
-    }
-  }
   for (int i = 1; i < argc; i++) {
     char* arg = argv[i];
     if (strcmp(arg, "--list") == 0) {
@@ -102,7 +82,7 @@ int main(int argc, char* argv[]) {
       print_run_count = false;
 
     } else {
-      char* arg_copy = Strdup(arg);
+      char* arg_copy = strdup(arg);
       char* testname = strchr(arg_copy, '/');
       if (testname) {
         // Split the string in two by nulling the slash and then run

@@ -777,59 +777,35 @@ public final class Utility {
         /*v*/ 0x76, 0x0b
     };
 
-    /* Convert one octal digit to a numeric value 0..7, or -1 on failure */
-    private static final int _digit8(int c) {
-        if (c >= '0' && c <= '7') {
-            return c - '0';
-        }
-        return -1;
-    }
-
-    /* Convert one hex digit to a numeric value 0..F, or -1 on failure */
-    private static final int _digit16(int c) {
-        if (c >= '0' && c <= '9') {
-            return c - '0';
-        }
-        if (c >= 'A' && c <= 'F') {
-            return c - ('A' - 10);
-        }
-        if (c >= 'a' && c <= 'f') {
-            return c - ('a' - 10);
-        }
-        return -1;
-    }
-
     /**
-     * Converts an escape to a code point value. We attempt
+     * Convert an escape to a 32-bit code point value.  We attempt
      * to parallel the icu4c unescapeAt() function.
-     * This function returns an integer with
-     * both the code point (bits 28..8) and the length of the escape sequence (bits 7..0).
-     * offset+length is the index after the escape sequence.
-     *
-     * @param offset the offset to the character <em>after</em> the backslash.
-     * @return the code point and length, or -1 on error.
+     * @param offset16 an array containing offset to the character
+     * <em>after</em> the backslash.  Upon return offset16[0] will
+     * be updated to point after the escape sequence.
+     * @return character value from 0 to 10FFFF, or -1 on error.
      */
-    public static int unescapeAndLengthAt(CharSequence s, int offset) {
-        return unescapeAndLengthAt(s, offset, s.length());
-    }
-
-    private static int unescapeAndLengthAt(CharSequence s, int offset, int length) {
+    public static int unescapeAt(String s, int[] offset16) {
+        int c;
         int result = 0;
         int n = 0;
         int minDig = 0;
         int maxDig = 0;
         int bitsPerDigit = 4;
         int dig;
+        int i;
         boolean braces = false;
 
         /* Check that offset is in range */
+        int offset = offset16[0];
+        int length = s.length();
         if (offset < 0 || offset >= length) {
             return -1;
         }
-        int start = offset;
 
         /* Fetch first UChar after '\\' */
-        int c = s.charAt(offset++);
+        c = Character.codePointAt(s, offset);
+        offset += UTF16.getCharCount(c);
 
         /* Convert hexadecimal and octal escapes */
         switch (c) {
@@ -841,7 +817,7 @@ public final class Utility {
             break;
         case 'x':
             minDig = 1;
-            if (offset < length && s.charAt(offset) == '{') {
+            if (offset < length && UTF16.charAt(s, offset) == 0x7B /*{*/) {
                 ++offset;
                 braces = true;
                 maxDig = 8;
@@ -850,7 +826,7 @@ public final class Utility {
             }
             break;
         default:
-            dig = _digit8(c);
+            dig = UCharacter.digit(c, 8);
             if (dig >= 0) {
                 minDig = 1;
                 maxDig = 3;
@@ -862,20 +838,20 @@ public final class Utility {
         }
         if (minDig != 0) {
             while (offset < length && n < maxDig) {
-                c = s.charAt(offset);
-                dig = (bitsPerDigit == 3) ? _digit8(c) : _digit16(c);
+                c = UTF16.charAt(s, offset);
+                dig = UCharacter.digit(c, (bitsPerDigit == 3) ? 8 : 16);
                 if (dig < 0) {
                     break;
                 }
                 result = (result << bitsPerDigit) | dig;
-                ++offset;
+                offset += UTF16.getCharCount(c);
                 ++n;
             }
             if (n < minDig) {
                 return -1;
             }
             if (braces) {
-                if (c != '}') {
+                if (c != 0x7D /*}*/) {
                     return -1;
                 }
                 ++offset;
@@ -887,35 +863,29 @@ public final class Utility {
             // if there is a trail surrogate after it, either as an
             // escape or as a literal.  If so, join them up into a
             // supplementary.
-            if (offset < length && UTF16.isLeadSurrogate(result)) {
+            if (offset < length &&
+                    UTF16.isLeadSurrogate((char) result)) {
                 int ahead = offset+1;
-                c = s.charAt(offset);
+                c = s.charAt(offset); // [sic] get 16-bit code unit
                 if (c == '\\' && ahead < length) {
-                    // Calling ourselves recursively may cause a stack overflow if
-                    // we have repeated escaped lead surrogates.
-                    // Limit the length to 11 ("x{0000DFFF}") after ahead.
-                    int tailLimit = ahead + 11;
-                    if (tailLimit > length) {
-                        tailLimit = length;
-                    }
-                    int cpAndLength = unescapeAndLengthAt(s, ahead, tailLimit);
-                    if (cpAndLength >= 0) {
-                        c = cpAndLength >> 8;
-                        ahead += cpAndLength & 0xff;
-                    }
+                    int o[] = new int[] { ahead };
+                    c = unescapeAt(s, o);
+                    ahead = o[0];
                 }
-                if (UTF16.isTrailSurrogate(c)) {
+                if (UTF16.isTrailSurrogate((char) c)) {
                     offset = ahead;
-                    result = UCharacter.toCodePoint(result, c);
+                    result = Character.toCodePoint((char) result, (char) c);
                 }
             }
-            return codePointAndLength(result, start, offset);
+            offset16[0] = offset;
+            return result;
         }
 
         /* Convert C-style escapes in table */
-        for (int i=0; i<UNESCAPE_MAP.length; i+=2) {
+        for (i=0; i<UNESCAPE_MAP.length; i+=2) {
             if (c == UNESCAPE_MAP[i]) {
-                return codePointAndLength(UNESCAPE_MAP[i+1], start, offset);
+                offset16[0] = offset;
+                return UNESCAPE_MAP[i+1];
             } else if (c < UNESCAPE_MAP[i]) {
                 break;
             }
@@ -923,102 +893,64 @@ public final class Utility {
 
         /* Map \cX to control-X: X & 0x1F */
         if (c == 'c' && offset < length) {
-            c = Character.codePointAt(s, offset);
-            return codePointAndLength(c & 0x1F, start, offset + Character.charCount(c));
+            c = UTF16.charAt(s, offset);
+            offset16[0] = offset + UTF16.getCharCount(c);
+            return 0x1F & c;
         }
 
         /* If no special forms are recognized, then consider
-         * the backslash to generically escape the next character.
-         * Deal with surrogate pairs. */
-        if (UTF16.isLeadSurrogate(c) && offset < length) {
-            int c2 = s.charAt(offset);
-            if (UTF16.isTrailSurrogate(c2)) {
-                ++offset;
-                c = UCharacter.toCodePoint(c, c2);
-            }
-        }
-        return codePointAndLength(c, start, offset);
-    }
-
-    private static int codePointAndLength(int c, int length) {
-        assert 0 <= c && c <= 0x10ffff;
-        assert 0 <= length && length <= 0xff;
-        return c << 8 | length;
-    }
-
-    private static int codePointAndLength(int c, int start, int limit) {
-        return codePointAndLength(c, limit - start);
-    }
-
-    public static int cpFromCodePointAndLength(int cpAndLength) {
-        assert cpAndLength >= 0;
-        return cpAndLength >> 8;
-    }
-
-    public static int lengthFromCodePointAndLength(int cpAndLength) {
-        assert cpAndLength >= 0;
-        return cpAndLength & 0xff;
+         * the backslash to generically escape the next character. */
+        offset16[0] = offset;
+        return c;
     }
 
     /**
-     * Convert all escapes in a given string using unescapeAndLengthAt().
+     * Convert all escapes in a given string using unescapeAt().
      * @exception IllegalArgumentException if an invalid escape is
      * seen.
      */
-    public static String unescape(CharSequence s) {
-        StringBuilder buf = null;
+    public static String unescape(String s) {
+        StringBuilder buf = new StringBuilder();
+        int[] pos = new int[1];
         for (int i=0; i<s.length(); ) {
             char c = s.charAt(i++);
             if (c == '\\') {
-                if (buf == null) {
-                    buf = new StringBuilder(s.length()).append(s, 0, i - 1);
-                }
-                int cpAndLength = unescapeAndLengthAt(s, i);
-                if (cpAndLength < 0) {
+                pos[0] = i;
+                int e = unescapeAt(s, pos);
+                if (e < 0) {
                     throw new IllegalArgumentException("Invalid escape sequence " +
-                            s.subSequence(i-1, Math.min(i+9, s.length())));
+                            s.substring(i-1, Math.min(i+8, s.length())));
                 }
-                buf.appendCodePoint(cpAndLength >> 8);
-                i += cpAndLength & 0xff;
-            } else if (buf != null) {
-                // We could optimize this further by appending whole substrings between escapes.
+                buf.appendCodePoint(e);
+                i = pos[0];
+            } else {
                 buf.append(c);
             }
-        }
-        if (buf == null) {
-            // No escapes in s.
-            return s.toString();
         }
         return buf.toString();
     }
 
     /**
-     * Convert all escapes in a given string using unescapeAndLengthAt().
+     * Convert all escapes in a given string using unescapeAt().
      * Leave invalid escape sequences unchanged.
      */
-    public static String unescapeLeniently(CharSequence s) {
-        StringBuilder buf = null;
+    public static String unescapeLeniently(String s) {
+        StringBuilder buf = new StringBuilder();
+        int[] pos = new int[1];
         for (int i=0; i<s.length(); ) {
             char c = s.charAt(i++);
             if (c == '\\') {
-                if (buf == null) {
-                    buf = new StringBuilder(s.length()).append(s, 0, i - 1);
-                }
-                int cpAndLength = unescapeAndLengthAt(s, i);
-                if (cpAndLength < 0) {
+                pos[0] = i;
+                int e = unescapeAt(s, pos);
+                if (e < 0) {
                     buf.append(c);
                 } else {
-                    buf.appendCodePoint(cpAndLength >> 8);
-                    i += cpAndLength & 0xff;
+                    buf.appendCodePoint(e);
+                    i = pos[0];
                 }
-            } else if (buf != null) {
-                // We could optimize this further by appending whole substrings between escapes.
+            } else {
                 buf.append(c);
             }
-        }
-        if (buf == null) {
-            // No escapes in s.
-            return s.toString();
         }
         return buf.toString();
     }
@@ -1379,7 +1311,7 @@ public final class Utility {
      * position.  Return the identifier, or null if there is no
      * identifier.
      * @param str the string to parse
-     * @param pos INPUT-OUTPUT parameter.  On INPUT, pos[0] is the
+     * @param pos INPUT-OUPUT parameter.  On INPUT, pos[0] is the
      * first character to examine.  It must be less than str.length(),
      * and it must not point to a whitespace character.  That is, must
      * have pos[0] < str.length().  On
@@ -1536,65 +1468,34 @@ public final class Utility {
     }
 
     /**
-     * @return true for control codes and for surrogate and noncharacter code points
-     */
-    public static boolean shouldAlwaysBeEscaped(int c) {
-        if (c < 0x20) {
-            return true;  // C0 control codes
-        } else if (c <= 0x7e) {
-            return false;  // printable ASCII
-        } else if (c <= 0x9f) {
-            return true;  // C1 control codes
-        } else if (c < 0xd800) {
-            return false;  // most of the BMP
-        } else if (c <= 0xdfff || (0xfdd0 <= c && c <= 0xfdef) || (c & 0xfffe) == 0xfffe) {
-            return true;  // surrogate or noncharacter code points
-        } else if (c <= 0x10ffff) {
-            return false;  // all else
-        } else {
-            return true;  // not a code point
-        }
-    }
-
-    /**
-     * Escapes one unprintable code point using <backslash>uxxxx notation
+     * Escape unprintable characters using <backslash>uxxxx notation
      * for U+0000 to U+FFFF and <backslash>Uxxxxxxxx for U+10000 and
      * above.  If the character is printable ASCII, then do nothing
-     * and return false.  Otherwise, append the escaped notation and
-     * return true.
+     * and return FALSE.  Otherwise, append the escaped notation and
+     * return TRUE.
      */
     public static <T extends Appendable> boolean escapeUnprintable(T result, int c) {
-        if (isUnprintable(c)) {
-            escape(result, c);
-            return true;
-        }
-        return false;
-    }
-
-    /**
-     * Escapes one code point using <backslash>uxxxx notation
-     * for U+0000 to U+FFFF and <backslash>Uxxxxxxxx for U+10000 and above.
-     * @return result
-     */
-    public static <T extends Appendable> T escape(T result, int c) {
         try {
-            result.append('\\');
-            if ((c & ~0xFFFF) != 0) {
-                result.append('U');
-                result.append(DIGITS[0xF&(c>>28)]);
-                result.append(DIGITS[0xF&(c>>24)]);
-                result.append(DIGITS[0xF&(c>>20)]);
-                result.append(DIGITS[0xF&(c>>16)]);
-            } else {
-                result.append('u');
+            if (isUnprintable(c)) {
+                result.append('\\');
+                if ((c & ~0xFFFF) != 0) {
+                    result.append('U');
+                    result.append(DIGITS[0xF&(c>>28)]);
+                    result.append(DIGITS[0xF&(c>>24)]);
+                    result.append(DIGITS[0xF&(c>>20)]);
+                    result.append(DIGITS[0xF&(c>>16)]);
+                } else {
+                    result.append('u');
+                }
+                result.append(DIGITS[0xF&(c>>12)]);
+                result.append(DIGITS[0xF&(c>>8)]);
+                result.append(DIGITS[0xF&(c>>4)]);
+                result.append(DIGITS[0xF&c]);
+                return true;
             }
-            result.append(DIGITS[0xF&(c>>12)]);
-            result.append(DIGITS[0xF&(c>>8)]);
-            result.append(DIGITS[0xF&(c>>4)]);
-            result.append(DIGITS[0xF&c]);
-            return result;
+            return false;
         } catch (IOException e) {
-            throw new ICUUncheckedIOException(e);
+            throw new IllegalIcuArgumentException(e);
         }
     }
 

@@ -75,8 +75,8 @@ print messages when errors are found in your config file.
     $ pip3 install --user hjson jsonschema
 
 To build ICU4J with custom data, you must first build ICU4C with custom data
-and then generate the JAR file.  For more information on building ICU4J, read the
-[ICU4J Readme](../icu4j/).
+and then generate the JAR file.  For more information, read
+[icu4j-readme.txt](https://github.com/unicode-org/icu/blob/master/icu4c/source/data/icu4j-readme.txt).
 
 ### Locale Slicing
 
@@ -214,10 +214,10 @@ contain numbers.  Expect to spend a fair bit of time debugging your feature
 filter to get it to work the way you expect it to.
 
 The data for many ICU features live in individual files.  The ICU Data Build
-Tool puts similar *types* of files into categories.  The following table
+Tool puts puts similar *types* of files into categories.  The following table
 summarizes the ICU data files and their corresponding features and categories:
 
-| Feature | Category ID(s) | Data Files <br/> ([icu4c/source/data](https://github.com/unicode-org/icu/tree/main/icu4c/source/data)) | Resource Size <br/> (as of ICU 64) |
+| Feature | Category ID(s) | Data Files <br/> ([icu4c/source/data](https://github.com/unicode-org/icu/tree/master/icu4c/source/data)) | Resource Size <br/> (as of ICU 64) |
 |---|---|---|---|
 | Break Iteration | `"brkitr_rules"` <br/> `"brkitr_dictionaries"` <br/> `"brkitr_tree"` | brkitr/rules/\*.txt <br/> brkitr/dictionaries/\*.txt <br/> brkitr/\*.txt | 522 KiB <br/> **2.8 MiB** <br/> 14 KiB |
 | Charset Conversion | `"conversion_mappings"` | mappings/\*.ucm | **4.9 MiB** |
@@ -233,7 +233,6 @@ summarizes the ICU data files and their corresponding features and categories:
 | StringPrep | `"stringprep"` | sprep/\*.txt | 193 KiB |
 | Time Zones | `"misc"` <br/> `"zone_tree"` <br/> `"zone_supplemental"` | misc/metaZones.txt <br/> misc/timezoneTypes.txt <br/> misc/windowsZones.txt <br/> misc/zoneinfo64.txt <br/> zone/\*.txt <br/> zone/tzdbNames.txt | 41 KiB <br/> 20 KiB <br/> 22 KiB <br/> 151 KiB <br/> **2.7 MiB** <br/> 4.8 KiB |
 | Transliteration | `"translit"` | translit/\*.txt | 685 KiB |
-| Unicode Emoji<br/>Properties | `"uemoji"` | in/uemoji.icu | 13 KiB |
 | Unicode Character <br/> Names | `"unames"` | in/unames.icu | 269 KiB |
 | Unicode Text Layout | `"ulayout"` | in/ulayout.icu | 14 KiB |
 | Units | `"unit_tree"` | unit/\*.txt | **1.7 MiB** |
@@ -417,7 +416,7 @@ You can apply resource filters to all locale tree categories as well as to
 categories that include resource bundles, such as the `"misc"` category.
 
 For example, consider measurement units.  There is one unit file per locale (example:
-[en.txt](https://github.com/unicode-org/icu/blob/main/icu4c/source/data/unit/en.txt)),
+[en.txt](https://github.com/unicode-org/icu/blob/master/icu4c/source/data/unit/en.txt)),
 and that file contains data for all measurement units in CLDR.  However, if
 you are only formatting distances, for example, you may need the data for only
 a small set of units.

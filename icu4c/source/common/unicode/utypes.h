@@ -136,7 +136,11 @@
  * ICU 1.8.x on EBCDIC, etc..
  * @stable ICU 2.0
  */
+#ifdef U_ICU_USE_OLD_DATA
+#define U_ICUDATA_NAME    "icudt" "68" U_ICUDATA_TYPE_LETTER
+#else
 #define U_ICUDATA_NAME    "icudt" U_ICU_VERSION_SHORT U_ICUDATA_TYPE_LETTER
+#endif
 #ifndef U_HIDE_INTERNAL_API
 #define U_USRDATA_NAME    "usrdt" U_ICU_VERSION_SHORT U_ICUDATA_TYPE_LETTER  /**< @internal */
 #define U_USE_USRDATA     0  /**< @internal */
@@ -400,7 +404,7 @@ typedef double UDate;
  * suitable subclass.
  *
  * For more information, see:
- * https://unicode-org.github.io/icu/userguide/dev/codingguidelines#details-about-icu-error-codes
+ * http://icu-project.org/userguide/conventions
  *
  * Note: By convention, ICU functions that take a reference (C++) or a pointer
  * (C) to a UErrorCode first test:
@@ -479,14 +483,16 @@ typedef enum UErrorCode {
     U_COLLATOR_VERSION_MISMATCH = 28,   /**< Collator version is not compatible with the base version */
     U_USELESS_COLLATOR_ERROR  = 29,     /**< Collator is options only and no base is specified */
     U_NO_WRITE_PERMISSION     = 30,     /**< Attempt to modify read-only or constant data. */
+#ifndef U_HIDE_DRAFT_API
     /**
      * The input is impractically long for an operation.
      * It is rejected because it may lead to problems such as excessive
      * processing time, stack depth, or heap memory requirements.
      *
-     * @stable ICU 68
+     * @draft ICU 68
      */
     U_INPUT_TOO_LONG_ERROR = 31,
+#endif  // U_HIDE_DRAFT_API
 
 #ifndef U_HIDE_DEPRECATED_API
     /**

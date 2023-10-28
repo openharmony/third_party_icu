@@ -13,14 +13,13 @@ class LocaleBuilderTest: public IntlTest {
     LocaleBuilderTest();
     virtual ~LocaleBuilderTest();
 
-    void runIndexedTest( int32_t index, UBool exec, const char* &name, char* par = NULL ) override;
+    void runIndexedTest( int32_t index, UBool exec, const char* &name, char* par = NULL );
 
     void TestAddRemoveUnicodeLocaleAttribute(void);
     void TestAddRemoveUnicodeLocaleAttributeWellFormed(void);
     void TestAddUnicodeLocaleAttributeIllFormed(void);
     void TestLocaleBuilder(void);
     void TestLocaleBuilderBasic(void);
-    void TestLocaleBuilderBasicWithExtensionsOnDefaultLocale(void);
     void TestPosixCases(void);
     void TestSetExtensionOthers(void);
     void TestSetExtensionPU(void);

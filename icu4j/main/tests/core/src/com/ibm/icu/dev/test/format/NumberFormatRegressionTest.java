@@ -57,7 +57,7 @@ public class NumberFormatRegressionTest extends TestFmwk {
     }
 
     /**
-     * DateFormat should call setIntegerParseOnly(true) on adopted
+     * DateFormat should call setIntegerParseOnly(TRUE) on adopted
      * NumberFormat objects.
      */
     @Test

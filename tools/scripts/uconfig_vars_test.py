@@ -39,6 +39,7 @@ def RunCmd(command):
       stdout and exit code of command execution.
     """
 
+    command += ' >> uconfig_test.log 2>&1'
     print(command)
     p = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE,
                          stderr=subprocess.STDOUT, close_fds=True)
@@ -76,10 +77,8 @@ def ExtractUConfigNoXXX(uconfig_file):
             print('No definition for flag %s found!\n' % uconfig_no_flag)
             sys.exit(1)
 
-    test_results = {f: {'unit_test': False, 'hdr_test': False, 'u_log_tail': '', 'h_log_tail': ''}
-                    for f in uconfig_no_flags_all}
-    test_results['all_flags'] = {'unit_test': False, 'hdr_test' : False, 'u_log_tail': '',
-                                 'h_log_tail': ''}
+    test_results = {f: {'unit_test': False, 'hdr_test': False} for f in uconfig_no_flags_all}
+    test_results['all_flags'] = {'unit_test': False, 'hdr_test' : False}
 
     return uconfig_no_flags_all, test_results
 
@@ -103,33 +102,27 @@ def RunUnitTests(uconfig_no_list, test_results):
     """
 
     for uconfig_no in uconfig_no_list:
-        conf_log, exit_code = RunCmd(
+        _, exit_code = RunCmd(
                 './runConfigureICU Linux CPPFLAGS=\"-D%s=1"' % uconfig_no)
         if exit_code != 0:
             print('ICU4C configuration for flag %s failed' % uconfig_no)
-            print('Last 25 lines:\n%s\n' % '\n'.join(conf_log.decode('utf-8').splitlines()[-25:]))
             sys.exit(1)
         print('Running unit tests with %s set to 1.' % uconfig_no)
-        run_log, exit_code = RunCmd('make -j2 check')
+        _, exit_code = RunCmd('make -j2 check')
         test_results[uconfig_no]['unit_test'] = (exit_code == 0)
-        test_results[uconfig_no]['u_log_tail'] = \
-            '\n'.join(run_log.decode('utf-8').splitlines()[-50:])
         RunCmd('make clean')
 
     # Configure ICU with all UCONFIG_NO_XXX flags set to 1 and execute
     # the ICU4C unit tests.
     all_unit_test_config_no = BuildAllFlags(uconfig_no_list)
-    conf_log, exit_code = RunCmd(
+    _, exit_code = RunCmd(
         'CPPFLAGS=\"%s\" ./runConfigureICU Linux' % all_unit_test_config_no)
     if exit_code != 0:
         print('ICU configuration with all flags set failed')
-        print('Last 25 lines:\n%s\n' % '\n'.join(conf_log.decode('utf-8').splitlines()[-25:]))
         sys.exit(1)
     print('Running unit tests with all flags set to 1.')
-    run_log, exit_code = RunCmd('make -j2 check')
+    _, exit_code = RunCmd('make -j2 check')
     test_results['all_flags']['unit_test'] = (exit_code == 0)
-    test_results['all_flags']['u_log_tail'] = \
-        '\n'.join(run_log.decode('utf-8').splitlines()[-50:])
     RunCmd('make clean')
 
     return test_results
@@ -147,33 +140,28 @@ def RunHeaderTests(uconfig_no_list, test_results):
 
     # Header tests needs different setup.
     RunCmd('mkdir /tmp/icu_cnfg')
-    conf_log, exit_code = RunCmd('./runConfigureICU Linux --prefix=/tmp/icu_cnfg')
+    out, exit_code = RunCmd('./runConfigureICU Linux --prefix=/tmp/icu_cnfg')
     if exit_code != 0:
         print('ICU4C configuration for header test failed!')
-        print('Last 25 lines:\n%s\n' % '\n'.join(conf_log.decode('utf-8').splitlines()[-25:]))
+        print(out)
         sys.exit(1)
 
-    inst_log, exit_code = RunCmd('make -j2 install')
+    _, exit_code = RunCmd('make -j2 install')
     if exit_code != 0:
         print('make install failed!')
-        print('Last 25 lines:\n%s\n' % '\n'.join(inst_log.decode('utf-8').splitlines()[-25:]))
         sys.exit(1)
 
     for uconfig_no in uconfig_no_list:
         print('Running header tests with %s set to 1.' % uconfig_no)
-        run_log, exit_code = RunCmd(
+        _, exit_code = RunCmd(
             'PATH=/tmp/icu_cnfg/bin:$PATH make -C test/hdrtst UCONFIG_NO=\"-D%s=1\" check' % uconfig_no)
         test_results[uconfig_no]['hdr_test'] = (exit_code == 0)
-        test_results[uconfig_no]['h_log_tail'] = \
-            '\n'.join(run_log.decode('utf-8').splitlines()[-50:])
 
     all_hdr_test_flags = BuildAllFlags(uconfig_no_list)
     print('Running header tests with all flags set to 1.')
-    run_log, exit_code = RunCmd(
+    _, exit_code = RunCmd(
         'PATH=/tmp/icu_cnfg/bin:$PATH make -C test/hdrtst UCONFIG_NO=\"%s\" check' % all_hdr_test_flags)
     test_results['all_flags']['hdr_test'] = (exit_code == 0)
-    test_results['all_flags']['h_log_tail'] = \
-        '\n'.join(run_log.decode('utf-8').splitlines()[-50:])
 
     return test_results
 
@@ -212,29 +200,16 @@ def main():
         if run_unit and (uconfig_no not in excluded_unit_test_flags):
             if not test_results[uconfig_no]['unit_test']:
                 outcome = 1
-                print('\n============================================================\n')
                 print('%s: unit tests fail' % uconfig_no)
-                print('Last 50 lines from log file:\n%s\n' % test_results[uconfig_no]['u_log_tail'])
-                print('\n============================================================\n')
         if run_hdr and not test_results[uconfig_no]['hdr_test']:
             outcome = 1
-            print('\n============================================================\n')
             print('%s: header tests fails' % uconfig_no)
-            print('Last 50 lines from log file:\n%s\n' % test_results[uconfig_no]['h_log_tail'])
-            print('\n============================================================\n')
-
     if run_unit and not test_results['all_flags']['unit_test']:
         outcome = 1
-        print('\n============================================================\n')
         print('all flags to 1: unit tests fail!')
-        print('Last 50 lines from log file:\n%s\n' % test_results['all_flags']['u_log_tail'])
-        print('\n============================================================\n')
     if run_hdr and not test_results['all_flags']['hdr_test']:
         outcome = 1
-        print('\n============================================================\n')
         print('all flags to 1: header tests fail!')
-        print('Last 50 lines from log file: %s\n ' % test_results['all_flags']['h_log_tail'])
-        print('\n============================================================\n')
     if outcome == 0:
         print('Tests pass for all uconfig variations!')
     sys.exit(outcome)

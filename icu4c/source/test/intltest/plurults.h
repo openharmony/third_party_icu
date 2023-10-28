@@ -14,7 +14,6 @@
 #if !UCONFIG_NO_FORMATTING
 
 #include "intltest.h"
-#include "number_decimalquantity.h"
 #include "unicode/localpointer.h"
 #include "unicode/plurrule.h"
 
@@ -22,7 +21,7 @@
  * Test basic functionality of various API functions
  **/
 class PluralRulesTest : public IntlTest {
-    void runIndexedTest( int32_t index, UBool exec, const char* &name, char* par = NULL ) override;
+    void runIndexedTest( int32_t index, UBool exec, const char* &name, char* par = NULL );
 
 private:
     /**
@@ -31,16 +30,12 @@ private:
     void testAPI();
     void testGetUniqueKeywordValue();
     void testGetSamples();
-    void testGetDecimalQuantitySamples();
-    void testGetOrAddSamplesFromString();
-    void testGetOrAddSamplesFromStringCompactNotation();
+    void testGetFixedDecimalSamples();
     void testSamplesWithExponent();
     void testSamplesWithCompactNotation();
     void testWithin();
     void testGetAllKeywordValues();
     void testCompactDecimalPluralKeyword();
-    void testDoubleValue();
-    void testLongValue();
     void testScientificPluralKeyword();
     void testOrdinal();
     void testSelect();
@@ -58,7 +53,7 @@ private:
                          const LocalPointer<PluralRules> &test,
                          UnicodeString keyword,
                          UnicodeString samplesString,
-                         ::icu::number::impl::DecimalQuantity firstInRange);
+                         FixedDecimal firstInRange);
     UnicodeString getPluralKeyword(const LocalPointer<PluralRules> &rules,
                                    Locale locale, double number, const char16_t* skeleton);
     void checkSelect(const LocalPointer<PluralRules> &rules, UErrorCode &status, 

@@ -1049,22 +1049,6 @@ public final class UScript {
     /** @stable ICU 66 */
     public static final int YEZIDI = 192; /* Yezi */
 
-    /** @stable ICU 70 */
-    public static final int CYPRO_MINOAN = 193; /* Cpmn */
-    /** @stable ICU 70 */
-    public static final int OLD_UYGHUR = 194; /* Ougr */
-    /** @stable ICU 70 */
-    public static final int TANGSA = 195; /* Tnsa */
-    /** @stable ICU 70 */
-    public static final int TOTO = 196; /* Toto */
-    /** @stable ICU 70 */
-    public static final int VITHKUQI = 197; /* Vith */
-
-    /** @stable ICU 72 */
-    public static final int KAWI = 198; /* Kawi */
-    /** @stable ICU 72 */
-    public static final int NAG_MUNDARI = 199; /* Nagm */
-
     /**
      * One more than the highest normal UScript code.
      * The highest value is available via UCharacter.getIntPropertyMaxValue(UProperty.SCRIPT).
@@ -1072,7 +1056,7 @@ public final class UScript {
      * @deprecated ICU 58 The numeric value may change over time, see ICU ticket #12420.
      */
     @Deprecated
-    public static final int CODE_LIMIT   = 200;
+    public static final int CODE_LIMIT   = 193;
 
     private static int[] getCodesFromLocale(ULocale locale) {
         // Multi-script languages, equivalent to the LocaleScript data
@@ -1547,13 +1531,6 @@ public final class UScript {
             0x1190C | EXCLUSION,  // Diak
             0x18C65 | EXCLUSION | LB_LETTERS,  // Kits
             0x10E88 | EXCLUSION | RTL,  // Yezi
-            0x12FE5 | EXCLUSION,  // Cpmn
-            0x10F7C | EXCLUSION | RTL,  // Ougr
-            0x16ABC | EXCLUSION,  // Tnsa
-            0x1E290 | EXCLUSION,  // Toto
-            0x10582 | EXCLUSION | CASED,  // Vith
-            0x11F1B | EXCLUSION | LB_LETTERS,  // Kawi
-            0x1E4E6 | EXCLUSION,  // Nagm
             // End copy-paste from parsescriptmetadata.py
         };
 

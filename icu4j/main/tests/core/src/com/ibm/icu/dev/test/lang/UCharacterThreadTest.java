@@ -28,7 +28,7 @@ public class UCharacterThreadTest extends TestFmwk {
   // constructor -----------------------------------------------------------
 
     /**
-    * Private constructor to prevent initialization
+    * Private constructor to prevent initialisation
     */
     public UCharacterThreadTest()
     {

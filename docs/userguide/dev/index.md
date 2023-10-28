@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Contributors
-nav_order: 1800
+title: Misc
+nav_order: 15
 has_children: true
 ---
 <!--
@@ -9,9 +9,9 @@ has_children: true
 License & terms of use: http://www.unicode.org/copyright.html
 -->
 
-# Contributors
+# Development
 
-Top-level page for topics for contributors to ICU. See the subpages listed below for
+Top-level page for topics for ICU developers. See the subpages listed below for
 details:
 
 [Coding Guidelines](codingguidelines.md)

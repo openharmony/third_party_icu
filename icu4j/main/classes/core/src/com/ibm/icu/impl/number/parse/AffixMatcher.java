@@ -108,11 +108,9 @@ public class AffixMatcher implements NumberParseMatcher {
             }
 
             // Generate Prefix
-            // TODO: Handle approximately sign?
             PatternStringUtils.patternInfoToStringBuilder(patternInfo,
                     true,
                     type,
-                    false,
                     StandardPlural.OTHER,
                     false,
                     sb);
@@ -120,11 +118,9 @@ public class AffixMatcher implements NumberParseMatcher {
                     .fromAffixPattern(sb.toString(), factory, parseFlags);
 
             // Generate Suffix
-            // TODO: Handle approximately sign?
             PatternStringUtils.patternInfoToStringBuilder(patternInfo,
                     false,
                     type,
-                    false,
                     StandardPlural.OTHER,
                     false,
                     sb);

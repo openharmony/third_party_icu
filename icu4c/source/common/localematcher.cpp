@@ -60,7 +60,7 @@ LocaleMatcher::Result::Result(LocaleMatcher::Result &&src) U_NOEXCEPT :
     if (desiredIsOwned) {
         src.desiredLocale = nullptr;
         src.desiredIndex = -1;
-        src.desiredIsOwned = false;
+        src.desiredIsOwned = FALSE;
     }
 }
 
@@ -82,7 +82,7 @@ LocaleMatcher::Result &LocaleMatcher::Result::operator=(LocaleMatcher::Result &&
     if (desiredIsOwned) {
         src.desiredLocale = nullptr;
         src.desiredIndex = -1;
-        src.desiredIsOwned = false;
+        src.desiredIsOwned = FALSE;
     }
     return *this;
 }
@@ -168,9 +168,12 @@ void LocaleMatcher::Builder::clearSupportedLocales() {
 bool LocaleMatcher::Builder::ensureSupportedLocaleVector() {
     if (U_FAILURE(errorCode_)) { return false; }
     if (supportedLocales_ != nullptr) { return true; }
-    LocalPointer<UVector> lpSupportedLocales(new UVector(uprv_deleteUObject, nullptr, errorCode_), errorCode_);
+    supportedLocales_ = new UVector(uprv_deleteUObject, nullptr, errorCode_);
     if (U_FAILURE(errorCode_)) { return false; }
-    supportedLocales_ = lpSupportedLocales.orphan();
+    if (supportedLocales_ == nullptr) {
+        errorCode_ = U_MEMORY_ALLOCATION_ERROR;
+        return false;
+    }
     return true;
 }
 
@@ -184,8 +187,9 @@ LocaleMatcher::Builder &LocaleMatcher::Builder::setSupportedLocalesFromListStrin
     for (int32_t i = 0; i < length; ++i) {
         Locale *locale = list.orphanLocaleAt(i);
         if (locale == nullptr) { continue; }
-        supportedLocales_->adoptElement(locale, errorCode_);
+        supportedLocales_->addElement(locale, errorCode_);
         if (U_FAILURE(errorCode_)) {
+            delete locale;
             break;
         }
     }
@@ -193,21 +197,35 @@ LocaleMatcher::Builder &LocaleMatcher::Builder::setSupportedLocalesFromListStrin
 }
 
 LocaleMatcher::Builder &LocaleMatcher::Builder::setSupportedLocales(Locale::Iterator &locales) {
-    if (ensureSupportedLocaleVector()) {
-        clearSupportedLocales();
-        while (locales.hasNext() && U_SUCCESS(errorCode_)) {
-            const Locale &locale = locales.next();
-            LocalPointer<Locale> clone (locale.clone(), errorCode_);
-            supportedLocales_->adoptElement(clone.orphan(), errorCode_);
+    if (U_FAILURE(errorCode_)) { return *this; }
+    clearSupportedLocales();
+    if (!ensureSupportedLocaleVector()) { return *this; }
+    while (locales.hasNext()) {
+        const Locale &locale = locales.next();
+        Locale *clone = locale.clone();
+        if (clone == nullptr) {
+            errorCode_ = U_MEMORY_ALLOCATION_ERROR;
+            break;
+        }
+        supportedLocales_->addElement(clone, errorCode_);
+        if (U_FAILURE(errorCode_)) {
+            delete clone;
+            break;
         }
     }
     return *this;
 }
 
 LocaleMatcher::Builder &LocaleMatcher::Builder::addSupportedLocale(const Locale &locale) {
-    if (ensureSupportedLocaleVector()) {
-        LocalPointer<Locale> clone(locale.clone(), errorCode_);
-        supportedLocales_->adoptElement(clone.orphan(), errorCode_);
+    if (!ensureSupportedLocaleVector()) { return *this; }
+    Locale *clone = locale.clone();
+    if (clone == nullptr) {
+        errorCode_ = U_MEMORY_ALLOCATION_ERROR;
+        return *this;
+    }
+    supportedLocales_->addElement(clone, errorCode_);
+    if (U_FAILURE(errorCode_)) {
+        delete clone;
     }
     return *this;
 }
@@ -287,10 +305,10 @@ LocaleMatcher::Builder &LocaleMatcher::Builder::internalSetThresholdDistance(int
 #endif
 
 UBool LocaleMatcher::Builder::copyErrorTo(UErrorCode &outErrorCode) const {
-    if (U_FAILURE(outErrorCode)) { return true; }
-    if (U_SUCCESS(errorCode_)) { return false; }
+    if (U_FAILURE(outErrorCode)) { return TRUE; }
+    if (U_SUCCESS(errorCode_)) { return FALSE; }
     outErrorCode = errorCode_;
-    return true;
+    return TRUE;
 }
 
 LocaleMatcher LocaleMatcher::Builder::build(UErrorCode &errorCode) const {
@@ -632,30 +650,30 @@ const Locale *LocaleMatcher::getBestMatchForListString(
 LocaleMatcher::Result LocaleMatcher::getBestMatchResult(
         const Locale &desiredLocale, UErrorCode &errorCode) const {
     if (U_FAILURE(errorCode)) {
-        return Result(nullptr, defaultLocale, -1, -1, false);
+        return Result(nullptr, defaultLocale, -1, -1, FALSE);
     }
     int32_t suppIndex = getBestSuppIndex(
         getMaximalLsrOrUnd(likelySubtags, desiredLocale, errorCode),
         nullptr, errorCode);
     if (U_FAILURE(errorCode) || suppIndex < 0) {
-        return Result(nullptr, defaultLocale, -1, -1, false);
+        return Result(nullptr, defaultLocale, -1, -1, FALSE);
     } else {
-        return Result(&desiredLocale, supportedLocales[suppIndex], 0, suppIndex, false);
+        return Result(&desiredLocale, supportedLocales[suppIndex], 0, suppIndex, FALSE);
     }
 }
 
 LocaleMatcher::Result LocaleMatcher::getBestMatchResult(
         Locale::Iterator &desiredLocales, UErrorCode &errorCode) const {
     if (U_FAILURE(errorCode) || !desiredLocales.hasNext()) {
-        return Result(nullptr, defaultLocale, -1, -1, false);
+        return Result(nullptr, defaultLocale, -1, -1, FALSE);
     }
     LocaleLsrIterator lsrIter(likelySubtags, desiredLocales, ULOCMATCH_TEMPORARY_LOCALES);
     int32_t suppIndex = getBestSuppIndex(lsrIter.next(errorCode), &lsrIter, errorCode);
     if (U_FAILURE(errorCode) || suppIndex < 0) {
-        return Result(nullptr, defaultLocale, -1, -1, false);
+        return Result(nullptr, defaultLocale, -1, -1, FALSE);
     } else {
         return Result(lsrIter.orphanRemembered(), supportedLocales[suppIndex],
-                      lsrIter.getBestDesiredIndex(), suppIndex, true);
+                      lsrIter.getBestDesiredIndex(), suppIndex, TRUE);
     }
 }
 

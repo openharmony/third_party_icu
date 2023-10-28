@@ -85,7 +85,7 @@ so{
         CN{"Shiinaha"}
         CO{"Koloombiya"}
         CP{"Jasiiradda Kilibarton"}
-        CR{"Costa Rica"}
+        CR{"Kosta Riika"}
         CU{"Kuuba"}
         CV{"Jasiiradda Kayb Faarde"}
         CW{"Kurakaaw"}
@@ -160,7 +160,7 @@ so{
         KH{"Kamboodiya"}
         KI{"Kiribati"}
         KM{"Komooros"}
-        KN{"St. Kitts iyo Nevis"}
+        KN{"St. Kitts & Nefis"}
         KP{"Kuuriyada Waqooyi"}
         KR{"Kuuriyada Koonfureed"}
         KW{"Kuwayt"}
@@ -220,7 +220,7 @@ so{
         PH{"Filibiin"}
         PK{"Bakistaan"}
         PL{"Booland"}
-        PM{"St. Pierre iyo Miquelon"}
+        PM{"Saint Pierre and Miquelon"}
         PN{"Bitkairn"}
         PR{"Bueerto Riiko"}
         PS{"Dhulka Falastiiniyiinta daanta galbeed iyo marinka qasa"}
@@ -288,7 +288,7 @@ so{
         VU{"Fanuaatu"}
         WF{"Walis & Futuna"}
         WS{"Samoowa"}
-        XA{"Lahjadaha Pseudo"}
+        XA{"Shigshiga"}
         XB{"Pseudo-Bidi"}
         XK{"Koosofo"}
         YE{"Yaman"}
@@ -296,7 +296,7 @@ so{
         ZA{"Koonfur Afrika"}
         ZM{"Saambiya"}
         ZW{"Simbaabwe"}
-        ZZ{"Gobol aan la aqoonin"}
+        ZZ{"Gobol aan la aqoonin amase aan saxnayn"}
     }
     Countries%short{
         GB{"UK"}
@@ -305,10 +305,9 @@ so{
     Countries%variant{
         CD{"Jamhuuriyadda Dimuqaadiga Kongo"}
         CG{"Jamhuuriyadda Kongo"}
-        CI{"Côte d’Ivoire"}
+        CI{"Aayforikoost"}
         CZ{"Jamhuuriyadda Jek"}
         FK{"Jasiiradaha Fookland"}
-        NZ{"Aotearoa New Zealand"}
         SZ{"Iswaasilaan"}
         TL{"Bariga Timor"}
     }

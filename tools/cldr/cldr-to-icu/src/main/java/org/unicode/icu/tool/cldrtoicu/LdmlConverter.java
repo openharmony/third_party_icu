@@ -99,7 +99,6 @@ public final class LdmlConverter {
             "languageMatching",
             "measurementData",
             "parentLocales",
-            "personNamesDefaults",
             "subdivisionContainment",
             "territoryContainment",
             "territoryInfo",
@@ -296,7 +295,7 @@ public final class LdmlConverter {
                 continue;
             }
             // TODO: Remove the following skip when ICU-20997 is fixed
-            if (id.contains("VALENCIA") || id.contains("TARASK")) {
+            if (id.contains("VALENCIA")) {
                 System.out.println("(skipping " + id + " until ICU-20997 is fixed)");
                 continue;
             }
@@ -663,8 +662,6 @@ public final class LdmlConverter {
             .put("boundaries", BRKITR)
             .put("dictionaries", BRKITR)
             .put("exceptions", BRKITR)
-            .put("extensions", BRKITR)
-            .put("lstm", BRKITR)
             // COLL
             .put("collations", COLL)
             .put("depends", COLL)

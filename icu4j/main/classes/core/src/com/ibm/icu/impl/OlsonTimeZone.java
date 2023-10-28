@@ -305,9 +305,9 @@ public class OlsonTimeZone extends BasicTimeZone {
     public boolean useDaylightTime() {
         // If DST was observed in 1942 (for example) but has never been
         // observed from 1943 to the present, most clients will expect
-        // this method to return false.  This method determines whether
+        // this method to return FALSE.  This method determines whether
         // DST is in use in the current year (at any point in the year)
-        // and returns true if so.
+        // and returns TRUE if so.
         long current = System.currentTimeMillis();
 
         if (finalZone != null && current >= finalStartMillis) {
@@ -320,7 +320,7 @@ public class OlsonTimeZone extends BasicTimeZone {
         long start = Grego.fieldsToDay(fields[0], 0, 1) * SECONDS_PER_DAY;
         long limit = Grego.fieldsToDay(fields[0] + 1, 0, 1) * SECONDS_PER_DAY;
 
-        // Return true if DST is observed at any time during the current
+        // Return TRUE if DST is observed at any time during the current
         // year.
         for (int i = 0; i < transitionCount; ++i) {
             if (transitionTimes64[i] >= limit) {
@@ -349,7 +349,7 @@ public class OlsonTimeZone extends BasicTimeZone {
             }
         }
 
-        // Return true if DST is observed at any future time
+        // Return TRUE if DST is observed at any future time
         long currentSec = Grego.floorDivide(current, Grego.MILLIS_PER_SECOND);
         int trsIdx = transitionCount - 1;
         if (dstOffsetAt(trsIdx) != 0) {

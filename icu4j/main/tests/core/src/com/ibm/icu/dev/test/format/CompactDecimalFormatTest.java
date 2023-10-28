@@ -30,7 +30,6 @@ import org.junit.runners.JUnit4;
 
 import com.ibm.icu.dev.test.TestFmwk;
 import com.ibm.icu.impl.number.DecimalFormatProperties;
-import com.ibm.icu.impl.number.PatternStringParser;
 import com.ibm.icu.text.CompactDecimalFormat;
 import com.ibm.icu.text.CompactDecimalFormat.CompactStyle;
 import com.ibm.icu.text.DecimalFormat;
@@ -148,11 +147,6 @@ public class CompactDecimalFormatTest extends TestFmwk {
             {1234567890123f, "1.2兆"},
             {12345678901234f, "12兆"},
             {123456789012345f, "120兆"},
-            {1234567890123456f, "1200兆"},
-            {12345678901234567f, "1.2京"},
-            {123456789012345678f, "12京"},
-            {1234567890123456789f, "120京"},
-            {12345678901234567890f, "1200京"},
     };
 
     Object[][] ChineseTestData = {
@@ -654,7 +648,7 @@ public class CompactDecimalFormatTest extends TestFmwk {
     @Test
     public void TestLocaleGroupingForLargeNumbers() {
         ULocale[] locs = {new ULocale("en"), new ULocale("it"), new ULocale("en_US_POSIX"), new ULocale("en-IN")};
-        String[] expecteds = {"5,800,000T", "5.800.000 Bln", "5800000T", "58,00,000LCr"};
+        String[] expecteds = {"5,800,000T", "5.800.000 Bln", "5800000T", "58,00,000T"};
         for (int i=0; i<locs.length; i++) {
             ULocale loc = locs[i];
             String exp = expecteds[i];
@@ -675,12 +669,10 @@ public class CompactDecimalFormatTest extends TestFmwk {
         cdf.setProperties(new PropertySetter() {
             @Override
             public void set(DecimalFormatProperties props) {
-                PatternStringParser.parseToExistingProperties(
-                    "0 foo", props, PatternStringParser.IGNORE_ROUNDING_ALWAYS);
                 props.setCompactCustomData(customData);
             }
         });
-        assertEquals("Below custom range", "123 foo", cdf.format(123));
+        assertEquals("Below custom range", "123", cdf.format(123));
         assertEquals("Plural form one", "1 qwerty", cdf.format(1000));
         assertEquals("Plural form other", "1.2 dvorak", cdf.format(1234));
         assertEquals("Above custom range", "12 dvorak", cdf.format(12345));

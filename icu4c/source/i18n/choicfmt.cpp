@@ -132,11 +132,11 @@ ChoiceFormat::ChoiceFormat(const UnicodeString& newPattern,
 }
 // -------------------------------------
 
-bool
+UBool
 ChoiceFormat::operator==(const Format& that) const
 {
-    if (this == &that) return true;
-    if (!NumberFormat::operator==(that)) return false;
+    if (this == &that) return TRUE;
+    if (!NumberFormat::operator==(that)) return FALSE;
     ChoiceFormat& thatAlias = (ChoiceFormat&)that;
     return msgPattern == thatAlias.msgPattern;
 }
