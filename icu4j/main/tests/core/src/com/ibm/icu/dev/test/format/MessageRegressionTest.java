@@ -90,7 +90,7 @@ public class MessageRegressionTest extends TestFmwk {
 
              tempBuffer = messageFormatter.format(paramArray);
              if (!tempBuffer.equals("Message without param"))
-                errln("Formatted with arguments > substitution failed. result = " + tempBuffer.toString());
+                errln("Formatted with arguments > subsitution failed. result = " + tempBuffer.toString());
              logln("Formatted with extra params : " + tempBuffer);
             //This statement gives an exception while formatting...
             //If we use pattern[1] for the message with param,
@@ -212,7 +212,7 @@ public class MessageRegressionTest extends TestFmwk {
         ChoiceFormat cf = new ChoiceFormat(limits, formats);
         try {
             log("Compares to null is always false, returned : ");
-            logln(cf.equals(null) ? "true" : "false");
+            logln(cf.equals(null) ? "TRUE" : "FALSE");
         } catch (Exception foo) {
             errln("ChoiceFormat.equals(null) throws exception.");
         }

@@ -25,7 +25,7 @@ public class UCharacterCategoryTest extends TestFmwk
     // constructor -----------------------------------------------------------
 
     /**
-    * Private constructor to prevent initialization
+    * Private constructor to prevent initialisation
     */
     public UCharacterCategoryTest()
     {

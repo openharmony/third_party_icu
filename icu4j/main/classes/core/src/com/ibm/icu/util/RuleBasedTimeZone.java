@@ -118,7 +118,7 @@ public class RuleBasedTimeZone extends BasicTimeZone {
 
     /**
      * {@inheritDoc}
-     * @stable ICU 69
+     * @draft ICU 69
      */
     @Override
     public void getOffsetFromLocal(long date,

@@ -133,7 +133,7 @@ void mixedMeasuresToMicros(const MaybeStackVector<Measure> &measures, DecimalQua
 
         default:
             U_ASSERT(0 == "Found a Measure Number which is neither a double nor an int");
-            UPRV_UNREACHABLE_EXIT;
+            UPRV_UNREACHABLE;
             break;
         }
 
@@ -153,7 +153,7 @@ UsagePrefsHandler::UsagePrefsHandler(const Locale &locale,
                                      const StringPiece usage,
                                      const MicroPropsGenerator *parent,
                                      UErrorCode &status)
-    : fUnitsRouter(inputUnit, locale, usage, status),
+    : fUnitsRouter(inputUnit, StringPiece(locale.getCountry()), usage, status),
       fParent(parent) {
 }
 

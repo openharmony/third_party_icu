@@ -64,7 +64,7 @@ U_CDECL_END
 U_NAMESPACE_BEGIN
 
 static Locale   *gLocaleCache = NULL;
-static UInitOnce gLocaleCacheInitOnce {};
+static UInitOnce gLocaleCacheInitOnce = U_INITONCE_INITIALIZER;
 
 // gDefaultLocaleMutex protects all access to gDefaultLocalesHashT and gDefaultLocale.
 static UMutex gDefaultLocaleMutex;
@@ -128,7 +128,7 @@ static UBool U_CALLCONV locale_cleanup(void)
         gDefaultLocalesHashT = NULL;
     }
     gDefaultLocale = NULL;
-    return true;
+    return TRUE;
 }
 
 
@@ -171,7 +171,7 @@ Locale *locale_set_default_internal(const char *id, UErrorCode& status) {
     // Synchronize this entire function.
     Mutex lock(&gDefaultLocaleMutex);
 
-    UBool canonicalize = false;
+    UBool canonicalize = FALSE;
 
     // If given a NULL string for the locale id, grab the default
     //   name from the system.
@@ -179,7 +179,7 @@ Locale *locale_set_default_internal(const char *id, UErrorCode& status) {
     //    the current ICU default locale.)
     if (id == NULL) {
         id = uprv_getDefaultLocaleID();   // This function not thread safe? TODO: verify.
-        canonicalize = true; // always canonicalize host ID
+        canonicalize = TRUE; // always canonicalize host ID
     }
 
     CharString localeNameBuf;
@@ -212,7 +212,7 @@ Locale *locale_set_default_internal(const char *id, UErrorCode& status) {
             status = U_MEMORY_ALLOCATION_ERROR;
             return gDefaultLocale;
         }
-        newDefault->init(localeNameBuf.data(), false);
+        newDefault->init(localeNameBuf.data(), FALSE);
         uhash_put(gDefaultLocalesHashT, (char*) newDefault->getName(), newDefault, &status);
         if (U_FAILURE(status)) {
             return gDefaultLocale;
@@ -269,7 +269,7 @@ Locale::~Locale()
 Locale::Locale()
     : UObject(), fullName(fullNameBuffer), baseName(NULL)
 {
-    init(NULL, false);
+    init(NULL, FALSE);
 }
 
 /*
@@ -292,17 +292,18 @@ Locale::Locale( const   char * newLanguage,
 {
     if( (newLanguage==NULL) && (newCountry == NULL) && (newVariant == NULL) )
     {
-        init(NULL, false); /* shortcut */
+        init(NULL, FALSE); /* shortcut */
     }
     else
     {
         UErrorCode status = U_ZERO_ERROR;
+        int32_t size = 0;
         int32_t lsize = 0;
         int32_t csize = 0;
         int32_t vsize = 0;
         int32_t ksize = 0;
 
-        // Check the sizes of the input strings.
+        // Calculate the size of the resulting string.
 
         // Language
         if ( newLanguage != NULL )
@@ -312,6 +313,7 @@ Locale::Locale( const   char * newLanguage,
                 setToBogus();
                 return;
             }
+            size = lsize;
         }
 
         CharString togo(newLanguage, lsize, status); // start with newLanguage
@@ -324,6 +326,7 @@ Locale::Locale( const   char * newLanguage,
                 setToBogus();
                 return;
             }
+            size += csize;
         }
 
         // _Variant
@@ -347,6 +350,21 @@ Locale::Locale( const   char * newLanguage,
             }
         }
 
+        if( vsize > 0 )
+        {
+            size += vsize;
+        }
+
+        // Separator rules:
+        if ( vsize > 0 )
+        {
+            size += 2;  // at least: __v
+        }
+        else if ( csize > 0 )
+        {
+            size += 1;  // at least: _v
+        }
+
         if ( newKeywords != NULL)
         {
             ksize = (int32_t)uprv_strlen(newKeywords);
@@ -354,9 +372,11 @@ Locale::Locale( const   char * newLanguage,
               setToBogus();
               return;
             }
+            size += ksize + 1;
         }
 
-        // We've checked the input sizes, now build up the full locale string..
+        //  NOW we have the full locale string..
+        // Now, copy it back.
 
         // newLanguage is already copied
 
@@ -397,7 +417,7 @@ Locale::Locale( const   char * newLanguage,
         }
         // Parse it, because for example 'language' might really be a complete
         // string.
-        init(togo.data(), false);
+        init(togo.data(), FALSE);
     }
 }
 
@@ -449,18 +469,14 @@ Locale& Locale::operator=(Locale&& other) U_NOEXCEPT {
     if ((baseName != fullName) && (baseName != fullNameBuffer)) uprv_free(baseName);
     if (fullName != fullNameBuffer) uprv_free(fullName);
 
-    if (other.fullName == other.fullNameBuffer || other.baseName == other.fullNameBuffer) {
-        uprv_strcpy(fullNameBuffer, other.fullNameBuffer);
-    }
     if (other.fullName == other.fullNameBuffer) {
+        uprv_strcpy(fullNameBuffer, other.fullNameBuffer);
         fullName = fullNameBuffer;
     } else {
         fullName = other.fullName;
     }
 
-    if (other.baseName == other.fullNameBuffer) {
-        baseName = fullNameBuffer;
-    } else if (other.baseName == other.fullName) {
+    if (other.baseName == other.fullName) {
         baseName = fullName;
     } else {
         baseName = other.baseName;
@@ -483,7 +499,7 @@ Locale::clone() const {
     return new Locale(*this);
 }
 
-bool
+UBool
 Locale::operator==( const   Locale& other) const
 {
     return (uprv_strcmp(other.fullName, fullName) == 0);
@@ -491,7 +507,7 @@ Locale::operator==( const   Locale& other) const
 
 namespace {
 
-UInitOnce gKnownCanonicalizedInitOnce {};
+UInitOnce gKnownCanonicalizedInitOnce = U_INITONCE_INITIALIZER;
 UHashtable *gKnownCanonicalized = nullptr;
 
 static const char* const KNOWN_CANONICALIZED[] = {
@@ -521,7 +537,7 @@ static const char* const KNOWN_CANONICALIZED[] = {
 static UBool U_CALLCONV cleanupKnownCanonicalized() {
     gKnownCanonicalizedInitOnce.reset();
     if (gKnownCanonicalized) { uhash_close(gKnownCanonicalized); }
-    return true;
+    return TRUE;
 }
 
 static void U_CALLCONV loadKnownCanonicalized(UErrorCode &status) {
@@ -682,14 +698,14 @@ private:
 
 
 const AliasData* AliasData::gSingleton = nullptr;
-UInitOnce AliasData::gInitOnce {};
+UInitOnce AliasData::gInitOnce = U_INITONCE_INITIALIZER;
 
 UBool U_CALLCONV
 AliasData::cleanup()
 {
     gInitOnce.reset();
     delete gSingleton;
-    return true;
+    return TRUE;
 }
 
 void
@@ -716,19 +732,20 @@ AliasDataBuilder::readAlias(
         status = U_MEMORY_ALLOCATION_ERROR;
         return;
     }
-    for (int i = 0; U_SUCCESS(status) && ures_hasNext(alias); i++) {
+    int i = 0;
+    while (ures_hasNext(alias)) {
         LocalUResourceBundlePointer res(
             ures_getNextResource(alias, nullptr, &status));
         const char* aliasFrom = ures_getKey(res.getAlias());
         UnicodeString aliasTo =
             ures_getUnicodeStringByKey(res.getAlias(), "replacement", &status);
-        if (U_FAILURE(status)) return;
 
         checkType(aliasFrom);
         checkReplacement(aliasTo);
 
         rawTypes[i] = aliasFrom;
         rawIndexes[i] = strings->add(aliasTo, status);
+        i++;
     }
 }
 
@@ -751,7 +768,7 @@ AliasDataBuilder::readLanguageAlias(
         alias, strings, types, replacementIndexes, length,
 #if U_DEBUG
         [](const char* type) {
-            // Assert the aliasFrom only contains the following possibilities
+            // Assert the aliasFrom only contains the following possibilties
             // language_REGION_variant
             // language_REGION
             // language_variant
@@ -1203,11 +1220,14 @@ AliasReplacer::parseLanguageReplacement(
     // We have multiple field so we have to allocate and parse
     CharString* str = new CharString(
         replacement, (int32_t)uprv_strlen(replacement), status);
-    LocalPointer<CharString> lpStr(str, status);
-    toBeFreed.adoptElement(lpStr.orphan(), status);
     if (U_FAILURE(status)) {
         return;
     }
+    if (str == nullptr) {
+        status = U_MEMORY_ALLOCATION_ERROR;
+        return;
+    }
+    toBeFreed.addElement(str, status);
     char* data = str->data();
     replacedLanguage = (const char*) data;
     char* endOfField = uprv_strchr(data, '_');
@@ -1347,7 +1367,7 @@ AliasReplacer::replaceLanguage(
         }
         if (replacedExtensions != nullptr) {
             // DO NOTHING
-            // UTS35 does not specify what should we do if we have extensions in the
+            // UTS35 does not specifiy what should we do if we have extensions in the
             // replacement. Currently we know only the following 4 "BCP47 LegacyRules" have
             // extensions in them languageAlias:
             //  i_default => en_x_i_default
@@ -1416,9 +1436,12 @@ AliasReplacer::replaceTerritory(UVector& toBeFreed, UErrorCode& status)
                                (int32_t)(firstSpace - replacement), status), status);
         }
         if (U_FAILURE(status)) { return false; }
+        if (item.isNull()) {
+            status = U_MEMORY_ALLOCATION_ERROR;
+            return false;
+        }
         replacedRegion = item->data();
-        toBeFreed.adoptElement(item.orphan(), status);
-        if (U_FAILURE(status)) { return false; }
+        toBeFreed.addElement(item.orphan(), status);
     }
     U_ASSERT(!same(region, replacedRegion));
     region = replacedRegion;
@@ -1544,7 +1567,6 @@ AliasReplacer::replaceTransformedExtensions(
             const char* tvalue = uprv_strchr(tkey, '-');
             if (tvalue == nullptr) {
                 status = U_ILLEGAL_ARGUMENT_ERROR;
-                return false;
             }
             const char* nextTKey = ultag_getTKeyStart(tvalue);
             if (nextTKey != nullptr) {
@@ -1556,8 +1578,13 @@ AliasReplacer::replaceTransformedExtensions(
             }
             tkey = nextTKey;
         } while (tkey != nullptr);
-        tfields.sort([](UElement e1, UElement e2) -> int32_t {
-            return uprv_strcmp((const char*)e1.pointer, (const char*)e2.pointer);
+        tfields.sort([](UElement e1, UElement e2) -> int8_t {
+            // uprv_strcmp return int and in some platform, such as arm64-v8a,
+            // it may return positive values > 127 which cause the casted value
+            // of int8_t negative.
+            int res = uprv_strcmp(
+                (const char*)e1.pointer, (const char*)e2.pointer);
+            return (res == 0) ? 0 : ((res > 0) ? 1 : -1);
         }, status);
         for (int32_t i = 0; i < tfields.size(); i++) {
              if (output.length() > 0) {
@@ -1565,11 +1592,8 @@ AliasReplacer::replaceTransformedExtensions(
              }
              const char* tfield = (const char*) tfields.elementAt(i);
              const char* tvalue = uprv_strchr(tfield, '-');
-             if (tvalue == nullptr) {
-                 status = U_ILLEGAL_ARGUMENT_ERROR;
-                 return false;
-             }
              // Split the "tkey-tvalue" pair string so that we can canonicalize the tvalue.
+             U_ASSERT(tvalue != nullptr);
              *((char*)tvalue++) = '\0'; // NULL terminate tkey
              output.append(tfield, status).append('-', status);
              const char* bcpTValue = ulocimp_toBcpType(tfield, tvalue, nullptr, nullptr);
@@ -1599,8 +1623,13 @@ AliasReplacer::outputToString(
         if (!notEmpty(script) && !notEmpty(region)) {
           out.append(SEP_CHAR, status);
         }
-        variants.sort([](UElement e1, UElement e2) -> int32_t {
-            return uprv_strcmp((const char*)e1.pointer, (const char*)e2.pointer);
+        variants.sort([](UElement e1, UElement e2) -> int8_t {
+            // uprv_strcmp return int and in some platform, such as arm64-v8a,
+            // it may return positive values > 127 which cause the casted value
+            // of int8_t negative.
+            int res = uprv_strcmp(
+                (const char*)e1.pointer, (const char*)e2.pointer);
+            return (res == 0) ? 0 : ((res > 0) ? 1 : -1);
         }, status);
         int32_t variantsStart = out.length();
         for (int32_t i = 0; i < variants.size(); i++) {
@@ -1660,8 +1689,13 @@ AliasReplacer::replace(const Locale& locale, CharString& out, UErrorCode& status
     if (U_FAILURE(status)) { return false; }
 
     // Sort the variants
-    variants.sort([](UElement e1, UElement e2) -> int32_t {
-        return uprv_strcmp((const char*)e1.pointer, (const char*)e2.pointer);
+    variants.sort([](UElement e1, UElement e2) -> int8_t {
+        // uprv_strcmp return int and in some platform, such as arm64-v8a,
+        // it may return positive values > 127 which cause the casted value
+        // of int8_t negative.
+        int res = uprv_strcmp(
+            (const char*)e1.pointer, (const char*)e2.pointer);
+        return (res == 0) ? 0 : ((res > 0) ? 1 : -1);
     }, status);
 
     // A changed count to assert when loop too many times.
@@ -1703,7 +1737,7 @@ AliasReplacer::replace(const Locale& locale, CharString& out, UErrorCode& status
     }  // while(1)
 
     if (U_FAILURE(status)) { return false; }
-    // Nothing changed and we know the order of the variants are not change
+    // Nothing changed and we know the order of the vaiants are not change
     // because we have no variant or only one.
     const char* extensionsStr = locale_getKeywordsStart(locale.getName());
     if (changed == 0 && variants.size() <= 1 && extensionsStr == nullptr) {
@@ -1817,7 +1851,7 @@ ulocimp_isCanonicalizedLocaleForTest(const char* localeName)
 /*This function initializes a Locale from a C locale ID*/
 Locale& Locale::init(const char* localeID, UBool canonicalize)
 {
-    fIsBogus = false;
+    fIsBogus = FALSE;
     /* Free our current storage */
     if ((baseName != fullName) && (baseName != fullNameBuffer)) {
         uprv_free(baseName);
@@ -2021,7 +2055,7 @@ Locale::setToBogus() {
     *language = 0;
     *script = 0;
     *country = 0;
-    fIsBogus = true;
+    fIsBogus = TRUE;
     variantBegin = 0;
 }
 
@@ -2071,7 +2105,7 @@ Locale::addLikelySubtags(UErrorCode& status) {
         return;
     }
 
-    init(maximizedLocaleID.data(), /*canonicalize=*/false);
+    init(maximizedLocaleID.data(), /*canonicalize=*/FALSE);
     if (isBogus()) {
         status = U_ILLEGAL_ARGUMENT_ERROR;
     }
@@ -2093,7 +2127,7 @@ Locale::minimizeSubtags(UErrorCode& status) {
         return;
     }
 
-    init(minimizedLocaleID.data(), /*canonicalize=*/false);
+    init(minimizedLocaleID.data(), /*canonicalize=*/FALSE);
     if (isBogus()) {
         status = U_ILLEGAL_ARGUMENT_ERROR;
     }
@@ -2112,7 +2146,7 @@ Locale::canonicalize(UErrorCode& status) {
     if (U_FAILURE(status)) {
         return;
     }
-    init(uncanonicalized.data(), /*canonicalize=*/true);
+    init(uncanonicalized.data(), /*canonicalize=*/TRUE);
     if (isBogus()) {
         status = U_ILLEGAL_ARGUMENT_ERROR;
     }
@@ -2159,7 +2193,7 @@ Locale::forLanguageTag(StringPiece tag, UErrorCode& status)
         return result;
     }
 
-    result.init(localeID.data(), /*canonicalize=*/false);
+    result.init(localeID.data(), /*canonicalize=*/FALSE);
     if (result.isBogus()) {
         status = U_ILLEGAL_ARGUMENT_ERROR;
     }
@@ -2178,7 +2212,7 @@ Locale::toLanguageTag(ByteSink& sink, UErrorCode& status) const
         return;
     }
 
-    ulocimp_toLanguageTag(fullName, sink, /*strict=*/false, &status);
+    ulocimp_toLanguageTag(fullName, sink, /*strict=*/FALSE, &status);
 }
 
 Locale U_EXPORT2
@@ -2186,7 +2220,7 @@ Locale::createFromName (const char *name)
 {
     if (name) {
         Locale l("");
-        l.init(name, false);
+        l.init(name, FALSE);
         return l;
     }
     else {
@@ -2197,7 +2231,7 @@ Locale::createFromName (const char *name)
 Locale U_EXPORT2
 Locale::createCanonical(const char* name) {
     Locale loc("");
-    loc.init(name, true);
+    loc.init(name, TRUE);
     return loc;
 }
 
@@ -2240,7 +2274,7 @@ const char* const* U_EXPORT2 Locale::getISOLanguages()
 // Set the locale's data based on a posix id.
 void Locale::setFromPOSIXID(const char *posixID)
 {
-    init(posixID, true);
+    init(posixID, TRUE);
 }
 
 const Locale & U_EXPORT2
@@ -2411,7 +2445,7 @@ private:
 
 public:
     static UClassID U_EXPORT2 getStaticClassID(void) { return (UClassID)&fgClassID; }
-    virtual UClassID getDynamicClassID(void) const override { return getStaticClassID(); }
+    virtual UClassID getDynamicClassID(void) const { return getStaticClassID(); }
 public:
     KeywordEnumeration(const char *keys, int32_t keywordLen, int32_t currentIndex, UErrorCode &status)
         : keywords((char *)&fgClassID), current((char *)&fgClassID), length(0) {
@@ -2435,13 +2469,13 @@ public:
 
     virtual ~KeywordEnumeration();
 
-    virtual StringEnumeration * clone() const override
+    virtual StringEnumeration * clone() const
     {
         UErrorCode status = U_ZERO_ERROR;
         return new KeywordEnumeration(keywords, length, (int32_t)(current - keywords), status);
     }
 
-    virtual int32_t count(UErrorCode &/*status*/) const override {
+    virtual int32_t count(UErrorCode &/*status*/) const {
         char *kw = keywords;
         int32_t result = 0;
         while(*kw) {
@@ -2451,7 +2485,7 @@ public:
         return result;
     }
 
-    virtual const char* next(int32_t* resultLength, UErrorCode& status) override {
+    virtual const char* next(int32_t* resultLength, UErrorCode& status) {
         const char* result;
         int32_t len;
         if(U_SUCCESS(status) && *current != 0) {
@@ -2470,13 +2504,13 @@ public:
         return result;
     }
 
-    virtual const UnicodeString* snext(UErrorCode& status) override {
+    virtual const UnicodeString* snext(UErrorCode& status) {
         int32_t resultLength = 0;
         const char *s = next(&resultLength, status);
         return setChars(s, resultLength, status);
     }
 
-    virtual void reset(UErrorCode& /*status*/) override {
+    virtual void reset(UErrorCode& /*status*/) {
         current = keywords;
     }
 };
@@ -2494,18 +2528,18 @@ public:
     using KeywordEnumeration::KeywordEnumeration;
     virtual ~UnicodeKeywordEnumeration();
 
-    virtual const char* next(int32_t* resultLength, UErrorCode& status) override {
+    virtual const char* next(int32_t* resultLength, UErrorCode& status) {
         const char* legacy_key = KeywordEnumeration::next(nullptr, status);
-        while (U_SUCCESS(status) && legacy_key != nullptr) {
+        if (U_SUCCESS(status) && legacy_key != nullptr) {
             const char* key = uloc_toUnicodeLocaleKey(legacy_key);
-            if (key != nullptr) {
+            if (key == nullptr) {
+                status = U_ILLEGAL_ARGUMENT_ERROR;
+            } else {
                 if (resultLength != nullptr) {
                     *resultLength = static_cast<int32_t>(uprv_strlen(key));
                 }
                 return key;
             }
-            // Not a Unicode keyword, could be a t, x or other, continue to look at the next one.
-            legacy_key = KeywordEnumeration::next(nullptr, status);
         }
         if (resultLength != nullptr) *resultLength = 0;
         return nullptr;
@@ -2530,7 +2564,7 @@ Locale::createKeywords(UErrorCode &status) const
         if(assignment > variantStart) {
             CharString keywords;
             CharStringByteSink sink(&keywords);
-            ulocimp_getKeywords(variantStart+1, '@', sink, false, &status);
+            ulocimp_getKeywords(variantStart+1, '@', sink, FALSE, &status);
             if (U_SUCCESS(status) && !keywords.isEmpty()) {
                 result = new KeywordEnumeration(keywords.data(), keywords.length(), 0, status);
                 if (!result) {
@@ -2559,7 +2593,7 @@ Locale::createUnicodeKeywords(UErrorCode &status) const
         if(assignment > variantStart) {
             CharString keywords;
             CharStringByteSink sink(&keywords);
-            ulocimp_getKeywords(variantStart+1, '@', sink, false, &status);
+            ulocimp_getKeywords(variantStart+1, '@', sink, FALSE, &status);
             if (U_SUCCESS(status) && !keywords.isEmpty()) {
                 result = new UnicodeKeywordEnumeration(keywords.data(), keywords.length(), 0, status);
                 if (!result) {
@@ -2662,9 +2696,6 @@ Locale::setKeywordValue(const char* keywordName, const char* keywordValue, UErro
         if (fullName != fullNameBuffer) {
             // if full Name is already on the heap, need to free it.
             uprv_free(fullName);
-            if (baseName == fullName) {
-                baseName = newFullName; // baseName should not point to freed memory.
-            }
         }
         fullName = newFullName;
         status = U_ZERO_ERROR;

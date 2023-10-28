@@ -96,7 +96,7 @@ public abstract class BasicTimeZone extends TimeZone {
      * @param ignoreDstAmount When true, any transitions with only daylight saving amount
      * changes will be ignored, except either of them is zero. For example, a transition
      * from rawoffset 3:00/dstsavings 1:00 to rawoffset 2:00/dstsavings 2:00 is excluded
-     * from the comparison, but a transition from rawoffset 2:00/dstsavings 1:00 to
+     * from the comparison, but a transtion from rawoffset 2:00/dstsavings 1:00 to
      * rawoffset 3:00/dstsavings 0:00 is included.
      *
      * @return true if the other time zone has the equivalent transitions in the
@@ -540,19 +540,19 @@ public abstract class BasicTimeZone extends TimeZone {
      * to specify how to interpret an input time when it does not exist, or when it is ambiguous,
      * around a time zone transition.
      *
-     * @stable ICU 69
+     * @draft ICU 69
      */
     public static enum LocalOption {
         /**
          * An input time is always interpreted as local time before
          * a time zone transition.
-         * @stable ICU 69
+         * @draft ICU 69
          */
         FORMER(0x04),
         /**
          * An input time is always interpreted as local time after
          * a time zone transition.
-         * @stable ICU 69
+         * @draft ICU 69
          */
         LATTER(0x0C),
         /**
@@ -561,7 +561,7 @@ public abstract class BasicTimeZone extends TimeZone {
          * sides of a time zone transition are standard time,
          * or daylight saving time, the local time before the
          * transition is used.
-         * @stable ICU 69
+         * @draft ICU 69
          */
         STANDARD_FORMER(0x05),
         /**
@@ -570,7 +570,7 @@ public abstract class BasicTimeZone extends TimeZone {
          * sides of a time zone transition are standard time,
          * or daylight saving time, the local time after the
          * transition is used.
-         * @stable ICU 69
+         * @draft ICU 69
          */
         STANDARD_LATTER(0x0D),
         /**
@@ -579,7 +579,7 @@ public abstract class BasicTimeZone extends TimeZone {
          * sides of a time zone transition are standard time,
          * or daylight saving time, the local time before the
          * transition is used.
-         * @stable ICU 69
+         * @draft ICU 69
          */
         DAYLIGHT_FORMER(0x07),
         /**
@@ -588,7 +588,7 @@ public abstract class BasicTimeZone extends TimeZone {
          * sides of a time zone transition are standard time,
          * or daylight saving time, the local time after the
          * transition is used.
-         * @stable ICU 69
+         * @draft ICU 69
          */
         DAYLIGHT_LATTER(0x0F);
 
@@ -662,7 +662,7 @@ public abstract class BasicTimeZone extends TimeZone {
 
     /**
      * {@icu} Returns time zone offsets from local wall time.
-     * @stable ICU 69
+     * @draft ICU 69
      */
     public void getOffsetFromLocal(long date,
             LocalOption nonExistingTimeOpt, LocalOption duplicatedTimeOpt, int[] offsets) {

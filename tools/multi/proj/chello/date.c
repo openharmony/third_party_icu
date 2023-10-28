@@ -16,9 +16,8 @@
 *******************************************************************************
 */
 
-#include <stdbool.h>
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 
 #include "unicode/utypes.h"
@@ -183,7 +182,7 @@ date(const UChar *tz,
   fmt = udat_open(style, style, 0, tz, -1,NULL,0, status);
   if ( format != NULL ) {
      u_charsToUChars(format,uFormat,strlen(format)),
-     udat_applyPattern(fmt,false,uFormat,strlen(format));
+     udat_applyPattern(fmt,FALSE,uFormat,strlen(format));
   }
   len = udat_format(fmt, ucal_getNow(), 0, len, 0, status);
   if(*status == U_BUFFER_OVERFLOW_ERROR) {

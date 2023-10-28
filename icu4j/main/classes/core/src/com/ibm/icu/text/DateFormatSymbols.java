@@ -516,13 +516,6 @@ public class DateFormatSymbols implements Serializable, Cloneable {
     String shortQuarters[] = null;
 
     /**
-     * Narrow quarter names. For example: "1", "2", "3", "4". An array
-     * of 4 strings indexed by the month divided by 3.
-     * @serial
-     */
-    String narrowQuarters[] = null;
-
-    /**
      * Full quarter names. For example: "1st Quarter", "2nd Quarter", "3rd Quarter",
      * "4th Quarter". An array of 4 strings, indexed by the month divided by 3.
      * @serial
@@ -535,13 +528,6 @@ public class DateFormatSymbols implements Serializable, Cloneable {
      * @serial
      */
     String standaloneShortQuarters[] = null;
-
-    /**
-     * Standalone narrow quarter names. For example: "1", "2", "3", "4". An array
-     * of 4 strings indexed by the month divided by 3.
-     * @serial
-     */
-    String standaloneNarrowQuarters[] = null;
 
     /**
      * Standalone full quarter names. For example: "1st Quarter", "2nd Quarter", "3rd Quarter",
@@ -1056,7 +1042,7 @@ public class DateFormatSymbols implements Serializable, Cloneable {
      * {@icu} Returns quarter strings. For example: "1st Quarter", "2nd Quarter", etc.
      * @param context    The quarter context, FORMAT or STANDALONE.
      * @param width      The width or the returned quarter string,
-     *                   WIDE, NARROW, or ABBREVIATED.
+     *                   either WIDE or ABBREVIATED. There are no NARROW quarters.
      * @return the quarter strings.
      * @stable ICU 3.6
      */
@@ -1073,7 +1059,7 @@ public class DateFormatSymbols implements Serializable, Cloneable {
                     returnValue = shortQuarters;
                     break;
                  case NARROW :
-                     returnValue = narrowQuarters;
+                     returnValue = null;
                      break;
               }
               break;
@@ -1088,7 +1074,7 @@ public class DateFormatSymbols implements Serializable, Cloneable {
                     returnValue = standaloneShortQuarters;
                     break;
                  case NARROW:
-                     returnValue = standaloneNarrowQuarters;
+                     returnValue = null;
                      break;
               }
               break;
@@ -1104,7 +1090,7 @@ public class DateFormatSymbols implements Serializable, Cloneable {
      * @param newQuarters the new quarter strings.
      * @param context    The formatting context, FORMAT or STANDALONE.
      * @param width      The width of the quarter string,
-     *                   WIDE, NARROW, or ABBREVIATED.
+     *                   either WIDE or ABBREVIATED. There are no NARROW quarters.
      * @stable ICU 3.8
      */
     public void setQuarters(String[] newQuarters, int context, int width) {
@@ -1118,7 +1104,7 @@ public class DateFormatSymbols implements Serializable, Cloneable {
                     shortQuarters = duplicate(newQuarters);
                     break;
                  case NARROW :
-                    narrowQuarters = duplicate(newQuarters);
+                    //narrowQuarters = duplicate(newQuarters);
                     break;
                  default : // HANDLE SHORT, etc.
                     break;
@@ -1133,7 +1119,7 @@ public class DateFormatSymbols implements Serializable, Cloneable {
                     standaloneShortQuarters = duplicate(newQuarters);
                     break;
                  case NARROW :
-                    standaloneNarrowQuarters = duplicate(newQuarters);
+                    //standaloneNarrowQuarters = duplicate(newQuarters);
                     break;
                  default : // HANDLE SHORT, etc.
                     break;
@@ -1594,10 +1580,8 @@ public class DateFormatSymbols implements Serializable, Cloneable {
         this.ampmsNarrow = dfs.ampmsNarrow;
         this.timeSeparator = dfs.timeSeparator;
         this.shortQuarters = dfs.shortQuarters;
-        this.narrowQuarters = dfs.narrowQuarters;
         this.quarters = dfs.quarters;
         this.standaloneShortQuarters = dfs.standaloneShortQuarters;
-        this.standaloneNarrowQuarters = dfs.standaloneNarrowQuarters;
         this.standaloneQuarters = dfs.standaloneQuarters;
         this.leapMonthPatterns = dfs.leapMonthPatterns;
         this.shortYearNames = dfs.shortYearNames;
@@ -1998,11 +1982,9 @@ public class DateFormatSymbols implements Serializable, Cloneable {
 
         quarters = arrays.get("quarters/format/wide");
         shortQuarters = arrays.get("quarters/format/abbreviated");
-        narrowQuarters = arrays.get("quarters/format/narrow");
 
         standaloneQuarters = arrays.get("quarters/stand-alone/wide");
         standaloneShortQuarters = arrays.get("quarters/stand-alone/abbreviated");
-        standaloneNarrowQuarters = arrays.get("quarters/stand-alone/narrow");
 
         abbreviatedDayPeriods = loadDayPeriodStrings(maps.get("dayPeriod/format/abbreviated"));
         wideDayPeriods = loadDayPeriodStrings(maps.get("dayPeriod/format/wide"));

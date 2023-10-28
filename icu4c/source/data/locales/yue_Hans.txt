@@ -111,8 +111,6 @@ yue_Hans{
             }
             patterns{
                 accountingFormat{"¤#,##0.00;(¤#,##0.00)"}
-                accountingFormat%alphaNextToNumber{"¤ #,##0.00;(¤ #,##0.00)"}
-                accountingFormat%noCurrency{"#,##0.00;(#,##0.00)"}
                 currencyFormat{"¤#,##0.00"}
                 decimalFormat{"#,##0.###"}
                 percentFormat{"#,##0%"}
@@ -266,10 +264,10 @@ yue_Hans{
     calendar{
         buddhist{
             DateTimePatterns{
-                "zzzz HH:mm:ss",
-                "z HH:mm:ss",
-                "HH:mm:ss",
-                "HH:mm",
+                "zzzz ah:mm:ss",
+                "z ah:mm:ss",
+                "ah:mm:ss",
+                "ah:mm",
                 "Gy年M月d日EEEE",
                 "Gy年M月d日",
                 "Gy年M月d日",
@@ -279,16 +277,6 @@ yue_Hans{
                 "{1} {0}",
                 "{1} {0}",
                 "{1} {0}",
-            }
-            DateTimeSkeletons{
-                "HHmmsszzzz",
-                "HHmmssz",
-                "HHmmss",
-                "HHmm",
-                "GyMEEEEd",
-                "GyMd",
-                "GyMd",
-                "GyMd",
             }
             availableFormats{
                 Ed{"d日（E）"}
@@ -324,10 +312,10 @@ yue_Hans{
         }
         chinese{
             DateTimePatterns{
-                "zzzz HH:mm:ss",
-                "z HH:mm:ss",
-                "HH:mm:ss",
-                "HH:mm",
+                "zzzz ah:mm:ss",
+                "z ah:mm:ss",
+                "ah:mm:ss",
+                "ah:mm",
                 {
                     "rU年MMMdEEEE",
                     "d=hanidays",
@@ -346,25 +334,6 @@ yue_Hans{
                 "{1} {0}",
                 "{1} {0}",
                 "{1} {0}",
-            }
-            DateTimeSkeletons{
-                "HHmmsszzzz",
-                "HHmmssz",
-                "HHmmss",
-                "HHmm",
-                {
-                    "rMMMEEEEd",
-                    "d=hanidays",
-                }
-                {
-                    "rMMMd",
-                    "d=hanidays",
-                }
-                {
-                    "rMMMd",
-                    "d=hanidays",
-                }
-                "rMd",
             }
             availableFormats{
                 Ed{"d日E"}
@@ -829,10 +798,10 @@ yue_Hans{
         }
         dangi{
             DateTimePatterns{
-                "zzzz HH:mm:ss",
-                "z HH:mm:ss",
-                "HH:mm:ss",
-                "HH:mm",
+                "zzzz ah:mm:ss",
+                "z ah:mm:ss",
+                "ah:mm:ss",
+                "ah:mm",
                 "U年MMMd日EEEE",
                 "U年MMMd日",
                 "U年MMMd日",
@@ -842,16 +811,6 @@ yue_Hans{
                 "{1} {0}",
                 "{1} {0}",
                 "{1} {0}",
-            }
-            DateTimeSkeletons{
-                "HHmmsszzzz",
-                "HHmmssz",
-                "HHmmss",
-                "HHmm",
-                "UMMMEEEEd",
-                "UMMMd",
-                "UMMMd",
-                "UMd",
             }
             cyclicNameSets{
                 dayParts{
@@ -1148,10 +1107,10 @@ yue_Hans{
         }
         generic{
             DateTimePatterns{
-                "zzzz HH:mm:ss",
-                "z HH:mm:ss",
-                "HH:mm:ss",
-                "HH:mm",
+                "zzzz ah:mm:ss",
+                "z ah:mm:ss",
+                "ah:mm:ss",
+                "ah:mm",
                 "Gy年MM月d日EEEE",
                 "Gy年MM月d日",
                 "Gy年MM月d日",
@@ -1161,22 +1120,6 @@ yue_Hans{
                 "{1} {0}",
                 "{1} {0}",
                 "{1} {0}",
-            }
-            DateTimePatterns%atTime{
-                "{1} {0}",
-                "{1}{0}",
-                "{1}{0}",
-                "{1} {0}",
-            }
-            DateTimeSkeletons{
-                "HHmmsszzzz",
-                "HHmmssz",
-                "HHmmss",
-                "HHmm",
-                "GyMMEEEEd",
-                "GyMMd",
-                "GyMMd",
-                "GyMd",
             }
             availableFormats{
                 Bh{"Bh时"}
@@ -1380,10 +1323,10 @@ yue_Hans{
                 "下午",
             }
             DateTimePatterns{
-                "zzzz HH:mm:ss",
-                "z HH:mm:ss",
-                "HH:mm:ss",
-                "HH:mm",
+                "zzzz ah:mm:ss",
+                "z ah:mm:ss",
+                "ah:mm:ss",
+                "ah:mm",
                 "y年M月d日EEEE",
                 "y年M月d日",
                 "y年M月d日",
@@ -1393,22 +1336,6 @@ yue_Hans{
                 "{1} {0}",
                 "{1} {0}",
                 "{1} {0}",
-            }
-            DateTimePatterns%atTime{
-                "{1}{0}",
-                "{1}{0}",
-                "{1}{0}",
-                "{1} {0}",
-            }
-            DateTimeSkeletons{
-                "HHmmsszzzz",
-                "HHmmssz",
-                "HHmmss",
-                "HHmm",
-                "yMEEEEd",
-                "yMd",
-                "yMd",
-                "yMd",
             }
             appendItems{
                 Timezone{"{1}{0}"}
@@ -1917,10 +1844,10 @@ yue_Hans{
         }
         hebrew{
             DateTimePatterns{
-                "zzzz HH:mm:ss",
-                "z HH:mm:ss",
-                "HH:mm:ss",
-                "HH:mm",
+                "zzzz ah:mm:ss",
+                "z ah:mm:ss",
+                "ah:mm:ss",
+                "ah:mm",
                 "Gy年M月d日EEEE",
                 "Gy年M月d日",
                 "Gy年M月d日",
@@ -1930,16 +1857,6 @@ yue_Hans{
                 "{1} {0}",
                 "{1} {0}",
                 "{1} {0}",
-            }
-            DateTimeSkeletons{
-                "HHmmsszzzz",
-                "HHmmssz",
-                "HHmmss",
-                "HHmm",
-                "GyMEEEEd",
-                "GyMd",
-                "GyMd",
-                "GyMd",
             }
             eras{
                 abbreviated{
@@ -2148,10 +2065,10 @@ yue_Hans{
         }
         islamic{
             DateTimePatterns{
-                "zzzz HH:mm:ss",
-                "z HH:mm:ss",
-                "HH:mm:ss",
-                "HH:mm",
+                "zzzz ah:mm:ss",
+                "z ah:mm:ss",
+                "ah:mm:ss",
+                "ah:mm",
                 "Gy年M月d日EEEE",
                 "Gy年M月d日",
                 "Gy年M月d日",
@@ -2161,16 +2078,6 @@ yue_Hans{
                 "{1} {0}",
                 "{1} {0}",
                 "{1} {0}",
-            }
-            DateTimeSkeletons{
-                "HHmmsszzzz",
-                "HHmmssz",
-                "HHmmss",
-                "HHmm",
-                "GyMEEEEd",
-                "GyMd",
-                "GyMd",
-                "GyMd",
             }
             availableFormats{
                 Ed{"d日（E）"}
@@ -2296,10 +2203,10 @@ yue_Hans{
         }
         japanese{
             DateTimePatterns{
-                "zzzz HH:mm:ss",
-                "z HH:mm:ss",
-                "HH:mm:ss",
-                "HH:mm",
+                "zzzz ah:mm:ss",
+                "z ah:mm:ss",
+                "ah:mm:ss",
+                "ah:mm",
                 "Gy年M月d日EEEE",
                 "Gy年M月d日",
                 "Gy年M月d日",
@@ -2309,16 +2216,6 @@ yue_Hans{
                 "{1} {0}",
                 "{1} {0}",
                 "{1} {0}",
-            }
-            DateTimeSkeletons{
-                "HHmmsszzzz",
-                "HHmmssz",
-                "HHmmss",
-                "HHmm",
-                "GyMEEEEd",
-                "GyMd",
-                "GyMd",
-                "GyyMMdd",
             }
             availableFormats{
                 Ed{"d日E"}
@@ -2697,10 +2594,10 @@ yue_Hans{
         }
         roc{
             DateTimePatterns{
-                "zzzz HH:mm:ss",
-                "z HH:mm:ss",
-                "HH:mm:ss",
-                "HH:mm",
+                "zzzz ah:mm:ss",
+                "z ah:mm:ss",
+                "ah:mm:ss",
+                "ah:mm",
                 "Gy年M月d日EEEE",
                 "Gy年M月d日",
                 "Gy年M月d日",
@@ -2710,16 +2607,6 @@ yue_Hans{
                 "{1} {0}",
                 "{1} {0}",
                 "{1} {0}",
-            }
-            DateTimeSkeletons{
-                "HHmmsszzzz",
-                "HHmmssz",
-                "HHmmss",
-                "HHmm",
-                "GyMEEEEd",
-                "GyMd",
-                "GyMd",
-                "GyyMd",
             }
             availableFormats{
                 E{"ccc"}
@@ -3585,41 +3472,5 @@ yue_Hans{
         UK{"英制"}
         US{"美制"}
         metric{"公制"}
-    }
-    personNames{
-        initialPattern{
-            initial{"{0}"}
-        }
-        namePattern{
-            givenFirst-long-addressing-formal{"{surname}{prefix}"}
-            givenFirst-long-addressing-informal{"{given-informal}"}
-            givenFirst-medium-addressing-formal{"{surname}{prefix}"}
-            givenFirst-medium-addressing-informal{"{given-informal}"}
-            givenFirst-short-addressing-formal{"{surname}{prefix}"}
-            givenFirst-short-addressing-informal{"{given-informal}"}
-            sorting-long-referring-formal{"{surname}{given}{suffix} {given2}"}
-            sorting-long-referring-informal{"{surname}{given-informal}"}
-            sorting-medium-referring-formal{"{surname}{given}{suffix} {given2-initial}"}
-            sorting-medium-referring-informal{"{surname}{given-informal}"}
-            sorting-short-referring-formal{"{surname}{given} {given2-initial}"}
-            sorting-short-referring-informal{"{surname}{given-informal}"}
-            surnameFirst-long-addressing-formal{"{surname}{prefix}"}
-            surnameFirst-long-addressing-informal{"{given-informal}"}
-            surnameFirst-long-monogram-informal{"{surname-monogram-allCaps}{given-monogram-allCaps}"}
-            surnameFirst-long-referring-formal{"{surname}{given}{suffix} {given2}"}
-            surnameFirst-long-referring-informal{"{surname}{given-informal}"}
-            surnameFirst-medium-addressing-formal{"{surname}{prefix}"}
-            surnameFirst-medium-addressing-informal{"{given-informal}"}
-            surnameFirst-medium-monogram-formal{"{surname-monogram}"}
-            surnameFirst-medium-monogram-informal{"{given-informal-monogram}"}
-            surnameFirst-medium-referring-formal{"{surname}{given}{suffix} {given2-initial}"}
-            surnameFirst-medium-referring-informal{"{surname}{given-informal}"}
-            surnameFirst-short-addressing-formal{"{surname}{prefix}"}
-            surnameFirst-short-addressing-informal{"{given-informal}"}
-            surnameFirst-short-monogram-formal{"{surname-monogram-allCaps}"}
-            surnameFirst-short-monogram-informal{"{given-informal-monogram-allCaps}"}
-            surnameFirst-short-referring-formal{"{surname}{given} {given2-initial}"}
-            surnameFirst-short-referring-informal{"{surname}{given}"}
-        }
     }
 }

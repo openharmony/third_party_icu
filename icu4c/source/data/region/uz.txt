@@ -108,7 +108,7 @@ uz{
         ES{"Ispaniya"}
         ET{"Efiopiya"}
         EU{"Yevropa Ittifoqi"}
-        EZ{"Yevrozona"}
+        EZ{"yevrozona"}
         FI{"Finlandiya"}
         FJ{"Fiji"}
         FK{"Folklend orollari"}
@@ -312,7 +312,6 @@ uz{
         CI{"Fil suyagi qirg‘og‘i"}
         CZ{"Chexiya Respublikasi"}
         FK{"Folklend (Malvin) orollari"}
-        NZ{"Aotearoa Yangi Zelandiya"}
         TL{"Sharqiy Timor"}
     }
 }

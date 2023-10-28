@@ -37,8 +37,7 @@
 using namespace double_conversion;
 
 static Vector<const char> StringToVector(const char* str) {
-  int len = static_cast<int>(strlen(str));
-  return Vector<const char>(str, len);
+  return Vector<const char>(str, strlen(str));
 }
 
 
