@@ -59,7 +59,7 @@ public class TestInverse extends BidiFmwk {
         _testManyInverseBidi(bidi, Bidi.DIRECTION_LEFT_TO_RIGHT);
         _testManyInverseBidi(bidi, Bidi.DIRECTION_RIGHT_TO_LEFT);
 
-        logln("inverse Bidi: roundtrips: " + countRoundtrips +
+        logln("inverse Bidi: rountrips: " + countRoundtrips +
               "   non-roundtrips: " + countNonRoundtrips);
 
         _testWriteReverse();

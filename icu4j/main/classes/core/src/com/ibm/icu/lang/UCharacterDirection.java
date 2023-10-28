@@ -26,7 +26,7 @@ public final class UCharacterDirection implements ECharacterDirection {
     // private constructor =========================================
     ///CLOVER:OFF  
     /**
-     * Private constructor to prevent initialization
+     * Private constructor to prevent initialisation
      */
     private UCharacterDirection()
     {

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Conversion
-nav_order: 700
+nav_order: 4
 has_children: true
 ---
 <!--
@@ -122,7 +122,7 @@ Unicode.
     3.  ICU's conversion table repository contains hundreds of Unicode
         conversion tables from a number of common vendors and platforms as well
         as comparisons between these conversion tables:
-        <https://icu.unicode.org/charts/charset> .
+        <http://icu-project.org/charts/charset/> .
 
     4.  Do not trust codepage documentation that is not machine-readable, for
         example nice-looking charts: They are usually incomplete and out of
@@ -136,18 +136,18 @@ Unicode.
         together with a standard/platform name. This allows you to get different
         converters for the same ambiguous charset name (like "Shift-JIS"),
         depending on the standard or platform specified. See the
-        [convrtrs.txt](https://github.com/unicode-org/icu/blob/main/icu4c/source/data/mappings/convrtrs.txt)
+        [convrtrs.txt](https://github.com/unicode-org/icu/blob/master/icu4c/source/data/mappings/convrtrs.txt)
         alias table, the [Using Converters](converters.md) chapter and [API
         references](https://unicode-org.github.io/icu-docs/apidoc/released/icu4c/ucnv_8h.html) .
 
     7.  For data exchange (rather than pure display), turn off fallback
-        mappings: `ucnv_setFallback(cnv, false)`;
+        mappings: `ucnv_setFallback(cnv, FALSE)`;
 
     8.  For some text formats, especially XML and HTML, it is possible to set an
         "escape callback" function that turns unmappable Unicode code points
         into corresponding escape sequences, preventing data loss. See the API
         references and the [ucnv sample
-        code](https://github.com/unicode-org/icu/tree/main/icu4c/source/samples/ucnv/)
+        code](https://github.com/unicode-org/icu/tree/master/icu4c/source/samples/ucnv/)
         .
 
     9.  **Never modify a conversion table.** Instead, use existing ones that

@@ -25,7 +25,7 @@ import java.math.BigInteger;
  
 /* ICU is not endian portable, because ICU data generated on big endian machines can be
  * ported to big endian machines but not to little endian machines and vice versa. The 
- * conversion is not portable across platforms with different endianness. 
+ * conversion is not portable across platforms with different endianess. 
  */
  
 public class CalculateCRC32 {

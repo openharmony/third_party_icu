@@ -164,7 +164,7 @@ public class LocaleBuilderTest extends TestFmwk {
                         expected[1] = TESTCASE[tidx][i + 1];
                         break;
                     } else {
-                        // Unknown test method
+                        // Unknow test method
                         errln("Unknown test case method: There is an error in the test case data.");
                     }
 

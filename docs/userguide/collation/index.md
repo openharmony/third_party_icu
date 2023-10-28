@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Collation
-nav_order: 1200
+nav_order: 9
 has_children: true
 ---
 <!--

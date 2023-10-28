@@ -58,14 +58,23 @@ public class NumberFormatTest extends TestFmwk {
             if (!isIcuImpl) {
                 errln("FAIL: " + method[0] + " returned JDK NumberFormat for locale " + loc);
             }
-        } else if (isIcuImpl) {
-            logln("INFO: " + method[0] + " returned ICU NumberFormat for locale " + loc);
+        } else {
+            if (isIcuImpl) {
+                logln("INFO: " + method[0] + " returned ICU NumberFormat for locale " + loc);
+            }
             Locale iculoc = TestUtil.toICUExtendedLocale(loc);
             NumberFormat nfIcu = null;
             nfIcu = getJDKInstance(type, iculoc, null);
-            if (!nf.equals(nfIcu)) {
-                errln("FAIL: " + method[0] + " returned ICU NumberFormat for locale " + loc
-                        + ", but different from the one for locale " + iculoc);
+            if (isIcuImpl) {
+                if (!nf.equals(nfIcu)) {
+                    errln("FAIL: " + method[0] + " returned ICU NumberFormat for locale " + loc
+                            + ", but different from the one for locale " + iculoc);
+                }
+            } else {
+                if (!(nfIcu instanceof com.ibm.icu.impl.jdkadapter.DecimalFormatICU)
+                        && !(nfIcu instanceof com.ibm.icu.impl.jdkadapter.NumberFormatICU)) {
+                    errln("FAIL: " + method[0] + " returned JDK NumberFormat for locale " + iculoc);
+                }
             }
         }
     }

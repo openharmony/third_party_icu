@@ -259,7 +259,6 @@ public class IntlTestDateFormat extends TestFmwk {
                     new ULocale("fr_CA"),
                     new ULocale("zh_TW"),
                     new ULocale("ccp"),     // decimal digits are not in BMP
-                    new ULocale("cv"),      // parse issue, one month is prefix of another
             };
         } else {
             locales = DateFormat.getAvailableULocales();

@@ -88,13 +88,13 @@ public class UnicodeSetStringSpanTest extends TestFmwk {
 
         UnicodeSet set = new UnicodeSet(pattern);
         if (set.containsAll(string)) {
-            errln("FAIL: UnicodeSet(" + pattern + ").containsAll(" + string + ") should be false");
+            errln("FAIL: UnicodeSet(" + pattern + ").containsAll(" + string + ") should be FALSE");
         }
 
         // Remove trailing "aaaa".
         String string16 = string.substring(0, string.length() - 4);
         if (!set.containsAll(string16)) {
-            errln("FAIL: UnicodeSet(" + pattern + ").containsAll(" + string + "[:-4]) should be true");
+            errln("FAIL: UnicodeSet(" + pattern + ").containsAll(" + string + "[:-4]) should be TRUE");
         }
 
         String s16 = "byayaxya";

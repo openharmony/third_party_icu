@@ -22,7 +22,7 @@ class IntlTestRBNF : public IntlTest {
  public:
 
   // IntlTest override
-  virtual void runIndexedTest(int32_t index, UBool exec, const char* &name, char* par) override;
+  virtual void runIndexedTest(int32_t index, UBool exec, const char* &name, char* par);
 
 #if U_HAVE_RBNF
   /** 
@@ -154,7 +154,6 @@ class IntlTestRBNF : public IntlTest {
     void TestCompactDecimalFormatStyle();
     void TestParseFailure();
     void TestMinMaxIntegerDigitsIgnored();
-    void TestNumberingSystem();
 
 protected:
   virtual void doTest(RuleBasedNumberFormat* formatter, const char* const testData[][2], UBool testParsing);

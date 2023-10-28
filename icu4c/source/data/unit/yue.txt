@@ -133,10 +133,6 @@ yue{
             }
         }
         concentr{
-            item{
-                dnam{"項"}
-                other{"{0} 項"}
-            }
             karat{
                 dnam{"克拉"}
                 other{"{0} 克拉"}
@@ -282,11 +278,6 @@ yue{
                 dnam{"奈秒"}
                 other{"{0} 奈秒"}
             }
-            quarter{
-                dnam{"季"}
-                other{"{0} 季"}
-                per{"每季 {0}"}
-            }
             second{
                 dnam{"秒"}
                 other{"{0} 秒"}
@@ -360,10 +351,6 @@ yue{
             }
         }
         force{
-            kilowatt-hour-per-100-kilometer{
-                dnam{"千瓦時/每 100 公里"}
-                other{"{0} 千瓦時/每 100 公里"}
-            }
             newton{
                 dnam{"牛頓"}
                 other{"{0} 牛頓"}
@@ -565,6 +552,10 @@ yue{
                 other{"{0} 公斤"}
                 per{"每公斤 {0}"}
             }
+            metric-ton{
+                dnam{"公噸"}
+                other{"{0} 公噸"}
+            }
             microgram{
                 dnam{"微克"}
                 other{"{0} 微克"}
@@ -598,10 +589,6 @@ yue{
             ton{
                 dnam{"英噸"}
                 other{"{0} 英噸"}
-            }
-            tonne{
-                dnam{"公噸"}
-                other{"{0} 公噸"}
             }
         }
         power{
@@ -712,6 +699,10 @@ yue{
             newton-meter{
                 dnam{"牛頓米"}
                 other{"{0} 牛頓米"}
+            }
+            pound-force-foot{
+                dnam{"尺磅"}
+                other{"{0} 尺磅"}
             }
         }
         volume{
@@ -860,8 +851,54 @@ yue{
     }
     unitsNarrow{
         acceleration{
+            g-force{
+                other{"{0}G"}
+            }
             meter-per-square-second{
-                other{"每平方秒 {0} 米"}
+                other{"{0}m/s²"}
+            }
+        }
+        angle{
+            arc-minute{
+                other{"{0}角分"}
+            }
+            arc-second{
+                other{"{0}角秒"}
+            }
+            degree{
+                other{"{0}度"}
+            }
+            radian{
+                other{"{0}弧度"}
+            }
+        }
+        area{
+            acre{
+                other{"{0}英畝"}
+            }
+            hectare{
+                other{"{0}公頃"}
+            }
+            square-centimeter{
+                other{"{0}cm²"}
+            }
+            square-foot{
+                other{"{0}平方英尺"}
+            }
+            square-inch{
+                other{"{0}in²"}
+            }
+            square-kilometer{
+                other{"{0}km²"}
+            }
+            square-meter{
+                other{"{0}m²"}
+            }
+            square-mile{
+                other{"{0}平方英里"}
+            }
+            square-yard{
+                other{"{0}yd²"}
             }
         }
         compound{
@@ -910,6 +947,9 @@ yue{
             }
         }
         concentr{
+            karat{
+                other{"{0}kt"}
+            }
             percent{
                 dnam{"%"}
                 other{"{0}%"}
@@ -918,6 +958,13 @@ yue{
         consumption{
             liter-per-100-kilometer{
                 dnam{"公升/100 公里"}
+                other{"{0}L/100km"}
+            }
+            liter-per-kilometer{
+                other{"{0}L/km"}
+            }
+            mile-per-gallon{
+                other{"{0}mpg"}
             }
         }
         coordinate{
@@ -928,9 +975,35 @@ yue{
             west{"西經{0}"}
         }
         digital{
+            bit{
+                other{"{0}bit"}
+            }
             byte{
-                dnam{"B"}
-                other{"{0}B"}
+                other{"{0}byte"}
+            }
+            gigabit{
+                other{"{0}Gb"}
+            }
+            gigabyte{
+                other{"{0}GB"}
+            }
+            kilobit{
+                other{"{0}kb"}
+            }
+            kilobyte{
+                other{"{0}kB"}
+            }
+            megabit{
+                other{"{0}Mb"}
+            }
+            megabyte{
+                other{"{0}MB"}
+            }
+            terabit{
+                other{"{0}Tb"}
+            }
+            terabyte{
+                other{"{0}TB"}
             }
         }
         duration{
@@ -941,6 +1014,9 @@ yue{
             hour{
                 dnam{"小時"}
                 other{"{0} 小時"}
+            }
+            microsecond{
+                other{"{0}μs"}
             }
             millisecond{
                 dnam{"毫秒"}
@@ -954,10 +1030,8 @@ yue{
                 dnam{"月"}
                 other{"{0} 個月"}
             }
-            quarter{
-                dnam{"季"}
-                other{"{0} 季"}
-                per{"每季{0}"}
+            nanosecond{
+                other{"{0}ns"}
             }
             second{
                 dnam{"秒"}
@@ -972,76 +1046,206 @@ yue{
                 other{"{0} 年"}
             }
         }
-        graphics{
-            megapixel{
-                dnam{"MP"}
-                other{"{0}MP"}
+        electric{
+            ampere{
+                other{"{0}A"}
             }
-            pixel-per-centimeter{
-                dnam{"ppcm"}
-                other{"{0}ppcm"}
+            milliampere{
+                other{"{0}mA"}
+            }
+            ohm{
+                other{"{0}Ω"}
+            }
+            volt{
+                other{"{0}V"}
+            }
+        }
+        energy{
+            calorie{
+                other{"{0}卡"}
+            }
+            foodcalorie{
+                other{"{0}大卡"}
+            }
+            joule{
+                other{"{0}焦"}
+            }
+            kilocalorie{
+                other{"{0}千卡"}
+            }
+            kilojoule{
+                other{"{0}千焦耳"}
+            }
+            kilowatt-hour{
+                other{"{0}kWh"}
+            }
+        }
+        frequency{
+            gigahertz{
+                other{"{0}GHz"}
+            }
+            hertz{
+                other{"{0}Hz"}
+            }
+            kilohertz{
+                other{"{0}kHz"}
+            }
+            megahertz{
+                other{"{0}MHz"}
             }
         }
         length{
+            astronomical-unit{
+                other{"{0}au"}
+            }
             centimeter{
                 dnam{"厘米"}
                 other{"{0} 厘米"}
             }
+            decimeter{
+                other{"{0}dm"}
+            }
             fathom{
                 dnam{"英尋"}
+                other{"{0}fth"}
+            }
+            foot{
+                other{"{0}呎"}
             }
             furlong{
                 dnam{"化朗"}
+                other{"{0}化朗"}
             }
             inch{
-                per{"每英吋 {0}"}
+                other{"{0}吋"}
             }
             kilometer{
                 dnam{"公里"}
                 other{"{0} 公里"}
             }
+            light-year{
+                other{"{0}光年"}
+            }
             meter{
                 dnam{"米"}
                 other{"{0} 米"}
+            }
+            micrometer{
+                other{"{0}μm"}
+            }
+            mile{
+                other{"{0}英里"}
             }
             millimeter{
                 dnam{"毫米"}
                 other{"{0} 毫米"}
             }
+            nanometer{
+                other{"{0}nm"}
+            }
+            nautical-mile{
+                other{"{0}nmi"}
+            }
+            parsec{
+                other{"{0}pc"}
+            }
+            picometer{
+                other{"{0}皮米"}
+            }
+            yard{
+                other{"{0}碼"}
+            }
+        }
+        light{
+            lux{
+                other{"{0}lx"}
+            }
         }
         mass{
+            carat{
+                other{"{0}CD"}
+            }
             gram{
                 dnam{"克"}
-                per{"每克 {0}"}
+                other{"{0} 克"}
             }
             kilogram{
                 dnam{"公斤"}
-                per{"每公斤 {0}"}
+                other{"{0} 公斤"}
+            }
+            metric-ton{
+                other{"{0}t"}
+            }
+            microgram{
+                other{"{0}μg"}
+            }
+            milligram{
+                other{"{0}mg"}
             }
             ounce{
-                per{"每安士 {0}"}
+                other{"{0}盎司"}
+            }
+            ounce-troy{
+                other{"{0}oz-t"}
             }
             pound{
-                per{"每磅 {0}"}
+                other{"{0}磅"}
             }
             stone{
                 dnam{"英石"}
+                other{"{0}st"}
+            }
+            ton{
+                other{"{0}tn"}
+            }
+        }
+        power{
+            gigawatt{
+                other{"{0}GW"}
+            }
+            horsepower{
+                other{"{0}匹"}
+            }
+            kilowatt{
+                other{"{0}千瓦"}
+            }
+            megawatt{
+                other{"{0}MW"}
+            }
+            milliwatt{
+                other{"{0}mW"}
+            }
+            watt{
+                other{"{0}瓦特"}
             }
         }
         pressure{
+            hectopascal{
+                other{"{0}百帕"}
+            }
+            inch-ofhg{
+                other{"{0}″ Hg"}
+            }
+            millibar{
+                other{"{0}毫巴"}
+            }
+            millimeter-ofhg{
+                other{"{0}mmHg"}
+            }
             pound-force-per-square-inch{
-                other{"每平方吋 {0} 磅"}
+                other{"{0}psi"}
             }
         }
         speed{
             kilometer-per-hour{
-                other{"每小時 {0} 公里"}
+                dnam{"公里/小時"}
+                other{"{0}公里/小時"}
             }
             meter-per-second{
-                other{"每秒 {0} 米"}
+                other{"{0}m/s"}
             }
             mile-per-hour{
-                other{"每小時 {0} 英里"}
+                other{"{0}英里/小時"}
             }
         }
         temperature{
@@ -1049,13 +1253,82 @@ yue{
                 dnam{"°C"}
                 other{"{0}°C"}
             }
+            fahrenheit{
+                other{"{0}°F"}
+            }
+            kelvin{
+                dnam{"K"}
+                other{"{0}°K"}
+            }
         }
         volume{
-            jigger{
-                other{"量酒器{0}杯"}
+            acre-foot{
+                other{"{0}ac-ft"}
+            }
+            bushel{
+                dnam{"蒲式耳"}
+                other{"{0}bu"}
+            }
+            centiliter{
+                other{"{0}cL"}
+            }
+            cubic-centimeter{
+                other{"{0}cm³"}
+            }
+            cubic-foot{
+                other{"{0}ft³"}
+            }
+            cubic-inch{
+                other{"{0}in³"}
+            }
+            cubic-kilometer{
+                other{"{0}km³"}
+            }
+            cubic-meter{
+                other{"{0}m³"}
+            }
+            cubic-mile{
+                other{"{0}立方英里"}
+            }
+            cubic-yard{
+                other{"{0}yd³"}
+            }
+            cup{
+                other{"{0}c"}
+            }
+            deciliter{
+                other{"{0}dL"}
+            }
+            fluid-ounce{
+                other{"{0}fl-oz"}
+            }
+            gallon{
+                other{"{0}gal"}
+            }
+            hectoliter{
+                other{"{0}hL"}
             }
             liter{
                 dnam{"公升"}
+                other{"{0} 公升"}
+            }
+            megaliter{
+                other{"{0}ML"}
+            }
+            milliliter{
+                other{"{0}mL"}
+            }
+            pint{
+                other{"{0}pt"}
+            }
+            quart{
+                other{"{0}qt"}
+            }
+            tablespoon{
+                other{"{0}匙"}
+            }
+            teaspoon{
+                other{"{0}tsp"}
             }
         }
     }
@@ -1067,7 +1340,7 @@ yue{
             }
             meter-per-square-second{
                 dnam{"米/平方秒"}
-                other{"每平方秒 {0} 米"}
+                other{"每平方秒{0}米"}
             }
         }
         angle{
@@ -1185,10 +1458,6 @@ yue{
             }
         }
         concentr{
-            item{
-                dnam{"項"}
-                other{"{0} 項"}
-            }
             karat{
                 dnam{"克拉"}
                 other{"{0} 克拉"}
@@ -1334,11 +1603,6 @@ yue{
                 dnam{"奈秒"}
                 other{"{0} 奈秒"}
             }
-            quarter{
-                dnam{"季"}
-                other{"{0} 季"}
-                per{"每季{0}"}
-            }
             second{
                 dnam{"秒"}
                 other{"{0} 秒"}
@@ -1412,10 +1676,6 @@ yue{
             }
         }
         force{
-            kilowatt-hour-per-100-kilometer{
-                dnam{"千瓦時/每 100 公里"}
-                other{"{0} 千瓦時/每 100 公里"}
-            }
             newton{
                 dnam{"牛頓"}
                 other{"{0} 牛頓"}
@@ -1496,7 +1756,7 @@ yue{
                 other{"{0} 地球半徑"}
             }
             fathom{
-                dnam{"英尋"}
+                dnam{"fm"}
                 other{"{0} 英尋"}
             }
             foot{
@@ -1617,6 +1877,10 @@ yue{
                 other{"{0} 公斤"}
                 per{"每公斤{0}"}
             }
+            metric-ton{
+                dnam{"公噸"}
+                other{"{0} 公噸"}
+            }
             microgram{
                 dnam{"微克"}
                 other{"{0} 微克"}
@@ -1644,16 +1908,12 @@ yue{
                 other{"{0} 太陽質量"}
             }
             stone{
-                dnam{"英石"}
+                dnam{"st"}
                 other{"{0} 英石"}
             }
             ton{
                 dnam{"英噸"}
                 other{"{0} 英噸"}
-            }
-            tonne{
-                dnam{"公噸"}
-                other{"{0} 公噸"}
             }
         }
         power{

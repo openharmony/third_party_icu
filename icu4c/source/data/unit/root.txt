@@ -2,7 +2,7 @@
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 root{
-    Version{"42"}
+    Version{"39"}
     durationUnits{
         hm{"h:mm"}
         hms{"h:mm:ss"}
@@ -137,10 +137,6 @@ root{
             times{"{0}⋅{1}"}
         }
         concentr{
-            item{
-                dnam{"item"}
-                other{"{0} item"}
-            }
             karat{
                 dnam{"kt"}
                 other{"{0} kt"}
@@ -288,11 +284,6 @@ root{
                 dnam{"ns"}
                 other{"{0} ns"}
             }
-            quarter{
-                dnam{"qtr"}
-                other{"{0} q"}
-                per{"{0}/q"}
-            }
             second{
                 dnam{"sec"}
                 other{"{0} s"}
@@ -365,10 +356,6 @@ root{
             }
         }
         force{
-            kilowatt-hour-per-100-kilometer{
-                dnam{"kWh/100km"}
-                other{"{0} kWh/100km"}
-            }
             newton{
                 dnam{"N"}
                 other{"{0} N"}
@@ -561,6 +548,10 @@ root{
                 other{"{0} kg"}
                 per{"{0}/kg"}
             }
+            metric-ton{
+                dnam{"t"}
+                other{"{0} t"}
+            }
             microgram{
                 dnam{"μg"}
                 other{"{0} μg"}
@@ -594,10 +585,6 @@ root{
             ton{
                 dnam{"tn"}
                 other{"{0} tn"}
-            }
-            tonne{
-                dnam{"t"}
-                other{"{0} t"}
             }
         }
         power{

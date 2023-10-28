@@ -1292,6 +1292,7 @@ fi{
         PYG{"PYG"}
         RON{"RON"}
         RUB{"₽"}
+        RUR{"RUR"}
         RWF{"RWF"}
         SBD{"SBD"}
         SEK{"SEK"}

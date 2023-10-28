@@ -185,7 +185,7 @@ af{
         }
         EUR{
             "€",
-            "Euro",
+            "euro",
         }
         FJD{
             "FJD",
@@ -665,7 +665,7 @@ af{
         }
         XXX{
             "¤",
-            "Onbekende geldeenheid",
+            "onbekende geldeenheid",
         }
         YER{
             "YER",
@@ -785,6 +785,7 @@ af{
         ZMW{"ZK"}
     }
     Currencies%variant{
+        GEL{"₾"}
         RUB{"₽"}
         TRY{"TL"}
     }

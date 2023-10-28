@@ -25,7 +25,6 @@ void LocaleBuilderTest::runIndexedTest( int32_t index, UBool exec, const char* &
     TESTCASE_AUTO(TestAddUnicodeLocaleAttributeIllFormed);
     TESTCASE_AUTO(TestLocaleBuilder);
     TESTCASE_AUTO(TestLocaleBuilderBasic);
-    TESTCASE_AUTO(TestLocaleBuilderBasicWithExtensionsOnDefaultLocale);
     TESTCASE_AUTO(TestPosixCases);
     TESTCASE_AUTO(TestSetExtensionOthers);
     TESTCASE_AUTO(TestSetExtensionPU);
@@ -62,7 +61,7 @@ void LocaleBuilderTest::Verify(LocaleBuilder& bld, const char* expected, const c
         errln(msg, u_errorName(copyStatus));
     }
     if (!bld.copyErrorTo(errorStatus) || errorStatus != U_ILLEGAL_ARGUMENT_ERROR) {
-        errln("Should always get the previous error and return false");
+        errln("Should always get the previous error and return FALSE");
     }
     Locale loc = bld.build(status);
     if (U_FAILURE(status)) {
@@ -287,7 +286,7 @@ void LocaleBuilderTest::TestLocaleBuilder() {
                 }
                 break;
             } else {
-                // Unknown test method
+                // Unknow test method
                 errln("Unknown test case method: There is an error in the test case data.");
                 break;
             }
@@ -364,25 +363,6 @@ void LocaleBuilderTest::TestLocaleBuilderBasic() {
            "setRegion('') got Error: %s\n");
 }
 
-void LocaleBuilderTest::TestLocaleBuilderBasicWithExtensionsOnDefaultLocale() {
-    // Change the default locale to one with extension tags.
-    UErrorCode status = U_ZERO_ERROR;
-    Locale originalDefault;
-    Locale::setDefault(Locale::createFromName("en-US-u-hc-h12"), status);
-    if (U_FAILURE(status)) {
-        errln("ERROR: Could not change the default locale");
-        return;
-    }
-
-    // Invoke the basic test now that the default locale has been changed.
-    TestLocaleBuilderBasic();
-
-    Locale::setDefault(originalDefault, status);
-    if (U_FAILURE(status)) {
-        errln("ERROR: Could not restore the default locale");
-    }
-}
-
 void LocaleBuilderTest::TestSetLanguageWellFormed() {
     // http://www.unicode.org/reports/tr35/tr35.html#unicode_language_subtag
     // unicode_language_subtag = alpha{2,3} | alpha{5,8};
@@ -445,7 +425,7 @@ void LocaleBuilderTest::TestSetLanguageIllFormed() {
         "F",
         "2",
         "0",
-        "9",
+        "9"
         "{",
         ".",
         "[",
@@ -540,7 +520,7 @@ void LocaleBuilderTest::TestSetScriptIllFormed() {
         "F",
         "2",
         "0",
-        "9",
+        "9"
         "{",
         ".",
         "[",
@@ -639,7 +619,7 @@ void LocaleBuilderTest::TestSetRegionIllFormed() {
         "F",
         "2",
         "0",
-        "9",
+        "9"
         "{",
         ".",
         "[",
@@ -783,7 +763,7 @@ void LocaleBuilderTest::TestSetVariantIllFormed() {
         "F",
         "2",
         "0",
-        "9",
+        "9"
         "{",
         ".",
         "[",

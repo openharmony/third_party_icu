@@ -129,25 +129,17 @@ final class BreakIteratorFactory extends BreakIterator.BreakIteratorServiceShim 
         //  Get the binary rules.
         //
         ByteBuffer bytes = null;
-        String typeKeyExt = "";
+        String typeKeyExt = null;
         if (kind == BreakIterator.KIND_LINE) {
-            String keyValue = locale.getKeywordValue("lb");
-            if ( keyValue != null && (keyValue.equals("strict") || keyValue.equals("normal") || keyValue.equals("loose")) ) {
-                typeKeyExt = "_" + keyValue;
-            }
-            String language = locale.getLanguage();
-            if (language != null && language.equals("ja")) {
-                keyValue = locale.getKeywordValue("lw");
-                if (keyValue != null && keyValue.equals("phrase")) {
-                    typeKeyExt += "_" + keyValue;
-                }
+            String lbKeyValue = locale.getKeywordValue("lb");
+            if ( lbKeyValue != null && (lbKeyValue.equals("strict") || lbKeyValue.equals("normal") || lbKeyValue.equals("loose")) ) {
+                typeKeyExt = "_" + lbKeyValue;
             }
         }
 
-        String brkfname;
         try {
-            String         typeKey       = typeKeyExt.isEmpty() ? KIND_NAMES[kind] : KIND_NAMES[kind] + typeKeyExt;
-                           brkfname      = rb.getStringWithFallback("boundaries/" + typeKey);
+            String         typeKey       = (typeKeyExt == null)? KIND_NAMES[kind]: KIND_NAMES[kind] + typeKeyExt;
+            String         brkfname      = rb.getStringWithFallback("boundaries/" + typeKey);
             String         rulesFileName = ICUData.ICU_BRKITR_NAME+ '/' + brkfname;
                            bytes         = ICUBinary.getData(rulesFileName);
         }
@@ -159,8 +151,7 @@ final class BreakIteratorFactory extends BreakIterator.BreakIteratorServiceShim 
         // Create a normal RuleBasedBreakIterator.
         //
         try {
-            boolean isPhraseBreaking = (brkfname != null) && brkfname.contains("phrase");
-            iter = RuleBasedBreakIterator.getInstanceFromCompiledRules(bytes, isPhraseBreaking);
+            iter = RuleBasedBreakIterator.getInstanceFromCompiledRules(bytes);
         }
         catch (IOException e) {
             // Shouldn't be possible to get here.

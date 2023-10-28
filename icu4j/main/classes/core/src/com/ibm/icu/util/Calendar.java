@@ -1485,7 +1485,7 @@ public abstract class Calendar implements Serializable, Cloneable, Comparable<Ca
      */
     private transient int             nextStamp = MINIMUM_USER_STAMP;
 
-    /* Max value for stamp allowable before recalculation */
+    /* Max value for stamp allowable before recalcution */
     private static int STAMP_MAX = 10000;
 
     // the internal serial version which says which version was written
@@ -2786,7 +2786,7 @@ public abstract class Calendar implements Serializable, Cloneable, Comparable<Ca
      * Subclasses can override these two methods if their values differ from the defaults.
      * <p>
      * Subclasses that have fields for which the assumption of continuity breaks
-     * down must override <code>roll</code> to handle those fields specially.
+     * down must overide <code>roll</code> to handle those fields specially.
      * For example, in the Hebrew calendar the month "Adar I"
      * only occurs in leap years; in other years the calendar jumps from
      * Shevat (month #4) to Adar (month #6).  The
@@ -3165,7 +3165,7 @@ public abstract class Calendar implements Serializable, Cloneable, Comparable<Ca
      * perform the add.
      * <p>
      * Subclasses that have fields for which this assumption of continuity breaks
-     * down must override <code>add</code> to handle those fields specially.
+     * down must overide <code>add</code> to handle those fields specially.
      * For example, in the Hebrew calendar the month "Adar I"
      * only occurs in leap years; in other years the calendar jumps from
      * Shevat (month #4) to Adar (month #6).  The
@@ -3398,7 +3398,7 @@ public abstract class Calendar implements Serializable, Cloneable, Comparable<Ca
     }
 
     //-------------------------------------------------------------------------
-    // Interface for creating custom DateFormats for different types of Calendars
+    // Interface for creating custon DateFormats for different types of Calendars
     //-------------------------------------------------------------------------
 
     /**
@@ -3498,23 +3498,17 @@ public abstract class Calendar implements Serializable, Cloneable, Comparable<Ca
     // date format pattern cache
     private static final ICUCache<String, PatternData> PATTERN_CACHE =
             new SimpleCache<>();
-    // final fallback patterns (match current root)
+    // final fallback patterns
     private static final String[] DEFAULT_PATTERNS = {
         "HH:mm:ss z",
         "HH:mm:ss z",
         "HH:mm:ss",
         "HH:mm",
-        "y MMMM d, EEEE",
-        "y MMMM d",
-        "y MMM d",
-        "y-MM-dd",
+        "EEEE, yyyy MMMM dd",
+        "yyyy MMMM d",
+        "yyyy MMM d",
+        "yy/MM/dd",
         "{1} {0}",
-        "{1} {0}",
-        "{1} {0}",
-        "{1} {0}",
-        "{1} {0}"
-    };
-    private static final String[] DEFAULT_ATTIME_PATTERNS = {
         "{1} {0}",
         "{1} {0}",
         "{1} {0}",
@@ -3544,7 +3538,7 @@ public abstract class Calendar implements Serializable, Cloneable, Comparable<Ca
         String pattern = null;
         if ((timeStyle >= 0) && (dateStyle >= 0)) {
             pattern = SimpleFormatterImpl.formatRawPattern(
-                    patternData.getDateAtTimePattern(dateStyle), 2, 2,
+                    patternData.getDateTimePattern(dateStyle), 2, 2,
                     patternData.patterns[timeStyle],
                     patternData.patterns[dateStyle + 4]);
             // Might need to merge the overrides from the date and time into a single
@@ -3580,11 +3574,9 @@ public abstract class Calendar implements Serializable, Cloneable, Comparable<Ca
         // TODO make this even more object oriented
         private String[] patterns;
         private String[] overrides;
-        private String[] atTimePatterns;
-        public PatternData(String[] patterns, String[] overrides, String[] atTimePatterns) {
+        public PatternData(String[] patterns, String[] overrides) {
             this.patterns = patterns;
             this.overrides = overrides;
-            this.atTimePatterns = atTimePatterns;
         }
         private String getDateTimePattern(int dateStyle) {
             int glueIndex = 8;
@@ -3593,14 +3585,6 @@ public abstract class Calendar implements Serializable, Cloneable, Comparable<Ca
             }
             final String dateTimePattern = patterns[glueIndex];
             return dateTimePattern;
-        }
-        private String getDateAtTimePattern(int dateStyle) {
-            if (atTimePatterns != null && atTimePatterns.length >= 4) {
-                final String dateTimePattern = atTimePatterns[dateStyle];
-                return dateTimePattern;
-            } else {
-                return getDateTimePattern(dateStyle);
-            }
         }
         private static PatternData make(Calendar cal, ULocale loc) {
             // First, try to get a pattern from PATTERN_CACHE
@@ -3612,7 +3596,7 @@ public abstract class Calendar implements Serializable, Cloneable, Comparable<Ca
                 try {
                     patternData = getPatternData(loc, calType);
                 } catch (MissingResourceException e) {
-                    patternData = new PatternData(DEFAULT_PATTERNS, null, DEFAULT_ATTIME_PATTERNS);
+                    patternData = new PatternData(DEFAULT_PATTERNS, null);
                 }
                 PATTERN_CACHE.put(key, patternData);
             }
@@ -3682,26 +3666,7 @@ public abstract class Calendar implements Serializable, Cloneable, Comparable<Ca
                     break;
             }
         }
-
-        dtPatternsRb = rb.findWithFallback("calendar/" + calType + "/DateTimePatterns%atTime");
-        if (dtPatternsRb == null) {
-            dtPatternsRb = rb.findWithFallback("calendar/gregorian/DateTimePatterns%atTime");
-        }
-        String[] atTimePatterns = null;
-        if (dtPatternsRb != null) {
-            patternsSize = dtPatternsRb.getSize();
-            atTimePatterns = new String[patternsSize];
-            if (patternsSize >= 4) {
-                for (i = 0; i < 4; i++) {
-                    ICUResourceBundle concatenationPatternRb = (ICUResourceBundle) dtPatternsRb.get(i);
-                    if (concatenationPatternRb.getType() == UResourceBundle.STRING) {
-                        atTimePatterns[i] = concatenationPatternRb.getString();
-                    }
-                }
-            }
-       }
-
-        return new PatternData(dateTimePatterns, dateTimePatternsOverrides, atTimePatterns);
+        return new PatternData(dateTimePatterns, dateTimePatternsOverrides);
     }
 
     /**
@@ -3712,16 +3677,6 @@ public abstract class Calendar implements Serializable, Cloneable, Comparable<Ca
     public static String getDateTimePattern(Calendar cal, ULocale uLocale, int dateStyle) {
         PatternData patternData = PatternData.make(cal, uLocale);
         return patternData.getDateTimePattern(dateStyle);
-    }
-
-    /**
-     * @internal
-     * @deprecated This API is ICU internal only.
-     */
-    @Deprecated
-    public static String getDateAtTimePattern(Calendar cal, ULocale uLocale, int dateStyle) {
-        PatternData patternData = PatternData.make(cal, uLocale);
-        return patternData.getDateAtTimePattern(dateStyle);
     }
 
     private static String mergeOverrideStrings( String datePattern, String timePattern,
@@ -4382,8 +4337,8 @@ public abstract class Calendar implements Serializable, Cloneable, Comparable<Ca
         {           0,            0,            59,            59  }, // MINUTE
         {           0,            0,            59,            59  }, // SECOND
         {           0,            0,           999,           999  }, // MILLISECOND
-        {-16*ONE_HOUR, -16*ONE_HOUR,   12*ONE_HOUR,   30*ONE_HOUR  }, // ZONE_OFFSET
-        {           0,            0,    2*ONE_HOUR,    2*ONE_HOUR  }, // DST_OFFSET
+        {-12*ONE_HOUR, -12*ONE_HOUR,   12*ONE_HOUR,   12*ONE_HOUR  }, // ZONE_OFFSET
+        {           0,            0,    1*ONE_HOUR,    1*ONE_HOUR  }, // DST_OFFSET
         {/*                                                      */}, // YEAR_WOY
         {           1,            1,             7,             7  }, // DOW_LOCAL
         {/*                                                      */}, // EXTENDED_YEAR
@@ -5064,7 +5019,7 @@ public abstract class Calendar implements Serializable, Cloneable, Comparable<Ca
         // fields computed by handleComputeFields().
         computeWeekFields();
 
-        // Compute time-related fields.  These are independent of the date and
+        // Compute time-related fields.  These are indepent of the date and
         // of the subclass algorithm.  They depend only on the local zone
         // wall milliseconds in day.
         int millisInDay = (int) (localMillis - (days * ONE_DAY));
@@ -5553,7 +5508,7 @@ public abstract class Calendar implements Serializable, Cloneable, Comparable<Ca
     }
 
     /**
-     * Find the previous zone transition near the given time.
+     * Find the previous zone transtion near the given time.
      *
      * @param base The base time, inclusive.
      * @return The time of the previous transition, or null if not found.
@@ -5610,7 +5565,7 @@ public abstract class Calendar implements Serializable, Cloneable, Comparable<Ca
     };
 
     /**
-     * Implementing binary search for zone transition detection, used by {@link #getPreviousZoneTransitionTime(TimeZone, long, long)}
+     * Implementing binary search for zone transtion detection, used by {@link #getPreviousZoneTransitionTime(TimeZone, long, long)}
      * @param tz The time zone.
      * @param upperOffset The zone offset at <code>upper</code>
      * @param upper The upper bound, inclusive.
@@ -5801,7 +5756,7 @@ public abstract class Calendar implements Serializable, Cloneable, Comparable<Ca
                 // recalculate offsets from the resolved time (non-wall).
                 // When the given wall time falls into skipped wall time,
                 // the offsets will be based on the zone offsets AFTER
-                // the transition (which means, earliest possible interpretation).
+                // the transition (which means, earliest possibe interpretation).
                 long tgmt = wall - (offsets[0] + offsets[1]);
                 zone.getOffset(tgmt, false, offsets);
             }
@@ -5854,7 +5809,7 @@ public abstract class Calendar implements Serializable, Cloneable, Comparable<Ca
                 // recalculate offsets from the resolved time (non-wall).
                 // When the given wall time falls into skipped wall time,
                 // the offsets will be based on the zone offsets AFTER
-                // the transition (which means, earliest possible interpretation).
+                // the transition (which means, earliest possibe interpretation).
                 long tgmt = wall - (offsets[0] + offsets[1]);
                 zone.getOffset(tgmt, false, offsets);
             }

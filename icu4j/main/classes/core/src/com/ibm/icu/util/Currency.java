@@ -278,12 +278,7 @@ public class Currency extends MeasureUnit {
     private static Currency loadCurrency(String key) {
         String region = key;
         CurrencyMetaInfo info = CurrencyMetaInfo.getInstance();
-        // https://unicode-org.atlassian.net/browse/ICU-21997
-        // Prefer to use currencies that are legal tender.
-        List<String> list = info.currencies(CurrencyFilter.onRegion(region).withTender());
-        if (list.isEmpty()) {
-            list = info.currencies(CurrencyFilter.onRegion(region));
-        }
+        List<String> list = info.currencies(CurrencyFilter.onRegion(region));
         if (!list.isEmpty()) {
             String code = list.get(0);
             return getInstance(code);

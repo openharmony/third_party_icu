@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Date/Time
-nav_order: 900
+nav_order: 6
 has_children: true
 ---
 <!--

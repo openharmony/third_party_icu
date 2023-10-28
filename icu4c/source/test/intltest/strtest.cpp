@@ -20,7 +20,6 @@
 
 #include <cstddef>
 #include <string.h>
-#include <limits>
 
 #include "unicode/utypes.h"
 #include "unicode/putil.h"
@@ -575,14 +574,14 @@ StringTest::TestStringPieceU8() {
 class SimpleByteSink : public ByteSink {
 public:
     SimpleByteSink(char *outbuf) : fOutbuf(outbuf), fLength(0) {}
-    virtual void Append(const char *bytes, int32_t n) override {
+    virtual void Append(const char *bytes, int32_t n) {
         if(fOutbuf != bytes) {
             memcpy(fOutbuf, bytes, n);
         }
         fOutbuf += n;
         fLength += n;
     }
-    virtual void Flush() override { Append("z", 1); }
+    virtual void Flush() { Append("z", 1); }
     int32_t length() { return fLength; }
 private:
     char *fOutbuf;
@@ -862,11 +861,11 @@ void StringTest::TestCharStrAppendNumber() {
     assertEquals("TestAppendNumber 12345 and then 123", "12345123", testString.data());
 
     testString.clear();
-    testString.appendNumber(std::numeric_limits<int32_t>::max(), errorCode);
+    testString.appendNumber(2147483647, errorCode);
     assertEquals("TestAppendNumber when appending the biggest int32", "2147483647", testString.data());
 
     testString.clear();
-    testString.appendNumber(std::numeric_limits<int32_t>::min(), errorCode);
+    testString.appendNumber(-2147483648, errorCode);
     assertEquals("TestAppendNumber when appending the smallest int32", "-2147483648", testString.data());
 
     testString.clear();

@@ -88,7 +88,6 @@ static void TestGetAvailableLocalesByType(void);
 
  static void TestCanonicalization(void);
  static void TestCanonicalizationBuffer(void);
-static  void TestCanonicalization21749StackUseAfterScope(void);
 
  static void TestDisplayKeywords(void);
 
@@ -101,7 +100,7 @@ static void TestTrailingNull(void);
 static void TestGetLocale(void);
 
 /**
- * additional initialization for datatables storing expected values
+ * additional intialization for datatables storing expected values
  */
 static void setUpDataTable(void);
 static void cleanUpDataTable(void);

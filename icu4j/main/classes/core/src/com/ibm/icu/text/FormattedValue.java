@@ -45,7 +45,7 @@ public interface FormattedValue extends CharSequence {
      * To loop over all field positions:
      *
      * <pre>
-     *     ConstrainedFieldPosition cfpos = new ConstrainedFieldPosition();
+     *     ConstrainableFieldPosition cfpos = new ConstrainableFieldPosition();
      *     while (fmtval.nextPosition(cfpos)) {
      *         // handle the field position; get information from cfpos
      *     }

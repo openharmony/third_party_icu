@@ -264,8 +264,6 @@ icu_common_source = [
   "//third_party/icu/icu4c/source/common/rbbinode.cpp",
   "//third_party/icu/icu4c/source/common/ustrcase.cpp",
   "//third_party/icu/icu4c/source/common/servnotf.cpp",
-  "//third_party/icu/icu4c/source/common/emojiprops.cpp",
-  "//third_party/icu/icu4c/source/common/lstmbe.cpp",
   "//third_party/icu/icu4c/source/ohos/init_data.cpp",
 ]
 
@@ -280,7 +278,6 @@ icu_i18n_source = [
   "//third_party/icu/icu4c/source/i18n/alphaindex.cpp",
   "//third_party/icu/icu4c/source/i18n/indiancal.cpp",
   "//third_party/icu/icu4c/source/i18n/dayperiodrules.cpp",
-  "//third_party/icu/icu4c/source/i18n/displayoptions.cpp",
   "//third_party/icu/icu4c/source/i18n/quantityformatter.cpp",
   "//third_party/icu/icu4c/source/i18n/collationfastlatinbuilder.cpp",
   "//third_party/icu/icu4c/source/i18n/csrucode.cpp",

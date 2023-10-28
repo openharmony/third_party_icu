@@ -3,9 +3,9 @@
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 km{
     durationUnits{
-        hm{"h:mm"}
-        hms{"h:mm:ss"}
-        ms{"m:ss"}
+        hm{"ម៉:នន"}
+        hms{"ម៉:នន:វិវិ"}
+        ms{"ម៉:វិវិ"}
     }
     units{
         acceleration{
@@ -125,10 +125,6 @@ km{
             }
         }
         concentr{
-            item{
-                dnam{"របស់"}
-                other{"{0} របស់"}
-            }
             karat{
                 dnam{"ការ៉ាត់"}
                 other{"{0} ការ៉ាត់"}
@@ -266,11 +262,6 @@ km{
                 dnam{"ណាណូវិនាទី"}
                 other{"{0} ណាណូវិនាទី"}
             }
-            quarter{
-                dnam{"ត្រីមាស"}
-                other{"{0} ត្រីមាស"}
-                per{"{0}/ត្រី"}
-            }
             second{
                 dnam{"វិនាទី"}
                 other{"{0} វិនាទី"}
@@ -341,12 +332,6 @@ km{
             therm-us{
                 dnam{"ឯកតាកម្ដៅអាមេរិក"}
                 other{"{0} ឯកតាកម្ដៅអាមេរិក"}
-            }
-        }
-        force{
-            kilowatt-hour-per-100-kilometer{
-                dnam{"គីឡូវ៉ាត់ម៉ោងក្នុង 100 គីឡូម៉ែត្រ"}
-                other{"{0} គីឡូវ៉ាត់ម៉ោងក្នុង 100 គីឡូម៉ែត្រ"}
             }
         }
         frequency{
@@ -521,6 +506,10 @@ km{
                 other{"{0} គីឡូក្រាម"}
                 per{"{0} ក្នុងមួយគីឡូក្រាម"}
             }
+            metric-ton{
+                dnam{"តោនម៉ែត្រ"}
+                other{"{0} តោនម៉ែត្រ"}
+            }
             microgram{
                 dnam{"មីក្រូក្រាម"}
                 other{"{0} មីក្រូក្រាម"}
@@ -550,10 +539,6 @@ km{
             ton{
                 dnam{"តោនអាមេរិក"}
                 other{"{0} តោនអាមេរិក"}
-            }
-            tonne{
-                dnam{"តោនម៉ែត្រ"}
-                other{"{0} តោនម៉ែត្រ"}
             }
         }
         power{
@@ -845,18 +830,6 @@ km{
             per{"{0}/{1}"}
         }
         concentr{
-            item{
-                dnam{"របស់"}
-                other{"{0} របស់"}
-            }
-            millimole-per-liter{
-                dnam{"ម.ម៉ូល/លី"}
-                other{"{0} ម.ម៉ូល/លី"}
-            }
-            mole{
-                dnam{"ម៉ូល"}
-                other{"{0} ម៉ូល"}
-            }
             percent{
                 dnam{"%"}
                 other{"{0}%"}
@@ -866,10 +839,6 @@ km{
             liter-per-100-kilometer{
                 dnam{"L/100km"}
                 other{"{0}L/100km"}
-            }
-            liter-per-kilometer{
-                dnam{"លី/គម"}
-                other{"{0} លី/គម"}
             }
         }
         coordinate{
@@ -899,11 +868,6 @@ km{
             month{
                 dnam{"ខែ"}
                 other{"{0} ខែ"}
-            }
-            quarter{
-                dnam{"ត្រីមាស"}
-                other{"{0} ត្រី"}
-                per{"{0}/ត្រី"}
             }
             second{
                 dnam{"វិនាទី"}
@@ -981,23 +945,14 @@ km{
             }
         }
         pressure{
-            bar{
-                dnam{"បារ"}
-                other{"{0} បារ"}
-            }
             hectopascal{
                 other{"{0} hPa"}
             }
             inch-ofhg{
-                dnam{"″ Hg"}
                 other{"{0}\u0022 Hg"}
             }
             millibar{
-                other{"{0}mb"}
-            }
-            millimeter-ofhg{
-                dnam{"mmHg"}
-                other{"{0}mmHg"}
+                other{"{0} ម.ប."}
             }
         }
         speed{
@@ -1138,10 +1093,6 @@ km{
             per{"{0}/{1}"}
         }
         concentr{
-            item{
-                dnam{"របស់"}
-                other{"{0} របស់"}
-            }
             karat{
                 dnam{"ការ៉ាត់"}
                 other{"{0} kt"}
@@ -1151,8 +1102,8 @@ km{
                 other{"{0} mg/dL"}
             }
             millimole-per-liter{
-                dnam{"មិល្លីម៉ូល/លីត្រ"}
-                other{"{0} ម.ម៉ូល/លី"}
+                dnam{"mmol/L"}
+                other{"{0} mmol/L"}
             }
             percent{
                 dnam{"ភាគរយ"}
@@ -1173,8 +1124,8 @@ km{
                 other{"{0} L/100km"}
             }
             liter-per-kilometer{
-                dnam{"លីត្រ/គម"}
-                other{"{0} លី/គម"}
+                dnam{"លីត្រ/km"}
+                other{"{0} L/km"}
             }
             mile-per-gallon{
                 dnam{"ម៉ាយ​/​ហ្គាឡុង"}
@@ -1278,11 +1229,6 @@ km{
             nanosecond{
                 dnam{"ណាណូវិនាទី"}
                 other{"{0} ns"}
-            }
-            quarter{
-                dnam{"ត្រីមាស"}
-                other{"{0} ត្រីមាស"}
-                per{"{0}/ត្រី"}
             }
             second{
                 dnam{"វិនាទី"}
@@ -1482,6 +1428,10 @@ km{
                 other{"{0} kg"}
                 per{"{0}/kg"}
             }
+            metric-ton{
+                dnam{"t"}
+                other{"{0} t"}
+            }
             microgram{
                 dnam{"μg"}
                 other{"{0} μg"}
@@ -1511,10 +1461,6 @@ km{
             ton{
                 dnam{"តោនអាមេរិក"}
                 other{"{0} tn"}
-            }
-            tonne{
-                dnam{"t"}
-                other{"{0} t"}
             }
         }
         power{
