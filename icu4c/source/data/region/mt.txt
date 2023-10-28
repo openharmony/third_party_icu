@@ -108,7 +108,7 @@ mt{
         FI{"il-Finlandja"}
         FJ{"Fiġi"}
         FK{"il-Gżejjer Falkland"}
-        FM{"il-Mikroneżja"}
+        FM{"Mikroneżja"}
         FO{"il-Gżejjer Faeroe"}
         FR{"Franza"}
         GA{"il-Gabon"}
@@ -148,7 +148,7 @@ mt{
         IO{"Territorju Brittaniku tal-Oċean Indjan"}
         IQ{"l-Iraq"}
         IR{"l-Iran"}
-        IS{"l-Iżlanda"}
+        IS{"l-iżlanda"}
         IT{"l-Italja"}
         JE{"Jersey"}
         JM{"il-Ġamajka"}
@@ -235,7 +235,7 @@ mt{
         RS{"is-Serbja"}
         RU{"ir-Russja"}
         RW{"ir-Rwanda"}
-        SA{"l-Arabja Sawdija"}
+        SA{"l-Arabia Sawdija"}
         SB{"il-Gżejjer Solomon"}
         SC{"is-Seychelles"}
         SD{"is-Sudan"}
@@ -255,7 +255,7 @@ mt{
         SV{"El Salvador"}
         SX{"Sint Maarten"}
         SY{"is-Sirja"}
-        SZ{"l-Eswatini"}
+        SZ{"is-Swaziland"}
         TA{"Tristan da Cunha"}
         TC{"il-Gżejjer Turks u Caicos"}
         TD{"iċ-Chad"}

@@ -24,8 +24,6 @@ public class AffixUtilsTest {
                 return "−";
             case AffixUtils.TYPE_PLUS_SIGN:
                 return "\u061C+";
-            case AffixUtils.TYPE_APPROXIMATELY_SIGN:
-                return "≃";
             case AffixUtils.TYPE_PERCENT:
                 return "٪\u061C";
             case AffixUtils.TYPE_PERMILLE:
@@ -83,7 +81,6 @@ public class AffixUtilsTest {
                 { "-!", false, 2, "−!" },
                 { "+", false, 1, "\u061C+" },
                 { "+!", false, 2, "\u061C+!" },
-                { "~", false, 1, "≃" },
                 { "‰", false, 1, "؉" },
                 { "‰!", false, 2, "؉!" },
                 { "-x", false, 2, "−x" },
@@ -191,7 +188,7 @@ public class AffixUtilsTest {
                 { "", "" },
                 { "-", "1" },
                 { "'-'", "-" },
-                { "- + ~ % ‰ ¤ ¤¤ ¤¤¤ ¤¤¤¤ ¤¤¤¤¤", "1 2 3 4 5 6 7 8 9 10" },
+                { "- + % ‰ ¤ ¤¤ ¤¤¤ ¤¤¤¤ ¤¤¤¤¤", "1 2 3 4 5 6 7 8 9" },
                 { "'¤¤¤¤¤¤'", "¤¤¤¤¤¤" },
                 { "¤¤¤¤¤¤", "\uFFFD" } };
 
@@ -214,7 +211,7 @@ public class AffixUtilsTest {
         // Test insertion position
         sb.clear();
         sb.append("abcdefg", null);
-        AffixUtils.unescape("-+~", sb, 4, provider, null);
+        AffixUtils.unescape("-+%", sb, 4, provider, null);
         assertEquals("Symbol provider into middle", "abcd123efg", sb.toString());
     }
 

@@ -2,7 +2,7 @@
 layout: default
 title: Custom ICU4C Synchronization
 nav_order: 3
-parent: Contributors
+parent: Misc
 ---
 <!--
 © 2020 and later: Unicode, Inc. and others.
@@ -41,7 +41,7 @@ synchronization primitives.
 
 **Low Level Atomics**, a set of platform or compiler dependent typedefs and
 inlines. Provided in the internal header file
-[`umutex.h`](https://github.com/unicode-org/icu/blob/main/icu4c/source/common/umutex.h).
+[`umutex.h`](https://github.com/unicode-org/icu/blob/master/icu4c/source/common/umutex.h).
 
 | Type/Function                                           | Description                                                                   |
 |---------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -71,7 +71,7 @@ Provided in a .cpp file.
 `UInitOnce` and `umtx_initOnce()` are used internally by ICU for thread-safe
 one-time initialization. Their implementation is split into a
 platform-independent part (contained in
-[`umutex.h`](https://github.com/unicode-org/icu/blob/main/icu4c/source/common/umutex.h)),
+[`umutex.h`](https://github.com/unicode-org/icu/blob/master/icu4c/source/common/umutex.h)),
 and the pair of platform-dependent implementation functions listed above.
 
 **Build Setup**
@@ -203,8 +203,8 @@ static std::condition_variable initCondition;
 // function on this thread, or wait for some other thread to complete the initialization.
 //
 // The actual call to the init function is made inline by template code
-// that knows the C++ types involved. This function returns true if
-// the inline code needs to invoke the Init function, or false if the initialization
+// that knows the C++ types involved. This function returns TRUE if
+// the inline code needs to invoke the Init function, or FALSE if the initialization
 // has completed on another thread.
 //
 // UInitOnce::fState values:
@@ -217,7 +217,7 @@ UBool umtx_initImplPreInit(UInitOnce &uio) {
     int32_t state = uio.fState;
     if (state == 0) {
         umtx_storeRelease(uio.fState, 1);
-        return true; // Caller will next call the init function.
+        return TRUE; // Caller will next call the init function.
     } else {
         while (uio.fState == 1) {
             // Another thread is currently running the initialization.
@@ -225,7 +225,7 @@ UBool umtx_initImplPreInit(UInitOnce &uio) {
             initCondition.wait(initLock);
         }
         U_ASSERT(uio.fState == 2);
-        return false;
+        return FALSE;
     }
 }
 

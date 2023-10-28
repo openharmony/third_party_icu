@@ -161,11 +161,6 @@ et{
             times{"{0}⋅{1}"}
         }
         concentr{
-            item{
-                dnam{"üksus"}
-                one{"{0} üksus"}
-                other{"{0} üksust"}
-            }
             karat{
                 dnam{"karaadid"}
                 one{"{0} karaat"}
@@ -210,7 +205,7 @@ et{
         consumption{
             liter-per-100-kilometer{
                 dnam{"liitrid 100 kilomeetri kohta"}
-                one{"{0} liiter 100 kilomeetri kohta"}
+                one{"liiter 100 kilomeetri kohta"}
                 other{"{0} liitrit 100 kilomeetri kohta"}
             }
             liter-per-kilometer{
@@ -343,12 +338,6 @@ et{
                 one{"{0} nanosekund"}
                 other{"{0} nanosekundit"}
             }
-            quarter{
-                dnam{"kvartalid"}
-                one{"{0} kvartal"}
-                other{"{0} kvartalit"}
-                per{"{0}/kv"}
-            }
             second{
                 dnam{"sekundid"}
                 one{"{0} sekund"}
@@ -438,11 +427,6 @@ et{
             }
         }
         force{
-            kilowatt-hour-per-100-kilometer{
-                dnam{"kilovatt-tunnid 100 kilomeetri kohta"}
-                one{"{0} kilovatt-tund 100 kilomeetri kohta"}
-                other{"{0} kilovatt-tundi 100 kilomeetri kohta"}
-            }
             newton{
                 dnam{"njuutonid"}
                 one{"{0} njuuton"}
@@ -653,8 +637,6 @@ et{
             }
             solar-luminosity{
                 dnam{"Päikese heledus"}
-                one{"{0} Päikese heledus"}
-                other{"{0} Päikese heledust"}
             }
         }
         mass{
@@ -689,6 +671,11 @@ et{
                 one{"{0} kilogramm"}
                 other{"{0} kilogrammi"}
                 per{"{0} kilogrammi kohta"}
+            }
+            metric-ton{
+                dnam{"tonnid"}
+                one{"{0} tonn"}
+                other{"{0} tonni"}
             }
             microgram{
                 dnam{"mikrogrammid"}
@@ -731,11 +718,6 @@ et{
                 dnam{"lühikesed tonnid"}
                 one{"{0} lühike tonn"}
                 other{"{0} lühikest tonni"}
-            }
-            tonne{
-                dnam{"tonnid"}
-                one{"{0} tonn"}
-                other{"{0} tonni"}
             }
         }
         power{
@@ -857,8 +839,8 @@ et{
             }
             generic{
                 dnam{"°"}
-                one{"{0} kraad"}
-                other{"{0} kraadi"}
+                one{"{0}°"}
+                other{"{0}°"}
             }
             kelvin{
                 dnam{"kelvinid"}
@@ -1060,6 +1042,8 @@ et{
         acceleration{
             g-force{
                 dnam{"Maa raskuskiirendus"}
+                one{"{0}G"}
+                other{"{0}G"}
             }
         }
         angle{
@@ -1095,17 +1079,9 @@ et{
             times{"{0}⋅{1}"}
         }
         concentr{
-            item{
-                dnam{"üksus"}
-                one{"{0} üksus"}
-                other{"{0} üksust"}
-            }
             karat{
                 one{"{0} ct"}
                 other{"{0} ct"}
-            }
-            mole{
-                dnam{"mol"}
             }
             percent{
                 dnam{"%"}
@@ -1118,14 +1094,6 @@ et{
                 dnam{"l/100 km"}
                 one{"{0} l/100km"}
                 other{"{0} l/100km"}
-            }
-            mile-per-gallon{
-                dnam{"mpg"}
-            }
-            mile-per-gallon-imperial{
-                dnam{"mpg UK"}
-                one{"{0} m/gUK"}
-                other{"{0} m/gUK"}
             }
         }
         coordinate{
@@ -1167,12 +1135,6 @@ et{
                 one{"{0} k"}
                 other{"{0} k"}
             }
-            quarter{
-                dnam{"kv"}
-                one{"{0} kv"}
-                other{"{0} kv"}
-                per{"{0}/kv"}
-            }
             second{
                 dnam{"s"}
                 one{"{0} s"}
@@ -1188,15 +1150,6 @@ et{
                 dnam{"a"}
                 one{"{0} a"}
                 other{"{0} a"}
-            }
-        }
-        force{
-            kilowatt-hour-per-100-kilometer{
-                one{"{0}kWh/100km"}
-                other{"{0}kWh/100km"}
-            }
-            newton{
-                dnam{"N"}
             }
         }
         length{
@@ -1302,6 +1255,14 @@ et{
                 one{"{0} hj"}
                 other{"{0} hj"}
             }
+            kilowatt{
+                one{"{0}kW"}
+                other{"{0}kW"}
+            }
+            watt{
+                one{"{0}W"}
+                other{"{0}W"}
+            }
         }
         pressure{
             hectopascal{
@@ -1356,34 +1317,10 @@ et{
                 one{"{0} km³"}
                 other{"{0} km³"}
             }
-            dram{
-                dnam{"d. ved."}
-                one{"{0} d. ved."}
-                other{"{0} d. ved."}
-            }
-            fluid-ounce-imperial{
-                dnam{"Imp fl oz"}
-                one{"{0} fl oz Im"}
-                other{"{0} fl oz Im"}
-            }
-            gallon-imperial{
-                one{"{0} gal Im"}
-                other{"{0} gal Im"}
-            }
             liter{
                 dnam{"liiter"}
                 one{"{0} l"}
                 other{"{0} l"}
-            }
-            pinch{
-                dnam{"näp."}
-                one{"{0} näp."}
-                other{"{0} näp."}
-            }
-            quart-imperial{
-                dnam{"qt Imp"}
-                one{"{0} qt Imp."}
-                other{"{0} qt Imp."}
             }
         }
     }
@@ -1489,11 +1426,6 @@ et{
             times{"{0}⋅{1}"}
         }
         concentr{
-            item{
-                dnam{"üksus"}
-                one{"{0} üksus"}
-                other{"{0} üksust"}
-            }
             karat{
                 dnam{"karaat"}
                 one{"{0} ct"}
@@ -1671,12 +1603,6 @@ et{
                 one{"{0} ns"}
                 other{"{0} ns"}
             }
-            quarter{
-                dnam{"kv"}
-                one{"{0} kv"}
-                other{"{0} kv"}
-                per{"{0}/kv"}
-            }
             second{
                 dnam{"sek"}
                 one{"{0} sek"}
@@ -1766,11 +1692,6 @@ et{
             }
         }
         force{
-            kilowatt-hour-per-100-kilometer{
-                dnam{"kWh / 100 km"}
-                one{"{0} kWh / 100 km"}
-                other{"{0} kWh / 100 km"}
-            }
             newton{
                 dnam{"njuuton"}
                 one{"{0} N"}
@@ -1998,6 +1919,11 @@ et{
                 other{"{0} kg"}
                 per{"{0}/kg"}
             }
+            metric-ton{
+                dnam{"t"}
+                one{"{0} t"}
+                other{"{0} t"}
+            }
             microgram{
                 dnam{"μg"}
                 one{"{0} μg"}
@@ -2037,11 +1963,6 @@ et{
                 dnam{"lüh t"}
                 one{"{0} lüh t"}
                 other{"{0} lüh t"}
-            }
-            tonne{
-                dnam{"t"}
-                one{"{0} t"}
-                other{"{0} t"}
             }
         }
         power{

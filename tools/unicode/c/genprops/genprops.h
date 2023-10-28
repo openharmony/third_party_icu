@@ -35,7 +35,6 @@ public:
     virtual void setAlgNamesRange(UChar32 start, UChar32 end,
                                   const char *type, const char *prefix, UErrorCode &errorCode);
     virtual void setProps(const icu::UniProps &props, const icu::UnicodeSet &newValues, UErrorCode &errorCode);
-    virtual void parseUnidataFiles(const char *unidataPath, UErrorCode &errorCode);
     virtual void build(UErrorCode &errorCode);
     virtual void writeCSourceFile(const char *path, UErrorCode &errorCode);
     virtual void writeJavaSourceFile(const char *path, UErrorCode &errorCode);
@@ -52,7 +51,6 @@ PropsBuilder *createCorePropsBuilder(UErrorCode &errorCode);
 PropsBuilder *createBiDiPropsBuilder(UErrorCode &errorCode);
 PropsBuilder *createCasePropsBuilder(UErrorCode &errorCode);
 PropsBuilder *createLayoutPropsBuilder(UErrorCode &errorCode);
-PropsBuilder *createEmojiPropsBuilder(UErrorCode &errorCode);
 PropsBuilder *createNamesPropsBuilder(UErrorCode &errorCode);
 
 /* global flags */

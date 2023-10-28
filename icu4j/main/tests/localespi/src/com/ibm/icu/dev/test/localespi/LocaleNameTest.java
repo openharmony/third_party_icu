@@ -285,7 +285,7 @@ public class LocaleNameTest extends TestFmwk {
             {"he", "heb"},
             {"iw", "heb"},
             {"ro", "ron"},
-            {"mo", "ron"},
+            {"mo", "mol"},
         };
         for (String[] cas : cases) {
             ULocale loc = new ULocale(cas[0]);

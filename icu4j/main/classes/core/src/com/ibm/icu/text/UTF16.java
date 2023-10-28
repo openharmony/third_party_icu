@@ -596,39 +596,36 @@ public final class UTF16 {
     }
 
     /**
-     * Determines whether the code point is a surrogate.
+     * Determines whether the code value is a surrogate.
      *
-     * @param codePoint The input character.
-     *        (In ICU 2.1-69 the type of this parameter was <code>char</code>.)
-     * @return true If the input code point is a surrogate.
-     * @stable ICU 70
+     * @param char16 The input character.
+     * @return true If the input character is a surrogate.
+     * @stable ICU 2.1
      */
-    public static boolean isSurrogate(int codePoint) {
-        return (codePoint & SURROGATE_BITMASK) == SURROGATE_BITS;
+    public static boolean isSurrogate(char char16) {
+        return (char16 & SURROGATE_BITMASK) == SURROGATE_BITS;
     }
 
     /**
-     * Determines whether the code point is a trail surrogate.
+     * Determines whether the character is a trail surrogate.
      *
-     * @param codePoint The input character.
-     *        (In ICU 2.1-69 the type of this parameter was <code>char</code>.)
-     * @return true If the input code point is a trail surrogate.
-     * @stable ICU 70
+     * @param char16 The input character.
+     * @return true If the input character is a trail surrogate.
+     * @stable ICU 2.1
      */
-    public static boolean isTrailSurrogate(int codePoint) {
-        return (codePoint & TRAIL_SURROGATE_BITMASK) == TRAIL_SURROGATE_BITS;
+    public static boolean isTrailSurrogate(char char16) {
+        return (char16 & TRAIL_SURROGATE_BITMASK) == TRAIL_SURROGATE_BITS;
     }
 
     /**
-     * Determines whether the code point is a lead surrogate.
+     * Determines whether the character is a lead surrogate.
      *
-     * @param codePoint The input character.
-     *        (In ICU 2.1-69 the type of this parameter was <code>char</code>.)
-     * @return true If the input code point is a lead surrogate
-     * @stable ICU 70
+     * @param char16 The input character.
+     * @return true If the input character is a lead surrogate
+     * @stable ICU 2.1
      */
-    public static boolean isLeadSurrogate(int codePoint) {
-        return (codePoint & LEAD_SURROGATE_BITMASK) == LEAD_SURROGATE_BITS;
+    public static boolean isLeadSurrogate(char char16) {
+        return (char16 & LEAD_SURROGATE_BITMASK) == LEAD_SURROGATE_BITS;
     }
 
     /**
@@ -1548,7 +1545,7 @@ public final class UTF16 {
         if (char32 < SUPPLEMENTARY_MIN_VALUE) {
             int result = source.indexOf((char) char32);
             if (result >= 0) {
-                if (isLeadSurrogate(char32) && (result < source.length() - 1)
+                if (isLeadSurrogate((char) char32) && (result < source.length() - 1)
                         && isTrailSurrogate(source.charAt(result + 1))) {
                     return indexOf(source, char32, result + 1);
                 }
@@ -1649,7 +1646,7 @@ public final class UTF16 {
         if (char32 < SUPPLEMENTARY_MIN_VALUE) {
             int result = source.indexOf((char) char32, fromIndex);
             if (result >= 0) {
-                if (isLeadSurrogate(char32) && (result < source.length() - 1)
+                if (isLeadSurrogate((char) char32) && (result < source.length() - 1)
                         && isTrailSurrogate(source.charAt(result + 1))) {
                     return indexOf(source, char32, result + 1);
                 }
@@ -1751,7 +1748,7 @@ public final class UTF16 {
         if (char32 < SUPPLEMENTARY_MIN_VALUE) {
             int result = source.lastIndexOf((char) char32);
             if (result >= 0) {
-                if (isLeadSurrogate(char32) && (result < source.length() - 1)
+                if (isLeadSurrogate((char) char32) && (result < source.length() - 1)
                         && isTrailSurrogate(source.charAt(result + 1))) {
                     return lastIndexOf(source, char32, result - 1);
                 }
@@ -1862,7 +1859,7 @@ public final class UTF16 {
         if (char32 < SUPPLEMENTARY_MIN_VALUE) {
             int result = source.lastIndexOf((char) char32, fromIndex);
             if (result >= 0) {
-                if (isLeadSurrogate(char32) && (result < source.length() - 1)
+                if (isLeadSurrogate((char) char32) && (result < source.length() - 1)
                         && isTrailSurrogate(source.charAt(result + 1))) {
                     return lastIndexOf(source, char32, result - 1);
                 }
@@ -2525,7 +2522,7 @@ public final class UTF16 {
         // private method ---------------------------------------------------
 
         /**
-         * Compares case insensitive. This is a direct port of ICU4C, to make maintenance life
+         * Compares case insensitive. This is a direct port of ICU4C, to make maintainence life
          * easier.
          *
          * @param s1
@@ -2540,7 +2537,7 @@ public final class UTF16 {
         }
 
         /**
-         * Compares case sensitive. This is a direct port of ICU4C, to make maintenance life
+         * Compares case sensitive. This is a direct port of ICU4C, to make maintainence life
          * easier.
          *
          * @param s1
@@ -2551,7 +2548,7 @@ public final class UTF16 {
          */
         private int compareCaseSensitive(String s1, String s2) {
             // compare identical prefixes - they do not need to be fixed up
-            // limit1 = start1 + min(length1, length2)
+            // limit1 = start1 + min(lenght1, length2)
             int length1 = s1.length();
             int length2 = s2.length();
             int minlength = length1;

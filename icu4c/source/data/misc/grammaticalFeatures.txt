@@ -146,6 +146,12 @@ grammaticalFeatures:table(nofallback){
                             "indefinite",
                         }
                     }
+                    gender{
+                        _{
+                            "masculine",
+                            "feminine",
+                        }
+                    }
                 }
             }
             ar{
@@ -197,12 +203,17 @@ grammaticalFeatures:table(nofallback){
                             "genitive",
                             "locative",
                         }
-                        units{""}
                     }
                     definiteness{
                         _{
                             "definite",
                             "indefinite",
+                        }
+                    }
+                    gender{
+                        _{
+                            "masculine",
+                            "feminine",
                         }
                     }
                 }
@@ -229,23 +240,10 @@ grammaticalFeatures:table(nofallback){
                             "vocative",
                             "locative",
                         }
-                        units{
-                            "nominative",
-                            "genitive",
-                            "dative",
-                            "accusative",
-                            "instrumental",
-                            "locative",
-                        }
                     }
                     gender{
                         _{
                             "animate",
-                            "inanimate",
-                            "feminine",
-                            "neuter",
-                        }
-                        units{
                             "inanimate",
                             "feminine",
                             "neuter",
@@ -260,6 +258,7 @@ grammaticalFeatures:table(nofallback){
                             "nominative",
                             "genitive",
                         }
+                        units{""}
                     }
                     definiteness{
                         _{
@@ -303,11 +302,6 @@ grammaticalFeatures:table(nofallback){
                             "genitive",
                             "accusative",
                             "vocative",
-                        }
-                        units{
-                            "nominative",
-                            "genitive",
-                            "accusative",
                         }
                     }
                     gender{
@@ -359,13 +353,6 @@ grammaticalFeatures:table(nofallback){
                             "partitive",
                             "translative",
                         }
-                        units{
-                            "nominative",
-                            "elative",
-                            "illative",
-                            "partitive",
-                            "genitive",
-                        }
                     }
                 }
             }
@@ -391,7 +378,6 @@ grammaticalFeatures:table(nofallback){
                             "instrumental",
                             "vocative",
                         }
-                        units{""}
                     }
                     gender{
                         _{
@@ -399,7 +385,6 @@ grammaticalFeatures:table(nofallback){
                             "feminine",
                             "neuter",
                         }
-                        units{""}
                     }
                 }
             }
@@ -448,21 +433,10 @@ grammaticalFeatures:table(nofallback){
                             "vocative",
                             "locative",
                         }
-                        units{
-                            "nominative",
-                            "genitive",
-                            "accusative",
-                            "instrumental",
-                        }
                     }
                     gender{
                         _{
                             "animate",
-                            "inanimate",
-                            "feminine",
-                            "neuter",
-                        }
-                        units{
                             "inanimate",
                             "feminine",
                             "neuter",
@@ -489,13 +463,6 @@ grammaticalFeatures:table(nofallback){
                             "instrumental",
                             "sublative",
                             "superessive",
-                            "terminative",
-                            "translative",
-                        }
-                        units{
-                            "nominative",
-                            "accusative",
-                            "instrumental",
                             "terminative",
                             "translative",
                         }
@@ -588,13 +555,6 @@ grammaticalFeatures:table(nofallback){
                             "instrumental",
                             "vocative",
                         }
-                        units{
-                            "nominative",
-                            "genitive",
-                            "accusative",
-                            "dative",
-                            "locative",
-                        }
                     }
                     gender{
                         _{
@@ -602,7 +562,6 @@ grammaticalFeatures:table(nofallback){
                             "feminine",
                             "neuter",
                         }
-                        units{"neuter"}
                     }
                 }
             }
@@ -621,6 +580,16 @@ grammaticalFeatures:table(nofallback){
                     }
                 }
             }
+            lij{
+                nominal{
+                    gender{
+                        _{
+                            "masculine",
+                            "feminine",
+                        }
+                    }
+                }
+            }
             lt{
                 nominal{
                     case{
@@ -631,14 +600,6 @@ grammaticalFeatures:table(nofallback){
                             "accusative",
                             "instrumental",
                             "vocative",
-                            "locative",
-                        }
-                        units{
-                            "nominative",
-                            "genitive",
-                            "dative",
-                            "accusative",
-                            "instrumental",
                             "locative",
                         }
                     }
@@ -659,13 +620,6 @@ grammaticalFeatures:table(nofallback){
                             "dative",
                             "accusative",
                             "vocative",
-                            "locative",
-                        }
-                        units{
-                            "nominative",
-                            "genitive",
-                            "dative",
-                            "accusative",
                             "locative",
                         }
                     }
@@ -691,7 +645,6 @@ grammaticalFeatures:table(nofallback){
                             "locativecopulative",
                             "sociative",
                         }
-                        units{""}
                     }
                     gender{
                         _{
@@ -700,7 +653,6 @@ grammaticalFeatures:table(nofallback){
                             "feminine",
                             "neuter",
                         }
-                        units{""}
                     }
                 }
             }
@@ -709,6 +661,7 @@ grammaticalFeatures:table(nofallback){
                     case{
                         _{
                             "nominative",
+                            "oblique",
                             "accusative",
                             "dative",
                             "ergative",
@@ -733,6 +686,7 @@ grammaticalFeatures:table(nofallback){
                             "nominative",
                             "genitive",
                         }
+                        units{""}
                     }
                     definiteness{
                         _{
@@ -744,6 +698,10 @@ grammaticalFeatures:table(nofallback){
                         _{
                             "masculine",
                             "feminine",
+                            "neuter",
+                        }
+                        units{
+                            "masculine",
                             "neuter",
                         }
                     }
@@ -759,13 +717,14 @@ grammaticalFeatures:table(nofallback){
                     }
                 }
             }
-            nn{
+            no{
                 nominal{
                     case{
                         _{
                             "nominative",
                             "genitive",
                         }
+                        units{""}
                     }
                     definiteness{
                         _{
@@ -779,27 +738,8 @@ grammaticalFeatures:table(nofallback){
                             "feminine",
                             "neuter",
                         }
-                    }
-                }
-            }
-            no{
-                nominal{
-                    case{
-                        _{
-                            "nominative",
-                            "genitive",
-                        }
-                    }
-                    definiteness{
-                        _{
-                            "definite",
-                            "indefinite",
-                        }
-                    }
-                    gender{
-                        _{
+                        units{
                             "masculine",
-                            "feminine",
                             "neuter",
                         }
                     }
@@ -835,8 +775,12 @@ grammaticalFeatures:table(nofallback){
                         }
                         units{
                             "accusative",
+                            "dative",
                             "genitive",
+                            "instrumental",
+                            "locative",
                             "nominative",
+                            "vocative",
                         }
                     }
                     gender{
@@ -902,12 +846,13 @@ grammaticalFeatures:table(nofallback){
                             "locative",
                         }
                         units{
-                            "nominative",
                             "accusative",
                             "dative",
                             "genitive",
-                            "prepositional",
                             "instrumental",
+                            "locative",
+                            "nominative",
+                            "vocative",
                         }
                     }
                     gender{
@@ -915,6 +860,10 @@ grammaticalFeatures:table(nofallback){
                             "masculine",
                             "feminine",
                             "neuter",
+                        }
+                        units{
+                            "masculine",
+                            "feminine",
                         }
                     }
                 }
@@ -929,7 +878,6 @@ grammaticalFeatures:table(nofallback){
                             "accusative",
                             "dative",
                         }
-                        units{""}
                     }
                     definiteness{
                         _{
@@ -943,7 +891,6 @@ grammaticalFeatures:table(nofallback){
                             "feminine",
                             "neuter",
                         }
-                        units{""}
                     }
                 }
             }
@@ -959,23 +906,10 @@ grammaticalFeatures:table(nofallback){
                             "vocative",
                             "locative",
                         }
-                        units{
-                            "nominative",
-                            "genitive",
-                            "dative",
-                            "accusative",
-                            "instrumental",
-                            "locative",
-                        }
                     }
                     gender{
                         _{
                             "animate",
-                            "inanimate",
-                            "feminine",
-                            "neuter",
-                        }
-                        units{
                             "inanimate",
                             "feminine",
                             "neuter",
@@ -1016,21 +950,10 @@ grammaticalFeatures:table(nofallback){
                             "vocative",
                             "locative",
                         }
-                        units{
-                            "nominative",
-                            "genitive",
-                            "accusative",
-                            "instrumental",
-                        }
                     }
                     gender{
                         _{
                             "animate",
-                            "inanimate",
-                            "feminine",
-                            "neuter",
-                        }
-                        units{
                             "inanimate",
                             "feminine",
                             "neuter",
@@ -1045,6 +968,7 @@ grammaticalFeatures:table(nofallback){
                             "nominative",
                             "genitive",
                         }
+                        units{""}
                     }
                     definiteness{
                         _{
@@ -1073,12 +997,6 @@ grammaticalFeatures:table(nofallback){
                             "ablative",
                             "vocative",
                         }
-                        units{
-                            "nominative",
-                            "accusative",
-                            "dative",
-                            "ablative",
-                        }
                     }
                 }
             }
@@ -1093,7 +1011,6 @@ grammaticalFeatures:table(nofallback){
                             "locative",
                             "instrumental",
                         }
-                        units{""}
                     }
                 }
             }
@@ -1125,14 +1042,6 @@ grammaticalFeatures:table(nofallback){
                             "vocative",
                             "locative",
                         }
-                        units{
-                            "nominative",
-                            "genitive",
-                            "accusative",
-                            "dative",
-                            "locative",
-                            "instrumental",
-                        }
                     }
                     gender{
                         _{
@@ -1150,7 +1059,6 @@ grammaticalFeatures:table(nofallback){
                             "nominative",
                             "oblique",
                         }
-                        units{""}
                     }
                     gender{
                         _{

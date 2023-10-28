@@ -560,6 +560,8 @@ class U_I18N_API LocalizedNumberRangeFormatter
 
     LocalizedNumberRangeFormatter(impl::RangeMacroProps &&macros, const Locale &locale);
 
+    void clear();
+
     // To give the fluent setters access to this class's constructor:
     friend class NumberRangeFormatterSettings<UnlocalizedNumberRangeFormatter>;
     friend class NumberRangeFormatterSettings<LocalizedNumberRangeFormatter>;
@@ -606,6 +608,7 @@ class U_I18N_API FormattedNumberRange : public UMemory, public FormattedValue {
     /** @copydoc FormattedValue::nextPosition() */
     UBool nextPosition(ConstrainedFieldPosition& cfpos, UErrorCode& status) const U_OVERRIDE;
 
+#ifndef U_HIDE_DRAFT_API
     /**
      * Extracts the formatted range as a pair of decimal numbers. This endpoint
      * is useful for obtaining the exact number being printed after scaling
@@ -623,10 +626,11 @@ class U_I18N_API FormattedNumberRange : public UMemory, public FormattedValue {
      *         for example, std::string.
      * @param status Set if an error occurs.
      * @return A pair of StringClasses containing the numeric strings.
-     * @stable ICU 68
+     * @draft ICU 68
      */
     template<typename StringClass>
     inline std::pair<StringClass, StringClass> getDecimalNumbers(UErrorCode& status) const;
+#endif // U_HIDE_DRAFT_API
 
     /**
      * Returns whether the pair of numbers was successfully formatted as a range or whether an identity fallback was
@@ -638,13 +642,6 @@ class U_I18N_API FormattedNumberRange : public UMemory, public FormattedValue {
      * @see UNumberRangeIdentityFallback
      */
     UNumberRangeIdentityResult getIdentityResult(UErrorCode& status) const;
-
-    /**
-     * Default constructor; makes an empty FormattedNumberRange.
-     * @stable ICU 70
-     */
-    FormattedNumberRange()
-        : fData(nullptr), fErrorCode(U_INVALID_STATE_ERROR) {}
 
     /**
      * Copying not supported; use move constructor instead.
@@ -692,6 +689,8 @@ class U_I18N_API FormattedNumberRange : public UMemory, public FormattedValue {
     explicit FormattedNumberRange(UErrorCode errorCode)
         : fData(nullptr), fErrorCode(errorCode) {}
 
+    void getAllFieldPositionsImpl(FieldPositionIteratorHandler& fpih, UErrorCode& status) const;
+
     void getDecimalNumbers(ByteSink& sink1, ByteSink& sink2, UErrorCode& status) const;
 
     const impl::UFormattedNumberRangeData* getData(UErrorCode& status) const;
@@ -706,7 +705,8 @@ class U_I18N_API FormattedNumberRange : public UMemory, public FormattedValue {
     friend struct impl::UFormattedNumberRangeImpl;
 };
 
-// inline impl of @stable ICU 68 method
+#ifndef U_HIDE_DRAFT_API
+// inline impl of @draft ICU 68 method
 template<typename StringClass>
 std::pair<StringClass, StringClass> FormattedNumberRange::getDecimalNumbers(UErrorCode& status) const {
     StringClass str1;
@@ -716,6 +716,7 @@ std::pair<StringClass, StringClass> FormattedNumberRange::getDecimalNumbers(UErr
     getDecimalNumbers(sink1, sink2, status);
     return std::make_pair(str1, str2);
 }
+#endif // U_HIDE_DRAFT_API
 
 /**
  * See the main description in numberrangeformatter.h for documentation and examples.

@@ -77,33 +77,45 @@ public class RoundTripTest extends TestFmwk {
     static String KATAKANA_ITERATION = "[\u30FD\u30FE]";
     static String HIRAGANA_ITERATION = "[\u309D\u309E]";
 
-    /**
-     * If abbreviated=true, returns a set which only a sampling of the original code points.
-     * density is the approximate total number of code points to returned for the entire set.
-     */
-    private static UnicodeSet abbreviateSet(UnicodeSet set, boolean abbreviated, int density) {
-        if (!abbreviated) {
-            return set;
+    //------------------------------------------------------------------
+    // AbbreviatedUnicodeSetIterator
+    //------------------------------------------------------------------
+
+    static class AbbreviatedUnicodeSetIterator extends UnicodeSetIterator {
+
+        private boolean abbreviated;
+        private int perRange;
+
+        public AbbreviatedUnicodeSetIterator() {
+            super();
+            abbreviated = false;
         }
-        int rangeCount = set.getRangeCount();
-        int perRange = rangeCount;
-        if (perRange != 0) {
-            perRange = density / perRange;
+
+        @Override
+        public void reset(UnicodeSet newSet) {
+            reset(newSet, false);
         }
-        boolean unchanged = true;
-        for (int i = 0; i < rangeCount; ++i) {
-            int start = set.getRangeStart(i);
-            int end = set.getRangeEnd(i);
-            int newEnd = start + perRange;
-            if (end > newEnd) {
-                if (unchanged) {
-                    set = set.cloneAsThawed();
-                    unchanged = false;
-                }
-                set.remove(newEnd + 1, end);
+
+        public void reset(UnicodeSet newSet, boolean abb) {
+            reset(newSet, abb, 100);
+        }
+
+        public void reset(UnicodeSet newSet, boolean abb, int density) {
+            super.reset(newSet);
+            abbreviated = abb;
+            perRange = newSet.getRangeCount();
+            if (perRange != 0) {
+                perRange = density / perRange;
             }
         }
-        return set;
+
+        @Override
+        protected void loadRange(int myRange) {
+            super.loadRange(myRange);
+            if (abbreviated && (endElement > nextElement + perRange)) {
+                endElement = nextElement + perRange;
+            }
+        }
     }
 
     //--------------------------------------------------------------------
@@ -890,7 +902,7 @@ public class RoundTripTest extends TestFmwk {
              */
             /* comment lines below  when transliterator is fixed */
             // start
-            // TODO(CLDR-4375) Exclude \u0970 for the time being.
+            // TODO(Mark): Fix ticket #8989, transliterate U+0970.
             String minusDevAbb = logKnownIssue("cldrbug:4375", null) ? "-[\u0970]" : "";
 
             new TransliterationTest(interIndicArray[i][0], 50)
@@ -1162,7 +1174,7 @@ public class RoundTripTest extends TestFmwk {
                     break;
                 }
             }
-            //System.out.println("false");
+            //System.out.println("FALSE");
             return false;
         }
 
@@ -1283,8 +1295,8 @@ public class RoundTripTest extends TestFmwk {
             return false;
         }
 
-        UnicodeSetIterator usi = new UnicodeSetIterator();
-        UnicodeSetIterator usi2 = new UnicodeSetIterator();
+        AbbreviatedUnicodeSetIterator usi = new AbbreviatedUnicodeSetIterator();
+        AbbreviatedUnicodeSetIterator usi2 = new AbbreviatedUnicodeSetIterator();
 
         Transliterator sourceToTarget;
         Transliterator targetToSource;
@@ -1442,7 +1454,7 @@ public class RoundTripTest extends TestFmwk {
 
             boolean quickRt = TestFmwk.getExhaustiveness() < 10;
 
-            usi.reset(abbreviateSet(sourceRangeMinusFailures, quickRt, density));
+            usi.reset(sourceRangeMinusFailures, quickRt, density);
 
             while (usi.next()) {
                 int c = usi.codepoint;
@@ -1454,7 +1466,7 @@ public class RoundTripTest extends TestFmwk {
                     if (failSourceTarg.get(d)) continue;
                  */
                 TestFmwk.logln(count + "/" + pairLimit + " Checking starting with " + UTF16.valueOf(c));
-                usi2.reset(abbreviateSet(sourceRangeMinusFailures, quickRt, density));
+                usi2.reset(sourceRangeMinusFailures, quickRt, density);
 
                 while (usi2.next()) {
                     int d = usi2.codepoint;
@@ -1549,7 +1561,7 @@ public class RoundTripTest extends TestFmwk {
                     !targetRange.contains(c)) continue;
              */
 
-            usi.reset(abbreviateSet(targetRangeMinusFailures, quickRt, density));
+            usi.reset(targetRangeMinusFailures, quickRt, density);
 
             while (usi.next()) {
                 int c = usi.codepoint;
@@ -1562,7 +1574,7 @@ public class RoundTripTest extends TestFmwk {
                         !targetRange.contains(d)) continue;
                  */
                 TestFmwk.logln(count + "/" + pairLimit + " Checking starting with " + UTF16.valueOf(c));
-                usi2.reset(abbreviateSet(targetRangeMinusFailures, quickRt, density));
+                usi2.reset(targetRangeMinusFailures, quickRt, density);
 
                 while (usi2.next()) {
 

@@ -30,8 +30,7 @@ constexpr int8_t identity2d(UNumberRangeIdentityFallback a, UNumberRangeIdentity
 
 struct NumberRangeData {
     SimpleFormatter rangePattern;
-    // Note: approximatelyPattern is unused since ICU 69.
-    // SimpleFormatter approximatelyPattern;
+    SimpleFormatter approximatelyPattern;
 };
 
 class NumberRangeDataSink : public ResourceSink {
@@ -47,16 +46,12 @@ class NumberRangeDataSink : public ResourceSink {
                     continue; // have already seen this pattern
                 }
                 fData.rangePattern = {value.getUnicodeString(status), status};
-            }
-            /*
-            // Note: approximatelyPattern is unused since ICU 69.
-            else if (uprv_strcmp(key, "approximately") == 0) {
+            } else if (uprv_strcmp(key, "approximately") == 0) {
                 if (hasApproxData()) {
                     continue; // have already seen this pattern
                 }
                 fData.approximatelyPattern = {value.getUnicodeString(status), status};
             }
-            */
         }
     }
 
@@ -64,26 +59,21 @@ class NumberRangeDataSink : public ResourceSink {
         return fData.rangePattern.getArgumentLimit() != 0;
     }
 
-    /*
-    // Note: approximatelyPattern is unused since ICU 69.
     bool hasApproxData() {
         return fData.approximatelyPattern.getArgumentLimit() != 0;
     }
-    */
 
     bool isComplete() {
-        return hasRangeData() /* && hasApproxData() */;
+        return hasRangeData() && hasApproxData();
     }
 
     void fillInDefaults(UErrorCode& status) {
         if (!hasRangeData()) {
             fData.rangePattern = {u"{0}–{1}", status};
         }
-        /*
         if (!hasApproxData()) {
             fData.approximatelyPattern = {u"~{0}", status};
         }
-        */
     }
 
   private:
@@ -126,11 +116,10 @@ NumberRangeFormatterImpl::NumberRangeFormatterImpl(const RangeMacroProps& macros
       formatterImpl2(macros.formatter2.fMacros, status),
       fSameFormatters(macros.singleFormatter),
       fCollapse(macros.collapse),
-      fIdentityFallback(macros.identityFallback),
-      fApproximatelyFormatter(status) {
+      fIdentityFallback(macros.identityFallback) {
 
     const char* nsName = formatterImpl1.getRawMicroProps().nsName;
-    if (!fSameFormatters && uprv_strcmp(nsName, formatterImpl2.getRawMicroProps().nsName) != 0) {
+    if (uprv_strcmp(nsName, formatterImpl2.getRawMicroProps().nsName) != 0) {
         status = U_ILLEGAL_ARGUMENT_ERROR;
         return;
     }
@@ -139,16 +128,7 @@ NumberRangeFormatterImpl::NumberRangeFormatterImpl(const RangeMacroProps& macros
     getNumberRangeData(macros.locale.getName(), nsName, data, status);
     if (U_FAILURE(status)) { return; }
     fRangeFormatter = data.rangePattern;
-
-    if (fSameFormatters && (
-            fIdentityFallback == UNUM_IDENTITY_FALLBACK_APPROXIMATELY ||
-            fIdentityFallback == UNUM_IDENTITY_FALLBACK_APPROXIMATELY_OR_SINGLE_VALUE)) {
-        MacroProps approximatelyMacros(macros.formatter1.fMacros);
-        approximatelyMacros.approximately = true;
-        // Use in-place construction because NumberFormatterImpl has internal self-pointers
-        fApproximatelyFormatter.~NumberFormatterImpl();
-        new (&fApproximatelyFormatter) NumberFormatterImpl(approximatelyMacros, status);
-    }
+    fApproximatelyModifier = {data.approximatelyPattern, kUndefinedField, false};
 
     // TODO: Get locale from PluralRules instead?
     fPluralRanges = StandardPluralRanges::forLocale(macros.locale, status);
@@ -229,7 +209,7 @@ void NumberRangeFormatterImpl::format(UFormattedNumberRangeData& data, bool equa
             break;
 
         default:
-            UPRV_UNREACHABLE_EXIT;
+            UPRV_UNREACHABLE;
     }
 }
 
@@ -252,14 +232,12 @@ void NumberRangeFormatterImpl::formatApproximately (UFormattedNumberRangeData& d
                                                     UErrorCode& status) const {
     if (U_FAILURE(status)) { return; }
     if (fSameFormatters) {
-        // Re-format using the approximately formatter:
-        MicroProps microsAppx;
-        data.quantity1.resetExponent();
-        fApproximatelyFormatter.preProcess(data.quantity1, microsAppx, status);
-        int32_t length = NumberFormatterImpl::writeNumber(microsAppx, data.quantity1, data.getStringRef(), 0, status);
-        length += microsAppx.modInner->apply(data.getStringRef(), 0, length, status);
-        length += microsAppx.modMiddle->apply(data.getStringRef(), 0, length, status);
-        microsAppx.modOuter->apply(data.getStringRef(), 0, length, status);
+        int32_t length = NumberFormatterImpl::writeNumber(micros1, data.quantity1, data.getStringRef(), 0, status);
+        // HEURISTIC: Desired modifier order: inner, middle, approximately, outer.
+        length += micros1.modInner->apply(data.getStringRef(), 0, length, status);
+        length += micros1.modMiddle->apply(data.getStringRef(), 0, length, status);
+        length += fApproximatelyModifier.apply(data.getStringRef(), 0, length, status);
+        micros1.modOuter->apply(data.getStringRef(), 0, length, status);
     } else {
         formatRange(data, micros1, micros2, status);
     }
@@ -385,10 +363,7 @@ void NumberRangeFormatterImpl::formatRange(UFormattedNumberRangeData& data,
     }
 
     length1 += NumberFormatterImpl::writeNumber(micros1, data.quantity1, string, UPRV_INDEX_0, status);
-    // ICU-21684: Write the second number to a temp string to avoid repeated insert operations
-    FormattedStringBuilder tempString;
-    NumberFormatterImpl::writeNumber(micros2, data.quantity2, tempString, 0, status);
-    length2 += string.insert(UPRV_INDEX_2, tempString, status);
+    length2 += NumberFormatterImpl::writeNumber(micros2, data.quantity2, string, UPRV_INDEX_2, status);
 
     // TODO: Support padding?
 

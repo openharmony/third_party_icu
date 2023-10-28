@@ -20,7 +20,8 @@ public class UsagePrefsHandler implements MicroPropsGenerator {
         assert parent != null;
 
         this.fParent = parent;
-        this.fUnitsRouter = new UnitsRouter(MeasureUnitImpl.forIdentifier(inputUnit.getIdentifier()), locale, usage);
+        this.fUnitsRouter =
+                new UnitsRouter(MeasureUnitImpl.forIdentifier(inputUnit.getIdentifier()), locale.getCountry(), usage);
     }
 
     /**
