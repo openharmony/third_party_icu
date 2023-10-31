@@ -49,7 +49,7 @@ static void _fb_trace(const char *m, const UnicodeString *s, UBool b, int32_t d,
 /**
  * Used with sortedInsert()
  */
-static int8_t U_CALLCONV compareUnicodeString(UElement t1, UElement t2) {
+static int32_t U_CALLCONV compareUnicodeString(UElement t1, UElement t2) {
     const UnicodeString &a = *(const UnicodeString*)t1.pointer;
     const UnicodeString &b = *(const UnicodeString*)t2.pointer;
     return a.compare(b);
@@ -58,7 +58,7 @@ static int8_t U_CALLCONV compareUnicodeString(UElement t1, UElement t2) {
 /**
  * A UVector which implements a set of strings.
  */
-class U_COMMON_API UStringSet : public UVector {
+class UStringSet : public UVector {
  public:
   UStringSet(UErrorCode &status) : UVector(uprv_deleteUObject,
                                            uhash_compareUnicodeString,
@@ -90,7 +90,6 @@ class U_COMMON_API UStringSet : public UVector {
     } else {
       sortedInsert(str, compareUnicodeString, status);
       if(U_FAILURE(status)) {
-        delete str;
         return false;
       }
       return true;
@@ -186,37 +185,37 @@ public:
   /* -- cloning and other subclass stuff -- */
   virtual BreakIterator *  createBufferClone(void * /*stackBuffer*/,
                                              int32_t &/*BufferSize*/,
-                                             UErrorCode &status) {
+                                             UErrorCode &status) override {
     // for now - always deep clone
     status = U_SAFECLONE_ALLOCATED_WARNING;
     return clone();
   }
-  virtual SimpleFilteredSentenceBreakIterator* clone() const { return new SimpleFilteredSentenceBreakIterator(*this); }
-  virtual UClassID getDynamicClassID(void) const { return NULL; }
-  virtual UBool operator==(const BreakIterator& o) const { if(this==&o) return true; return false; }
+  virtual SimpleFilteredSentenceBreakIterator* clone() const override { return new SimpleFilteredSentenceBreakIterator(*this); }
+  virtual UClassID getDynamicClassID(void) const override { return NULL; }
+  virtual bool operator==(const BreakIterator& o) const override { if(this==&o) return true; return false; }
 
   /* -- text modifying -- */
-  virtual void setText(UText *text, UErrorCode &status) { fDelegate->setText(text,status); }
-  virtual BreakIterator &refreshInputText(UText *input, UErrorCode &status) { fDelegate->refreshInputText(input,status); return *this; }
-  virtual void adoptText(CharacterIterator* it) { fDelegate->adoptText(it); }
-  virtual void setText(const UnicodeString &text) { fDelegate->setText(text); }
+  virtual void setText(UText *text, UErrorCode &status) override { fDelegate->setText(text,status); }
+  virtual BreakIterator &refreshInputText(UText *input, UErrorCode &status) override { fDelegate->refreshInputText(input,status); return *this; }
+  virtual void adoptText(CharacterIterator* it) override { fDelegate->adoptText(it); }
+  virtual void setText(const UnicodeString &text) override { fDelegate->setText(text); }
 
   /* -- other functions that are just delegated -- */
-  virtual UText *getUText(UText *fillIn, UErrorCode &status) const { return fDelegate->getUText(fillIn,status); }
-  virtual CharacterIterator& getText(void) const { return fDelegate->getText(); }
+  virtual UText *getUText(UText *fillIn, UErrorCode &status) const override { return fDelegate->getUText(fillIn,status); }
+  virtual CharacterIterator& getText(void) const override { return fDelegate->getText(); }
 
   /* -- ITERATION -- */
-  virtual int32_t first(void);
-  virtual int32_t preceding(int32_t offset);
-  virtual int32_t previous(void);
-  virtual UBool isBoundary(int32_t offset);
-  virtual int32_t current(void) const { return fDelegate->current(); } // we keep the delegate current, so this should be correct.
+  virtual int32_t first(void) override;
+  virtual int32_t preceding(int32_t offset) override;
+  virtual int32_t previous(void) override;
+  virtual UBool isBoundary(int32_t offset) override;
+  virtual int32_t current(void) const override { return fDelegate->current(); } // we keep the delegate current, so this should be correct.
 
-  virtual int32_t next(void);
+  virtual int32_t next(void) override;
 
-  virtual int32_t next(int32_t n);
-  virtual int32_t following(int32_t offset);
-  virtual int32_t last(void);
+  virtual int32_t next(int32_t n) override;
+  virtual int32_t following(int32_t offset) override;
+  virtual int32_t last(void) override;
 
 private:
     /**
@@ -483,14 +482,14 @@ SimpleFilteredSentenceBreakIterator::last(void) {
 /**
  * Concrete implementation of builder class.
  */
-class U_COMMON_API SimpleFilteredBreakIteratorBuilder : public FilteredBreakIteratorBuilder {
+class SimpleFilteredBreakIteratorBuilder : public FilteredBreakIteratorBuilder {
 public:
   virtual ~SimpleFilteredBreakIteratorBuilder();
   SimpleFilteredBreakIteratorBuilder(const Locale &fromLocale, UErrorCode &status);
   SimpleFilteredBreakIteratorBuilder(UErrorCode &status);
-  virtual UBool suppressBreakAfter(const UnicodeString& exception, UErrorCode& status);
-  virtual UBool unsuppressBreakAfter(const UnicodeString& exception, UErrorCode& status);
-  virtual BreakIterator *build(BreakIterator* adoptBreakIterator, UErrorCode& status);
+  virtual UBool suppressBreakAfter(const UnicodeString& exception, UErrorCode& status) override;
+  virtual UBool unsuppressBreakAfter(const UnicodeString& exception, UErrorCode& status) override;
+  virtual BreakIterator *build(BreakIterator* adoptBreakIterator, UErrorCode& status) override;
 private:
   UStringSet fSet;
 };
@@ -615,11 +614,11 @@ SimpleFilteredBreakIteratorBuilder::build(BreakIterator* adoptBreakIterator, UEr
         i++) {
     const UnicodeString *abbr = fSet.getStringAt(i);
     if(abbr) {
-      FB_TRACE("build",abbr,TRUE,i);
+      FB_TRACE("build",abbr,true,i);
       ustrs[n] = *abbr; // copy by value
-      FB_TRACE("ustrs[n]",&ustrs[n],TRUE,i);
+      FB_TRACE("ustrs[n]",&ustrs[n],true,i);
     } else {
-      FB_TRACE("build",abbr,FALSE,i);
+      FB_TRACE("build",abbr,false,i);
       status = U_MEMORY_ALLOCATION_ERROR;
       return NULL;
     }
@@ -630,37 +629,37 @@ SimpleFilteredBreakIteratorBuilder::build(BreakIterator* adoptBreakIterator, UEr
   for(int i=0;i<subCount;i++) {
     int nn = ustrs[i].indexOf(kFULLSTOP); // TODO: non-'.' abbreviations
     if(nn>-1 && (nn+1)!=ustrs[i].length()) {
-      FB_TRACE("partial",&ustrs[i],FALSE,i);
+      FB_TRACE("partial",&ustrs[i],false,i);
       // is partial.
       // is it unique?
       int sameAs = -1;
       for(int j=0;j<subCount;j++) {
         if(j==i) continue;
         if(ustrs[i].compare(0,nn+1,ustrs[j],0,nn+1)==0) {
-          FB_TRACE("prefix",&ustrs[j],FALSE,nn+1);
+          FB_TRACE("prefix",&ustrs[j],false,nn+1);
           //UBool otherIsPartial = ((nn+1)!=ustrs[j].length());  // true if ustrs[j] doesn't end at nn
           if(partials[j]==0) { // hasn't been processed yet
             partials[j] = kSuppressInReverse | kAddToForward;
-            FB_TRACE("suppressing",&ustrs[j],FALSE,j);
+            FB_TRACE("suppressing",&ustrs[j],false,j);
           } else if(partials[j] & kSuppressInReverse) {
             sameAs = j; // the other entry is already in the reverse table.
           }
         }
       }
-      FB_TRACE("for partial same-",&ustrs[i],FALSE,sameAs);
-      FB_TRACE(" == partial #",&ustrs[i],FALSE,partials[i]);
+      FB_TRACE("for partial same-",&ustrs[i],false,sameAs);
+      FB_TRACE(" == partial #",&ustrs[i],false,partials[i]);
       UnicodeString prefix(ustrs[i], 0, nn+1);
       if(sameAs == -1 && partials[i] == 0) {
         // first one - add the prefix to the reverse table.
         prefix.reverse();
         builder->add(prefix, kPARTIAL, status);
         revCount++;
-        FB_TRACE("Added partial",&prefix,FALSE, i);
-        FB_TRACE(u_errorName(status),&ustrs[i],FALSE,i);
+        FB_TRACE("Added partial",&prefix,false, i);
+        FB_TRACE(u_errorName(status),&ustrs[i],false,i);
         partials[i] = kSuppressInReverse | kAddToForward;
       } else {
-        FB_TRACE("NOT adding partial",&prefix,FALSE, i);
-        FB_TRACE(u_errorName(status),&ustrs[i],FALSE,i);
+        FB_TRACE("NOT adding partial",&prefix,false, i);
+        FB_TRACE(u_errorName(status),&ustrs[i],false,i);
       }
     }
   }
@@ -669,9 +668,9 @@ SimpleFilteredBreakIteratorBuilder::build(BreakIterator* adoptBreakIterator, UEr
       ustrs[i].reverse();
       builder->add(ustrs[i], kMATCH, status);
       revCount++;
-      FB_TRACE(u_errorName(status), &ustrs[i], FALSE, i);
+      FB_TRACE(u_errorName(status), &ustrs[i], false, i);
     } else {
-      FB_TRACE("Adding fwd",&ustrs[i], FALSE, i);
+      FB_TRACE("Adding fwd",&ustrs[i], false, i);
 
       // an optimization would be to only add the portion after the '.'
       // for example, for "Ph.D." we store ".hP" in the reverse table. We could just store "D." in the forward,
@@ -683,12 +682,12 @@ SimpleFilteredBreakIteratorBuilder::build(BreakIterator* adoptBreakIterator, UEr
       ////if(debug2) u_printf("SUPPRESS- not Added(%d):  /%S/ status=%s\n",partials[i], ustrs[i].getTerminatedBuffer(), u_errorName(status));
     }
   }
-  FB_TRACE("AbbrCount",NULL,FALSE, subCount);
+  FB_TRACE("AbbrCount",NULL,false, subCount);
 
   if(revCount>0) {
     backwardsTrie.adoptInstead(builder->build(USTRINGTRIE_BUILD_FAST, status));
     if(U_FAILURE(status)) {
-      FB_TRACE(u_errorName(status),NULL,FALSE, -1);
+      FB_TRACE(u_errorName(status),NULL,false, -1);
       return NULL;
     }
   }
@@ -696,7 +695,7 @@ SimpleFilteredBreakIteratorBuilder::build(BreakIterator* adoptBreakIterator, UEr
   if(fwdCount>0) {
     forwardsPartialTrie.adoptInstead(builder2->build(USTRINGTRIE_BUILD_FAST, status));
     if(U_FAILURE(status)) {
-      FB_TRACE(u_errorName(status),NULL,FALSE, -1);
+      FB_TRACE(u_errorName(status),NULL,false, -1);
       return NULL;
     }
   }

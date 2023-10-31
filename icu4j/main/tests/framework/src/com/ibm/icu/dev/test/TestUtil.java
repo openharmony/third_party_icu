@@ -15,6 +15,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Locale;
+import java.util.MissingResourceException;
+
+import com.ibm.icu.impl.breakiter.LSTMBreakEngine;
+import com.ibm.icu.lang.UScript;
 
 public final class TestUtil {
     /**
@@ -112,8 +116,8 @@ public final class TestUtil {
      * Escape unprintable characters using <backslash>uxxxx notation
      * for U+0000 to U+FFFF and <backslash>Uxxxxxxxx for U+10000 and
      * above.  If the character is printable ASCII, then do nothing
-     * and return FALSE.  Otherwise, append the escaped notation and
-     * return TRUE.
+     * and return false.  Otherwise, append the escaped notation and
+     * return true.
      */
     public static boolean escapeUnprintable(StringBuffer result, int c) {
         if (isUnprintable(c)) {
@@ -278,5 +282,29 @@ public final class TestUtil {
             }
         }
         return ver;
+    }
+
+    private static boolean lstmDataIsBuilt() {
+        try {
+            LSTMBreakEngine.createData(UScript.THAI);
+            return true;
+        } catch (MissingResourceException e) {
+            // do nothing
+        }
+        try {
+            LSTMBreakEngine.createData(UScript.MYANMAR);
+            return true;
+        } catch (MissingResourceException e) {
+            // do nothing
+        }
+        return false;
+    }
+
+    public static boolean skipLSTMTest() {
+        return ! lstmDataIsBuilt();
+    }
+
+    public static boolean skipDictionaryTest() {
+        return lstmDataIsBuilt();
     }
 }
