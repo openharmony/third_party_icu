@@ -51,7 +51,7 @@ For some languages, multiple collation types are available; for example,
 "de-u-co-phonebk" / "de@collation=phonebook". They can be enumerated via
 `Collator::getKeywordValuesForLocale()`. See also the list of available collation
 tailorings in the online [ICU Collation
-Demo](http://demo.icu-project.org/icu-bin/collation.html).
+Demo](https://icu4c-demos.unicode.org/icu-bin/collation.html).
 
 Starting with ICU 54, collation attributes can be specified via locale keywords
 as well, in the old locale extension syntax ("el@colCaseFirst=upper") or in
@@ -60,7 +60,7 @@ language tag syntax ("el-u-kf-upper"). Keywords and values are case-insensitive.
 See the [LDML Collation spec, Collation
 Settings](http://www.unicode.org/reports/tr35/tr35-collation.html#Collation_Settings),
 and the [data
-file](https://github.com/unicode-org/cldr/blob/master/common/bcp47/collation.xml) listing
+file](https://github.com/unicode-org/cldr/blob/main/common/bcp47/collation.xml) listing
 the valid collation keywords and their values. (The deprecated attributes
 kh/colHiraganaQuaternary and vt/variableTop are not supported.)
 
@@ -345,7 +345,7 @@ for short strings.
 
 The byte values used in several ICU versions for sort keys and collation
 elements are documented in the [“Special Byte Values” design
-doc](http://site.icu-project.org/design/collation/bytes) on the ICU site.
+doc](https://icu.unicode.org/design/collation/bytes) on the ICU site.
 
 ### Sort Key Output Buffer
 
@@ -695,10 +695,10 @@ API is provided. Each attribute has its own setter API of the form
 1.  Ken Whistler, Markus Scherer: "Unicode Technical Standard #10, Unicode Collation
     Algorithm" (<http://www.unicode.org/reports/tr10/>)
 
-2.  ICU Design doc: "Collation v2" (<http://site.icu-project.org/design/collation/v2>)
+2.  ICU Design doc: "Collation v2" (<https://icu.unicode.org/design/collation/v2>)
 
 3.  Mark Davis: "ICU Collation Design Document"
-    (<https://htmlpreview.github.io/?https://github.com/unicode-org/icu-docs/blob/master/design/collation/ICU_collation_design.htm>)
+    (<https://htmlpreview.github.io/?https://github.com/unicode-org/icu-docs/blob/main/design/collation/ICU_collation_design.htm>)
 
 3.  The Unicode Standard, chapter 5, "Implementation guidelines"
     (<http://www.unicode.org/uni2book/ch05.pdf>)

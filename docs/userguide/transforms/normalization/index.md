@@ -42,7 +42,7 @@ ICU 4.4 adds the Normalizer2 API (in
 [C++](https://unicode-org.github.io/icu-docs/apidoc/released/icu4c/classNormalizer2.html) and
 [C](https://unicode-org.github.io/icu-docs/apidoc/released/icu4c/unorm2_8h.html)), replacing almost all
 of the old Normalizer API. There is a [design
-doc](http://site.icu-project.org/design/normalization/custom) with many details.
+doc](https://icu.unicode.org/design/normalization/custom) with many details.
 All of the replaced old API is now implemented as a thin wrapper around the new
 API.
 
@@ -108,7 +108,7 @@ invoke `gennorm2 --help`.
 
 gennorm2 starts with no data. If you want to include standard Unicode
 Normalization data, use the files in
-[{ICU4C}/source/data/unidata/norm2/](https://github.com/unicode-org/icu/tree/master/icu4c/source/data/unidata/norm2)
+[{ICU4C}/source/data/unidata/norm2/](https://github.com/unicode-org/icu/tree/main/icu4c/source/data/unidata/norm2)
 . You can modify one of them, or provide it together with one or more additional
 files that add or remove mappings.
 
@@ -229,7 +229,7 @@ public:
             // unnormalized suffix as a read-only alias (does not copy characters)
             UnicodeString unnormalized=s.tempSubString(spanQCYes);
             // set the fcdString to the FCD prefix as a read-only alias
-            fcdString.setTo(FALSE, s.getBuffer(), spanQCYes);
+            fcdString.setTo(false, s.getBuffer(), spanQCYes);
             // automatic copy-on-write, and append the FCD'ed suffix
             fcd.normalizeSecondAndAppend(fcdString, unnormalized, errorCode);
             ps=&fcdString;
