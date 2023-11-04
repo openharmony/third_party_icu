@@ -612,10 +612,8 @@ ohos_source_set("static_icuuc") {
     "//build/config/compiler:rtti",
   ]
 
-  is_cross_platform_build =
-      defined(build_cross_platform_version) && build_cross_platform_version
-
-  if (!is_cross_platform_build || current_toolchain == host_toolchain) {
+  if (!(defined(is_arkui_x) && is_arkui_x) ||
+      current_toolchain == host_toolchain) {
     deps = [ ":static_icustubdata" ]
   }
 
