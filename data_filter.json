@@ -42,7 +42,7 @@
                 "zh_Hant_MO",
                 "zh_Hant_HK",
                 "zh_Hant_TW",
-                "zh_Hans_CN"
+                "zh_Hans_CN",
                 "ug",
                 "ug_CN",
                 "bo",
@@ -55,6 +55,36 @@
       ]
     },
     "featureFilters": {
+      "confusables": "exclude",
+      "conversion_mappings" : "exclude",
+      "collationUCAData" : "implicithan",
+      "normalization" : {
+          "whitelist": [
+              "nfkc"
+          ]
+      },
+      "brkitr_dictionaries": {
+            "whitelist": [
+                "dictionaries/cjdict"
+            ]
+        },
+      "brkitr_tree": {
+          "includelist":[
+                    "root",
+                    "ja",
+                    "fr",
+                    "de",
+                    "pt",
+                    "id",
+                    "es",
+                    "it",
+                    "en",
+                    "en_US",
+                    "zh",
+                    "zh_Hant",
+                    "sv"
+          ]
+      },
       "lang_tree": {
           "includelist":[
                     "root",
@@ -95,7 +125,7 @@
                     "zh_Hant_MO",
                     "zh_Hant_HK",
                     "zh_Hant_TW",
-                    "zh_Hans_CN"
+                    "zh_Hans_CN",
                     "ug",
                     "ug_CN",
                     "bo",
@@ -147,7 +177,7 @@
                     "zh_Hant_MO",
                     "zh_Hant_HK",
                     "zh_Hant_TW",
-                    "zh_Hans_CN"
+                    "zh_Hans_CN",
                     "ug",
                     "ug_CN",
                     "bo",
@@ -199,7 +229,7 @@
                     "zh_Hant_MO",
                     "zh_Hant_HK",
                     "zh_Hant_TW",
-                    "zh_Hans_CN"
+                    "zh_Hans_CN",
                     "ug",
                     "ug_CN",
                     "bo",
@@ -251,7 +281,7 @@
                     "zh_Hant_MO",
                     "zh_Hant_HK",
                     "zh_Hant_TW",
-                    "zh_Hans_CN"
+                    "zh_Hans_CN",
                     "ug",
                     "ug_CN",
                     "bo",
@@ -303,7 +333,7 @@
                     "zh_Hant_MO",
                     "zh_Hant_HK",
                     "zh_Hant_TW",
-                    "zh_Hans_CN"
+                    "zh_Hans_CN",
                     "ug",
                     "ug_CN",
                     "bo",
@@ -355,7 +385,7 @@
                     "zh_Hant_MO",
                     "zh_Hant_HK",
                     "zh_Hant_TW",
-                    "zh_Hans_CN"
+                    "zh_Hans_CN",
                     "ug",
                     "ug_CN",
                     "bo",
@@ -407,7 +437,7 @@
                     "zh_Hant_MO",
                     "zh_Hant_HK",
                     "zh_Hant_TW",
-                    "zh_Hans_CN"
+                    "zh_Hans_CN",
                     "ug",
                     "ug_CN",
                     "bo",
@@ -419,5 +449,19 @@
                     "sv_SE"
           ]
         }
-    }
+    },
+    "resourceFilters":[
+        {
+            "categories": ["confusables"],
+            "rules": [ "-/*"] 
+        },
+        {
+            "categories": ["conversion_mappings"],
+            "rules": [ "-/*"] 
+        },
+        {
+            "categories": ["collationUCAData"],
+            "rules": [ "+/implicithan"] 
+        }
+    ]
 }
