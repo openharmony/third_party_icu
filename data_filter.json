@@ -56,7 +56,15 @@
     },
     "featureFilters": {
       "confusables": "exclude",
-      "conversion_mappings" : "exclude",
+      "conversion_mappings" : {
+          "includelist":[
+            "gb18030",
+            "ibm-1386_P100-2001",
+            "windows-936-2000",
+            "ibm-1383_P110-1999",
+            "ibm-5478_P100-1995"
+          ]
+      },
       "collationUCAData" : "implicithan",
       "normalization" : {
           "whitelist": [
