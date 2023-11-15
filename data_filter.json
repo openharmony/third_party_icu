@@ -55,7 +55,6 @@
       ]
     },
     "featureFilters": {
-      "confusables": "exclude",
       "conversion_mappings" : {
           "includelist":[
             "gb18030",
@@ -65,17 +64,11 @@
             "ibm-5478_P100-1995"
           ]
       },
-      "collationUCAData" : "implicithan",
-      "normalization" : {
-          "whitelist": [
-              "nfkc"
-          ]
-      },
       "brkitr_dictionaries": {
             "whitelist": [
                 "dictionaries/cjdict"
             ]
-        },
+       },
       "brkitr_tree": {
           "includelist":[
                     "root",
@@ -457,19 +450,5 @@
                     "sv_SE"
           ]
         }
-    },
-    "resourceFilters":[
-        {
-            "categories": ["confusables"],
-            "rules": [ "-/*"] 
-        },
-        {
-            "categories": ["conversion_mappings"],
-            "rules": [ "-/*"] 
-        },
-        {
-            "categories": ["collationUCAData"],
-            "rules": [ "+/implicithan"] 
-        }
-    ]
+    }
 }
