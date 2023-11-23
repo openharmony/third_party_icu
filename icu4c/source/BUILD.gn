@@ -251,6 +251,7 @@ ohos_shared_library("shared_icuuc_host") {
     "-Wignored-attributes",
     "-std=c++11",
     "-Wno-ignored-attributes",
+    "-Wno-deprecated-declarations",
   ]
   ldflags = [
     "-shared",
@@ -336,6 +337,7 @@ ohos_shared_library("shared_icutu") {
     "-DUNISTR_FROM_STRING_EXPLICIT=explicit",
     "-DU_ATTRIBUTE_DEPRECATED=",
     "-Wno-ignored-attributes",
+    "-Wno-deprecated-declarations",
   ]
   ldflags = [
     "-shared",
@@ -387,6 +389,7 @@ ohos_shared_library("shared_icuio") {
     "-Wno-error=unneeded-internal-declaration",
     "-std=c++11",
     "-Wno-ignored-attributes",
+    "-Wno-deprecated-declarations",
   ]
   ldflags = [
     "-shared",
@@ -417,6 +420,7 @@ ohos_executable("genbrk") {
     "-Wpointer-arith",
     "-Wwrite-strings",
     "-std=c++11",
+    "-Wno-deprecated-declarations",
   ]
   ldflags = [
     "-ldl",
@@ -438,6 +442,7 @@ ohos_executable("genccode") {
     "-Wpointer-arith",
     "-Wwrite-strings",
     "-std=c++11",
+    "-Wno-deprecated-declarations",
   ]
   ldflags = [
     "-ldl",
@@ -459,6 +464,7 @@ ohos_executable("gencfu") {
     "-Wpointer-arith",
     "-Wwrite-strings",
     "-std=c++11",
+    "-Wno-deprecated-declarations",
   ]
   ldflags = [
     "-ldl",
@@ -480,6 +486,7 @@ ohos_executable("gencnval") {
     "-Wpointer-arith",
     "-Wwrite-strings",
     "-std=c++11",
+    "-Wno-deprecated-declarations",
   ]
   ldflags = [
     "-ldl",
@@ -501,6 +508,7 @@ ohos_executable("gendict") {
     "-Wpointer-arith",
     "-Wwrite-strings",
     "-std=c++11",
+    "-Wno-deprecated-declarations",
   ]
   ldflags = [
     "-ldl",
@@ -534,6 +542,7 @@ ohos_static_library("genrb_c") {
     "-DUNISTR_FROM_STRING_EXPLICIT=explicit",
     "-DU_ATTRIBUTE_DEPRECATED=",
     "-Wno-sign-compare",
+    "-Wno-deprecated-declarations",
   ]
   ldflags = [
     "-ldl",
@@ -570,6 +579,7 @@ ohos_executable("genrb") {
     "-DUNISTR_FROM_CHAR_EXPLICIT=explicit",
     "-DUNISTR_FROM_STRING_EXPLICIT=explicit",
     "-DU_ATTRIBUTE_DEPRECATED=",
+    "-Wno-deprecated-declarations",
   ]
   ldflags = [
     "-ldl",
@@ -591,6 +601,7 @@ ohos_executable("derb") {
     "-Wpointer-arith",
     "-Wwrite-strings",
     "-std=c++11",
+    "-Wno-deprecated-declarations",
   ]
   ldflags = [
     "-ldl",
@@ -617,6 +628,7 @@ ohos_executable("makeconv") {
     "-Wpointer-arith",
     "-Wwrite-strings",
     "-std=c++11",
+    "-Wno-deprecated-declarations",
   ]
   ldflags = [
     "-ldl",
@@ -641,6 +653,7 @@ ohos_executable("gensprep") {
     "-Wpointer-arith",
     "-Wwrite-strings",
     "-std=c++11",
+    "-Wno-deprecated-declarations",
   ]
   ldflags = [
     "-ldl",
@@ -662,6 +675,7 @@ ohos_executable("icupkg") {
     "-Wpointer-arith",
     "-Wwrite-strings",
     "-std=c++11",
+    "-Wno-deprecated-declarations",
   ]
   ldflags = [
     "-ldl",
@@ -689,6 +703,7 @@ ohos_executable("pkgdata") {
     "-Wpointer-arith",
     "-Wwrite-strings",
     "-std=c++11",
+    "-Wno-deprecated-declarations",
   ]
   ldflags = [
     "-ldl",
