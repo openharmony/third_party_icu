@@ -11,9 +11,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import("//build/config/config.gni")
 import("//build/ohos.gni")
 import("//third_party/icu/icu.gni")
 import("//third_party/icu/icu4c/icu4c_config.gni")
+
 config("icu_config") {
   include_dirs = [
     "//third_party/icu/icu4c/source/common",
@@ -516,6 +518,17 @@ icu_i18n_source = [
 ]
 
 ohos_shared_library("shared_icuuc") {
+  ldflags = [
+    "-shared",
+    "-lm",
+  ]
+  if (current_os == "ios") {
+    ldflags += [
+      "-Wl",
+      "-install_name",
+      "@rpath/libhmicuuc.framework/libhmicuuc",
+    ]
+  }
   configs = [
     ":icu_config",
     "//build/config/compiler:rtti",
@@ -546,10 +559,6 @@ ohos_shared_library("shared_icuuc") {
     "-Wno-unused-but-set-variable",
     "-Wno-deprecated-declarations",
   ]
-  ldflags = [
-    "-shared",
-    "-lm",
-  ]
 
   part_name = "$icu_part_name"
   subsystem_name = "$icu_subsystem_name"
@@ -559,6 +568,14 @@ ohos_shared_library("shared_icuuc") {
   relative_install_dir = "platformsdk"
   output_name = "hmicuuc"
   install_enable = true
+}
+
+if (current_os == "ios") {
+  ohos_combine_darwin_framework("libhmicuuc") {
+    deps = [ ":shared_icuuc" ]
+    subsystem_name = "thirdparty"
+    part_name = "icu"
+  }
 }
 
 ohos_shared_library("shared_icui18n") {
