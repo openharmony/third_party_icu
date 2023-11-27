@@ -557,6 +557,17 @@ ohos_shared_library("shared_icuuc") {
 }
 
 ohos_shared_library("shared_icui18n") {
+  ldflags = [
+    "-shared",
+    "-lm",
+  ]
+  if (current_os == "ios") {
+    ldflags += [
+      "-Wl",
+      "-install_name",
+      "@rpath/libhmicui18n.framework/libhmicui18n",
+    ]
+  }
   sources = icu_i18n_source
   configs = [
     ":icu_config",
@@ -587,10 +598,6 @@ ohos_shared_library("shared_icui18n") {
     "-Wno-unused-but-set-variable",
     "-Wno-deprecated-declarations",
   ]
-  ldflags = [
-    "-shared",
-    "-lm",
-  ]
   if (!is_mingw) {
     cflags_cc += [ "-fPIC" ]
     ldflags += [ "-ldl" ]
@@ -604,6 +611,14 @@ ohos_shared_library("shared_icui18n") {
   relative_install_dir = "platformsdk"
   output_name = "hmicui18n"
   install_enable = true
+}
+
+if (current_os == "ios") {
+  ohos_combine_darwin_framework("libhmicui18n") {
+    deps = [ ":shared_icui18n" ]
+    subsystem_name = "thirdparty"
+    part_name = "icu"
+  }
 }
 
 ohos_source_set("static_icuuc") {
