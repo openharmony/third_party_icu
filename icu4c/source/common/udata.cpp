@@ -909,6 +909,12 @@ udata_setCommonData(const void *data, UErrorCode *pErrorCode) {
     setCommonICUData(&dataMemory, true, pErrorCode);
 }
 
+U_CAPI void U_EXPORT2
+udata_setCommonDataAfterClean(const void *data, UErrorCode *pErrorCode) {
+    udata_cleanup();
+    udata_setCommonData(data, pErrorCode);
+}
+
 /*---------------------------------------------------------------------------
  *
  *  udata_setAppData
