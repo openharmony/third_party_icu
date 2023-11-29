@@ -346,6 +346,12 @@ udata_getInfo(UDataMemory *pData, UDataInfo *pInfo);
 U_CAPI void U_EXPORT2
 udata_setCommonData(const void *data, UErrorCode *err);
 
+/**
+ * Add for OpenHarmony project
+ */
+U_CAPI void U_EXPORT2
+udata_setCommonDataAfterClean(const void *data, UErrorCode *err);
+
 
 /**
  * This function bypasses the normal ICU data loading process for application-specific
