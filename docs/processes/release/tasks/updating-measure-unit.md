@@ -1,9 +1,26 @@
+---
+layout: default
+title: Updating MeasureUnit with new CLDR data
+parent: Release & Milestone Tasks
+grand_parent: Contributors
+nav_order: 120
+---
+
 <!--
 © 2020 and later: Unicode, Inc. and others.
 License & terms of use: http://www.unicode.org/copyright.html
 -->
 
-# Updating Measure Unit with new CLDR data
+# Updating MeasureUnit with new CLDR data
+{: .no_toc }
+
+## Contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
 
 This document explains how to update the C++ and Java version of the MeasureUnit
 class with new CLDR data.
@@ -115,7 +132,7 @@ will be considered new for the next release too.
 ## Updating units.txt and unitConstants
 
 The standard ldml2icu process is used to update ICU's resource files (see
-[cldr-icu-readme.txt](https://github.com/unicode-org/icu/blob/master/icu4c/source/data/cldr-icu-readme.txt)).
+[cldr-icu-readme.txt](https://github.com/unicode-org/icu/blob/main/icu4c/source/data/cldr-icu-readme.txt)).
 CLDR's units.xml defines conversion rates in terms of some constants defined in
 `unitConstants`.
 

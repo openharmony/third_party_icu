@@ -47,7 +47,7 @@ the udata API for loading ICU data. Especially, a UDataInfo structure
 precedes the actual data. It contains platform properties values and the
 file format version.
 
-The following is a description of format version 7.7 .
+The following is a description of format version 7.8 .
 
 Data contents:
 
@@ -257,7 +257,7 @@ The encoding of numeric values was extended to handle such values.
 --- Changes in format version 7.2 ---
 
 ICU 57 adds 4 Emoji properties to vector word 2.
-http://bugs.icu-project.org/trac/ticket/11802
+https://unicode-org.atlassian.net/browse/ICU-11802
 http://www.unicode.org/reports/tr51/#Emoji_Properties
 
 --- Changes in format version 7.3 ---
@@ -269,7 +269,7 @@ ICU 58 adds fraction-20 numeric values for new Unicode 9 Malayalam fraction char
 ICU 60 adds the Prepended_Concatenation_Mark property to vector word 1.
 
 ICU 60 adds the Emoji_Component property to vector word 2, for emoji 5.
-http://bugs.icu-project.org/trac/ticket/13062
+https://unicode-org.atlassian.net/browse/ICU-13062
 http://www.unicode.org/reports/tr51/#Emoji_Properties
 
 --- Changes in format version 7.5 ---
@@ -286,6 +286,11 @@ ICU 64 adds fraction-32 numeric values for new Unicode 12 Tamil fraction charact
 ICU 66 adds two bits for the UScriptCode or Script_Extensions index in vector word 0.
 The value is split across bits 21..20 & 7..0.
 
+--- Changes in format version 7.8 ---
+
+ICU 70 moves the emoji properties from uprops.icu to (new) uemoji.icu.
+The 6 bits in vector word 2 that stored emoji properties are unused again.
+
 ----------------------------------------------------------------------------- */
 
 U_NAMESPACE_USE
@@ -301,8 +306,8 @@ static UDataInfo dataInfo={
     0,
 
     { 0x55, 0x50, 0x72, 0x6f },                 /* dataFormat="UPro" */
-    { 7, 7, 0, 0 },                             /* formatVersion */
-    { 10, 0, 0, 0 }                             /* dataVersion */
+    { 7, 8, 0, 0 },                             /* formatVersion */
+    { 14, 0, 0, 0 }                             /* dataVersion */
 };
 
 inline uint32_t splitScriptCodeOrIndex(uint32_t v) {
@@ -407,10 +412,10 @@ encodeNumericValue(UChar32 start, const char *s, UErrorCode &errorCode) {
     /* get a possible minus sign */
     UBool isNegative;
     if(*s=='-') {
-        isNegative=TRUE;
+        isNegative=true;
         ++s;
     } else {
-        isNegative=FALSE;
+        isNegative=false;
     }
 
     int32_t value=0, den=0, exp=0, ntv=0;
@@ -568,7 +573,7 @@ CorePropsBuilder::setGcAndNumeric(const UniProps &props, const UnicodeSet &newVa
     if(start==end) {
         utrie2_set32(pTrie, start, value, &errorCode);
     } else {
-        utrie2_setRange32(pTrie, start, end, value, TRUE, &errorCode);
+        utrie2_setRange32(pTrie, start, end, value, true, &errorCode);
     }
     if(U_FAILURE(errorCode)) {
         fprintf(stderr, "error: utrie2_setRange32(properties trie %04lX..%04lX) failed - %s\n",
@@ -625,13 +630,7 @@ propToBinaries[]={
     { UCHAR_ID_CONTINUE,                    1, UPROPS_ID_CONTINUE },
     { UCHAR_GRAPHEME_BASE,                  1, UPROPS_GRAPHEME_BASE },
 
-    { UCHAR_EMOJI,                          2, UPROPS_2_EMOJI },
-    { UCHAR_EMOJI_PRESENTATION,             2, UPROPS_2_EMOJI_PRESENTATION },
-    { UCHAR_EMOJI_MODIFIER,                 2, UPROPS_2_EMOJI_MODIFIER },
-    { UCHAR_EMOJI_MODIFIER_BASE,            2, UPROPS_2_EMOJI_MODIFIER_BASE },
-    { UCHAR_EMOJI_COMPONENT,                2, UPROPS_2_EMOJI_COMPONENT },
     { UCHAR_PREPENDED_CONCATENATION_MARK,   1, UPROPS_PREPENDED_CONCATENATION_MARK },
-    { UCHAR_EXTENDED_PICTOGRAPHIC,          2, UPROPS_2_EXTENDED_PICTOGRAPHIC },
 };
 
 struct PropToEnum {
@@ -827,7 +826,7 @@ CorePropsBuilder::build(UErrorCode &errorCode) {
     }
 
     int32_t pvRows;
-    const uint32_t *pvArray=upvec_getArray(pv, &pvRows, NULL);
+    upvec_getArray(pv, &pvRows, NULL);
     int32_t pvCount=pvRows*UPROPS_VECTOR_WORDS;
 
     /* round up scriptExtensions to multiple of 4 bytes */
@@ -894,6 +893,7 @@ CorePropsBuilder::writeCSourceFile(const char *path, UErrorCode &errorCode) {
     usrc_writeArray(f,
         "static const UVersionInfo dataVersion={",
         dataInfo.dataVersion, 8, 4,
+        "",
         "};\n\n");
     usrc_writeUTrie2Arrays(f,
         "static const uint16_t propsTrie_index[%ld]={\n", NULL,
@@ -916,6 +916,7 @@ CorePropsBuilder::writeCSourceFile(const char *path, UErrorCode &errorCode) {
     usrc_writeArray(f,
         "static const uint32_t propsVectors[%ld]={\n",
         pvArray, 32, pvCount,
+        "",
         "};\n\n");
     fprintf(f, "static const int32_t countPropsVectors=%ld;\n", (long)pvCount);
     fprintf(f, "static const int32_t propsVectorsColumns=%ld;\n", (long)UPROPS_VECTOR_WORDS);
@@ -923,11 +924,13 @@ CorePropsBuilder::writeCSourceFile(const char *path, UErrorCode &errorCode) {
     usrc_writeArray(f,
         "static const uint16_t scriptExtensions[%ld]={\n",
         scriptExtensions.getBuffer(), 16, scriptExtensions.length(),
+        "",
         "};\n\n");
 
     usrc_writeArray(f,
         "static const int32_t indexes[UPROPS_INDEX_COUNT]={",
         indexes, 32, UPROPS_INDEX_COUNT,
+        "",
         "};\n\n");
     fputs("#endif  // INCLUDED_FROM_UCHAR_C\n", f);
     fclose(f);
