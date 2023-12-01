@@ -61,6 +61,7 @@ ohos_shared_library("shared_icuuc_host") {
     "//third_party/icu/icu4c/source/common/dictionarydata.cpp",
     "//third_party/icu/icu4c/source/common/dtintrv.cpp",
     "//third_party/icu/icu4c/source/common/edits.cpp",
+    "//third_party/icu/icu4c/source/common/emojiprops.cpp",
     "//third_party/icu/icu4c/source/common/errorcode.cpp",
     "//third_party/icu/icu4c/source/common/filteredbrk.cpp",
     "//third_party/icu/icu4c/source/common/filterednormalizer2.cpp",
@@ -82,6 +83,7 @@ ohos_shared_library("shared_icuuc_host") {
     "//third_party/icu/icu4c/source/common/locresdata.cpp",
     "//third_party/icu/icu4c/source/common/locutil.cpp",
     "//third_party/icu/icu4c/source/common/lsr.cpp",
+    "//third_party/icu/icu4c/source/common/lstmbe.cpp",
     "//third_party/icu/icu4c/source/common/messagepattern.cpp",
     "//third_party/icu/icu4c/source/common/normalizer2.cpp",
     "//third_party/icu/icu4c/source/common/normalizer2impl.cpp",
@@ -543,7 +545,10 @@ ohos_static_library("genrb_c") {
   ]
 }
 ohos_executable("genrb") {
-  configs = [ ":icu_config" ]
+  configs = [
+    ":icu_config",
+    "//build/config/compiler:rtti",
+  ]
   deps = [
     ":genrb_c(${host_toolchain})",
     ":lib_host",

@@ -26,6 +26,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
 import com.ibm.icu.dev.test.TestFmwk;
+import com.ibm.icu.dev.test.TestUtil;
 import com.ibm.icu.impl.RBBIDataWrapper;
 import com.ibm.icu.text.BreakIterator;
 import com.ibm.icu.text.RuleBasedBreakIterator;
@@ -42,6 +43,9 @@ public class RBBITest extends TestFmwk {
 
     @Test
    public void TestThaiDictionaryBreakIterator() {
+       // The expectations in this test heavily depends on the Thai dictionary.
+       // Therefore, we skip this test under the LSTM configuration.
+       org.junit.Assume.assumeTrue(!TestUtil.skipDictionaryTest());
        int position;
        int index;
        int result[] = { 1, 2, 5, 10, 11, 12, 11, 10, 5, 2, 1, 0 };
@@ -835,7 +839,7 @@ public class RBBITest extends TestFmwk {
             int result = bi.preceding(ruleLen);
             assertEquals("Reverse iteration should find the boundary at 0", 0, result);
 
-            // Verify that the range of rule lengths being tested cover the transations
+            // Verify that the range of rule lengths being tested cover the translations
             // from 8 to 16 bit data.
             RBBIDataWrapper dw = bi.fRData;
             RBBIDataWrapper.RBBIStateTable fwtbl = dw.fFTable;
@@ -941,5 +945,63 @@ public class RBBITest extends TestFmwk {
         rules = "a😀b;";
         bi = new RuleBasedBreakIterator(rules);
         assertEquals("Rules does not match", rules, bi.toString());
+    }
+
+    /* Test preceding(index) and following(index), with semi-random indexes.
+     * The random indexes are produced in clusters that are relatively closely spaced,
+     * to increase the occurrences of hits to the internal break cache.
+     */
+    @Test
+    public void TestRandomAccess() {
+        final int CACHE_SIZE = 128;
+        final StringBuilder testData = new StringBuilder();
+        for (int i=0; i<CACHE_SIZE*2; ++i) {
+            testData.append("aaaa\n");
+        }
+        RuleBasedBreakIterator bi =
+                (RuleBasedBreakIterator)BreakIterator.getLineInstance(ULocale.ENGLISH);
+        bi.setText(testData);
+
+        class Fns {     // This class exists only to allow declaring nested functions
+                        // within TestRandomAccess().
+            public int expectedPreceding(int from) {
+                if (from == 0) {return BreakIterator.DONE;}
+                if (from % 5 == 0) {return from - 5;}
+                return from - (from % 5);
+            };
+
+            public int expectedFollow(int from) {
+                if (from >= testData.length()) {return BreakIterator.DONE;}
+                if (from % 5 == 0) {return from + 5;}
+                return from + (5 - (from % 5));
+            };
+
+            ICU_Rand randomGenerator = new ICU_Rand(0);
+            int lastNum;
+            int clusterCount;
+            static final int CLUSTER_SIZE = 100;
+            static final int CLUSTER_LENGTH = 10;
+            public int randomStringIndex() {
+                if (clusterCount < CLUSTER_LENGTH) {
+                    ++clusterCount;
+                    lastNum += (randomGenerator.next() % CLUSTER_SIZE);
+                    lastNum -= CLUSTER_SIZE / 2;
+                    lastNum = Math.max(0, lastNum);
+                    lastNum = Math.min(testData.length() + 5, lastNum);
+                } else {
+                    clusterCount = 0;
+                    lastNum = randomGenerator.next() % testData.length();
+                }
+                return lastNum;
+            };
+        };
+        Fns fns = new Fns();
+
+        for (int i=0; i<5000; ++i) {
+            int idx = fns.randomStringIndex();
+            assertEquals("following" + idx, fns.expectedFollow(idx), bi.following(idx));
+            idx = fns.randomStringIndex();
+            assertEquals("preceding" + idx, fns.expectedPreceding(idx), bi.preceding(idx));
+        }
     }
 }
