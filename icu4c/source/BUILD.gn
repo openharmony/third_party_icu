@@ -545,7 +545,10 @@ ohos_static_library("genrb_c") {
   ]
 }
 ohos_executable("genrb") {
-  configs = [ ":icu_config" ]
+  configs = [
+    ":icu_config",
+    "//build/config/compiler:rtti",
+  ]
   deps = [
     ":genrb_c(${host_toolchain})",
     ":lib_host",
