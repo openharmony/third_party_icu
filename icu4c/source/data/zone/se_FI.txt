@@ -384,6 +384,11 @@ se_FI{
         "meta:Gilbert_Islands"{
             ls{"Gilbertsulloid áigi"}
         }
+        "meta:Greenland"{
+            ld{"Nuorta-Ruonáeatnama geasseáigi"}
+            lg{"Nuorta-Ruonáeatnama áigi"}
+            ls{"Nuorta-Ruonáeatnama dálveáigi"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Nuorta-Ruonáeatnama geasseáigi"}
             lg{"Nuorta-Ruonáeatnama áigi"}

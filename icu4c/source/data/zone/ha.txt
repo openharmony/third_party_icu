@@ -288,6 +288,11 @@ ha{
         "meta:Gilbert_Islands"{
             ls{"Lokacin Gilbert Islands"}
         }
+        "meta:Greenland"{
+            ld{"Lokacin Rana na Gabashin Greenland"}
+            lg{"Lokacin Gabas na Greenland"}
+            ls{"Tsayayyen Lokacin Gabashin Greenland"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Lokacin Rana na Gabashin Greenland"}
             lg{"Lokacin Gabas na Greenland"}

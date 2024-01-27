@@ -1532,6 +1532,11 @@ ee{
         "meta:Gilbert_Islands"{
             ls{"Gilbert Islands gaƒoƒo me"}
         }
+        "meta:Greenland"{
+            ld{"Greenland dzomeŋɔli gaƒoƒo me"}
+            lg{"Greenland gaƒoƒome"}
+            ls{"Greenland nutome gaƒoƒo me"}
+        }
         "meta:Greenland_Eastern"{
             ld{"East Greenland dzomeŋɔli gaƒoƒo me"}
             lg{"East Greenland gaƒoƒome"}
