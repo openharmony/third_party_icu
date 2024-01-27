@@ -1567,6 +1567,11 @@ yue_Hans{
         "meta:Gilbert_Islands"{
             ls{"吉尔伯特群岛时间"}
         }
+        "meta:Greenland"{
+            ld{"格陵兰夏令时间"}
+            lg{"格陵兰时间"}
+            ls{"格陵兰标准时间"}
+        }
         "meta:Greenland_Eastern"{
             ld{"格陵兰东部夏令时间"}
             lg{"格陵兰东部时间"}

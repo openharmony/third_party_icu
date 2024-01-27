@@ -1552,6 +1552,11 @@ lv{
         "meta:Gilbert_Islands"{
             ls{"Gilberta salu laiks"}
         }
+        "meta:Greenland"{
+            ld{"Austrumgrenlandes vasaras laiks"}
+            lg{"Austrumgrenlandes laiks"}
+            ls{"Austrumgrenlandes ziemas laiks"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Austrumgrenlandes vasaras laiks"}
             lg{"Austrumgrenlandes laiks"}

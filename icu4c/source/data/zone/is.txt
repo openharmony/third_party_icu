@@ -1540,6 +1540,11 @@ is{
         "meta:Gilbert_Islands"{
             ls{"Tími á Gilbert-eyjum"}
         }
+        "meta:Greenland"{
+            ld{"Sumartími á Austur-Grænlandi"}
+            lg{"Austur-Grænlandstími"}
+            ls{"Staðaltími á Austur-Grænlandi"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Sumartími á Austur-Grænlandi"}
             lg{"Austur-Grænlandstími"}

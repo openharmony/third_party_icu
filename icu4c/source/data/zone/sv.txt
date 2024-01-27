@@ -1577,6 +1577,11 @@ sv{
         "meta:Gilbert_Islands"{
             ls{"Kiribatitid"}
         }
+        "meta:Greenland"{
+            ld{"östgrönländsk sommartid"}
+            lg{"östgrönländsk tid"}
+            ls{"östgrönländsk normaltid"}
+        }
         "meta:Greenland_Eastern"{
             ld{"östgrönländsk sommartid"}
             lg{"östgrönländsk tid"}

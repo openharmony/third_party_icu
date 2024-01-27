@@ -1540,6 +1540,11 @@ fil{
         "meta:Gilbert_Islands"{
             ls{"Oras sa Gilbert Islands"}
         }
+        "meta:Greenland"{
+            ld{"Oras sa Tag-init ng Silangang Greenland"}
+            lg{"Oras sa Silangang Greenland"}
+            ls{"Standard na Oras sa Silangang Greenland"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Oras sa Tag-init ng Silangang Greenland"}
             lg{"Oras sa Silangang Greenland"}

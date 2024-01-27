@@ -624,6 +624,11 @@ dsb{
         "meta:Gilbert_Islands"{
             ls{"cas Gilbertowych kupow"}
         }
+        "meta:Greenland"{
+            ld{"Pódzajtšnogrönlandski lěśojski cas"}
+            lg{"Pódzajtšnogrönlandski cas"}
+            ls{"Pódzajtšnogrönlandski standardny cas"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Pódzajtšnogrönlandski lěśojski cas"}
             lg{"Pódzajtšnogrönlandski cas"}

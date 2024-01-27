@@ -1600,6 +1600,11 @@ gd{
         "meta:Gilbert_Islands"{
             ls{"Àm Eileanan Ghileabairt"}
         }
+        "meta:Greenland"{
+            ld{"Tìde samhraidh na Graonlainn an Ear"}
+            lg{"Àm na Graonlainn an Ear"}
+            ls{"Bun-àm na Graonlainn an Ear"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Tìde samhraidh na Graonlainn an Ear"}
             lg{"Àm na Graonlainn an Ear"}

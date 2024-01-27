@@ -1570,6 +1570,11 @@ ast{
         "meta:Gilbert_Islands"{
             ls{"Hora de les Islles Gilbert"}
         }
+        "meta:Greenland"{
+            ld{"Hora braniega de Groenlandia oriental"}
+            lg{"Hora de Groenlandia oriental"}
+            ls{"Hora estándar de Groenlandia oriental"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Hora braniega de Groenlandia oriental"}
             lg{"Hora de Groenlandia oriental"}

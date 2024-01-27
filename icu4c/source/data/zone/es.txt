@@ -1565,6 +1565,11 @@ es{
         "meta:Gilbert_Islands"{
             ls{"hora de las islas Gilbert"}
         }
+        "meta:Greenland"{
+            ld{"hora de verano de Groenlandia oriental"}
+            lg{"hora de Groenlandia oriental"}
+            ls{"hora estándar de Groenlandia oriental"}
+        }
         "meta:Greenland_Eastern"{
             ld{"hora de verano de Groenlandia oriental"}
             lg{"hora de Groenlandia oriental"}

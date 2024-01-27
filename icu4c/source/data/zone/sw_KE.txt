@@ -175,6 +175,11 @@ sw_KE{
             lg{"Saa za Jiojia"}
             ls{"Saa za Wastani za Jiojia"}
         }
+        "meta:Greenland"{
+            ld{"Saa za Majira ya Joto za Greenland Mashariki"}
+            lg{"Saa za Greenland Mashariki"}
+            ls{"Saa za Wastani za Greenland Mashariki"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Saa za Majira ya Joto za Greenland Mashariki"}
             lg{"Saa za Greenland Mashariki"}

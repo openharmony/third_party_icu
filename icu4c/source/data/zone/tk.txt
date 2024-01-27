@@ -1532,6 +1532,11 @@ tk{
         "meta:Gilbert_Islands"{
             ls{"Gilbert adalary wagty"}
         }
+        "meta:Greenland"{
+            ld{"Gündogar Grenlandiýa tomusky wagty"}
+            lg{"Gündogar Grenlandiýa wagty"}
+            ls{"Gündogar Grenlandiýa standart wagty"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Gündogar Grenlandiýa tomusky wagty"}
             lg{"Gündogar Grenlandiýa wagty"}
