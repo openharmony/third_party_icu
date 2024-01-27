@@ -1498,6 +1498,11 @@ so{
         "meta:Gilbert_Islands"{
             ls{"Waqtiga Jilbeert Aylaan"}
         }
+        "meta:Greenland"{
+            ld{"Waqtiga Xagaaga ee Bariga Giriinlaan"}
+            lg{"Waqtiga Bariga ee Giriinlaan"}
+            ls{"Waqtiga Caadiga ah ee Bariga Giriinlaan"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Waqtiga Xagaaga ee Bariga Giriinlaan"}
             lg{"Waqtiga Bariga ee Giriinlaan"}

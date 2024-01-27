@@ -586,6 +586,11 @@ lb{
         "meta:Gilbert_Islands"{
             ls{"Gilbert-Inselen-Zäit"}
         }
+        "meta:Greenland"{
+            ld{"Ostgrönland-Summerzäit"}
+            lg{"Ostgrönland-Zäit"}
+            ls{"Ostgrönland-Normalzäit"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Ostgrönland-Summerzäit"}
             lg{"Ostgrönland-Zäit"}

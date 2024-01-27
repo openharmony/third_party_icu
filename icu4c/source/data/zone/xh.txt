@@ -1526,6 +1526,11 @@ xh{
         "meta:Gilbert_Islands"{
             ls{"Gilbert Islands Time"}
         }
+        "meta:Greenland"{
+            ld{"East Greenland Summer Time"}
+            lg{"East Greenland Time"}
+            ls{"East Greenland Standard Time"}
+        }
         "meta:Greenland_Eastern"{
             ld{"East Greenland Summer Time"}
             lg{"East Greenland Time"}

@@ -1566,6 +1566,11 @@ ko{
         "meta:Gilbert_Islands"{
             ls{"길버트 제도 시간"}
         }
+        "meta:Greenland"{
+            ld{"그린란드 동부 하계 표준시"}
+            lg{"그린란드 동부 시간"}
+            ls{"그린란드 동부 표준시"}
+        }
         "meta:Greenland_Eastern"{
             ld{"그린란드 동부 하계 표준시"}
             lg{"그린란드 동부 시간"}

@@ -582,6 +582,11 @@ yo{
         "meta:Gilbert_Islands"{
             ls{"Gilbert Islands Time"}
         }
+        "meta:Greenland"{
+            ld{"Àkókò ìgbà Ooru Greenland"}
+            lg{"Àkókò Ìlà oorùn Greenland"}
+            ls{"Àkókò Ìwọ̀ Ìfẹnukò oorùn Greenland"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Àkókò ìgbà Ooru Greenland"}
             lg{"Àkókò Ìlà oorùn Greenland"}

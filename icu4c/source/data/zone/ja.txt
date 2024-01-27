@@ -1566,6 +1566,11 @@ ja{
         "meta:Gilbert_Islands"{
             ls{"ギルバート諸島時間"}
         }
+        "meta:Greenland"{
+            ld{"グリーンランド夏時間"}
+            lg{"グリーンランド時間"}
+            ls{"グリーンランド標準時"}
+        }
         "meta:Greenland_Eastern"{
             ld{"グリーンランド東部夏時間"}
             lg{"グリーンランド東部時間"}
