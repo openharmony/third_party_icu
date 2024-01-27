@@ -709,6 +709,11 @@ sc{
         "meta:Gilbert_Islands"{
             ls{"Ora de sas Ìsulas Gilbert"}
         }
+        "meta:Greenland"{
+            ld{"Ora legale de sa Groenlàndia orientale"}
+            lg{"Ora de sa Groenlàndia orientale"}
+            ls{"Ora istandard de sa Groenlàndia orientale"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Ora legale de sa Groenlàndia orientale"}
             lg{"Ora de sa Groenlàndia orientale"}

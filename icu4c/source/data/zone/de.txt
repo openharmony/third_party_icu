@@ -1572,6 +1572,11 @@ de{
         "meta:Gilbert_Islands"{
             ls{"Gilbert-Inseln-Zeit"}
         }
+        "meta:Greenland"{
+            ld{"Grönland-Sommerzeit"}
+            lg{"Grönland-Zeit"}
+            ls{"Grönland-Normalzeit"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Ostgrönland-Sommerzeit"}
             lg{"Ostgrönland-Zeit"}

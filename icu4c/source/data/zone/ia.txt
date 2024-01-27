@@ -666,6 +666,11 @@ ia{
         "meta:GMT"{
             ls{"hora medie de Greenwich"}
         }
+        "meta:Greenland"{
+            ld{"hora estive de Groenlandia oriental"}
+            lg{"hora de Groenlandia oriental"}
+            ls{"hora normal de Groenlandia oriental"}
+        }
         "meta:Greenland_Eastern"{
             ld{"hora estive de Groenlandia oriental"}
             lg{"hora de Groenlandia oriental"}

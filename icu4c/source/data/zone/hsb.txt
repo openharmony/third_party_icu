@@ -624,6 +624,11 @@ hsb{
         "meta:Gilbert_Islands"{
             ls{"čas Gilbertowych kupow"}
         }
+        "meta:Greenland"{
+            ld{"wuchodogrönlandski lětni čas"}
+            lg{"wuchodogrönlandski čas"}
+            ls{"wuchodogrönlandski standardny čas"}
+        }
         "meta:Greenland_Eastern"{
             ld{"wuchodogrönlandski lětni čas"}
             lg{"wuchodogrönlandski čas"}
