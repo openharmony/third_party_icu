@@ -265,6 +265,11 @@ nn{
         "meta:Gilbert_Islands"{
             ls{"tidssone for Gilbertøyane"}
         }
+        "meta:Greenland"{
+            ld{"austgrønlandsk sommartid"}
+            lg{"austgrønlandsk tid"}
+            ls{"austgrønlandsk normaltid"}
+        }
         "meta:Greenland_Eastern"{
             ld{"austgrønlandsk sommartid"}
             lg{"austgrønlandsk tid"}
