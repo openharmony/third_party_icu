@@ -1563,6 +1563,11 @@ lt{
         "meta:Gilbert_Islands"{
             ls{"Gilberto Salų laikas"}
         }
+        "meta:Greenland"{
+            ld{"Grenlandijos rytų vasaros laikas"}
+            lg{"Grenlandijos rytų laikas"}
+            ls{"Grenlandijos rytų žiemos laikas"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Grenlandijos rytų vasaros laikas"}
             lg{"Grenlandijos rytų laikas"}

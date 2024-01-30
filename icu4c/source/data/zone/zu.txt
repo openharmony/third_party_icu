@@ -1537,6 +1537,11 @@ zu{
         "meta:Gilbert_Islands"{
             ls{"Isikhathi sase-Gilbert Islands"}
         }
+        "meta:Greenland"{
+            ld{"Isikhathi sase-East Greenland sasemini"}
+            lg{"Isikhathi sase-East Greenland"}
+            ls{"Isikhathi sase-East Greenland esijwayelekile"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Isikhathi sase-East Greenland sasemini"}
             lg{"Isikhathi sase-East Greenland"}

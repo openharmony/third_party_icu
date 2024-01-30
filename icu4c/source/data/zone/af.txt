@@ -1549,6 +1549,11 @@ af{
         "meta:Gilbert_Islands"{
             ls{"Gilberteilande-tyd"}
         }
+        "meta:Greenland"{
+            ld{"Groenland-somertyd"}
+            lg{"Groenland-tyd"}
+            ls{"Groenland-standaardtyd"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Oos-Groenland-somertyd"}
             lg{"Oos-Groenland-tyd"}

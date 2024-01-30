@@ -1542,6 +1542,11 @@ ga{
         "meta:Gilbert_Islands"{
             ls{"Am Chireabaití"}
         }
+        "meta:Greenland"{
+            ld{"Am Samhraidh Oirthear na Graonlainne"}
+            lg{"Am Oirthear na Graonlainne"}
+            ls{"Am Caighdeánach Oirthear na Graonlainne"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Am Samhraidh Oirthear na Graonlainne"}
             lg{"Am Oirthear na Graonlainne"}

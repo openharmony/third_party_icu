@@ -1533,6 +1533,11 @@ cy{
         "meta:Gilbert_Islands"{
             ls{"Amser Ynysoedd Gilbert"}
         }
+        "meta:Greenland"{
+            ld{"Amser Haf Dwyrain yr Ynys Las"}
+            lg{"Amser Dwyrain yr Ynys Las"}
+            ls{"Amser Safonol Dwyrain yr Ynys Las"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Amser Haf Dwyrain yr Ynys Las"}
             lg{"Amser Dwyrain yr Ynys Las"}

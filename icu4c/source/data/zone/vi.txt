@@ -1584,6 +1584,11 @@ vi{
         "meta:Gilbert_Islands"{
             ls{"Giờ Quần Đảo Gilbert"}
         }
+        "meta:Greenland"{
+            ld{"Giờ Mùa Hè Miền Đông Greenland"}
+            lg{"Giờ Miền Đông Greenland"}
+            ls{"Giờ Chuẩn Miền Đông Greenland"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Giờ Mùa Hè Miền Đông Greenland"}
             lg{"Giờ Miền Đông Greenland"}

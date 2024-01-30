@@ -1573,6 +1573,11 @@ hr{
         "meta:Gilbert_Islands"{
             ls{"vrijeme Gilbertovih otoka"}
         }
+        "meta:Greenland"{
+            ld{"istočnogrenlandsko ljetno vrijeme"}
+            lg{"istočnogrenlandsko vrijeme"}
+            ls{"istočnogrenlandsko standardno vrijeme"}
+        }
         "meta:Greenland_Eastern"{
             ld{"istočnogrenlandsko ljetno vrijeme"}
             lg{"istočnogrenlandsko vrijeme"}

@@ -1586,6 +1586,11 @@ zh_Hant{
         "meta:Gilbert_Islands"{
             ls{"吉爾伯特群島時間"}
         }
+        "meta:Greenland"{
+            ld{"格陵蘭夏令時間"}
+            lg{"格陵蘭時間"}
+            ls{"格陵蘭標準時間"}
+        }
         "meta:Greenland_Eastern"{
             ld{"格陵蘭東部夏令時間"}
             lg{"格陵蘭東部時間"}
