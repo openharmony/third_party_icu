@@ -1549,6 +1549,11 @@ pl{
         "meta:Gilbert_Islands"{
             ls{"czas Wyspy Gilberta"}
         }
+        "meta:Greenland"{
+            ld{"Grenlandia Wschodnia (czas letni)"}
+            lg{"czas Grenlandia Wschodnia"}
+            ls{"Grenlandia Wschodnia (czas standardowy)"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Grenlandia Wschodnia (czas letni)"}
             lg{"czas Grenlandia Wschodnia"}

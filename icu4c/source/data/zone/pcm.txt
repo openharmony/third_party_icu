@@ -1532,6 +1532,11 @@ pcm{
         "meta:Gilbert_Islands"{
             ls{"Gílbat Aílands Taim"}
         }
+        "meta:Greenland"{
+            ld{"Íist Grínlánd Họ́t Sízin Taim"}
+            lg{"Íist Grínlánd Taim"}
+            ls{"Íist Grínlánd Fíksd Taim"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Íist Grínlánd Họ́t Sízin Taim"}
             lg{"Íist Grínlánd Taim"}

@@ -624,6 +624,11 @@ fy{
         "meta:Gilbert_Islands"{
             ls{"Gilberteilânske tiid"}
         }
+        "meta:Greenland"{
+            ld{"East-Groenlânske simmertiid"}
+            lg{"East-Groenlânske tiid"}
+            ls{"East-Groenlânske standerttiid"}
+        }
         "meta:Greenland_Eastern"{
             ld{"East-Groenlânske simmertiid"}
             lg{"East-Groenlânske tiid"}

@@ -1569,6 +1569,11 @@ da{
         "meta:Gilbert_Islands"{
             ls{"Gilbertøerne-tid"}
         }
+        "meta:Greenland"{
+            ld{"Østgrønlandsk sommertid"}
+            lg{"Østgrønlandsk tid"}
+            ls{"Østgrønlandsk normaltid"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Østgrønlandsk sommertid"}
             lg{"Østgrønlandsk tid"}

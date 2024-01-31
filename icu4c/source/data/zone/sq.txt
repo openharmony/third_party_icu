@@ -1566,6 +1566,11 @@ sq{
         "meta:Gilbert_Islands"{
             ls{"Ora e Ishujve Gilbert"}
         }
+        "meta:Greenland"{
+            ld{"Ora verore e Grenlandës Lindore"}
+            lg{"Ora e Grenlandës Lindore"}
+            ls{"Ora standarde e Grenlandës Lindore"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Ora verore e Grenlandës Lindore"}
             lg{"Ora e Grenlandës Lindore"}

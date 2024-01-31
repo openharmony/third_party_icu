@@ -1563,6 +1563,11 @@ tr{
         "meta:Gilbert_Islands"{
             ls{"Gilbert Adaları Saati"}
         }
+        "meta:Greenland"{
+            ld{"Doğu Grönland Yaz Saati"}
+            lg{"Doğu Grönland Saati"}
+            ls{"Doğu Grönland Standart Saati"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Doğu Grönland Yaz Saati"}
             lg{"Doğu Grönland Saati"}

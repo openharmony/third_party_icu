@@ -1056,6 +1056,11 @@ br{
         "meta:Gilbert_Islands"{
             ls{"eur Inizi Gilbert"}
         }
+        "meta:Greenland"{
+            ld{"eur hañv Greunland ar Reter"}
+            lg{"eur Greunland ar Reter"}
+            ls{"eur cʼhoañv Greunland ar Reter"}
+        }
         "meta:Greenland_Eastern"{
             ld{"eur hañv Greunland ar Reter"}
             lg{"eur Greunland ar Reter"}

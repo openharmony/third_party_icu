@@ -1535,6 +1535,11 @@ fo{
         "meta:Gilbert_Islands"{
             ls{"Gilbertoyggjar tíð"}
         }
+        "meta:Greenland"{
+            ld{"Eystur grønlendsk summartíð"}
+            lg{"Eystur grønlendsk tíð"}
+            ls{"Eystur grønlendsk vanlig tíð"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Eystur grønlendsk summartíð"}
             lg{"Eystur grønlendsk tíð"}
