@@ -1567,6 +1567,11 @@ fi{
         "meta:Gilbert_Islands"{
             ls{"Gilbertsaarten aika"}
         }
+        "meta:Greenland"{
+            ld{"Itä-Grönlannin kesäaika"}
+            lg{"Itä-Grönlannin aika"}
+            ls{"Itä-Grönlannin normaaliaika"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Itä-Grönlannin kesäaika"}
             lg{"Itä-Grönlannin aika"}

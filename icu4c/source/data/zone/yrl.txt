@@ -1554,6 +1554,11 @@ yrl{
         "meta:Gilbert_Islands"{
             ls{"Kapuã-ita Yubetu Hurariyu"}
         }
+        "meta:Greenland"{
+            ld{"Guruẽrãdiya Uriẽtawara Kurasí Ara Hurariyu"}
+            lg{"Guruẽrãdiya Uriẽtawara Hurariyu"}
+            ls{"Guruẽrãdiya Uriẽtawara Hurariyu Retewa"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Guruẽrãdiya Uriẽtawara Kurasí Ara Hurariyu"}
             lg{"Guruẽrãdiya Uriẽtawara Hurariyu"}

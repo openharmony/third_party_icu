@@ -261,6 +261,11 @@ ceb{
         "meta:Gilbert_Islands"{
             ls{"Oras sa Gilbert Islands"}
         }
+        "meta:Greenland"{
+            ld{"Oras sa Tag-init sa East Greenland"}
+            lg{"Oras sa East Greenland"}
+            ls{"Tamdanang Oras sa East Greenland"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Oras sa Tag-init sa East Greenland"}
             lg{"Oras sa East Greenland"}

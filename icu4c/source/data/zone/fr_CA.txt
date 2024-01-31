@@ -293,6 +293,11 @@ fr_CA{
             lg{"heure de la Géorgie"}
             ls{"heure normale de la Géorgie"}
         }
+        "meta:Greenland"{
+            ld{"heure avancée de l’Est du Groenland"}
+            lg{"heure de l’Est du Groenland"}
+            ls{"heure normale de l’Est du Groenland"}
+        }
         "meta:Greenland_Eastern"{
             ld{"heure avancée de l’Est du Groenland"}
             lg{"heure de l’Est du Groenland"}

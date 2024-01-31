@@ -1540,6 +1540,11 @@ sl{
         "meta:Gilbert_Islands"{
             ls{"Čas: Gilbertovi otoki"}
         }
+        "meta:Greenland"{
+            ld{"Vzhodnogrenlandski poletni čas"}
+            lg{"Vzhodnogrenlandski čas"}
+            ls{"Vzhodnogrenlandski standardni čas"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Vzhodnogrenlandski poletni čas"}
             lg{"Vzhodnogrenlandski čas"}

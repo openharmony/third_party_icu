@@ -1532,6 +1532,11 @@ az{
         "meta:Gilbert_Islands"{
             ls{"Gilbert Adaları Vaxtı"}
         }
+        "meta:Greenland"{
+            ld{"Şərqi Qrenlandiya Yay Vaxtı"}
+            lg{"Şərqi Qrenlandiya Vaxtı"}
+            ls{"Şərqi Qrenlandiya Standart Vaxtı"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Şərqi Qrenlandiya Yay Vaxtı"}
             lg{"Şərqi Qrenlandiya Vaxtı"}
