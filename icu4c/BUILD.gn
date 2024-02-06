@@ -11,7 +11,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import("//build/config/config.gni")
 import("//build/ohos.gni")
 import("//third_party/icu/icu.gni")
 import("//third_party/icu/icu4c/icu4c_config.gni")
@@ -522,13 +521,7 @@ ohos_shared_library("shared_icuuc") {
     "-shared",
     "-lm",
   ]
-  if (current_os == "ios") {
-    ldflags += [
-      "-Wl",
-      "-install_name",
-      "@rpath/libhmicuuc.framework/libhmicuuc",
-    ]
-  }
+
   configs = [
     ":icu_config",
     "//build/config/compiler:rtti",
@@ -570,26 +563,12 @@ ohos_shared_library("shared_icuuc") {
   install_enable = true
 }
 
-if (current_os == "ios") {
-  ohos_combine_darwin_framework("libhmicuuc") {
-    deps = [ ":shared_icuuc" ]
-    subsystem_name = "thirdparty"
-    part_name = "icu"
-  }
-}
-
 ohos_shared_library("shared_icui18n") {
   ldflags = [
     "-shared",
     "-lm",
   ]
-  if (current_os == "ios") {
-    ldflags += [
-      "-Wl",
-      "-install_name",
-      "@rpath/libhmicui18n.framework/libhmicui18n",
-    ]
-  }
+
   sources = icu_i18n_source
   configs = [
     ":icu_config",
@@ -633,14 +612,6 @@ ohos_shared_library("shared_icui18n") {
   relative_install_dir = "platformsdk"
   output_name = "hmicui18n"
   install_enable = true
-}
-
-if (current_os == "ios") {
-  ohos_combine_darwin_framework("libhmicui18n") {
-    deps = [ ":shared_icui18n" ]
-    subsystem_name = "thirdparty"
-    part_name = "icu"
-  }
 }
 
 ohos_source_set("static_icuuc") {
