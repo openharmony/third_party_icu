@@ -14,7 +14,7 @@
         "subsystem": "thirdparty",
         "syscap": [],
         "features": ["icu_support_locales"],
-        "adapted_system_type": [ "standard" ],
+        "adapted_system_type": [ "mini", "small", "standard" ],
         "rom": "",
         "ram": "",
         "deps": {
@@ -25,9 +25,18 @@
             "sub_component": [
                 "//third_party/icu/icu4c:ohos_icudat",
                 "//third_party/icu/icu4c:shared_icuuc",
-                "//third_party/icu/icu4c:shared_icui18n"
+                "//third_party/icu/icu4c:shared_icui18n",
+                "//third_party/icu/ohos_icu4c:icundk"
             ],
-            "inner_kits": [],
+            "inner_kits": [
+                {
+                    "name": "//third_party/icu/ohos_icu4c:icundk",
+                    "header": {
+                        "header_files": [],
+                        "header_base": ""
+                    }
+                }
+            ],
             "test": []
         }
     }
