@@ -536,7 +536,10 @@ ohos_shared_library("shared_icuuc") {
     "_REENTRANT",
   ]
   sources = icu_common_source
-  deps = [ ":static_icustubdata" ]
+  deps = [
+    ":ohos_icudat",
+    ":static_icustubdata",
+  ]
   cflags_cc = [
     "-O3",
     "-W",
