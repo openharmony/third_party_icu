@@ -23,19 +23,11 @@
         },
         "build": {
             "sub_component": [
-                "//third_party/icu/icu4c:ohos_icudat",
                 "//third_party/icu/icu4c:shared_icuuc",
                 "//third_party/icu/icu4c:shared_icui18n",
                 "//third_party/icu/ohos_icu4c:icundk"
             ],
             "inner_kits": [
-                {
-                    "name": "//third_party/icu/icu4c:ohos_icudat",
-                    "header": {
-                        "header_files": [],
-                        "header_base": []
-                    }
-                },
                 {
                     "name": "//third_party/icu/icu4c:shared_icuuc",
                     "header": {
@@ -72,7 +64,6 @@
                             "norm2allmodes.h",
                             "norm2_nfc_data.h",
                             "normalizer2impl.h",
-                            "ohos/init_data.h",
                             "patternprops.h",
                             "pluralmap.h",
                             "propname.h",
@@ -258,10 +249,7 @@
                             "unicode/uvernum.h",
                             "unicode/uversion.h"
                         ],
-                        "header_base": [
-                            "//third_party/icu/icu4c/source",
-                            "//third_party/icu/icu4c/source/common"
-                        ]
+                        "header_base": "//third_party/icu/icu4c/source/common"
                     }
                 },
                 {
@@ -534,16 +522,14 @@
                             "unicode/utrans.h",
                             "unicode/vtzone.h"
                         ],
-                        "header_base": [
-                            "//third_party/icu/icu4c/source/i18n"
-                        ]
+                        "header_base": "//third_party/icu/icu4c/source/i18n"
                     }
                 },
                 {
                     "name": "//third_party/icu/ohos_icu4c:icundk",
                     "header": {
                         "header_files": [],
-                        "header_base": []
+                        "header_base": "//third_party/icu/ohos_icu4c"
                     }
                 }
             ],
