@@ -57,7 +57,7 @@ ohos_static_library("static_icustubdata") {
 ohos_prebuilt_etc("ohos_icudat") {
   if ("${product_name}" == "ohcore") {
     source = "//third_party/icu/ohos_icu4j/data/icudt68l.dat"
-  } else if ("${product_name}" == "higeneric") {
+  } else if ("${build_feature}" == "anco") {
     source = "//third_party/icu/ohos_icu4j/data/lite/icudt72l.dat"
   } else if (icu_support_locales) {
     source = "//third_party/icu/ohos_icu4j/data/icudt72l.dat"
