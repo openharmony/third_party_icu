@@ -13,5 +13,5 @@
 
 declare_args() {
   icu_support_locales = true
-  build_feature = normal
+  build_feature = "normal"
 }
