@@ -617,115 +617,230 @@ ohos_shared_library("shared_icui18n") {
   install_enable = true
 }
 
-ohos_source_set("static_icuuc") {
-  configs = [
-    ":icu_config",
-    "//build/config/compiler:rtti",
-  ]
+if (defined(is_arkui_x) && is_arkui_x) {
+  ohos_source_set("static_icuuc") {
+    configs = [
+      ":icu_config",
+      "//build/config/compiler:rtti",
+    ]
 
-  if (!(defined(is_arkui_x) && is_arkui_x) ||
-      current_toolchain == host_toolchain) {
-    deps = [ ":static_icustubdata" ]
+    if (!(defined(is_arkui_x) && is_arkui_x) ||
+        current_toolchain == host_toolchain) {
+      deps = [ ":static_icustubdata" ]
+    }
+
+    defines = [
+      "U_ATTRIBUTE_DEPRECATED=",
+      "U_COMMON_IMPLEMENTATION",
+      "U_STATIC_IMPLEMENTATION",
+      "UPRV_BLOCK_MACRO_BEGIN=",
+      "UPRV_BLOCK_MACRO_END=",
+      "UCONFIG_USE_WINDOWS_LCID_MAPPING_API=0",
+      "_REENTRANT",
+    ]
+    sources = icu_common_source
+    cflags_cc = [
+      "-W",
+      "-Wall",
+      "-pedantic",
+      "-Wpointer-arith",
+      "-Wwrite-strings",
+      "-std=c++11",
+      "-Wno-error=unused-parameter",
+      "-Wno-error=unused-const-variable",
+      "-Wno-error=unneeded-internal-declaration",
+      "-fvisibility-inlines-hidden",
+      "-Wno-unused-function",
+      "-Wno-ignored-attributes",
+      "-Wno-unused-but-set-variable",
+      "-Wno-deprecated-declarations",
+    ]
+
+    cflags = [
+      "-fdata-sections",
+      "-ffunction-sections",
+      "-Wno-unused-function",
+    ]
+
+    ldflags = [
+      "-static",
+      "-ldl",
+      "-lm",
+    ]
+
+    output_name = "hmicuuc"
+    part_name = "$icu_part_name"
+    subsystem_name = "$icu_subsystem_name"
   }
+} else {
+  ohos_static_library("static_icuuc") {
+    configs = [
+      ":icu_config",
+      "//build/config/compiler:rtti",
+    ]
 
-  defines = [
-    "U_ATTRIBUTE_DEPRECATED=",
-    "U_COMMON_IMPLEMENTATION",
-    "U_STATIC_IMPLEMENTATION",
-    "UPRV_BLOCK_MACRO_BEGIN=",
-    "UPRV_BLOCK_MACRO_END=",
-    "UCONFIG_USE_WINDOWS_LCID_MAPPING_API=0",
-    "_REENTRANT",
-  ]
-  sources = icu_common_source
-  cflags_cc = [
-    "-W",
-    "-Wall",
-    "-pedantic",
-    "-Wpointer-arith",
-    "-Wwrite-strings",
-    "-std=c++11",
-    "-Wno-error=unused-parameter",
-    "-Wno-error=unused-const-variable",
-    "-Wno-error=unneeded-internal-declaration",
-    "-fvisibility-inlines-hidden",
-    "-Wno-unused-function",
-    "-Wno-ignored-attributes",
-    "-Wno-unused-but-set-variable",
-    "-Wno-deprecated-declarations",
-  ]
+    if (!(defined(is_arkui_x) && is_arkui_x) ||
+        current_toolchain == host_toolchain) {
+      deps = [ ":static_icustubdata" ]
+    }
 
-  cflags = [
-    "-fdata-sections",
-    "-ffunction-sections",
-    "-Wno-unused-function",
-  ]
+    defines = [
+      "U_ATTRIBUTE_DEPRECATED=",
+      "U_COMMON_IMPLEMENTATION",
+      "U_STATIC_IMPLEMENTATION",
+      "UPRV_BLOCK_MACRO_BEGIN=",
+      "UPRV_BLOCK_MACRO_END=",
+      "UCONFIG_USE_WINDOWS_LCID_MAPPING_API=0",
+      "_REENTRANT",
+    ]
+    sources = icu_common_source
+    cflags_cc = [
+      "-W",
+      "-Wall",
+      "-pedantic",
+      "-Wpointer-arith",
+      "-Wwrite-strings",
+      "-std=c++11",
+      "-Wno-error=unused-parameter",
+      "-Wno-error=unused-const-variable",
+      "-Wno-error=unneeded-internal-declaration",
+      "-fvisibility-inlines-hidden",
+      "-Wno-unused-function",
+      "-Wno-ignored-attributes",
+      "-Wno-unused-but-set-variable",
+      "-Wno-deprecated-declarations",
+    ]
 
-  ldflags = [
-    "-static",
-    "-ldl",
-    "-lm",
-  ]
+    cflags = [
+      "-fdata-sections",
+      "-ffunction-sections",
+      "-Wno-unused-function",
+    ]
 
-  output_name = "hmicuuc"
-  part_name = "$icu_part_name"
-  subsystem_name = "$icu_subsystem_name"
+    ldflags = [
+      "-static",
+      "-ldl",
+      "-lm",
+    ]
+
+    output_name = "hmicuuc"
+    part_name = "$icu_part_name"
+    subsystem_name = "$icu_subsystem_name"
+  }
 }
 
-ohos_source_set("static_icui18n") {
-  sources = icu_i18n_source
-  configs = [
-    ":icu_config",
-    "//build/config/compiler:rtti",
-  ]
-  deps = [ ":static_icuuc" ]
-  defines = [
-    "U_ATTRIBUTE_DEPRECATED=",
-    "U_I18N_IMPLEMENTATION",
-    "U_STATIC_IMPLEMENTATION",
-    "UPRV_BLOCK_MACRO_BEGIN=",
-    "UPRV_BLOCK_MACRO_END=",
-    "_REENTRANT",
-    "PIC",
-  ]
+if (defined(is_arkui_x) && is_arkui_x) {
+  ohos_source_set("static_icui18n") {
+    sources = icu_i18n_source
+    configs = [
+      ":icu_config",
+      "//build/config/compiler:rtti",
+    ]
+    deps = [ ":static_icuuc" ]
+    defines = [
+      "U_ATTRIBUTE_DEPRECATED=",
+      "U_I18N_IMPLEMENTATION",
+      "U_STATIC_IMPLEMENTATION",
+      "UPRV_BLOCK_MACRO_BEGIN=",
+      "UPRV_BLOCK_MACRO_END=",
+      "_REENTRANT",
+      "PIC",
+    ]
 
-  cflags_cc = [
-    "-W",
-    "-Wall",
-    "-pedantic",
-    "-Wpointer-arith",
-    "-Wwrite-strings",
-    "-Wno-error=unused-parameter",
-    "-Wno-error=unused-const-variable",
-    "-Wno-error=implicit-float-conversion",
-    "-Wno-error=unneeded-internal-declaration",
-    "-std=c++11",
-    "-fvisibility-inlines-hidden",
-    "-fno-exceptions",
-    "-Wno-ignored-attributes",
-    "-Wno-unused-but-set-variable",
-    "-Wno-deprecated-declarations",
-  ]
+    cflags_cc = [
+      "-W",
+      "-Wall",
+      "-pedantic",
+      "-Wpointer-arith",
+      "-Wwrite-strings",
+      "-Wno-error=unused-parameter",
+      "-Wno-error=unused-const-variable",
+      "-Wno-error=implicit-float-conversion",
+      "-Wno-error=unneeded-internal-declaration",
+      "-std=c++11",
+      "-fvisibility-inlines-hidden",
+      "-fno-exceptions",
+      "-Wno-ignored-attributes",
+      "-Wno-unused-but-set-variable",
+      "-Wno-deprecated-declarations",
+    ]
 
-  if (is_mingw) {
-    cflags_cc += [ "-DWINVER=0x0601" ]
-  } else {
-    cflags_cc += [ "-fPIC" ]
+    if (is_mingw) {
+      cflags_cc += [ "-DWINVER=0x0601" ]
+    } else {
+      cflags_cc += [ "-fPIC" ]
+    }
+
+    cflags = [
+      "-fdata-sections",
+      "-ffunction-sections",
+    ]
+
+    ldflags = [
+      "-static",
+      "-ldl",
+      "-lm",
+    ]
+    output_name = "hmicui18n"
+    part_name = "$icu_part_name"
+    subsystem_name = "$icu_subsystem_name"
   }
+} else {
+  ohos_static_library("static_icui18n") {
+    sources = icu_i18n_source
+    configs = [
+      ":icu_config",
+      "//build/config/compiler:rtti",
+    ]
+    deps = [ ":static_icuuc" ]
+    defines = [
+      "U_ATTRIBUTE_DEPRECATED=",
+      "U_I18N_IMPLEMENTATION",
+      "U_STATIC_IMPLEMENTATION",
+      "UPRV_BLOCK_MACRO_BEGIN=",
+      "UPRV_BLOCK_MACRO_END=",
+      "_REENTRANT",
+      "PIC",
+    ]
 
-  cflags = [
-    "-fdata-sections",
-    "-ffunction-sections",
-  ]
+    cflags_cc = [
+      "-W",
+      "-Wall",
+      "-pedantic",
+      "-Wpointer-arith",
+      "-Wwrite-strings",
+      "-Wno-error=unused-parameter",
+      "-Wno-error=unused-const-variable",
+      "-Wno-error=implicit-float-conversion",
+      "-Wno-error=unneeded-internal-declaration",
+      "-std=c++11",
+      "-fvisibility-inlines-hidden",
+      "-fno-exceptions",
+      "-Wno-ignored-attributes",
+      "-Wno-unused-but-set-variable",
+      "-Wno-deprecated-declarations",
+    ]
 
-  ldflags = [
-    "-static",
-    "-ldl",
-    "-lm",
-  ]
-  output_name = "hmicui18n"
-  part_name = "$icu_part_name"
-  subsystem_name = "$icu_subsystem_name"
+    if (is_mingw) {
+      cflags_cc += [ "-DWINVER=0x0601" ]
+    } else {
+      cflags_cc += [ "-fPIC" ]
+    }
+
+    cflags = [
+      "-fdata-sections",
+      "-ffunction-sections",
+    ]
+
+    ldflags = [
+      "-static",
+      "-ldl",
+      "-lm",
+    ]
+    output_name = "hmicui18n"
+    part_name = "$icu_part_name"
+    subsystem_name = "$icu_subsystem_name"
+  }
 }
 
 ohos_static_library("static_icu") {
