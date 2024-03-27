@@ -531,6 +531,27 @@
                         "header_files": [],
                         "header_base": "//third_party/icu/ohos_icu4c"
                     }
+                },
+                {
+                    "name": "//third_party/icu/ohos_icu4c:static_icui18n",
+                    "header": {
+                        "header_files": [],
+                        "header_base": "//third_party/icu/icu4c/source"
+                    }
+                },
+                {
+                    "name": "//third_party/icu/ohos_icu4c:static_icuuc",
+                    "header": {
+                        "header_files": [],
+                        "header_base": "//third_party/icu/icu4c/source"
+                    }
+                },
+                {
+                    "name": "//third_party/icu/icu4c/source/common:icu_font",
+                    "header": {
+                        "header_files": [],
+                        "header_base": "//third_party/icu/icu4c/source/common"
+                    }
                 }
             ],
             "test": []
