@@ -16,7 +16,6 @@ import("//build/ohos/ndk/ndk.gni")
 
 ohos_shared_library("icundk") {
   ldflags = [
-    "-fstack-protector-strong",
     "-shared",
     "-lm",
   ]
