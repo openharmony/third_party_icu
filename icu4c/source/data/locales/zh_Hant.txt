@@ -4346,10 +4346,10 @@ zh_Hant{
                 "下午",
             }
             DateTimePatterns{
-                "Bh:mm:ss [zzzz]",
-                "Bh:mm:ss [z]",
-                "Bh:mm:ss",
-                "Bh:mm",
+                "ah:mm:ss [zzzz]",
+                "ah:mm:ss [z]",
+                "ah:mm:ss",
+                "ah:mm",
                 "y年M月d日 EEEE",
                 "y年M月d日",
                 "y年M月d日",
