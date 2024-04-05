@@ -219,7 +219,7 @@ en{
         fa_AF{"Dari"}
         fan{"Fang"}
         fat{"Fanti"}
-        ff{"Fula"}
+        ff{"Fulah"}
         fi{"Finnish"}
         fil{"Filipino"}
         fit{"Tornedalen Finnish"}
@@ -418,7 +418,7 @@ en{
         mgh{"Makhuwa-Meetto"}
         mgo{"Metaʼ"}
         mh{"Marshallese"}
-        mi{"Māori"}
+        mi{"Maori"}
         mic{"Mi'kmaq"}
         min{"Minangkabau"}
         mk{"Macedonian"}
