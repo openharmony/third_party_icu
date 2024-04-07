@@ -266,8 +266,8 @@ root{
                 per{"{0}/h"}
             }
             microsecond{
-                dnam{"μs"}
-                other{"{0} μs"}
+                dnam{"µs"}
+                other{"{0} µs"}
             }
             millisecond{
                 dnam{"ms"}

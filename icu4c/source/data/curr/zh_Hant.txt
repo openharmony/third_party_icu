@@ -186,7 +186,7 @@ zh_Hant{
         }
         BRL{
             "R$",
-            "巴西雷亞爾",
+            "巴西里拉",
         }
         BRN{
             "BRN",
@@ -1117,7 +1117,7 @@ zh_Hant{
             "法國法郎 (UIC)",
         }
         XOF{
-            "F CFA",
+            "CFA",
             "法郎 (CFA–BCEAO)",
         }
         XPD{
@@ -1454,7 +1454,7 @@ zh_Hant{
             other{"巴西克魯賽羅 (1990–1993)"}
         }
         BRL{
-            other{"巴西雷亞爾"}
+            other{"巴西里拉"}
         }
         BRN{
             other{"巴西克如爾達農瓦"}
