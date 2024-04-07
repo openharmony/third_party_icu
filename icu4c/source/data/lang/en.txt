@@ -113,7 +113,7 @@ en{
         bla{"Siksiká"}
         blt{"Tai Dam"}
         bm{"Bambara"}
-        bn{"Bangla"}
+        bn{"Bengali"}
         bo{"Tibetan"}
         bpy{"Bishnupriya"}
         bqi{"Bakhtiari"}
