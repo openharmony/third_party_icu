@@ -350,6 +350,7 @@ timezoneTypes:table(nofallback){
             "America:Montserrat"{"msmni"}
             "America:Nassau"{"bsnas"}
             "America:New_York"{"usnyc"}
+            "America:Nipigon"{"canpg"}
             "America:Nome"{"usome"}
             "America:Noronha"{"brfen"}
             "America:North_Dakota:Beulah"{"usxul"}
@@ -357,6 +358,7 @@ timezoneTypes:table(nofallback){
             "America:North_Dakota:New_Salem"{"usndnsl"}
             "America:Ojinaga"{"mxoji"}
             "America:Panama"{"papty"}
+            "America:Pangnirtung"{"capnt"}
             "America:Paramaribo"{"srpbm"}
             "America:Phoenix"{"usphx"}
             "America:Port-au-Prince"{"htpap"}
@@ -364,6 +366,7 @@ timezoneTypes:table(nofallback){
             "America:Porto_Velho"{"brpvh"}
             "America:Puerto_Rico"{"prsju"}
             "America:Punta_Arenas"{"clpuq"}
+            "America:Rainy_River"{"caffs"}
             "America:Rankin_Inlet"{"cayek"}
             "America:Recife"{"brrec"}
             "America:Regina"{"careg"}
@@ -384,6 +387,7 @@ timezoneTypes:table(nofallback){
             "America:Swift_Current"{"cayyn"}
             "America:Tegucigalpa"{"hntgu"}
             "America:Thule"{"glthu"}
+            "America:Thunder_Bay"{"cathu"}
             "America:Tijuana"{"mxtij"}
             "America:Toronto"{"cator"}
             "America:Tortola"{"vgtov"}
@@ -391,6 +395,7 @@ timezoneTypes:table(nofallback){
             "America:Whitehorse"{"cayxy"}
             "America:Winnipeg"{"cawnp"}
             "America:Yakutat"{"usyak"}
+            "America:Yellowknife"{"cayzf"}
             "Antarctica:Casey"{"aqcas"}
             "Antarctica:Davis"{"aqdav"}
             "Antarctica:DumontDUrville"{"aqddu"}
@@ -586,6 +591,7 @@ timezoneTypes:table(nofallback){
             "Europe:Tallinn"{"eetll"}
             "Europe:Tirane"{"altia"}
             "Europe:Ulyanovsk"{"ruuly"}
+            "Europe:Uzhgorod"{"uauzh"}
             "Europe:Vaduz"{"livdz"}
             "Europe:Vatican"{"vavat"}
             "Europe:Vienna"{"atvie"}
@@ -593,6 +599,7 @@ timezoneTypes:table(nofallback){
             "Europe:Volgograd"{"ruvog"}
             "Europe:Warsaw"{"plwaw"}
             "Europe:Zagreb"{"hrzag"}
+            "Europe:Zaporozhye"{"uaozh"}
             "Europe:Zurich"{"chzrh"}
             "Indian:Antananarivo"{"mgtnr"}
             "Indian:Chagos"{"iodga"}

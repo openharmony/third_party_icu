@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 en{
@@ -1300,8 +1300,8 @@ en{
             }
             microsecond{
                 dnam{"μsec"}
-                one{"{0}μs"}
-                other{"{0}μs"}
+                one{"{0}µs"}
+                other{"{0}µs"}
             }
             millisecond{
                 dnam{"msec"}
@@ -1551,9 +1551,9 @@ en{
                 other{"{0}m"}
             }
             micrometer{
-                dnam{"μm"}
-                one{"{0}μm"}
-                other{"{0}μm"}
+                dnam{"µm"}
+                one{"{0}µm"}
+                other{"{0}µm"}
             }
             mile{
                 dnam{"mi"}
@@ -1660,9 +1660,9 @@ en{
                 other{"{0}kg"}
             }
             microgram{
-                dnam{"μg"}
-                one{"{0}μg"}
-                other{"{0}μg"}
+                dnam{"µg"}
+                one{"{0}µg"}
+                other{"{0}µg"}
             }
             milligram{
                 dnam{"mg"}
@@ -2275,9 +2275,9 @@ en{
                 per{"{0}/h"}
             }
             microsecond{
-                dnam{"μsecs"}
-                one{"{0} μs"}
-                other{"{0} μs"}
+                dnam{"µsecs"}
+                one{"{0} µs"}
+                other{"{0} µs"}
             }
             millisecond{
                 dnam{"millisecs"}
@@ -2527,9 +2527,9 @@ en{
                 per{"{0}/m"}
             }
             micrometer{
-                dnam{"μmeters"}
-                one{"{0} μm"}
-                other{"{0} μm"}
+                dnam{"µmeters"}
+                one{"{0} µm"}
+                other{"{0} µm"}
             }
             mile{
                 dnam{"miles"}
@@ -2623,9 +2623,9 @@ en{
                 per{"{0}/kg"}
             }
             microgram{
-                dnam{"μg"}
-                one{"{0} μg"}
-                other{"{0} μg"}
+                dnam{"µg"}
+                one{"{0} µg"}
+                other{"{0} µg"}
             }
             milligram{
                 dnam{"mg"}

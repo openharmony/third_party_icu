@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 zh{
@@ -610,7 +610,7 @@ zh{
             ec{"戴维斯"}
         }
         "Antarctica:DumontDUrville"{
-            ec{"迪蒙·迪维尔"}
+            ec{"迪蒙迪尔维尔"}
         }
         "Antarctica:Macquarie"{
             ec{"麦格理"}
@@ -1502,7 +1502,7 @@ zh{
             ls{"戴维斯时间"}
         }
         "meta:DumontDUrville"{
-            ls{"迪蒙·迪维尔时间"}
+            ls{"迪蒙迪尔维尔时间"}
         }
         "meta:East_Timor"{
             ls{"东帝汶时间"}
