@@ -527,7 +527,10 @@ ohos_shared_library("shared_icuuc") {
     "//build/config/compiler:rtti",
   ]
   all_dependent_configs = [ ":static_icustubdata_all_deps_config" ]
-  public_configs = [ ":static_icustubdata_all_deps_config" ]
+  public_configs = [
+    ":icu_config",
+    ":static_icustubdata_all_deps_config",
+  ]
   defines = [
     "U_ATTRIBUTE_DEPRECATED=",
     "U_COMMON_IMPLEMENTATION",
