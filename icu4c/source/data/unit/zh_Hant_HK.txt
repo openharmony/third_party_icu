@@ -503,7 +503,6 @@ zh_Hant_HK{
             }
             mile{
                 dnam{"哩"}
-                other{"{0}哩"}
             }
             millimeter{
                 dnam{"毫米"}
@@ -694,6 +693,9 @@ zh_Hant_HK{
             millimole-per-liter{
                 dnam{"毫摩爾/公升"}
                 other{"{0} 毫摩爾/公升"}
+            }
+            permillion{
+                other{"{0} ppm"}
             }
         }
         consumption{
