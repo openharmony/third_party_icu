@@ -302,6 +302,16 @@
     ufieldpositer_close;
     ufieldpositer_next;
     ufieldpositer_open;
+    uidna_close;
+    uidna_labelToASCII;
+    uidna_labelToASCII_UTF8;
+    uidna_labelToUnicode;
+    uidna_labelToUnicodeUTF8;
+    uidna_nameToASCII;
+    uidna_nameToASCII_UTF8;
+    uidna_nameToUnicode;
+    uidna_nameToUnicodeUTF8;
+    uidna_openUTS46;
     uloc_acceptLanguage;
     uloc_acceptLanguageFromHTTP;
     uloc_addLikelySubtags;

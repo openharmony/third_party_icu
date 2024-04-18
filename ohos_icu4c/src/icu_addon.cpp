@@ -23,6 +23,7 @@
 #include <unicode/udat.h>
 #include <unicode/uenum.h>
 #include <unicode/ufieldpositer.h>
+#include <unicode/uidna.h>
 #include <unicode/uloc.h>
 #include <unicode/unorm2.h>
 #include <unicode/unum.h>
@@ -334,6 +335,16 @@
 #undef ufieldpositer_close
 #undef ufieldpositer_next
 #undef ufieldpositer_open
+#undef uidna_close
+#undef uidna_labelToASCII
+#undef uidna_labelToASCII_UTF8
+#undef uidna_labelToUnicode
+#undef uidna_labelToUnicodeUTF8
+#undef uidna_nameToASCII
+#undef uidna_nameToASCII_UTF8
+#undef uidna_nameToUnicode
+#undef uidna_nameToUnicodeUTF8
+#undef uidna_openUTS46
 #undef uloc_acceptLanguage
 #undef uloc_acceptLanguageFromHTTP
 #undef uloc_addLikelySubtags
@@ -1383,6 +1394,54 @@ int32_t ufieldpositer_next(UFieldPositionIterator * fpositer, int32_t * beginInd
 }
 UFieldPositionIterator * ufieldpositer_open(UErrorCode * status) {
   return U_ICU_ENTRY_POINT_RENAME(ufieldpositer_open)(status);
+}
+void uidna_close(UIDNA *idna)
+{
+    U_ICU_ENTRY_POINT_RENAME(uidna_close)(idna);
+}
+int32_t uidna_labelToASCII(const UIDNA *idna, const UChar *label, int32_t length, UChar *dest, int32_t capacity,
+    UIDNAInfo *pInfo, UErrorCode *pErrorCode)
+{
+    return U_ICU_ENTRY_POINT_RENAME(uidna_labelToASCII)(idna, label, length, dest, capacity, pInfo, pErrorCode);
+}
+int32_t uidna_labelToASCII_UTF8(const UIDNA *idna, const char *label, int32_t length, char *dest, int32_t capacity,
+    UIDNAInfo *pInfo, UErrorCode *pErrorCode)
+{
+    return U_ICU_ENTRY_POINT_RENAME(uidna_labelToASCII_UTF8)(idna, label, length, dest, capacity, pInfo, pErrorCode);
+}
+int32_t uidna_labelToUnicode(const UIDNA *idna, const UChar *label, int32_t length, UChar *dest, int32_t capacity,
+    UIDNAInfo *pInfo, UErrorCode *pErrorCode)
+{
+    return U_ICU_ENTRY_POINT_RENAME(uidna_labelToUnicode)(idna, label, length, dest, capacity, pInfo, pErrorCode);
+}
+int32_t uidna_labelToUnicodeUTF8(const UIDNA *idna, const char *label, int32_t length, char *dest, int32_t capacity,
+    UIDNAInfo *pInfo, UErrorCode *pErrorCode)
+{
+    return U_ICU_ENTRY_POINT_RENAME(uidna_labelToUnicodeUTF8)(idna, label, length, dest, capacity, pInfo, pErrorCode);
+}
+int32_t uidna_nameToASCII(const UIDNA *idna, const UChar *name, int32_t length, UChar *dest, int32_t capacity,
+    UIDNAInfo *pInfo, UErrorCode *pErrorCode)
+{
+    return U_ICU_ENTRY_POINT_RENAME(uidna_nameToASCII)(idna, name, length, dest, capacity, pInfo, pErrorCode);
+}
+int32_t uidna_nameToASCII_UTF8(const UIDNA *idna, const char *name, int32_t length, char *dest, int32_t capacity,
+    UIDNAInfo *pInfo, UErrorCode *pErrorCode)
+{
+    return U_ICU_ENTRY_POINT_RENAME(uidna_nameToASCII_UTF8)(idna, name, length, dest, capacity, pInfo, pErrorCode);
+}
+int32_t uidna_nameToUnicode(const UIDNA *idna, const UChar *name, int32_t length, UChar *dest, int32_t capacity,
+    UIDNAInfo *pInfo, UErrorCode *pErrorCode)
+{
+    return U_ICU_ENTRY_POINT_RENAME(uidna_nameToUnicode)(idna, name, length, dest, capacity, pInfo, pErrorCode);
+}
+int32_t uidna_nameToUnicodeUTF8(const UIDNA *idna, const char *name, int32_t length, char *dest, int32_t capacity,
+    UIDNAInfo *pInfo, UErrorCode *pErrorCode)
+{
+    return U_ICU_ENTRY_POINT_RENAME(uidna_nameToUnicodeUTF8)(idna, name, length, dest, capacity, pInfo, pErrorCode);
+}
+UIDNA* uidna_openUTS46(uint32_t options, UErrorCode *pErrorCode)
+{
+    return U_ICU_ENTRY_POINT_RENAME(uidna_openUTS46)(options, pErrorCode);
 }
 int32_t uloc_acceptLanguage(char * result, int32_t resultAvailable, UAcceptResult * outResult, const char ** acceptList, int32_t acceptListCount, UEnumeration * availableLocales, UErrorCode * status) {
   return U_ICU_ENTRY_POINT_RENAME(uloc_acceptLanguage)(result, resultAvailable, outResult, acceptList, acceptListCount, availableLocales, status);
