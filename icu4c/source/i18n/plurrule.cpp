@@ -829,7 +829,7 @@ PluralRules::getRuleFromResource(const Locale& locale, UPluralType type, UErrorC
         UErrorCode status = U_ZERO_ERROR;
         char parentLocaleName[ULOC_FULLNAME_CAPACITY];
         const char *curLocaleName2=locale.getBaseName();
-        size_t curLocaleName2Len = std::strlen(curLocaleName2);
+        size_t curLocaleName2Len = strlen(curLocaleName2);
         if (curLocaleName2Len > ULOC_FULLNAME_CAPACITY - 1) {
             uprv_strncpy(parentLocaleName, curLocaleName2, ULOC_FULLNAME_CAPACITY - 1);
         } else {
