@@ -554,7 +554,7 @@ GraphemeClusterVectorizer::~GraphemeClusterVectorizer()
 {
 }
 
-constexpr int32_t MAX_GRAPHEME_CLSTER_LENGTH = 10;
+constexpr int32_t MAX_GRAPHEME_CLSTER_LENGTH = 11;
 
 void GraphemeClusterVectorizer::vectorize(
     UText *text, int32_t startPos, int32_t endPos,
