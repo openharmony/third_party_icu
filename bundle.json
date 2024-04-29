@@ -13,12 +13,15 @@
         "name": "icu",
         "subsystem": "thirdparty",
         "syscap": [],
-        "features": ["icu_support_locales"],
+        "features": [
+            "icu_support_locales",
+            "icu_support_libbegetutil"
+        ],
         "adapted_system_type": [ "mini", "small", "standard" ],
         "rom": "",
         "ram": "",
         "deps": {
-            "components": [],
+            "components": ["init"],
             "third_party": []
         },
         "build": {
