@@ -542,7 +542,7 @@ ohos_shared_library("shared_icuuc") {
     "UCONFIG_USE_WINDOWS_LCID_MAPPING_API=0",
     "_REENTRANT",
   ]
-  if (icu_support_libbegetutil && !is_mingw) {
+  if (icu_support_libbegetutil && !is_mingw && !is_clang) {
     defines += [ "ICU_SUPPORT_LIBBEGETUTIL" ]
     external_deps += [ "init:libbegetutil" ]
   }
@@ -652,7 +652,7 @@ if (defined(is_arkui_x) && is_arkui_x) {
       "UCONFIG_USE_WINDOWS_LCID_MAPPING_API=0",
       "_REENTRANT",
     ]
-    if (icu_support_libbegetutil && !is_mingw) {
+    if (icu_support_libbegetutil && !is_mingw && !is_clang) {
       defines += [ "ICU_SUPPORT_LIBBEGETUTIL" ]
       external_deps += [ "init:libbegetutil" ]
     }
@@ -718,7 +718,7 @@ if (defined(is_arkui_x) && is_arkui_x) {
       "UCONFIG_USE_WINDOWS_LCID_MAPPING_API=0",
       "_REENTRANT",
     ]
-    if (icu_support_libbegetutil && !is_mingw) {
+    if (icu_support_libbegetutil && !is_mingw && !is_clang) {
       defines += [ "ICU_SUPPORT_LIBBEGETUTIL" ]
       external_deps += [ "init:libbegetutil" ]
     }
@@ -891,7 +891,7 @@ ohos_static_library("static_icu") {
     "UCONFIG_USE_WINDOWS_LCID_MAPPING_API=0",
     "_REENTRANT",
   ]
-  if (icu_support_libbegetutil && !is_mingw) {
+  if (icu_support_libbegetutil && !is_mingw && !is_clang) {
     defines += [ "ICU_SUPPORT_LIBBEGETUTIL" ]
     external_deps += [ "init:libbegetutil" ]
   }
