@@ -21,7 +21,10 @@
         "rom": "",
         "ram": "",
         "deps": {
-            "components": ["init"],
+            "components": [
+                "init",
+                "hilog"
+                ],
             "third_party": []
         },
         "build": {
