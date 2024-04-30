@@ -31,8 +31,6 @@ ohos_shared_library("shared_icuuc_host") {
     "//build/config/compiler:rtti",
   ]
 
-  external_deps = []
-
   defines = [
     "U_ATTRIBUTE_DEPRECATED=",
     "U_COMMON_IMPLEMENTATION",
@@ -41,10 +39,6 @@ ohos_shared_library("shared_icuuc_host") {
     "UCONFIG_USE_WINDOWS_LCID_MAPPING_API=0",
     "_REENTRANT",
   ]
-  if (icu_support_libbegetutil && !is_mingw) {
-    defines += [ "ICU_SUPPORT_LIBBEGETUTIL" ]
-    external_deps += [ "init:libbegetutil" ]
-  }
   sources = [
     "//third_party/icu/icu4c/source/common/appendable.cpp",
     "//third_party/icu/icu4c/source/common/bmpset.cpp",
