@@ -664,7 +664,7 @@ if (defined(is_arkui_x) && is_arkui_x) {
       "-Wpointer-arith",
       "-Wwrite-strings",
       "-std=c++11",
-      "-Wno-error=implicit-function-declaration"
+      "-Wno-error=implicit-function-declaration",
       "-Wno-error=unused-parameter",
       "-Wno-error=unused-const-variable",
       "-Wno-error=unneeded-internal-declaration",
@@ -730,7 +730,7 @@ if (defined(is_arkui_x) && is_arkui_x) {
       "-Wpointer-arith",
       "-Wwrite-strings",
       "-std=c++11",
-      "-Wno-error=implicit-function-declaration"
+      "-Wno-error=implicit-function-declaration",
       "-Wno-error=unused-parameter",
       "-Wno-error=unused-const-variable",
       "-Wno-error=unneeded-internal-declaration",
@@ -905,7 +905,7 @@ ohos_static_library("static_icu") {
     "-Wpointer-arith",
     "-Wwrite-strings",
     "-std=c++11",
-    "-Wno-error=implicit-function-declaration"
+    "-Wno-error=implicit-function-declaration",
     "-Wno-error=unused-parameter",
     "-Wno-error=unused-const-variable",
     "-Wno-error=unneeded-internal-declaration",
