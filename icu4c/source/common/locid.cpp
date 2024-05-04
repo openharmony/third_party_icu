@@ -167,6 +167,70 @@ U_CDECL_END
 
 U_NAMESPACE_BEGIN
 
+#ifdef ICU_SUPPORT_LIBBEGETUTIL
+std::string ReadSystemParameter(const char *paramKey)
+{
+    char param[128];
+    int status = GetParameter(paramKey, "", param, 128);
+    if (status > 0) {
+        return param;
+    }
+    return "";
+}
+
+std::string GetSystemLocale()
+{
+    const char *LANGUAGE_KEY = "persist.global.language";
+    const char *DEFAULT_LANGUAGE_KEY = "const.global.language";
+    std::string systemLanguage = ReadSystemParameter(LANGUAGE_KEY);
+    if (systemLanguage.empty()) {
+        systemLanguage = ReadSystemParameter(DEFAULT_LANGUAGE_KEY);
+    }
+    return systemLanguage;
+}
+
+Locale *locale_get_default_internal(UErrorCode& status) {
+    // Synchronize this entire function.
+    Mutex lock(&gDefaultLocaleMutex);
+
+    std::string locale = GetSystemLocale();
+
+    const char *id = locale.c_str();
+    CharString localeNameBuf;
+    {
+        CharStringByteSink sink(&localeNameBuf);
+        ulocimp_canonicalize(id, sink, &status);
+    }
+    if (U_FAILURE(status)) {
+        return gDefaultLocale;
+    }
+
+    if (gDefaultLocalesHashT == NULL) {
+        gDefaultLocalesHashT = uhash_open(uhash_hashChars, uhash_compareChars, NULL, &status);
+        if (U_FAILURE(status)) {
+            return gDefaultLocale;
+        }
+        uhash_setValueDeleter(gDefaultLocalesHashT, deleteLocale);
+        ucln_common_registerCleanup(UCLN_COMMON_LOCALE, locale_cleanup);
+    }
+
+    Locale *newDefault = (Locale *)uhash_get(gDefaultLocalesHashT, localeNameBuf.data());
+    if (newDefault == NULL) {
+        newDefault = new Locale(Locale::eBOGUS);
+        if (newDefault == NULL) {
+            status = U_MEMORY_ALLOCATION_ERROR;
+            return gDefaultLocale;
+        }
+        newDefault->init(localeNameBuf.data(), false);
+        uhash_put(gDefaultLocalesHashT, (char*) newDefault->getName(), newDefault, &status);
+        if (U_FAILURE(status)) {
+            return gDefaultLocale;
+        }
+    }
+    return newDefault;
+}
+#endif
+
 Locale *locale_set_default_internal(const char *id, UErrorCode& status) {
     // Synchronize this entire function.
     Mutex lock(&gDefaultLocaleMutex);
@@ -2035,7 +2099,11 @@ Locale::getDefault()
         }
     }
     UErrorCode status = U_ZERO_ERROR;
+#ifdef ICU_SUPPORT_LIBBEGETUTIL
+    return *locale_get_default_internal(status);
+#else
     return *locale_set_default_internal(NULL, status);
+#endif
 }
 
 
