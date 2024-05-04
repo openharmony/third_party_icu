@@ -531,6 +531,9 @@ ohos_shared_library("shared_icuuc") {
     ":icu_config",
     ":static_icustubdata_all_deps_config",
   ]
+
+  external_deps = []
+
   defines = [
     "U_ATTRIBUTE_DEPRECATED=",
     "U_COMMON_IMPLEMENTATION",
@@ -539,6 +542,10 @@ ohos_shared_library("shared_icuuc") {
     "UCONFIG_USE_WINDOWS_LCID_MAPPING_API=0",
     "_REENTRANT",
   ]
+  if (icu_support_libbegetutil && !is_mingw && !is_clang) {
+    defines += [ "ICU_SUPPORT_LIBBEGETUTIL" ]
+    external_deps += [ "init:libbegetutil" ]
+  }
   sources = icu_common_source
   deps = [
     ":ohos_icudat",
@@ -551,6 +558,7 @@ ohos_shared_library("shared_icuuc") {
     "-pedantic",
     "-Wpointer-arith",
     "-Wwrite-strings",
+    "-Wno-error=implicit-function-declaration",
     "-Wno-error=unused-parameter",
     "-Wno-error=unused-const-variable",
     "-Wno-error=unneeded-internal-declaration",
@@ -633,6 +641,8 @@ if (defined(is_arkui_x) && is_arkui_x) {
       deps = [ ":static_icustubdata" ]
     }
 
+    external_deps = []
+
     defines = [
       "U_ATTRIBUTE_DEPRECATED=",
       "U_COMMON_IMPLEMENTATION",
@@ -642,6 +652,10 @@ if (defined(is_arkui_x) && is_arkui_x) {
       "UCONFIG_USE_WINDOWS_LCID_MAPPING_API=0",
       "_REENTRANT",
     ]
+    if (icu_support_libbegetutil && !is_mingw && !is_clang) {
+      defines += [ "ICU_SUPPORT_LIBBEGETUTIL" ]
+      external_deps += [ "init:libbegetutil" ]
+    }
     sources = icu_common_source
     cflags_cc = [
       "-W",
@@ -650,6 +664,7 @@ if (defined(is_arkui_x) && is_arkui_x) {
       "-Wpointer-arith",
       "-Wwrite-strings",
       "-std=c++11",
+      "-Wno-error=implicit-function-declaration",
       "-Wno-error=unused-parameter",
       "-Wno-error=unused-const-variable",
       "-Wno-error=unneeded-internal-declaration",
@@ -692,6 +707,8 @@ if (defined(is_arkui_x) && is_arkui_x) {
       deps = [ ":static_icustubdata" ]
     }
 
+    external_deps = []
+
     defines = [
       "U_ATTRIBUTE_DEPRECATED=",
       "U_COMMON_IMPLEMENTATION",
@@ -701,6 +718,10 @@ if (defined(is_arkui_x) && is_arkui_x) {
       "UCONFIG_USE_WINDOWS_LCID_MAPPING_API=0",
       "_REENTRANT",
     ]
+    if (icu_support_libbegetutil && !is_mingw && !is_clang) {
+      defines += [ "ICU_SUPPORT_LIBBEGETUTIL" ]
+      external_deps += [ "init:libbegetutil" ]
+    }
     sources = icu_common_source
     cflags_cc = [
       "-W",
@@ -709,6 +730,7 @@ if (defined(is_arkui_x) && is_arkui_x) {
       "-Wpointer-arith",
       "-Wwrite-strings",
       "-std=c++11",
+      "-Wno-error=implicit-function-declaration",
       "-Wno-error=unused-parameter",
       "-Wno-error=unused-const-variable",
       "-Wno-error=unneeded-internal-declaration",
@@ -857,6 +879,8 @@ ohos_static_library("static_icu") {
     "//build/config/compiler:rtti",
   ]
 
+  external_deps = []
+
   defines = [
     "U_ATTRIBUTE_DEPRECATED=",
     "U_COMMON_IMPLEMENTATION",
@@ -867,6 +891,10 @@ ohos_static_library("static_icu") {
     "UCONFIG_USE_WINDOWS_LCID_MAPPING_API=0",
     "_REENTRANT",
   ]
+  if (icu_support_libbegetutil && !is_mingw && !is_clang) {
+    defines += [ "ICU_SUPPORT_LIBBEGETUTIL" ]
+    external_deps += [ "init:libbegetutil" ]
+  }
   sources = icu_common_source
   sources += icu_i18n_source
   sources += [ "//third_party/icu/ohos_icu4j/data/lite/icudt72l_dat.S" ]
@@ -877,6 +905,7 @@ ohos_static_library("static_icu") {
     "-Wpointer-arith",
     "-Wwrite-strings",
     "-std=c++11",
+    "-Wno-error=implicit-function-declaration",
     "-Wno-error=unused-parameter",
     "-Wno-error=unused-const-variable",
     "-Wno-error=unneeded-internal-declaration",
