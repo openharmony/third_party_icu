@@ -189,7 +189,8 @@ std::string GetSystemLocale()
     return systemLanguage;
 }
 
-Locale *locale_get_default_internal(UErrorCode& status) {
+Locale *locale_get_default_internal(UErrorCode& status)
+{
     // Synchronize this entire function.
     Mutex lock(&gDefaultLocaleMutex);
 
