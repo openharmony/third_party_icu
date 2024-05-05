@@ -249,7 +249,6 @@ ohos_shared_library("shared_icuuc_host") {
     "-Wpointer-arith",
     "-Wpointer-arith",
     "-Wwrite-strings",
-    "-Wno-error=implicit-function-declaration",
     "-Wno-error=unused-parameter",
     "-Wno-error=unused-const-variable",
     "-Wno-error=unneeded-internal-declaration",
