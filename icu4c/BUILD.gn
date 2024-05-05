@@ -542,8 +542,7 @@ ohos_shared_library("shared_icuuc") {
     "UCONFIG_USE_WINDOWS_LCID_MAPPING_API=0",
     "_REENTRANT",
   ]
-  if (icu_support_libbegetutil && !is_mingw &&
-      (current_cpu == "arm" || current_cpu == "arm64")) {
+  if (icu_support_libbegetutil && !is_mingw && current_cpu == "arm64") {
     defines += [ "ICU_SUPPORT_LIBBEGETUTIL" ]
     external_deps += [ "init:libbegetutil" ]
   }
