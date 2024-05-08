@@ -46,9 +46,8 @@ extern "C" void SetOhosIcuDirectory()
 {
     std::lock_guard<std::mutex> lock(dataMutex);
     const char* currDir = u_getDataDirectory();
-    const char* ohosDirectory = "/system/usr/ohos_icu";
-    if (strncmp(currDir, ohosDirectory, strlen(ohosDirectory)) == 0) {
+    if (strncmp(currDir, g_hwDirectory, strlen(g_hwDirectory)) == 0) {
         return;
     }
-    u_setDataDirectory(ohosDirectory);
+    u_setDataDirectory(g_hwDirectory);
 }
