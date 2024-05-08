@@ -17,9 +17,18 @@
 #define INIT_HW_DATA_H
 
 #include "common/unicode/putil.h"
+#include "common/unicode/uvernum.h"
 
 /**
  * convienient method to set icu data file directory to HW_DIRECTORY);
  */
 void SetHwIcuDirectory( );
+
 #endif
+
+/**
+ * get icu version
+ */
+extern "C" const char* GetIcuVersion();
+
+extern "C" void SetOhosIcuDirectory();
