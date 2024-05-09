@@ -180,13 +180,13 @@ std::string ReadSystemParameter(const char *paramKey)
 
 std::string GetSystemLocale()
 {
-    const char *LANGUAGE_KEY = "persist.global.language";
-    const char *DEFAULT_LANGUAGE_KEY = "const.global.language";
-    std::string systemLanguage = ReadSystemParameter(LANGUAGE_KEY);
-    if (systemLanguage.empty()) {
-        systemLanguage = ReadSystemParameter(DEFAULT_LANGUAGE_KEY);
+    const char *LOCALE_KEY = "persist.global.locale";
+    const char *DEFAULT_LOCALE_KEY = "const.global.locale";
+    std::string systemLocale = ReadSystemParameter(LOCALE_KEY);
+    if (systemLocale.empty()) {
+        systemLocale = ReadSystemParameter(DEFAULT_LOCALE_KEY);
     }
-    return systemLanguage;
+    return systemLocale;
 }
 
 Locale *locale_get_default_internal(UErrorCode& status)
