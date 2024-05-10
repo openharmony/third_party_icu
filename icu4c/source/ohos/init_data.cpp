@@ -14,7 +14,7 @@
  */
 
 #include "init_data.h"
-
+#include <string.h>
 #include <mutex>
 
 namespace {
@@ -34,4 +34,20 @@ void SetHwIcuDirectory( )
     }
     u_setDataDirectory(g_hwDirectory);
     status = 1;
+}
+
+extern "C" const char* GetIcuVersion()
+{
+    const char* icuVerion = U_ICU_VERSION;
+    return icuVerion;
+}
+
+extern "C" void SetOhosIcuDirectory()
+{
+    std::lock_guard<std::mutex> lock(dataMutex);
+    const char* currDir = u_getDataDirectory();
+    if (strncmp(currDir, g_hwDirectory, strlen(g_hwDirectory)) == 0) {
+        return;
+    }
+    u_setDataDirectory(g_hwDirectory);
 }
