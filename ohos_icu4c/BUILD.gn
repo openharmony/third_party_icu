@@ -12,6 +12,7 @@
 # limitations under the License.
 
 import("//build/ohos.gni")
+import("//third_party/icu/icu.gni")
 import("//build/ohos/ndk/ndk.gni")
 
 ohos_shared_library("icundk") {
