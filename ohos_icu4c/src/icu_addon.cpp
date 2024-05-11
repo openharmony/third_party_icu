@@ -37,7 +37,7 @@
 #endif
 
 #ifdef ICU_SUPPORT_LIBBEGETUTIL
-bool g_isDefault = false;
+bool g_isCustomLocale = false;
 #endif
 /* Restore C api definition */
 #undef UCNV_TO_U_CALLBACK_ESCAPE
@@ -1482,7 +1482,7 @@ int32_t uloc_getCountry(const char * localeID, char * country, int32_t countryCa
 }
 const char * uloc_getDefault() {
 #ifdef ICU_SUPPORT_LIBBEGETUTIL
-  if (g_isDefault) {
+  if (g_isCustomLocale) {
       return U_ICU_ENTRY_POINT_RENAME(uloc_getDefault)();
   }
 
@@ -1574,6 +1574,7 @@ UEnumeration * uloc_openKeywords(const char * localeID, UErrorCode * status) {
   return U_ICU_ENTRY_POINT_RENAME(uloc_openKeywords)(localeID, status);
 }
 void uloc_setDefault(const char * localeID, UErrorCode * status) {
+  g_isCustomLocale = true;
   U_ICU_ENTRY_POINT_RENAME(uloc_setDefault)(localeID, status);
 }
 int32_t uloc_setKeywordValue(const char * keywordName, const char * keywordValue, char * buffer, int32_t bufferCapacity, UErrorCode * status) {
