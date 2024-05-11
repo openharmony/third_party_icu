@@ -32,6 +32,13 @@
 #include <unicode/uset.h>
 #include <unicode/utrans.h>
 
+#ifdef ICU_SUPPORT_LIBBEGETUTIL
+#include "parameter.h"
+#endif
+
+#ifdef ICU_SUPPORT_LIBBEGETUTIL
+bool g_isDefault = false;
+#endif
 /* Restore C api definition */
 #undef UCNV_TO_U_CALLBACK_ESCAPE
 #undef u_charDigitValue
@@ -1474,7 +1481,25 @@ int32_t uloc_getCountry(const char * localeID, char * country, int32_t countryCa
   return U_ICU_ENTRY_POINT_RENAME(uloc_getCountry)(localeID, country, countryCapacity, err);
 }
 const char * uloc_getDefault() {
+#ifdef ICU_SUPPORT_LIBBEGETUTIL
+  if (g_isDefault) {
+      return U_ICU_ENTRY_POINT_RENAME(uloc_getDefault)();
+  }
+
+  static char param[128];
+  const char *LANGUAGE_KEY = "persist.global.locale";
+  const char *DEFAULT_LANGUAGE_KEY = "const.global.locale";
+  int status = GetParameter(LANGUAGE_KEY, "", param, 128);
+  if (status <= 0) {
+      status = GetParameter(DEFAULT_LANGUAGE_KEY, "", param, 128);
+  }
+  if (status <= 0) {
+      return "";
+  }
+  return param;
+#else
   return U_ICU_ENTRY_POINT_RENAME(uloc_getDefault)();
+#endif
 }
 int32_t uloc_getDisplayCountry(const char * locale, const char * displayLocale, UChar * country, int32_t countryCapacity, UErrorCode * status) {
   return U_ICU_ENTRY_POINT_RENAME(uloc_getDisplayCountry)(locale, displayLocale, country, countryCapacity, status);
