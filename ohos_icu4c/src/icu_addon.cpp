@@ -1487,11 +1487,11 @@ const char * uloc_getDefault() {
   }
 
   static char param[128];
-  const char *LANGUAGE_KEY = "persist.global.locale";
-  const char *DEFAULT_LANGUAGE_KEY = "const.global.locale";
-  int status = GetParameter(LANGUAGE_KEY, "", param, 128);
+  const char *LOCALE_KEY = "persist.global.locale";
+  const char *DEFAULT_LOCALE_KEY = "const.global.locale";
+  int status = GetParameter(LOCALE_KEY, "", param, 128);
   if (status <= 0) {
-      status = GetParameter(DEFAULT_LANGUAGE_KEY, "", param, 128);
+      status = GetParameter(DEFAULT_LOCALE_KEY, "", param, 128);
   }
   if (status <= 0) {
       return "";
