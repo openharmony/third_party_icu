@@ -1574,7 +1574,9 @@ UEnumeration * uloc_openKeywords(const char * localeID, UErrorCode * status) {
   return U_ICU_ENTRY_POINT_RENAME(uloc_openKeywords)(localeID, status);
 }
 void uloc_setDefault(const char * localeID, UErrorCode * status) {
+#ifdef ICU_SUPPORT_LIBBEGETUTIL
   g_isCustomLocale = true;
+#endif
   U_ICU_ENTRY_POINT_RENAME(uloc_setDefault)(localeID, status);
 }
 int32_t uloc_setKeywordValue(const char * keywordName, const char * keywordValue, char * buffer, int32_t bufferCapacity, UErrorCode * status) {
