@@ -31,6 +31,11 @@ ohos_shared_library("icundk") {
     "//third_party/icu/icu4c:shared_icui18n",
     "//third_party/icu/icu4c:shared_icuuc",
   ]
+  external_deps = []
+  if (icu_support_libbegetutil) {
+      defines += [ "ICU_SUPPORT_LIBBEGETUTIL" ]
+      external_deps += [ "init:libbegetutil" ]
+  }
 
   version_script = "libicu.map"
   output_name = "icu"
