@@ -34,7 +34,7 @@ ohos_shared_library("icundk") {
   ]
   external_deps = []
   defines = []
-  if (icu_support_libbegetutil) {
+  if (icu_support_libbegetutil && is_ohos) {
     defines += [ "ICU_SUPPORT_LIBBEGETUTIL" ]
     external_deps += [ "init:libbegetutil" ]
   }
