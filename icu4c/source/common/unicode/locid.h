@@ -35,9 +35,6 @@
 
 #if U_SHOW_CPLUSPLUS_API
 
-#ifdef ICU_SUPPORT_LIBBEGETUTIL
-#include "parameter.h"
-#endif
 #include "unicode/bytestream.h"
 #include "unicode/localpointer.h"
 #include "unicode/strenum.h"
@@ -1159,10 +1156,6 @@ private:
      * @internal (private)
      */
     friend Locale *locale_set_default_internal(const char *, UErrorCode& status);
-
-#ifdef ICU_SUPPORT_LIBBEGETUTIL
-    friend Locale *locale_get_default_internal(UErrorCode& status);
-#endif
 
     /**
      * @internal (private)
