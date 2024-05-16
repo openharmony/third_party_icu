@@ -24,11 +24,13 @@
  */
 void SetHwIcuDirectory( );
 
-#endif
-
 /**
  * get icu version
  */
 extern "C" const char* GetIcuVersion();
 
 extern "C" void SetOhosIcuDirectory();
+
+#endif
+
+
