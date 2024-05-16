@@ -14,7 +14,7 @@
  */
 
 #include "init_data.h"
-#include <string.h>
+#include <cstring>
 #include <mutex>
 
 namespace {
@@ -38,7 +38,7 @@ void SetHwIcuDirectory( )
 
 extern "C" const char* GetIcuVersion()
 {
-    const char* icuVerion = U_ICU_VERSION;
+    const char* icuVerion = U_ICU_VERSION_SHORT;
     return icuVerion;
 }
 
