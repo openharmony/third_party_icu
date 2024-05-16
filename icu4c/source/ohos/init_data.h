@@ -32,5 +32,3 @@ extern "C" const char* GetIcuVersion();
 extern "C" void SetOhosIcuDirectory();
 
 #endif
-
-
