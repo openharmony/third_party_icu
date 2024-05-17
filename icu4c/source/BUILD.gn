@@ -39,6 +39,9 @@ ohos_shared_library("shared_icuuc_host") {
     "UCONFIG_USE_WINDOWS_LCID_MAPPING_API=0",
     "_REENTRANT",
   ]
+  if (!is_mingw) {
+    defines += [ "ICU_SUPPORT_DISTRO" ]
+  }
   sources = [
     "//third_party/icu/icu4c/source/common/appendable.cpp",
     "//third_party/icu/icu4c/source/common/bmpset.cpp",
@@ -238,6 +241,7 @@ ohos_shared_library("shared_icuuc_host") {
     "//third_party/icu/icu4c/source/common/uvectr32.cpp",
     "//third_party/icu/icu4c/source/common/uvectr64.cpp",
     "//third_party/icu/icu4c/source/common/wintz.cpp",
+    "//third_party/icu/icu4c/source/ohos/distro_tzdata_loader.cpp",
     "//third_party/icu/icu4c/source/ohos/init_data.cpp",
     "//third_party/icu/icu4c/source/stubdata/stubdata.cpp",
   ]
