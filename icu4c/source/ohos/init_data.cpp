@@ -13,6 +13,7 @@
  * limitations under the License.
  */
 
+#include "distro_tzdata_loader.h"
 #include "init_data.h"
 #include <cstring>
 #include <mutex>
@@ -33,6 +34,7 @@ void SetHwIcuDirectory( )
         return;
     }
     u_setDataDirectory(g_hwDirectory);
+    OHOS::Global::I18n::DistroTZDataLoader::SetDistroTZDataPath();
     status = 1;
 }
 
@@ -50,4 +52,5 @@ extern "C" void SetOhosIcuDirectory()
         return;
     }
     u_setDataDirectory(g_hwDirectory);
+    OHOS::Global::I18n::DistroTZDataLoader::SetDistroTZDataPath();
 }
