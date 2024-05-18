@@ -1318,6 +1318,12 @@ doOpenChoice(const char *path, const char *type, const char *name,
             if((retVal != NULL) || U_FAILURE(*pErrorCode)) {
                 return retVal;
             }
+            retVal = doLoadFromCommonData(isICUData,
+                "icu_tzdata", tzFilesDir, tocEntryPathSuffix, tocEntryName.data(),
+                "icu_tzdata", type, name, isAcceptable, context, &subErrorCode, pErrorCode);
+            if((retVal != NULL) || U_FAILURE(*pErrorCode)) {
+                return retVal;
+            }
         }
     }
 
