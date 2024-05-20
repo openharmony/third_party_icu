@@ -31,6 +31,7 @@ class TimeZoneFormatTest : public IntlTest {
     void TestFormatTZDBNamesAllZoneCoverage(void);
     void TestAdoptDefaultThreadSafe(void);
     void TestCentralTime(void);
+    void Test22614GetMetaZoneNamesNotCrash();
 
     void RunTimeRoundTripTests(int32_t threadNumber);
     void RunAdoptDefaultThreadSafeTests(int32_t threadNumber);
