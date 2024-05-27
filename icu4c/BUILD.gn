@@ -627,9 +627,10 @@ ohos_shared_library("shared_icui18n") {
 
 if (defined(is_arkui_x) && is_arkui_x) {
   ohos_source_set("static_icuuc") {
-    configs = [
+    configs = [ "//build/config/compiler:rtti" ]
+    public_configs = [
       ":icu_config",
-      "//build/config/compiler:rtti",
+      ":static_icustubdata_all_deps_config",
     ]
 
     if (!(defined(is_arkui_x) && is_arkui_x) ||
