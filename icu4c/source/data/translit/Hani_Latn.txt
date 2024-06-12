@@ -16,7 +16,7 @@
 沈 } \u0020? 阳 →shěn;# 沈 is shěn (not chén) if followed by 阳 yáng: 沈阳 city Shěnyáng
 秘 } \u0020? 鲁 →bì;# 秘 is bì (not mì) if followed by 鲁 lǔ: 秘鲁 country Bìlǔ = Peru
 长 } \u0020? 沙 →cháng;# 长 is cháng (not zhǎng) if followed by 沙 shā: 长沙 city chángshā
-长 } \u0020? 春 →cháng;# 长 is cháng (not zhǎng) if followed by 春 shā: 长春 city chángchūn
+长 } \u0020? 春 →cháng;# 长 is cháng (not zhǎng) if followed by 春 chūn: 长春 city chángchūn
 六 } \u0020? 安 →lù;# 六 is lù (not liù) if followed by 安 ān: 六安 city lùān
 台 } \u0020? 州 →tāi;# 台 is tāi (not tái) if followed by 州 zhōu: 台州 city tāizhōu
 乐 } \u0020? 清 →yuè;# 乐 is yuè (not lè) if followed by 清 qīng: 乐清 city yuèqīng
