@@ -22,20 +22,14 @@
 namespace OHOS {
 namespace Global {
 namespace I18n {
-const char *DistroTZDataLoader::ICU_TZDATA_PATH = "/system/etc/tzdata_distro/icu/icu_tzdata.dat";
-const char *DistroTZDataLoader::DISTRO_TZDATA_PATH = "/system/etc/tzdata_distro/icu";
+const char *DistroTZDataLoader::ICU_TZDATA_PATH = "/system/etc/tzdata_distro/icu_tzdata.dat";
+const char *DistroTZDataLoader::DISTRO_TZDATA_PATH = "/system/etc/tzdata_distro";
 const char *DistroTZDataLoader::TZDATA_PATH = "/system/etc/icu_tzdata";
 const char *DistroTZDataLoader::ICU_TIMEZONE_FILES_DIR = "ICU_TIMEZONE_FILES_DIR";
 
 void DistroTZDataLoader::SetDistroTZDataPath()
 {
 #ifdef ICU_SUPPORT_DISTRO
-    // if distro_tzdata_path is exist, use distro tzdata first
-    if (CheckFileExist()) {
-        setenv(ICU_TIMEZONE_FILES_DIR, DISTRO_TZDATA_PATH, 1);
-    } else {
-        setenv(ICU_TIMEZONE_FILES_DIR, TZDATA_PATH, 1);
-    }
 #endif
 }
 
