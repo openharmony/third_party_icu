@@ -539,6 +539,8 @@ ohos_shared_library("shared_icuuc") {
     "UPRV_BLOCK_MACRO_END=",
     "UCONFIG_USE_WINDOWS_LCID_MAPPING_API=0",
     "_REENTRANT",
+    "DISTRO_TZDATA_DIR=${distro_tzdata_dir}",
+    "SYSTEM_TZDATA_DIR=${system_tzdata_dir}",
   ]
   if (!is_mingw) {
     defines += [ "ICU_SUPPORT_DISTRO" ]

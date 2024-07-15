@@ -1308,16 +1308,29 @@ doOpenChoice(const char *path, const char *type, const char *name,
 
     /****    Time zone individual files override  */
     if (isICUData && isTimeZoneFile(name, type)) {
+#ifdef DISTRO_TZDATA_DIR
+        const char* distroTzdataDir = DISTRO_TZDATA_DIR;
+        retVal = doLoadFromIndividualFiles(/* pkgName.data() */ "", distroTzdataDir, tocEntryPathSuffix,
+                        /* path */ "", type, name, isAcceptable, context, &subErrorCode, pErrorCode);
+        if((retVal != NULL) || U_FAILURE(*pErrorCode)) {
+            return retVal;
+        }
+#endif
+
+#ifdef SYSTEM_TZDATA_DIR
+        const char* systemTzdataDir = SYSTEM_TZDATA_DIR;
+        retVal = doLoadFromIndividualFiles(/* pkgName.data() */ "", systemTzdataDir, tocEntryPathSuffix,
+                        /* path */ "", type, name, isAcceptable, context, &subErrorCode, pErrorCode);
+        if((retVal != NULL) || U_FAILURE(*pErrorCode)) {
+            return retVal;
+        }
+#endif
+
         const char *tzFilesDir = u_getTimeZoneFilesDirectory(pErrorCode);
         if (tzFilesDir[0] != 0) {
 #ifdef UDATA_DEBUG
             fprintf(stderr, "Trying Time Zone Files directory = %s\n", tzFilesDir);
 #endif
-            retVal = doLoadFromIndividualFiles(/* pkgName.data() */ "", tzFilesDir, tocEntryPathSuffix,
-                            /* path */ "", type, name, isAcceptable, context, &subErrorCode, pErrorCode);
-            if((retVal != NULL) || U_FAILURE(*pErrorCode)) {
-                return retVal;
-            }
             retVal = doLoadFromCommonData(isICUData,
                 "icu_tzdata", tzFilesDir, tocEntryPathSuffix, tocEntryName.data(),
                 "icu_tzdata", type, name, isAcceptable, context, &subErrorCode, pErrorCode);
