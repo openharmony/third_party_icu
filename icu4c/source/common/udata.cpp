@@ -1309,16 +1309,16 @@ doOpenChoice(const char *path, const char *type, const char *name,
     /****    Time zone individual files override  */
     if (isICUData && isTimeZoneFile(name, type)) {
 #ifdef DISTRO_TZDATA_DIR
-        retVal = doLoadFromIndividualFiles(/* pkgName.data() */ "", DISTRO_TZDATA_DIR, tocEntryPathSuffix,
-                        /* path */ "", type, name, isAcceptable, context, &subErrorCode, pErrorCode);
+        retVal = doLoadFromIndividualFiles("", DISTRO_TZDATA_DIR, tocEntryPathSuffix,
+            "", type, name, isAcceptable, context, &subErrorCode, pErrorCode);
         if((retVal != NULL) || U_FAILURE(*pErrorCode)) {
             return retVal;
         }
 #endif
 
 #ifdef SYSTEM_TZDATA_DIR
-        retVal = doLoadFromIndividualFiles(/* pkgName.data() */ "", SYSTEM_TZDATA_DIR, tocEntryPathSuffix,
-                        /* path */ "", type, name, isAcceptable, context, &subErrorCode, pErrorCode);
+        retVal = doLoadFromIndividualFiles("", SYSTEM_TZDATA_DIR, tocEntryPathSuffix,
+            "", type, name, isAcceptable, context, &subErrorCode, pErrorCode);
         if((retVal != NULL) || U_FAILURE(*pErrorCode)) {
             return retVal;
         }
