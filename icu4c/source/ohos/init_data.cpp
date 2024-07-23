@@ -13,7 +13,6 @@
  * limitations under the License.
  */
 
-#include "distro_tzdata_loader.h"
 #include "init_data.h"
 #include <cstring>
 #include <mutex>
@@ -27,14 +26,13 @@ std::mutex dataMutex;
 /**
  * set icu data files to hwDirectory
  */
-void SetHwIcuDirectory( )
+void SetHwIcuDirectory()
 {
     std::lock_guard<std::mutex> lock(dataMutex);
     if (status != 0) {
         return;
     }
     u_setDataDirectory(g_hwDirectory);
-    OHOS::Global::I18n::DistroTZDataLoader::SetDistroTZDataPath();
     status = 1;
 }
 
@@ -52,5 +50,4 @@ extern "C" void SetOhosIcuDirectory()
         return;
     }
     u_setDataDirectory(g_hwDirectory);
-    OHOS::Global::I18n::DistroTZDataLoader::SetDistroTZDataPath();
 }
