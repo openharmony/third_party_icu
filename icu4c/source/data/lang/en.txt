@@ -113,7 +113,7 @@ en{
         bla{"Siksiká"}
         blt{"Tai Dam"}
         bm{"Bambara"}
-        bn{"Bengali"}
+        bn{"Bangla"}
         bo{"Tibetan"}
         bpy{"Bishnupriya"}
         bqi{"Bakhtiari"}
@@ -219,7 +219,7 @@ en{
         fa_AF{"Dari"}
         fan{"Fang"}
         fat{"Fanti"}
-        ff{"Fulah"}
+        ff{"Fula"}
         fi{"Finnish"}
         fil{"Filipino"}
         fit{"Tornedalen Finnish"}
@@ -418,7 +418,7 @@ en{
         mgh{"Makhuwa-Meetto"}
         mgo{"Metaʼ"}
         mh{"Marshallese"}
-        mi{"Maori"}
+        mi{"Māori"}
         mic{"Mi'kmaq"}
         min{"Minangkabau"}
         mk{"Macedonian"}
