@@ -493,6 +493,7 @@ zh_Hant{
         ro_MD{"摩爾多瓦文"}
         rof{"蘭博文"}
         rom{"吉普賽文"}
+        root{"根語言"}
         rtm{"羅圖馬島文"}
         ru{"俄文"}
         rue{"盧森尼亞文"}
@@ -664,6 +665,12 @@ zh_Hant{
     }
     Languages%menu{
         ars{"阿拉伯文（納吉迪）"}
+        ckb{"庫德文（索拉尼）"}
+        yue{"粵語"}
+        zh{"中文"}
+    }
+    Languages%short{
+        az{"亞塞拜然文"}
     }
     Languages%variant{
         ckb{"庫德文（索拉尼）"}

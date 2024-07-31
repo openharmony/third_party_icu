@@ -1575,9 +1575,9 @@ sr_Latn{
             ls{"Gilbert ostrva vreme"}
         }
         "meta:Greenland"{
-            ld{"Istočni Grenland, letnje vreme"}
-            lg{"Istočni Grenland"}
-            ls{"Istočni Grenland, standardno vreme"}
+            ld{"Grenlandsko letnje vreme"}
+            lg{"Grenlandsko vreme"}
+            ls{"Grenlandsko standardno vreme"}
         }
         "meta:Greenland_Eastern"{
             ld{"Istočni Grenland, letnje vreme"}

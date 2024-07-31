@@ -134,7 +134,7 @@ id{
         GU{"Guam"}
         GW{"Guinea-Bissau"}
         GY{"Guyana"}
-        HK{"Hong Kong DAK Tiongkok"}
+        HK{"Hong Kong, Tiongkok"}
         HM{"Pulau Heard dan Kepulauan McDonald"}
         HN{"Honduras"}
         HR{"Kroasia"}
@@ -188,7 +188,7 @@ id{
         ML{"Mali"}
         MM{"Myanmar (Burma)"}
         MN{"Mongolia"}
-        MO{"Makau DAK Tiongkok"}
+        MO{"Makau, Tiongkok"}
         MP{"Kepulauan Mariana Utara"}
         MQ{"Martinik"}
         MR{"Mauritania"}
@@ -270,7 +270,7 @@ id{
         TR{"Turki"}
         TT{"Trinidad dan Tobago"}
         TV{"Tuvalu"}
-        TW{"Taiwan"}
+        TW{"Taiwan, Tiongkok"}
         TZ{"Tanzania"}
         UA{"Ukraina"}
         UG{"Uganda"}

@@ -1596,9 +1596,9 @@ nl{
             ls{"Gilberteilandse tijd"}
         }
         "meta:Greenland"{
-            ld{"Oost-Groenlandse zomertijd"}
-            lg{"Oost-Groenlandse tijd"}
-            ls{"Oost-Groenlandse standaardtijd"}
+            ld{"Groenlandse zomertijd"}
+            lg{"Groenlandse tijd"}
+            ls{"Groenlandse standaardtijd"}
         }
         "meta:Greenland_Eastern"{
             ld{"Oost-Groenlandse zomertijd"}

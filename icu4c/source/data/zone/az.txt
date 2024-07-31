@@ -1533,9 +1533,9 @@ az{
             ls{"Gilbert Adaları Vaxtı"}
         }
         "meta:Greenland"{
-            ld{"Şərqi Qrenlandiya Yay Vaxtı"}
-            lg{"Şərqi Qrenlandiya Vaxtı"}
-            ls{"Şərqi Qrenlandiya Standart Vaxtı"}
+            ld{"Qrenlandiya yay vaxtı"}
+            lg{"Qrenlandiya vaxtı"}
+            ls{"Qrenlandiya standart vaxtı"}
         }
         "meta:Greenland_Eastern"{
             ld{"Şərqi Qrenlandiya Yay Vaxtı"}

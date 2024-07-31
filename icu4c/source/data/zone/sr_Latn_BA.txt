@@ -316,9 +316,9 @@ sr_Latn_BA{
             ls{"Gilbertova ostrva vrijeme"}
         }
         "meta:Greenland"{
-            ld{"Istočni Grenland, ljetnje vrijeme"}
-            lg{"Istočni Grenland"}
-            ls{"Istočni Grenland, standardno vrijeme"}
+            ld{"Grenland, ljetnje vrijeme"}
+            lg{"Grenland, vrijeme"}
+            ls{"Grenland, standardno vrijeme"}
         }
         "meta:Greenland_Eastern"{
             ld{"Istočni Grenland, ljetnje vrijeme"}
