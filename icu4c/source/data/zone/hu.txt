@@ -1571,9 +1571,9 @@ hu{
             ls{"gilbert-szigeteki idő"}
         }
         "meta:Greenland"{
-            ld{"kelet-grönlandi nyári idő"}
-            lg{"kelet-grönlandi időzóna"}
-            ls{"kelet-grönlandi téli idő"}
+            ld{"Grönlandi nyári időszámítás"}
+            lg{"Grönlandi idő"}
+            ls{"Grönlandi standard idő"}
         }
         "meta:Greenland_Eastern"{
             ld{"kelet-grönlandi nyári idő"}

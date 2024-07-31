@@ -1529,6 +1529,11 @@ jv{
         "meta:Gilbert_Islands"{
             ls{"Wektu Kepuloan Gilbert"}
         }
+        "meta:Greenland"{
+            ld{"Wektu Musim Panas Greenland"}
+            lg{"Wektu Greenland"}
+            ls{"Wektu Standar Greenland"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Wektu Ketigo Grinland Wetan"}
             lg{"Wektu Grinland Wetan"}

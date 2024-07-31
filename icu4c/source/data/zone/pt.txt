@@ -1558,9 +1558,9 @@ pt{
             ls{"Horário das Ilhas Gilberto"}
         }
         "meta:Greenland"{
-            ld{"Horário de Verão da Groelândia Oriental"}
-            lg{"Horário da Groelândia Oriental"}
-            ls{"Horário Padrão da Groelândia Oriental"}
+            ld{"Horário de verão da Groenlândia"}
+            lg{"Horário da Groenlândia"}
+            ls{"Horário padrão da Groenlândia"}
         }
         "meta:Greenland_Eastern"{
             ld{"Horário de Verão da Groelândia Oriental"}

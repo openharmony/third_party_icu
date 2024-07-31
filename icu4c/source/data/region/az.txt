@@ -134,7 +134,7 @@ az{
         GU{"Quam"}
         GW{"Qvineya-Bisau"}
         GY{"Qayana"}
-        HK{"Honq Konq Xüsusi İnzibati Rayonu Çin"}
+        HK{"Honkonq, Çin"}
         HM{"Herd və Makdonald adaları"}
         HN{"Honduras"}
         HR{"Xorvatiya"}
@@ -188,7 +188,7 @@ az{
         ML{"Mali"}
         MM{"Myanma"}
         MN{"Monqolustan"}
-        MO{"Makao XİR Çin"}
+        MO{"Makao, Çin"}
         MP{"Şimali Marian adaları"}
         MQ{"Martinik"}
         MR{"Mavritaniya"}
@@ -270,7 +270,7 @@ az{
         TR{"Türkiyə"}
         TT{"Trinidad və Tobaqo"}
         TV{"Tuvalu"}
-        TW{"Tayvan"}
+        TW{"Tayvan, Çin"}
         TZ{"Tanzaniya"}
         UA{"Ukrayna"}
         UG{"Uqanda"}

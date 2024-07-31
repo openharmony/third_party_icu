@@ -1571,9 +1571,9 @@ sk{
             ls{"čas Gilbertových ostrovov"}
         }
         "meta:Greenland"{
-            ld{"východogrónsky letný čas"}
-            lg{"východogrónsky čas"}
-            ls{"východogrónsky štandardný čas"}
+            ld{"Grónsko (letný čas)"}
+            lg{"Grónsko (čas)"}
+            ls{"Grónsko (štandardný čas)"}
         }
         "meta:Greenland_Eastern"{
             ld{"východogrónsky letný čas"}

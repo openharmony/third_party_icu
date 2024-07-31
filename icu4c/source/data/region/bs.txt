@@ -134,7 +134,7 @@ bs{
         GU{"Guam"}
         GW{"Gvineja-Bisao"}
         GY{"Gvajana"}
-        HK{"Hong Kong (SAR Kina)"}
+        HK{"Hong Kong, Kina"}
         HM{"Ostrvo Heard i arhipelag McDonald"}
         HN{"Honduras"}
         HR{"Hrvatska"}
@@ -188,7 +188,7 @@ bs{
         ML{"Mali"}
         MM{"Mjanmar"}
         MN{"Mongolija"}
-        MO{"Makao (SAR Kina)"}
+        MO{"Makao, Kina"}
         MP{"Sjeverna Marijanska ostrva"}
         MQ{"Martinik"}
         MR{"Mauritanija"}
@@ -267,10 +267,10 @@ bs{
         TM{"Turkmenistan"}
         TN{"Tunis"}
         TO{"Tonga"}
-        TR{"Turska"}
+        TR{"Türkiye"}
         TT{"Trinidad i Tobago"}
         TV{"Tuvalu"}
-        TW{"Tajvan"}
+        TW{"Tajvan, Kina"}
         TZ{"Tanzanija"}
         UA{"Ukrajina"}
         UG{"Uganda"}

@@ -1548,11 +1548,6 @@ kgp{
         "meta:Gilbert_Islands"{
             ls{"Óra Jirmértu Goj-vẽso tá"}
         }
-        "meta:Greenland"{
-            ld{"Rỹ Kã óra Groẽrỹnija Rãjur tá"}
-            lg{"Óra Groẽrỹnija Rãjur tá"}
-            ls{"Óra Pã Groẽrỹnija Rãjur tá"}
-        }
         "meta:Greenland_Eastern"{
             ld{"Rỹ Kã óra Groẽrỹnija Rãjur tá"}
             lg{"Óra Groẽrỹnija Rãjur tá"}
