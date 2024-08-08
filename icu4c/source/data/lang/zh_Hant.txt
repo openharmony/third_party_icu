@@ -665,12 +665,6 @@ zh_Hant{
     }
     Languages%menu{
         ars{"阿拉伯文（納吉迪）"}
-        ckb{"庫德文（索拉尼）"}
-        yue{"粵語"}
-        zh{"中文"}
-    }
-    Languages%short{
-        az{"亞塞拜然文"}
     }
     Languages%variant{
         ckb{"庫德文（索拉尼）"}
