@@ -1536,9 +1536,9 @@ uz{
             ls{"Gilbert orollari vaqti"}
         }
         "meta:Greenland"{
-            ld{"Sharqiy Grenlandiya yozgi vaqti"}
-            lg{"Sharqiy Grenlandiya vaqti"}
-            ls{"Sharqiy Grenlandiya standart vaqti"}
+            ld{"Grenlandiya yozgi vaqti"}
+            lg{"Grenlandiya vaqti"}
+            ls{"Grenlandiya standart vaqti"}
         }
         "meta:Greenland_Eastern"{
             ld{"Sharqiy Grenlandiya yozgi vaqti"}

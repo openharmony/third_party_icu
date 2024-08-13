@@ -512,9 +512,9 @@ pt_PT{
             ls{"Hora das Ilhas Gilbert"}
         }
         "meta:Greenland"{
-            ld{"Hora de verão da Gronelândia Oriental"}
-            lg{"Hora da Gronelândia Oriental"}
-            ls{"Hora padrão da Gronelândia Oriental"}
+            ld{"Horário de verão da Gronelândia"}
+            lg{"Horário da Gronelândia"}
+            ls{"Horário padrão da Gronelândia"}
         }
         "meta:Greenland_Eastern"{
             ld{"Hora de verão da Gronelândia Oriental"}
