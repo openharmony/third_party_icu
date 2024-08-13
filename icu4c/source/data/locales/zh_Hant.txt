@@ -4277,6 +4277,7 @@ zh_Hant{
                 d{
                     d{"d日至d日"}
                 }
+                fallback{"{0} – {1}"}
                 h{
                     B{"Bh時至Bh時"}
                     h{"Bh時至h時"}
@@ -4689,6 +4690,7 @@ zh_Hant{
                 d{
                     d{"d日至d日"}
                 }
+                fallback{"{0} – {1}"}
                 h{
                     B{"Bh時至Bh時"}
                     a{"ah時至ah時"}

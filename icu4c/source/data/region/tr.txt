@@ -134,7 +134,7 @@ tr{
         GU{"Guam"}
         GW{"Gine-Bissau"}
         GY{"Guyana"}
-        HK{"Çin Hong Kong ÖİB"}
+        HK{"Hong Kong, Çin"}
         HM{"Heard Adası ve McDonald Adaları"}
         HN{"Honduras"}
         HR{"Hırvatistan"}
@@ -188,7 +188,7 @@ tr{
         ML{"Mali"}
         MM{"Myanmar (Burma)"}
         MN{"Moğolistan"}
-        MO{"Çin Makao ÖİB"}
+        MO{"Makao, Çin"}
         MP{"Kuzey Mariana Adaları"}
         MQ{"Martinik"}
         MR{"Moritanya"}
@@ -270,7 +270,7 @@ tr{
         TR{"Türkiye"}
         TT{"Trinidad ve Tobago"}
         TV{"Tuvalu"}
-        TW{"Tayvan"}
+        TW{"Tayvan, Çin"}
         TZ{"Tanzanya"}
         UA{"Ukrayna"}
         UG{"Uganda"}

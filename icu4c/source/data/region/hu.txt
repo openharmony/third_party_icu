@@ -134,7 +134,7 @@ hu{
         GU{"Guam"}
         GW{"Bissau-Guinea"}
         GY{"Guyana"}
-        HK{"Hongkong KKT"}
+        HK{"Hongkong, Kína"}
         HM{"Heard-sziget és McDonald-szigetek"}
         HN{"Honduras"}
         HR{"Horvátország"}
@@ -188,7 +188,7 @@ hu{
         ML{"Mali"}
         MM{"Mianmar"}
         MN{"Mongólia"}
-        MO{"Makaó KKT"}
+        MO{"Makaó, Kína"}
         MP{"Északi Mariana-szigetek"}
         MQ{"Martinique"}
         MR{"Mauritánia"}
@@ -270,7 +270,7 @@ hu{
         TR{"Törökország"}
         TT{"Trinidad és Tobago"}
         TV{"Tuvalu"}
-        TW{"Tajvan"}
+        TW{"Tajvan, Kína"}
         TZ{"Tanzánia"}
         UA{"Ukrajna"}
         UG{"Uganda"}

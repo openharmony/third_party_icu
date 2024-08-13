@@ -135,7 +135,7 @@ sr_Latn{
         GU{"Guam"}
         GW{"Gvineja-Bisao"}
         GY{"Gvajana"}
-        HK{"SAR Hongkong (Kina)"}
+        HK{"Hongkong, Kina"}
         HM{"Ostrvo Herd i Mekdonaldova ostrva"}
         HN{"Honduras"}
         HR{"Hrvatska"}
@@ -189,7 +189,7 @@ sr_Latn{
         ML{"Mali"}
         MM{"Mijanmar (Burma)"}
         MN{"Mongolija"}
-        MO{"SAR Makao (Kina)"}
+        MO{"Makao, Kina"}
         MP{"Severna Marijanska Ostrva"}
         MQ{"Martinik"}
         MR{"Mauritanija"}
@@ -271,7 +271,7 @@ sr_Latn{
         TR{"Turska"}
         TT{"Trinidad i Tobago"}
         TV{"Tuvalu"}
-        TW{"Tajvan"}
+        TW{"Tajvan, Kina"}
         TZ{"Tanzanija"}
         UA{"Ukrajina"}
         UG{"Uganda"}

@@ -5,5 +5,9 @@
  * generated alias target
  */
 zh_Hant_TW{
-    ___{""}
+    zoneStrings{
+        "meta:Indochina"{
+            ls{"中印半島時間"}
+        }
+    }
 }

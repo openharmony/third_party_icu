@@ -1553,9 +1553,9 @@ lv{
             ls{"Gilberta salu laiks"}
         }
         "meta:Greenland"{
-            ld{"Austrumgrenlandes vasaras laiks"}
-            lg{"Austrumgrenlandes laiks"}
-            ls{"Austrumgrenlandes ziemas laiks"}
+            ld{"Grenlandes vasaras laiks"}
+            lg{"Grenlandes laiks"}
+            ls{"Grenlandes standarta laiks"}
         }
         "meta:Greenland_Eastern"{
             ld{"Austrumgrenlandes vasaras laiks"}
