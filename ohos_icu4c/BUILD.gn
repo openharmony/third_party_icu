@@ -29,6 +29,7 @@ ohos_shared_library("icundk") {
   sources = [ "src/icu_addon.cpp" ]
 
   deps = [
+    ":ohos_icudat",
     "//third_party/icu/icu4c:shared_icui18n",
     "//third_party/icu/icu4c:shared_icuuc",
   ]
@@ -45,4 +46,38 @@ ohos_shared_library("icundk") {
   relative_install_dir = "ndk"
   subsystem_name = "thirdparty"
   part_name = "icu"
+}
+
+action("pkg_icudata") {
+  script = "build_data/pkgdata.sh"
+  sources = [ "//third_party/icu/ohos_icu4c/build_data/pkgdata.sh" ]
+  deps = [ "//third_party/icu/icu4c/source:bin_host" ]
+
+  icu_bin_root_out_dir =
+      get_label_info(
+          "//third_party/icu/icu4c/source:bin_host(${host_toolchain})",
+          "root_out_dir")
+  if ("${build_feature}" == "lite") {
+    icu_data_filter_dir = "lite"
+  }
+  args = [
+    "-o",
+    "$root_out_dir",
+    "-b",
+    "$icu_bin_root_out_dir",
+    "-f",
+    "$icu_data_filter_dir",
+    "-v",
+    "$icu_dat_name",
+  ]
+  outputs = [ "$root_out_dir/thirdparty/icu/out/$icu_dat_name.dat" ]
+}
+
+ohos_prebuilt_etc("ohos_icudat") {
+  source = "$root_out_dir/thirdparty/icu/out/$icu_dat_name.dat"
+
+  deps = [ ":pkg_icudata" ]
+  module_install_dir = "usr/ohos_icu/"
+  part_name = "icu"
+  subsystem_name = "thirdparty"
 }
