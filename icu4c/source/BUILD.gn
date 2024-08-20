@@ -262,7 +262,8 @@ ohos_shared_library("shared_icuuc_host") {
     "-shared",
     "-lm",
   ]
-  subsystem_name = "$icu_lib_host_subsystem_name"
+  part_name = "$icu_part_name"
+  subsystem_name = "$icu_subsystem_name"
   output_name = "hmicuuchost"
 }
 
@@ -347,7 +348,8 @@ ohos_shared_library("shared_icutu") {
     "-shared",
     "-lm",
   ]
-  subsystem_name = "$icu_lib_host_subsystem_name"
+  part_name = "$icu_part_name"
+  subsystem_name = "$icu_subsystem_name"
   output_name = "hmicutuhost"
 }
 
@@ -398,7 +400,8 @@ ohos_shared_library("shared_icuio") {
     "-shared",
     "-lm",
   ]
-  subsystem_name = "$icu_lib_host_subsystem_name"
+  part_name = "$icu_part_name"
+  subsystem_name = "$icu_subsystem_name"
   output_name = "hmicuio"
 }
 
@@ -412,7 +415,10 @@ group("lib_host") {
 }
 
 ohos_executable("genbrk") {
-  configs = [ ":icu_config" ]
+  configs = [
+    ":icu_config",
+    "//build/config/compiler:rtti",
+  ]
   deps = [ ":lib_host" ]
   sources = [ "//third_party/icu/icu4c/source/tools/genbrk/genbrk.cpp" ]
   cflags_cc = [
@@ -428,12 +434,16 @@ ohos_executable("genbrk") {
     "-ldl",
     "-lm",
   ]
-  subsystem_name = "$icu_bin_host_subsystem_name"
+  part_name = "$icu_part_name"
+  subsystem_name = "$icu_subsystem_name"
   output_name = "genbrk"
 }
 
 ohos_executable("genccode") {
-  configs = [ ":icu_config" ]
+  configs = [
+    ":icu_config",
+    "//build/config/compiler:rtti",
+  ]
   deps = [ ":lib_host" ]
   sources = [ "//third_party/icu/icu4c/source/tools/genccode/genccode.c" ]
   cflags_cc = [
@@ -449,12 +459,16 @@ ohos_executable("genccode") {
     "-ldl",
     "-lm",
   ]
-  subsystem_name = "$icu_bin_host_subsystem_name"
+  part_name = "$icu_part_name"
+  subsystem_name = "$icu_subsystem_name"
   output_name = "genccode"
 }
 
 ohos_executable("gencfu") {
-  configs = [ ":icu_config" ]
+  configs = [
+    ":icu_config",
+    "//build/config/compiler:rtti",
+  ]
   deps = [ ":lib_host" ]
   sources = [ "//third_party/icu/icu4c/source/tools/gencfu/gencfu.cpp" ]
   cflags_cc = [
@@ -470,12 +484,16 @@ ohos_executable("gencfu") {
     "-ldl",
     "-lm",
   ]
-  subsystem_name = "$icu_bin_host_subsystem_name"
+  part_name = "$icu_part_name"
+  subsystem_name = "$icu_subsystem_name"
   output_name = "gencfu"
 }
 
 ohos_executable("gencnval") {
-  configs = [ ":icu_config" ]
+  configs = [
+    ":icu_config",
+    "//build/config/compiler:rtti",
+  ]
   deps = [ ":lib_host" ]
   sources = [ "//third_party/icu/icu4c/source/tools/gencnval/gencnval.c" ]
   cflags_cc = [
@@ -491,12 +509,16 @@ ohos_executable("gencnval") {
     "-ldl",
     "-lm",
   ]
-  subsystem_name = "$icu_bin_host_subsystem_name"
+  part_name = "$icu_part_name"
+  subsystem_name = "$icu_subsystem_name"
   output_name = "gencnval"
 }
 
 ohos_executable("gendict") {
-  configs = [ ":icu_config" ]
+  configs = [
+    ":icu_config",
+    "//build/config/compiler:rtti",
+  ]
   deps = [ ":lib_host" ]
   sources = [ "//third_party/icu/icu4c/source/tools/gendict/gendict.cpp" ]
   cflags_cc = [
@@ -512,12 +534,16 @@ ohos_executable("gendict") {
     "-ldl",
     "-lm",
   ]
-  subsystem_name = "$icu_bin_host_subsystem_name"
+  part_name = "$icu_part_name"
+  subsystem_name = "$icu_subsystem_name"
   output_name = "gendict"
 }
 
 ohos_static_library("genrb_c") {
-  configs = [ ":icu_config" ]
+  configs = [
+    ":icu_config",
+    "//build/config/compiler:rtti",
+  ]
   deps = [ ":lib_host" ]
   sources = [
     "//third_party/icu/icu4c/source/tools/genrb/errmsg.c",
@@ -540,11 +566,15 @@ ohos_static_library("genrb_c") {
     "-DUNISTR_FROM_STRING_EXPLICIT=explicit",
     "-DU_ATTRIBUTE_DEPRECATED=",
     "-Wno-sign-compare",
+    "-Wno-error=strict-prototypes",
+    "-Wno-error=unused-but-set-variable"
   ]
   ldflags = [
     "-ldl",
     "-lm",
   ]
+  part_name = "$icu_part_name"
+  subsystem_name = "$icu_subsystem_name"
 }
 ohos_executable("genrb") {
   configs = [
@@ -579,17 +609,22 @@ ohos_executable("genrb") {
     "-DUNISTR_FROM_CHAR_EXPLICIT=explicit",
     "-DUNISTR_FROM_STRING_EXPLICIT=explicit",
     "-DU_ATTRIBUTE_DEPRECATED=",
+    "-Wno-unused-but-set-variable",
   ]
   ldflags = [
     "-ldl",
     "-lm",
   ]
-  subsystem_name = "$icu_bin_host_subsystem_name"
+  part_name = "$icu_part_name"
+  subsystem_name = "$icu_subsystem_name"
   output_name = "genrb"
 }
 
 ohos_executable("derb") {
-  configs = [ ":icu_config" ]
+  configs = [
+    ":icu_config",
+    "//build/config/compiler:rtti",
+  ]
   deps = [ ":lib_host" ]
   sources = [ "//third_party/icu/icu4c/source/tools/genrb/derb.cpp" ]
   cflags_cc = [
@@ -605,12 +640,16 @@ ohos_executable("derb") {
     "-ldl",
     "-lm",
   ]
-  subsystem_name = "$icu_bin_host_subsystem_name"
+  part_name = "$icu_part_name"
+  subsystem_name = "$icu_subsystem_name"
   output_name = "derb"
 }
 
 ohos_executable("makeconv") {
-  configs = [ ":icu_config" ]
+  configs = [
+    ":icu_config",
+    "//build/config/compiler:rtti",
+  ]
   deps = [ ":lib_host" ]
   sources = [
     "//third_party/icu/icu4c/source/tools/makeconv/gencnvex.c",
@@ -631,12 +670,16 @@ ohos_executable("makeconv") {
     "-ldl",
     "-lm",
   ]
-  subsystem_name = "$icu_bin_host_subsystem_name"
+  part_name = "$icu_part_name"
+  subsystem_name = "$icu_subsystem_name"
   output_name = "makeconv"
 }
 
 ohos_executable("gensprep") {
-  configs = [ ":icu_config" ]
+  configs = [
+    ":icu_config",
+    "//build/config/compiler:rtti",
+  ]
   deps = [ ":lib_host" ]
   sources = [
     "//third_party/icu/icu4c/source/tools/gensprep/gensprep.c",
@@ -655,12 +698,16 @@ ohos_executable("gensprep") {
     "-ldl",
     "-lm",
   ]
-  subsystem_name = "$icu_bin_host_subsystem_name"
+  part_name = "$icu_part_name"
+  subsystem_name = "$icu_subsystem_name"
   output_name = "gensprep"
 }
 
 ohos_executable("icupkg") {
-  configs = [ ":icu_config" ]
+  configs = [
+    ":icu_config",
+    "//build/config/compiler:rtti",
+  ]
   deps = [ ":lib_host" ]
   sources = [ "//third_party/icu/icu4c/source/tools/icupkg/icupkg.cpp" ]
   cflags_cc = [
@@ -676,12 +723,16 @@ ohos_executable("icupkg") {
     "-ldl",
     "-lm",
   ]
-  subsystem_name = "$icu_bin_host_subsystem_name"
+  part_name = "$icu_part_name"
+  subsystem_name = "$icu_subsystem_name"
   output_name = "icupkg"
 }
 
 ohos_executable("pkgdata") {
-  configs = [ ":icu_config" ]
+  configs = [
+    ":icu_config",
+    "//build/config/compiler:rtti",
+  ]
   deps = [
     ":lib_host",
     ":shared_icutu(${host_toolchain})",
@@ -703,7 +754,8 @@ ohos_executable("pkgdata") {
     "-ldl",
     "-lm",
   ]
-  subsystem_name = "$icu_bin_host_subsystem_name"
+  part_name = "$icu_part_name"
+  subsystem_name = "$icu_subsystem_name"
   output_name = "pkgdata"
 }
 group("bin_host") {
