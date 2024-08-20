@@ -29,6 +29,7 @@ ohos_shared_library("icundk") {
   sources = [ "src/icu_addon.cpp" ]
 
   deps = [
+    ":ohos_icudat",
     "//third_party/icu/icu4c:shared_icui18n",
     "//third_party/icu/icu4c:shared_icuuc",
   ]
@@ -70,4 +71,14 @@ action("pkg_icudata") {
     "$icu_dat_name",
   ]
   outputs = [ "$root_out_dir/thirdparty/icu/out/$icu_dat_name.dat" ]
+}
+
+
+ohos_prebuilt_etc("ohos_icudat") {
+  source = "$root_out_dir/thirdparty/icu/out/$icu_dat_name.dat"
+
+  deps = [ ":pkg_icudata" ]
+  module_install_dir = "usr/ohos_icu/"
+  part_name = "icu"
+  subsystem_name = "thirdparty"
 }
