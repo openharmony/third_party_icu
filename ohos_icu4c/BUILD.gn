@@ -73,7 +73,6 @@ action("pkg_icudata") {
   outputs = [ "$root_out_dir/thirdparty/icu/out/$icu_dat_name.dat" ]
 }
 
-
 ohos_prebuilt_etc("ohos_icudat") {
   source = "$root_out_dir/thirdparty/icu/out/$icu_dat_name.dat"
 
