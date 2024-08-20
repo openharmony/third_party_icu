@@ -32,9 +32,9 @@ ohos_shared_library("icundk") {
   sources = [ "src/icu_addon.cpp" ]
 
   deps = [
+    ":ohos_icudat",
     "//third_party/icu/icu4c:shared_icui18n",
     "//third_party/icu/icu4c:shared_icuuc",
-    ":ohos_icudat"
   ]
   external_deps = []
   defines = []
@@ -71,7 +71,7 @@ action("pkg_icudata") {
     "-f",
     "$icu_data_filter_dir",
     "-v",
-    "$icu_dat_name"
+    "$icu_dat_name",
   ]
   outputs = [ "$root_out_dir/thirdparty/icu/out/$icu_dat_name.dat" ]
 }
