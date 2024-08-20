@@ -567,7 +567,7 @@ ohos_static_library("genrb_c") {
     "-DU_ATTRIBUTE_DEPRECATED=",
     "-Wno-sign-compare",
     "-Wno-error=strict-prototypes",
-    "-Wno-error=unused-but-set-variable"
+    "-Wno-error=unused-but-set-variable",
   ]
   ldflags = [
     "-ldl",
