@@ -54,6 +54,15 @@ ohos_static_library("static_icustubdata") {
   subsystem_name = "thirdparty"
 }
 
+ohos_prebuilt_etc("ohos_icudat") {
+  source = "$root_out_dir/thirdparty/icu/out/$icu_dat_name.dat"
+
+  deps = [ "//third_party/icu/ohos_icu4c:pkg_icudata" ]
+  module_install_dir = "usr/ohos_icu/"
+  part_name = "icu"
+  subsystem_name = "thirdparty"
+}
+
 icu_common_source = [
   "//third_party/icu/icu4c/source/common/ubiditransform.cpp",
   "//third_party/icu/icu4c/source/common/locutil.cpp",
@@ -526,7 +535,10 @@ ohos_shared_library("shared_icuuc") {
     "SYSTEM_TZDATA_DIR=${system_tzdata_dir}",
   ]
   sources = icu_common_source
-  deps = [ ":static_icustubdata" ]
+  deps = [
+    ":ohos_icudat",
+    ":static_icustubdata",
+  ]
   cflags_cc = [
     "-O3",
     "-W",

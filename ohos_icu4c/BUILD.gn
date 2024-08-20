@@ -15,9 +15,6 @@ import("//build/ohos.gni")
 import("//build/ohos/ndk/ndk.gni")
 import("//third_party/icu/icu.gni")
 
-icu_dat_name = "icudt72l"
-icu_data_filter_dir = "full"
-
 ohos_shared_library("icundk") {
   ldflags = [
     "-shared",
@@ -32,7 +29,6 @@ ohos_shared_library("icundk") {
   sources = [ "src/icu_addon.cpp" ]
 
   deps = [
-    ":ohos_icudat",
     "//third_party/icu/icu4c:shared_icui18n",
     "//third_party/icu/icu4c:shared_icuuc",
   ]
@@ -74,17 +70,4 @@ action("pkg_icudata") {
     "$icu_dat_name",
   ]
   outputs = [ "$root_out_dir/thirdparty/icu/out/$icu_dat_name.dat" ]
-}
-
-ohos_prebuilt_etc("ohos_icudat") {
-  if ("${product_name}" == "ohcore") {
-    source = "//third_party/icu/ohos_icu4j/data/icudt68l.dat"
-  } else {
-    source = "$root_out_dir/thirdparty/icu/out/$icu_dat_name.dat"
-  }
-
-  deps = [ ":pkg_icudata" ]
-  module_install_dir = "usr/ohos_icu/"
-  part_name = "icu"
-  subsystem_name = "thirdparty"
 }
