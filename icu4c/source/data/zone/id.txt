@@ -1585,12 +1585,9 @@ id{
             ls{"Waktu Kep. Gilbert"}
         }
         "meta:Greenland"{
-            ld{"Waktu Musim Panas Greenland Timur"}
-            lg{"Waktu Greenland Timur"}
-            ls{"Waktu Standar Greenland Timur"}
-            sd{"GDT"}
-            sg{"GT"}
-            ss{"GST"}
+            ld{"Waktu Musim Panas Grinlandia"}
+            lg{"Waktu Grinlandia"}
+            ls{"Waktu Standar Grinlandia"}
         }
         "meta:Greenland_Eastern"{
             ld{"Waktu Musim Panas Greenland Timur"}

@@ -1570,9 +1570,9 @@ da{
             ls{"Gilbertøerne-tid"}
         }
         "meta:Greenland"{
-            ld{"Østgrønlandsk sommertid"}
-            lg{"Østgrønlandsk tid"}
-            ls{"Østgrønlandsk normaltid"}
+            ld{"Greenland Summer Time"}
+            lg{"Greenland Time"}
+            ls{"Greenland Standard Time"}
         }
         "meta:Greenland_Eastern"{
             ld{"Østgrønlandsk sommertid"}

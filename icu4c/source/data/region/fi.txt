@@ -134,7 +134,7 @@ fi{
         GU{"Guam"}
         GW{"Guinea-Bissau"}
         GY{"Guyana"}
-        HK{"Hongkong – Kiinan erityishallintoalue"}
+        HK{"Hongkong, Kiina"}
         HM{"Heard ja McDonaldinsaaret"}
         HN{"Honduras"}
         HR{"Kroatia"}
@@ -188,7 +188,7 @@ fi{
         ML{"Mali"}
         MM{"Myanmar (Burma)"}
         MN{"Mongolia"}
-        MO{"Macao – Kiinan erityishallintoalue"}
+        MO{"Macao, Kiina"}
         MP{"Pohjois-Mariaanit"}
         MQ{"Martinique"}
         MR{"Mauritania"}
@@ -270,7 +270,7 @@ fi{
         TR{"Turkki"}
         TT{"Trinidad ja Tobago"}
         TV{"Tuvalu"}
-        TW{"Taiwan"}
+        TW{"Taiwan, Kiina"}
         TZ{"Tansania"}
         UA{"Ukraina"}
         UG{"Uganda"}

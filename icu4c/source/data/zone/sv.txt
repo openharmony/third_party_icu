@@ -1578,9 +1578,9 @@ sv{
             ls{"Kiribatitid"}
         }
         "meta:Greenland"{
-            ld{"östgrönländsk sommartid"}
-            lg{"östgrönländsk tid"}
-            ls{"östgrönländsk normaltid"}
+            ld{"Grönländsk sommartid"}
+            lg{"Grönländsk tid"}
+            ls{"Grönländsk standardtid"}
         }
         "meta:Greenland_Eastern"{
             ld{"östgrönländsk sommartid"}
