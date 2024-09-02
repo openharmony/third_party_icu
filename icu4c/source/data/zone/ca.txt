@@ -1551,9 +1551,9 @@ ca{
             ls{"Hora de les illes Gilbert"}
         }
         "meta:Greenland"{
-            ld{"Hora d’estiu de l’Est de Groenlàndia"}
-            lg{"Hora de l’Est de Groenlàndia"}
-            ls{"Hora estàndard de l’Est de Groenlàndia"}
+            ld{"Horari d'estiu de Groenlàndia"}
+            lg{"Hora de Groenlàndia"}
+            ls{"Hora estàndard de Groenlàndia"}
         }
         "meta:Greenland_Eastern"{
             ld{"Hora d’estiu de l’Est de Groenlàndia"}

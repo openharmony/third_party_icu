@@ -1541,9 +1541,9 @@ fil{
             ls{"Oras sa Gilbert Islands"}
         }
         "meta:Greenland"{
-            ld{"Oras sa Tag-init ng Silangang Greenland"}
-            lg{"Oras sa Silangang Greenland"}
-            ls{"Standard na Oras sa Silangang Greenland"}
+            ld{"Greenland Summer Time"}
+            lg{"Greenland Time"}
+            ls{"Greenland Standard Time"}
         }
         "meta:Greenland_Eastern"{
             ld{"Oras sa Tag-init ng Silangang Greenland"}

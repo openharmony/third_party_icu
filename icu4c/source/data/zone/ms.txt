@@ -1562,9 +1562,9 @@ ms{
             ls{"Waktu Kepulauan Gilbert"}
         }
         "meta:Greenland"{
-            ld{"Waktu Musim Panas Greenland Timur"}
-            lg{"Waktu Greenland Timur"}
-            ls{"Waktu Piawai Greenland Timur"}
+            ld{"Waktu Musim Panas Brussels"}
+            lg{"Waktu Greenland"}
+            ls{"Waktu Piawai Greenland"}
         }
         "meta:Greenland_Eastern"{
             ld{"Waktu Musim Panas Greenland Timur"}
