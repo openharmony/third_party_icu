@@ -463,6 +463,7 @@ zh_Hant_HK{
                 "yMd",
             }
             availableFormats{
+                Ed{"d日 E"}
                 Ehm{"E ah:mm"}
                 Ehms{"E ah:mm:ss"}
                 GyMMMEd{"Gy年M月d日E"}

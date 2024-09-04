@@ -531,6 +531,7 @@ en{
         ro_MD{"Moldavian"}
         rof{"Rombo"}
         rom{"Romany"}
+        root{"Root"}
         rtm{"Rotuman"}
         ru{"Russian"}
         rue{"Rusyn"}
@@ -700,6 +701,7 @@ en{
         zu{"Zulu"}
         zun{"Zuni"}
         zxx{"No linguistic content"}
+        zz{"DBID"}
         zza{"Zaza"}
     }
     Languages%long{

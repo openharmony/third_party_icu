@@ -82,7 +82,7 @@ jv{
         CK{"Kapuloan Cook"}
         CL{"Cilé"}
         CM{"Kamerun"}
-        CN{"Tyongkok"}
+        CN{"Tiongkok"}
         CO{"Kolombia"}
         CP{"Pulo Clipperton"}
         CR{"Kosta Rika"}
@@ -134,7 +134,7 @@ jv{
         GU{"Guam"}
         GW{"Guinea-Bissau"}
         GY{"Guyana"}
-        HK{"Laladan Administratif Astamiwa Hong Kong"}
+        HK{"Hong Kong, Tiongkok"}
         HM{"Kapuloan Heard lan McDonald"}
         HN{"Honduras"}
         HR{"Kroasia"}
@@ -188,7 +188,7 @@ jv{
         ML{"Mali"}
         MM{"Myanmar (Burma)"}
         MN{"Mongolia"}
-        MO{"Laladan Administratif Astamiwa Makau"}
+        MO{"Macao, Tiongkok"}
         MP{"Kapuloan Mariana Lor"}
         MQ{"Martinik"}
         MR{"Mauritania"}
@@ -270,7 +270,7 @@ jv{
         TR{"Turki"}
         TT{"Trinidad lan Tobago"}
         TV{"Tuvalu"}
-        TW{"Taiwan"}
+        TW{"Taiwan, Tiongkok"}
         TZ{"Tansania"}
         UA{"Ukrania"}
         UG{"Uganda"}

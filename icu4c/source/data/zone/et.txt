@@ -1564,9 +1564,9 @@ et{
             ls{"Gilberti saarte aeg"}
         }
         "meta:Greenland"{
-            ld{"Ida-Gröönimaa suveaeg"}
-            lg{"Ida-Gröönimaa aeg"}
-            ls{"Ida-Gröönimaa standardaeg"}
+            ld{"Gröönimaa suveaeg"}
+            lg{"Gröönimaa aeg"}
+            ls{"Gröönimaa standardaeg"}
         }
         "meta:Greenland_Eastern"{
             ld{"Ida-Gröönimaa suveaeg"}

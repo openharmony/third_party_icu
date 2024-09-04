@@ -90,7 +90,9 @@ en_NZ{
                 "yyMMd",
             }
             availableFormats{
-                Md{"d/M"}
+                MEd{"E, d/MM"}
+                Md{"d/MM"}
+                yMEd{"E, d/MM/y"}
                 yMd{"d/MM/y"}
             }
             intervalFormats{

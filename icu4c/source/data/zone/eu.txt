@@ -1598,9 +1598,9 @@ eu{
             ls{"Gilbert uharteetako ordua"}
         }
         "meta:Greenland"{
-            ld{"Groenlandiako ekialdeko udako ordua"}
-            lg{"Groenlandiako ekialdeko ordua"}
-            ls{"Groenlandiako ekialdeko ordu estandarra"}
+            ld{"Groenlandiako udako ordutegia"}
+            lg{"Groenlandiako ordua"}
+            ls{"Groenlandiako ordu estandarra"}
         }
         "meta:Greenland_Eastern"{
             ld{"Groenlandiako ekialdeko udako ordua"}

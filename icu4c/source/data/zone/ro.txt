@@ -1567,6 +1567,11 @@ ro{
         "meta:Gilbert_Islands"{
             ls{"Ora Insulelor Gilbert"}
         }
+        "meta:Greenland"{
+            ld{"Ora de vară din Groenlanda"}
+            lg{"Ora Groenlandei"}
+            ls{"Ora standard din Groenlanda"}
+        }
         "meta:Greenland_Eastern"{
             ld{"Ora de vară a Groenlandei orientale"}
             lg{"Ora Groenlandei orientale"}

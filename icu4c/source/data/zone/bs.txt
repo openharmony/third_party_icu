@@ -1571,9 +1571,9 @@ bs{
             ls{"Vrijeme na Gilbertovim ostrvima"}
         }
         "meta:Greenland"{
-            ld{"Istočnogrenlandsko ljetno vrijeme"}
-            lg{"Istočnogrenlandsko vrijeme"}
-            ls{"Istočnogrenlandsko standardno vrijeme"}
+            ld{"Grenlandsko ljetno vrijeme"}
+            lg{"Grenlandsko vrijeme"}
+            ls{"Grenlandsko standardno vrijeme"}
         }
         "meta:Greenland_Eastern"{
             ld{"Istočnogrenlandsko ljetno vrijeme"}
