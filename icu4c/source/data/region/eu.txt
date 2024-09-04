@@ -134,7 +134,7 @@ eu{
         GU{"Guam"}
         GW{"Ginea Bissau"}
         GY{"Guyana"}
-        HK{"Hong Kong Txinako AEB"}
+        HK{"Hong Kong, Txina"}
         HM{"Heard eta McDonald uharteak"}
         HN{"Honduras"}
         HR{"Kroazia"}
@@ -188,7 +188,7 @@ eu{
         ML{"Mali"}
         MM{"Myanmar (Birmania)"}
         MN{"Mongolia"}
-        MO{"Macau Txinako AEB"}
+        MO{"Macao, Txina"}
         MP{"Ipar Mariana uharteak"}
         MQ{"Martinika"}
         MR{"Mauritania"}
@@ -270,7 +270,7 @@ eu{
         TR{"Turkia"}
         TT{"Trinidad eta Tobago"}
         TV{"Tuvalu"}
-        TW{"Taiwan"}
+        TW{"Taiwan, Txina"}
         TZ{"Tanzania"}
         UA{"Ukraina"}
         UG{"Uganda"}

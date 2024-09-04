@@ -1564,9 +1564,9 @@ lt{
             ls{"Gilberto Salų laikas"}
         }
         "meta:Greenland"{
-            ld{"Grenlandijos rytų vasaros laikas"}
-            lg{"Grenlandijos rytų laikas"}
-            ls{"Grenlandijos rytų žiemos laikas"}
+            ld{"Grenlandijos vasaros laikas"}
+            lg{"Grenlandijos laikas"}
+            ls{"Grenlandijos standartinis laikas"}
         }
         "meta:Greenland_Eastern"{
             ld{"Grenlandijos rytų vasaros laikas"}

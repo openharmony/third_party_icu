@@ -1574,8 +1574,8 @@ de{
         }
         "meta:Greenland"{
             ld{"Grönland-Sommerzeit"}
-            lg{"Grönland-Zeit"}
-            ls{"Grönland-Normalzeit"}
+            lg{"Grönlandzeit"}
+            ls{"Grönland-Standardzeit"}
         }
         "meta:Greenland_Eastern"{
             ld{"Ostgrönland-Sommerzeit"}
