@@ -501,6 +501,7 @@ icu_i18n_source = [
 ]
 
 ohos_shared_library("shared_icuuc") {
+  branch_protector_ret = "pac_ret"
   ldflags = [
     "-shared",
     "-lm",
@@ -606,6 +607,7 @@ ohos_shared_library("shared_icui18n") {
 
 if (defined(is_arkui_x) && is_arkui_x) {
   ohos_source_set("static_icuuc") {
+    branch_protector_ret = "pac_ret"
     configs = [ "//build/config/compiler:rtti" ]
     public_configs = [
       ":icu_config",
@@ -661,6 +663,7 @@ if (defined(is_arkui_x) && is_arkui_x) {
   }
 } else {
   ohos_static_library("static_icuuc") {
+    branch_protector_ret = "pac_ret"
     configs = [
       ":icu_config",
       "//build/config/compiler:rtti",
