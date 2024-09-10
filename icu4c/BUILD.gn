@@ -555,6 +555,7 @@ ohos_shared_library("shared_icuuc") {
 }
 
 ohos_shared_library("shared_icui18n") {
+  branch_protector_ret = "pac_ret"
   ldflags = [
     "-shared",
     "-lm",
@@ -726,6 +727,7 @@ if (defined(is_arkui_x) && is_arkui_x) {
 
 if (defined(is_arkui_x) && is_arkui_x) {
   ohos_source_set("static_icui18n") {
+    branch_protector_ret = "pac_ret"
     sources = icu_i18n_source
     configs = [
       ":icu_config",
@@ -782,6 +784,7 @@ if (defined(is_arkui_x) && is_arkui_x) {
   }
 } else {
   ohos_static_library("static_icui18n") {
+    branch_protector_ret = "pac_ret"
     sources = icu_i18n_source
     configs = [
       ":icu_config",
