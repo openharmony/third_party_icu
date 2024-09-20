@@ -61,7 +61,7 @@ static const int32_t gOffsets[] = {
     460,
     464,
     466,
-    501
+    500
 };
 
 static const int32_t kCurrencyOffset = 5;
