@@ -52,6 +52,7 @@ root{
             }
             stroke-per-minute{
                 dnam{"stroke/min"}
+                one{"{0} stroke/min"}
                 other{"{0} strokes/min"}
             }
         }
