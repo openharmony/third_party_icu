@@ -1,3 +1,11 @@
 {
-    "strategy": "subtractive"
+    "strategy": "subtractive",
+    "fileReplacements": {
+        "directory": "$FILTERS",
+        "replacements": [
+            "unit/root.txt",
+            "unit/en_001.txt",
+            "unit/zh.txt"
+        ]
+    }      
 }
