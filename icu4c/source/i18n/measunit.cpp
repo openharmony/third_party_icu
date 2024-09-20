@@ -55,12 +55,13 @@ static const int32_t gOffsets[] = {
     414,
     429,
     430,
-    436,
+    440,
     446,
-    450,
-    454,
     456,
-    490
+    460,
+    464,
+    466,
+    501
 };
 
 static const int32_t kCurrencyOffset = 5;
@@ -84,6 +85,7 @@ static const char * const gTypes[] = {
     "light",
     "mass",
     "none",
+    "ohos_unit",    // for ohos unit
     "power",
     "pressure",
     "speed",
@@ -524,6 +526,18 @@ static const char * const gSubTypes[] = {
     "ton",
     "tonne",
     "",
+    // ohos unit start
+    "beat-per-minute",
+    "body-weight-per-second",
+    "breath-per-minute",
+    "foot-per-hour",
+    "jump-rope-speed",
+    "meter-per-hour",
+    "milliliter-per-minute-per-kilogram",
+    "rotation-per-minute",
+    "step-per-minute",
+    "stroke-per-minute",
+    // ohos unit end
     "gigawatt",
     "horsepower",
     "kilowatt",
