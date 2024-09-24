@@ -11,7 +11,7 @@ root{
     units:alias{"/LOCALE/unitsShort"}
     unitsNarrow:alias{"/LOCALE/unitsShort"}
     unitsShort{
-        ohos_unit{
+        zohos{
             beat-per-minute{
                 dnam{"bpm"}
                 other{"{0} bpm"}
