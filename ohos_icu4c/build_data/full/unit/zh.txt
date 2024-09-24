@@ -8,7 +8,7 @@ zh{
         ms{"m:ss"}
     }
     units{
-        ohos_unit{
+        zohos{
             beat-per-minute{
                 dnam{"次/分钟"}
                 other{"{0} 次/分钟"}
@@ -873,7 +873,7 @@ zh{
         }
     }
     unitsNarrow{
-        ohos_unit{
+        zohos{
             beat-per-minute{
                 dnam{"次/分钟"}
                 other{"{0} 次/分钟"}
@@ -1563,7 +1563,7 @@ zh{
         }
     }
     unitsShort{
-        ohos_unit{
+        zohos{
             beat-per-minute{
                 dnam{"次/分钟"}
                 other{"{0} 次/分钟"}

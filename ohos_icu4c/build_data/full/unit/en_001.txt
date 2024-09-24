@@ -3,7 +3,7 @@
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 en_001{
     units{
-        ohos_unit{
+        zohos{
             jump-rope-speed{
                 dnam{"skip/minute"}
                 one{"{0} skip/minute"}
@@ -316,7 +316,7 @@ en_001{
         }
     }
     unitsNarrow{
-        ohos_unit{
+        zohos{
             jump-rope-speed{
                 dnam{"skip/minute"}
                 one{"{0} skip/minute"}
@@ -471,7 +471,7 @@ en_001{
         }
     }
     unitsShort{
-        ohos_unit{
+        zohos{
             jump-rope-speed{
                 dnam{"skip/minute"}
                 one{"{0} skip/minute"}
