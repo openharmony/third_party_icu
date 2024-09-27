@@ -134,7 +134,7 @@ sw{
         GU{"Guam"}
         GW{"Ginebisau"}
         GY{"Guyana"}
-        HK{"Hong Kong SAR China"}
+        HK{"Hong Kong (Uchina)"}
         HM{"Kisiwa cha Heard na Visiwa vya McDonald"}
         HN{"Honduras"}
         HR{"Croatia"}
@@ -188,7 +188,7 @@ sw{
         ML{"Mali"}
         MM{"Myanmar (Burma)"}
         MN{"Mongolia"}
-        MO{"Makau SAR China"}
+        MO{"Makau (Uchina)"}
         MP{"Visiwa vya Mariana vya Kaskazini"}
         MQ{"Martinique"}
         MR{"Moritania"}
@@ -223,7 +223,7 @@ sw{
         PM{"Santapierre na Miquelon"}
         PN{"Visiwa vya Pitcairn"}
         PR{"Puerto Rico"}
-        PS{"Maeneo ya Palestina"}
+        PS{"Palestina"}
         PT{"Ureno"}
         PW{"Palau"}
         PY{"Paraguay"}
@@ -270,7 +270,7 @@ sw{
         TR{"Uturuki"}
         TT{"Trinidad na Tobago"}
         TV{"Tuvalu"}
-        TW{"Taiwan"}
+        TW{"Taiwani (Uchina)"}
         TZ{"Tanzania"}
         UA{"Ukraine"}
         UG{"Uganda"}

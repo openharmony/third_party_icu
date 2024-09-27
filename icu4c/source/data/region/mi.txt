@@ -103,6 +103,7 @@ mi{
         GT{"Kuatamāra"}
         GW{"Kini-Pihao"}
         GY{"Kaiana"}
+        HK{"Hongipua (Haina)"}
         HN{"Honūra"}
         HT{"Haiti"}
         IC{"Motu Kānara"}
@@ -133,6 +134,7 @@ mi{
         MG{"Marakāhia"}
         MK{"Makerōnia ki te Raki"}
         ML{"Māri"}
+        MO{"Makao (Haina)"}
         MQ{"Māteniki"}
         MR{"Mauritānia"}
         MS{"Monoterā"}
@@ -151,6 +153,7 @@ mi{
         PE{"Peru"}
         PM{"Hato Piere & Mikarona"}
         PR{"Pōta Riko"}
+        PS{"Pirihitia"}
         PY{"Parakai"}
         QO{"Ngā moutere mōwaho i a Ōhiānia"}
         RE{"Rēnio"}
@@ -176,6 +179,7 @@ mi{
         TG{"Toko"}
         TN{"Tūnihia"}
         TT{"Tinitātā me Topēko"}
+        TW{"Taiwana (Haina)"}
         TZ{"Tānahia"}
         UG{"Ukāna"}
         UN{"Te Kotahitanga o Ngā Iwi o te Ao"}

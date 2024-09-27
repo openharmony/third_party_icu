@@ -134,7 +134,7 @@ lv{
         GU{"Guama"}
         GW{"Gvineja-Bisava"}
         GY{"Gajāna"}
-        HK{"Ķīnas īpašās pārvaldes apgabals Honkonga"}
+        HK{"Honkonga (Ķīna)"}
         HM{"Hērda sala un Makdonalda salas"}
         HN{"Hondurasa"}
         HR{"Horvātija"}
@@ -188,7 +188,7 @@ lv{
         ML{"Mali"}
         MM{"Mjanma (Birma)"}
         MN{"Mongolija"}
-        MO{"ĶTR īpašais administratīvais reģions Makao"}
+        MO{"Makao (Ķīna)"}
         MP{"Ziemeļu Marianas salas"}
         MQ{"Martinika"}
         MR{"Mauritānija"}
@@ -223,7 +223,7 @@ lv{
         PM{"Senpjēra un Mikelona"}
         PN{"Pitkērnas salas"}
         PR{"Puertoriko"}
-        PS{"Palestīnas teritorijas"}
+        PS{"Palestīna"}
         PT{"Portugāle"}
         PW{"Palau"}
         PY{"Paragvaja"}
@@ -270,7 +270,7 @@ lv{
         TR{"Turcija"}
         TT{"Trinidāda un Tobāgo"}
         TV{"Tuvalu"}
-        TW{"Taivāna"}
+        TW{"Taivāna (Ķīna)"}
         TZ{"Tanzānija"}
         UA{"Ukraina"}
         UG{"Uganda"}
