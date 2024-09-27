@@ -134,7 +134,7 @@ jv{
         GU{"Guam"}
         GW{"Guinea-Bissau"}
         GY{"Guyana"}
-        HK{"Hong Kong, Tiongkok"}
+        HK{"Hong Kong (Tiongkok)"}
         HM{"Kapuloan Heard lan McDonald"}
         HN{"Honduras"}
         HR{"Kroasia"}
@@ -188,7 +188,7 @@ jv{
         ML{"Mali"}
         MM{"Myanmar (Burma)"}
         MN{"Mongolia"}
-        MO{"Macao, Tiongkok"}
+        MO{"Macao (Tiongkok)"}
         MP{"Kapuloan Mariana Lor"}
         MQ{"Martinik"}
         MR{"Mauritania"}
@@ -223,7 +223,7 @@ jv{
         PM{"Saint Pièr lan Mikuélon"}
         PN{"Kapuloan Pitcairn"}
         PR{"Puèrto Riko"}
-        PS{"Tlatah Palèstina"}
+        PS{"Palestina"}
         PT{"Portugal"}
         PW{"Palau"}
         PY{"Paraguay"}
@@ -270,7 +270,7 @@ jv{
         TR{"Turki"}
         TT{"Trinidad lan Tobago"}
         TV{"Tuvalu"}
-        TW{"Taiwan, Tiongkok"}
+        TW{"Taiwan (Tiongkok)"}
         TZ{"Tansania"}
         UA{"Ukrania"}
         UG{"Uganda"}
