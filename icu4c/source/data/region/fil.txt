@@ -161,7 +161,7 @@ fil{
         KI{"Kiribati"}
         KM{"Comoros"}
         KN{"St. Kitts & Nevis"}
-        KP{"Hilagang Korea"}
+        KP{"North Korea"}
         KR{"Timog Korea"}
         KW{"Kuwait"}
         KY{"Cayman Islands"}

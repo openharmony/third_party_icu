@@ -67,7 +67,7 @@ sw{
         BQ{"Uholanzi ya Karibiani"}
         BR{"Brazil"}
         BS{"Bahama"}
-        BT{"Bhutan"}
+        BT{"Butani"}
         BV{"Kisiwa cha Bouvet"}
         BW{"Botswana"}
         BY{"Belarus"}

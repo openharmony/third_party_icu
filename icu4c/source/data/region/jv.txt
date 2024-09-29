@@ -161,7 +161,7 @@ jv{
         KI{"Kiribati"}
         KM{"Komoro"}
         KN{"Saint Kits lan Nèvis"}
-        KP{"Korea Lor"}
+        KP{"Korea Utara"}
         KR{"Koréa Kidul"}
         KW{"Kuwait"}
         KY{"Kapuloan Kéman"}

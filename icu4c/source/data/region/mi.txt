@@ -52,6 +52,7 @@ mi{
         BQ{"Karepeana Hōrana"}
         BR{"Parīhi"}
         BS{"Pahāma"}
+        BT{"Putāna"}
         BV{"Motu Pūwei"}
         BW{"Poriwana"}
         BZ{"Perīhi"}
@@ -119,6 +120,7 @@ mi{
         KE{"Kēnia"}
         KM{"Komoro"}
         KN{"Hato Kiti me Newhi"}
+        KP{"Kōria ki te Raki"}
         KY{"Ngā Motu Keimana"}
         LC{"Hato Ruhia"}
         LI{"Rīkeneteina"}
