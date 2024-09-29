@@ -67,7 +67,7 @@ tr{
         BQ{"Karayip Hollandası"}
         BR{"Brezilya"}
         BS{"Bahamalar"}
-        BT{"Butan"}
+        BT{"Bhutan"}
         BV{"Bouvet Adası"}
         BW{"Botsvana"}
         BY{"Belarus"}
