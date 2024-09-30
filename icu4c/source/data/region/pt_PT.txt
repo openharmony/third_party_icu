@@ -47,13 +47,14 @@ pt_PT{
         MF{"São Martinho (Saint-Martin)"}
         MG{"Madagáscar"}
         MK{"Macedónia do Norte"}
+        MO{"Macau (China)"}
         MS{"Monserrate"}
         MU{"Maurícia"}
         MW{"Maláui"}
         NC{"Nova Caledónia"}
         NU{"Niuê"}
         PL{"Polónia"}
-        PS{"Territórios palestinianos"}
+        PS{"Palestina"}
         QO{"Oceânia Insular"}
         RO{"Roménia"}
         SI{"Eslovénia"}

@@ -130,10 +130,7 @@ mt{
         GU{"Guam"}
         GW{"il-Guinea-Bissau"}
         GY{"il-Guyana"}
-        HK{
-            "ir-Reġjun Amministrattiv Speċjali ta’ Hong Kong tar-Repubblika tal-Poplu"
-            " taċ-Ċina"
-        }
+        HK{"Hong Kong (iċ-Ċina)"}
         HM{"il-Gżejjer Heard u l-Gżejjer McDonald"}
         HN{"il-Honduras"}
         HR{"il-Kroazja"}
@@ -187,10 +184,7 @@ mt{
         ML{"il-Mali"}
         MM{"il-Myanmar/Burma"}
         MN{"il-Mongolja"}
-        MO{
-            "ir-Reġjun Amministrattiv Speċjali tal-Macao tar-Repubblika tal-Poplu taċ"
-            "-Ċina"
-        }
+        MO{"il-Macao (iċ-Ċina)"}
         MP{"Ġżejjer Mariana tat-Tramuntana"}
         MQ{"Martinique"}
         MR{"il-Mauritania"}
@@ -225,7 +219,7 @@ mt{
         PM{"Saint Pierre u Miquelon"}
         PN{"Gżejjer Pitcairn"}
         PR{"Puerto Rico"}
-        PS{"it-Territorji Palestinjani"}
+        PS{"il-Palestina"}
         PT{"il-Portugall"}
         PW{"Palau"}
         PY{"il-Paragwaj"}
@@ -271,7 +265,7 @@ mt{
         TR{"it-Turkija"}
         TT{"Trinidad u Tobago"}
         TV{"Tuvalu"}
-        TW{"it-Tajwan"}
+        TW{"it-Tajwan (iċ-Ċina)"}
         TZ{"it-Tanzanija"}
         UA{"l-Ukrajna"}
         UG{"l-Uganda"}
