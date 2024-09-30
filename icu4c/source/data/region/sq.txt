@@ -134,7 +134,7 @@ sq{
         GU{"Guam"}
         GW{"Guine-Bisau"}
         GY{"Guajanë"}
-        HK{"RPA i Hong-Kongut"}
+        HK{"Hong-Kong (Kinë)"}
         HM{"Ishujt Hërd e Mekdonald"}
         HN{"Honduras"}
         HR{"Kroaci"}
@@ -188,7 +188,7 @@ sq{
         ML{"Mali"}
         MM{"Mianmar (Burmë)"}
         MN{"Mongoli"}
-        MO{"RPA i Makaos"}
+        MO{"Makao (Kinë)"}
         MP{"Ishujt e Marianës Veriore"}
         MQ{"Martinikë"}
         MR{"Mauritani"}
@@ -270,7 +270,7 @@ sq{
         TR{"Turqi"}
         TT{"Trinidad e Tobago"}
         TV{"Tuvalu"}
-        TW{"Tajvan"}
+        TW{"Tajvan (Kinë)"}
         TZ{"Tanzani"}
         UA{"Ukrainë"}
         UG{"Ugandë"}
