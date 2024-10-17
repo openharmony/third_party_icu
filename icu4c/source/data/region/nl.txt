@@ -134,7 +134,7 @@ nl{
         GU{"Guam"}
         GW{"Guinee-Bissau"}
         GY{"Guyana"}
-        HK{"Hongkong SAR van China"}
+        HK{"Hongkong (China)"}
         HM{"Heard en McDonaldeilanden"}
         HN{"Honduras"}
         HR{"Kroatië"}
@@ -188,7 +188,7 @@ nl{
         ML{"Mali"}
         MM{"Myanmar (Birma)"}
         MN{"Mongolië"}
-        MO{"Macau SAR van China"}
+        MO{"Macao (China)"}
         MP{"Noordelijke Marianen"}
         MQ{"Martinique"}
         MR{"Mauritanië"}
@@ -223,7 +223,7 @@ nl{
         PM{"Saint-Pierre en Miquelon"}
         PN{"Pitcairneilanden"}
         PR{"Puerto Rico"}
-        PS{"Palestijnse gebieden"}
+        PS{"Palestina"}
         PT{"Portugal"}
         PW{"Palau"}
         PY{"Paraguay"}
@@ -270,7 +270,7 @@ nl{
         TR{"Turkije"}
         TT{"Trinidad en Tobago"}
         TV{"Tuvalu"}
-        TW{"Taiwan"}
+        TW{"Taiwan (China)"}
         TZ{"Tanzania"}
         UA{"Oekraïne"}
         UG{"Oeganda"}
