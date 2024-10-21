@@ -62,7 +62,7 @@ icu_data_filter_file="$script_path/$icu_data_filter_dir/data_filter.json"
 rm -rf "$out_put_root_path/thirdparty/icu/out/*"
 
 gen_icu_data() {
-
+    
     # compile to res file
     PYTHONPATH=$icu_source_path/source/python python3 -m icutools.databuilder \
     --src_dir $icu_source_path/source/data \
@@ -73,7 +73,7 @@ gen_icu_data() {
     --tool_dir $tool_bin_dir \
     --out_dir $res_out_root_dir/out/build/$icu_dat_name \
     --tmp_dir $res_out_root_dir/out/tmp \
-
+    
     # package to one dat file
     export LD_LIBRARY_PATH=$tool_bin_dir:$LD_LIBRARY_PATH
     $tool_bin_dir/pkgdata \
