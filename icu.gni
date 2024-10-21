@@ -18,5 +18,5 @@ declare_args() {
   distro_tzdata_dir = "\"/system/etc/tzdata_distro\""
   system_tzdata_dir = "\"/system/etc/icu_tzdata\""
   icu_dat_name = "icudt721"
-  icu_data_filter_dir = "full
+  icu_data_filter_dir = "full"
 }
