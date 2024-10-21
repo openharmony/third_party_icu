@@ -54,22 +54,6 @@ ohos_static_library("static_icustubdata") {
   subsystem_name = "thirdparty"
 }
 
-ohos_prebuilt_etc("ohos_icudat") {
-  if ("${product_name}" == "ohcore") {
-    source = "//third_party/icu/ohos_icu4j/data/icudt68l.dat"
-  } else if ("${build_feature}" == "lite") {
-    source = "//third_party/icu/ohos_icu4j/data/lite/icudt72l.dat"
-  } else if (icu_support_locales) {
-    source = "//third_party/icu/ohos_icu4j/data/icudt72l.dat"
-  } else {
-    source = "//third_party/icu/ohos_icu4j/data/lite/icudt72l.dat"
-  }
-
-  module_install_dir = "usr/ohos_icu/"
-  part_name = "icu"
-  subsystem_name = "thirdparty"
-}
-
 icu_common_source = [
   "//third_party/icu/icu4c/source/common/ubiditransform.cpp",
   "//third_party/icu/icu4c/source/common/locutil.cpp",
@@ -543,10 +527,7 @@ ohos_shared_library("shared_icuuc") {
     "SYSTEM_TZDATA_DIR=${system_tzdata_dir}",
   ]
   sources = icu_common_source
-  deps = [
-    ":ohos_icudat",
-    ":static_icustubdata",
-  ]
+  deps = [ ":static_icustubdata" ]
   cflags_cc = [
     "-O3",
     "-W",
