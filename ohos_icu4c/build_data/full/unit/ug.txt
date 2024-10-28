@@ -13,8 +13,8 @@ ug{
                 other{"{0} BW/s"}
             }
             breath-per-minute{
-                one{"ق/م {0}"}
-                other{"ق/م {0}"}
+                one{"{0} ق/م"}
+                other{"{0} ق/م"}
             }
             foot-per-hour{
                 one{"{0} ft/h"}
@@ -33,16 +33,16 @@ ug{
                 other{"{0} ml/kg/min"}
             }
             rotation-per-minute{
-                one{"ق/م {0}"}
-                other{"ق/م {0}"}
+                one{"{0} ق/م"}
+                other{"{0} ق/م"}
             }
             step-per-minute{
                 one{"قەدەم/مىنۇت {0}"}
                 other{"قەدەم/مىنۇت {0}"}
             }
             stroke-per-minute{
-                one{"قەدەم/مىنۇت {0}"}
-                other{"قەدەم/مىنۇت {0}"}
+                one{"{0} پالاق/مىنۇت"}
+                other{"{0} پالاق/مىنۇت"}
             }
         }
         acceleration{

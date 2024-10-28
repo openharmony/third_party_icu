@@ -42,8 +42,8 @@ zh{
                 other{"{0} 转/分钟"}
             }
             step-per-minute{
-                dnam{"spm"}
-                other{"{0} spm"}
+                dnam{"步/分钟"}
+                other{"{0} 步/分钟"}
             }
             stroke-per-minute{
                 dnam{"次/分钟"}
@@ -907,8 +907,8 @@ zh{
                 other{"{0} 转/分钟"}
             }
             step-per-minute{
-                dnam{"spm"}
-                other{"{0} spm"}
+                dnam{"步/分钟"}
+                other{"{0} 步/分钟"}
             }
             stroke-per-minute{
                 dnam{"次/分钟"}
@@ -1597,8 +1597,8 @@ zh{
                 other{"{0} 转/分钟"}
             }
             step-per-minute{
-                dnam{"spm"}
-                other{"{0} spm"}
+                dnam{"步/分钟"}
+                other{"{0} 步/分钟"}
             }
             stroke-per-minute{
                 dnam{"次/分钟"}
