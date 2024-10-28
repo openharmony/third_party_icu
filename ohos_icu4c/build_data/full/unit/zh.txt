@@ -22,16 +22,16 @@ zh{
                 other{"{0} 次/分"}
             }
             foot-per-hour{
-                dnam{"ft/h"}
-                other{"{0} ft/h"}
+                dnam{"英尺/小时"}
+                other{"{0} 英尺/小时"}
             }
             jump-rope-speed{
                 dnam{"个/分钟"}
                 other{"{0} 个/分钟"}
             }
             meter-per-hour{
-                dnam{"m/h"}
-                other{"{0} m/h"}
+                dnam{"米/小时"}
+                other{"{0} 米/小时"}
             }
             milliliter-per-minute-per-kilogram{
                 dnam{"ml/kg/min"}
@@ -42,8 +42,8 @@ zh{
                 other{"{0} 转/分钟"}
             }
             step-per-minute{
-                dnam{"步/分钟"}
-                other{"{0} 步/分钟"}
+                dnam{"spm"}
+                other{"{0} spm"}
             }
             stroke-per-minute{
                 dnam{"次/分钟"}
@@ -887,16 +887,16 @@ zh{
                 other{"{0} 次/分"}
             }
             foot-per-hour{
-                dnam{"ft/h"}
-                other{"{0} ft/h"}
+                dnam{"英尺/小时"}
+                other{"{0} 英尺/小时"}
             }
             jump-rope-speed{
                 dnam{"个/分钟"}
                 other{"{0} 个/分钟"}
             }
             meter-per-hour{
-                dnam{"m/h"}
-                other{"{0} m/h"}
+                dnam{"米/小时"}
+                other{"{0} 米/小时"}
             }
             milliliter-per-minute-per-kilogram{
                 dnam{"ml/kg/min"}
@@ -907,8 +907,8 @@ zh{
                 other{"{0} 转/分钟"}
             }
             step-per-minute{
-                dnam{"步/分钟"}
-                other{"{0} 步/分钟"}
+                dnam{"spm"}
+                other{"{0} spm"}
             }
             stroke-per-minute{
                 dnam{"次/分钟"}
@@ -1577,16 +1577,16 @@ zh{
                 other{"{0} 次/分"}
             }
             foot-per-hour{
-                dnam{"ft/h"}
-                other{"{0} ft/h"}
+                dnam{"英尺/小时"}
+                other{"{0} 英尺/小时"}
             }
             jump-rope-speed{
                 dnam{"个/分钟"}
                 other{"{0} 个/分钟"}
             }
             meter-per-hour{
-                dnam{"m/h"}
-                other{"{0} m/h"}
+                dnam{"米/小时"}
+                other{"{0} 米/小时"}
             }
             milliliter-per-minute-per-kilogram{
                 dnam{"ml/kg/min"}
@@ -1597,8 +1597,8 @@ zh{
                 other{"{0} 转/分钟"}
             }
             step-per-minute{
-                dnam{"步/分钟"}
-                other{"{0} 步/分钟"}
+                dnam{"spm"}
+                other{"{0} spm"}
             }
             stroke-per-minute{
                 dnam{"次/分钟"}
