@@ -37,8 +37,8 @@ ug{
                 other{"{0} ق/م"}
             }
             step-per-minute{
-                one{"قەدەم/مىنۇت {0}"}
-                other{"قەدەم/مىنۇت {0}"}
+                one{"{0} قەدەم/مىنۇت"}
+                other{"{0} قەدەم/مىنۇت"}
             }
             stroke-per-minute{
                 one{"{0} پالاق/مىنۇت"}
@@ -258,8 +258,8 @@ ug{
                 other{"{0} BW/s"}
             }
             breath-per-minute{
-                one{"ق/م {0}"}
-                other{"ق/م {0}"}
+                one{"{0} ق/م"}
+                other{"{0} ق/م"}
             }
             foot-per-hour{
                 one{"{0} ft/h"}
@@ -278,16 +278,16 @@ ug{
                 other{"{0} ml/kg/min"}
             }
             rotation-per-minute{
-                one{"ق/م {0}"}
-                other{"ق/م {0}"}
+                one{"{0} ق/م"}
+                other{"{0} ق/م"}
             }
             step-per-minute{
-                one{"قەدەم/مىنۇت {0}"}
-                other{"قەدەم/مىنۇت {0}"}
+                one{"{0} قەدەم/مىنۇت"}
+                other{"{0} قەدەم/مىنۇت"}
             }
             stroke-per-minute{
-                one{"قەدەم/مىنۇت {0}"}
-                other{"قەدەم/مىنۇت {0}"}
+                one{"{0} پالاق/مىنۇت"}
+                other{"{0} پالاق/مىنۇت"}
             }
         }
         acceleration{
@@ -544,8 +544,8 @@ ug{
                 other{"{0} BW/s"}
             }
             breath-per-minute{
-                one{"ق/م {0}"}
-                other{"ق/م {0}"}
+                one{"{0} ق/م"}
+                other{"{0} ق/م"}
             }
             foot-per-hour{
                 one{"{0} ft/h"}
@@ -564,16 +564,16 @@ ug{
                 other{"{0} ml/kg/min"}
             }
             rotation-per-minute{
-                one{"ق/م {0}"}
-                other{"ق/م {0}"}
+                one{"{0} ق/م"}
+                other{"{0} ق/م"}
             }
             step-per-minute{
-                one{"قەدەم/مىنۇت {0}"}
-                other{"قەدەم/مىنۇت {0}"}
+                one{"{0} قەدەم/مىنۇت"}
+                other{"{0} قەدەم/مىنۇت"}
             }
             stroke-per-minute{
-                one{"قەدەم/مىنۇت {0}"}
-                other{"قەدەم/مىنۇت {0}"}
+                one{"{0} پالاق/مىنۇت"}
+                other{"{0} پالاق/مىنۇت"}
             }
         }
         acceleration{
