@@ -912,8 +912,8 @@ zh_Hant{
                 other{"{0} 轉/分鐘"}
             }
             step-per-minute{
-                dnam{"spm"}
-                other{"{0} spm"}
+                dnam{"步/分鐘"}
+                other{"{0} 步/分鐘"}
             }
             stroke-per-minute{
                 dnam{"次/分鐘"}
@@ -1720,8 +1720,8 @@ zh_Hant{
                 other{"{0} 轉/分鐘"}
             }
             step-per-minute{
-                dnam{"spm"}
-                other{"{0} spm"}
+                dnam{"步/分鐘"}
+                other{"{0} 步/分鐘"}
             }
             stroke-per-minute{
                 dnam{"次/分鐘"}
