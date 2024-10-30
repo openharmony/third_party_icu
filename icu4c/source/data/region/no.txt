@@ -134,7 +134,7 @@ no{
         GU{"Guam"}
         GW{"Guinea-Bissau"}
         GY{"Guyana"}
-        HK{"Hongkong SAR Kina"}
+        HK{"Hongkong (Kina)"}
         HM{"Heard- og McDonaldøyene"}
         HN{"Honduras"}
         HR{"Kroatia"}
@@ -188,7 +188,7 @@ no{
         ML{"Mali"}
         MM{"Myanmar (Burma)"}
         MN{"Mongolia"}
-        MO{"Macao SAR Kina"}
+        MO{"Macao (Kina)"}
         MP{"Nord-Marianene"}
         MQ{"Martinique"}
         MR{"Mauritania"}
@@ -223,7 +223,7 @@ no{
         PM{"Saint-Pierre-et-Miquelon"}
         PN{"Pitcairnøyene"}
         PR{"Puerto Rico"}
-        PS{"Det palestinske området"}
+        PS{"Palestina"}
         PT{"Portugal"}
         PW{"Palau"}
         PY{"Paraguay"}
@@ -270,7 +270,7 @@ no{
         TR{"Tyrkia"}
         TT{"Trinidad og Tobago"}
         TV{"Tuvalu"}
-        TW{"Taiwan"}
+        TW{"Taiwan (Kina)"}
         TZ{"Tanzania"}
         UA{"Ukraina"}
         UG{"Uganda"}
