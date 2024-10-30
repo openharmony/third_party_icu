@@ -61,6 +61,11 @@ icu_data_filter_file="$script_path/$icu_data_filter_dir/data_filter.json"
 
 rm -rf "$out_put_root_path/thirdparty/icu/out/*"
 
+python3 $script_path/ohos_data.py \
+    --icu_src_dir "$icu_source_path/source/data" \
+    --ohos_src_dir "$script_path/$icu_data_filter_dir/" \
+    --out_dir "$out_put_root_path/thirdparty/icu" \
+
 gen_icu_data() {
     
     # compile to res file
@@ -68,7 +73,7 @@ gen_icu_data() {
     --src_dir $icu_source_path/source/data \
     --include_uni_core_data \
     --seqmode sequential \
-    --filter_file $icu_data_filter_file \
+    --filter_file $out_put_root_path/thirdparty/icu/out/temp/data_filter.json \
     --mode unix-exec \
     --tool_dir $tool_bin_dir \
     --out_dir $res_out_root_dir/out/build/$icu_dat_name \
