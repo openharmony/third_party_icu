@@ -590,7 +590,7 @@ static const char * const gSubTypes[] = {
     "body-weight-per-second",
     "breath-per-minute",
     "foot-per-hour",
-    "jump-rope-speed",
+    "jump-rope-per-minute",
     "meter-per-hour",
     "milliliter-per-minute-per-kilogram",
     "rotation-per-minute",
