@@ -55,15 +55,20 @@ if __name__=='__main__':
     args = parser.parse_args()
     
     out_dir = args.out_dir + '/out/temp/'
-    os.makedirs(out_dir + '/unit/', exist_ok=True)
+    unit_path = '/unit/'
+    filter_file = '/data_filter.json'
+    bo_file = 'bo.txt'
+    root_file = 'root.txt'
+    os.makedirs(out_dir + unit_path, exist_ok=True)
 
-    files = ['/unit/en_001.txt', '/unit/root.txt', '/unit/ug.txt', '/unit/zh_Hant_HK.txt', '/unit/zh_Hant.txt', '/unit/zh.txt']
+    files = os.listdir(args.ohos_src_dir + unit_path)
     for file in files:
-        copy_content(args.ohos_src_dir + file, args.icu_src_dir + file, out_dir + file)
+        if file == bo_file:
+            continue
+        copy_content(args.ohos_src_dir + unit_path + file, 
+                     args.icu_src_dir + unit_path + file, 
+                     out_dir + unit_path + file)
 
-    copy_content(args.ohos_src_dir + '/unit/bo.txt', args.icu_src_dir + '/unit/root.txt', out_dir + '/unit/bo.txt')
+    copy_content(args.ohos_src_dir + unit_path + bo_file, args.icu_src_dir + unit_path + root_file, out_dir + unit_path + bo_file)
 
-    copy_file(args.ohos_src_dir + '/data_filter.json', out_dir + '/data_filter.json')
-
-    
-
+    copy_file(args.ohos_src_dir + filter_file, out_dir + filter_file)
