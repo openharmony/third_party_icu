@@ -66,9 +66,9 @@ if __name__=='__main__':
         if file == bo_file:
             continue
         copy_content(args.ohos_src_dir + unit_path + file, 
-                     args.icu_src_dir + unit_path + file, 
-                     out_dir + unit_path + file)
+                     args.icu_src_dir + unit_path + file, out_dir + unit_path + file)
 
-    copy_content(args.ohos_src_dir + unit_path + bo_file, args.icu_src_dir + unit_path + root_file, out_dir + unit_path + bo_file)
+    copy_content(args.ohos_src_dir + unit_path + bo_file, 
+                 args.icu_src_dir + unit_path + root_file, out_dir + unit_path + bo_file)
 
     copy_file(args.ohos_src_dir + filter_file, out_dir + filter_file)
