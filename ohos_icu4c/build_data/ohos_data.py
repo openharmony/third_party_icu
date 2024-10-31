@@ -77,7 +77,6 @@ def copy_content(src_file, dest_file, out_file):
         else:
             data += line
 
-
     with open(out_file, 'w', encoding='utf-8') as f:
         f.write(data)
 
