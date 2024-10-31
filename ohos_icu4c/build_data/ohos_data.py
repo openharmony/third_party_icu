@@ -14,6 +14,19 @@
 import argparse
 import os
 
+
+def add_content(data, src_content, prefix=''):
+    if len(prefix) == 0:
+        for content in src_content:
+                data = data + '        ' + content + '\n'
+    else:
+        data = data + '    ' + prefix + '{' + '\n'
+        for content in src_content:
+                data = data + '        ' + content + '\n'
+        data = data + '    }' + '\n'
+    return data
+
+
 def copy_content(src_file, dest_file, out_file):
     if os.path.exists(src_file):
         with open(src_file, 'r', encoding='utf-8') as f:
@@ -22,18 +35,48 @@ def copy_content(src_file, dest_file, out_file):
         src_content = []
     
     with open(dest_file, 'r', encoding='utf-8') as f:
-        if 'bo.txt' in src_file:
-            dest_content = f.read().replace('root', 'bo').splitlines(True)
-            print(src_file)
-        else:
-            dest_content = f.read().splitlines(True)
+        dest_content = f.read().splitlines(True)
 
     data = ''
-    for line in dest_content:
-        data += line
-        if ('units{' in line) or ('unitsNarrow{' in line) or ('unitsShort{' in line):
-            for content in src_content:
-                data = data + '        ' + content + '\n'
+    signal = 0
+    for index in range(len(dest_content)):
+        line = dest_content[index]
+        
+        if (index == len(dest_content) - 1) and (signal != 3):
+            if signal == 0:
+                data = add_content(data, src_content, 'units')
+                signal = 1
+            if signal == 1:
+                data = add_content(data, src_content, 'unitsNarrow')
+                signal = 2
+            if signal == 2:
+                data = add_content(data, src_content, 'unitsShort')
+            data += line
+        elif ('unitsShort{' in line) or ('unitsShort:' in line):
+            if signal == 0:
+                data = add_content(data, src_content, 'units')
+                signal = 1
+            if signal == 1:
+                data = add_content(data, src_content, 'unitsNarrow')
+            data += line
+            if 'unitsShort{' in line:
+                data = add_content(data, src_content)
+            signal = 3
+        elif ('unitsNarrow{' in line) or ('unitsNarrow:' in line):
+            if signal == 0:
+                data = add_content(data, src_content, 'units')
+            data += line
+            if 'unitsNarrow{' in line:
+                data = add_content(data, src_content)
+            signal = 2
+        elif ('units{' in line) or ('units:' in line):
+            data += line
+            if 'units{' in line:
+                data = add_content(data, src_content)
+            signal = 1
+        else:
+            data += line
+
 
     with open(out_file, 'w', encoding='utf-8') as f:
         f.write(data)
@@ -57,18 +100,10 @@ if __name__=='__main__':
     out_dir = args.out_dir + '/out/temp/'
     unit_path = '/unit/'
     filter_file = '/data_filter.json'
-    bo_file = 'bo.txt'
-    root_file = 'root.txt'
     os.makedirs(out_dir + unit_path, exist_ok=True)
 
-    files = os.listdir(args.ohos_src_dir + unit_path)
-    for file in files:
-        if file == bo_file:
-            continue
+    for file in os.listdir(args.ohos_src_dir + unit_path):
         copy_content(args.ohos_src_dir + unit_path + file, 
                      args.icu_src_dir + unit_path + file, out_dir + unit_path + file)
-
-    copy_content(args.ohos_src_dir + unit_path + bo_file, 
-                 args.icu_src_dir + unit_path + root_file, out_dir + unit_path + bo_file)
 
     copy_file(args.ohos_src_dir + filter_file, out_dir + filter_file)
