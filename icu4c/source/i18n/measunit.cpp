@@ -61,7 +61,9 @@ static const int32_t gOffsets[] = {
     454,
     456,
     490,
-    500  // ohos unit end index 
+    /* IASH19 Add 10 measure units 20241104 begin */
+    500
+    /* IASH19 Add 10 measure units 20241104 end */
 };
 
 static const int32_t kCurrencyOffset = 5;
@@ -91,7 +93,9 @@ static const char * const gTypes[] = {
     "temperature",
     "torque",
     "volume",
-    "zohos"  // ohos unit type
+    /* IASH19 Add 10 measure units 20241104 begin */
+    "zohos"
+    /* IASH19 Add 10 measure units 20241104 end */
 };
 
 // Must be grouped by type and sorted alphabetically within each type.
@@ -586,7 +590,8 @@ static const char * const gSubTypes[] = {
     "quart-imperial",
     "tablespoon",
     "teaspoon",
-    "beat-per-minute",  // ohos units start
+    /* IASH19 Add 10 measure units 20241104 begin */
+    "beat-per-minute",
     "body-weight-per-second",
     "breath-per-minute",
     "foot-per-hour",
@@ -596,6 +601,7 @@ static const char * const gSubTypes[] = {
     "rotation-per-minute",
     "step-per-minute",
     "stroke-per-minute"
+    /* IASH19 Add 10 measure units 20241104 end */
 };
 
 // Shortcuts to the base unit in order to make the default constructor fast
