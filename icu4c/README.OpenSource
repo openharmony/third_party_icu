@@ -1,7 +1,7 @@
 [
   {
     "Name": "ICU - International Components for Unicode-Java",
-    "License": "ICU License, BSD 3-Clause License",
+    "License": "Unicode-DFS-2022",
     "License File": "LICENSE",
     "Version Number": "72.1",
     "Upstream URL": "https://github.com/unicode-org/icu/archive/release-72-1.tar.gz",
