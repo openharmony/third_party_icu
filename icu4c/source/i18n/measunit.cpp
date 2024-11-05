@@ -60,7 +60,10 @@ static const int32_t gOffsets[] = {
     450,
     454,
     456,
-    490
+    490,
+    /* IASH19 Add 10 measure units 20241104 begin */
+    500
+    /* IASH19 Add 10 measure units 20241104 end */
 };
 
 static const int32_t kCurrencyOffset = 5;
@@ -89,7 +92,10 @@ static const char * const gTypes[] = {
     "speed",
     "temperature",
     "torque",
-    "volume"
+    "volume",
+    /* IASH19 Add 10 measure units 20241104 begin */
+    "zohos"
+    /* IASH19 Add 10 measure units 20241104 end */
 };
 
 // Must be grouped by type and sorted alphabetically within each type.
@@ -583,7 +589,19 @@ static const char * const gSubTypes[] = {
     "quart",
     "quart-imperial",
     "tablespoon",
-    "teaspoon"
+    "teaspoon",
+    /* IASH19 Add 10 measure units 20241104 begin */
+    "beat-per-minute",
+    "body-weight-per-second",
+    "breath-per-minute",
+    "foot-per-hour",
+    "jump-rope-per-minute",
+    "meter-per-hour",
+    "milliliter-per-minute-per-kilogram",
+    "rotation-per-minute",
+    "step-per-minute",
+    "stroke-per-minute"
+    /* IASH19 Add 10 measure units 20241104 end */
 };
 
 // Shortcuts to the base unit in order to make the default constructor fast
