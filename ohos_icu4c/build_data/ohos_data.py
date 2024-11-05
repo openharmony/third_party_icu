@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 # Copyright (c) 2024 Huawei Device Co., Ltd.
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,16 +15,17 @@
 
 import argparse
 import os
+import stat
 
 
 def add_content(data, src_content, prefix=''):
     if len(prefix) == 0:
         for content in src_content:
-                data = data + '        ' + content + '\n'
+            data = data + '        ' + content + '\n'
     else:
         data = data + '    ' + prefix + '{' + '\n'
         for content in src_content:
-                data = data + '        ' + content + '\n'
+            data = data + '        ' + content + '\n'
         data = data + '    }' + '\n'
     return data
 
@@ -33,15 +36,13 @@ def copy_content(src_file, dest_file, out_file):
             src_content = f.read().splitlines()
     else:
         src_content = []
-    
+
     with open(dest_file, 'r', encoding='utf-8') as f:
         dest_content = f.read().splitlines(True)
 
     data = ''
     signal = 0
-    for index in range(len(dest_content)):
-        line = dest_content[index]
-        
+    for index, line in enumerate(dest_content):
         if (index == len(dest_content) - 1) and (signal != 3):
             if signal == 0:
                 data = add_content(data, src_content, 'units')
@@ -77,7 +78,9 @@ def copy_content(src_file, dest_file, out_file):
         else:
             data += line
 
-    with open(out_file, 'w', encoding='utf-8') as f:
+    flags = os.O_WRONLY | os.O_CREAT
+    mode = stat.S_IWUSR | stat.S_IRUSR
+    with os.fdopen(os.open(out_file, flags, mode), 'w') as f:
         f.write(data)
 
 
@@ -85,24 +88,28 @@ def copy_file(src_file, dest_file):
     with open(src_file, 'r', encoding='utf-8') as f:
         data = f.read()
 
-    with open(dest_file, 'w', encoding='utf-8') as f:
+    flags = os.O_WRONLY | os.O_CREAT
+    mode = stat.S_IWUSR | stat.S_IRUSR
+    with os.fdopen(os.open(dest_file, flags, mode), 'w') as f:
         f.write(data)
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--icu_src_dir', type=str)
     parser.add_argument('--ohos_src_dir', type=str)
     parser.add_argument('--out_dir', type=str)
     args = parser.parse_args()
-    
-    out_dir = args.out_dir + '/out/temp/'
-    unit_path = '/unit/'
-    filter_file = '/data_filter.json'
-    os.makedirs(out_dir + unit_path, exist_ok=True)
 
-    for file in os.listdir(args.ohos_src_dir + unit_path):
-        copy_content(args.ohos_src_dir + unit_path + file, 
-                     args.icu_src_dir + unit_path + file, out_dir + unit_path + file)
+    unit_path = 'unit'
+    filter_file = 'data_filter.json'
+    out_dir = os.path.join(args.out_dir, 'out', 'temp')
+    os.makedirs(os.path.join(out_dir, unit_path), exist_ok=True)
 
-    copy_file(args.ohos_src_dir + filter_file, out_dir + filter_file)
+    if os.path.exists(os.path.join(args.ohos_src_dir, unit_path)):
+        for file in os.listdir(os.path.join(args.ohos_src_dir, unit_path)):
+            copy_content(os.path.join(args.ohos_src_dir, unit_path, file),
+                         os.path.join(args.icu_src_dir, unit_path, file),
+                         os.path.join(out_dir, unit_path, file))
+
+    copy_file(os.path.join(args.ohos_src_dir, filter_file), os.path.join(out_dir, filter_file))
