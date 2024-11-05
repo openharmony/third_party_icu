@@ -1,0 +1,7 @@
+﻿zohos{
+    jump-rope-per-minute{
+        dnam{"skip/minute"}
+        one{"{0} skip/minute"}
+        other{"{0} skips/minute"}
+    }
+}

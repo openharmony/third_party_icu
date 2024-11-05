@@ -1,0 +1,42 @@
+﻿zohos{
+    beat-per-minute{
+        one{"{0} ق/م"}
+        other{"{0} ق/م"}
+    }
+    body-weight-per-second{
+        one{"{0} BW/s"}
+        other{"{0} BW/s"}
+    }
+    breath-per-minute{
+        one{"{0} ق/م"}
+        other{"{0} ق/م"}
+    }
+    foot-per-hour{
+        one{"{0} ft/h"}
+        other{"{0} ft/h"}
+    }
+    jump-rope-per-minute{
+        one{"{0} ئاتلام/مىنۇت"}
+        other{"{0} ئاتلام/مىنۇت"}
+    }
+    meter-per-hour{
+        one{"{0} m/h"}
+        other{"{0} m/h"}
+    }
+    milliliter-per-minute-per-kilogram{
+        one{"{0} ml/kg/min"}
+        other{"{0} ml/kg/min"}
+    }
+    rotation-per-minute{
+        one{"{0} ق/م"}
+        other{"{0} ق/م"}
+    }
+    step-per-minute{
+        one{"{0} قەدەم/مىنۇت"}
+        other{"{0} قەدەم/مىنۇت"}
+    }
+    stroke-per-minute{
+        one{"{0} پالاق/مىنۇت"}
+        other{"{0} پالاق/مىنۇت"}
+    }
+}

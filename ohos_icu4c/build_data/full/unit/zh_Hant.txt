@@ -1,0 +1,42 @@
+﻿zohos{
+    beat-per-minute{
+        dnam{"次/分鐘"}
+        other{"{0} 次/分鐘"}
+    }
+    body-weight-per-second{
+        dnam{"BW/s"}
+        other{"{0} BW/s"}
+    }
+    breath-per-minute{
+        dnam{"次/分"}
+        other{"{0} 次/分"}
+    }
+    foot-per-hour{
+        dnam{"英尺/小時"}
+        other{"{0} 英尺/小時"}
+    }
+    jump-rope-per-minute{
+        dnam{"個/分鐘"}
+        other{"{0} 個/分鐘"}
+    }
+    meter-per-hour{
+        dnam{"公尺/小時"}
+        other{"{0} 公尺/小時"}
+    }
+    milliliter-per-minute-per-kilogram{
+        dnam{"ml/kg/min"}
+        other{"{0} ml/kg/min"}
+    }
+    rotation-per-minute{
+        dnam{"轉/分鐘"}
+        other{"{0} 轉/分鐘"}
+    }
+    step-per-minute{
+        dnam{"步/分鐘"}
+        other{"{0} 步/分鐘"}
+    }
+    stroke-per-minute{
+        dnam{"次/分鐘"}
+        other{"{0} 次/分鐘"}
+    }
+}
