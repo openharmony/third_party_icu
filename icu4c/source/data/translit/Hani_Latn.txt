@@ -8906,6 +8906,7 @@
 潦原浸天 →lǎo\u0020yuán\u0020jìn\u0020tiān;
 撰著 →zhuàn\u0020zhù;
 乐亭 →lào\u0020tíng;
+俄罗斯 →é\u0020luó\u0020sī;
 ::Han-Spacedhan();
 # Convert compounds; these are added individually, not derived from Unihan kMandarin.
 # Note that Han-Spacedhan() has already been applied, so there should be spaces between Han characters.
