@@ -1,0 +1,42 @@
+zohos{
+    beat-per-minute{
+        dnam{"פעמים/דקה"}
+        other{"{0} פעמים/דקה"}
+    }
+    body-weight-per-second{
+        dnam{"BW/s"}
+        other{"{0} BW/s"}
+    }
+    breath-per-minute{
+        dnam{"פעימות לדקה"}
+        other{"{0} פעימות לדקה"}
+    }
+    foot-per-hour{
+        dnam{"רגל לשעה"}
+        other{"{0} רגל לשעה"}
+    }
+    jump-rope-per-minute{
+        dnam{"יח'/דקה"}
+        other{"{0} יח'/דקה"}
+    }
+    meter-per-hour{
+        dnam{"מ\u0022ש"}
+        other{"{0} מ\u0022ש"}
+    }
+    milliliter-per-minute-per-kilogram{
+        dnam{"מ\u0022ל/ק\u0022ג/דקה"}
+        other{"{0} מ\u0022ל/ק\u0022ג/דקה"}
+    }
+    rotation-per-minute{
+        dnam{"סל\u0022ד"}
+        other{"{0} סל\u0022ד"}
+    }
+    step-per-minute{
+        dnam{"צעדים/דקה"}
+        other{"{0} צעדים/דקה"}
+    }
+    stroke-per-minute{
+        dnam{"פעמים/דקה"}
+        other{"{0} פעמים/דקה"}
+    }
+}

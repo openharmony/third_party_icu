@@ -1,0 +1,42 @@
+zohos{
+    beat-per-minute{
+        dnam{"بار در دقیقه"}
+        other{"{0} بار در دقیقه"}
+    }
+    body-weight-per-second{
+        dnam{"BW/s"}
+        other{"{0} BW/s"}
+    }
+    breath-per-minute{
+        dnam{"ضربان در دقیقه"}
+        other{"{0} ضربان در دقیقه"}
+    }
+    foot-per-hour{
+        dnam{"فوت در ساعت"}
+        other{"{0} فوت در ساعت"}
+    }
+    jump-rope-per-minute{
+        dnam{"عدد در دقیقه"}
+        other{"{0} عدد در دقیقه"}
+    }
+    meter-per-hour{
+        dnam{"متر بر ساعت"}
+        other{"{0} متر بر ساعت"}
+    }
+    milliliter-per-minute-per-kilogram{
+        dnam{"ml/kg/min"}
+        other{"{0} ml/kg/min"}
+    }
+    rotation-per-minute{
+        dnam{"دور در دقیقه"}
+        other{"{0} دور در دقیقه"}
+    }
+    step-per-minute{
+        dnam{"مرحله در دقیقه"}
+        other{"{0} مرحله در دقیقه"}
+    }
+    stroke-per-minute{
+        dnam{"بار در دقیقه"}
+        other{"{0} بار در دقیقه"}
+    }
+}
