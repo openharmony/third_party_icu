@@ -1,0 +1,42 @@
+zohos{
+    beat-per-minute{
+        dnam{"-ჯერ/წუთში"}
+        other{"{0}-ჯერ/წუთში"}
+    }
+    body-weight-per-second{
+        dnam{"BW /s"}
+        other{"{0} BW /s"}
+    }
+    breath-per-minute{
+        dnam{"დარტყმა/წუთში"}
+        other{"{0} დარტყმა/წუთში"}
+    }
+    foot-per-hour{
+        dnam{"ფუტი / სთ"}
+        other{"{0} ფუტი / სთ"}
+    }
+    jump-rope-per-minute{
+        dnam{"ცალი / წთ"}
+        other{"{0} ცალი / წთ"}
+    }
+    meter-per-hour{
+        dnam{"მეტრი წამში"}
+        other{"{0} მეტრი წამში"}
+    }
+    milliliter-per-minute-per-kilogram{
+        dnam{"მლ/კგ/წთ"}
+        other{"{0} მლ/კგ/წთ"}
+    }
+    rotation-per-minute{
+        dnam{"წთ"}
+        other{"{0} წთ"}
+    }
+    step-per-minute{
+        dnam{"ნაბიჯი/წუთი"}
+        other{"{0} ნაბიჯი/წუთი"}
+    }
+    stroke-per-minute{
+        dnam{"-ჯერ/წუთში"}
+        other{"{0}-ჯერ/წუთში"}
+    }
+}
