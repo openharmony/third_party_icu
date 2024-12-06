@@ -1,0 +1,42 @@
+zohos{
+    beat-per-minute{
+        dnam{"ori/minut"}
+        other{"{0} ori/minut"}
+    }
+    body-weight-per-second{
+        dnam{"alb/s"}
+        other{"{0} alb/s"}
+    }
+    breath-per-minute{
+        dnam{"bătăi/minut"}
+        other{"{0} bătăi/minut"}
+    }
+    foot-per-hour{
+        dnam{"ft/h"}
+        other{"{0} ft/h"}
+    }
+    jump-rope-per-minute{
+        dnam{"buc/min"}
+        other{"{0} buc/min"}
+    }
+    meter-per-hour{
+        dnam{"m/h"}
+        other{"{0} m/h"}
+    }
+    milliliter-per-minute-per-kilogram{
+        dnam{"ml/kg/min"}
+        other{"{0} ml/kg/min"}
+    }
+    rotation-per-minute{
+        dnam{"rpm"}
+        other{"{0} rpm"}
+    }
+    step-per-minute{
+        dnam{"pași/minut"}
+        other{"{0} pași/minut"}
+    }
+    stroke-per-minute{
+        dnam{"ori/minut"}
+        other{"{0} ori/minut"}
+    }
+}
