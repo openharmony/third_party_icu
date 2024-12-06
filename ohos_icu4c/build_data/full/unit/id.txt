@@ -1,0 +1,42 @@
+zohos{
+    beat-per-minute{
+        dnam{"kali/menit"}
+        other{"{0} kali/menit"}
+    }
+    body-weight-per-second{
+        dnam{"BW/dtk"}
+        other{"{0} BW/dtk"}
+    }
+    breath-per-minute{
+        dnam{"ketukan/menit"}
+        other{"{0} ketukan/menit"}
+    }
+    foot-per-hour{
+        dnam{"kaki / jam"}
+        other{"{0} kaki / jam"}
+    }
+    jump-rope-per-minute{
+        dnam{"pcs/mnt"}
+        other{"{0} pcs/mnt"}
+    }
+    meter-per-hour{
+        dnam{"m/jam"}
+        other{"{0} m/jam"}
+    }
+    milliliter-per-minute-per-kilogram{
+        dnam{"ml/kg/mnt"}
+        other{"{0} ml/kg/mnt"}
+    }
+    rotation-per-minute{
+        dnam{"rpm"}
+        other{"{0} rpm"}
+    }
+    step-per-minute{
+        dnam{"langkah/menit"}
+        other{"{0} langkah/menit"}
+    }
+    stroke-per-minute{
+        dnam{"kali/menit"}
+        other{"{0} kali/menit"}
+    }
+}
