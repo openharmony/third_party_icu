@@ -1,0 +1,42 @@
+zohos{
+    beat-per-minute{
+        dnam{"krát/minutu"}
+        other{"{0}krát/minutu"}
+    }
+    body-weight-per-second{
+        dnam{"BW/s"}
+        other{"{0} BW/s"}
+    }
+    breath-per-minute{
+        dnam{"krát/minutu"}
+        other{"{0}krát/minutu"}
+    }
+    foot-per-hour{
+        dnam{"ft/h"}
+        other{"{0} ft/h"}
+    }
+    jump-rope-per-minute{
+        dnam{"jednotek/minutu"}
+        other{"{0} jednotek/minutu"}
+    }
+    meter-per-hour{
+        dnam{"metrů za hodinu"}
+        other{"{0} metrů za hodinu"}
+    }
+    milliliter-per-minute-per-kilogram{
+        dnam{"ml/kg/min"}
+        other{"{0} ml/kg/min"}
+    }
+    rotation-per-minute{
+        dnam{"OTÁČEK ZA MINUTU"}
+        other{"{0} OTÁČEK ZA MINUTU"}
+    }
+    step-per-minute{
+        dnam{"kroků za minutu"}
+        other{"{0} kroků za minutu"}
+    }
+    stroke-per-minute{
+        dnam{"krát/minutu"}
+        other{"{0}krát/minutu"}
+    }
+}

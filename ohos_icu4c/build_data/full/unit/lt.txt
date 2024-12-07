@@ -1,0 +1,42 @@
+zohos{
+    beat-per-minute{
+        dnam{"kartų per minutę"}
+        other{"{0} kartų per minutę"}
+    }
+    body-weight-per-second{
+        dnam{"BW/s"}
+        other{"{0} BW/s"}
+    }
+    breath-per-minute{
+        dnam{"dūžiai per minutę"}
+        other{"{0} dūžiai per minutę"}
+    }
+    foot-per-hour{
+        dnam{"pėdų / val"}
+        other{"{0} pėdų / val"}
+    }
+    jump-rope-per-minute{
+        dnam{"vnt / min"}
+        other{"{0} vnt / min"}
+    }
+    meter-per-hour{
+        dnam{"m/h"}
+        other{"{0} m/h"}
+    }
+    milliliter-per-minute-per-kilogram{
+        dnam{"ml/kg/min."}
+        other{"{0} ml/kg/min."}
+    }
+    rotation-per-minute{
+        dnam{"aps./min"}
+        other{"{0} aps./min"}
+    }
+    step-per-minute{
+        dnam{"žingsniai per minutę"}
+        other{"{0} žingsniai per minutę"}
+    }
+    stroke-per-minute{
+        dnam{"kartų per minutę"}
+        other{"{0} kartų per minutę"}
+    }
+}

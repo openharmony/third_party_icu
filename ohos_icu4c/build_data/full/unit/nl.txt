@@ -1,0 +1,42 @@
+zohos{
+    beat-per-minute{
+        dnam{"keer/minuut"}
+        other{"{0} keer/minuut"}
+    }
+    body-weight-per-second{
+        dnam{"zwart-wit"}
+        other{"{0} zwart-wit"}
+    }
+    breath-per-minute{
+        dnam{"slagen/minuut"}
+        other{"{0} slagen/minuut"}
+    }
+    foot-per-hour{
+        dnam{"ft/uur"}
+        other{"{0} ft/uur"}
+    }
+    jump-rope-per-minute{
+        dnam{"stuks/min"}
+        other{"{0} stuks/min"}
+    }
+    meter-per-hour{
+        dnam{"m/u"}
+        other{"{0} m/u"}
+    }
+    milliliter-per-minute-per-kilogram{
+        dnam{"ml/kg/min"}
+        other{"{0} ml/kg/min"}
+    }
+    rotation-per-minute{
+        dnam{"toeren per minuut"}
+        other{"{0} toeren per minuut"}
+    }
+    step-per-minute{
+        dnam{"stappen/minuut"}
+        other{"{0} stappen/minuut"}
+    }
+    stroke-per-minute{
+        dnam{"keer/minuut"}
+        other{"{0} keer/minuut"}
+    }
+}
