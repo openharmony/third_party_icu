@@ -1,0 +1,42 @@
+zohos{
+    beat-per-minute{
+        dnam{"kez/dakika"}
+        other{"{0} kez/dakika"}
+    }
+    body-weight-per-second{
+        dnam{"Siyah Beyaz/sn"}
+        other{"{0} Siyah Beyaz/sn"}
+    }
+    breath-per-minute{
+        dnam{"vuruş/dakika"}
+        other{"{0} vuruş/dakika"}
+    }
+    foot-per-hour{
+        dnam{"ft/sa"}
+        other{"{0} ft/sa"}
+    }
+    jump-rope-per-minute{
+        dnam{"adet/dk"}
+        other{"{0} adet/dk"}
+    }
+    meter-per-hour{
+        dnam{"m/s"}
+        other{"{0} m/s"}
+    }
+    milliliter-per-minute-per-kilogram{
+        dnam{"ml/kg/dk"}
+        other{"{0} ml/kg/dk"}
+    }
+    rotation-per-minute{
+        dnam{"dev/dak"}
+        other{"{0} dev/dak"}
+    }
+    step-per-minute{
+        dnam{"adım/dakika"}
+        other{"{0} adım/dakika"}
+    }
+    stroke-per-minute{
+        dnam{"kez/dakika"}
+        other{"{0} kez/dakika"}
+    }
+}

@@ -1,0 +1,42 @@
+zohos{
+    beat-per-minute{
+        dnam{"volte/minuto"}
+        other{"{0} volte/minuto"}
+    }
+    body-weight-per-second{
+        dnam{"bianco e nero/sec."}
+        other{"{0} bianco e nero/sec."}
+    }
+    breath-per-minute{
+        dnam{"battiti/minuto"}
+        other{"{0} battiti/minuto"}
+    }
+    foot-per-hour{
+        dnam{"piedi/ora"}
+        other{"{0} piedi/ora"}
+    }
+    jump-rope-per-minute{
+        dnam{"pezzi/min"}
+        other{"{0} pezzi/min"}
+    }
+    meter-per-hour{
+        dnam{"m/h"}
+        other{"{0} m/h"}
+    }
+    milliliter-per-minute-per-kilogram{
+        dnam{"ml/kg/min"}
+        other{"{0} ml/kg/min"}
+    }
+    rotation-per-minute{
+        dnam{"giri/min"}
+        other{"{0} giri/min"}
+    }
+    step-per-minute{
+        dnam{"passi/minuto"}
+        other{"{0} passi/minuto"}
+    }
+    stroke-per-minute{
+        dnam{"volte/minuto"}
+        other{"{0} volte/minuto"}
+    }
+}
