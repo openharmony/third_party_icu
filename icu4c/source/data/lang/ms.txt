@@ -317,7 +317,7 @@ ms{
         moh{"Mohawk"}
         mos{"Mossi"}
         mr{"Marathi"}
-        ms{"Melayu"}
+        ms{"Bahasa Melayu"}
         mt{"Malta"}
         mua{"Mundang"}
         mul{"Pelbagai Bahasa"}
