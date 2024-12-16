@@ -1,42 +1,92 @@
 zohos{
     beat-per-minute{
-        dnam{"lần/phút"}
-        other{"{0} lần/phút"}
-    }
-    body-weight-per-second{
-        dnam{"BW / giây"}
-        other{"{0} BW / giây"}
-    }
-    breath-per-minute{
         dnam{"nhịp/phút"}
+        zero{"{0} nhịp/phút"}
+        one{"{0} nhịp/phút"}
+        two{"{0} nhịp/phút"}
+        few{"{0} nhịp/phút"}
+        many{"{0} nhịp/phút"}
         other{"{0} nhịp/phút"}
     }
+    body-weight-per-second{
+        dnam{"BW/giây"}
+        zero{"{0} BW/giây"}
+        one{"{0} BW/giây"}
+        two{"{0} BW/giây"}
+        few{"{0} BW/giây"}
+        many{"{0} BW/giây"}
+        other{"{0} BW/giây"}
+    }
+    breath-per-minute{
+        dnam{"nhịp thở/phút"}
+        zero{"{0} nhịp thở/phút"}
+        one{"{0} nhịp thở/phút"}
+        two{"{0} nhịp thở/phút"}
+        few{"{0} nhịp thở/phút"}
+        many{"{0} nhịp thở/phút"}
+        other{"{0} nhịp thở/phút"}
+    }
     foot-per-hour{
-        dnam{"ft / giờ"}
-        other{"{0} ft / giờ"}
+        dnam{"ft/h"}
+        zero{"{0} ft/h"}
+        one{"{0} ft/h"}
+        two{"{0} ft/h"}
+        few{"{0} ft/h"}
+        many{"{0} ft/h"}
+        other{"{0} ft/h"}
     }
     jump-rope-per-minute{
-        dnam{"chiếc / phút"}
-        other{"{0} chiếc / phút"}
+        dnam{"cái/phút"}
+        zero{"{0} cái/phút"}
+        one{"{0} cái/phút"}
+        two{"{0} cái/phút"}
+        few{"{0} cái/phút"}
+        many{"{0} cái/phút"}
+        other{"{0} cái/phút"}
     }
     meter-per-hour{
-        dnam{"m / h"}
-        other{"{0} m / h"}
+        dnam{"m/h"}
+        zero{"{0} m/h"}
+        one{"{0} m/h"}
+        two{"{0} m/h"}
+        few{"{0} m/h"}
+        many{"{0} m/h"}
+        other{"{0} m/h"}
     }
     milliliter-per-minute-per-kilogram{
-        dnam{"ml / kg / phút"}
-        other{"{0} ml / kg / phút"}
+        dnam{"ml/kg/phút"}
+        zero{"{0} ml/kg/phút"}
+        one{"{0} ml/kg/phút"}
+        two{"{0} ml/kg/phút"}
+        few{"{0} ml/kg/phút"}
+        many{"{0} ml/kg/phút"}
+        other{"{0} ml/kg/phút"}
     }
     rotation-per-minute{
-        dnam{"vòng / phút"}
-        other{"{0} vòng / phút"}
+        dnam{"vòng/phút"}
+        zero{"{0} vòng/phút"}
+        one{"{0} vòng/phút"}
+        two{"{0} vòng/phút"}
+        few{"{0} vòng/phút"}
+        many{"{0} vòng/phút"}
+        other{"{0} vòng/phút"}
     }
     step-per-minute{
         dnam{"bước/phút"}
+        zero{"{0} bước/phút"}
+        one{"{0} bước/phút"}
+        two{"{0} bước/phút"}
+        few{"{0} bước/phút"}
+        many{"{0} bước/phút"}
         other{"{0} bước/phút"}
     }
     stroke-per-minute{
-        dnam{"lần/phút"}
-        other{"{0} lần/phút"}
+        dnam{"lần quạt tay/phút"}
+        zero{"{0} lần quạt tay/phút"}
+        one{"{0} lần quạt tay/phút"}
+        two{"{0} lần quạt tay/phút"}
+        few{"{0} lần quạt tay/phút"}
+        many{"{0} lần quạt tay/phút"}
+        other{"{0} lần quạt tay/phút"}
     }
 }

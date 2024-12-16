@@ -1,42 +1,92 @@
 zohos{
     beat-per-minute{
-        dnam{"reizes/minūtē"}
-        other{"{0} reizes/minūtē"}
+        dnam{"sitiens minūtē"}
+        zero{"{0} sitieni minūtē"}
+        one{"{0} sitiens minūtē"}
+        two{"{0} sitieni minūtē"}
+        few{"{0} sitieni minūtē"}
+        many{"{0} sitieni minūtē"}
+        other{"{0} sitieni minūtē"}
     }
     body-weight-per-second{
-        dnam{"ķermeņa svars/s"}
-        other{"{0} ķermeņa svars/s"}
+        dnam{"ĶS/s"}
+        zero{"{0} ĶS/s"}
+        one{"{0} ĶS/s"}
+        two{"{0} ĶS/s"}
+        few{"{0} ĶS/s"}
+        many{"{0} ĶS/s"}
+        other{"{0} ĶS/s"}
     }
     breath-per-minute{
-        dnam{"sitieni/minūtē"}
-        other{"{0} sitieni/minūtē"}
+        dnam{"ieelpa/min"}
+        zero{"{0} ieelpas/min"}
+        one{"{0} ieelpa/min"}
+        two{"{0} ieelpas/min"}
+        few{"{0} ieelpas/min"}
+        many{"{0} ieelpas/min"}
+        other{"{0} ieelpas/min"}
     }
     foot-per-hour{
-        dnam{"pēdas/hr"}
-        other{"{0} pēdas/hr"}
+        dnam{"ft/h"}
+        zero{"{0} ft/h"}
+        one{"{0} ft/h"}
+        two{"{0} ft/h"}
+        few{"{0} ft/h"}
+        many{"{0} ft/h"}
+        other{"{0} ft/h"}
     }
     jump-rope-per-minute{
-        dnam{"gab/min"}
-        other{"{0} gab/min"}
+        dnam{"lēciens minūtē"}
+        zero{"{0} lēcieni minūtē"}
+        one{"{0} lēciens minūtē"}
+        two{"{0} lēcieni minūtē"}
+        few{"{0} lēcieni minūtē"}
+        many{"{0} lēcieni minūtē"}
+        other{"{0} lēcieni minūtē"}
     }
     meter-per-hour{
         dnam{"m/h"}
+        zero{"{0} m/h"}
+        one{"{0} m/h"}
+        two{"{0} m/h"}
+        few{"{0} m/h"}
+        many{"{0} m/h"}
         other{"{0} m/h"}
     }
     milliliter-per-minute-per-kilogram{
         dnam{"ml/kg/min"}
+        zero{"{0} ml/kg/min"}
+        one{"{0} ml/kg/min"}
+        two{"{0} ml/kg/min"}
+        few{"{0} ml/kg/min"}
+        many{"{0} ml/kg/min"}
         other{"{0} ml/kg/min"}
     }
     rotation-per-minute{
         dnam{"apgr./min"}
+        zero{"{0} apgr./min"}
+        one{"{0} apgr./min"}
+        two{"{0} apgr./min"}
+        few{"{0} apgr./min"}
+        many{"{0} apgr./min"}
         other{"{0} apgr./min"}
     }
     step-per-minute{
-        dnam{"soļi/minūtē"}
-        other{"{0} soļi/minūtē"}
+        dnam{"solis/min"}
+        zero{"{0} soļi/min"}
+        one{"{0} solis/min"}
+        two{"{0} soļi/min"}
+        few{"{0} soļi/min"}
+        many{"{0} soļi/min"}
+        other{"{0} soļi/min"}
     }
     stroke-per-minute{
-        dnam{"reizes/minūtē"}
-        other{"{0} reizes/minūtē"}
+        dnam{"vēziens/min"}
+        zero{"{0} vēzieni/min"}
+        one{"{0} vēziens/min"}
+        two{"{0} vēzieni/min"}
+        few{"{0} vēzieni/min"}
+        many{"{0} vēzieni/min"}
+        other{"{0} vēzieni/min"}
     }
 }

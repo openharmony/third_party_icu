@@ -1,42 +1,92 @@
 zohos{
     beat-per-minute{
-        dnam{"fois/minute"}
-        other{"{0} fois/minute"}
+        dnam{"bpm"}
+        zero{"{0} bpm"}
+        one{"{0} bpm"}
+        two{"{0} bpm"}
+        few{"{0} bpm"}
+        many{"{0} bpm"}
+        other{"{0} bpm"}
     }
     body-weight-per-second{
-        dnam{"noir et blanc"}
-        other{"{0} noir et blanc"}
+        dnam{"poids corporel/seconde"}
+        zero{"{0} poids corporel/seconde"}
+        one{"{0} poids corporel/seconde"}
+        two{"{0} poids corporels/seconde"}
+        few{"{0} poids corporels/seconde"}
+        many{"{0} poids corporels/seconde"}
+        other{"{0} poids corporels/seconde"}
     }
     breath-per-minute{
-        dnam{"battements/minute"}
-        other{"{0} battements/minute"}
+        dnam{"resp/min"}
+        zero{"{0} resp/min"}
+        one{"{0} resp/min"}
+        two{"{0} resp/min"}
+        few{"{0} resp/min"}
+        many{"{0} resp/min"}
+        other{"{0} resp/min"}
     }
     foot-per-hour{
-        dnam{"pi/h"}
-        other{"{0} pi/h"}
+        dnam{"ft/h"}
+        zero{"{0} ft/h"}
+        one{"{0} ft/h"}
+        two{"{0} ft/h"}
+        few{"{0} ft/h"}
+        many{"{0} ft/h"}
+        other{"{0} ft/h"}
     }
     jump-rope-per-minute{
-        dnam{"pièces/min"}
-        other{"{0} pièces/min"}
+        dnam{"saut/minute"}
+        zero{"{0} saut/minute"}
+        one{"{0} saut/minute"}
+        two{"{0} sauts/minute"}
+        few{"{0} sauts/minute"}
+        many{"{0} sauts/minute"}
+        other{"{0} sauts/minute"}
     }
     meter-per-hour{
         dnam{"m/h"}
+        zero{"{0} m/h"}
+        one{"{0} m/h"}
+        two{"{0} m/h"}
+        few{"{0} m/h"}
+        many{"{0} m/h"}
         other{"{0} m/h"}
     }
     milliliter-per-minute-per-kilogram{
         dnam{"ml/kg/min"}
+        zero{"{0} ml/kg/min"}
+        one{"{0} ml/kg/min"}
+        two{"{0} ml/kg/min"}
+        few{"{0} ml/kg/min"}
+        many{"{0} ml/kg/min"}
         other{"{0} ml/kg/min"}
     }
     rotation-per-minute{
-        dnam{"tr/min"}
-        other{"{0} tr/min"}
+        dnam{"rotation/min"}
+        zero{"{0} rotation/min"}
+        one{"{0} rotation/min"}
+        two{"{0} rotations/min"}
+        few{"{0} rotations/min"}
+        many{"{0} rotations/min"}
+        other{"{0} rotations/min"}
     }
     step-per-minute{
-        dnam{"pas/minute"}
-        other{"{0} pas/minute"}
+        dnam{"pas/min"}
+        zero{"{0} pas/min"}
+        one{"{0} pas/min"}
+        two{"{0} pas/min"}
+        few{"{0} pas/min"}
+        many{"{0} pas/min"}
+        other{"{0} pas/min"}
     }
     stroke-per-minute{
-        dnam{"fois/minute"}
-        other{"{0} fois/minute"}
+        dnam{"mouvement/min"}
+        zero{"{0} mouvement/min"}
+        one{"{0} mouvement/min"}
+        two{"{0} mouvements/min"}
+        few{"{0} mouvements/min"}
+        many{"{0} mouvements/min"}
+        other{"{0} mouvements/min"}
     }
 }

@@ -1,42 +1,92 @@
 zohos{
     beat-per-minute{
-        dnam{"ori/minut"}
-        other{"{0} ori/minut"}
+        dnam{"bpm"}
+        zero{"{0} bpm"}
+        one{"{0} bpm"}
+        two{"{0} bpm"}
+        few{"{0} bpm"}
+        many{"{0} bpm"}
+        other{"{0} bpm"}
     }
     body-weight-per-second{
-        dnam{"alb/s"}
-        other{"{0} alb/s"}
+        dnam{"BW/s"}
+        zero{"{0} BW/s"}
+        one{"{0} BW/s"}
+        two{"{0} BW/s"}
+        few{"{0} BW/s"}
+        many{"{0} BW/s"}
+        other{"{0} BW/s"}
     }
     breath-per-minute{
-        dnam{"bătăi/minut"}
-        other{"{0} bătăi/minut"}
+        dnam{"resp/min"}
+        zero{"{0} resp/min"}
+        one{"{0} resp/min"}
+        two{"{0} resp/min"}
+        few{"{0} resp/min"}
+        many{"{0} resp/min"}
+        other{"{0} resp/min"}
     }
     foot-per-hour{
         dnam{"ft/h"}
+        zero{"{0} ft/h"}
+        one{"{0} ft/h"}
+        two{"{0} ft/h"}
+        few{"{0} ft/h"}
+        many{"{0} ft/h"}
         other{"{0} ft/h"}
     }
     jump-rope-per-minute{
-        dnam{"buc/min"}
-        other{"{0} buc/min"}
+        dnam{"săritură/minut"}
+        zero{"{0} sărituri/minut"}
+        one{"{0} săritură/minut"}
+        two{"{0} sărituri/minut"}
+        few{"{0} sărituri/minut"}
+        many{"{0} sărituri/minut"}
+        other{"{0} de sărituri/minut"}
     }
     meter-per-hour{
         dnam{"m/h"}
+        zero{"{0} m/h"}
+        one{"{0} m/h"}
+        two{"{0} m/h"}
+        few{"{0} m/h"}
+        many{"{0} m/h"}
         other{"{0} m/h"}
     }
     milliliter-per-minute-per-kilogram{
         dnam{"ml/kg/min"}
+        zero{"{0} ml/kg/min"}
+        one{"{0} ml/kg/min"}
+        two{"{0} ml/kg/min"}
+        few{"{0} ml/kg/min"}
+        many{"{0} ml/kg/min"}
         other{"{0} ml/kg/min"}
     }
     rotation-per-minute{
         dnam{"rpm"}
+        zero{"{0} rpm"}
+        one{"{0} rpm"}
+        two{"{0} rpm"}
+        few{"{0} rpm"}
+        many{"{0} rpm"}
         other{"{0} rpm"}
     }
     step-per-minute{
-        dnam{"pași/minut"}
-        other{"{0} pași/minut"}
+        dnam{"pas/min"}
+        zero{"{0} pași/min"}
+        one{"{0} pas/min"}
+        two{"{0} pași/min"}
+        few{"{0} pași/min"}
+        many{"{0} pași/min"}
+        other{"{0} de pași/min"}
     }
     stroke-per-minute{
-        dnam{"ori/minut"}
-        other{"{0} ori/minut"}
+        dnam{"braț/min"}
+        zero{"{0} brațe/min"}
+        one{"{0} braț/min"}
+        two{"{0} brațe/min"}
+        few{"{0} brațe/min"}
+        many{"{0} brațe/min"}
+        other{"{0} de brațe/min"}
     }
 }
