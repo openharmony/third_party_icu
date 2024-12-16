@@ -1,42 +1,92 @@
 zohos{
     beat-per-minute{
-        dnam{"korda/minutis"}
-        other{"{0} korda/minutis"}
+        dnam{"l/min"}
+        zero{"{0} l/min"}
+        one{"{0} l/min"}
+        two{"{0} l/min"}
+        few{"{0} l/min"}
+        many{"{0} l/min"}
+        other{"{0} l/min"}
     }
     body-weight-per-second{
-        dnam{"BW/s"}
-        other{"{0} BW/s"}
+        dnam{"KM/s"}
+        zero{"{0} KM/s"}
+        one{"{0} KM/s"}
+        two{"{0} KM/s"}
+        few{"{0} KM/s"}
+        many{"{0} KM/s"}
+        other{"{0} KM/s"}
     }
     breath-per-minute{
-        dnam{"korda/minutis"}
-        other{"{0} korda/minutis"}
+        dnam{"hingetõmme minutis"}
+        zero{"{0} hingetõmmet minutis"}
+        one{"{0} hingetõmme minutis"}
+        two{"{0} hingetõmmet minutis"}
+        few{"{0} hingetõmmet minutis"}
+        many{"{0} hingetõmmet minutis"}
+        other{"{0} hingetõmmet minutis"}
     }
     foot-per-hour{
-        dnam{"ft/h"}
-        other{"{0} ft/h"}
+        dnam{"jalg/h"}
+        zero{"{0} jalga/h"}
+        one{"{0} jalg/h"}
+        two{"{0} jalga/h"}
+        few{"{0} jalga/h"}
+        many{"{0} jalga/h"}
+        other{"{0} jalga/h"}
     }
     jump-rope-per-minute{
-        dnam{"ühikut minutis"}
-        other{"{0} ühikut minutis"}
+        dnam{"hüpe minutis"}
+        zero{"{0} hüpet minutis"}
+        one{"{0} hüpe minutis"}
+        two{"{0} hüpet minutis"}
+        few{"{0} hüpet minutis"}
+        many{"{0} hüpet minutis"}
+        other{"{0} hüpet minutis"}
     }
     meter-per-hour{
-        dnam{"meetrit tunnis"}
-        other{"{0} meetrit tunnis"}
+        dnam{"m/h"}
+        zero{"{0} m/h"}
+        one{"{0} m/h"}
+        two{"{0} m/h"}
+        few{"{0} m/h"}
+        many{"{0} m/h"}
+        other{"{0} m/h"}
     }
     milliliter-per-minute-per-kilogram{
         dnam{"ml/kg/min"}
+        zero{"{0} ml/kg/min"}
+        one{"{0} ml/kg/min"}
+        two{"{0} ml/kg/min"}
+        few{"{0} ml/kg/min"}
+        many{"{0} ml/kg/min"}
         other{"{0} ml/kg/min"}
     }
     rotation-per-minute{
-        dnam{"rpm"}
-        other{"{0} rpm"}
+        dnam{"p/min"}
+        zero{"{0} p/min"}
+        one{"{0} p/min"}
+        two{"{0} p/min"}
+        few{"{0} p/min"}
+        many{"{0} p/min"}
+        other{"{0} p/min"}
     }
     step-per-minute{
-        dnam{"sammud/minutis"}
-        other{"{0} sammud/minutis"}
+        dnam{"samm/min"}
+        zero{"{0} sammu/min"}
+        one{"{0} samm/min"}
+        two{"{0} sammu/min"}
+        few{"{0} sammu/min"}
+        many{"{0} sammu/min"}
+        other{"{0} sammu/min"}
     }
     stroke-per-minute{
-        dnam{"korda/minutis"}
-        other{"{0} korda/minutis"}
+        dnam{"tõmme/min"}
+        zero{"{0} tõmmet/min"}
+        one{"{0} tõmme/min"}
+        two{"{0} tõmmet/min"}
+        few{"{0} tõmmet/min"}
+        many{"{0} tõmmet/min"}
+        other{"{0} tõmmet/min"}
     }
 }

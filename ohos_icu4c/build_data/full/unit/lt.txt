@@ -1,42 +1,92 @@
 zohos{
     beat-per-minute{
-        dnam{"kartų per minutę"}
-        other{"{0} kartų per minutę"}
+        dnam{"d./min."}
+        zero{"{0} d./min."}
+        one{"{0} d./min."}
+        two{"{0} d./min."}
+        few{"{0} d./min."}
+        many{"{0} d./min."}
+        other{"{0} d./min."}
     }
     body-weight-per-second{
-        dnam{"BW/s"}
-        other{"{0} BW/s"}
+        dnam{"kūno svor./sek."}
+        zero{"{0} kūno svor./sek."}
+        one{"{0} kūno svor./sek."}
+        two{"{0} kūno svor./sek."}
+        few{"{0} kūno svor./sek."}
+        many{"{0} kūno svor./sek."}
+        other{"{0} kūno svor./sek."}
     }
     breath-per-minute{
-        dnam{"dūžiai per minutę"}
-        other{"{0} dūžiai per minutę"}
+        dnam{"įkv./min."}
+        zero{"{0} įkv./min."}
+        one{"{0} įkv./min."}
+        two{"{0} įkv./min."}
+        few{"{0} įkv./min."}
+        many{"{0} įkv./min."}
+        other{"{0} įkv./min."}
     }
     foot-per-hour{
-        dnam{"pėdų / val"}
-        other{"{0} pėdų / val"}
+        dnam{"pėd./val."}
+        zero{"{0} pėd./val."}
+        one{"{0} pėd./val."}
+        two{"{0} pėd./val."}
+        few{"{0} pėd./val."}
+        many{"{0} pėd./val."}
+        other{"{0} pėd./val."}
     }
     jump-rope-per-minute{
-        dnam{"vnt / min"}
-        other{"{0} vnt / min"}
+        dnam{"šuol./min."}
+        zero{"{0} šuol./min."}
+        one{"{0} šuol./min."}
+        two{"{0} šuol./min."}
+        few{"{0} šuol./min."}
+        many{"{0} šuol./min."}
+        other{"{0} šuol./min."}
     }
     meter-per-hour{
         dnam{"m/h"}
-        other{"{0} m/h"}
+        zero{"{0} m/h"}
+        one{"{0} m/h"}
+        two{"{0} m/h"}
+        few{"{0} m/h"}
+        many{"{0} m/h"}
+        other{"{0} m/h"}
     }
     milliliter-per-minute-per-kilogram{
-        dnam{"ml/kg/min."}
-        other{"{0} ml/kg/min."}
+        dnam{"ml/kg/min"}
+        zero{"{0} ml/kg/min"}
+        one{"{0} ml/kg/min"}
+        two{"{0} ml/kg/min"}
+        few{"{0} ml/kg/min"}
+        many{"{0} ml/kg/min"}
+        other{"{0} ml/kg/min"}
     }
     rotation-per-minute{
-        dnam{"aps./min"}
-        other{"{0} aps./min"}
+        dnam{"aps./min."}
+        zero{"{0} aps./min."}
+        one{"{0} aps./min."}
+        two{"{0} aps./min."}
+        few{"{0} aps./min."}
+        many{"{0} aps./min."}
+        other{"{0} aps./min."}
     }
     step-per-minute{
-        dnam{"žingsniai per minutę"}
-        other{"{0} žingsniai per minutę"}
+        dnam{"žingsn./min."}
+        zero{"{0} žingsn./min."}
+        one{"{0} žingsn./min."}
+        two{"{0} žingsn./min."}
+        few{"{0} žingsn./min."}
+        many{"{0} žingsn./min."}
+        other{"{0} žingsn./min."}
     }
     stroke-per-minute{
-        dnam{"kartų per minutę"}
-        other{"{0} kartų per minutę"}
+        dnam{"grybšn./min."}
+        zero{"{0} grybšn./min."}
+        one{"{0} grybšn./min."}
+        two{"{0} grybšn./min."}
+        few{"{0} grybšn./min."}
+        many{"{0} grybšn./min."}
+        other{"{0} grybšn./min."}
     }
 }

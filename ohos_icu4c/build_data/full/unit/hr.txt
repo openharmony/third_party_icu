@@ -1,42 +1,92 @@
 zohos{
     beat-per-minute{
-        dnam{"puta/minuti"}
-        other{"{0} puta/minuti"}
+        dnam{"otk./min"}
+        zero{"{0} otk./min"}
+        one{"{0} otk./min"}
+        two{"{0} otk./min"}
+        few{"{0} otk./min"}
+        many{"{0} otk./min"}
+        other{"{0} otk./min"}
     }
     body-weight-per-second{
-        dnam{"crno-bijele"}
-        other{"{0} crno-bijele"}
+        dnam{"BW/s"}
+        zero{"{0} BW/s"}
+        one{"{0} BW/s"}
+        two{"{0} BW/s"}
+        few{"{0} BW/s"}
+        many{"{0} BW/s"}
+        other{"{0} BW/s"}
     }
     breath-per-minute{
-        dnam{"otkucaja u minuti"}
-        other{"{0} otkucaja u minuti"}
+        dnam{"udisaj/izdisaj u min"}
+        zero{"{0} udisaja/izdisaja u min"}
+        one{"{0} udisaj/izdisaj u min"}
+        two{"{0} udisaja/izdisaja u min"}
+        few{"{0} udisaja/izdisaja u min"}
+        many{"{0} udisaja/izdisaja u min"}
+        other{"{0} udisaja/izdisaja u min"}
     }
     foot-per-hour{
         dnam{"ft/h"}
+        zero{"{0} ft/h"}
+        one{"{0} ft/h"}
+        two{"{0} ft/h"}
+        few{"{0} ft/h"}
+        many{"{0} ft/h"}
         other{"{0} ft/h"}
     }
     jump-rope-per-minute{
-        dnam{"kom/min"}
-        other{"{0} kom/min"}
+        dnam{"preskok u min"}
+        zero{"{0} preskoka u min"}
+        one{"{0} preskok u min"}
+        two{"{0} preskoka u min"}
+        few{"{0} preskoka u min"}
+        many{"{0} preskoka u min"}
+        other{"{0} preskoka u min"}
     }
     meter-per-hour{
         dnam{"m/h"}
+        zero{"{0} m/h"}
+        one{"{0} m/h"}
+        two{"{0} m/h"}
+        few{"{0} m/h"}
+        many{"{0} m/h"}
         other{"{0} m/h"}
     }
     milliliter-per-minute-per-kilogram{
         dnam{"ml/kg/min"}
+        zero{"{0} ml/kg/min"}
+        one{"{0} ml/kg/min"}
+        two{"{0} ml/kg/min"}
+        few{"{0} ml/kg/min"}
+        many{"{0} ml/kg/min"}
         other{"{0} ml/kg/min"}
     }
     rotation-per-minute{
-        dnam{"okretaja u minuti"}
-        other{"{0} okretaja u minuti"}
+        dnam{"okr./min"}
+        zero{"{0} okr./min"}
+        one{"{0} okr./min"}
+        two{"{0} okr./min"}
+        few{"{0} okr./min"}
+        many{"{0} okr./min"}
+        other{"{0} okr./min"}
     }
     step-per-minute{
-        dnam{"koraka/minuti"}
-        other{"{0} koraka/minuti"}
+        dnam{"korak u min"}
+        zero{"{0} koraka u min"}
+        one{"{0} korak u min"}
+        two{"{0} koraka u min"}
+        few{"{0} koraka u min"}
+        many{"{0} koraka u min"}
+        other{"{0} koraka u min"}
     }
     stroke-per-minute{
-        dnam{"puta/minuti"}
-        other{"{0} puta/minuti"}
+        dnam{"zaveslaj u min"}
+        zero{"{0} zaveslaja u min"}
+        one{"{0} zaveslaj u min"}
+        two{"{0} zaveslaja u min"}
+        few{"{0} zaveslaja u min"}
+        many{"{0} zaveslaja u min"}
+        other{"{0} zaveslaja u min"}
     }
 }

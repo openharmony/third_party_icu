@@ -1,42 +1,92 @@
 zohos{
     beat-per-minute{
-        dnam{"φορές/λεπτό"}
-        other{"{0} φορές/λεπτό"}
+        dnam{"bpm"}
+        zero{"{0} bpm"}
+        one{"{0} bpm"}
+        two{"{0} bpm"}
+        few{"{0} bpm"}
+        many{"{0} bpm"}
+        other{"{0} bpm"}
     }
     body-weight-per-second{
         dnam{"BW/s"}
+        zero{"{0} BW/s"}
+        one{"{0} BW/s"}
+        two{"{0} BW/s"}
+        few{"{0} BW/s"}
+        many{"{0} BW/s"}
         other{"{0} BW/s"}
     }
     breath-per-minute{
-        dnam{"bpm"}
-        other{"{0} bpm"}
+        dnam{"brpm"}
+        zero{"{0} brpm"}
+        one{"{0} brpm"}
+        two{"{0} brpm"}
+        few{"{0} brpm"}
+        many{"{0} brpm"}
+        other{"{0} brpm"}
     }
     foot-per-hour{
-        dnam{"ft/hr"}
-        other{"{0} ft/hr"}
+        dnam{"ft/h"}
+        zero{"{0} ft/h"}
+        one{"{0} ft/h"}
+        two{"{0} ft/h"}
+        few{"{0} ft/h"}
+        many{"{0} ft/h"}
+        other{"{0} ft/h"}
     }
     jump-rope-per-minute{
-        dnam{"ppm"}
-        other{"{0} ppm"}
+        dnam{"άλμα/λεπτό"}
+        zero{"{0} άλματα/λεπτό"}
+        one{"{0} άλμα/λεπτό"}
+        two{"{0} άλματα/λεπτό"}
+        few{"{0} άλματα/λεπτό"}
+        many{"{0} άλματα/λεπτό"}
+        other{"{0} άλματα/λεπτό"}
     }
     meter-per-hour{
         dnam{"m/h"}
+        zero{"{0} m/h"}
+        one{"{0} m/h"}
+        two{"{0} m/h"}
+        few{"{0} m/h"}
+        many{"{0} m/h"}
         other{"{0} m/h"}
     }
     milliliter-per-minute-per-kilogram{
-        dnam{"ml/kg/min"}
-        other{"{0} ml/kg/min"}
+        dnam{"ml/kg/λεπ."}
+        zero{"{0} ml/kg/λεπ."}
+        one{"{0} ml/kg/λεπ."}
+        two{"{0} ml/kg/λεπ."}
+        few{"{0} ml/kg/λεπ."}
+        many{"{0} ml/kg/λεπ."}
+        other{"{0} ml/kg/λεπ."}
     }
     rotation-per-minute{
         dnam{"rpm"}
+        zero{"{0} rpm"}
+        one{"{0} rpm"}
+        two{"{0} rpm"}
+        few{"{0} rpm"}
+        many{"{0} rpm"}
         other{"{0} rpm"}
     }
     step-per-minute{
-        dnam{"βήματα/λεπτό"}
-        other{"{0} βήματα/λεπτό"}
+        dnam{"βήμα/λεπ."}
+        zero{"{0} βήματα/λεπ."}
+        one{"{0} βήμα/λεπ."}
+        two{"{0} βήματα/λεπ."}
+        few{"{0} βήματα/λεπ."}
+        many{"{0} βήματα/λεπ."}
+        other{"{0} βήματα/λεπ."}
     }
     stroke-per-minute{
-        dnam{"κύκλοι/λεπτό"}
-        other{"{0} κύκλοι/λεπτό"}
+        dnam{"κίνηση/λεπ."}
+        zero{"{0} κινήσεις/λεπ."}
+        one{"{0} κίνηση/λεπ."}
+        two{"{0} κινήσεις/λεπ."}
+        few{"{0} κινήσεις/λεπ."}
+        many{"{0} κινήσεις/λεπ."}
+        other{"{0} κινήσεις/λεπ."}
     }
 }

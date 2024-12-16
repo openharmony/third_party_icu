@@ -1,42 +1,92 @@
 zohos{
     beat-per-minute{
-        dnam{"kali/menit"}
-        other{"{0} kali/menit"}
+        dnam{"bpm"}
+        zero{"{0} bpm"}
+        one{"{0} bpm"}
+        two{"{0} bpm"}
+        few{"{0} bpm"}
+        many{"{0} bpm"}
+        other{"{0} bpm"}
     }
     body-weight-per-second{
-        dnam{"BW/dtk"}
-        other{"{0} BW/dtk"}
+        dnam{"BB/dtk"}
+        zero{"{0} BB/dtk"}
+        one{"{0} BB/dtk"}
+        two{"{0} BB/dtk"}
+        few{"{0} BB/dtk"}
+        many{"{0} BB/dtk"}
+        other{"{0} BB/dtk"}
     }
     breath-per-minute{
-        dnam{"ketukan/menit"}
-        other{"{0} ketukan/menit"}
+        dnam{"napas per menit"}
+        zero{"{0} napas per menit"}
+        one{"{0} napas per menit"}
+        two{"{0} napas per menit"}
+        few{"{0} napas per menit"}
+        many{"{0} napas per menit"}
+        other{"{0} napas per menit"}
     }
     foot-per-hour{
-        dnam{"kaki / jam"}
-        other{"{0} kaki / jam"}
+        dnam{"kaki/j"}
+        zero{"{0} kaki/j"}
+        one{"{0} kaki/j"}
+        two{"{0} kaki/j"}
+        few{"{0} kaki/j"}
+        many{"{0} kaki/j"}
+        other{"{0} kaki/j"}
     }
     jump-rope-per-minute{
-        dnam{"pcs/mnt"}
-        other{"{0} pcs/mnt"}
+        dnam{"lompatan/menit"}
+        zero{"{0} lompatan/menit"}
+        one{"{0} lompatan/menit"}
+        two{"{0} lompatan/menit"}
+        few{"{0} lompatan/menit"}
+        many{"{0} lompatan/menit"}
+        other{"{0} lompatan/menit"}
     }
     meter-per-hour{
-        dnam{"m/jam"}
-        other{"{0} m/jam"}
+        dnam{"m/j"}
+        zero{"{0} m/j"}
+        one{"{0} m/j"}
+        two{"{0} m/j"}
+        few{"{0} m/j"}
+        many{"{0} m/j"}
+        other{"{0} m/j"}
     }
     milliliter-per-minute-per-kilogram{
         dnam{"ml/kg/mnt"}
+        zero{"{0} ml/kg/mnt"}
+        one{"{0} ml/kg/mnt"}
+        two{"{0} ml/kg/mnt"}
+        few{"{0} ml/kg/mnt"}
+        many{"{0} ml/kg/mnt"}
         other{"{0} ml/kg/mnt"}
     }
     rotation-per-minute{
         dnam{"rpm"}
+        zero{"{0} rpm"}
+        one{"{0} rpm"}
+        two{"{0} rpm"}
+        few{"{0} rpm"}
+        many{"{0} rpm"}
         other{"{0} rpm"}
     }
     step-per-minute{
-        dnam{"langkah/menit"}
-        other{"{0} langkah/menit"}
+        dnam{"langkah/mnt"}
+        zero{"{0} langkah/mnt"}
+        one{"{0} langkah/mnt"}
+        two{"{0} langkah/mnt"}
+        few{"{0} langkah/mnt"}
+        many{"{0} langkah/mnt"}
+        other{"{0} langkah/mnt"}
     }
     stroke-per-minute{
-        dnam{"kali/menit"}
-        other{"{0} kali/menit"}
+        dnam{"ayunan/mnt"}
+        zero{"{0} ayunan/mnt"}
+        one{"{0} ayunan/mnt"}
+        two{"{0} ayunan/mnt"}
+        few{"{0} ayunan/mnt"}
+        many{"{0} ayunan/mnt"}
+        other{"{0} ayunan/mnt"}
     }
 }

@@ -98,8 +98,8 @@ def add_content_misc(src_file, dest_file, out_file):
     with open(src_file, 'r', encoding='utf-8') as f:
         src_content = f.read().splitlines()
 
-    convertUnits = []
-    unitQuantities = []
+    convert_units = []
+    unit_quantities = []
     signal = 0
     for content in src_content:
         if "convertUnits:" in content:
@@ -109,9 +109,9 @@ def add_content_misc(src_file, dest_file, out_file):
             signal = 2
             continue
         if signal == 1:
-            convertUnits.append(content)
+            convert_units.append(content)
         if signal == 2:
-            unitQuantities.append(content)
+            unit_quantities.append(content)
 
     with open(dest_file, 'r', encoding='utf-8') as f:
         dest_content = f.read().splitlines(True)
@@ -120,11 +120,11 @@ def add_content_misc(src_file, dest_file, out_file):
     for line in dest_content:
         data += line
         if "convertUnits{" in line:
-            for content in convertUnits:
-                data = data + content + '\n'
+            for content in convert_units:
+                data = "{}{}\n".format(data, content)
         if "unitQuantities{" in line:
-            for content in unitQuantities:
-                data = data + content + '\n'
+            for content in unit_quantities:
+                data = "{}{}\n".format(data, content)
 
     flags = os.O_WRONLY | os.O_CREAT
     mode = stat.S_IWUSR | stat.S_IRUSR
