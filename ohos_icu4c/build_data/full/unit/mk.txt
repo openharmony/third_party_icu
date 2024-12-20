@@ -1,0 +1,42 @@
+zohos{
+    beat-per-minute{
+        dnam{"пати/минута"}
+        other{"{0} пати/минута"}
+    }
+    body-weight-per-second{
+        dnam{"BW/s"}
+        other{"{0} BW/s"}
+    }
+    breath-per-minute{
+        dnam{"отчукувања/минута"}
+        other{"{0} отчукувања/минута"}
+    }
+    foot-per-hour{
+        dnam{"ft/hr"}
+        other{"{0} ft/hr"}
+    }
+    jump-rope-per-minute{
+        dnam{"pcs/min"}
+        other{"{0} pcs/min"}
+    }
+    meter-per-hour{
+        dnam{"m/h"}
+        other{"{0} m/h"}
+    }
+    milliliter-per-minute-per-kilogram{
+        dnam{"ml/kg/min"}
+        other{"{0} ml/kg/min"}
+    }
+    rotation-per-minute{
+        dnam{"вртежи во минута"}
+        other{"{0} вртежи во минута"}
+    }
+    step-per-minute{
+        dnam{"чекори/минута"}
+        other{"{0} чекори/минута"}
+    }
+    stroke-per-minute{
+        dnam{"пати/минута"}
+        other{"{0} пати/минута"}
+    }
+}

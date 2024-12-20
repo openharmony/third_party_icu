@@ -1,0 +1,42 @@
+zohos{
+    beat-per-minute{
+        dnam{"idő/perc"}
+        other{"{0} idő/perc"}
+    }
+    body-weight-per-second{
+        dnam{"BW/s"}
+        other{"{0} BW/s"}
+    }
+    breath-per-minute{
+        dnam{"ütés/perc"}
+        other{"{0} ütés/perc"}
+    }
+    foot-per-hour{
+        dnam{"Ft/óra"}
+        other{"{0} Ft/óra"}
+    }
+    jump-rope-per-minute{
+        dnam{"db/perc"}
+        other{"{0} db/perc"}
+    }
+    meter-per-hour{
+        dnam{"m/h"}
+        other{"{0} m/h"}
+    }
+    milliliter-per-minute-per-kilogram{
+        dnam{"ml/kg/perc"}
+        other{"{0} ml/kg/perc"}
+    }
+    rotation-per-minute{
+        dnam{"fordulat"}
+        other{"{0} fordulat"}
+    }
+    step-per-minute{
+        dnam{"lépés/perc"}
+        other{"{0} lépés/perc"}
+    }
+    stroke-per-minute{
+        dnam{"idő/perc"}
+        other{"{0} idő/perc"}
+    }
+}

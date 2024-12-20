@@ -1,0 +1,42 @@
+zohos{
+    beat-per-minute{
+        dnam{"lần/phút"}
+        other{"{0} lần/phút"}
+    }
+    body-weight-per-second{
+        dnam{"BW / giây"}
+        other{"{0} BW / giây"}
+    }
+    breath-per-minute{
+        dnam{"nhịp/phút"}
+        other{"{0} nhịp/phút"}
+    }
+    foot-per-hour{
+        dnam{"ft / giờ"}
+        other{"{0} ft / giờ"}
+    }
+    jump-rope-per-minute{
+        dnam{"chiếc / phút"}
+        other{"{0} chiếc / phút"}
+    }
+    meter-per-hour{
+        dnam{"m / h"}
+        other{"{0} m / h"}
+    }
+    milliliter-per-minute-per-kilogram{
+        dnam{"ml / kg / phút"}
+        other{"{0} ml / kg / phút"}
+    }
+    rotation-per-minute{
+        dnam{"vòng / phút"}
+        other{"{0} vòng / phút"}
+    }
+    step-per-minute{
+        dnam{"bước/phút"}
+        other{"{0} bước/phút"}
+    }
+    stroke-per-minute{
+        dnam{"lần/phút"}
+        other{"{0} lần/phút"}
+    }
+}
