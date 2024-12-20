@@ -1,0 +1,42 @@
+zohos{
+    beat-per-minute{
+        dnam{"korda/minutis"}
+        other{"{0} korda/minutis"}
+    }
+    body-weight-per-second{
+        dnam{"BW/s"}
+        other{"{0} BW/s"}
+    }
+    breath-per-minute{
+        dnam{"korda/minutis"}
+        other{"{0} korda/minutis"}
+    }
+    foot-per-hour{
+        dnam{"ft/h"}
+        other{"{0} ft/h"}
+    }
+    jump-rope-per-minute{
+        dnam{"ühikut minutis"}
+        other{"{0} ühikut minutis"}
+    }
+    meter-per-hour{
+        dnam{"meetrit tunnis"}
+        other{"{0} meetrit tunnis"}
+    }
+    milliliter-per-minute-per-kilogram{
+        dnam{"ml/kg/min"}
+        other{"{0} ml/kg/min"}
+    }
+    rotation-per-minute{
+        dnam{"rpm"}
+        other{"{0} rpm"}
+    }
+    step-per-minute{
+        dnam{"sammud/minutis"}
+        other{"{0} sammud/minutis"}
+    }
+    stroke-per-minute{
+        dnam{"korda/minutis"}
+        other{"{0} korda/minutis"}
+    }
+}
