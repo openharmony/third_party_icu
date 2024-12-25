@@ -1,42 +1,92 @@
 zohos{
     beat-per-minute{
-        dnam{"kez/dakika"}
-        other{"{0} kez/dakika"}
+        dnam{"nbz/dk"}
+        zero{"{0} nbz/dk"}
+        one{"{0} nbz/dk"}
+        two{"{0} nbz/dk"}
+        few{"{0} nbz/dk"}
+        many{"{0} nbz/dk"}
+        other{"{0} nbz/dk"}
     }
     body-weight-per-second{
-        dnam{"Siyah Beyaz/sn"}
-        other{"{0} Siyah Beyaz/sn"}
+        dnam{"VA/sn"}
+        zero{"{0} VA/sn"}
+        one{"{0} VA/sn"}
+        two{"{0} VA/sn"}
+        few{"{0} VA/sn"}
+        many{"{0} VA/sn"}
+        other{"{0} VA/sn"}
     }
     breath-per-minute{
-        dnam{"vuruş/dakika"}
-        other{"{0} vuruş/dakika"}
+        dnam{"nefes/dk"}
+        zero{"{0} nefes/dk"}
+        one{"{0} nefes/dk"}
+        two{"{0} nefes/dk"}
+        few{"{0} nefes/dk"}
+        many{"{0} nefes/dk"}
+        other{"{0} nefes/dk"}
     }
     foot-per-hour{
         dnam{"ft/sa"}
+        zero{"{0} ft/sa"}
+        one{"{0} ft/sa"}
+        two{"{0} ft/sa"}
+        few{"{0} ft/sa"}
+        many{"{0} ft/sa"}
         other{"{0} ft/sa"}
     }
     jump-rope-per-minute{
-        dnam{"adet/dk"}
-        other{"{0} adet/dk"}
+        dnam{"atlama/dakika"}
+        zero{"{0} atlama/dakika"}
+        one{"{0} atlama/dakika"}
+        two{"{0} atlama/dakika"}
+        few{"{0} atlama/dakika"}
+        many{"{0} atlama/dakika"}
+        other{"{0} atlama/dakika"}
     }
     meter-per-hour{
-        dnam{"m/s"}
-        other{"{0} m/s"}
+        dnam{"m/sa"}
+        zero{"{0} m/sa"}
+        one{"{0} m/sa"}
+        two{"{0} m/sa"}
+        few{"{0} m/sa"}
+        many{"{0} m/sa"}
+        other{"{0} m/sa"}
     }
     milliliter-per-minute-per-kilogram{
         dnam{"ml/kg/dk"}
+        zero{"{0} ml/kg/dk"}
+        one{"{0} ml/kg/dk"}
+        two{"{0} ml/kg/dk"}
+        few{"{0} ml/kg/dk"}
+        many{"{0} ml/kg/dk"}
         other{"{0} ml/kg/dk"}
     }
     rotation-per-minute{
-        dnam{"dev/dak"}
-        other{"{0} dev/dak"}
+        dnam{"rpm"}
+        zero{"{0} rpm"}
+        one{"{0} rpm"}
+        two{"{0} rpm"}
+        few{"{0} rpm"}
+        many{"{0} rpm"}
+        other{"{0} rpm"}
     }
     step-per-minute{
-        dnam{"adım/dakika"}
-        other{"{0} adım/dakika"}
+        dnam{"adım/dk"}
+        zero{"{0} adım/dk"}
+        one{"{0} adım/dk"}
+        two{"{0} adım/dk"}
+        few{"{0} adım/dk"}
+        many{"{0} adım/dk"}
+        other{"{0} adım/dk"}
     }
     stroke-per-minute{
-        dnam{"kez/dakika"}
-        other{"{0} kez/dakika"}
+        dnam{"kulaç/dk"}
+        zero{"{0} kulaç/dk"}
+        one{"{0} kulaç/dk"}
+        two{"{0} kulaç/dk"}
+        few{"{0} kulaç/dk"}
+        many{"{0} kulaç/dk"}
+        other{"{0} kulaç/dk"}
     }
 }
