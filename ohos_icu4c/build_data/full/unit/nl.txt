@@ -1,42 +1,92 @@
 zohos{
     beat-per-minute{
-        dnam{"keer/minuut"}
-        other{"{0} keer/minuut"}
+        dnam{"spm"}
+        zero{"{0} spm"}
+        one{"{0} spm"}
+        two{"{0} spm"}
+        few{"{0} spm"}
+        many{"{0} spm"}
+        other{"{0} spm"}
     }
     body-weight-per-second{
-        dnam{"zwart-wit"}
-        other{"{0} zwart-wit"}
+        dnam{"LG/s"}
+        zero{"{0} LG/s"}
+        one{"{0} LG/s"}
+        two{"{0} LG/s"}
+        few{"{0} LG/s"}
+        many{"{0} LG/s"}
+        other{"{0} LG/s"}
     }
     breath-per-minute{
-        dnam{"slagen/minuut"}
-        other{"{0} slagen/minuut"}
+        dnam{"ahpm"}
+        zero{"{0} ahpm"}
+        one{"{0} ahpm"}
+        two{"{0} ahpm"}
+        few{"{0} ahpm"}
+        many{"{0} ahpm"}
+        other{"{0} ahpm"}
     }
     foot-per-hour{
-        dnam{"ft/uur"}
-        other{"{0} ft/uur"}
+        dnam{"ft/u"}
+        zero{"{0} ft/u"}
+        one{"{0} ft/u"}
+        two{"{0} ft/u"}
+        few{"{0} ft/u"}
+        many{"{0} ft/u"}
+        other{"{0} ft/u"}
     }
     jump-rope-per-minute{
-        dnam{"stuks/min"}
-        other{"{0} stuks/min"}
+        dnam{"sprong/minuut"}
+        zero{"{0} sprongen/minuut"}
+        one{"{0} sprong/minuut"}
+        two{"{0} sprongen/minuut"}
+        few{"{0} sprongen/minuut"}
+        many{"{0} sprongen/minuut"}
+        other{"{0} sprongen/minuut"}
     }
     meter-per-hour{
         dnam{"m/u"}
+        zero{"{0} m/u"}
+        one{"{0} m/u"}
+        two{"{0} m/u"}
+        few{"{0} m/u"}
+        many{"{0} m/u"}
         other{"{0} m/u"}
     }
     milliliter-per-minute-per-kilogram{
         dnam{"ml/kg/min"}
+        zero{"{0} ml/kg/min"}
+        one{"{0} ml/kg/min"}
+        two{"{0} ml/kg/min"}
+        few{"{0} ml/kg/min"}
+        many{"{0} ml/kg/min"}
         other{"{0} ml/kg/min"}
     }
     rotation-per-minute{
-        dnam{"toeren per minuut"}
-        other{"{0} toeren per minuut"}
+        dnam{"tpm"}
+        zero{"{0} tpm"}
+        one{"{0} tpm"}
+        two{"{0} tpm"}
+        few{"{0} tpm"}
+        many{"{0} tpm"}
+        other{"{0} tpm"}
     }
     step-per-minute{
-        dnam{"stappen/minuut"}
-        other{"{0} stappen/minuut"}
+        dnam{"stap/min"}
+        zero{"{0} stappen/min"}
+        one{"{0} stap/min"}
+        two{"{0} stappen/min"}
+        few{"{0} stappen/min"}
+        many{"{0} stappen/min"}
+        other{"{0} stappen/min"}
     }
     stroke-per-minute{
-        dnam{"keer/minuut"}
-        other{"{0} keer/minuut"}
+        dnam{"slag/min"}
+        zero{"{0} slagen/min"}
+        one{"{0} slag/min"}
+        two{"{0} slagen/min"}
+        few{"{0} slagen/min"}
+        many{"{0} slagen/min"}
+        other{"{0} slagen/min"}
     }
 }

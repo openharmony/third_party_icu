@@ -1,42 +1,92 @@
 zohos{
     beat-per-minute{
-        dnam{"פעמים/דקה"}
-        other{"{0} פעמים/דקה"}
+        dnam{"פעימה  לדקה"}
+        zero{"{0} פעימות לדקה"}
+        one{"פעימה {0} לדקה"}
+        two{"{0} פעימות לדקה"}
+        few{"{0} פעימות לדקה"}
+        many{"{0} פעימות לדקה"}
+        other{"{0} פעימות לדקה"}
     }
     body-weight-per-second{
         dnam{"BW/s"}
+        zero{"{0} BW/s"}
+        one{"{0} BW/s"}
+        two{"{0} BW/s"}
+        few{"{0} BW/s"}
+        many{"{0} BW/s"}
         other{"{0} BW/s"}
     }
     breath-per-minute{
-        dnam{"פעימות לדקה"}
-        other{"{0} פעימות לדקה"}
+        dnam{"נשימה  לדקה"}
+        zero{"{0} נשימות לדקה"}
+        one{"נשימה {0} לדקה"}
+        two{"{0} נשימות לדקה"}
+        few{"{0} נשימות לדקה"}
+        many{"{0} נשימות לדקה"}
+        other{"{0} נשימות לדקה"}
     }
     foot-per-hour{
         dnam{"רגל לשעה"}
+        zero{"{0} רגל לשעה"}
+        one{"{0} רגל לשעה"}
+        two{"{0} רגל לשעה"}
+        few{"{0} רגל לשעה"}
+        many{"{0} רגל לשעה"}
         other{"{0} רגל לשעה"}
     }
     jump-rope-per-minute{
-        dnam{"יח'/דקה"}
-        other{"{0} יח'/דקה"}
+        dnam{"קפיצה  לדקה"}
+        zero{"{0} קפיצות לדקה"}
+        one{"קפיצה {0} לדקה"}
+        two{"{0} קפיצות לדקה"}
+        few{"{0} קפיצות לדקה"}
+        many{"{0} קפיצות לדקה"}
+        other{"{0} קפיצות לדקה"}
     }
     meter-per-hour{
-        dnam{"מ\u0022ש"}
-        other{"{0} מ\u0022ש"}
+        dnam{"מטר לשעה"}
+        zero{"{0} מטר לשעה"}
+        one{"{0} מטר לשעה"}
+        two{"{0} מטר לשעה"}
+        few{"{0} מטר לשעה"}
+        many{"{0} מטר לשעה"}
+        other{"{0} מטר לשעה"}
     }
     milliliter-per-minute-per-kilogram{
-        dnam{"מ\u0022ל/ק\u0022ג/דקה"}
-        other{"{0} מ\u0022ל/ק\u0022ג/דקה"}
+        dnam{"ml/kg/min"}
+        zero{"{0} ml/kg/min"}
+        one{"{0} ml/kg/min"}
+        two{"{0} ml/kg/min"}
+        few{"{0} ml/kg/min"}
+        many{"{0} ml/kg/min"}
+        other{"{0} ml/kg/min"}
     }
     rotation-per-minute{
         dnam{"סל\u0022ד"}
+        zero{"{0} סל\u0022ד"}
+        one{"{0} סל\u0022ד"}
+        two{"{0} סל\u0022ד"}
+        few{"{0} סל\u0022ד"}
+        many{"{0} סל\u0022ד"}
         other{"{0} סל\u0022ד"}
     }
     step-per-minute{
-        dnam{"צעדים/דקה"}
-        other{"{0} צעדים/דקה"}
+        dnam{"צעד  לדקה"}
+        zero{"{0} צעדים לדקה"}
+        one{"צעד {0} לדקה"}
+        two{"{0} צעדים לדקה"}
+        few{"{0} צעדים לדקה"}
+        many{"{0} צעדים לדקה"}
+        other{"{0} צעדים לדקה"}
     }
     stroke-per-minute{
-        dnam{"פעמים/דקה"}
-        other{"{0} פעמים/דקה"}
+        dnam{"תנועה  לדקה"}
+        zero{"{0} תנועות לדקה"}
+        one{"תנועה {0} לדקה"}
+        two{"{0} תנועות לדקה"}
+        few{"{0} תנועות לדקה"}
+        many{"{0} תנועות לדקה"}
+        other{"{0} תנועות לדקה"}
     }
 }

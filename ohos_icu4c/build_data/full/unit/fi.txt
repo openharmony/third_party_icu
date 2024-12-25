@@ -1,42 +1,92 @@
 zohos{
     beat-per-minute{
-        dnam{"kertaa/minuutti"}
-        other{"{0} kertaa/minuutti"}
+        dnam{"bpm"}
+        zero{"{0} bpm"}
+        one{"{0} bpm"}
+        two{"{0} bpm"}
+        few{"{0} bpm"}
+        many{"{0} bpm"}
+        other{"{0} bpm"}
     }
     body-weight-per-second{
         dnam{"BW/s"}
+        zero{"{0} BW/s"}
+        one{"{0} BW/s"}
+        two{"{0} BW/s"}
+        few{"{0} BW/s"}
+        many{"{0} BW/s"}
         other{"{0} BW/s"}
     }
     breath-per-minute{
-        dnam{"bpm"}
-        other{"{0} bpm"}
+        dnam{"brpm"}
+        zero{"{0} brpm"}
+        one{"{0} brpm"}
+        two{"{0} brpm"}
+        few{"{0} brpm"}
+        many{"{0} brpm"}
+        other{"{0} brpm"}
     }
     foot-per-hour{
         dnam{"ft/h"}
+        zero{"{0} ft/h"}
+        one{"{0} ft/h"}
+        two{"{0} ft/h"}
+        few{"{0} ft/h"}
+        many{"{0} ft/h"}
         other{"{0} ft/h"}
     }
     jump-rope-per-minute{
-        dnam{"ppm"}
-        other{"{0} ppm"}
+        dnam{"hyppy/minuutti"}
+        zero{"{0} hyppyä/minuutti"}
+        one{"{0} hyppy/minuutti"}
+        two{"{0} hyppyä/minuutti"}
+        few{"{0} hyppyä/minuutti"}
+        many{"{0} hyppyä/minuutti"}
+        other{"{0} hyppyä/minuutti"}
     }
     meter-per-hour{
         dnam{"m/h"}
+        zero{"{0} m/h"}
+        one{"{0} m/h"}
+        two{"{0} m/h"}
+        few{"{0} m/h"}
+        many{"{0} m/h"}
         other{"{0} m/h"}
     }
     milliliter-per-minute-per-kilogram{
         dnam{"ml/kg/min"}
+        zero{"{0} ml/kg/min"}
+        one{"{0} ml/kg/min"}
+        two{"{0} ml/kg/min"}
+        few{"{0} ml/kg/min"}
+        many{"{0} ml/kg/min"}
         other{"{0} ml/kg/min"}
     }
     rotation-per-minute{
-        dnam{"rpm"}
-        other{"{0} rpm"}
+        dnam{"kierr./min"}
+        zero{"{0} kierr./min"}
+        one{"{0} kierr./min"}
+        two{"{0} kierr./min"}
+        few{"{0} kierr./min"}
+        many{"{0} kierr./min"}
+        other{"{0} kierr./min"}
     }
     step-per-minute{
-        dnam{"askeleet/min"}
-        other{"{0} askeleet/min"}
+        dnam{"askel/min"}
+        zero{"{0} askelta/min"}
+        one{"{0} askel/min"}
+        two{"{0} askelta/min"}
+        few{"{0} askelta/min"}
+        many{"{0} askelta/min"}
+        other{"{0} askelta/min"}
     }
     stroke-per-minute{
-        dnam{"syklit/min"}
-        other{"{0} syklit/min"}
+        dnam{"veto/min"}
+        zero{"{0} vetoa/min"}
+        one{"{0} veto/min"}
+        two{"{0} vetoa/min"}
+        few{"{0} vetoa/min"}
+        many{"{0} vetoa/min"}
+        other{"{0} vetoa/min"}
     }
 }

@@ -1,42 +1,92 @@
 zohos{
     beat-per-minute{
-        dnam{"пати/минута"}
-        other{"{0} пати/минута"}
+        dnam{"bpm"}
+        zero{"{0} bpm"}
+        one{"{0} bpm"}
+        two{"{0} bpm"}
+        few{"{0} bpm"}
+        many{"{0} bpm"}
+        other{"{0} bpm"}
     }
     body-weight-per-second{
         dnam{"BW/s"}
+        zero{"{0} BW/s"}
+        one{"{0} BW/s"}
+        two{"{0} BW/s"}
+        few{"{0} BW/s"}
+        many{"{0} BW/s"}
         other{"{0} BW/s"}
     }
     breath-per-minute{
-        dnam{"отчукувања/минута"}
-        other{"{0} отчукувања/минута"}
+        dnam{"brpm"}
+        zero{"{0} brpm"}
+        one{"{0} brpm"}
+        two{"{0} brpm"}
+        few{"{0} brpm"}
+        many{"{0} brpm"}
+        other{"{0} brpm"}
     }
     foot-per-hour{
-        dnam{"ft/hr"}
-        other{"{0} ft/hr"}
+        dnam{"ft/h"}
+        zero{"{0} ft/h"}
+        one{"{0} ft/h"}
+        two{"{0} ft/h"}
+        few{"{0} ft/h"}
+        many{"{0} ft/h"}
+        other{"{0} ft/h"}
     }
     jump-rope-per-minute{
-        dnam{"pcs/min"}
-        other{"{0} pcs/min"}
+        dnam{"скок/мин."}
+        zero{"{0} скокови/мин."}
+        one{"{0} скок/мин."}
+        two{"{0} скокови/мин."}
+        few{"{0} скокови/мин."}
+        many{"{0} скокови/мин."}
+        other{"{0} скокови/мин."}
     }
     meter-per-hour{
         dnam{"m/h"}
+        zero{"{0} m/h"}
+        one{"{0} m/h"}
+        two{"{0} m/h"}
+        few{"{0} m/h"}
+        many{"{0} m/h"}
         other{"{0} m/h"}
     }
     milliliter-per-minute-per-kilogram{
-        dnam{"ml/kg/min"}
-        other{"{0} ml/kg/min"}
+        dnam{"мл/кг/мин."}
+        zero{"{0} мл/кг/мин."}
+        one{"{0} мл/кг/мин."}
+        two{"{0} мл/кг/мин."}
+        few{"{0} мл/кг/мин."}
+        many{"{0} мл/кг/мин."}
+        other{"{0} мл/кг/мин."}
     }
     rotation-per-minute{
-        dnam{"вртежи во минута"}
-        other{"{0} вртежи во минута"}
+        dnam{"врт./мин."}
+        zero{"{0} врт./мин."}
+        one{"{0} врт./мин."}
+        two{"{0} врт./мин."}
+        few{"{0} врт./мин."}
+        many{"{0} врт./мин."}
+        other{"{0} врт./мин."}
     }
     step-per-minute{
-        dnam{"чекори/минута"}
-        other{"{0} чекори/минута"}
+        dnam{"чекор/мин."}
+        zero{"{0} чекори/мин."}
+        one{"{0} чекор/мин."}
+        two{"{0} чекори/мин."}
+        few{"{0} чекори/мин."}
+        many{"{0} чекори/мин."}
+        other{"{0} чекори/мин."}
     }
     stroke-per-minute{
-        dnam{"пати/минута"}
-        other{"{0} пати/минута"}
+        dnam{"замавнување/мин."}
+        zero{"{0} замавнувања/мин."}
+        one{"{0} замавнување/мин."}
+        two{"{0} замавнувања/мин."}
+        few{"{0} замавнувања/мин."}
+        many{"{0} замавнувања/мин."}
+        other{"{0} замавнувања/мин."}
     }
 }

@@ -1,42 +1,92 @@
 zohos{
     beat-per-minute{
-        dnam{"krát/minutu"}
-        other{"{0}krát/minutu"}
+        dnam{"bpm"}
+        zero{"{0} bpm"}
+        one{"{0} bpm"}
+        two{"{0} bpm"}
+        few{"{0} bpm"}
+        many{"{0} bpm"}
+        other{"{0} bpm"}
     }
     body-weight-per-second{
-        dnam{"BW/s"}
-        other{"{0} BW/s"}
+        dnam{"TH/s"}
+        zero{"{0} TH/s"}
+        one{"{0} TH/s"}
+        two{"{0} TH/s"}
+        few{"{0} TH/s"}
+        many{"{0} TH/s"}
+        other{"{0} TH/s"}
     }
     breath-per-minute{
-        dnam{"krát/minutu"}
-        other{"{0}krát/minutu"}
+        dnam{"dech/minuta"}
+        zero{"{0} dechů/minuta"}
+        one{"{0} dech/minuta"}
+        two{"{0} dechy/minuta"}
+        few{"{0} dechy/minuta"}
+        many{"{0} dechu/minuta"}
+        other{"{0} dechů/minuta"}
     }
     foot-per-hour{
         dnam{"ft/h"}
+        zero{"{0} ft/h"}
+        one{"{0} ft/h"}
+        two{"{0} ft/h"}
+        few{"{0} ft/h"}
+        many{"{0} ft/h"}
         other{"{0} ft/h"}
     }
     jump-rope-per-minute{
-        dnam{"jednotek/minutu"}
-        other{"{0} jednotek/minutu"}
+        dnam{"přeskok/minuta"}
+        zero{"{0} přeskoků/minuta"}
+        one{"{0} přeskok/minuta"}
+        two{"{0} přeskoky/minuta"}
+        few{"{0} přeskoky/minuta"}
+        many{"{0} přeskoku/minuta"}
+        other{"{0} přeskoků/minuta"}
     }
     meter-per-hour{
-        dnam{"metrů za hodinu"}
-        other{"{0} metrů za hodinu"}
+        dnam{"m/h"}
+        zero{"{0} m/h"}
+        one{"{0} m/h"}
+        two{"{0} m/h"}
+        few{"{0} m/h"}
+        many{"{0} m/h"}
+        other{"{0} m/h"}
     }
     milliliter-per-minute-per-kilogram{
         dnam{"ml/kg/min"}
+        zero{"{0} ml/kg/min"}
+        one{"{0} ml/kg/min"}
+        two{"{0} ml/kg/min"}
+        few{"{0} ml/kg/min"}
+        many{"{0} ml/kg/min"}
         other{"{0} ml/kg/min"}
     }
     rotation-per-minute{
-        dnam{"OTÁČEK ZA MINUTU"}
-        other{"{0} OTÁČEK ZA MINUTU"}
+        dnam{"otáčka/minuta"}
+        zero{"{0} otáček/minuta"}
+        one{"{0} otáčka/minuta"}
+        two{"{0} otáčky/minuta"}
+        few{"{0} otáčky/minuta"}
+        many{"{0} otáčky/minuta"}
+        other{"{0} otáček/minuta"}
     }
     step-per-minute{
-        dnam{"kroků za minutu"}
-        other{"{0} kroků za minutu"}
+        dnam{"krok/min"}
+        zero{"{0} kroků/min"}
+        one{"{0} krok/min"}
+        two{"{0} kroky/min"}
+        few{"{0} kroky/min"}
+        many{"{0} kroku/min"}
+        other{"{0} kroků/min"}
     }
     stroke-per-minute{
-        dnam{"krát/minutu"}
-        other{"{0}krát/minutu"}
+        dnam{"tempo/min"}
+        zero{"{0} temp/min"}
+        one{"{0} tempo/min"}
+        two{"{0} tempa/min"}
+        few{"{0} tempa/min"}
+        many{"{0} tempa/min"}
+        other{"{0} temp/min"}
     }
 }
