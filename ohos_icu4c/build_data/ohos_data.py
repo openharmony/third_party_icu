@@ -31,11 +31,11 @@ def add_content(data, src_content, prefix=''):
 
 
 def copy_content(src_file, dest_file, out_file):
-    if os.path.exists(src_file):
-        with open(src_file, 'r', encoding='utf-8') as f:
-            src_content = f.read().splitlines()
-    else:
-        src_content = []
+    if not os.path.exists(src_file) or not os.path.exists(dest_file):
+        return
+
+    with open(src_file, 'r', encoding='utf-8') as f:
+        src_content = f.read().splitlines()
 
     with open(dest_file, 'r', encoding='utf-8') as f:
         dest_content = f.read().splitlines(True)
@@ -85,6 +85,9 @@ def copy_content(src_file, dest_file, out_file):
 
 
 def copy_file(src_file, dest_file):
+    if not os.path.exists(src_file):
+        return
+
     with open(src_file, 'r', encoding='utf-8') as f:
         data = f.read()
 
@@ -95,6 +98,9 @@ def copy_file(src_file, dest_file):
 
 
 def add_content_misc(src_file, dest_file, out_file):
+    if not os.path.exists(src_file) or not os.path.exists(dest_file):
+        return
+
     with open(src_file, 'r', encoding='utf-8') as f:
         src_content = f.read().splitlines()
 
