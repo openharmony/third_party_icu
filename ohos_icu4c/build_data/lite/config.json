@@ -1,10 +1,5 @@
 {
-    "strategy": "subtractive",
-    "localeFilter" : {
-      "filterType" : "locale",
-      "includeChildren": false,
-      "includelist":[
-                "root",
+    "locale": ["root",
                 "ar",
                 "ar_001",
                 "agq",
@@ -51,28 +46,15 @@
                 "sv",
                 "sv_AX",
                 "sv_FI",
-                "sv_SE"
-      ]
-    },
-    "featureFilters": {
-      "conversion_mappings" : {
-          "includelist":[
-            "gb18030",
+                "sv_SE"],
+    "conversion_mappings": ["gb18030",
             "ibm-1386_P100-2001",
             "windows-936-2000",
             "ibm-1383_P110-1999",
-            "ibm-5478_P100-1995"
-          ]
-      },
-      "brkitr_dictionaries": {
-            "whitelist": [
-                "dictionaries/cjdict"
-            ]
-       },
-      "brkitr_lstm": "exclude",
-      "brkitr_tree": {
-          "includelist":[
-                    "root",
+            "ibm-5478_P100-1995"],
+    "brkitr_dictionaries": ["dictionaries/cjdict"],
+    "brkitr_lstm": [],
+    "brkitr_tree": ["root",
                     "ja",
                     "fr",
                     "de",
@@ -84,12 +66,8 @@
                     "en_US",
                     "zh",
                     "zh_Hant",
-                    "sv"
-          ]
-      },
-      "lang_tree": {
-          "includelist":[
-                    "root",
+                    "sv"],
+    "lang_tree": ["root",
                     "ar",
                     "ar_001",
                     "agq",
@@ -136,12 +114,8 @@
                     "sv",
                     "sv_AX",
                     "sv_FI",
-                    "sv_SE"
-          ]
-      },
-        "unit_tree": {
-          "includelist":[
-                    "root",
+                    "sv_SE"],
+    "unit_tree": ["root",
                     "ar",
                     "ar_001",
                     "agq",
@@ -188,12 +162,8 @@
                     "sv",
                     "sv_AX",
                     "sv_FI",
-                    "sv_SE"
-          ]
-        },
-        "rbnf_tree": {
-          "includelist":[
-                    "root",
+                    "sv_SE"],
+    "rbnf_tree": ["root",
                     "ar",
                     "ar_001",
                     "agq",
@@ -240,12 +210,8 @@
                     "sv",
                     "sv_AX",
                     "sv_FI",
-                    "sv_SE"
-          ]
-        },
-        "zone_tree": {
-          "includelist":[
-                    "root",
+                    "sv_SE"],
+    "zone_tree": ["root",
                     "ar",
                     "ar_001",
                     "agq",
@@ -292,12 +258,8 @@
                     "sv",
                     "sv_AX",
                     "sv_FI",
-                    "sv_SE"
-          ]
-        },
-        "curr_tree": {
-          "includelist":[
-                    "root",
+                    "sv_SE"],
+    "curr_tree": ["root",
                     "ar",
                     "ar_001",
                     "agq",
@@ -344,12 +306,8 @@
                     "sv",
                     "sv_AX",
                     "sv_FI",
-                    "sv_SE"
-          ]
-        },
-        "coll_tree": {
-          "includelist":[
-                    "root",
+                    "sv_SE"],
+    "coll_tree": ["root",
                     "ar",
                     "ar_001",
                     "agq",
@@ -396,12 +354,8 @@
                     "sv",
                     "sv_AX",
                     "sv_FI",
-                    "sv_SE"
-          ]
-        },
-        "region_tree": {
-          "includelist":[
-                    "root",
+                    "sv_SE"],
+    "region_tree": ["root",
                     "ar",
                     "ar_001",
                     "agq",
@@ -448,8 +402,5 @@
                     "sv",
                     "sv_AX",
                     "sv_FI",
-                    "sv_SE"
-          ]
-        }
-    }
+                    "sv_SE"]
 }
