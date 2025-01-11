@@ -1,0 +1,14 @@
+{
+    "locale": ["all"],
+    "conversion_mappings": ["all"],
+    "brkitr_dictionaries": ["all"],
+    "brkitr_lstm": ["all"],
+    "brkitr_tree": ["all"],
+    "lang_tree": ["all"],
+    "unit_tree": ["all"],
+    "rbnf_tree": ["all"],
+    "zone_tree": ["all"],
+    "curr_tree": ["all"],
+    "coll_tree": ["all"],
+    "region_tree": ["all"]
+}
