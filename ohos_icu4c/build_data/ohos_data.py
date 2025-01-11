@@ -14,8 +14,76 @@
 # limitations under the License.
 
 import argparse
+import json
 import os
 import stat
+
+
+def generate_replace_data(data_filter, ohos_src_dir):
+    if (not os.path.exists(os.path.join(ohos_src_dir, "unit")) or 
+        not os.path.exists(os.path.join(ohos_src_dir, "misc"))):
+        return
+    
+    data_filter["fileReplacements"] = dict()
+    data_filter["fileReplacements"]["directory"] = "$FILTERS"
+    data_filter["fileReplacements"]["replacements"] = []
+    
+    for file in os.listdir(os.path.join(ohos_src_dir, "unit")):
+        data_filter["fileReplacements"]["replacements"].append("unit/{}".format(file))
+    
+    for file in os.listdir(os.path.join(ohos_src_dir, "misc")):
+        data_filter["fileReplacements"]["replacements"].append("misc/{}".format(file))
+
+
+def add_loacale_by_name(data_filter, key):
+    if len(key) == 1 and key[0] == "all":
+        return
+    data_filter["localeFilter"] = dict()
+    data_filter["localeFilter"]["filterType"] = "locale"
+    data_filter["localeFilter"]["includeChildren"] = False
+    data_filter["localeFilter"]["includelist"] = key
+
+
+def add_features_by_name(feature_filter, name, key):
+    if len(key) == 1 and key[0] == "all":
+        return
+    if len(key) == 0:
+        feature_filter[name] = "exclude"
+        return
+    feature_filter[name] = dict()
+    feature_filter[name]["whitelist"] = key
+
+
+def parse_config_file(data_filter, ohos_src_dir):
+    if not os.path.exists(os.path.join(ohos_src_dir, "config.json")):
+        return
+    
+    with open(os.path.join(ohos_src_dir, "config.json"), 'r', encoding='utf-8') as f:
+        config = json.load(f)
+    
+    add_loacale_by_name(data_filter, config["locale"])
+    feature_filter = dict()
+    for feature in config.keys():
+        if feature == "locale":
+            continue
+        add_features_by_name(feature_filter, feature, config[feature])
+    if len(feature_filter.keys()) != 0:
+        data_filter["featureFilters"] = feature_filter
+
+
+def generate_json_file(ohos_src_dir, out_file):
+    if not os.path.exists(ohos_src_dir):
+        return
+    
+    data_filter = dict()
+    data_filter["strategy"] = "subtractive"
+    generate_replace_data(data_filter, ohos_src_dir)
+    parse_config_file(data_filter, ohos_src_dir)
+    
+    flags = os.O_WRONLY | os.O_CREAT
+    mode = stat.S_IWUSR | stat.S_IRUSR
+    with os.fdopen(os.open(out_file, flags, mode), 'w') as f:
+        json.dump(data_filter, f, indent=4)
 
 
 def add_content(data, src_content, prefix=''):
@@ -161,4 +229,4 @@ if __name__ == '__main__':
     add_content_misc(os.path.join(args.ohos_src_dir, misc_path, units_file),
                      os.path.join(args.icu_src_dir, misc_path, units_file),
                      os.path.join(out_dir, misc_path, units_file))
-    copy_file(os.path.join(args.ohos_src_dir, filter_file), os.path.join(out_dir, filter_file))
+    generate_json_file(args.ohos_src_dir, os.path.join(out_dir, filter_file))
