@@ -28,11 +28,11 @@ def generate_replace_data(data_filter, ohos_src_dir):
     data_filter["fileReplacements"]["directory"] = "$FILTERS"
     data_filter["fileReplacements"]["replacements"] = []
     
-    for file in os.listdir(os.path.join(ohos_src_dir, "unit")):
-        data_filter["fileReplacements"]["replacements"].append("unit/{}".format(file))
+    for unit_file in os.listdir(os.path.join(ohos_src_dir, "unit")):
+        data_filter["fileReplacements"]["replacements"].append("unit/{}".format(unit_file))
     
-    for file in os.listdir(os.path.join(ohos_src_dir, "misc")):
-        data_filter["fileReplacements"]["replacements"].append("misc/{}".format(file))
+    for misc_file in os.listdir(os.path.join(ohos_src_dir, "misc")):
+        data_filter["fileReplacements"]["replacements"].append("misc/{}".format(misc_file))
 
 
 def add_loacale_by_name(data_filter, key):
