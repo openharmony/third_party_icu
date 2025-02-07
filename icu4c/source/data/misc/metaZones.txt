@@ -3680,16 +3680,6 @@ metaZones:table(nofallback){
                 "Australia_Eastern",
             }
         }
-        "CST6CDT"{
-            {
-                "America_Central",
-            }
-        }
-        "EST5EDT"{
-            {
-                "America_Eastern",
-            }
-        }
         "Etc:GMT"{
             {
                 "GMT",
@@ -4238,16 +4228,6 @@ metaZones:table(nofallback){
         "Indian:Reunion"{
             {
                 "Reunion",
-            }
-        }
-        "MST7MDT"{
-            {
-                "America_Mountain",
-            }
-        }
-        "PST8PDT"{
-            {
-                "America_Pacific",
             }
         }
         "Pacific:Apia"{
