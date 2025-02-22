@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 my{
@@ -294,7 +294,7 @@ my{
         mul{"ဘာသာစကား အမျိုးမျိုး"}
         mus{"ခရိချ"}
         mwl{"မီရန်ဒီးဇ်"}
-        my{"မြန်မာ"}
+        my{"မြန်မာစာ"}
         myv{"အီဇယာ"}
         mzn{"မာဇန်ဒါရန်နီ"}
         na{"နော်ရူး"}
