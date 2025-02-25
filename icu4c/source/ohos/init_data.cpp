@@ -36,6 +36,19 @@ void SetHwIcuDirectory()
     status = 1;
 }
 
+/**
+ * convienient method to set icu data file directory to dir
+ */
+void SetArkuiXIcuDirectory(const char* dir)
+{
+    std::lock_guard<std::mutex> lock(dataMutex);
+    if (status != 0) {
+        return;
+    }
+    u_setDataDirectory(dir);
+    status = 1;
+}
+
 extern "C" const char* GetIcuVersion()
 {
     const char* icuVerion = U_ICU_VERSION_SHORT;
