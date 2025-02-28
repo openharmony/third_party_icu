@@ -554,7 +554,9 @@ GraphemeClusterVectorizer::~GraphemeClusterVectorizer()
 {
 }
 
+/* <issue: https://gitee.com/openharmony/third_party_icu/issues/I9QRV3> 20240521 begin */
 constexpr int32_t MAX_GRAPHEME_CLSTER_LENGTH = 20;
+/* <issue: https://gitee.com/openharmony/third_party_icu/issues/I9QRV3> 20240521 end */
 
 void GraphemeClusterVectorizer::vectorize(
     UText *text, int32_t startPos, int32_t endPos,
@@ -576,7 +578,10 @@ void GraphemeClusterVectorizer::vectorize(
     }
     int32_t last = startPos;
     int32_t current = startPos;
-    UChar str[MAX_GRAPHEME_CLSTER_LENGTH];
+    /* <issue: [Bug] https://gitee.com/openharmony/third_party_icu/issues/IBPMQF> 20250228 begin */
+    UChar str[MAX_GRAPHEME_CLSTER_LENGTH + 1];
+    str[MAX_GRAPHEME_CLSTER_LENGTH] = 0;
+    /* <issue: [Bug] https://gitee.com/openharmony/third_party_icu/issues/IBPMQF> 20250228 end */
     while ((current = graphemeIter->next()) != BreakIterator::DONE) {
         if (current >= endPos) {
             break;
