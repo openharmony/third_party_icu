@@ -58,6 +58,7 @@ tool_bin_dir="$root_path/$tool_bin_dir/thirdparty/icu"
 icu_source_path="$root_path/third_party/icu/icu4c"
 res_out_root_dir="$out_put_root_path/thirdparty/icu"
 icu_data_filter_file="$script_path/$icu_data_filter_dir/data_filter.json"
+export LD_LIBRARY_PATH=$res_out_root_dir:$LD_LIBRARY_PATH
 
 rm -rf "$out_put_root_path/thirdparty/icu/out/*"
 
