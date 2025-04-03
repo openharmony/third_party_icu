@@ -37,7 +37,7 @@ void SetHwIcuDirectory()
 }
 
 /**
- * convienient method to set icu data file directory to dir
+ * convenient method to set icu data file directory to dir
  */
 void SetArkuiXIcuDirectory(const char* dir)
 {
