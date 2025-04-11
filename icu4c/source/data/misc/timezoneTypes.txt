@@ -386,6 +386,7 @@ timezoneTypes:table(nofallback){
             "America:Rio_Branco"{"brrbr"}
             "America:Santarem"{"brstm"}
             "America:Santiago"{"clscl"}
+            "America:Coyhaique"{"clcxq"}
             "America:Santo_Domingo"{"dosdq"}
             "America:Sao_Paulo"{"brsao"}
             "America:Scoresbysund"{"globy"}
