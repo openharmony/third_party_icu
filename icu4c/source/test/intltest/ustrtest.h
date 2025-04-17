@@ -92,6 +92,9 @@ public:
     void TestUnicodeStringImplementsAppendable();
     void TestSizeofUnicodeString();
     void TestMoveSwap();
+    /* <issue: https://github.com/unicode-org/icu/pull/3416> 20250417 begin */
+    void TestLargeMemory();
+    /* <issue: https://github.com/unicode-org/icu/pull/3416> 20250417 end */
 
     void TestUInt16Pointers();
     void TestWCharPointers();
