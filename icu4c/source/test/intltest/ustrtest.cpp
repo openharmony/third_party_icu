@@ -68,6 +68,9 @@ void UnicodeStringTest::runIndexedTest( int32_t index, UBool exec, const char* &
     TESTCASE_AUTO(TestNullPointers);
     TESTCASE_AUTO(TestUnicodeStringInsertAppendToSelf);
     TESTCASE_AUTO(TestLargeAppend);
+    /* <issue: https://github.com/unicode-org/icu/pull/3416> 20250417 begin */
+    TESTCASE_AUTO(TestLargeMemory);
+    /* <issue: https://github.com/unicode-org/icu/pull/3416> 20250417 end */
     TESTCASE_AUTO_END;
 }
 
@@ -2327,6 +2330,21 @@ void UnicodeStringTest::TestUnicodeStringInsertAppendToSelf() {
     str.insert(2, sub);
     assertEquals("", u"abbcdcde", str);
 }
+
+/* <issue: https://github.com/unicode-org/icu/pull/3416> 20250417 begin */
+void UnicodeStringTest::TestLargeMemory() {
+#if U_PLATFORM_IS_LINUX_BASED || U_PLATFORM_IS_DARWIN_BASED
+    if(quick) { return; }
+    IcuTestErrorCode status(*this, "TestLargeMemory");
+    constexpr uint32_t len = 2147483643;
+    char16_t *buf = new char16_t[len];
+    if (buf == nullptr) { return; }
+    uprv_memset(buf, 0x4e, len * 2);
+    icu::UnicodeString test(buf, len);
+    delete [] buf;
+#endif
+}
+/* <issue: https://github.com/unicode-org/icu/pull/3416> 20250417 end */
 
 void UnicodeStringTest::TestLargeAppend() {
     if(quick) return;
