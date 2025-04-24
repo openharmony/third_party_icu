@@ -280,7 +280,7 @@ uz{
         mul{"bir nechta til"}
         mus{"krik"}
         mwl{"miranda"}
-        my{"birman"}
+        my{"birma"}
         myv{"erzya"}
         mzn{"mozandaron"}
         na{"nauru"}
