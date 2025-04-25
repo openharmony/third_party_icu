@@ -258,7 +258,7 @@ uz{
         TA{"Tristan-da-Kunya"}
         TC{"Turks va Kaykos orollari"}
         TD{"Chad"}
-        TF{"Fransuz Janubiy hududlari"}
+        TF{"Fransiya Janubiy hududlari"}
         TG{"Togo"}
         TH{"Tailand"}
         TJ{"Tojikiston"}
@@ -279,7 +279,7 @@ uz{
         US{"Amerika Qo‘shma Shtatlari"}
         UY{"Urugvay"}
         UZ{"Oʻzbekiston"}
-        VA{"Vatikan"}
+        VA{"Vatikan shahri"}
         VC{"Sent-Vinsent va Grenadin"}
         VE{"Venesuela"}
         VG{"Britaniya Virgin orollari"}
