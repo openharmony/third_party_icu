@@ -24,7 +24,7 @@ uz{
         ak{"akan"}
         ale{"aleut"}
         alt{"janubiy oltoy"}
-        am{"amxar"}
+        am{"amxara"}
         an{"aragon"}
         ann{"obolo"}
         anp{"angika"}
@@ -33,7 +33,7 @@ uz{
         arn{"mapuche"}
         arp{"arapaxo"}
         ars{"najd arab"}
-        as{"assam"}
+        as{"assom"}
         asa{"asu"}
         ast{"asturiy"}
         atj{"atikamek"}
@@ -58,7 +58,7 @@ uz{
         bo{"tibet"}
         br{"breton"}
         brx{"bodo"}
-        bs{"bosniy"}
+        bs{"bosniya"}
         bug{"bugi"}
         byn{"blin"}
         ca{"katalan"}
@@ -93,7 +93,7 @@ uz{
         dak{"dakota"}
         dar{"dargva"}
         dav{"taita"}
-        de{"nemischa"}
+        de{"nemis"}
         de_AT{"nemis (Avstriya)"}
         de_CH{"yuqori nemis (Shveytsariya)"}
         dgr{"dogrib"}
@@ -110,28 +110,28 @@ uz{
         efi{"efik"}
         eka{"ekajuk"}
         el{"grek"}
-        en{"inglizcha"}
+        en{"ingliz"}
         en_AU{"ingliz (Avstraliya)"}
         en_CA{"ingliz (Kanada)"}
         en_GB{"ingliz (Britaniya)"}
         en_US{"ingliz (Amerika)"}
         eo{"esperanto"}
-        es{"ispancha"}
+        es{"ispan"}
         es_419{"ispan (Lotin Amerikasi)"}
         es_ES{"ispan (Yevropa)"}
         es_MX{"ispan (Meksika)"}
-        et{"estoncha"}
+        et{"eston"}
         eu{"bask"}
         ewo{"evondo"}
         fa{"fors"}
         fa_AF{"dari"}
         ff{"fula"}
-        fi{"fincha"}
-        fil{"filipincha"}
+        fi{"fin"}
+        fil{"filippin"}
         fj{"fiji"}
         fo{"farercha"}
         fon{"fon"}
-        fr{"fransuzcha"}
+        fr{"fransuz"}
         fr_CA{"fransuz (Kanada)"}
         fr_CH{"fransuz (Shveytsariya)"}
         frc{"kajun fransuz"}
@@ -186,8 +186,8 @@ uz{
         jbo{"lojban"}
         jgo{"ngomba"}
         jmc{"machame"}
-        jv{"yavan"}
-        ka{"gruzincha"}
+        jv{"yava"}
+        ka{"gruzin"}
         kab{"kabil"}
         kac{"kachin"}
         kaj{"kaji"}
@@ -202,14 +202,14 @@ uz{
         khq{"koyra-chiini"}
         ki{"kikuyu"}
         kj{"kvanyama"}
-        kk{"qozoqcha"}
+        kk{"qozoq"}
         kkj{"kako"}
         kl{"grenland"}
         kln{"kalenjin"}
-        km{"xmer"}
+        km{"kxmer"}
         kmb{"kimbundu"}
         kn{"kannada"}
-        ko{"koreyscha"}
+        ko{"koreys"}
         koi{"komi-permyak"}
         kok{"konkan"}
         kpe{"kpelle"}
@@ -226,7 +226,7 @@ uz{
         kv{"komi"}
         kw{"korn"}
         kwk{"kvakvala"}
-        ky{"qirgʻizcha"}
+        ky{"qirgʻiz"}
         la{"lotincha"}
         lad{"ladino"}
         lag{"langi"}
@@ -249,7 +249,7 @@ uz{
         luo{"luo"}
         lus{"lushay"}
         luy{"luhya"}
-        lv{"latishcha"}
+        lv{"latish"}
         mad{"madur"}
         mag{"magahi"}
         mai{"maythili"}
@@ -273,20 +273,20 @@ uz{
         moe{"innu-aymun"}
         moh{"mohauk"}
         mos{"mossi"}
-        mr{"maratxi"}
+        mr{"marathiy"}
         ms{"malay"}
         mt{"maltiy"}
         mua{"mundang"}
         mul{"bir nechta til"}
         mus{"krik"}
         mwl{"miranda"}
-        my{"birman"}
+        my{"birma"}
         myv{"erzya"}
         mzn{"mozandaron"}
         na{"nauru"}
         nap{"neapolitan"}
         naq{"nama"}
-        nb{"norveg-bokmal"}
+        nb{"norveg-bukmol"}
         nd{"shimoliy ndebele"}
         nds{"quyi nemis"}
         nds_NL{"quyi sakson"}
@@ -318,18 +318,18 @@ uz{
         om{"oromo"}
         or{"oriya"}
         os{"osetin"}
-        pa{"panjobcha"}
+        pa{"panjob"}
         pag{"pangasinan"}
         pam{"pampanga"}
         pap{"papiyamento"}
         pau{"palau"}
         pcm{"kreol (Nigeriya)"}
         pis{"pijin"}
-        pl{"polyakcha"}
+        pl{"polyak"}
         pqm{"maliset-passamakvoddi"}
         prg{"pruss"}
         ps{"pushtu"}
-        pt{"portugalcha"}
+        pt{"portugal"}
         pt_BR{"portugal (Braziliya)"}
         pt_PT{"portugal (Yevropa)"}
         qu{"kechua"}
@@ -339,10 +339,10 @@ uz{
         rhg{"rohinja"}
         rm{"romansh"}
         rn{"rundi"}
-        ro{"rumincha"}
+        ro{"rumin"}
         ro_MD{"moldovan"}
         rof{"rombo"}
-        ru{"ruscha"}
+        ru{"rus"}
         rup{"arumin"}
         rw{"kinyaruanda"}
         rwk{"ruanda"}
@@ -365,8 +365,8 @@ uz{
         shi{"tashelxit"}
         shn{"shan"}
         si{"singal"}
-        sk{"slovakcha"}
-        sl{"slovencha"}
+        sk{"slovak"}
+        sl{"sloven"}
         slh{"janubiy lushutsid"}
         sm{"samoa"}
         sma{"janubiy saam"}
@@ -377,7 +377,7 @@ uz{
         snk{"soninke"}
         so{"somalicha"}
         sq{"alban"}
-        sr{"serbcha"}
+        sr{"serb"}
         srn{"sranan-tongo"}
         ss{"svati"}
         ssy{"saho"}
