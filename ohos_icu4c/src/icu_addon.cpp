@@ -161,6 +161,7 @@ bool g_isCustomLocale = false;
 #undef ubrk_preceding
 #undef ubrk_previous
 #undef ubrk_setText
+#undef ubrk_setUText
 #undef ucal_add
 #undef ucal_clear
 #undef ucal_clearField
@@ -1056,6 +1057,10 @@ int32_t ubrk_previous(UBreakIterator *bi)
 void ubrk_setText(UBreakIterator *bi, const UChar *text, int32_t textLength, UErrorCode *status)
 {
     U_ICU_ENTRY_POINT_RENAME(ubrk_setText)(bi, text, textLength, status);
+}
+void ubrk_setUText(UBreakIterator *bi, UText *text, UErrorCode *status)
+{
+    U_ICU_ENTRY_POINT_RENAME(ubrk_setUText)(bi, text, status);
 }
 void ucal_add(UCalendar *cal, UCalendarDateFields field, int32_t amount, UErrorCode *status)
 {
