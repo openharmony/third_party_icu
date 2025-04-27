@@ -814,7 +814,17 @@ U_CAPI const LSTMData* U_EXPORT2 CreateLSTMDataForScript(UScriptCode script, UEr
 
 U_CAPI const LSTMData* U_EXPORT2 CreateLSTMData(UResourceBundle* rb, UErrorCode& status)
 {
-    return new LSTMData(rb, status);
+    /* <issue: https://github.com/unicode-org/icu/pull/3481> 20250427 begin */
+    if (U_FAILURE(status)) {
+        return nullptr;
+    }
+    const LSTMData* result = new LSTMData(rb, status);
+    if (U_FAILURE(status)) {
+        delete result;
+        return nullptr;
+    }
+    return result;
+    /* <issue: https://github.com/unicode-org/icu/pull/3481> 20250427 end */
 }
 
 U_CAPI const LanguageBreakEngine* U_EXPORT2
