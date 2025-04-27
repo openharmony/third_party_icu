@@ -119,7 +119,6 @@
     ubrk_preceding;
     ubrk_previous;
     ubrk_setText;
-    ubrk_setUText;
     ucal_add;
     ucal_clear;
     ucal_clearField;
