@@ -2890,7 +2890,7 @@ zoneinfo64:table(nofallback) {
   "BF", //Z#52 Africa/Ouagadougou
   "BJ", //Z#53 Africa/Porto-Novo
   "ST", //Z#54 Africa/Sao_Tome
-  "CI", //Z#55 Africa/Timbuktu
+  "ML", //Z#55 Africa/Timbuktu
   "LY", //Z#56 Africa/Tripoli
   "TN", //Z#57 Africa/Tunis
   "NA", //Z#58 Africa/Windhoek
@@ -3071,7 +3071,7 @@ zoneinfo64:table(nofallback) {
   "AQ", //Z#233 Antarctica/McMurdo
   "AQ", //Z#234 Antarctica/Palmer
   "AQ", //Z#235 Antarctica/Rothera
-  "NZ", //Z#236 Antarctica/South_Pole
+  "AQ", //Z#236 Antarctica/South_Pole
   "AQ", //Z#237 Antarctica/Syowa
   "AQ", //Z#238 Antarctica/Troll
   "AQ", //Z#239 Antarctica/Vostok
@@ -3181,7 +3181,7 @@ zoneinfo64:table(nofallback) {
   "CV", //Z#343 Atlantic/Cape_Verde
   "FO", //Z#344 Atlantic/Faeroe
   "FO", //Z#345 Atlantic/Faroe
-  "DE", //Z#346 Atlantic/Jan_Mayen
+  "SJ", //Z#346 Atlantic/Jan_Mayen
   "PT", //Z#347 Atlantic/Madeira
   "IS", //Z#348 Atlantic/Reykjavik
   "GS", //Z#349 Atlantic/South_Georgia
@@ -3422,7 +3422,7 @@ zoneinfo64:table(nofallback) {
   "PW", //Z#584 Pacific/Palau
   "PN", //Z#585 Pacific/Pitcairn
   "FM", //Z#586 Pacific/Pohnpei
-  "SB", //Z#587 Pacific/Ponape
+  "FM", //Z#587 Pacific/Ponape
   "PG", //Z#588 Pacific/Port_Moresby
   "CK", //Z#589 Pacific/Rarotonga
   "MP", //Z#590 Pacific/Saipan
@@ -3430,10 +3430,10 @@ zoneinfo64:table(nofallback) {
   "PF", //Z#592 Pacific/Tahiti
   "KI", //Z#593 Pacific/Tarawa
   "TO", //Z#594 Pacific/Tongatapu
-  "PG", //Z#595 Pacific/Truk
+  "FM", //Z#595 Pacific/Truk
   "UM", //Z#596 Pacific/Wake
   "WF", //Z#597 Pacific/Wallis
-  "PG", //Z#598 Pacific/Yap
+  "FM", //Z#598 Pacific/Yap
   "PL", //Z#599 Poland
   "PT", //Z#600 Portugal
   "TW", //Z#601 ROC
