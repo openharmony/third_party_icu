@@ -437,8 +437,8 @@ uz{
                 "TK",
             }
             DateTimePatterns{
-                "H:mm:ss (zzzz)",
-                "H:mm:ss (z)",
+                "HH:mm:ss (zzzz)",
+                "HH:mm:ss (z)",
                 "HH:mm:ss",
                 "HH:mm",
                 "EEEE, d-MMMM, y",
