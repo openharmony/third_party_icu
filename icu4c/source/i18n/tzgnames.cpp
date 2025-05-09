@@ -1195,9 +1195,10 @@ TimeZoneGenericNames::createInstance(const Locale& locale, UErrorCode& status) {
     if (U_FAILURE(status)) {
         return NULL;
     }
-    TimeZoneGenericNames* instance = new TimeZoneGenericNames();
-    if (instance == NULL) {
-        status = U_MEMORY_ALLOCATION_ERROR;
+    /* <issue: https://github.com/unicode-org/icu/pull/3441> 20250417 begin */
+    LocalPointer<TimeZoneGenericNames> instance(new TimeZoneGenericNames(), status);
+    if (U_FAILURE(status)) {
+    /* <issue: https://github.com/unicode-org/icu/pull/3441> 20250417 end */
         return NULL;
     }
 
@@ -1276,12 +1277,16 @@ TimeZoneGenericNames::createInstance(const Locale& locale, UErrorCode& status) {
     }  // End of mutex locked block
 
     if (cacheEntry == NULL) {
-        delete instance;
+        /* <issue: https://github.com/unicode-org/icu/pull/3441> 20250417 begin */
+        // delete instance;
+        /* <issue: https://github.com/unicode-org/icu/pull/3441> 20250417 end */
         return NULL;
     }
 
     instance->fRef = cacheEntry;
-    return instance;
+    /* <issue: https://github.com/unicode-org/icu/pull/3441> 20250417 begin */
+    return instance.orphan();
+    /* <issue: https://github.com/unicode-org/icu/pull/3441> 20250417 end */
 }
 
 bool
