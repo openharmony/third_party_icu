@@ -39,6 +39,9 @@ pt_PT{
         "Africa:Tunis"{
             ec{"Tunes"}
         }
+        "America:Coyhaique"{
+            ec{"Coihaque"}
+        }
         "America:Araguaina"{
             ec{"Araguaina"}
         }
