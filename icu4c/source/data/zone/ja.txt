@@ -258,6 +258,9 @@ ja{
         "America:Chihuahua"{
             ec{"チワワ"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"シウダー・フアレス"}
+        }
         "America:Coral_Harbour"{
             ec{"アティコカン"}
         }
@@ -1650,6 +1653,9 @@ ja{
             ld{"ペトロパブロフスク・カムチャツキー夏時間"}
             lg{"ペトロパブロフスク・カムチャツキー時間"}
             ls{"ペトロパブロフスク・カムチャツキー標準時"}
+        }
+        "meta:Kazakhstan"{
+            ls{"カザフスタン時間"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"東カザフスタン時間"}

@@ -1676,6 +1676,9 @@ no{
             lg{"Russisk (Petropavlovsk-Kamtsjatskij) tid"}
             ls{"Russisk (Petropavlovsk-Kamtsjatskij) normaltid"}
         }
+        "meta:Kazakhstan"{
+            ls{"kasakhstansk tid"}
+        }
         "meta:Kazakhstan_Eastern"{
             ls{"østkasakhstansk tid"}
         }

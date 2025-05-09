@@ -258,6 +258,9 @@ el{
         "America:Chihuahua"{
             ec{"Τσιουάουα"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"Σιουδάδ Χουάρες"}
+        }
         "America:Coral_Harbour"{
             ec{"Ατικόκαν"}
         }
@@ -1633,6 +1636,9 @@ el{
             ld{"Θερινή ώρα Πετροπαβλόβσκ-Καμτσάτσκι"}
             lg{"Ώρα Καμτσάτκα"}
             ls{"Χειμερινή ώρα Πετροπαβλόβσκ-Καμτσάτσκι"}
+        }
+        "meta:Kazakhstan"{
+            ls{"Ώρα Καζακστάν"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"Ώρα Ανατολικού Καζακστάν"}

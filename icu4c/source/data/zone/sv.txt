@@ -1659,6 +1659,9 @@ sv{
             lg{"Kamtjatkatid"}
             ls{"Kamtjatkanormaltid"}
         }
+        "meta:Kazakhstan"{
+            ls{"kazakstansk tid"}
+        }
         "meta:Kazakhstan_Eastern"{
             ls{"östkazakstansk tid"}
         }

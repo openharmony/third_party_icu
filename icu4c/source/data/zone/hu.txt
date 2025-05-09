@@ -1652,6 +1652,9 @@ hu{
             lg{"Petropavlovszk-kamcsatkai idő"}
             ls{"Petropavlovszk-kamcsatkai zónaidő"}
         }
+        "meta:Kazakhstan"{
+            ls{"kazahsztáni idő"}
+        }
         "meta:Kazakhstan_Eastern"{
             ls{"kelet-kazahsztáni idő"}
         }

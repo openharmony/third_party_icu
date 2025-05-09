@@ -258,6 +258,9 @@ am{
         "America:Chihuahua"{
             ec{"ቺሁዋውአ"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"ሳዮዳድ ሁዋሬዝ"}
+        }
         "America:Coral_Harbour"{
             ec{"አቲኮካን"}
         }
@@ -1621,6 +1624,9 @@ am{
             ld{"የፔትሮፓቭሎስኪ - ካምቻትስኪ የበጋ ሰዓት አቆጣጠር"}
             lg{"የካምቻትካ ሰዓት አቆጣጠር"}
             ls{"የፔትሮፓቭሎስኪ - ካምቻትስኪ ሰዓት አቆጣጠር"}
+        }
+        "meta:Kazakhstan"{
+            ls{"ካዛኪስታን ሰዓት"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"የምስራቅ ካዛኪስታን ሰዓት"}

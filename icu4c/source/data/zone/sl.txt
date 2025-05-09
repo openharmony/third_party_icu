@@ -1619,6 +1619,9 @@ sl{
             lg{"Petropavlovsk-Kamčatski čas"}
             ls{"Petropavlovsk-Kamčatski standardni čas"}
         }
+        "meta:Kazakhstan"{
+            ls{"Kazahstanski čas"}
+        }
         "meta:Kazakhstan_Eastern"{
             ls{"Vzhodni kazahstanski čas"}
         }

@@ -1669,6 +1669,9 @@ vi{
             lg{"Giờ Petropavlovsk-Kamchatski"}
             ls{"Giờ chuẩn Petropavlovsk-Kamchatski"}
         }
+        "meta:Kazakhstan"{
+            ls{"Giờ Kazakhstan"}
+        }
         "meta:Kazakhstan_Eastern"{
             ls{"Giờ Miền Đông Kazakhstan"}
         }

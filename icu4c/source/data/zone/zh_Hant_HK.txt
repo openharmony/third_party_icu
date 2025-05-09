@@ -108,6 +108,9 @@ zh_Hant_HK{
         "America:Chihuahua"{
             ec{"芝娃娃"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"華雷斯城"}
+        }
         "America:Cordoba"{
             ec{"科爾多瓦"}
         }
@@ -266,6 +269,9 @@ zh_Hant_HK{
         }
         "America:Yakutat"{
             ec{"亞庫塔特"}
+        }
+        "America:Coyhaique"{
+            ec{"科伊艾克"}
         }
         "America:Yellowknife"{
             ec{"黃刀鎮"}

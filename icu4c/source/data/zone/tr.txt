@@ -1645,6 +1645,9 @@ tr{
             lg{"Petropavlovsk-Kamçatski Saati"}
             ls{"Petropavlovsk-Kamçatski Standart Saati"}
         }
+        "meta:Kazakhstan"{
+            ls{"Kazakistan Saati"}
+        }
         "meta:Kazakhstan_Eastern"{
             ls{"Doğu Kazakistan Saati"}
         }

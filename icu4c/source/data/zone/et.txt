@@ -1645,6 +1645,9 @@ et{
             lg{"Petropavlovsk-Kamtšatski aeg"}
             ls{"Kamtšatka standardaeg"}
         }
+        "meta:Kazakhstan"{
+            ls{"Kasahstani aeg"}
+        }
         "meta:Kazakhstan_Eastern"{
             ls{"Ida-Kasahstani aeg"}
         }

@@ -1646,6 +1646,9 @@ ro{
             lg{"Ora din Petropavlovsk-Kamciațki"}
             ls{"Ora standard din Petropavlovsk-Kamciațki"}
         }
+        "meta:Kazakhstan"{
+            ls{"Ora din Kazahstan"}
+        }
         "meta:Kazakhstan_Eastern"{
             ls{"Ora din Kazahstanul de Est"}
         }

@@ -258,6 +258,9 @@ id{
         "America:Chihuahua"{
             ec{"Chihuahua"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"Ciudad Juarez"}
+        }
         "America:Coral_Harbour"{
             ec{"Atikokan"}
         }
@@ -1674,6 +1677,9 @@ id{
             ld{"Waktu Musim Panas Petropavlovsk-Kamchatski"}
             lg{"Waktu Petropavlovsk-Kamchatsky"}
             ls{"Waktu Standar Petropavlovsk-Kamchatsky"}
+        }
+        "meta:Kazakhstan"{
+            ls{"Waktu Kazakhstan"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"Waktu Kazakhstan Timur"}

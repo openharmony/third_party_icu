@@ -1652,6 +1652,9 @@ sk{
             lg{"Petropavlovsk-Kamčatský čas"}
             ls{"Petropavlovsk-Kamčatský štandardný čas"}
         }
+        "meta:Kazakhstan"{
+            ls{"kazachstanský čas"}
+        }
         "meta:Kazakhstan_Eastern"{
             ls{"východokazachstanský čas"}
         }

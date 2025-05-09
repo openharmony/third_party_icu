@@ -1609,6 +1609,9 @@ uz{
             lg{"Yaponiya vaqti"}
             ls{"Yaponiya standart vaqti"}
         }
+        "meta:Kazakhstan"{
+            ls{"Qozogʻiston vaqti"}
+        }
         "meta:Kazakhstan_Eastern"{
             ls{"Sharqiy Qozogʻiston vaqti"}
         }

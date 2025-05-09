@@ -1652,11 +1652,14 @@ bs{
             lg{"Petropavlovsk-Kamčatski vreme"}
             ls{"Petropavlovsk-Kamčatski standardno vreme"}
         }
+        "meta:Kazakhstan"{
+            ls{"kazahstansko vrijeme"}
+        }
         "meta:Kazakhstan_Eastern"{
-            ls{"Istočnokazahstansko vrijeme"}
+            ls{"istočnokazahstansko vrijeme"}
         }
         "meta:Kazakhstan_Western"{
-            ls{"Zapadnokazahstansko vrijeme"}
+            ls{"zapadnokazahstansko vrijeme"}
         }
         "meta:Korea"{
             ld{"Korejsko ljetno vrijeme"}

@@ -1654,6 +1654,9 @@ de{
             lg{"Kamtschatka-Zeit"}
             ls{"Kamtschatka-Normalzeit"}
         }
+        "meta:Kazakhstan"{
+            ls{"Kasachische Zeit"}
+        }
         "meta:Kazakhstan_Eastern"{
             ls{"Ostkasachische Zeit"}
         }

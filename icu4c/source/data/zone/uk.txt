@@ -258,6 +258,9 @@ uk{
         "America:Chihuahua"{
             ec{"Чіуауа"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"С’юдад-Хуарес"}
+        }
         "America:Coral_Harbour"{
             ec{"Атікокан"}
         }
@@ -1626,6 +1629,9 @@ uk{
             ld{"за камчатським літнім часом"}
             lg{"за камчатським часом"}
             ls{"за камчатським стандартним часом"}
+        }
+        "meta:Kazakhstan"{
+            ls{"за часом у Казахстані"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"за східним часом у Казахстані"}

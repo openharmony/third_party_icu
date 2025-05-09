@@ -1619,6 +1619,9 @@ is{
             lg{"Tími í Petropavlovsk-Kamchatski"}
             ls{"Staðaltími í Petropavlovsk-Kamchatski"}
         }
+        "meta:Kazakhstan"{
+            ls{"Tími í Kasakstan"}
+        }
         "meta:Kazakhstan_Eastern"{
             ls{"Tími í Austur-Kasakstan"}
         }
