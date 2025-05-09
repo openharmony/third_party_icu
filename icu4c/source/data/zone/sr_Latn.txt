@@ -259,6 +259,9 @@ sr_Latn{
         "America:Chihuahua"{
             ec{"Čihuahua"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"Siudad Huarez"}
+        }
         "America:Coral_Harbour"{
             ec{"Koral Harbur"}
         }
@@ -1655,6 +1658,9 @@ sr_Latn{
             ld{"Petropavlovsko-kamčatsko letnje računanje vremena"}
             lg{"Petropavlovsko-kamčatsko vreme"}
             ls{"Petropavlovsko-kamčatsko standardno vreme"}
+        }
+        "meta:Kazakhstan"{
+            ls{"Kazahstansko vreme"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"Istočno-kazahstansko vreme"}

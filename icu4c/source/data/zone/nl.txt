@@ -1680,6 +1680,9 @@ nl{
             lg{"Petropavlovsk-Kamtsjatski-tijd"}
             ls{"Petropavlovsk-Kamtsjatski-standaardtijd"}
         }
+        "meta:Kazakhstan"{
+            ls{"Kazachse tijd"}
+        }
         "meta:Kazakhstan_Eastern"{
             ls{"Oost-Kazachse tijd"}
         }

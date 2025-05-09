@@ -258,6 +258,9 @@ kk{
         "America:Chihuahua"{
             ec{"Чиуауа"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"Сьюдад-Хуарес"}
+        }
         "America:Coral_Harbour"{
             ec{"Атикокан"}
         }
@@ -1614,6 +1617,9 @@ kk{
             ld{"Жапония жазғы уақыты"}
             lg{"Жапония уақыты"}
             ls{"Жапония стандартты уақыты"}
+        }
+        "meta:Kazakhstan"{
+            ls{"Қазақстан уақыты"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"Шығыс Қазақстан уақыты"}

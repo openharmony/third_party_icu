@@ -1682,6 +1682,9 @@ eu{
             lg{"Petropavlovsk-Kamchatskiko ordua"}
             ls{"Petropavlovsk-Kamchatskiko ordu estandarra"}
         }
+        "meta:Kazakhstan"{
+            ls{"Kazakhstango ordua"}
+        }
         "meta:Kazakhstan_Eastern"{
             ls{"Kazakhstango ekialdeko ordua"}
         }

@@ -1623,6 +1623,9 @@ gl{
             lg{"Horario de Petropávlovsk-Kamchatski"}
             ls{"Horario estándar de Petropávlovsk-Kamchatski"}
         }
+        "meta:Kazakhstan"{
+            ls{"hora de Kazakistán"}
+        }
         "meta:Kazakhstan_Eastern"{
             ls{"hora de Kazakistán Oriental"}
         }

@@ -258,6 +258,9 @@ fil{
         "America:Chihuahua"{
             ec{"Chihuahua"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"Lungsod ng Juárez"}
+        }
         "America:Coral_Harbour"{
             ec{"Atikokan"}
         }
@@ -1618,6 +1621,9 @@ fil{
             ld{"Summer Time sa Petropavlovsk-Kamchatski"}
             lg{"Oras sa Petropavlovsk-Kamchatski"}
             ls{"Standard Time sa Petropavlovsk-Kamchatski"}
+        }
+        "meta:Kazakhstan"{
+            ls{"Oras ng Kazakhstan"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"Oras sa Silangang Kazakhstan"}

@@ -258,6 +258,9 @@ ko{
         "America:Chihuahua"{
             ec{"치와와"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"시우다드후아레스"}
+        }
         "America:Coral_Harbour"{
             ec{"코랄하버"}
         }
@@ -1644,6 +1647,9 @@ ko{
             ld{"페트로파블롭스크-캄차츠키 하계 표준시"}
             lg{"페트로파블롭스크-캄차츠키 시간"}
             ls{"페트로파블롭스크-캄차츠키 표준시"}
+        }
+        "meta:Kazakhstan"{
+            ls{"카자흐스탄 시간"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"동부 카자흐스탄 시간"}

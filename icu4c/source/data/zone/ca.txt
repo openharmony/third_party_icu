@@ -1629,6 +1629,9 @@ ca{
             lg{"Hora de Kamtxatka"}
             ls{"Hora estàndard de Petropavlovsk de Kamtxatka"}
         }
+        "meta:Kazakhstan"{
+            ls{"Hora del Kazakhstan"}
+        }
         "meta:Kazakhstan_Eastern"{
             ls{"Hora de l’est del Kazakhstan"}
         }

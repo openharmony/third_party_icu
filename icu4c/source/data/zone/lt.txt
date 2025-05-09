@@ -258,6 +258,9 @@ lt{
         "America:Chihuahua"{
             ec{"Čihuahua"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"Siudad Chuaresas"}
+        }
         "America:Coral_Harbour"{
             ec{"Atikokanas"}
         }
@@ -1644,6 +1647,9 @@ lt{
             ld{"Kamčiatkos Petropavlovsko vasaros laikas"}
             lg{"Kamčiatkos Petropavlovsko laikas"}
             ls{"Kamčiatkos Petropavlovsko žiemos laikas"}
+        }
+        "meta:Kazakhstan"{
+            ls{"Kazachstano laikas"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"Rytų Kazachstano laikas"}

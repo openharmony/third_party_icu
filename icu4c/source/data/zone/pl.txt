@@ -1628,6 +1628,9 @@ pl{
             lg{"czas Pietropawłowsk Kamczacki"}
             ls{"czas standardowy Pietropawłowsk Kamczacki"}
         }
+        "meta:Kazakhstan"{
+            ls{"czas Kazachstan"}
+        }
         "meta:Kazakhstan_Eastern"{
             ls{"czas Kazachstan Wschodni"}
         }

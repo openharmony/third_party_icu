@@ -1607,6 +1607,9 @@ cy{
             lg{"Amser Japan"}
             ls{"Amser Safonol Japan"}
         }
+        "meta:Kazakhstan"{
+            ls{"Amser Kazakhstan"}
+        }
         "meta:Kazakhstan_Eastern"{
             ls{"Amser Dwyrain Kazakhstan"}
         }

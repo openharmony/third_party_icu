@@ -1647,6 +1647,9 @@ es{
             lg{"hora de Kamchatka"}
             ls{"hora estándar de Kamchatka"}
         }
+        "meta:Kazakhstan"{
+            ls{"hora de Kazajistán"}
+        }
         "meta:Kazakhstan_Eastern"{
             ls{"hora de Kazajistán oriental"}
         }

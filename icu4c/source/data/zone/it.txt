@@ -1622,6 +1622,9 @@ it{
             lg{"Ora di Petropavlovsk-Kamchatski"}
             ls{"Ora standard di Petropavlovsk-Kamchatski"}
         }
+        "meta:Kazakhstan"{
+            ls{"Ora del Kazakistan"}
+        }
         "meta:Kazakhstan_Eastern"{
             ls{"Ora del Kazakistan orientale"}
         }
