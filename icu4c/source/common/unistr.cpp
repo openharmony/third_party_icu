@@ -1823,6 +1823,13 @@ UnicodeString::cloneArrayIfNeeded(int32_t newCapacity,
       growCapacity = newCapacity;
     } else if(newCapacity <= US_STACKBUF_SIZE && growCapacity > US_STACKBUF_SIZE) {
       growCapacity = US_STACKBUF_SIZE;
+    /* <issue: https://github.com/unicode-org/icu/pull/3416> 20250417 begin */
+    } else if(newCapacity > growCapacity) {
+      return false;  // bad inputs
+    }
+    if(growCapacity > kMaxCapacity) {
+      return false;
+    /* <issue: https://github.com/unicode-org/icu/pull/3416> 20250417 end */
     }
 
     // save old values
