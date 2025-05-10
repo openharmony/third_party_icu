@@ -4,7 +4,7 @@
     "License": "Unicode-DFS-2022",
     "License File": "LICENSE",
     "Version Number": "72.1",
-    "Upstream URL": "https://github.com/unicode-org/icu/archive/release-72-1.tar.gz",
+    "Upstream URL": "https://github.com/unicode-org/icu",
     "Description": "ICU is a mature, widely used set of portable C/C++ and Java libraries for Unicode support, software internationalization and globalization (i18n/g11n). The packages are mirrors of the main website."
   }
 ]
