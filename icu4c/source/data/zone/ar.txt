@@ -258,6 +258,9 @@ ar{
         "America:Chihuahua"{
             ec{"تشيواوا"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"سيوداد خواريز"}
+        }
         "America:Coral_Harbour"{
             ec{"كورال هاربر"}
         }
@@ -509,6 +512,9 @@ ar{
         }
         "America:Punta_Arenas"{
             ec{"بونتا أريناز"}
+        }
+        "America:Coyhaique"{
+            ec{"كويهايكو"}
         }
         "America:Rainy_River"{
             ec{"راني ريفر"}
@@ -1625,6 +1631,9 @@ ar{
             ld{"توقيت بيتروبافلوفسك-كامتشاتسكي الصيفي"}
             lg{"توقيت كامشاتكا"}
             ls{"توقيت بيتروبافلوفسك-كامتشاتسكي"}
+        }
+        "meta:Kazakhstan"{
+            ls{"توقيت كازاخستان"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"توقيت شرق كازاخستان"}

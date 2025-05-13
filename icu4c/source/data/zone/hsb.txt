@@ -698,6 +698,9 @@ hsb{
             lg{"japanski čas"}
             ls{"japanski standardny čas"}
         }
+        "meta:Kazakhstan"{
+            ls{"kazachski čas"}
+        }
         "meta:Kazakhstan_Eastern"{
             ls{"wuchodnokazachski čas"}
         }

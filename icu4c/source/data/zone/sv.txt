@@ -510,6 +510,9 @@ sv{
         "America:Punta_Arenas"{
             ec{"Punta Arenas"}
         }
+        "America:Coyhaique"{
+            ec{"Coyhaique"}
+        }
         "America:Rainy_River"{
             ec{"Rainy River"}
         }
@@ -1658,6 +1661,9 @@ sv{
             ld{"Kamtjatkasommartid"}
             lg{"Kamtjatkatid"}
             ls{"Kamtjatkanormaltid"}
+        }
+        "meta:Kazakhstan"{
+            ls{"kazakstansk tid"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"östkazakstansk tid"}

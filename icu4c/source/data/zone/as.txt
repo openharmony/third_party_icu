@@ -258,6 +258,9 @@ as{
         "America:Chihuahua"{
             ec{"চিহুআহুৱা"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"চিউডে‘ড জৰেজ"}
+        }
         "America:Coral_Harbour"{
             ec{"আটিকোকান"}
         }
@@ -1606,6 +1609,9 @@ as{
             ld{"জাপানৰ ডেলাইট সময়"}
             lg{"জাপানৰ সময়"}
             ls{"জাপানৰ মান সময়"}
+        }
+        "meta:Kazakhstan"{
+            ls{"কাজাখস্তানৰ সময়"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"পূব কাজাখস্তানৰ সময়"}

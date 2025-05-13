@@ -335,6 +335,9 @@ ig{
             lg{"Oge Japan"}
             ls{"Oge Izugbe Japan"}
         }
+        "meta:Kazakhstan"{
+            ls{"Oge Kazakhstan"}
+        }
         "meta:Kazakhstan_Eastern"{
             ls{"Oge Mpaghara Ọwụwa Anyanwụ Kazakhstan"}
         }
