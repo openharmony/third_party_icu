@@ -510,6 +510,9 @@ ro{
         "America:Punta_Arenas"{
             ec{"Punta Arenas"}
         }
+        "America:Coyhaique"{
+            ec{"Coyhaique"}
+        }
         "America:Rainy_River"{
             ec{"Rainy River"}
         }
@@ -1645,6 +1648,9 @@ ro{
             ld{"Ora de vară din Petropavlovsk-Kamciațki"}
             lg{"Ora din Petropavlovsk-Kamciațki"}
             ls{"Ora standard din Petropavlovsk-Kamciațki"}
+        }
+        "meta:Kazakhstan"{
+            ls{"Ora din Kazahstan"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"Ora din Kazahstanul de Est"}

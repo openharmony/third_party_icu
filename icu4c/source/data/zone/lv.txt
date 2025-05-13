@@ -258,6 +258,9 @@ lv{
         "America:Chihuahua"{
             ec{"Čivava"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"Huaresa"}
+        }
         "America:Coral_Harbour"{
             ec{"Atikokana"}
         }
@@ -509,6 +512,9 @@ lv{
         }
         "America:Punta_Arenas"{
             ec{"Puntaarenasa"}
+        }
+        "America:Coyhaique"{
+            ec{"Kojaike"}
         }
         "America:Rainy_River"{
             ec{"Reinirivera"}
@@ -1630,6 +1636,9 @@ lv{
             ld{"Petropavlovskas-Kamčatskas vasaras laiks"}
             lg{"Petropavlovskas-Kamčatskas laiks"}
             ls{"Petropavlovskas-Kamčatskas ziemas laiks"}
+        }
+        "meta:Kazakhstan"{
+            ls{"Kazahstānas laiks"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"Austrumkazahstānas laiks"}

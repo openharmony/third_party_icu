@@ -12,6 +12,9 @@ ug{
         "America:Curacao"{
             ec{"كۇراسو"}
         }
+        "America:Coyhaique"{
+            ec{"كويايك"}
+        }
         "America:St_Barthelemy"{
             ec{"ساينىت-بارتھېلەمىي"}
         }

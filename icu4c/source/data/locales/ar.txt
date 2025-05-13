@@ -25,7 +25,7 @@ ar{
                 currencyFormat{"‏#,##0.00 ¤"}
                 currencyFormat%noCurrency{"#,##0.00"}
                 decimalFormat{"#,##0.###"}
-                percentFormat{"#,##0%"}
+                percentFormat{"#,##0%‏"}
                 scientificFormat{"#E0"}
             }
             symbols{
@@ -59,7 +59,7 @@ ar{
                 currencyFormat{"‏#,##0.00 ¤;‏-#,##0.00 ¤"}
                 currencyPatternAppendISO{"{0} ¤¤"}
                 decimalFormat{"#,##0.###"}
-                percentFormat{"#,##0%"}
+                percentFormat{"%#,##0"}
                 scientificFormat{"#E0"}
             }
             patternsLong{
@@ -580,7 +580,7 @@ ar{
                 Hm{"HH:mm"}
                 Hms{"HH:mm:ss"}
                 M{"L"}
-                MEd{"E، d‏/M"}
+                MEd{"E، d/‏M"}
                 MMM{"LLL"}
                 MMMEd{"E، d MMM"}
                 MMMMd{"d MMMM"}
@@ -758,8 +758,8 @@ ar{
                 "h:mm:ss a z",
                 "h:mm:ss a",
                 "h:mm a",
-                "EEEE، d MMMM y",
-                "d MMMM y",
+                "EEEE، d MMMM، y",
+                "d MMMM، y",
                 "dd‏/MM‏/y",
                 "d‏/M‏/y",
                 "{1}، {0}",
@@ -810,7 +810,7 @@ ar{
                 Hmsv{"HH:mm:ss v"}
                 Hmv{"HH:mm v"}
                 M{"L"}
-                MEd{"E، d‏/M"}
+                MEd{"E، d/‏M"}
                 MMM{"LLL"}
                 MMMEd{"E، d MMM"}
                 MMMMEd{"E، d MMMM"}
@@ -838,9 +838,9 @@ ar{
                 yMEd{"E، d‏/M‏/y"}
                 yMM{"MM‏/y"}
                 yMMM{"MMM y"}
-                yMMMEd{"E، d MMM y"}
+                yMMMEd{"E، d MMM، y"}
                 yMMMM{"MMMM y"}
-                yMMMd{"d MMM y"}
+                yMMMd{"d MMM، y"}
                 yMd{"d‏/M‏/y"}
                 yQQQ{"QQQ y"}
                 yQQQQ{"QQQQ y"}
@@ -874,13 +874,13 @@ ar{
                         "س",
                     }
                     short{
-                        "أحد",
-                        "إثنين",
-                        "ثلاثاء",
-                        "أربعاء",
-                        "خميس",
-                        "جمعة",
-                        "سبت",
+                        "السبت",
+                        "الجمعة",
+                        "الخميس",
+                        "الأربعاء",
+                        "الثلاثاء",
+                        "الاثنين",
+                        "الأحد",
                     }
                     wide{
                         "الأحد",
@@ -912,13 +912,13 @@ ar{
                         "س",
                     }
                     short{
-                        "أحد",
-                        "إثنين",
-                        "ثلاثاء",
-                        "أربعاء",
-                        "خميس",
-                        "جمعة",
-                        "سبت",
+                        "السبت",
+                        "الجمعة",
+                        "الخميس",
+                        "الأربعاء",
+                        "الثلاثاء",
+                        "الاثنين",
+                        "الأحد",
                     }
                     wide{
                         "الأحد",
@@ -1433,7 +1433,7 @@ ar{
                 Hm{"HH:mm"}
                 Hms{"HH:mm:ss"}
                 M{"L"}
-                MEd{"E، d‏/M"}
+                MEd{"E، d/‏M"}
                 MMM{"LLL"}
                 MMMEd{"E، d MMM"}
                 MMMMd{"d MMMM"}

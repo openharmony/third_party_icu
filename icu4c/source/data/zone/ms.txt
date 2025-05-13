@@ -510,6 +510,9 @@ ms{
         "America:Punta_Arenas"{
             ec{"Punta Arenas"}
         }
+        "America:Coyhaique"{
+            ec{"Coyhaique"}
+        }
         "America:Rainy_River"{
             ec{"Sungai Rainy"}
         }
@@ -1639,6 +1642,9 @@ ms{
             ld{"Waktu Musim Panas Petropavlovsk-Kamchatski"}
             lg{"Waktu Petropavlovsk-Kamchatski"}
             ls{"Waktu Piawai Petropavlovsk-Kamchatski"}
+        }
+        "meta:Kazakhstan"{
+            ls{"Waktu Kazakhstan"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"Waktu Kazakhstan Timur"}

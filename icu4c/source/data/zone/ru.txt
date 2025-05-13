@@ -258,6 +258,9 @@ ru{
         "America:Chihuahua"{
             ec{"Чиуауа"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"Сьюдад-Хуарес"}
+        }
         "America:Coral_Harbour"{
             ec{"Корал-Харбор"}
         }
@@ -509,6 +512,9 @@ ru{
         }
         "America:Punta_Arenas"{
             ec{"Пунта-Аренас"}
+        }
+        "America:Coyhaique"{
+            ec{"Койайке"}
         }
         "America:Rainy_River"{
             ec{"Рейни-Ривер"}
@@ -1647,6 +1653,9 @@ ru{
             ld{"Петропавловск-Камчатский, летнее время"}
             lg{"Петропавловск-Камчатский"}
             ls{"Петропавловск-Камчатский, стандартное время"}
+        }
+        "meta:Kazakhstan"{
+            ls{"Казахстан"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"Восточный Казахстан"}

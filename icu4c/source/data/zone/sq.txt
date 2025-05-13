@@ -258,6 +258,9 @@ sq{
         "America:Chihuahua"{
             ec{"Çihahua"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"Siudad-Huarez"}
+        }
         "America:Coral_Harbour"{
             ec{"Atikokan"}
         }
@@ -1647,6 +1650,9 @@ sq{
             ld{"Ora verore e Petropavllovsk-Kamçatkës"}
             lg{"Ora e Petropavllovsk-Kamçatkës"}
             ls{"Ora standarde e Petropavllovsk-Kamçatkës"}
+        }
+        "meta:Kazakhstan"{
+            ls{"Ora e Kazakistanit"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"Ora e Kazakistanit Lindor"}

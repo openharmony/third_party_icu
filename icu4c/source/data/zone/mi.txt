@@ -60,6 +60,9 @@ mi{
         "America:Cordoba"{
             ec{"Cordoba"}
         }
+        "America:Coyhaique"{
+            ec{"Coyhaique"}
+        }
         "America:Cuiaba"{
             ec{"Cuiaba"}
         }
@@ -180,6 +183,15 @@ mi{
             ld{"Wā Raumati Uropi Uru"}
             lg{"Wā Uropi Uru"}
             ls{"Wā Arowhānui Uropi Uru"}
+        }
+        "meta:Kazakhstan"{
+            ls{"Wā Katatānga"}
+        }
+        "meta:Kazakhstan_Eastern"{
+            ls{"Wā Katatānga ki te Rāwhiti"}
+        }
+        "meta:Kazakhstan_Western"{
+            ls{"Wā Katatānga ki te Uru"}
         }
         "meta:GMT"{
             ls{"Wā Toharite Kiriwīti"}
