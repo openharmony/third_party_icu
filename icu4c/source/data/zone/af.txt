@@ -1628,6 +1628,9 @@ af{
             lg{"Petropavlovsk-Kamchatski-tyd"}
             ls{"Petropavlovsk-Kamchatski-standaardtyd"}
         }
+        "meta:Kazakhstan"{
+            ls{"Kazakstan-tyd"}
+        }
         "meta:Kazakhstan_Eastern"{
             ls{"Oos-Kazakstan-tyd"}
         }

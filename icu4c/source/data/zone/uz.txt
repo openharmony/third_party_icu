@@ -510,6 +510,9 @@ uz{
         "America:Punta_Arenas"{
             ec{"Punta-Arenas"}
         }
+        "America:Coyhaique"{
+            ec{"Koyayke"}
+        }
         "America:Rainy_River"{
             ec{"Reyni-River"}
         }
@@ -1608,6 +1611,9 @@ uz{
             ld{"Yaponiya yozgi vaqti"}
             lg{"Yaponiya vaqti"}
             ls{"Yaponiya standart vaqti"}
+        }
+        "meta:Kazakhstan"{
+            ls{"Qozogʻiston vaqti"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"Sharqiy Qozogʻiston vaqti"}

@@ -510,6 +510,9 @@ tr{
         "America:Punta_Arenas"{
             ec{"Punta Arenas"}
         }
+        "America:Coyhaique"{
+            ec{"Coyhaique"}
+        }
         "America:Rainy_River"{
             ec{"Rainy River"}
         }
@@ -1644,6 +1647,9 @@ tr{
             ld{"Petropavlovsk-Kamçatski Yaz Saati"}
             lg{"Petropavlovsk-Kamçatski Saati"}
             ls{"Petropavlovsk-Kamçatski Standart Saati"}
+        }
+        "meta:Kazakhstan"{
+            ls{"Kazakistan Saati"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"Doğu Kazakistan Saati"}

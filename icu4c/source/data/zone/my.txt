@@ -258,6 +258,9 @@ my{
         "America:Chihuahua"{
             ec{"ချီဟူအာဟူအာ"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"စီယူဒတ်စ် ဟွာရက်စ်"}
+        }
         "America:Coral_Harbour"{
             ec{"အာတီကိုကန်"}
         }
@@ -509,6 +512,9 @@ my{
         }
         "America:Punta_Arenas"{
             ec{"ပွန်တာ အရီနာစ်"}
+        }
+        "America:Coyhaique"{
+            ec{"Coyhaique"}
         }
         "America:Rainy_River"{
             ec{"ရိမ်းနီး ရီဗာ"}
@@ -1611,6 +1617,9 @@ my{
             ld{"ဂျပန် နွေရာသီ အချိန်"}
             lg{"ဂျပန် အချိန်"}
             ls{"ဂျပန် စံတော်ချိန်"}
+        }
+        "meta:Kazakhstan"{
+            ls{"ကာဇက်စတန် အချိန်"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"အရှေ့ကာဇက်စတန် အချိန်"}

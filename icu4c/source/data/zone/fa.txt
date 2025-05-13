@@ -258,6 +258,9 @@ fa{
         "America:Chihuahua"{
             ec{"چیواوا"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"سیوداد خوارز"}
+        }
         "America:Coral_Harbour"{
             ec{"اتکوکان"}
         }
@@ -509,6 +512,9 @@ fa{
         }
         "America:Punta_Arenas"{
             ec{"پونتا آرناس"}
+        }
+        "America:Coyhaique"{
+            ec{"کویهایکیو"}
         }
         "America:Rainy_River"{
             ec{"رینی‌ریور"}
@@ -1629,6 +1635,9 @@ fa{
             ld{"وقت تابستانی پتروپاولوسک‐کامچاتسکی"}
             lg{"وقت پتروپاولوسک‐کامچاتسکی"}
             ls{"وقت عادی پتروپاولوسک‐کامچاتسکی"}
+        }
+        "meta:Kazakhstan"{
+            ls{"وقت قزاقستان"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"وقت شرق قزاقستان"}

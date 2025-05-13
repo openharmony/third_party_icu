@@ -258,6 +258,9 @@ he{
         "America:Chihuahua"{
             ec{"צ׳יוואווה"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"סיודד חוארס"}
+        }
         "America:Coral_Harbour"{
             ec{"אטיקוקן"}
         }
@@ -509,6 +512,9 @@ he{
         }
         "America:Punta_Arenas"{
             ec{"פונטה ארנס"}
+        }
+        "America:Coyhaique"{
+            ec{"קויהייקה"}
         }
         "America:Rainy_River"{
             ec{"רייני ריבר"}
@@ -1639,6 +1645,9 @@ he{
             ld{"שעון קיץ פטרופבלובסק-קמצ׳טסקי"}
             lg{"שעון פטרופבלובסק-קמצ׳טסקי"}
             ls{"שעון רגיל פטרופבלובסק-קמצ׳טסקי"}
+        }
+        "meta:Kazakhstan"{
+            ls{"שעון קזחסטן"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"שעון מזרח קזחסטן"}

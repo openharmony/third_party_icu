@@ -510,6 +510,9 @@ pl{
         "America:Punta_Arenas"{
             ec{"Punta Arenas"}
         }
+        "America:Coyhaique"{
+            ec{"Coyhaique"}
+        }
         "America:Rainy_River"{
             ec{"Rainy River"}
         }
@@ -1627,6 +1630,9 @@ pl{
             ld{"czas Pietropawłowsk Kamczacki letni"}
             lg{"czas Pietropawłowsk Kamczacki"}
             ls{"czas standardowy Pietropawłowsk Kamczacki"}
+        }
+        "meta:Kazakhstan"{
+            ls{"czas Kazachstan"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"czas Kazachstan Wschodni"}
