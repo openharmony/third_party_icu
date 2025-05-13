@@ -1659,10 +1659,10 @@ bs{
             ls{"kazahstansko vrijeme"}
         }
         "meta:Kazakhstan_Eastern"{
-            ls{"istočnokazahstansko vrijeme"}
+            ls{"Istočnokazahstansko vrijeme"}
         }
         "meta:Kazakhstan_Western"{
-            ls{"zapadnokazahstansko vrijeme"}
+            ls{"Zapadnokazahstansko vrijeme"}
         }
         "meta:Korea"{
             ld{"Korejsko ljetno vrijeme"}
