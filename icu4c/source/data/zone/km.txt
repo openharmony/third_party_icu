@@ -513,6 +513,9 @@ km{
         "America:Punta_Arenas"{
             ec{"ពុនតា អារ៉េណា"}
         }
+        "America:Coyhaique"{
+            ec{"Coyhaique"}
+        }
         "America:Rainy_River"{
             ec{"រ៉េនីរីវើ"}
         }

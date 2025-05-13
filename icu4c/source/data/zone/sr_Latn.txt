@@ -514,6 +514,9 @@ sr_Latn{
         "America:Punta_Arenas"{
             ec{"Punta Arenas"}
         }
+        "America:Coyhaique"{
+            ec{"Kojajke"}
+        }
         "America:Rainy_River"{
             ec{"Rejni River"}
         }

@@ -510,6 +510,9 @@ az{
         "America:Punta_Arenas"{
             ec{"Punta Arenas"}
         }
+        "America:Coyhaique"{
+            ec{"Koyayke"}
+        }
         "America:Rainy_River"{
             ec{"Reyni Çayı"}
         }

@@ -513,6 +513,9 @@ si{
         "America:Punta_Arenas"{
             ec{"පුන්ටා ඇරිනාස්"}
         }
+        "America:Coyhaique"{
+            ec{"කොයිහයික්වේ"}
+        }
         "America:Rainy_River"{
             ec{"රෙයිනි ගඟ"}
         }

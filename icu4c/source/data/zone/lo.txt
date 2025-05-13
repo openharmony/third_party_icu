@@ -513,6 +513,9 @@ lo{
         "America:Punta_Arenas"{
             ec{"ພຸນທາ ອະຣີນາສ໌"}
         }
+        "America:Coyhaique"{
+            ec{"ຄອຍໄຮເກ້"}
+        }
         "America:Rainy_River"{
             ec{"ເຣນນີ ຣິເວີ"}
         }

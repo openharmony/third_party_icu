@@ -60,6 +60,9 @@ mi{
         "America:Cordoba"{
             ec{"Cordoba"}
         }
+        "America:Coyhaique"{
+            ec{"Coyhaique"}
+        }
         "America:Cuiaba"{
             ec{"Cuiaba"}
         }

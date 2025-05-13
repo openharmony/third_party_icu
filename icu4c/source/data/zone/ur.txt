@@ -513,6 +513,9 @@ ur{
         "America:Punta_Arenas"{
             ec{"پنٹا اریناس"}
         }
+        "America:Coyhaique"{
+            ec{"کوہائیک"}
+        }
         "America:Rainy_River"{
             ec{"رینی ریور"}
         }

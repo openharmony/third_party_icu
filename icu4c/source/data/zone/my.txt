@@ -513,6 +513,9 @@ my{
         "America:Punta_Arenas"{
             ec{"ပွန်တာ အရီနာစ်"}
         }
+        "America:Coyhaique"{
+            ec{"Coyhaique"}
+        }
         "America:Rainy_River"{
             ec{"ရိမ်းနီး ရီဗာ"}
         }
