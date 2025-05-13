@@ -513,6 +513,9 @@ be{
         "America:Punta_Arenas"{
             ec{"Пунта-Арэнас"}
         }
+        "America:Coyhaique"{
+            ec{"Каяік"}
+        }
         "America:Rainy_River"{
             ec{"Рэйні-Рывер"}
         }

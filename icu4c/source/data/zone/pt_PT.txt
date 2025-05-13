@@ -42,6 +42,9 @@ pt_PT{
         "America:Coyhaique"{
             ec{"Coihaque"}
         }
+        "America:Coyhaique"{
+            ec{"Coihaque"}
+        }
         "America:Araguaina"{
             ec{"Araguaina"}
         }

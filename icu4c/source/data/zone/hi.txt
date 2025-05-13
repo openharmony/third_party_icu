@@ -513,6 +513,9 @@ hi{
         "America:Punta_Arenas"{
             ec{"पुंटा एरिनास"}
         }
+        "America:Coyhaique"{
+            ec{"कॉयहेक"}
+        }
         "America:Rainy_River"{
             ec{"रेनी नदी"}
         }

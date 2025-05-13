@@ -513,6 +513,9 @@ lv{
         "America:Punta_Arenas"{
             ec{"Puntaarenasa"}
         }
+        "America:Coyhaique"{
+            ec{"Kojaike"}
+        }
         "America:Rainy_River"{
             ec{"Reinirivera"}
         }

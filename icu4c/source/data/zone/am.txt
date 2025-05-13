@@ -513,6 +513,9 @@ am{
         "America:Punta_Arenas"{
             ec{"ፑንታ አሬናስ"}
         }
+        "America:Coyhaique"{
+            ec{"ኮያኢኪ"}
+        }
         "America:Rainy_River"{
             ec{"ሬኒ ሪቨር"}
         }

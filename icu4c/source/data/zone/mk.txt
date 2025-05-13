@@ -513,6 +513,9 @@ mk{
         "America:Punta_Arenas"{
             ec{"Пунта Аренас"}
         }
+        "America:Coyhaique"{
+            ec{"Којајке"}
+        }
         "America:Rainy_River"{
             ec{"Рејни Ривер"}
         }

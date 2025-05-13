@@ -516,6 +516,9 @@ ar{
         "America:Coyhaique"{
             ec{"كويهايكو"}
         }
+        "America:Coyhaique"{
+            ec{"كويهايكو"}
+        }
         "America:Rainy_River"{
             ec{"راني ريفر"}
         }

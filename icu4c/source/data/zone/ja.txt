@@ -513,6 +513,9 @@ ja{
         "America:Punta_Arenas"{
             ec{"プンタアレナス"}
         }
+        "America:Coyhaique"{
+            ec{"コイハイケ"}
+        }
         "America:Rainy_River"{
             ec{"レイニーリバー"}
         }

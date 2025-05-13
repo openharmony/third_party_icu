@@ -513,6 +513,9 @@ ka{
         "America:Punta_Arenas"{
             ec{"პუნტა-არენასი"}
         }
+        "America:Coyhaique"{
+            ec{"კოიაიკე"}
+        }
         "America:Rainy_River"{
             ec{"რეინი რივერი"}
         }
