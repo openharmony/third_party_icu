@@ -362,6 +362,9 @@ ha{
             lg{"Lokacin Japan"}
             ls{"Japan Standard Time"}
         }
+        "meta:Kazakhstan"{
+            ls{"Lokacin Kazakhstan"}
+        }
         "meta:Kazakhstan_Eastern"{
             ls{"Lokacin Gabashin Kazakhstan"}
         }

@@ -258,6 +258,9 @@ sd{
         "America:Chihuahua"{
             ec{"چي هوا هوا"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"سوڊيڊ جوريز"}
+        }
         "America:Coral_Harbour"{
             ec{"اٽيڪوڪن"}
         }
@@ -1609,6 +1612,9 @@ sd{
             ld{"جاپان جي ڏينهن جو وقت"}
             lg{"جاپان جو وقت"}
             ls{"جاپان جو معياري وقت"}
+        }
+        "meta:Kazakhstan"{
+            ls{"قزاقستان وقت"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"اوڀر قزاقستان جو وقت"}

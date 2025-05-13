@@ -510,6 +510,9 @@ cs{
         "America:Punta_Arenas"{
             ec{"Punta Arenas"}
         }
+        "America:Coyhaique"{
+            ec{"Coyhaique"}
+        }
         "America:Rainy_River"{
             ec{"Rainy River"}
         }
@@ -1672,6 +1675,9 @@ cs{
             ld{"Petropavlovsko-kamčatský letní čas"}
             lg{"Petropavlovsko-kamčatský čas"}
             ls{"Petropavlovsko-kamčatský standardní čas"}
+        }
+        "meta:Kazakhstan"{
+            ls{"kazachstánský čas"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"východokazachstánský čas"}

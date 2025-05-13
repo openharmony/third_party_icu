@@ -1609,6 +1609,9 @@ fo{
             lg{"Japan tíð"}
             ls{"Japan vanlig tíð"}
         }
+        "meta:Kazakhstan"{
+            ls{"Kasakstan tíð"}
+        }
         "meta:Kazakhstan_Eastern"{
             ls{"Eystur Kasakstan tíð"}
         }

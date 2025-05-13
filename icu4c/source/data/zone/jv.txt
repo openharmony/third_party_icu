@@ -258,6 +258,9 @@ jv{
         "America:Chihuahua"{
             ec{"Chihuahua"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"Ciudad Juáres"}
+        }
         "America:Coral_Harbour"{
             ec{"Atikokan"}
         }
@@ -509,6 +512,9 @@ jv{
         }
         "America:Punta_Arenas"{
             ec{"Punta Arenas"}
+        }
+        "America:Coyhaique"{
+            ec{"Coyhaique"}
         }
         "America:Rainy_River"{
             ec{"Kali Rainy"}
@@ -1602,6 +1608,9 @@ jv{
             ld{"Wektu Ketigo Jepang"}
             lg{"Wektu Jepang"}
             ls{"Wektu Standar Jepang"}
+        }
+        "meta:Kazakhstan"{
+            ls{"Wektu Kazakhstan"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"Wektu Kazakhstan Wetan"}

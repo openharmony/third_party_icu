@@ -258,6 +258,9 @@ hi{
         "America:Chihuahua"{
             ec{"चिहुआहुआ"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"स्युदाद ह्वारेज़"}
+        }
         "America:Coral_Harbour"{
             ec{"अटिकोकान"}
         }
@@ -509,6 +512,9 @@ hi{
         }
         "America:Punta_Arenas"{
             ec{"पुंटा एरिनास"}
+        }
+        "America:Coyhaique"{
+            ec{"कॉयहेक"}
         }
         "America:Rainy_River"{
             ec{"रेनी नदी"}
@@ -1625,6 +1631,9 @@ hi{
             ld{"पेट्रोपेवलास्क-कैमचात्सकी ग्रीष्मकालीन समय"}
             lg{"पेट्रोपेवलास्क-कैमचात्सकी समय"}
             ls{"पेट्रोपेवलास्क-कैमचात्सकी मानक समय"}
+        }
+        "meta:Kazakhstan"{
+            ls{"कज़ाखस्तान समय"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"पूर्व कज़ाखस्तान समय"}
