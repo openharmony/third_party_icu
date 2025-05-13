@@ -513,7 +513,7 @@ bg{
         "America:Punta_Arenas"{
             ec{"Пунта Аренас"}
         }
-        "America:Punta_Arenas"{
+        "America:Coyhaique"{
             ec{"Койайке"}
         }
         "America:Rainy_River"{
