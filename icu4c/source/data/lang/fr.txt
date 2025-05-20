@@ -236,7 +236,7 @@ fr{
         grb{"grebo"}
         grc{"grec ancien"}
         gsw{"suisse allemand"}
-        gu{"goudjarati"}
+        gu{"gujarati"}
         guc{"wayuu"}
         gur{"gurenne"}
         guz{"gusii"}
@@ -716,7 +716,7 @@ fr{
         Cprt{"syllabaire chypriote"}
         Cyrl{"cyrillique"}
         Cyrs{"cyrillique (variante slavonne)"}
-        Deva{"dévanagari"}
+        Deva{"dévanâgarî"}
         Dsrt{"déséret"}
         Egyd{"démotique égyptien"}
         Egyh{"hiératique égyptien"}
@@ -729,7 +729,7 @@ fr{
         Goth{"gotique"}
         Grek{"grec"}
         Gujr{"goudjarâtî"}
-        Guru{"gourmoukhî"}
+        Guru{"gurmukhi"}
         Hanb{"han avec bopomofo"}
         Hang{"hangûl"}
         Hani{"sinogrammes"}

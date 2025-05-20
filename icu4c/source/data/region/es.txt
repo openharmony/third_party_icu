@@ -34,7 +34,7 @@ es{
         155{"Europa occidental"}
         202{"África subsahariana"}
         419{"Latinoamérica"}
-        AC{"Isla de la Ascensión"}
+        AC{"Isla Ascensión"}
         AD{"Andorra"}
         AE{"Emiratos Árabes Unidos"}
         AF{"Afganistán"}
@@ -103,7 +103,7 @@ es{
         EC{"Ecuador"}
         EE{"Estonia"}
         EG{"Egipto"}
-        EH{"Sáhara Occidental"}
+        EH{"Sahara Occidental"}
         ER{"Eritrea"}
         ES{"España"}
         ET{"Etiopía"}
@@ -129,7 +129,7 @@ es{
         GP{"Guadalupe"}
         GQ{"Guinea Ecuatorial"}
         GR{"Grecia"}
-        GS{"Islas Georgia del Sur y Sandwich del Sur"}
+        GS{"Islas Georgias del Sur y Sandwich del Sur"}
         GT{"Guatemala"}
         GU{"Guam"}
         GW{"Guinea-Bisáu"}
@@ -263,7 +263,7 @@ es{
         TH{"Tailandia"}
         TJ{"Tayikistán"}
         TK{"Tokelau"}
-        TL{"Timor-Leste"}
+        TL{"Timor Oriental"}
         TM{"Turkmenistán"}
         TN{"Túnez"}
         TO{"Tonga"}
