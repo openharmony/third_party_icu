@@ -716,7 +716,7 @@ fr{
         Cprt{"syllabaire chypriote"}
         Cyrl{"cyrillique"}
         Cyrs{"cyrillique (variante slavonne)"}
-        Deva{"dévanâgarî"}
+        Deva{"dévanagari"}
         Dsrt{"déséret"}
         Egyd{"démotique égyptien"}
         Egyh{"hiératique égyptien"}
@@ -729,7 +729,7 @@ fr{
         Goth{"gotique"}
         Grek{"grec"}
         Gujr{"goudjarâtî"}
-        Guru{"gurmukhi"}
+        Guru{"gourmoukhî"}
         Hanb{"han avec bopomofo"}
         Hang{"hangûl"}
         Hani{"sinogrammes"}
