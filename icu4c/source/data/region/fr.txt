@@ -228,7 +228,7 @@ fr{
         PW{"Palaos"}
         PY{"Paraguay"}
         QA{"Qatar"}
-        QO{"Région périphérique de l’Océanie"}
+        QO{"Région périphérique de l'Océanie"}
         RE{"La Réunion"}
         RO{"Roumanie"}
         RS{"Serbie"}
@@ -279,7 +279,7 @@ fr{
         US{"États-Unis"}
         UY{"Uruguay"}
         UZ{"Ouzbékistan"}
-        VA{"Vatican"}
+        VA{"État de la Cité du Vatican"}
         VC{"Saint-Vincent-et-les Grenadines"}
         VE{"Venezuela"}
         VG{"Îles Vierges britanniques"}
