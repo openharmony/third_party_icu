@@ -258,6 +258,9 @@ ka{
         "America:Chihuahua"{
             ec{"ჩიჰუაჰუა"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"სიუდად-ხუარესი"}
+        }
         "America:Coral_Harbour"{
             ec{"ატიკოკანი"}
         }
@@ -509,6 +512,9 @@ ka{
         }
         "America:Punta_Arenas"{
             ec{"პუნტა-არენასი"}
+        }
+        "America:Coyhaique"{
+            ec{"კოიაიკე"}
         }
         "America:Rainy_River"{
             ec{"რეინი რივერი"}
@@ -1611,6 +1617,9 @@ ka{
             ld{"იაპონიის ზაფხულის დრო"}
             lg{"იაპონიის დრო"}
             ls{"იაპონიის სტანდარტული დრო"}
+        }
+        "meta:Kazakhstan"{
+            ls{"ყაზახეთის დრო"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"აღმოსავლეთ ყაზახეთის დრო"}

@@ -510,6 +510,9 @@ da{
         "America:Punta_Arenas"{
             ec{"Punta Arenas"}
         }
+        "America:Coyhaique"{
+            ec{"Coyhaique"}
+        }
         "America:Rainy_River"{
             ec{"Rainy River"}
         }
@@ -1650,6 +1653,9 @@ da{
             ld{"Petropavlovsk-Kamchatski sommertid"}
             lg{"Petropavlovsk-Kamchatski tid"}
             ls{"Petropavlovsk-Kamchatski normaltid"}
+        }
+        "meta:Kazakhstan"{
+            ls{"Kasakhstansk tid"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"Østkasakhstansk tid"}

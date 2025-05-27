@@ -507,6 +507,9 @@ gl{
         "America:Punta_Arenas"{
             ec{"Punta Arenas"}
         }
+        "America:Coyhaique"{
+            ec{"Coyhaique"}
+        }
         "America:Rainy_River"{
             ec{"Rainy River"}
         }
@@ -1622,6 +1625,9 @@ gl{
             ld{"Horario de verán de Petropávlovsk-Kamchatski"}
             lg{"Horario de Petropávlovsk-Kamchatski"}
             ls{"Horario estándar de Petropávlovsk-Kamchatski"}
+        }
+        "meta:Kazakhstan"{
+            ls{"hora de Kazakistán"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"hora de Kazakistán Oriental"}

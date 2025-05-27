@@ -510,6 +510,9 @@ ca{
         "America:Punta_Arenas"{
             ec{"Punta Arenas"}
         }
+        "America:Coyhaique"{
+            ec{"Coyhaique"}
+        }
         "America:Rainy_River"{
             ec{"Rainy River"}
         }
@@ -1628,6 +1631,9 @@ ca{
             ld{"Horari d’estiu de Petropavlovsk de Kamtxatka"}
             lg{"Hora de Kamtxatka"}
             ls{"Hora estàndard de Petropavlovsk de Kamtxatka"}
+        }
+        "meta:Kazakhstan"{
+            ls{"Hora del Kazakhstan"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"Hora de l’est del Kazakhstan"}

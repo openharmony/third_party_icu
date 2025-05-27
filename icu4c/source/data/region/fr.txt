@@ -108,7 +108,7 @@ fr{
         ES{"Espagne"}
         ET{"Éthiopie"}
         EU{"Union européenne"}
-        EZ{"zone euro"}
+        EZ{"Zone euro"}
         FI{"Finlande"}
         FJ{"Fidji"}
         FK{"Îles Malouines"}
@@ -228,7 +228,7 @@ fr{
         PW{"Palaos"}
         PY{"Paraguay"}
         QA{"Qatar"}
-        QO{"régions éloignées de l’Océanie"}
+        QO{"Région périphérique de l'Océanie"}
         RE{"La Réunion"}
         RO{"Roumanie"}
         RS{"Serbie"}
@@ -296,7 +296,7 @@ fr{
         ZA{"Afrique du Sud"}
         ZM{"Zambie"}
         ZW{"Zimbabwe"}
-        ZZ{"région indéterminée"}
+        ZZ{"Région indéterminée"}
     }
     Countries%short{
         GB{"R.-U."}

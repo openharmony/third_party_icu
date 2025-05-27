@@ -259,6 +259,9 @@ zh_Hant{
         "America:Chihuahua"{
             ec{"奇華華"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"華雷斯"}
+        }
         "America:Coral_Harbour"{
             ec{"阿蒂科肯"}
         }
@@ -510,6 +513,9 @@ zh_Hant{
         }
         "America:Punta_Arenas"{
             ec{"蓬塔阿雷納斯"}
+        }
+        "America:Coyhaique"{
+            ec{"科伊艾克"}
         }
         "America:Rainy_River"{
             ec{"雨河鎮"}
@@ -1670,6 +1676,9 @@ zh_Hant{
             ld{"彼得羅巴甫洛夫斯克日光節約時間"}
             lg{"彼得羅巴甫洛夫斯克時間"}
             ls{"彼得羅巴甫洛夫斯克標準時間"}
+        }
+        "meta:Kazakhstan"{
+            ls{"哈薩克時間"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"東哈薩克時間"}

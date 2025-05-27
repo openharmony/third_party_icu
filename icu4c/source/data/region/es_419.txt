@@ -20,7 +20,7 @@ es_419{
         BA{"Bosnia-Herzegovina"}
         CG{"República del Congo"}
         CI{"Costa de Marfil"}
-        EZ{"Eurozona"}
+        EZ{"Zona del euro"}
         IC{"Islas Canarias"}
         QO{"Islas Ultramarinas"}
         TA{"Tristán da Cunha"}

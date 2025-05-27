@@ -258,6 +258,9 @@ ur{
         "America:Chihuahua"{
             ec{"چیہوآہوآ"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"سیوداد جیوریز"}
+        }
         "America:Coral_Harbour"{
             ec{"اٹیکوکن"}
         }
@@ -509,6 +512,9 @@ ur{
         }
         "America:Punta_Arenas"{
             ec{"پنٹا اریناس"}
+        }
+        "America:Coyhaique"{
+            ec{"کوہائیک"}
         }
         "America:Rainy_River"{
             ec{"رینی ریور"}
@@ -1621,6 +1627,9 @@ ur{
             ld{"پیٹروپاؤلووسک-کیمچسکی سمر ٹائم"}
             lg{"پیٹروپاؤلووسک-کیمچسکی ٹائم"}
             ls{"پیٹروپاؤلووسک-کیمچسکی اسٹینڈرڈ ٹائم"}
+        }
+        "meta:Kazakhstan"{
+            ls{"قازقستان کا وقت"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"مشرقی قزاخستان کا وقت"}

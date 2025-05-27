@@ -258,6 +258,9 @@ el{
         "America:Chihuahua"{
             ec{"Τσιουάουα"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"Σιουδάδ Χουάρες"}
+        }
         "America:Coral_Harbour"{
             ec{"Ατικόκαν"}
         }
@@ -509,6 +512,9 @@ el{
         }
         "America:Punta_Arenas"{
             ec{"Πούντα Αρένας"}
+        }
+        "America:Coyhaique"{
+            ec{"Coyhaique"}
         }
         "America:Rainy_River"{
             ec{"Ρέινι Ρίβερ"}
@@ -1633,6 +1639,9 @@ el{
             ld{"Θερινή ώρα Πετροπαβλόβσκ-Καμτσάτσκι"}
             lg{"Ώρα Καμτσάτκα"}
             ls{"Χειμερινή ώρα Πετροπαβλόβσκ-Καμτσάτσκι"}
+        }
+        "meta:Kazakhstan"{
+            ls{"Ώρα Καζακστάν"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"Ώρα Ανατολικού Καζακστάν"}

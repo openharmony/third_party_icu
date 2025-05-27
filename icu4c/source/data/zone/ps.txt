@@ -258,6 +258,9 @@ ps{
         "America:Chihuahua"{
             ec{"چھواھوا"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"سیوداد جیوریز"}
+        }
         "America:Coral_Harbour"{
             ec{"اتیکوکن"}
         }
@@ -1605,6 +1608,9 @@ ps{
             ld{"جاپان د ورځې روښانه وخت"}
             lg{"جاپان وخت"}
             ls{"جاپان معياري وخت"}
+        }
+        "meta:Kazakhstan"{
+            ls{"قزاقستان وخت"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"ختيځ قازقستان وخت"}

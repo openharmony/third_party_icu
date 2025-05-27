@@ -510,6 +510,9 @@ az{
         "America:Punta_Arenas"{
             ec{"Punta Arenas"}
         }
+        "America:Coyhaique"{
+            ec{"Koyayke"}
+        }
         "America:Rainy_River"{
             ec{"Reyni Çayı"}
         }
@@ -1605,6 +1608,9 @@ az{
             ld{"Yaponiya Yay Vaxtı"}
             lg{"Yaponiya Vaxtı"}
             ls{"Yaponiya Standart Vaxtı"}
+        }
+        "meta:Kazakhstan"{
+            ls{"Qazaxıstan vaxtı"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"Şərqi Qazaxıstan Vaxtı"}

@@ -258,6 +258,9 @@ mk{
         "America:Chihuahua"{
             ec{"Чивава"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"Сиудад Хуарез"}
+        }
         "America:Coral_Harbour"{
             ec{"Корал Харбор"}
         }
@@ -509,6 +512,9 @@ mk{
         }
         "America:Punta_Arenas"{
             ec{"Пунта Аренас"}
+        }
+        "America:Coyhaique"{
+            ec{"Којајке"}
         }
         "America:Rainy_River"{
             ec{"Рејни Ривер"}
@@ -1630,6 +1636,9 @@ mk{
             ld{"Летно сметање на времето во Јапонија"}
             lg{"Време во Јапонија"}
             ls{"Стандардно време во Јапонија"}
+        }
+        "meta:Kazakhstan"{
+            ls{"Време во Казахстан"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"Време во Источен Казахстан"}

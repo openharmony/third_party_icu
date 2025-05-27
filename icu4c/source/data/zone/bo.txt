@@ -6,5 +6,8 @@ bo{
         "Etc:Unknown"{
             ec{"མ་རྟོགས་པ"}
         }
+        "America:Coyhaique"{
+            ec{"ཁོ་ཡི་ཧའེ་ཁེ།"}
+        }
     }
 }
