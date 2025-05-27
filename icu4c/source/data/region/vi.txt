@@ -107,7 +107,7 @@ vi{
         ER{"Eritrea"}
         ES{"Tây Ban Nha"}
         ET{"Ethiopia"}
-        EU{"Liên minh châu Âu"}
+        EU{"Liên minh Châu Âu"}
         EZ{"Khu vực đồng Euro"}
         FI{"Phần Lan"}
         FJ{"Fiji"}
@@ -135,7 +135,7 @@ vi{
         GW{"Guinea-Bissau"}
         GY{"Guyana"}
         HK{"Hồng Kông (Trung Quốc)"}
-        HM{"Đảo Heard và Quần đảo McDonald"}
+        HM{"Quần đảo Heard và McDonald"}
         HN{"Honduras"}
         HR{"Croatia"}
         HT{"Haiti"}

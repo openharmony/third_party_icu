@@ -108,7 +108,7 @@ es{
         ES{"España"}
         ET{"Etiopía"}
         EU{"Unión Europea"}
-        EZ{"zona del euro"}
+        EZ{"Zona del euro"}
         FI{"Finlandia"}
         FJ{"Fiyi"}
         FK{"Islas Malvinas"}
