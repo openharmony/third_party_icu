@@ -258,6 +258,9 @@ ne{
         "America:Chihuahua"{
             ec{"चिहुवाहुवा"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"जुआरेज सहर"}
+        }
         "America:Coral_Harbour"{
             ec{"एटिकोकान"}
         }
@@ -509,6 +512,9 @@ ne{
         }
         "America:Punta_Arenas"{
             ec{"पुन्टा अरिनाज"}
+        }
+        "America:Coyhaique"{
+            ec{"Coyhaique"}
         }
         "America:Rainy_River"{
             ec{"रेनिरिभर"}
@@ -1611,6 +1617,9 @@ ne{
             ld{"जापान दिवा समय"}
             lg{"जापान समय"}
             ls{"जापान मानक समय"}
+        }
+        "meta:Kazakhstan"{
+            ls{"काजकस्तानको समय"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"पूर्वी काजकस्तान समय"}

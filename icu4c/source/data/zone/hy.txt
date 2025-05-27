@@ -258,6 +258,9 @@ hy{
         "America:Chihuahua"{
             ec{"Չիուաուա"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"Սյուդադ Խուարես"}
+        }
         "America:Coral_Harbour"{
             ec{"Ատիկոկան"}
         }
@@ -1611,6 +1614,9 @@ hy{
             ld{"Ճապոնիայի ամառային ժամանակ"}
             lg{"Ճապոնիայի ժամանակ"}
             ls{"Ճապոնիայի ստանդարտ ժամանակ"}
+        }
+        "meta:Kazakhstan"{
+            ls{"Ղազախստանի ժամանակ"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"Արևելյան Ղազախստանի ժամանակ"}

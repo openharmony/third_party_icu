@@ -236,7 +236,7 @@ fr{
         grb{"grebo"}
         grc{"grec ancien"}
         gsw{"suisse allemand"}
-        gu{"goudjarati"}
+        gu{"gujarati"}
         guc{"wayuu"}
         gur{"gurenne"}
         guz{"gusii"}

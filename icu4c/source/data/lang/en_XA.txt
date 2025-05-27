@@ -181,7 +181,7 @@ en_XA{
         eka{"[Éķåĵûķ one]"}
         el{"[Ĝŕééķ one]"}
         elx{"[Éļåɱîţé one]"}
-        en{"[Éñĝļîšĥ one]"}
+        en{"[Pseudo locale]"}
         en_AU{"[Åûšţŕåļîåñ Éñĝļîšĥ one two three]"}
         en_CA{"[Çåñåðîåñ Éñĝļîšĥ one two]"}
         en_GB{"[Ɓŕîţîšĥ Éñĝļîšĥ one two]"}

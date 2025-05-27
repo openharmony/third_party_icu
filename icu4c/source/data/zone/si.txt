@@ -258,6 +258,9 @@ si{
         "America:Chihuahua"{
             ec{"චිහුආහුආ"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"සියුඩාඩ් ජුවාරෙස්"}
+        }
         "America:Coral_Harbour"{
             ec{"ඇටිකොකන්"}
         }
@@ -509,6 +512,9 @@ si{
         }
         "America:Punta_Arenas"{
             ec{"පුන්ටා ඇරිනාස්"}
+        }
+        "America:Coyhaique"{
+            ec{"කොයිහයික්වේ"}
         }
         "America:Rainy_River"{
             ec{"රෙයිනි ගඟ"}
@@ -1611,6 +1617,9 @@ si{
             ld{"ජපාන දහවල් වේලාව"}
             lg{"ජපාන වේලාව"}
             ls{"ජපාන සම්මත වේලාව"}
+        }
+        "meta:Kazakhstan"{
+            ls{"කසකස්තාන වේලාව"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"නැගෙනහිර කසකස්තාන වේලාව"}

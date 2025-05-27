@@ -258,6 +258,9 @@ lo{
         "America:Chihuahua"{
             ec{"ຊິວາວາ"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"ຊີອູດັດ ຄົວເຣຊ"}
+        }
         "America:Coral_Harbour"{
             ec{"ອາທິໂຄຄານ"}
         }
@@ -509,6 +512,9 @@ lo{
         }
         "America:Punta_Arenas"{
             ec{"ພຸນທາ ອະຣີນາສ໌"}
+        }
+        "America:Coyhaique"{
+            ec{"ຄອຍໄຮເກ້"}
         }
         "America:Rainy_River"{
             ec{"ເຣນນີ ຣິເວີ"}
@@ -1637,6 +1643,9 @@ lo{
             ld{"ເວ​ລາ​ຕອນ​ທ່ຽງ​ຍີ່​ປຸ່ນ"}
             lg{"ເວ​ລາ​ຍີ່​ປຸ່ນ"}
             ls{"ເວ​ລາ​ມາດ​ຕະ​ຖານ​ຍີ່​ປຸ່ນ"}
+        }
+        "meta:Kazakhstan"{
+            ls{"ເວລາຄາຊັກສຖານ"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"ເວ​ລາ​ຄາ​ຊັກ​ສ​ຖານ​ຕາ​ເວັນ​ອອກ"}

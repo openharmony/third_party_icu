@@ -258,6 +258,9 @@ th{
         "America:Chihuahua"{
             ec{"ชีวาวา"}
         }
+        "America:Ciudad_Juarez"{
+            ec{"ซิวดัดฮัวเรซ"}
+        }
         "America:Coral_Harbour"{
             ec{"คอรัลฮาร์เบอร์"}
         }
@@ -509,6 +512,9 @@ th{
         }
         "America:Punta_Arenas"{
             ec{"ปุนตาอาเรนัส"}
+        }
+        "America:Coyhaique"{
+            ec{"โกไยเก"}
         }
         "America:Rainy_River"{
             ec{"เรนนี่ริเวอร์"}
@@ -1647,6 +1653,9 @@ th{
             ld{"เวลาฤดูร้อนเปโตรปัฟลอฟสค์-คัมชัตสกี"}
             lg{"เวลาคัมชัตคา"}
             ls{"เวลาเปโตรปัฟลอฟสค์-คัมชัตสกี"}
+        }
+        "meta:Kazakhstan"{
+            ls{"เวลาคาซัคสถาน"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"เวลาคาซัคสถานตะวันออก"}

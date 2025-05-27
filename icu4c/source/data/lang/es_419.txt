@@ -49,7 +49,7 @@ es_419{
         Gujr{"gujarati"}
         Hrkt{"katakana o hiragana"}
         Laoo{"lao"}
-        Latn{"latín"}
+        Latn{"alfabeto latino"}
         Mlym{"malabar"}
         Mtei{"manipuri"}
         Syrc{"siríaco"}
