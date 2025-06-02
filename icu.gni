@@ -17,6 +17,6 @@ declare_args() {
   icu_support_libbegetutil = true
   distro_tzdata_dir = "\"/system/etc/tzdata_distro\""
   system_tzdata_dir = "\"/system/etc/icu_tzdata\""
-  icu_dat_name = "icudt72l"
+  icu_dat_name = "icudt74l"
   icu_data_filter_dir = "full"
 }
