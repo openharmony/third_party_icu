@@ -1956,10 +1956,6 @@ es{
         "meta:Yukon"{
             ls{"hora de Yukón"}
         }
-        fallbackFormat{"{1} ({0})"}
-        gmtFormat{"GMT{0}"}
-        gmtZeroFormat{"GMT"}
-        hourFormat{"+HH:mm;-HH:mm"}
         regionFormat{"hora de {0}"}
         regionFormatDaylight{"horario de verano de {0}"}
         regionFormatStandard{"horario estándar de {0}"}

@@ -3,26 +3,15 @@
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 en_ZA{
     %%Parent{"en_001"}
-    AuxExemplarCharacters{
-        "[á à ă â å ä ā æ ç ḓ é è ĕ ê ë ē í ì ĭ î ï ī ḽ ñ ṅ ṋ ó ò ŏ ô ö ø ō œ š ṱ ú ù"
-        " ŭ û ü ū ÿ]"
-    }
+    AuxExemplarCharacters{"[áàăâåäā æ ç ḓ éèĕêëē íìĭîïī ḽ ñṅṋ óòŏôöøō œ š ṱ úùŭûüū ÿ]"}
     ExemplarCharactersNumbers{"[  \\- ‑ , % ‰ + 0 1 2 3 4 5 6 7 8 9]"}
-    NumberElements{
-        latn{
-            symbols{
-                decimal{","}
-                group{" "}
-            }
-        }
-    }
     calendar{
         generic{
             DateTimePatterns{
-                "h:mm:ss a zzzz",
-                "h:mm:ss a z",
-                "h:mm:ss a",
-                "h:mm a",
+                "HH:mm:ss zzzz",
+                "HH:mm:ss z",
+                "HH:mm:ss",
+                "HH:mm",
                 "EEEE, dd MMMM y G",
                 "dd MMMM y G",
                 "dd MMM y G",
@@ -56,10 +45,10 @@ en_ZA{
         }
         gregorian{
             DateTimePatterns{
-                "h:mm:ss a zzzz",
-                "h:mm:ss a z",
-                "h:mm:ss a",
-                "h:mm a",
+                "HH:mm:ss zzzz",
+                "HH:mm:ss z",
+                "HH:mm:ss",
+                "HH:mm",
                 "EEEE, dd MMMM y",
                 "dd MMMM y",
                 "dd MMM y",
@@ -89,48 +78,6 @@ en_ZA{
                 yMMMEd{"E, dd MMM y"}
                 yMMMd{"dd MMM y"}
                 yMd{"y/MM/dd"}
-            }
-            intervalFormats{
-                MEd{
-                    M{"E, MM/dd – E, MM/dd"}
-                    d{"E, MM/dd – E, MM/dd"}
-                }
-                MMMEd{
-                    M{"E, dd MMM – E, dd MMM"}
-                    d{"E, dd – E, dd MMM"}
-                }
-                MMMd{
-                    M{"dd MMM – dd MMM"}
-                    d{"dd – dd MMM"}
-                }
-                Md{
-                    M{"MM/dd – MM/dd"}
-                    d{"MM/dd – MM/dd"}
-                }
-                yM{
-                    M{"y/MM – y/MM"}
-                    y{"y/MM – y/MM"}
-                }
-                yMEd{
-                    M{"E, y/MM/dd – E, y/MM/dd"}
-                    d{"E, y/MM/dd – E, y/MM/dd"}
-                    y{"E, y/MM/dd – E, y/MM/dd"}
-                }
-                yMMMEd{
-                    M{"E, dd MMM – E, dd MMM y"}
-                    d{"E, dd – E, dd MMM y"}
-                    y{"E, dd MMM y – E, dd MMM y"}
-                }
-                yMMMd{
-                    M{"dd MMM – dd MMM y"}
-                    d{"dd–dd MMM y"}
-                    y{"dd MMM y – dd MMM y"}
-                }
-                yMd{
-                    M{"y/MM/dd – y/MM/dd"}
-                    d{"y/MM/dd – y/MM/dd"}
-                    y{"y/MM/dd – y/MM/dd"}
-                }
             }
         }
     }
