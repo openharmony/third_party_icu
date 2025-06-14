@@ -91,7 +91,9 @@ zh{
             10p-2{"厘{0}"}
             10p-21{"仄{0}"}
             10p-24{"幺{0}"}
+            10p-27{"柔{0}"}
             10p-3{"毫{0}"}
+            10p-30{"亏{0}"}
             10p-6{"微{0}"}
             10p-9{"纳{0}"}
             10p1{"十{0}"}
@@ -101,7 +103,9 @@ zh{
             10p2{"百{0}"}
             10p21{"泽{0}"}
             10p24{"尧{0}"}
+            10p27{"容{0}"}
             10p3{"千{0}"}
+            10p30{"昆{0}"}
             10p6{"兆{0}"}
             10p9{"吉{0}"}
             per{"每{1}{0}"}
@@ -315,7 +319,7 @@ zh{
             }
             foodcalorie{
                 dnam{"卡路里"}
-                other{"{0}卡路里"}
+                other{"{0}大卡"}
             }
             joule{
                 dnam{"焦耳"}
@@ -377,7 +381,7 @@ zh{
             }
             dot-per-centimeter{
                 dnam{"点/厘米"}
-                other{"{0} 点/厘米"}
+                other{"{0}点/厘米"}
             }
             dot-per-inch{
                 dnam{"点/英寸"}
@@ -397,11 +401,11 @@ zh{
             }
             pixel-per-centimeter{
                 dnam{"像素/厘米"}
-                other{"{0} 像素/厘米"}
+                other{"{0}像素/厘米"}
             }
             pixel-per-inch{
                 dnam{"像素/英寸"}
-                other{"{0} 像素/英寸"}
+                other{"{0}像素/英寸"}
             }
         }
         length{
@@ -532,6 +536,7 @@ zh{
             gram{
                 dnam{"克"}
                 other{"{0}克"}
+                per{"每克{0}"}
             }
             kilogram{
                 dnam{"千克"}
@@ -646,6 +651,10 @@ zh{
             }
         }
         speed{
+            beaufort{
+                dnam{"蒲福风级"}
+                other{"{0}级"}
+            }
             kilometer-per-hour{
                 dnam{"公里/小时"}
                 other{"每小时{0}公里"}
@@ -906,9 +915,17 @@ zh{
             times{"{0}⋅{1}"}
         }
         concentr{
-            percent{
-                dnam{"%"}
-                other{"{0}%"}
+            karat{
+                other{"{0}kt"}
+            }
+            milligram-ofglucose-per-deciliter{
+                other{"{0} mg/dL"}
+            }
+            millimole-per-liter{
+                other{"{0} mmol/L"}
+            }
+            mole{
+                other{"{0}mol"}
             }
         }
         consumption{
@@ -1078,7 +1095,7 @@ zh{
                 other{"{0}dpcm"}
             }
             dot-per-inch{
-                dnam{"dpi"}
+                other{"{0}dpi"}
             }
             em{
                 other{"{0}em"}
@@ -1275,6 +1292,7 @@ zh{
                 other{"{0}mW"}
             }
             watt{
+                dnam{"W"}
                 other{"{0}W"}
             }
         }
@@ -1311,6 +1329,9 @@ zh{
             }
         }
         speed{
+            beaufort{
+                other{"B{0}"}
+            }
             kilometer-per-hour{
                 dnam{"km/h"}
                 other{"{0}km/h"}
@@ -1685,7 +1706,7 @@ zh{
             }
             foodcalorie{
                 dnam{"大卡"}
-                other{"{0}大卡"}
+                other{"{0} Cal"}
             }
             joule{
                 dnam{"焦耳"}
@@ -1715,6 +1736,10 @@ zh{
             }
         }
         graphics{
+            dot{
+                dnam{"点"}
+                other{"{0}点"}
+            }
             dot-per-centimeter{
                 dnam{"dpcm"}
                 other{"{0} dpcm"}

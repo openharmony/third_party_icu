@@ -4,5 +4,6 @@
 ar_TD{
     NumberElements{
         default{"latn"}
+        default_latn{"latn"}
     }
 }

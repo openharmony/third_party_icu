@@ -934,7 +934,7 @@ zh{
             ec{"布罗肯希尔"}
         }
         "Australia:Currie"{
-            ec{"库利"}
+            ec{"柯里"}
         }
         "Australia:Darwin"{
             ec{"达尔文"}
@@ -949,7 +949,7 @@ zh{
             ec{"林德曼"}
         }
         "Australia:Lord_Howe"{
-            ec{"豪勋爵"}
+            ec{"豪勋爵岛"}
         }
         "Australia:Melbourne"{
             ec{"墨尔本"}
@@ -1961,9 +1961,6 @@ zh{
             ls{"育空时间"}
         }
         fallbackFormat{"{1}（{0}）"}
-        gmtFormat{"GMT{0}"}
-        gmtZeroFormat{"GMT"}
-        hourFormat{"+HH:mm;-HH:mm"}
         regionFormat{"{0}时间"}
         regionFormatDaylight{"{0}夏令时间"}
         regionFormatStandard{"{0}标准时间"}
