@@ -298,13 +298,13 @@ zh{
         ZW{"津巴布韦"}
         ZZ{"未知地区"}
     }
+    Countries%chagos{
+        IO{"查戈斯群岛"}
+    }
     Countries%short{
-        GB{"英国"}
         HK{"香港"}
         MO{"澳门"}
         PS{"巴勒斯坦"}
-        UN{"联合国"}
-        US{"美国"}
     }
     Countries%variant{
         CD{"刚果民主共和国"}

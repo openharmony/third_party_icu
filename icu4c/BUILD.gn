@@ -166,6 +166,9 @@ icu_common_source = [
   "//third_party/icu/icu4c/source/common/ucharstrie.cpp",
   "//third_party/icu/icu4c/source/common/uiter.cpp",
   "//third_party/icu/icu4c/source/common/messagepattern.cpp",
+  "//third_party/icu/icu4c/source/common/mlbe.cpp",
+  "//third_party/icu/icu4c/source/common/ulocale.cpp",
+  "//third_party/icu/icu4c/source/common/ulocbuilder.cpp",
   "//third_party/icu/icu4c/source/common/servrbf.cpp",
   "//third_party/icu/icu4c/source/common/rbbirb.cpp",
   "//third_party/icu/icu4c/source/common/uinit.cpp",
@@ -498,6 +501,8 @@ icu_i18n_source = [
   "//third_party/icu/icu4c/source/i18n/tznames.cpp",
   "//third_party/icu/icu4c/source/i18n/remtrans.cpp",
   "//third_party/icu/icu4c/source/i18n/nfrule.cpp",
+  "//third_party/icu/icu4c/source/i18n/iso8601cal.cpp",
+  "//third_party/icu/icu4c/source/i18n/number_simple.cpp",
 ]
 
 ohos_shared_library("shared_icuuc") {

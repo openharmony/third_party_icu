@@ -1,0 +1,10 @@
+[
+  {
+    "Name": "ICU - International Components for Unicode",
+    "License": "Unicode-DFS-2022",
+    "License File": "LICENSE",
+    "Version Number": "74.2",
+    "Upstream URL": "https://github.com/unicode-org/icu",
+    "Description": "ICU is a mature, widely used set of portable C/C++ and Java libraries for Unicode support, software internationalization and globalization (i18n/g11n). The packages are mirrors of the main website."
+  }
+]
