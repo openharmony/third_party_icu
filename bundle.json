@@ -2,7 +2,7 @@
     "name": "@ohos/icu",
     "description": "ICU is a mature, widely used set of portable C/C++ and Java libraries for Unicode support, software internationalization and globalization (i18n/g11n). The packages are mirrors of the main website.",
     "version": "3.1",
-    "license": "ICU,BSD 3-Clause",
+    "license": "BSD-3-Clause",
     "publishAs": "code-segment",
     "segment": {
         "destPath": "third_party/icu"
