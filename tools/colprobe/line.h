@@ -44,16 +44,16 @@ public:
   static void copyArray(Line *dest, const Line *src, int32_t size);
   Line();
   Line(const Line &other);
-  Line(const char16_t* name, int32_t len);
+  Line(const UChar* name, int32_t len);
   Line(const UnicodeString &string);
-  Line(const char16_t name);
+  Line(const UChar name);
   Line(const char *buff, int32_t buffLen, UErrorCode &status);
   ~Line();
   Line & operator=(const Line &other);
   UBool operator==(const Line &other) const;
   UBool operator!=(const Line &other) const;
   void setToConcat(const Line *first, const Line *second);
-  void setName(const char16_t* name, int32_t len);
+  void setName(const UChar* name, int32_t len);
   UnicodeString toString(UBool pretty = false);
   UnicodeString toBundleString();
   UnicodeString toHTMLString();
@@ -63,25 +63,25 @@ public:
 
   UnicodeString strengthIndent(UColAttributeValue strength, int indentSize, UnicodeString &result);
   UnicodeString strengthToString(UColAttributeValue strength, UBool pretty, UBool html = false);
-  UnicodeString stringToName(char16_t *string, int32_t len);
+  UnicodeString stringToName(UChar *string, int32_t len);
   void setTo(const UnicodeString &string);
   void setTo(const UChar32 n);
   UBool equals(const Line &other) const;
   Line *nextInteresting();
-  void append(const char16_t n);
-  void append(const char16_t* n, int32_t length);
+  void append(const UChar n);
+  void append(const UChar* n, int32_t length);
   void append(const Line &l);
   void clear();
   void swapCase();
-  void swapCase(char16_t *string, int32_t &sLen);
+  void swapCase(UChar *string, int32_t &sLen);
   UnicodeString dumpSortkey();
   void init();
 
   
 public:
-    char16_t  name[25];
+    UChar     name[25];
     int32_t   len;
-    char16_t  expansionString[25];
+    UChar     expansionString[25];
     int32_t   expLen;
 
     UColAttributeValue strength;

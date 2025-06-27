@@ -24,7 +24,7 @@
 
 /* Print a ustring to the specified FILE* in the default codepage */
 U_CAPI void
-uprint(const char16_t *s,
+uprint(const UChar *s,
 	   FILE *f,
 	   UErrorCode *status)
 {
@@ -32,8 +32,8 @@ uprint(const char16_t *s,
   UConverter *converter;
   char buf [BUF_SIZE];
   int32_t sourceLen;
-  const char16_t *mySource;
-  const char16_t *mySourceEnd;
+  const UChar *mySource;
+  const UChar *mySourceEnd;
   char *myTarget;
   int32_t arraySize;
 
@@ -59,7 +59,7 @@ uprint(const char16_t *s,
 
 	/* perform the conversion */
 	ucnv_fromUnicode(converter, &myTarget,	myTarget + arraySize,
-			 &mySource, mySourceEnd, nullptr,
+			 &mySource, mySourceEnd, NULL,
 			 true, status);
 
 	/* Write the converted data to the FILE* */

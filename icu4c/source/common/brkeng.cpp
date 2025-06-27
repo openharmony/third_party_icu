@@ -21,7 +21,6 @@
 #include "unicode/uscript.h"
 #include "unicode/ucharstrie.h"
 #include "unicode/bytestrie.h"
-#include "unicode/rbbi.h"
 
 #include "brkeng.h"
 #include "cmemory.h"
@@ -71,21 +70,19 @@ UnhandledEngine::~UnhandledEngine() {
 }
 
 UBool
-UnhandledEngine::handles(UChar32 c, const char* locale) const {
-    (void)locale; // Unused
+UnhandledEngine::handles(UChar32 c) const {
     return fHandled && fHandled->contains(c);
 }
 
 int32_t
 UnhandledEngine::findBreaks( UText *text,
-                             int32_t startPos,
+                             int32_t /* startPos */,
                              int32_t endPos,
                              UVector32 &/*foundBreaks*/,
                              UBool /* isPhraseBreaking */,
                              UErrorCode &status) const {
     if (U_FAILURE(status)) return 0;
-    utext_setNativeIndex(text, startPos);
-    UChar32 c = utext_current32(text);
+    UChar32 c = utext_current32(text); 
     while((int32_t)utext_getNativeIndex(text) < endPos && fHandled->contains(c)) {
         utext_next32(text);            // TODO:  recast loop to work with post-increment operations.
         c = utext_current32(text);
@@ -123,39 +120,41 @@ ICULanguageBreakFactory::~ICULanguageBreakFactory() {
     }
 }
 
-void ICULanguageBreakFactory::ensureEngines(UErrorCode& status) {
-    static UMutex gBreakEngineMutex;
-    Mutex m(&gBreakEngineMutex);
-    if (fEngines == nullptr) {
-        LocalPointer<UStack>  engines(new UStack(uprv_deleteUObject, nullptr, status), status);
-        if (U_SUCCESS(status)) {
-            fEngines = engines.orphan();
-        }
-    }
+U_NAMESPACE_END
+U_CDECL_BEGIN
+static void U_CALLCONV _deleteEngine(void *obj) {
+    delete (const icu::LanguageBreakEngine *) obj;
 }
+U_CDECL_END
+U_NAMESPACE_BEGIN
 
 const LanguageBreakEngine *
-ICULanguageBreakFactory::getEngineFor(UChar32 c, const char* locale) {
-    const LanguageBreakEngine *lbe = nullptr;
+ICULanguageBreakFactory::getEngineFor(UChar32 c) {
+    const LanguageBreakEngine *lbe = NULL;
     UErrorCode  status = U_ZERO_ERROR;
-    ensureEngines(status);
-    if (U_FAILURE(status) ) {
-        // Note: no way to return error code to caller.
-        return nullptr;
-    }
 
     static UMutex gBreakEngineMutex;
     Mutex m(&gBreakEngineMutex);
-    int32_t i = fEngines->size();
-    while (--i >= 0) {
-        lbe = (const LanguageBreakEngine *)(fEngines->elementAt(i));
-        if (lbe != nullptr && lbe->handles(c, locale)) {
-            return lbe;
+
+    if (fEngines == nullptr) {
+        LocalPointer<UStack>  engines(new UStack(_deleteEngine, nullptr, status), status);
+        if (U_FAILURE(status) ) {
+            // Note: no way to return error code to caller.
+            return nullptr;
+        }
+        fEngines = engines.orphan();
+    } else {
+        int32_t i = fEngines->size();
+        while (--i >= 0) {
+            lbe = (const LanguageBreakEngine *)(fEngines->elementAt(i));
+            if (lbe != NULL && lbe->handles(c)) {
+                return lbe;
+            }
         }
     }
-
+    
     // We didn't find an engine. Create one.
-    lbe = loadEngineFor(c, locale);
+    lbe = loadEngineFor(c);
     if (lbe != nullptr) {
         fEngines->push((void *)lbe, status);
     }
@@ -163,7 +162,7 @@ ICULanguageBreakFactory::getEngineFor(UChar32 c, const char* locale) {
 }
 
 const LanguageBreakEngine *
-ICULanguageBreakFactory::loadEngineFor(UChar32 c, const char*) {
+ICULanguageBreakFactory::loadEngineFor(UChar32 c) {
     UErrorCode status = U_ZERO_ERROR;
     UScriptCode code = uscript_getScript(c, &status);
     if (U_SUCCESS(status)) {
@@ -186,7 +185,7 @@ ICULanguageBreakFactory::loadEngineFor(UChar32 c, const char*) {
         }
         status = U_ZERO_ERROR;  // fallback to dictionary based
         DictionaryMatcher *m = loadDictionaryMatcherFor(code);
-        if (m != nullptr) {
+        if (m != NULL) {
             switch(code) {
             case USCRIPT_THAI:
                 engine = new ThaiBreakEngine(m, status);
@@ -231,17 +230,17 @@ ICULanguageBreakFactory::loadEngineFor(UChar32 c, const char*) {
             default:
                 break;
             }
-            if (engine == nullptr) {
+            if (engine == NULL) {
                 delete m;
             }
             else if (U_FAILURE(status)) {
                 delete engine;
-                engine = nullptr;
+                engine = NULL;
             }
             return engine;
         }
     }
-    return nullptr;
+    return NULL;
 }
 
 DictionaryMatcher *
@@ -251,16 +250,16 @@ ICULanguageBreakFactory::loadDictionaryMatcherFor(UScriptCode script) {
     UResourceBundle *b = ures_open(U_ICUDATA_BRKITR, "", &status);
     b = ures_getByKeyWithFallback(b, "dictionaries", b, &status);
     int32_t dictnlength = 0;
-    const char16_t *dictfname =
+    const UChar *dictfname =
         ures_getStringByKeyWithFallback(b, uscript_getShortName(script), &dictnlength, &status);
     if (U_FAILURE(status)) {
         ures_close(b);
-        return nullptr;
+        return NULL;
     }
     CharString dictnbuf;
     CharString ext;
-    const char16_t *extStart = u_memrchr(dictfname, 0x002e, dictnlength);  // last dot
-    if (extStart != nullptr) {
+    const UChar *extStart = u_memrchr(dictfname, 0x002e, dictnlength);  // last dot
+    if (extStart != NULL) {
         int32_t len = (int32_t)(extStart - dictfname);
         ext.appendInvariantChars(UnicodeString(false, extStart + 1, dictnlength - len - 1), status);
         dictnlength = len;
@@ -275,93 +274,29 @@ ICULanguageBreakFactory::loadDictionaryMatcherFor(UScriptCode script) {
         const int32_t *indexes = (const int32_t *)data;
         const int32_t offset = indexes[DictionaryData::IX_STRING_TRIE_OFFSET];
         const int32_t trieType = indexes[DictionaryData::IX_TRIE_TYPE] & DictionaryData::TRIE_TYPE_MASK;
-        DictionaryMatcher *m = nullptr;
+        DictionaryMatcher *m = NULL;
         if (trieType == DictionaryData::TRIE_TYPE_BYTES) {
             const int32_t transform = indexes[DictionaryData::IX_TRANSFORM];
             const char *characters = (const char *)(data + offset);
             m = new BytesDictionaryMatcher(characters, transform, file);
         }
         else if (trieType == DictionaryData::TRIE_TYPE_UCHARS) {
-            const char16_t *characters = (const char16_t *)(data + offset);
+            const UChar *characters = (const UChar *)(data + offset);
             m = new UCharsDictionaryMatcher(characters, file);
         }
-        if (m == nullptr) {
+        if (m == NULL) {
             // no matcher exists to take ownership - either we are an invalid 
             // type or memory allocation failed
             udata_close(file);
         }
         return m;
-    } else if (dictfname != nullptr) {
+    } else if (dictfname != NULL) {
         // we don't have a dictionary matcher.
-        // returning nullptr here will cause us to fail to find a dictionary break engine, as expected
+        // returning NULL here will cause us to fail to find a dictionary break engine, as expected
         status = U_ZERO_ERROR;
-        return nullptr;
+        return NULL;
     }
-    return nullptr;
-}
-
-
-void ICULanguageBreakFactory::addExternalEngine(
-        ExternalBreakEngine* external, UErrorCode& status) {
-    LocalPointer<ExternalBreakEngine> engine(external, status);
-    ensureEngines(status);
-    LocalPointer<BreakEngineWrapper> wrapper(
-        new BreakEngineWrapper(engine.orphan(), status), status);
-    static UMutex gBreakEngineMutex;
-    Mutex m(&gBreakEngineMutex);
-    fEngines->push(wrapper.getAlias(), status);
-    wrapper.orphan();
-}
-
-BreakEngineWrapper::BreakEngineWrapper(
-    ExternalBreakEngine* engine, UErrorCode &status) : delegate(engine, status) {
-}
-
-BreakEngineWrapper::~BreakEngineWrapper() {
-}
-
-UBool BreakEngineWrapper::handles(UChar32 c, const char* locale) const {
-    return delegate->isFor(c, locale);
-}
-
-int32_t BreakEngineWrapper::findBreaks(
-    UText *text,
-    int32_t startPos,
-    int32_t endPos,
-    UVector32 &foundBreaks,
-    UBool /* isPhraseBreaking */,
-    UErrorCode &status) const {
-    if (U_FAILURE(status)) return 0;
-    int32_t result = 0;
-
-    // Find the span of characters included in the set.
-    //   The span to break begins at the current position in the text, and
-    //   extends towards the start or end of the text, depending on 'reverse'.
-
-    utext_setNativeIndex(text, startPos);
-    int32_t start = (int32_t)utext_getNativeIndex(text);
-    int32_t current;
-    int32_t rangeStart;
-    int32_t rangeEnd;
-    UChar32 c = utext_current32(text);
-    while((current = (int32_t)utext_getNativeIndex(text)) < endPos && delegate->handles(c)) {
-        utext_next32(text);         // TODO:  recast loop for postincrement
-        c = utext_current32(text);
-    }
-    rangeStart = start;
-    rangeEnd = current;
-    int32_t beforeSize = foundBreaks.size();
-    int32_t additionalCapacity = rangeEnd - rangeStart + 1;
-    // enlarge to contains (rangeEnd-rangeStart+1) more items
-    foundBreaks.ensureCapacity(beforeSize+additionalCapacity, status);
-    if (U_FAILURE(status)) return 0;
-    foundBreaks.setSize(beforeSize + beforeSize+additionalCapacity);
-    result = delegate->fillBreaks(text, rangeStart, rangeEnd, foundBreaks.getBuffer()+beforeSize,
-                                  additionalCapacity, status);
-    if (U_FAILURE(status)) return 0;
-    foundBreaks.setSize(beforeSize + result);
-    utext_setNativeIndex(text, current);
-    return result;
+    return NULL;
 }
 
 U_NAMESPACE_END

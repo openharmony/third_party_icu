@@ -220,7 +220,7 @@ Note that the examples may not reflect current CLDR data.
 | `F` | day of week in month | `F` | 2 (2nd Wed in July) |
 | `g` | modified julian day | `g` | 2451334 |
 | `E` | day of week | `E,` `EE`, or `EEE`<br/>`EEEE`<br/>`EEEEE`<br/>`EEEEEE` | Tue<br/>Tuesday<br/>T<br/>Tu |
-| `e` | local day of week<br/>example: if Monday is 1st day, Tuesday is 2nd ) | `e`<br>`ee`<br/>`eee`<br/>`eeee`<br/>`eeeee`<br/>`eeeeee` | 2<br>02<br/>Tue<br/>Tuesday<br/>T<br/>Tu |
+| `e` | local day of week<br/>example: if Monday is 1st day, Tuesday is 2nd ) | `e` or `ee`<br/>`eee`<br/>`eeee`<br/>`eeeee`<br/>`eeeeee` | 2<br/>Tue<br/>Tuesday<br/>T<br/>Tu |
 | `c` | stand-alone local day of week | `c` or `cc`<br/>`ccc`<br/>`cccc`<br/>`ccccc`<br/>`cccccc` | 2<br/>Tue<br/>Tuesday<br/>T<br/>Tu |
 | `a` | AM or PM | `a`, `aa`, or `aaa`<br/>`aaaa`<br/>`aaaaa` | PM [abbrev]<br/>PM [wide]<br/>p |
 | `b` | am, pm, noon, midnight | `b`, `bb`, or `bbb`<br/>`bbbb`<br/>`bbbbb` | mid.<br/>midnight<br/>md |
@@ -341,14 +341,6 @@ patterns for different locales:
 | en_US  | `"MMMM d  'at'  h:mm a"`                 | "April 2 at 5:00 PM" |
 | es_ES  | `"d 'de' MMMM, H:mm"`                    | "2 de abril, 17:00"  |
 | ja_JP  | `"M月d日 H:mm"`                            | "4月2日 17:00"         |
-
-A full list of date and time symbols that can be used in skeleton strings
-(input to `DateTimePatternGenerator`) can be found in the 
-[UTS 35 (LDML) Date Field Symbol Table](https://unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table).
-
-Note: some date time symbols are intended only for use in skeleton strings, and are not intended
-to be used in pattern strings (output from `DateTimePatternGenerator`). Such symbols are noted accordingly
-in the table.
 
 The most important DateTimePatternGenerator methods are the varieties of
 getBestPattern.

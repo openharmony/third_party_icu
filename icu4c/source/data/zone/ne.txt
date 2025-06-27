@@ -589,7 +589,7 @@ ne{
             ec{"तिजुआना"}
         }
         "America:Toronto"{
-            ec{"टोरोन्टो"}
+            ec{"टोरोण्टो"}
         }
         "America:Tortola"{
             ec{"टार्टोला"}
@@ -1903,6 +1903,10 @@ ne{
         "meta:Yukon"{
             ls{"युकोनको समय"}
         }
+        fallbackFormat{"{1} ({0})"}
+        gmtFormat{"GMT{0}"}
+        gmtZeroFormat{"GMT"}
+        hourFormat{"+HH:mm;-HH:mm"}
         regionFormat{"{0} समय"}
         regionFormatDaylight{"{0} (+१)"}
         regionFormatStandard{"{0} (+०)"}
