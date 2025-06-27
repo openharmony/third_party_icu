@@ -24,11 +24,8 @@
 #include "unicode/locid.h"
 #include "unicode/ustring.h"
 
-#include "bytesinkutil.h"
-#include "charstr.h"
 #include "cmemory.h"
 #include "uassert.h"
-#include "ulocimp.h"
 #include "locmap.h"
 
 #ifndef WIN32_LEAN_AND_MEAN
@@ -104,7 +101,7 @@ static void getNumberFormat(NUMBERFMTW *fmt, const wchar_t *windowsLocaleName)
 
 static void freeNumberFormat(NUMBERFMTW *fmt)
 {
-    if (fmt != nullptr) {
+    if (fmt != NULL) {
         DELETE_ARRAY(fmt->lpThousandSep);
         DELETE_ARRAY(fmt->lpDecimalSep);
     }
@@ -135,7 +132,7 @@ static void getCurrencyFormat(CURRENCYFMTW *fmt, const wchar_t *windowsLocaleNam
 
 static void freeCurrencyFormat(CURRENCYFMTW *fmt)
 {
-    if (fmt != nullptr) {
+    if (fmt != NULL) {
         DELETE_ARRAY(fmt->lpCurrencySymbol);
         DELETE_ARRAY(fmt->lpThousandSep);
         DELETE_ARRAY(fmt->lpDecimalSep);
@@ -148,13 +145,10 @@ static UErrorCode GetEquivalentWindowsLocaleName(const Locale& locale, UnicodeSt
 {
 #if defined(WINVER) && (WINVER >= 0x0601)
     UErrorCode status = U_ZERO_ERROR;
+    char asciiBCP47Tag[LOCALE_NAME_MAX_LENGTH] = {};
 
     // Convert from names like "en_CA" and "de_DE@collation=phonebook" to "en-CA" and "de-DE-u-co-phonebk".
-    CharString asciiBCP47Tag;
-    {
-        CharStringByteSink sink(&asciiBCP47Tag);
-        ulocimp_toLanguageTag(locale.getName(), sink, FALSE, &status);
-    }
+    (void) uloc_toLanguageTag(locale.getName(), asciiBCP47Tag, UPRV_LENGTHOF(asciiBCP47Tag), FALSE, &status);
 
     if (U_SUCCESS(status))
     {
@@ -215,7 +209,7 @@ static UErrorCode GetEquivalentWindowsLocaleName(const Locale& locale, UnicodeSt
 }
 
 Win32NumberFormat::Win32NumberFormat(const Locale &locale, UBool currency, UErrorCode &status)
-  : NumberFormat(), fCurrency(currency), fFormatInfo(nullptr), fFractionDigitsSet(FALSE), fWindowsLocaleName(nullptr)
+  : NumberFormat(), fCurrency(currency), fFormatInfo(NULL), fFractionDigitsSet(FALSE), fWindowsLocaleName(nullptr)
 {
     if (!U_FAILURE(status)) {
         fLCID = locale.getLCID();
@@ -257,7 +251,7 @@ Win32NumberFormat::Win32NumberFormat(const Locale &locale, UBool currency, UErro
 Win32NumberFormat::Win32NumberFormat(const Win32NumberFormat &other)
   : NumberFormat(other), fFormatInfo((FormatInfo*)uprv_malloc(sizeof(FormatInfo)))
 {
-    if (fFormatInfo != nullptr) {
+    if (fFormatInfo != NULL) {
         uprv_memset(fFormatInfo, 0, sizeof(*fFormatInfo));
     }
     *this = other;
@@ -265,7 +259,7 @@ Win32NumberFormat::Win32NumberFormat(const Win32NumberFormat &other)
 
 Win32NumberFormat::~Win32NumberFormat()
 {
-    if (fFormatInfo != nullptr) {
+    if (fFormatInfo != NULL) {
         if (fCurrency) {
             freeCurrencyFormat(&fFormatInfo->currency);
         } else {
@@ -286,7 +280,7 @@ Win32NumberFormat &Win32NumberFormat::operator=(const Win32NumberFormat &other)
     this->fLocale            = other.fLocale;
     this->fLCID              = other.fLCID;
     this->fFractionDigitsSet = other.fFractionDigitsSet;
-    this->fWindowsLocaleName = other.fWindowsLocaleName == nullptr ? nullptr : new UnicodeString(*other.fWindowsLocaleName);
+    this->fWindowsLocaleName = other.fWindowsLocaleName == NULL ? NULL : new UnicodeString(*other.fWindowsLocaleName);
     
     const wchar_t *localeName = nullptr;
 
@@ -355,7 +349,7 @@ UnicodeString &Win32NumberFormat::format(int32_t numDigits, UnicodeString &appen
 
     nBuffer[0] = 0x0000;
 
-    /* Due to the arguments causing a result to be <= 23 characters (+2 for nullptr and minus),
+    /* Due to the arguments causing a result to be <= 23 characters (+2 for NULL and minus),
     we don't need to reallocate the buffer. */
     va_start(args, fmt);
     result = _vsnwprintf(nBuffer, STACK_BUFFER_SIZE, fmt, args);
@@ -371,7 +365,7 @@ UnicodeString &Win32NumberFormat::format(int32_t numDigits, UnicodeString &appen
         newLength = _vscwprintf(fmt, args);
         va_end(args);
 
-        nBuffer = NEW_ARRAY(char16_t, newLength + 1);
+        nBuffer = NEW_ARRAY(UChar, newLength + 1);
 
         va_start(args, fmt);
         result = _vsnwprintf(nBuffer, newLength + 1, fmt, args);
@@ -423,7 +417,7 @@ UnicodeString &Win32NumberFormat::format(int32_t numDigits, UnicodeString &appen
             DWORD lastError = GetLastError();
 
             if (lastError == ERROR_INSUFFICIENT_BUFFER) {
-                int newLength = GetCurrencyFormatEx(localeName, 0, nBuffer, &formatInfo.currency, nullptr, 0);
+                int newLength = GetCurrencyFormatEx(localeName, 0, nBuffer, &formatInfo.currency, NULL, 0);
 
                 buffer = NEW_ARRAY(wchar_t, newLength);
                 buffer[0] = 0x0000;
@@ -443,7 +437,7 @@ UnicodeString &Win32NumberFormat::format(int32_t numDigits, UnicodeString &appen
 
         if (result == 0) {
             if (GetLastError() == ERROR_INSUFFICIENT_BUFFER) {
-                int newLength = GetNumberFormatEx(localeName, 0, nBuffer, &formatInfo.number, nullptr, 0);
+                int newLength = GetNumberFormatEx(localeName, 0, nBuffer, &formatInfo.number, NULL, 0);
 
                 buffer = NEW_ARRAY(wchar_t, newLength);
                 buffer[0] = 0x0000;
@@ -452,7 +446,7 @@ UnicodeString &Win32NumberFormat::format(int32_t numDigits, UnicodeString &appen
         }
     }
 
-    appendTo.append((char16_t *)buffer, (int32_t) wcslen(buffer));
+    appendTo.append((UChar *)buffer, (int32_t) wcslen(buffer));
 
     if (buffer != stackBuffer) {
         DELETE_ARRAY(buffer);

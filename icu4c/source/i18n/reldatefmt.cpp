@@ -12,7 +12,7 @@
 
 #include "unicode/reldatefmt.h"
 
-#if !UCONFIG_NO_FORMATTING
+#if !UCONFIG_NO_FORMATTING && !UCONFIG_NO_BREAK_ITERATION
 
 #include <cmath>
 #include <functional>
@@ -192,7 +192,7 @@ static UBool getStringByIndex(
         UnicodeString &result,
         UErrorCode &status) {
     int32_t len = 0;
-    const char16_t *resStr = ures_getStringByIndex(
+    const UChar *resStr = ures_getStringByIndex(
             resource, idx, &len, &status);
     if (U_FAILURE(status)) {
         return false;
@@ -372,8 +372,8 @@ struct RelDateTimeFmtDataSink : public ResourceSink {
 
     // Utility functions
     static UDateRelativeDateTimeFormatterStyle styleFromAliasUnicodeString(UnicodeString s) {
-        static const char16_t narrow[7] = {0x002D, 0x006E, 0x0061, 0x0072, 0x0072, 0x006F, 0x0077};
-        static const char16_t sshort[6] = {0x002D, 0x0073, 0x0068, 0x006F, 0x0072, 0x0074,};
+        static const UChar narrow[7] = {0x002D, 0x006E, 0x0061, 0x0072, 0x0072, 0x006F, 0x0077};
+        static const UChar sshort[6] = {0x002D, 0x0073, 0x0068, 0x006F, 0x0072, 0x0074,};
         if (s.endsWith(narrow, 7)) {
             return UDAT_STYLE_NARROW;
         }
@@ -701,7 +701,7 @@ static UBool getDateTimePattern(
     return getStringByIndex(topLevel.getAlias(), dateTimeFormatOffset, result, status);
 }
 
-template<>
+template<> 
 const RelativeDateTimeCacheData *LocaleCacheKey<RelativeDateTimeCacheData>::createObject(const void * /*unused*/, UErrorCode &status) const {
     const char *localeId = fLoc.getName();
     LocalUResourceBundlePointer topLevel(ures_open(nullptr, localeId, &status));
@@ -761,7 +761,6 @@ RelativeDateTimeFormatter::RelativeDateTimeFormatter(UErrorCode& status) :
         fStyle(UDAT_STYLE_LONG),
         fContext(UDISPCTX_CAPITALIZATION_NONE),
         fOptBreakIterator(nullptr) {
-    (void)fOptBreakIterator; // suppress unused field warning
     init(nullptr, nullptr, status);
 }
 
@@ -814,16 +813,11 @@ RelativeDateTimeFormatter::RelativeDateTimeFormatter(
         return;
     }
     if (capitalizationContext == UDISPCTX_CAPITALIZATION_FOR_BEGINNING_OF_SENTENCE) {
-#if !UCONFIG_NO_BREAK_ITERATION
         BreakIterator *bi = BreakIterator::createSentenceInstance(locale, status);
         if (U_FAILURE(status)) {
             return;
         }
         init(nfToAdopt, bi, status);
-#else
-        status = U_UNSUPPORTED_ERROR;
-        return;
-#endif // !UCONFIG_NO_BREAK_ITERATION
     } else {
         init(nfToAdopt, nullptr, status);
     }
@@ -842,11 +836,9 @@ RelativeDateTimeFormatter::RelativeDateTimeFormatter(
     fCache->addRef();
     fNumberFormat->addRef();
     fPluralRules->addRef();
-#if !UCONFIG_NO_BREAK_ITERATION
     if (fOptBreakIterator != nullptr) {
       fOptBreakIterator->addRef();
     }
-#endif // !UCONFIG_NO_BREAK_ITERATION
 }
 
 RelativeDateTimeFormatter& RelativeDateTimeFormatter::operator=(
@@ -855,9 +847,7 @@ RelativeDateTimeFormatter& RelativeDateTimeFormatter::operator=(
         SharedObject::copyPtr(other.fCache, fCache);
         SharedObject::copyPtr(other.fNumberFormat, fNumberFormat);
         SharedObject::copyPtr(other.fPluralRules, fPluralRules);
-#if !UCONFIG_NO_BREAK_ITERATION
         SharedObject::copyPtr(other.fOptBreakIterator, fOptBreakIterator);
-#endif // !UCONFIG_NO_BREAK_ITERATION
         fStyle = other.fStyle;
         fContext = other.fContext;
         fLocale = other.fLocale;
@@ -875,11 +865,9 @@ RelativeDateTimeFormatter::~RelativeDateTimeFormatter() {
     if (fPluralRules != nullptr) {
         fPluralRules->removeRef();
     }
-#if !UCONFIG_NO_BREAK_ITERATION
     if (fOptBreakIterator != nullptr) {
         fOptBreakIterator->removeRef();
     }
-#endif // !UCONFIG_NO_BREAK_ITERATION
 }
 
 const NumberFormat& RelativeDateTimeFormatter::getNumberFormat() const {
@@ -1103,9 +1091,7 @@ void RelativeDateTimeFormatter::formatAbsoluteImpl(
     if (U_FAILURE(status)) {
         return;
     }
-    if ((unit < 0 || UDAT_ABSOLUTE_UNIT_COUNT <= unit) ||
-        (direction < 0 || UDAT_DIRECTION_COUNT <= direction) ||
-        (unit == UDAT_ABSOLUTE_NOW && direction != UDAT_DIRECTION_PLAIN)) {
+    if (unit == UDAT_ABSOLUTE_NOW && direction != UDAT_DIRECTION_PLAIN) {
         status = U_ILLEGAL_ARGUMENT_ERROR;
         return;
     }
@@ -1213,7 +1199,6 @@ UnicodeString& RelativeDateTimeFormatter::combineDateAndTime(
 }
 
 UnicodeString& RelativeDateTimeFormatter::adjustForContext(UnicodeString &str) const {
-#if !UCONFIG_NO_BREAK_ITERATION
     if (fOptBreakIterator == nullptr
         || str.length() == 0 || !u_islower(str.char32At(0))) {
         return str;
@@ -1227,36 +1212,25 @@ UnicodeString& RelativeDateTimeFormatter::adjustForContext(UnicodeString &str) c
             fOptBreakIterator->get(),
             fLocale,
             U_TITLECASE_NO_LOWERCASE | U_TITLECASE_NO_BREAK_ADJUSTMENT);
-#endif // !UCONFIG_NO_BREAK_ITERATION
     return str;
 }
 
 UBool RelativeDateTimeFormatter::checkNoAdjustForContext(UErrorCode& status) const {
-#if !UCONFIG_NO_BREAK_ITERATION
     // This is unsupported because it's hard to keep fields in sync with title
     // casing. The code could be written and tested if there is demand.
     if (fOptBreakIterator != nullptr) {
         status = U_UNSUPPORTED_ERROR;
         return false;
     }
-#else
-    (void)status; // suppress unused argument warning
-#endif // !UCONFIG_NO_BREAK_ITERATION
     return true;
 }
 
 void RelativeDateTimeFormatter::init(
         NumberFormat *nfToAdopt,
-#if !UCONFIG_NO_BREAK_ITERATION
         BreakIterator *biToAdopt,
-#else
-        std::nullptr_t,
-#endif // !UCONFIG_NO_BREAK_ITERATION
         UErrorCode &status) {
     LocalPointer<NumberFormat> nf(nfToAdopt);
-#if !UCONFIG_NO_BREAK_ITERATION
     LocalPointer<BreakIterator> bi(biToAdopt);
-#endif // !UCONFIG_NO_BREAK_ITERATION
     UnifiedCache::getByLocale(fLocale, fCache, status);
     if (U_FAILURE(status)) {
         return;
@@ -1285,7 +1259,6 @@ void RelativeDateTimeFormatter::init(
         nf.orphan();
         SharedObject::copyPtr(shared, fNumberFormat);
     }
-#if !UCONFIG_NO_BREAK_ITERATION
     if (bi.isNull()) {
         SharedObject::clearPtr(fOptBreakIterator);
     } else {
@@ -1297,7 +1270,6 @@ void RelativeDateTimeFormatter::init(
         bi.orphan();
         SharedObject::copyPtr(shared, fOptBreakIterator);
     }
-#endif // !UCONFIG_NO_BREAK_ITERATION
 }
 
 U_NAMESPACE_END
@@ -1346,7 +1318,7 @@ U_CAPI int32_t U_EXPORT2
 ureldatefmt_formatNumeric( const URelativeDateTimeFormatter* reldatefmt,
                     double                offset,
                     URelativeDateTimeUnit unit,
-                    char16_t*                result,
+                    UChar*                result,
                     int32_t               resultCapacity,
                     UErrorCode*           status)
 {
@@ -1389,7 +1361,7 @@ U_CAPI int32_t U_EXPORT2
 ureldatefmt_format( const URelativeDateTimeFormatter* reldatefmt,
                     double                offset,
                     URelativeDateTimeUnit unit,
-                    char16_t*                result,
+                    UChar*                result,
                     int32_t               resultCapacity,
                     UErrorCode*           status)
 {
@@ -1430,11 +1402,11 @@ ureldatefmt_formatToResult(
 
 U_CAPI int32_t U_EXPORT2
 ureldatefmt_combineDateAndTime( const URelativeDateTimeFormatter* reldatefmt,
-                    const char16_t *     relativeDateString,
+                    const UChar *     relativeDateString,
                     int32_t           relativeDateStringLen,
-                    const char16_t *     timeString,
+                    const UChar *     timeString,
                     int32_t           timeStringLen,
-                    char16_t*            result,
+                    UChar*            result,
                     int32_t           resultCapacity,
                     UErrorCode*       status )
 {

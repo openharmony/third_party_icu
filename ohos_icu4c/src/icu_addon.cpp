@@ -2077,7 +2077,7 @@ UEnumeration *uloc_openKeywords(const char *localeID, UErrorCode *status)
 {
     return U_ICU_ENTRY_POINT_RENAME(uloc_openKeywords)(localeID, status);
 }
-void uloc_setDefault(const char * localeID, UErrorCode * status)
+void uloc_setDefault(const char *localeID, UErrorCode * status)
 {
 #ifdef ICU_SUPPORT_LIBBEGETUTIL
   g_isCustomLocale = true;
@@ -2550,19 +2550,19 @@ void utrans_unregisterID(const UChar *id, int32_t idLength)
 {
     U_ICU_ENTRY_POINT_RENAME(utrans_unregisterID)(id, idLength);
 }
-UText * utext_close(UText *ut)
+UText* utext_close(UText *ut)
 {
     return U_ICU_ENTRY_POINT_RENAME(utext_close)(ut);
 }
-UText * utext_openUTF8(UText *ut, const char *s, int64_t length, UErrorCode *status)
+UText* utext_openUTF8(UText *ut, const char *s, int64_t length, UErrorCode *status)
 {
     return U_ICU_ENTRY_POINT_RENAME(utext_openUTF8)(ut, s, length, status);
 }
-UText * utext_openUChars(UText *ut, const UChar *s, int64_t length, UErrorCode *status)
+UText* utext_openUChars(UText *ut, const UChar *s, int64_t length, UErrorCode *status)
 {
     return U_ICU_ENTRY_POINT_RENAME(utext_openUChars)(ut, s, length, status);
 }
-UText * utext_clone(UText *dest, const UText *src, UBool deep, UBool readOnly, UErrorCode *status)
+UText* utext_clone(UText *dest, const UText *src, UBool deep, UBool readOnly, UErrorCode *status)
 {
     return U_ICU_ENTRY_POINT_RENAME(utext_clone)(dest, src, deep, readOnly, status);
 }
@@ -2639,39 +2639,39 @@ UChar* u_strncat(UChar *dst, const UChar *src, int32_t n)
 {
     return U_ICU_ENTRY_POINT_RENAME(u_strncat)(dst, src, n);
 }
-UChar * u_strstr(const UChar *s, const UChar *substring)
+UChar* u_strstr(const UChar *s, const UChar *substring)
 {
     return U_ICU_ENTRY_POINT_RENAME(u_strstr)(s, substring);
 }
-UChar * u_strFindFirst(const UChar *s, int32_t length, const UChar *substring, int32_t subLength)
+UChar* u_strFindFirst(const UChar *s, int32_t length, const UChar *substring, int32_t subLength)
 {
     return U_ICU_ENTRY_POINT_RENAME(u_strFindFirst)(s, length, substring, subLength);
 }
-UChar * u_strchr(const UChar *s, UChar c)
+UChar* u_strchr(const UChar *s, UChar c)
 {
     return U_ICU_ENTRY_POINT_RENAME(u_strchr)(s, c);
 }
-UChar * u_strchr32(const UChar *s, UChar32 c)
+UChar* u_strchr32(const UChar *s, UChar32 c)
 {
     return U_ICU_ENTRY_POINT_RENAME(u_strchr32)(s, c);
 }
-UChar * u_strrstr(const UChar *s, const UChar *substring)
+UChar* u_strrstr(const UChar *s, const UChar *substring)
 {
     return U_ICU_ENTRY_POINT_RENAME(u_strrstr)(s, substring);
 }
-UChar * u_strFindLast(const UChar *s, int32_t length, const UChar *substring, int32_t subLength)
+UChar* u_strFindLast(const UChar *s, int32_t length, const UChar *substring, int32_t subLength)
 {
     return U_ICU_ENTRY_POINT_RENAME(u_strFindLast)(s, length, substring, subLength);
 }
-UChar * u_strrchr(const UChar *s, UChar c)
+UChar* u_strrchr(const UChar *s, UChar c)
 {
     return U_ICU_ENTRY_POINT_RENAME(u_strrchr)(s, c);
 }
-UChar * u_strrchr32(const UChar *s, UChar32 c)
+UChar* u_strrchr32(const UChar *s, UChar32 c)
 {
     return U_ICU_ENTRY_POINT_RENAME(u_strrchr32)(s, c);
 }
-UChar * u_strpbrk(const UChar *string, const UChar *matchSet)
+UChar* u_strpbrk(const UChar *string, const UChar *matchSet)
 {
     return U_ICU_ENTRY_POINT_RENAME(u_strpbrk)(string, matchSet);
 }
@@ -2683,7 +2683,7 @@ int32_t u_strspn(const UChar *string, const UChar *matchSet)
 {
     return U_ICU_ENTRY_POINT_RENAME(u_strspn)(string, matchSet);
 }
-UChar * u_strtok_r(UChar *src, const UChar *delim, UChar **saveState)
+UChar* u_strtok_r(UChar *src, const UChar *delim, UChar **saveState)
 {
     return U_ICU_ENTRY_POINT_RENAME(u_strtok_r)(src, delim, saveState);
 }
@@ -2810,7 +2810,7 @@ UChar* u_strFromUTF8WithSub(UChar *dest, int32_t destCapacity, int32_t *pDestLen
     return U_ICU_ENTRY_POINT_RENAME(u_strFromUTF8WithSub)(dest, destCapacity, pDestLength, src, srcLength, subchar,
         pNumSubstitutions, pErrorCode);
 }
-UChar * u_strFromUTF8Lenient(UChar *dest, int32_t destCapacity, int32_t *pDestLength, const char *src,
+UChar* u_strFromUTF8Lenient(UChar *dest, int32_t destCapacity, int32_t *pDestLength, const char *src,
     int32_t srcLength, UErrorCode *pErrorCode)
 {
     return U_ICU_ENTRY_POINT_RENAME(u_strFromUTF8Lenient)(dest, destCapacity, pDestLength, src, srcLength, pErrorCode);
@@ -2837,7 +2837,7 @@ UChar* u_strFromUTF32WithSub(UChar *dest, int32_t destCapacity, int32_t *pDestLe
     return U_ICU_ENTRY_POINT_RENAME(u_strFromUTF32WithSub)(dest, destCapacity, pDestLength, src, srcLength, subchar,
         pNumSubstitutions, pErrorCode);
 }
-const char * u_errorName(UErrorCode code)
+const char* u_errorName(UErrorCode code)
 {
     return U_ICU_ENTRY_POINT_RENAME(u_errorName)(code);
 }

@@ -8,25 +8,25 @@ static int codePointCmp(const void *a, const void *b) {
 
 SortedLines::SortedLines(const UnicodeSet &set, const UnicodeSet &excludeBounds, const StrengthProbe &probe, 
                          UPrinter *logger, UPrinter *debug) :
-toSort(nullptr),
+toSort(NULL),
 toSortCapacity(0),
-lines(nullptr),
+lines(NULL),
 size(0),
 capacity(0),
 repertoire(set),
 excludeBounds(excludeBounds),
 probe(probe),
-first(nullptr),
-last(nullptr),
+first(NULL),
+last(NULL),
 logger(logger),
 debug(debug),
-contractionsTable(nullptr),
-duplicators(nullptr),
+contractionsTable(NULL),
+duplicators(NULL),
 maxExpansionPrefixSize(0),
 wordSort(false),
 frenchSecondary(false),
 upperFirst(false),
-sortkeys(nullptr),
+sortkeys(NULL),
 sortkeyOffset(0)
 {
   memset(UB, 0, sizeof(UB));
@@ -79,7 +79,7 @@ SortedLines::getBounds(UErrorCode &status) {
   //u_strcpy(UB[strength], toSort[size-1]->name);
   // a different solution for bounds: go from end and see if the guys on the top
   // cause duplication for things
-  char16_t dupch[] = { 0x0020, 0x0030, 0x0042, 0x0051, 0x0062, 0x0071, 0x0391, 0x0396, 0x03b1, 0x03b6 };
+  UChar dupch[] = { 0x0020, 0x0030, 0x0042, 0x0051, 0x0062, 0x0071, 0x0391, 0x0396, 0x03b1, 0x03b6 };
   j = 1;
   Line dup;
   Line bound;
@@ -110,7 +110,7 @@ SortedLines::getBounds(UErrorCode &status) {
   if(j == size) {
     debug->log("Oi! I'm hallucinating. Will use the first upper bound");
     delete duplicators;
-    duplicators = nullptr;
+    duplicators = NULL;
     j = 1;
   }
 /*
@@ -268,9 +268,9 @@ int32_t
 SortedLines::setSortingArray(Line **sortingArray, Hashtable *table) {
   int32_t size = table->count();
   int32_t hashIndex = -1;
-  const UHashElement *hashElement = nullptr;
+  const UHashElement *hashElement = NULL;
   int32_t count = 0;
-  while((hashElement = table->nextElement(hashIndex)) != nullptr) {
+  while((hashElement = table->nextElement(hashIndex)) != NULL) {
     sortingArray[count++] = (Line *)hashElement->value.pointer;
   }
   return size;
@@ -333,7 +333,7 @@ SortedLines::sort(UBool setStrengths, UBool link) {
   setSortingArray(toSort, lines, size);
   sort(toSort, size, setStrengths, link);
 
-  first = last = nullptr;
+  first = last = NULL;
 
   if(link) { // do the linking
     first = *toSort;
@@ -489,7 +489,7 @@ int32_t SortedLines::detectContractions(Line **firstRep, int32_t firstSize,
   int i = 0, j = 0, k = 0;
   Line lower, upper, trial, toAdd, helper;
   UChar32 firstStart, firstEnd, secondStart;
-  char16_t NFCTrial[256];
+  UChar NFCTrial[256];
   int32_t NFCTrialLen = 0;
   UBool thai;
   i = -1;
@@ -516,7 +516,7 @@ int32_t SortedLines::detectContractions(Line **firstRep, int32_t firstSize,
 	{
           continue;
         }
-      	if(duplicators && duplicators->get(UnicodeString(secondRep[j]->name, secondRep[j]->len)) != nullptr) {
+      	if(duplicators && duplicators->get(UnicodeString(secondRep[j]->name, secondRep[j]->len)) != NULL) {
           debug->log("Skipping duplicator ");
           debug->log(secondRep[j]->toString(), true);
 		  continue;
@@ -643,7 +643,7 @@ int32_t SortedLines::detectContractions(Line **firstRep, int32_t firstSize,
 		}
 		while(!toAddIsContraction && k>=0) {
 		  xyp.setToConcat(firstRep[i], secondRep[k]);
-		  if(contractionsTable->get(UnicodeString(xyp.name, xyp.len)) != nullptr) {
+		  if(contractionsTable->get(UnicodeString(xyp.name, xyp.len)) != NULL) {
 		    k--;
 		    continue;
 		  }
@@ -656,7 +656,7 @@ int32_t SortedLines::detectContractions(Line **firstRep, int32_t firstSize,
 		  }
 		}
           // first let's see if xym has moved beyond
-          if(contractionsTable->get(UnicodeString(xym.name, xym.len)) == nullptr) {
+          if(contractionsTable->get(UnicodeString(xym.name, xym.len)) == NULL) {
             k = j+1;
             // ignore weaker strengths
             while(k < secondSize && secondRep[k]->strength > secondRep[j]->strength) {
@@ -691,7 +691,7 @@ int32_t SortedLines::detectContractions(Line **firstRep, int32_t firstSize,
             }
 	      } else { // only the strength has changed
             // check whether the previous is contraction and if not, add the current
-            if(contractionsTable->get(UnicodeString(xym.name, xym.len)) == nullptr) {
+            if(contractionsTable->get(UnicodeString(xym.name, xym.len)) == NULL) {
               noteContraction("!5", toAddTo, toAddToSize, firstRep[i], secondRep[j], noConts, status);
             }                  
 	      }
@@ -775,7 +775,7 @@ SortedLines::noteContraction(const char* msg, Line *toAddTo, int32_t &toAddToSiz
     }
   }
 #endif
-  if(contractionsTable->get(UnicodeString(toAdd.name, toAdd.len)) == nullptr) {
+  if(contractionsTable->get(UnicodeString(toAdd.name, toAdd.len)) == NULL) {
     if(probe.distanceFromEmptyString(toAdd) <= UCOL_TERTIARY) {
       toAddTo[toAddToSize++] = toAdd;
       contractionsTable->put(UnicodeString(toAdd.name, toAdd.len), &toAdd, status);
@@ -884,7 +884,7 @@ SortedLines::getExpansionLine(const Line &expansion, const Line &previous, const
             // however, ch is a contraction and therefore we cannot use
             // it properly. If we have hit on a contraction, we'll just try
             // to continue. Probably need more logic here.
-            if(contractionsTable->get(UnicodeString(trial.name, trial.len)) == nullptr) {
+            if(contractionsTable->get(UnicodeString(trial.name, trial.len)) == NULL) {
               expansionLine.append(*toSort[i-1]);
               expIndexes[expIndexSize++] = i-1;
               break;
@@ -1150,7 +1150,7 @@ SortedLines::detectExpansions()
               // however, ch is a contraction and therefore we cannot use
               // it properly. If we have hit on a contraction, we'll just try
               // to continue. Probably need more logic here.
-              if(contractionsTable->get(UnicodeString(trial.name, trial.len)) == nullptr) {
+              if(contractionsTable->get(UnicodeString(trial.name, trial.len)) == NULL) {
                 expansionLine.append(*toSort[prevK]);
                 expIndexes[expIndexSize++] = prevK;
                 break;
@@ -1193,7 +1193,7 @@ SortedLines::detectExpansions()
         if(expansionLine.name[0] == 0x73 && expansionLine.name[1] == 0x7a) {
           int32_t putBreakpointhere = 0;
         }
-        UBool isExpansionLineAContraction = (contractionsTable->get(UnicodeString(expansionLine.name, expansionLine.len)) != nullptr);
+        UBool isExpansionLineAContraction = (contractionsTable->get(UnicodeString(expansionLine.name, expansionLine.len)) != NULL);
         // we have an expansion line and an expansion. There could be some expansions where 
         // the difference between expansion line and the end of expansion sequence is less or 
         // equal than the expansion strength. These should probably be removed.
@@ -1308,20 +1308,20 @@ SortedLines::add(Line *line, UBool linkIn) {
   Line *toAdd = &lines[size];
   if(linkIn && first) {
     Line *current = first;
-    while(current != nullptr && probe.comparer(&current, &toAdd) < 0) {
+    while(current != NULL && probe.comparer(&current, &toAdd) < 0) {
       current = current->next;
     }
-    if(current == nullptr) {
+    if(current == NULL) {
       toAdd->previous = last;
-      toAdd->next = nullptr;
-      if(last != nullptr) {
+      toAdd->next = NULL;
+      if(last != NULL) {
         last->next = toAdd;
       }
       last = toAdd;
-      if(first == nullptr) {
+      if(first == NULL) {
         first = toAdd;
       }
-    } else { // current != nullptr
+    } else { // current != NULL
       toAdd->next = current;
       toAdd->previous = current->previous;
       if(current->previous) {
@@ -1338,7 +1338,7 @@ SortedLines::add(Line *line, UBool linkIn) {
 Line *
 SortedLines::getNext()
 {
-  if(current != nullptr) {
+  if(current != NULL) {
     current=current->next;
   }
   return current;
@@ -1347,7 +1347,7 @@ SortedLines::getNext()
 Line *
 SortedLines::getPrevious()
 {
-  if(current != nullptr) {
+  if(current != NULL) {
     current=current->previous;
   }
   return current;
@@ -1359,7 +1359,7 @@ SortedLines::operator[](int32_t index)
   int32_t i = 0;
   Line *c = first;
   for(i = 0; i < index; i++) {
-    if(c != nullptr) {
+    if(c != NULL) {
       c = c->next;
     }
   }
@@ -1371,7 +1371,7 @@ SortedLines::arrayToString(Line** sortedLines, int32_t linesSize, UBool pretty, 
   UnicodeString result;
   int32_t i = 0;
 
-  Line *line = nullptr;
+  Line *line = NULL;
   Line *previous = sortedLines[0];
   if(printSortKeys && !sortkeys) {
     printSortKeys = false;
@@ -1424,22 +1424,22 @@ SortedLines::arrayToString(Line** sortedLines, int32_t linesSize, UBool pretty, 
 }
 
 SortedLines::SortedLines(FILE *file, UPrinter *logger, UPrinter *debug, UErrorCode &status) :
-toSort(nullptr),
+toSort(NULL),
 toSortCapacity(0),
-lines(nullptr),
+lines(NULL),
 size(0),
 capacity(0),
-first(nullptr),
-last(nullptr),
+first(NULL),
+last(NULL),
 logger(logger),
 debug(debug),
-contractionsTable(nullptr),
-duplicators(nullptr),
+contractionsTable(NULL),
+duplicators(NULL),
 maxExpansionPrefixSize(0),
 wordSort(false),
 frenchSecondary(false),
 upperFirst(false),
-sortkeys(nullptr),
+sortkeys(NULL),
 sortkeyOffset(0)
 {
   debug->log("*** loading a dump\n");
@@ -1484,7 +1484,7 @@ SortedLines::toFile(FILE *file, UBool useLinks, UErrorCode &status)
   fprintf(file, "%i,%i,%i\n", size, frenchSecondary, upperFirst);
   int32_t i = 1;
   Line *previous = toSort[0];
-  Line *line = nullptr;
+  Line *line = NULL;
   char buff[256];
   previous->write(buff, 256, status);
   fprintf(file, "%s\n", buff);
@@ -1511,7 +1511,7 @@ SortedLines::toStringFromEmpty() {
   UnicodeString result;
   int32_t i = 0;
 
-  Line *line = nullptr;
+  Line *line = NULL;
   Line *previous = toSort[0];
   if(previous->isReset) {
     result.append(" & ");
@@ -1808,7 +1808,7 @@ SortedLines::reduceDifference(SortedLines& reference) {
       myLine = myLine->next;
       refLatestEqual = refLine;
       refLine = refLine->next;
-      if(refLine == nullptr && myLine == nullptr) {
+      if(refLine == NULL && myLine == NULL) {
         finished = true;
       }
     }
@@ -1866,11 +1866,11 @@ SortedLines::reduceDifference(SortedLines& reference) {
           }
         }
       }
-      if(refLine == nullptr) { // ran out of reference
+      if(refLine == NULL) { // ran out of reference
         // this is the tail of tailoring - the last insertion
-        myLine  = nullptr;
+        myLine  = NULL;
         found = true;
-      } else if(tailoringMove == lookForward || myLine == nullptr) { // run over treshold or out of tailoring
+      } else if(tailoringMove == lookForward || myLine == NULL) { // run over treshold or out of tailoring
         tailoringMove = 0;
         // we didn't find insertion after all
         // we will try substitution next
@@ -1904,8 +1904,8 @@ SortedLines::reduceDifference(SortedLines& reference) {
         found = true;
       }
       if(found) {
-        if(myLatestEqual->next != myLine || refLine == nullptr) {
-          Line *myStart = nullptr;
+        if(myLatestEqual->next != myLine || refLine == NULL) {
+          Line *myStart = NULL;
           // this is a reset and a sequence
           // myLatestEqual points at the last point that was the same
           // This point will be a reset
@@ -1923,7 +1923,7 @@ SortedLines::reduceDifference(SortedLines& reference) {
           // <<<S<<\u0161<<<\u0160<<\u017F<t
           // Result:
           // &S<<\u017F<\u0161<<<\u0160
-          // we have a sequence that spans from myLatestEqual to myLine (that one could be nullptr, 
+          // we have a sequence that spans from myLatestEqual to myLine (that one could be NULL, 
           // so we have to go down from myLatestEqual. 
           // Basically, for every element, we want to see the strongest cumulative difference 
           // from the reset point. If the cumulative difference is the same in both the reference and
@@ -1978,7 +1978,7 @@ SortedLines::transferCumulativeStrength(Line *previous, Line *that) {
 
 void
 SortedLines::calculateCumulativeStrengths(Line *start, Line *end) {
-  // start is a reset - end may be nullptr
+  // start is a reset - end may be NULL
   start = start->next;
   UColAttributeValue cumulativeStrength = UCOL_OFF;
   while(start && start != end) {
@@ -2002,8 +2002,8 @@ void
 SortedLines::removeDecompositionsFromRepertoire() {
   UnicodeSetIterator repertoireIter(repertoire);
   UErrorCode status = U_ZERO_ERROR;
-  char16_t string[256];
-  char16_t composed[256];
+  UChar string[256];
+  UChar composed[256];
   int32_t len = 0, compLen = 0;
   UnicodeString compString;
   UnicodeSet toRemove;

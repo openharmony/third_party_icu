@@ -1963,6 +1963,10 @@ de{
         "meta:Yukon"{
             ls{"Yukon-Zeit"}
         }
+        fallbackFormat{"{1} ({0})"}
+        gmtFormat{"GMT{0}"}
+        gmtZeroFormat{"GMT"}
+        hourFormat{"+HH:mm;-HH:mm"}
         regionFormat{"{0} (Ortszeit)"}
         regionFormatDaylight{"{0} (Sommerzeit)"}
         regionFormatStandard{"{0} (Normalzeit)"}

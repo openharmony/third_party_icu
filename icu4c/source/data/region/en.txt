@@ -85,7 +85,6 @@ en{
         CN{"China"}
         CO{"Colombia"}
         CP{"Clipperton Island"}
-        CQ{"Sark"}
         CR{"Costa Rica"}
         CU{"Cuba"}
         CV{"Cape Verde"}
@@ -299,9 +298,6 @@ en{
         ZW{"Zimbabwe"}
         ZZ{"Unknown Region"}
     }
-    Countries%chagos{
-        IO{"Chagos Archipelago"}
-    }
     Countries%short{
         BA{"Bosnia"}
         GB{"UK"}
@@ -322,6 +318,6 @@ en{
         NZ{"Aotearoa New Zealand"}
         SZ{"Swaziland"}
         TL{"East Timor"}
-        TR{"Turkey"}
+        TR{"Türkiye"}
     }
 }

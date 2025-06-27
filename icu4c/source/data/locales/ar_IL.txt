@@ -4,7 +4,6 @@
 ar_IL{
     NumberElements{
         default{"latn"}
-        default_latn{"latn"}
     }
     calendar{
         gregorian{
