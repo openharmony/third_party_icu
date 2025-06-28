@@ -103,7 +103,6 @@ class NumberFormatterApiTest : public IntlTestWithFieldPosition {
     void toDecimalNumber();
     void microPropsInternals();
     void formatUnitsAliases();
-    void testIssue22378();
     
     void runIndexedTest(int32_t index, UBool exec, const char *&name, char *par = 0) override;
 
@@ -186,7 +185,7 @@ class NumberFormatterApiTest : public IntlTestWithFieldPosition {
         const char *locale;
         const char *unitDisplayCase;
         double value;
-        const char16_t *expected;
+        const UChar *expected;
     };
 
     void runUnitInflectionsTestCases(UnlocalizedNumberFormatter unf,
@@ -302,7 +301,6 @@ class NumberSkeletonTest : public IntlTest {
     void wildcardCharacters();
     void perUnitInArabic();
     void perUnitToSkeleton();
-    void measurementSystemOverride();
 
     void runIndexedTest(int32_t index, UBool exec, const char *&name, char *par = 0) override;
 
@@ -367,18 +365,6 @@ class NumberRangeFormatterTest : public IntlTestWithFieldPosition {
       const char16_t* expected);
 };
 
-class SimpleNumberFormatterTest : public IntlTestWithFieldPosition {
-  public:
-    void testBasic();
-    void testWithOptions();
-    void testSymbols();
-    void testSign();
-    void testCopyMove();
-    void testCAPI();
-
-    void runIndexedTest(int32_t index, UBool exec, const char *&name, char *par = 0) override;
-};
-
 class NumberPermutationTest : public IntlTest {
   public:
     void testPermutations();
@@ -417,8 +403,7 @@ class NumberTest : public IntlTest {
         TESTCLASS(7, NumberParserTest);
         TESTCLASS(8, NumberSkeletonTest);
         TESTCLASS(9, NumberRangeFormatterTest);
-        TESTCLASS(10, SimpleNumberFormatterTest);
-        TESTCLASS(11, NumberPermutationTest);
+        TESTCLASS(10, NumberPermutationTest);
         default: name = ""; break; // needed to end loop
         }
     }

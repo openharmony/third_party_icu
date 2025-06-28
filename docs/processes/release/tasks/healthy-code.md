@@ -343,7 +343,6 @@ automated as part of Travis CI.**</span>
 ---
 
 ## Test uconfig.h variations
-This test is performed automatically by a GitHub Action for each pull request.
 
 Test ICU completely, and run the header test (above) with:
 
@@ -393,16 +392,13 @@ The automated build system should have a machine that sets both
 
 ## Test UCONFIG_NO_CONVERSION
 
-Note: Since ICU 73, this test has been included in the Github Actions Continuous Integration jobs.
-These instructions explain how to run the test manually.
-
 Make sure that the ICU4C common and i18n libraries build with
 UCONFIG_NO_CONVERSION set to 1. We cannot do this as part of "Test uconfig.h
 variations" because the test suites cannot be built like this, but the library
 code must support it.
 
 The simplest is to take an ICU4C workspace, modify uconfig.h *==temporarily==*
-by changing the value of UCONFIG_NO_CONVERSION to 1, and do "make -j -l2.5" (not
+by changing the value of UCONFIG_NO_CONVERSION to 1, and do "make -j 6" (not
 "make check" or "make tests"). Verify that the stubdata, common & i18n libraries
 build fine; layout should build too but toolutil will fail, that's expected.
 
@@ -421,7 +417,7 @@ Linux,
 
 ```sh
 ./runConfigureICU Linux CPPFLAGS="-DU_CHARSET_IS_UTF8=1"
-make -j -l2.5 check
+make -j6 check
 ```
 
 Any problems will show up as compilation or test errors.
@@ -447,7 +443,7 @@ show as build failures.
 ```sh
 CPPFLAGS="-DU_OVERRIDE_CXX_ALLOCATION=0" ./runConfigureICU Linux
 make clean
-make -j -l2.5 check
+make -j12 check
 ```
 
 ## ~~Test ICU_USE_THREADS=0 \[Obsolete\]~~
@@ -474,9 +470,6 @@ make check
 ## Test ICU4C Samples and Demos
 
 ### Windows build and test
-Note: Since ICU 73, this task has been included in the Azure DevOps Pipeline which is triggered automatically upon merging with main/maint* branches.
-These instructions explain how to run the tests manually.
-
 To build the ICU4C samples on Windows with Visual Studio, use the following
 steps:
 
@@ -500,7 +493,6 @@ script for each configuration, and ensure that they are successful.
 ### Linux /Unix build and test
 To build and test ICU4C samples:
 
-This test is performed automatically by a GitHub Action for each pull request. 
 * In icu4c/source, run the configuration "./runConfigure Linux" (or appropriate system)
 * Build and install ICU4C.
 * Set PATH to include the bin directory of the installed ICU4c.
@@ -541,8 +533,8 @@ demo.
 
 ```sh
 $ cd icu4j
-$ mvn install -am -pl demos -DskipTests -DskipITs
-$ mvn exec:exec -pl demos
+$ ant jarDemos
+$ java -jar icu4jdemos.jar
 ```
 
 Above command invokes GUI demo applications. As such it has to connect to a
@@ -552,32 +544,9 @@ which it is executed instead of in a ssh shell.
 The demos include calendar, charset detection, holidays, RBNF and
 transliterator. Check if each application is working OK.
 
-### ICU4J Samples
-
-ICU4J samples are located in directory <icu4j_root>/samples. Check that:
-
-* The build succeeds.
-* Each sample runs, giving results appropriate for the sample.
-    
-To check ICU4J samples, you may use the command line to build and then run each:
-```sh
-$ cd icu4j
-$ mvn install -am -pl samples -DskipTests -DskipITs
-
-# Get the list of samples with `main` methods, and execute to test.
-$ classes=`grep -r "void main" samples/src/ -l | ruby -lane 'file=$_; m = file.match(/src\/main\/java\/(.*)\.java$/); puts m[1];' | tr '/' '.'`
-$ for class in $classes; do echo $class; mvn exec:java -pl samples -Dexec.mainClass="$class"; echo "Press enter to continue"; read; done
-```
-    
-To use Eclipse, do the following:
-    
-* Open Eclipse workspace
-* import icu4j-samples project
-* Build the project
-* In package explorer, right-click on "Run as"
-    * Pick "Java application"
-    * Choose a sample
-    * Verify that the sample runs and that output appears in the console window.
+To check ICU4J samples, open Eclipse workspace and import icu4j-samples project
+from directory <icu4j_root>/samples. Make sure these sample code has no build
+issues. Also run sample code with main and see if each sample code runs.
 
 ---
 
@@ -586,14 +555,14 @@ To use Eclipse, do the following:
 For ICU4J,
 
 ```sh
-$ mvn verify -DICU.exhaustive=10
+$ ant exhaustiveCheck
 ```
 
 For ICU4C, testing with an optimized build will help reduce the elapsed time
 required for the tests to complete.
 
 ```sh
-$ make -j -l2.5 check-exhaustive
+$ make -j6 check-exhaustive
 ```
 
 ---
@@ -607,5 +576,5 @@ compiler is required.
 ```sh
 $ CPPFLAGS=-fsanitize=thread LDFLAGS=-fsanitize=thread ./runConfigureICU --enable-debug --disable-release Linux --disable-renaming
 $ make clean
-$ make -j -l2.5 check
+$ make -j6 check
 ```

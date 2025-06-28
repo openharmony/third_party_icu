@@ -1,6 +1,7 @@
 ---
 layout: default
 title: User Guide Editing
+nav_order: 5
 parent: Contributors
 ---
 <!--

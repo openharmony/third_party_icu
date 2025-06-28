@@ -3,14 +3,6 @@
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 zh_Hans_MO{
     calendar{
-        buddhist{
-            intervalFormats{
-                Hv{
-                    H{"vHH–HH"}
-                }
-                fallback{"{0}–{1}"}
-            }
-        }
         chinese{
             DateTimePatterns{
                 "zzzz ah:mm:ss",
@@ -257,7 +249,9 @@ zh_Hans_MO{
                 "GyyMd",
             }
             availableFormats{
+                MEd{"M-dE"}
                 MMM{"M月"}
+                Md{"M-d"}
             }
         }
     }

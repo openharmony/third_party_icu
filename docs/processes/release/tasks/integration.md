@@ -148,7 +148,7 @@ Using an in-source build on Linux:
 ```sh
 cd icu4c/source
 ./runConfigureICU Linux
-make -j -l2.5 check
+make -j2 check
 rm lib/libicudata.so*
 cp -P stubdata/libicudata.so* lib/
 cd test/intltest
@@ -175,9 +175,6 @@ now, this task is not required for ICU4J.
 ---
 
 ## Verify that ICU4C tests pass without collation rule strings
-
-Note: Since ICU 73, this test has been included in the Github Actions Continuous Integration jobs.
-These instructions explain how to run the test manually.
 
 ***ICU4C 53 and later***
 
@@ -241,7 +238,7 @@ see ticket [ICU-10636](https://unicode-org.atlassian.net/browse/ICU-10636).
 
 ### Run the tests with data-errors-as-warnings
 
-`INTLTEST_OPTS=-w CINTLTST_OPTS=-w make -j -l2.5 check`
+`INTLTEST_OPTS=-w CINTLTST_OPTS=-w make -j5 check`
 
 See that they pass, or fix them to pass. See ticket #10636 test code changes for
 examples.
@@ -252,18 +249,13 @@ examples.
 
 *Only available since ICU 54.*
 
-### With ICU 70 and later:
-
-This test is performed automatically via a post-merge GHA check,
-based on the following instructions for ICU 64+.
-
-### With ICU 64 and later:
+#### With ICU 64 and later:
 
 *   Reconfigure ICU4C with
     <code><b>ICU_DATA_BUILDTOOL_OPTS=--include_uni_core_data</b>
     ./runConfigureICU Linux</code> or similar
     *   Should be little-endian for coverage
-*   Clean and build ICU4C: `make -j -l2.5 check`
+*   Clean and build ICU4C: `make -j6 check`
 *   Make a clean directory for testing
     *   Find the .data file in the build output area, e.g.,
         `icu4c/source/data/out/tmp/icudt64l.dat`
@@ -276,7 +268,7 @@ based on the following instructions for ICU 64+.
     *   If you get very many test failures, double-check that you enabled
         unicore data in the ICU4C build (see first step).
 
-### With ICU 55 through ICU 63:
+#### With ICU 55 through ICU 63:
 
 *   Rebuild ICU4C with <code>make <b>INCLUDE_UNI_CORE_DATA=1</b> check</code> or
     similar, and provide a path only for the .dat file.
@@ -291,7 +283,7 @@ based on the following instructions for ICU 64+.
     *   The configuration option sets the `ICUConfig.properties` data path
     *   Verify that all tests pass.
 
-### ICU 54 method:
+#### ICU 54 method:
 
 In `icu4j-core/src/com/ibm/icu/ICUConfig.properties` set
 `com.ibm.icu.impl.ICUBinary.dataPath` to a list of paths with all of the ICU4C
@@ -400,8 +392,6 @@ option. When it's not available, you would do the following:
 ---
 
 ## Run the environment tests
-This test is performed automatically by a GitHub Action once per week. We can also run it manually by visiting 
-[GHA EnvTest Action page](https://github.com/unicode-org/icu/actions/workflows/icu_envtest.yml) then click on the "Run workflow v" drop down on the right side of the screen
 
 Run
 [environmentTest.sh](https://github.com/unicode-org/icu/blob/main/tools/release/c/environmentTest.sh)
@@ -433,7 +423,7 @@ To run manually, on a Linux system with clang,
 cd icu4c/source
 CPPFLAGS=-fsanitize=thread LDFLAGS=-fsanitize=thread ./runConfigureICU --enable-debug --disable-release Linux
 make clean
-make -j -l2.5 check
+make -j6 check
 ```
 
 Errors are displayed at the point they occur, and stop further testing.
@@ -451,7 +441,7 @@ To run manually, on a Linux system with clang,
 cd icu4c/source
 CPPFLAGS=-fsanitize=address LDFLAGS=-fsanitize=address ./runConfigureICU --enable-debug --disable-release Linux
 make clean
-make -j -l2.5 check
+make -j6 check
 ```
 
 Memory leaks are summarized at the end. Other errors are displayed at the point
@@ -472,7 +462,7 @@ usually done just before publishing release candidate.
 3.  Run - `ant serialTestData`
 4.  Copy a folder with ICU version (e.g. ICU_61.1) generated under <icu4j
     root>/out/serialTestData to <icu4j
-    root>/main/core/src/test/resources/com/ibm/icu/dev/test/serializable/data.
-5.  Delete the oldest serialization test data after ICU 3.6 (do not delete ICU_3.6) from the directory.
+    root>/main/tests/core/src/com/ibm/icu/dev/test/serializable/data.
+5.  You may delete older serialization test data from the directory (but keep
     the oldest one - ICU_3.6).
 6.  Run `ant check` again before committing the changes.

@@ -11,7 +11,6 @@
 #include <iterator>
 #include <set>
 #include <utility>
-#include <cctype>
 
 #include "loctest.h"
 #include "unicode/localebuilder.h"
@@ -181,7 +180,7 @@ static const char* const rawData[33][8] = {
 } UPRV_BLOCK_MACRO_END
 
 LocaleTest::LocaleTest()
-: dataTable(nullptr)
+: dataTable(NULL)
 {
     setUpDataTable();
 }
@@ -235,7 +234,6 @@ void LocaleTest::runIndexedTest( int32_t index, UBool exec, const char* &name, c
     TESTCASE_AUTO(TestAddLikelySubtags);
     TESTCASE_AUTO(TestMinimizeSubtags);
     TESTCASE_AUTO(TestAddLikelyAndMinimizeSubtags);
-    TESTCASE_AUTO(TestDataDrivenLikelySubtags);
     TESTCASE_AUTO(TestKeywordVariants);
     TESTCASE_AUTO(TestCreateUnicodeKeywords);
     TESTCASE_AUTO(TestKeywordVariantParsing);
@@ -373,8 +371,8 @@ void LocaleTest::TestBasicGetters() {
     if (temp != UnicodeString("") )
         errln("Variant code mismatch: " + temp + "  versus \"\"");
 
-    if (Locale::getDefault() != Locale::createFromName(nullptr))
-        errln("Locale::getDefault() == Locale::createFromName(nullptr)");
+    if (Locale::getDefault() != Locale::createFromName(NULL))
+        errln("Locale::getDefault() == Locale::createFromName(NULL)");
 
     /*----------*/
     // NOTE: There used to be a special test for locale names that had language or
@@ -492,7 +490,7 @@ void LocaleTest::TestSimpleResourceInfo() {
             errln("  ISO-3 country code mismatch: " + temp
                 + " versus " + dataTable[CTRY3][i]);
 
-        snprintf(temp2, sizeof(temp2), "%x", (int)testLocale.getLCID());
+        sprintf(temp2, "%x", (int)testLocale.getLCID());
         if (UnicodeString(temp2) != dataTable[LCID][i])
             errln((UnicodeString)"  LCID mismatch: " + temp2 + " versus "
                 + dataTable[LCID][i]);
@@ -929,8 +927,8 @@ LocaleTest::TestGetLangsAndCountries()
       ;
 
     /* TODO: Change this test to be more like the cloctst version? */
-    if (testCount != 601)
-        errln("Expected getISOLanguages() to return 601 languages; it returned %d", testCount);
+    if (testCount != 595)
+        errln("Expected getISOLanguages() to return 595 languages; it returned %d", testCount);
     else {
         for (i = 0; i < 15; i++) {
             int32_t j;
@@ -960,8 +958,8 @@ LocaleTest::TestGetLangsAndCountries()
     for(testCount=0;test[testCount];testCount++)
       ;
 
-    if (testCount != 254){
-        errln("Expected getISOCountries to return 254 countries; it returned %d", testCount);
+    if (testCount != 253){
+        errln("Expected getISOCountries to return 253 countries; it returned %d", testCount);
     }else {
         for (i = 0; i < spot2Len; i++) {
             int32_t j;
@@ -1194,8 +1192,8 @@ void
 LocaleTest::TestThaiCurrencyFormat()
 {
     UErrorCode status = U_ZERO_ERROR;
-    DecimalFormat *thaiCurrency = dynamic_cast<DecimalFormat*>(NumberFormat::createCurrencyInstance(
-                    Locale("th", "TH"), status));
+    DecimalFormat *thaiCurrency = (DecimalFormat*)NumberFormat::createCurrencyInstance(
+                    Locale("th", "TH"), status);
     UnicodeString posPrefix(u"\u0E3F");
     UnicodeString temp;
 
@@ -1228,7 +1226,7 @@ LocaleTest::TestThaiCurrencyFormat()
 void
 LocaleTest::TestEuroSupport()
 {
-    char16_t euro = 0x20ac;
+    UChar euro = 0x20ac;
     const UnicodeString EURO_CURRENCY(&euro, 1, 1); // Look for this UnicodeString in formatted Euro currency
     const char* localeArr[] = {
                             "ca_ES",
@@ -1252,7 +1250,7 @@ LocaleTest::TestEuroSupport()
                             "nl_BE",
                             "nl_NL",
                             "pt_PT",
-                            nullptr
+                            NULL
                         };
     const char** locales = localeArr;
 
@@ -1260,7 +1258,7 @@ LocaleTest::TestEuroSupport()
 
     UnicodeString temp;
 
-    for (;*locales!=nullptr;locales++) {
+    for (;*locales!=NULL;locales++) {
         Locale loc (*locales);
         UnicodeString temp;
         NumberFormat *nf = NumberFormat::createCurrencyInstance(loc, status);
@@ -1289,8 +1287,8 @@ LocaleTest::TestEuroSupport()
         delete nf;
     }
 
-    UnicodeString dollarStr("USD", ""), euroStr("EUR", ""), genericStr((char16_t)0x00a4), resultStr;
-    char16_t tmp[4];
+    UnicodeString dollarStr("USD", ""), euroStr("EUR", ""), genericStr((UChar)0x00a4), resultStr;
+    UChar tmp[4];
     status = U_ZERO_ERROR;
 
     ucurr_forLocale("en_US", tmp, 4, &status);
@@ -1315,7 +1313,7 @@ LocaleTest::TestEuroSupport()
     }
     int32_t invalidLen = ucurr_forLocale("en_QQ", tmp, 4, &status);
     if (invalidLen || U_SUCCESS(status)) {
-        errln("Fail: en_QQ didn't return nullptr");
+        errln("Fail: en_QQ didn't return NULL");
     }
 
     // The currency keyword value is as long as the destination buffer.
@@ -1407,17 +1405,15 @@ LocaleTest::Test4139940()
     df_full.format(mydate, str, pos);
     // Make sure that o circumflex (\u00F4) is NOT there, and
     // o double acute (\u0151) IS.
-    char16_t ocf = 0x00f4;
-    char16_t oda = 0x0151;
-
+    UChar ocf = 0x00f4;
+    UChar oda = 0x0151;
     if (str.indexOf(oda) < 0 || str.indexOf(ocf) >= 0) {
-      /* If the default calendar of the default locale is not "gregorian" this test will fail. */
-      LocalPointer<Calendar> defaultCalendar(Calendar::createInstance(status));
-      if (strcmp(defaultCalendar->getType(), "gregorian") == 0) {
+      /* If the default locale is "th" this test will fail because of the buddhist calendar. */
+      if (strcmp(Locale::getDefault().getLanguage(), "th") != 0) {
         errln("Fail: Monday in Hungarian is wrong - oda's index is %d and ocf's is %d",
               str.indexOf(oda), str.indexOf(ocf));
       } else {
-        logln(UnicodeString("An error is produce in non Gregorian calendar."));
+        logln(UnicodeString("An error is produce in buddhist calendar."));
       }
       logln(UnicodeString("String is: ") + str );
     }
@@ -1475,7 +1471,7 @@ LocaleTest::Test4147315()
     const char *result = locale.getISO3Country();
 
     // Change to conform to C api usage
-    if((result==nullptr)||(result[0] != 0))
+    if((result==NULL)||(result[0] != 0))
       errln("ERROR: getISO3Country() returns: " + UnicodeString(result,"") +
                 " for locale '" + (temp=locale.getName()) + "' rather than exception" );
 }
@@ -1496,7 +1492,7 @@ LocaleTest::Test4147317()
     const char *result = locale.getISO3Language();
 
     // Change to conform to C api usage
-    if((result==nullptr)||(result[0] != 0))
+    if((result==NULL)||(result[0] != 0))
       errln("ERROR: getISO3Language() returns: " + UnicodeString(result,"") +
                 " for locale '" + (temp=locale.getName()) + "' rather than exception" );
 }
@@ -1714,26 +1710,21 @@ LocaleTest::TestAddLikelyAndMinimizeSubtags() {
         const char* const remove;
     } full_data[] = {
         {
-            "und",
-            "en_Latn_US",
-            "en"
-        },
-        {
             "und_AQ",
-            "en_Latn_AQ",
-            "en_AQ"
+            "_Latn_AQ",
+            "_AQ"
         }, {
             "und_Zzzz_AQ",
-            "en_Latn_AQ",
-            "en_AQ"
+            "_Latn_AQ",
+            "_AQ"
         }, {
             "und_Latn_AQ",
-            "en_Latn_AQ",
-            "en_AQ"
+            "_Latn_AQ",
+            "_AQ"
         }, {
             "und_Moon_AQ",
-            "en_Moon_AQ",
-            "en_Moon_AQ"
+            "_Moon_AQ",
+            "_Moon_AQ"
         }, {
             "aa",
             "aa_Latn_ET",
@@ -2104,7 +2095,7 @@ LocaleTest::TestAddLikelyAndMinimizeSubtags() {
             "pa_PK"
         }, {
             "pap",
-            "pap_Latn_CW",
+            "pap_Latn_AW",
             "pap"
         }, {
             "pau",
@@ -2524,8 +2515,8 @@ LocaleTest::TestAddLikelyAndMinimizeSubtags() {
             "am"
         }, {
             "und_Ethi_ER",
-            "ti_Ethi_ER",
-            "ti_ER"
+            "am_Ethi_ER",
+            "am_ER"
         }, {
             "und_FI",
             "fi_Latn_FI",
@@ -3256,8 +3247,8 @@ LocaleTest::TestAddLikelyAndMinimizeSubtags() {
             "zh_HK"
         }, {
             "und_AQ",
-            "en_Latn_AQ",
-            "en_AQ"
+            "_Latn_AQ",
+            "_AQ"
         }, {
             "und_Zzzz",
             "en_Latn_US",
@@ -3280,8 +3271,8 @@ LocaleTest::TestAddLikelyAndMinimizeSubtags() {
             "zh_HK"
         }, {
             "und_Zzzz_AQ",
-            "en_Latn_AQ",
-            "en_AQ"
+            "_Latn_AQ",
+            "_AQ"
         }, {
             "und_Latn",
             "en_Latn_US",
@@ -3300,12 +3291,12 @@ LocaleTest::TestAddLikelyAndMinimizeSubtags() {
             "trv"
         }, {
             "und_Latn_HK",
-            "en_Latn_HK",
-            "en_HK"
+            "zh_Latn_HK",
+            "zh_Latn_HK"
         }, {
             "und_Latn_AQ",
-            "en_Latn_AQ",
-            "en_AQ"
+            "_Latn_AQ",
+            "_AQ"
         }, {
             "und_Hans",
             "zh_Hans_CN",
@@ -3376,8 +3367,8 @@ LocaleTest::TestAddLikelyAndMinimizeSubtags() {
             "zh_Moon_HK"
         }, {
             "und_Moon_AQ",
-            "en_Moon_AQ",
-            "en_Moon_AQ"
+            "_Moon_AQ",
+            "_Moon_AQ"
         }, {
             "es",
             "es_Latn_ES",
@@ -3801,7 +3792,7 @@ LocaleTest::TestAddLikelyAndMinimizeSubtags() {
         }, {
             "aae_Latn_IT",
             "aae_Latn_IT",
-            "aae"
+            "aae_Latn_IT"
         }, {
             "aae_Thai_CO",
             "aae_Thai_CO",
@@ -3809,7 +3800,7 @@ LocaleTest::TestAddLikelyAndMinimizeSubtags() {
         }, {
             "und_CW",
             "pap_Latn_CW",
-            "pap"
+            "pap_CW"
         }, {
             "zh_Hant",
             "zh_Hant_TW",
@@ -3832,8 +3823,8 @@ LocaleTest::TestAddLikelyAndMinimizeSubtags() {
             "es_419"
         }, {
             "und_150",
-            "en_Latn_150",
-            "en_150"
+            "ru_Cyrl_RU",
+            "ru"
         }, {
             "und_AT",
             "de_Latn_AT",
@@ -3872,8 +3863,9 @@ LocaleTest::TestAddLikelyAndMinimizeSubtags() {
     }
 }
 
+
 void
-LocaleTest::TestKeywordVariants() {
+LocaleTest::TestKeywordVariants(void) {
     static const struct {
         const char *localeID;
         const char *expectedLocaleID;
@@ -3905,10 +3897,10 @@ LocaleTest::TestKeywordVariants() {
     UErrorCode status = U_ZERO_ERROR;
 
     int32_t i = 0, j = 0;
-    const char *result = nullptr;
+    const char *result = NULL;
     StringEnumeration *keywords;
     int32_t keyCount = 0;
-    const char *keyword = nullptr;
+    const char *keyword = NULL;
     const UnicodeString *keywordString;
     int32_t keywordLen = 0;
 
@@ -3929,14 +3921,14 @@ LocaleTest::TestKeywordVariants() {
             if(keyCount) {
                 for(j = 0;;) {
                     if((j&1)==0) {
-                        if((keyword = keywords->next(&keywordLen, status)) == nullptr) {
+                        if((keyword = keywords->next(&keywordLen, status)) == NULL) {
                             break;
                         }
                         if(strcmp(keyword, testCases[i].expectedKeywords[j]) != 0) {
                             err("Expected to get keyword value %s, got %s\n", testCases[i].expectedKeywords[j], keyword);
                         }
                     } else {
-                        if((keywordString = keywords->snext(status)) == nullptr) {
+                        if((keywordString = keywords->snext(status)) == NULL) {
                             break;
                         }
                         if(*keywordString != UnicodeString(testCases[i].expectedKeywords[j], "")) {
@@ -3948,7 +3940,7 @@ LocaleTest::TestKeywordVariants() {
                     if(j == keyCount / 2) {
                         // replace keywords with a clone of itself
                         StringEnumeration *k2 = keywords->clone();
-                        if(k2 == nullptr || keyCount != k2->count(status)) {
+                        if(k2 == NULL || keyCount != k2->count(status)) {
                             errln("KeywordEnumeration.clone() failed");
                         } else {
                             delete keywords;
@@ -3958,7 +3950,7 @@ LocaleTest::TestKeywordVariants() {
                 }
                 keywords->reset(status); // Make sure that reset works.
                 for(j = 0;;) {
-                    if((keyword = keywords->next(&keywordLen, status)) == nullptr) {
+                    if((keyword = keywords->next(&keywordLen, status)) == NULL) {
                         break;
                     }
                     if(strcmp(keyword, testCases[i].expectedKeywords[j]) != 0) {
@@ -3981,15 +3973,13 @@ LocaleTest::TestKeywordVariants() {
 
 
 void
-LocaleTest::TestCreateUnicodeKeywords() {
+LocaleTest::TestCreateUnicodeKeywords(void) {
     IcuTestErrorCode status(*this, "TestCreateUnicodeKeywords()");
 
     static const Locale l("de@calendar=buddhist;collation=phonebook");
 
     LocalPointer<StringEnumeration> keys(l.createUnicodeKeywords(status));
     status.errIfFailureAndReset("\"%s\"", l.getName());
-
-    assertEquals("count", 2, keys->count(status));
 
     const char* key;
     int32_t resultLength;
@@ -4039,7 +4029,7 @@ LocaleTest::TestCreateUnicodeKeywords() {
 
 
 void
-LocaleTest::TestKeywordVariantParsing() {
+LocaleTest::TestKeywordVariantParsing(void) {
     static const struct {
         const char *localeID;
         const char *keyword;
@@ -4070,7 +4060,7 @@ LocaleTest::TestKeywordVariantParsing() {
 }
 
 void
-LocaleTest::TestCreateKeywordSet() {
+LocaleTest::TestCreateKeywordSet(void) {
     IcuTestErrorCode status(*this, "TestCreateKeywordSet()");
 
     static const Locale l("de@calendar=buddhist;collation=phonebook");
@@ -4089,7 +4079,7 @@ LocaleTest::TestCreateKeywordSet() {
 }
 
 void
-LocaleTest::TestCreateKeywordSetEmpty() {
+LocaleTest::TestCreateKeywordSetEmpty(void) {
     IcuTestErrorCode status(*this, "TestCreateKeywordSetEmpty()");
 
     static const Locale l("de");
@@ -4104,7 +4094,7 @@ LocaleTest::TestCreateKeywordSetEmpty() {
 }
 
 void
-LocaleTest::TestCreateKeywordSetWithPrivateUse() {
+LocaleTest::TestCreateKeywordSetWithPrivateUse(void) {
     IcuTestErrorCode status(*this, "TestCreateKeywordSetWithPrivateUse()");
 
     static const char tag[] = "en-US-u-ca-gregory-x-foo";
@@ -4125,7 +4115,7 @@ LocaleTest::TestCreateKeywordSetWithPrivateUse() {
 }
 
 void
-LocaleTest::TestCreateUnicodeKeywordSet() {
+LocaleTest::TestCreateUnicodeKeywordSet(void) {
     IcuTestErrorCode status(*this, "TestCreateUnicodeKeywordSet()");
 
     static const Locale l("de@calendar=buddhist;collation=phonebook");
@@ -4141,15 +4131,10 @@ LocaleTest::TestCreateUnicodeKeywordSet() {
                result.find("ca") != result.end());
     assertTrue("set::find(\"co\")",
                result.find("co") != result.end());
-
-    LocalPointer<StringEnumeration> se(l.createUnicodeKeywords(status), status);
-    status.errIfFailureAndReset("\"%s\" createUnicodeKeywords()", l.getName());
-    assertEquals("count()", 2, se->count(status));
-    status.errIfFailureAndReset("\"%s\" count()", l.getName());
 }
 
 void
-LocaleTest::TestCreateUnicodeKeywordSetEmpty() {
+LocaleTest::TestCreateUnicodeKeywordSetEmpty(void) {
     IcuTestErrorCode status(*this, "TestCreateUnicodeKeywordSetEmpty()");
 
     static const Locale l("de");
@@ -4161,14 +4146,10 @@ LocaleTest::TestCreateUnicodeKeywordSetEmpty() {
     status.errIfFailureAndReset("\"%s\"", l.getName());
 
     assertEquals("set::size()", 0, static_cast<int32_t>(result.size()));
-
-    LocalPointer<StringEnumeration> se(l.createUnicodeKeywords(status), status);
-    assertTrue("createUnicodeKeywords", se.isNull());
-    status.expectErrorAndReset(U_MEMORY_ALLOCATION_ERROR);
 }
 
 void
-LocaleTest::TestCreateUnicodeKeywordSetWithPrivateUse() {
+LocaleTest::TestCreateUnicodeKeywordSetWithPrivateUse(void) {
     IcuTestErrorCode status(*this, "TestCreateUnicodeKeywordSetWithPrivateUse()");
 
     static const char tag[] = "en-US-u-ca-gregory-x-foo";
@@ -4185,16 +4166,10 @@ LocaleTest::TestCreateUnicodeKeywordSetWithPrivateUse() {
                result.find("x") == result.end());
     assertTrue("getUnicodeKeywords set::find(\"foo\")",
                result.find("foo") == result.end());
-    assertEquals("set::size()", 1, static_cast<int32_t>(result.size()));
-
-    LocalPointer<StringEnumeration> se(l.createUnicodeKeywords(status), status);
-    status.errIfFailureAndReset("\"%s\" createUnicodeKeywords()", l.getName());
-    assertEquals("count()", 1, se->count(status));
-    status.errIfFailureAndReset("\"%s\" count()", l.getName());
 }
 
 void
-LocaleTest::TestGetKeywordValueStdString() {
+LocaleTest::TestGetKeywordValueStdString(void) {
     IcuTestErrorCode status(*this, "TestGetKeywordValueStdString()");
 
     static const char tag[] = "fa-u-nu-latn";
@@ -4210,7 +4185,7 @@ LocaleTest::TestGetKeywordValueStdString() {
 }
 
 void
-LocaleTest::TestGetUnicodeKeywordValueStdString() {
+LocaleTest::TestGetUnicodeKeywordValueStdString(void) {
     IcuTestErrorCode status(*this, "TestGetUnicodeKeywordValueStdString()");
 
     static const char keyword[] = "co";
@@ -4224,7 +4199,7 @@ LocaleTest::TestGetUnicodeKeywordValueStdString() {
 }
 
 void
-LocaleTest::TestSetKeywordValue() {
+LocaleTest::TestSetKeywordValue(void) {
     static const struct {
         const char *keyword;
         const char *value;
@@ -4277,7 +4252,7 @@ LocaleTest::TestSetKeywordValue() {
 }
 
 void
-LocaleTest::TestSetKeywordValueStringPiece() {
+LocaleTest::TestSetKeywordValueStringPiece(void) {
     IcuTestErrorCode status(*this, "TestSetKeywordValueStringPiece()");
     Locale l(Locale::getGerman());
 
@@ -4289,7 +4264,7 @@ LocaleTest::TestSetKeywordValueStringPiece() {
 }
 
 void
-LocaleTest::TestSetUnicodeKeywordValueStringPiece() {
+LocaleTest::TestSetUnicodeKeywordValueStringPiece(void) {
     IcuTestErrorCode status(*this, "TestSetUnicodeKeywordValueStringPiece()");
     Locale l(Locale::getGerman());
 
@@ -4324,7 +4299,7 @@ LocaleTest::TestSetUnicodeKeywordValueStringPiece() {
 }
 
 void
-LocaleTest::TestGetBaseName() {
+LocaleTest::TestGetBaseName(void) {
     static const struct {
         const char *localeID;
         const char *baseName;
@@ -4414,7 +4389,7 @@ void LocaleTest::_checklocs(const char* label,
     }
 }
 
-void LocaleTest::TestGetLocale() {
+void LocaleTest::TestGetLocale(void) {
 #if !UCONFIG_NO_SERVICE
     const char *req;
     Locale valid, actual, reqLoc;
@@ -4456,7 +4431,7 @@ void LocaleTest::TestGetLocale() {
             dataerrln("FAIL: NumberFormat::createInstance failed - %s", u_errorName(ec));
         } else {
             DecimalFormat* dec = dynamic_cast<DecimalFormat*>(nf);
-            if (dec == nullptr) {
+            if (dec == NULL) {
                 errln("FAIL: NumberFormat::createInstance does not return a DecimalFormat");
                 return;
             }
@@ -4469,8 +4444,8 @@ void LocaleTest::TestGetLocale() {
             }
 
             const DecimalFormatSymbols* sym = dec->getDecimalFormatSymbols();
-            if (sym == nullptr) {
-                errln("FAIL: getDecimalFormatSymbols returned nullptr");
+            if (sym == NULL) {
+                errln("FAIL: getDecimalFormatSymbols returned NULL");
                 return;
             }
             valid = sym->getLocale(ULOC_VALID_LOCALE, ec);
@@ -4497,7 +4472,7 @@ void LocaleTest::TestGetLocale() {
             dataerrln("Error calling DateFormat::createDateInstance()");
         } else {
             SimpleDateFormat* dat = dynamic_cast<SimpleDateFormat*>(df);
-            if (dat == nullptr) {
+            if (dat == NULL) {
                 errln("FAIL: DateFormat::createInstance does not return a SimpleDateFormat");
                 return;
             }
@@ -4510,8 +4485,8 @@ void LocaleTest::TestGetLocale() {
             }
     
             const DateFormatSymbols* sym = dat->getDateFormatSymbols();
-            if (sym == nullptr) {
-                errln("FAIL: getDateFormatSymbols returned nullptr");
+            if (sym == NULL) {
+                errln("FAIL: getDateFormatSymbols returned NULL");
                 return;
             }
             valid = sym->getLocale(ULOC_VALID_LOCALE, ec);
@@ -4596,7 +4571,7 @@ void LocaleTest::TestGetLocale() {
     {
         UErrorCode ec = U_ZERO_ERROR;  // give each resource type its own error code
 
-        checkRegisteredCollators(nullptr); // Don't expect any extras
+        checkRegisteredCollators(NULL); // Don't expect any extras
 
         req = "hi_IN_BHOPAL";
         reqLoc = Locale::createFromName(req);
@@ -4659,7 +4634,7 @@ void LocaleTest::TestGetLocale() {
         }
         delete coll;
 
-        checkRegisteredCollators(nullptr); // extra should be gone again
+        checkRegisteredCollators(NULL); // extra should be gone again
     }
 #endif
 #endif
@@ -4670,9 +4645,9 @@ void LocaleTest::TestGetLocale() {
  * Compare Collator::getAvailableLocales(int) [ "old", returning an array ]
  *   with  Collator::getAvailableLocales()    [ "new", returning a StringEnumeration ]
  * These should be identical (check their API docs) EXCEPT that
- * if expectExtra is non-nullptr, it will be in the "new" array but not "old".
+ * if expectExtra is non-NULL, it will be in the "new" array but not "old".
  * Does not return any status but calls errln on error.
- * @param expectExtra an extra locale, will be in "new" but not "old". Or nullptr.
+ * @param expectExtra an extra locale, will be in "new" but not "old". Or NULL.
  */
 void LocaleTest::checkRegisteredCollators(const char *expectExtra) {
     UErrorCode status = U_ZERO_ERROR;
@@ -4685,15 +4660,15 @@ void LocaleTest::checkRegisteredCollators(const char *expectExtra) {
 
     // the 'old' list (non enumeration)
     const Locale*  oldList = Collator::getAvailableLocales(count1);
-    if(oldList == nullptr) {
-        dataerrln("Error: Collator::getAvailableLocales(count) returned nullptr");
+    if(oldList == NULL) {
+        dataerrln("Error: Collator::getAvailableLocales(count) returned NULL");
         return;
     }
 
     // the 'new' list (enumeration)
     LocalPointer<StringEnumeration> newEnum(Collator::getAvailableLocales());
     if(newEnum.isNull()) {
-       errln("Error: collator::getAvailableLocales() returned nullptr");
+       errln("Error: collator::getAvailableLocales() returned NULL");
        return;
     }
 
@@ -4710,7 +4685,7 @@ void LocaleTest::checkRegisteredCollators(const char *expectExtra) {
                 oldList[i].getName());
             return;
         }
-        if(expectExtra != nullptr && !strcmp(expectExtra, oldList[i].getName())) {
+        if(expectExtra != NULL && !strcmp(expectExtra, oldList[i].getName())) {
             errln("Inexplicably, Collator::getAvailableCollators(count) had registered collator %s. This shouldn't happen, so I am going to consider it an error.\n", expectExtra);
         }
     }
@@ -4721,14 +4696,14 @@ void LocaleTest::checkRegisteredCollators(const char *expectExtra) {
     while((locStr = newEnum->snext(status)) && U_SUCCESS(status)) {
         count2++;
 
-        if(expectExtra != nullptr && expectStr == *locStr) {
+        if(expectExtra != NULL && expectStr == *locStr) {
             foundExpected = true;
             logln(UnicodeString("Found expected registered collator: ","") + expectStr);
         }
         (void)foundExpected;    // Hush unused variable compiler warning.
 
         if( oldHash.geti(*locStr) == 0 ) {
-            if(expectExtra != nullptr && expectStr==*locStr) {
+            if(expectExtra != NULL && expectStr==*locStr) {
                 logln(UnicodeString("As expected, Collator::getAvailableLocales(count) is missing registered collator ") + expectStr);
             } else {
                 errln(UnicodeString("Error: Collator::getAvailableLocales(count) is missing: ","")
@@ -4749,7 +4724,7 @@ void LocaleTest::checkRegisteredCollators(const char *expectExtra) {
     }
 
     int32_t expectCount2 = count1;
-    if(expectExtra != nullptr) {
+    if(expectExtra != NULL) {
         expectCount2 ++; // if an extra item registered, bump the expect count
     }
 
@@ -4759,7 +4734,7 @@ void LocaleTest::checkRegisteredCollators(const char *expectExtra) {
 
 
 
-void LocaleTest::TestVariantWithOutCountry() {
+void LocaleTest::TestVariantWithOutCountry(void) {
     Locale loc("en","","POSIX");
     if (0 != strcmp(loc.getVariant(), "POSIX")) {
         errln("FAIL: en__POSIX didn't get parsed correctly - name is %s - expected %s got %s", loc.getName(), "POSIX", loc.getVariant());
@@ -4800,7 +4775,7 @@ static Locale _canonicalize(int32_t selector, /* 0==createFromName, 1==createCan
     }
 }
 
-void LocaleTest::TestCanonicalization()
+void LocaleTest::TestCanonicalization(void)
 {
     static const struct {
         const char *localeID;    /* input */
@@ -4921,7 +4896,7 @@ void LocaleTest::TestCanonicalization()
     }
 }
 
-void LocaleTest::TestCanonicalize()
+void LocaleTest::TestCanonicalize(void)
 {
     static const struct {
         const char *localeID;    /* input */
@@ -5078,12 +5053,12 @@ void LocaleTest::TestCanonicalize()
     }
 }
 
-void LocaleTest::TestCurrencyByDate()
+void LocaleTest::TestCurrencyByDate(void)
 {
 #if !UCONFIG_NO_FORMATTING
     UErrorCode status = U_ZERO_ERROR;
     UDate date = uprv_getUTCtime();
-	char16_t TMP[4] = {0, 0, 0, 0};
+	UChar TMP[4] = {0, 0, 0, 0};
 	int32_t index = 0;
 	int32_t resLen = 0;
     UnicodeString tempStr, resultStr;
@@ -5097,7 +5072,7 @@ void LocaleTest::TestCurrencyByDate()
 	}
     resLen = ucurr_forLocaleAndDate("eo_AM", date, index, TMP, 4, &status);
     if (resLen != 0) {
-		errcheckln(status, "FAIL: eo_AM didn't return nullptr - %s", u_errorName(status));
+		errcheckln(status, "FAIL: eo_AM didn't return NULL - %s", u_errorName(status));
     }
     status = U_ZERO_ERROR;
 
@@ -5238,20 +5213,20 @@ void LocaleTest::TestCurrencyByDate()
 	}
     resLen = ucurr_forLocaleAndDate("eo_UA", date, index, TMP, 4, &status);
     if (resLen != 0) {
-		errcheckln(status, "FAIL: eo_UA didn't return nullptr - %s", u_errorName(status));
+		errcheckln(status, "FAIL: eo_UA didn't return NULL - %s", u_errorName(status));
     }
     status = U_ZERO_ERROR;
 
 	// Test index bounds
     resLen = ucurr_forLocaleAndDate("eo_UA", date, 100, TMP, 4, &status);
     if (resLen != 0) {
-		errcheckln(status, "FAIL: eo_UA didn't return nullptr - %s", u_errorName(status));
+		errcheckln(status, "FAIL: eo_UA didn't return NULL - %s", u_errorName(status));
     }
     status = U_ZERO_ERROR;
 
     resLen = ucurr_forLocaleAndDate("eo_UA", date, 0, TMP, 4, &status);
     if (resLen != 0) {
-		errcheckln(status, "FAIL: eo_UA didn't return nullptr - %s", u_errorName(status));
+		errcheckln(status, "FAIL: eo_UA didn't return NULL - %s", u_errorName(status));
     }
     status = U_ZERO_ERROR;
 
@@ -5264,12 +5239,12 @@ void LocaleTest::TestCurrencyByDate()
     status = U_ZERO_ERROR;
     resLen = ucurr_forLocaleAndDate("eo_QQ", date, 1, TMP, 4, &status);
     if (resLen != 0) {
-		errcheckln(status, "FAIL: eo_QQ didn't return nullptr - %s", u_errorName(status));
+		errcheckln(status, "FAIL: eo_QQ didn't return NULL - %s", u_errorName(status));
     }
     status = U_ZERO_ERROR;
     resLen = ucurr_forLocaleAndDate("eo_QQ", date, 0, TMP, 4, &status);
     if (resLen != 0) {
-		errcheckln(status, "FAIL: eo_QQ didn't return nullptr - %s", u_errorName(status));
+		errcheckln(status, "FAIL: eo_QQ didn't return NULL - %s", u_errorName(status));
     }
     status = U_ZERO_ERROR;
 
@@ -5346,7 +5321,7 @@ void LocaleTest::TestCurrencyByDate()
 	}
     resLen = ucurr_forLocaleAndDate("eo_AO", date, 1, TMP, 4, &status);
     if (resLen != 0) {
-		errcheckln(status, "FAIL: eo_AO didn't return nullptr - %s", u_errorName(status));
+		errcheckln(status, "FAIL: eo_AO didn't return NULL - %s", u_errorName(status));
     }
     status = U_ZERO_ERROR;
 
@@ -5374,10 +5349,10 @@ void LocaleTest::TestCurrencyByDate()
 	status = U_ZERO_ERROR; // reset
     date = uprv_getUTCtime();
 
-    char16_t USD[4];
+    UChar USD[4];
     ucurr_forLocaleAndDate("en_US", date, 1, USD, 4, &status);
     
-	char16_t YEN[4];
+	UChar YEN[4];
     ucurr_forLocaleAndDate("ja_JP", date, 1, YEN, 4, &status);
 
     ucurr_forLocaleAndDate("en_US", date, 1, TMP, 4, &status);
@@ -5392,7 +5367,7 @@ void LocaleTest::TestCurrencyByDate()
 #endif
 }
 
-void LocaleTest::TestGetVariantWithKeywords()
+void LocaleTest::TestGetVariantWithKeywords(void)
 {
   Locale l("en_US_VALLEY@foo=value");
   const char *variant = l.getVariant();
@@ -5527,7 +5502,7 @@ void LocaleTest::TestLocaleCanonicalizationFromFile()
     char testPath[400];
     char line[256];
     strcpy(testPath, sourceTestDataPath);
-    strcat(testPath, "cldr/localeIdentifiers/localeCanonicalization.txt");
+    strcat(testPath, "localeCanonicalization.txt");
     LocalStdioFilePointer testFile(fopen(testPath, "r"));
     if(testFile.isNull()) {
         errln("unable to open %s", testPath);
@@ -5535,7 +5510,7 @@ void LocaleTest::TestLocaleCanonicalizationFromFile()
     }
     // Format:
     // <source locale identifier>	;	<expected canonicalized locale identifier>
-    while (fgets(line, (int)sizeof(line), testFile.getAlias())!=nullptr) {
+    while (fgets(line, (int)sizeof(line), testFile.getAlias())!=NULL) {
         if (line[0] == '#') {
             // ignore any lines start with #
             continue;
@@ -5568,168 +5543,6 @@ void LocaleTest::TestLocaleCanonicalizationFromFile()
         assertEquals(msg.c_str(), expect.c_str(), tag);
     }
 }
-
-std::string trim(const std::string &s) {
-    auto start = s.begin();
-    while (start != s.end() && std::isspace(*start)) {
-        start++;
-    }
-
-    auto end = s.end();
-    do {
-        end--;
-    } while (std::distance(start, end) > 0 && std::isspace(*end));
-
-    return std::string(start, end + 1);
-}
-
-// A testing helper class which favorScript when minimizeSubtags.
-class FavorScriptLocale : public Locale {
-public:
-    FavorScriptLocale(const Locale& l) :Locale(l) { }
-    void minimizeSubtags(UErrorCode& status) {
-        Locale::minimizeSubtags(true, status);
-    }
-};
-
-bool isKnownSourceForCLDR17099(const std::string& s) {
-    if (s.compare("qaa-Cyrl-CH") == 0) {
-        return true;
-    }
-    
-	return false;
-}
-
-void U_CALLCONV
-testLikelySubtagsLineFn(void *context,
-               char *fields[][2], int32_t fieldCount,
-               UErrorCode *pErrorCode) {
-    if (U_FAILURE(*pErrorCode)) {
-        return;
-    }
-    (void)fieldCount;
-    LocaleTest* THIS = (LocaleTest*)context;
-    std::string source(trim(std::string(fields[0][0], fields[0][1]-fields[0][0])));
-    if (isKnownSourceForCLDR17099(source) && THIS->logKnownIssue("CLDR-17099", "likelySubtags.txt wrong for qaa-Cyrl-CH")) {
-        return;
-    }
-    std::string addLikely(trim(std::string(fields[1][0], fields[1][1]-fields[1][0])));
-    std::string removeFavorScript(trim(std::string(fields[2][0], fields[2][1]-fields[2][0])));
-    if (removeFavorScript.length() == 0) {
-        removeFavorScript = addLikely;
-    }
-    std::string removeFavorRegion(trim(std::string(fields[3][0], fields[3][1]-fields[3][0])));
-
-    if (removeFavorRegion.length() == 0) {
-        removeFavorRegion = removeFavorScript;
-    }
-    Locale l = Locale::forLanguageTag(source, *pErrorCode);
-    if (U_FAILURE(*pErrorCode)) {
-        THIS->errln("forLanguageTag(%s) return error %x %s", source.c_str(),
-                    *pErrorCode, u_errorName(*pErrorCode));
-        *pErrorCode = U_ZERO_ERROR;
-        return;
-    }
-
-    Locale actualMax(l);
-    actualMax.addLikelySubtags(*pErrorCode);
-    if (addLikely == "FAIL") {
-        if (uprv_strcmp(l.getName(), actualMax.getName()) != 0) {
-            THIS->errln("addLikelySubtags('%s') return should return the same but return '%s'",
-                        l.getName(), actualMax.getName());
-        }
-    } else {
-        std::string max = actualMax.toLanguageTag<std::string>(*pErrorCode);
-        if (U_FAILURE(*pErrorCode)) {
-            THIS->errln("toLanguageTag(%s) return error %x %s", actualMax.getName(),
-                        *pErrorCode, u_errorName(*pErrorCode));
-            *pErrorCode = U_ZERO_ERROR;
-        } else {
-            if (max != addLikely) {
-                THIS->errln("addLikelySubtags('%s') should return '%s' but got '%s'",
-                            source.c_str(), addLikely.c_str(), max.c_str());
-            }
-        }
-    }
-
-    Locale actualMin(l);
-    actualMin.minimizeSubtags(*pErrorCode);
-    if (removeFavorRegion == "FAIL") {
-        if (uprv_strcmp(l.getName(), actualMin.getName()) != 0) {
-            THIS->errln("minimizeSubtags('%s') return should return the same but return '%s'",
-                        l.getName(), actualMin.getName());
-        }
-    } else {
-        std::string min = actualMin.toLanguageTag<std::string>(*pErrorCode);
-        if (U_FAILURE(*pErrorCode)) {
-            THIS->errln("toLanguageTag(%s) return error %x %s", actualMin.getName(),
-                        *pErrorCode, u_errorName(*pErrorCode));
-            *pErrorCode = U_ZERO_ERROR;
-        } else {
-            if (min != removeFavorRegion) {
-                THIS->errln("minimizeSubtags('%s') should return '%s' but got '%s'",
-                            source.c_str(), removeFavorRegion.c_str(), min.c_str());
-            }
-        }
-    }
-
-    FavorScriptLocale actualMinFavorScript(l);
-    actualMinFavorScript.minimizeSubtags(*pErrorCode);
-    if (removeFavorScript == "FAIL") {
-        if (uprv_strcmp(l.getName(), actualMinFavorScript.getName()) != 0) {
-            THIS->errln("minimizeSubtags('%s') return should return the same but return '%s'",
-                        l.getName(), actualMinFavorScript.getName());
-        }
-    } else {
-        std::string min = actualMinFavorScript.toLanguageTag<std::string>(*pErrorCode);
-        if (U_FAILURE(*pErrorCode)) {
-            THIS->errln("toLanguageTag(%s) favor script return error %x %s", actualMinFavorScript.getName(),
-                        *pErrorCode, u_errorName(*pErrorCode));
-            *pErrorCode = U_ZERO_ERROR;
-        } else {
-            if (min != removeFavorScript) {
-                THIS->errln("minimizeSubtags('%s') favor script should return '%s' but got '%s'",
-                            source.c_str(), removeFavorScript.c_str(), min.c_str());
-            }
-        }
-    }
-}
-
-void
-LocaleTest::TestDataDrivenLikelySubtags() {
-    if (quick) {
-        // This test is too slow to run. Only run in -e mode.
-        return;
-    }
-    IcuTestErrorCode errorCode(*this, "TestDataDrivenLikelySubtags()");
-    const char* name = "cldr/localeIdentifiers/likelySubtags.txt";
-    const char *sourceTestDataPath = getSourceTestData(errorCode);
-    if (errorCode.errIfFailureAndReset("unable to find the source/test/testdata "
-                                       "folder (getSourceTestData())")) {
-        return;
-    }
-    CharString path(sourceTestDataPath, errorCode);
-    path.appendPathPart(name, errorCode);
-    LocalStdioFilePointer testFile(fopen(path.data(), "r"));
-    if (testFile.isNull()) {
-        errln("unable to open %s", path.data());
-        return;
-    }
-
-    // Columns (c1, c2,...) are separated by semicolons.
-    // Leading and trailing spaces and tabs in each column are ignored.
-    // Comments are indicated with hash marks.
-    const int32_t kNumFields = 4;
-    char *fields[kNumFields][2];
-
-    u_parseDelimitedFile(path.data(), ';', fields, kNumFields, testLikelySubtagsLineFn,
-                         this, errorCode);
-    if (errorCode.errIfFailureAndReset("error parsing %s", name)) {
-        return;
-    }
-}
-
-
 
 void LocaleTest::TestKnownCanonicalizedListCorrect()
 {
@@ -5874,7 +5687,7 @@ void LocaleTest::TestForLanguageTagLegacyTagBug21676() {
       "i-enochian-1nochian-129-515VNTR-64863775-X3il6-110Y101-29-515VNTR-"
       "64863775-153zu-u-Y4-H0-t6-X3-u6-110Y101-X");
   std::string input(tag);
-  input += "EXTRA MEMORY AFTER NON-nullptr TERMINATED STRING";
+  input += "EXTRA MEMORY AFTER NON-NULL TERMINATED STRING";
   StringPiece stringp(input.c_str(), tag.length());
   std::string name = Locale::forLanguageTag(stringp, status).getName();
   std::string expected(
@@ -5958,10 +5771,6 @@ void LocaleTest::TestToLanguageTag() {
       {"und-Latn-x-private", "und-Latn-x-private"},
       {"und-1994-biske-rozaj", "und-1994-biske-rozaj"},
       {"und-1994-biske-rozaj-x-private", "und-1994-biske-rozaj-x-private"},
-      // ICU-22497
-      {"-ins0-ins17Rz-yqyq-UWLF-uRyq-UWLF-uRRyq-UWLF-uR-UWLF-uRns0-ins17Rz-yq-UWLF-uRyq-UWLF-uRRyq-LF-uRyq-UWLF-uRRyq-UWLF-uRq-UWLF-uRyq-UWLF-uRRyq-UWLF-uR", ""},
-      // ICU-22504
-      {"@attribute=zzo9zzzzzzzs0zzzzzzzzzz55555555555555555555500000000000000000000fffffffffffffffffffffffffzzzzz2mfPAK", ""},
     };
     int32_t i;
     for (i=0; i < UPRV_LENGTHOF(testCases); i++) {
@@ -5975,12 +5784,6 @@ void LocaleTest::TestToLanguageTag() {
                        tag.c_str(),
                        u_errorName(status));
         }
-        // Test ICU-22497
-        status = U_ZERO_ERROR;
-        icu::Locale locale(otag.c_str());
-        char buf[245];
-        icu::CheckedArrayByteSink sink(buf, sizeof(buf));
-        locale.toLanguageTag(sink, status);
     }
 }
 
@@ -6821,7 +6624,7 @@ void LocaleTest::TestSierraLeoneCurrency21997() {
     // Test will fail once SLE is declared legal.
     // CLDR 42: Now check that currency of Sierra Leone is SLE (which is legal tender)
     UnicodeString sllStr("SLE", ""), resultStr;
-    char16_t tmp[4];
+    UChar tmp[4];
     UErrorCode status = U_ZERO_ERROR;
 
     ucurr_forLocale("en_SL", tmp, 4, &status);

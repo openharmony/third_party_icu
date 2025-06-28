@@ -42,7 +42,7 @@ void LSTMBETest::runIndexedTest( int32_t index, UBool exec, const char* &name, c
 //--------------------------------------------------------------------------------------
 
 LSTMBETest::LSTMBETest() {
-    fTestParams = nullptr;
+    fTestParams = NULL;
 }
 
 
@@ -73,7 +73,7 @@ UScriptCode getScriptFromModelName(const std::string& modelName) {
 // the model. Since by default the LSTM models are not included, all the tested
 // models need to be included under source/test/testdata.
 
-void LSTMBETest::runTestFromFile(const char* filename, const char* locale) {
+void LSTMBETest::runTestFromFile(const char* filename) {
     UErrorCode   status = U_ZERO_ERROR;
     LocalPointer<const LanguageBreakEngine> engine;
     //  Open and read the test data file.
@@ -82,7 +82,7 @@ void LSTMBETest::runTestFromFile(const char* filename, const char* locale) {
     testFileName.append(filename, -1, status);
 
     int len;
-    char16_t *testFile = ReadAndConvertFile(testFileName.data(), len, "UTF-8", status);
+    UChar *testFile = ReadAndConvertFile(testFileName.data(), len, "UTF-8", status);
     if (U_FAILURE(status)) {
         errln("%s:%d Error %s opening test file %s", __FILE__, __LINE__, u_errorName(status), filename);
         return;
@@ -123,7 +123,7 @@ void LSTMBETest::runTestFromFile(const char* filename, const char* locale) {
                 caseNum++;
                 bool canHandleAllChars = true;
                 for (int32_t i = 0; i < value.length(); i++) {
-                    if (!engine->handles(value.charAt(i), locale)) {
+                    if (!engine->handles(value.charAt(i))) {
                         errln(UnicodeString("Test Case#") + caseNum + " contains char '" +
                                   UnicodeString(value.charAt(i)) +
                                   "' cannot be handled by the engine in offset " + i + "\n" + line);
@@ -200,15 +200,15 @@ void LSTMBETest::runTestFromFile(const char* filename, const char* locale) {
 }
 
 void LSTMBETest::TestThaiGraphclust() {
-    runTestFromFile("Thai_graphclust_model4_heavy_Test.txt", "th");
+    runTestFromFile("Thai_graphclust_model4_heavy_Test.txt");
 }
 
 void LSTMBETest::TestThaiCodepoints() {
-    runTestFromFile("Thai_codepoints_exclusive_model5_heavy_Test.txt", "th");
+    runTestFromFile("Thai_codepoints_exclusive_model5_heavy_Test.txt");
 }
 
 void LSTMBETest::TestBurmeseGraphclust() {
-    runTestFromFile("Burmese_graphclust_model5_heavy_Test.txt", "my");
+    runTestFromFile("Burmese_graphclust_model5_heavy_Test.txt");
 }
 
 const LanguageBreakEngine* LSTMBETest::createEngineFromTestData(

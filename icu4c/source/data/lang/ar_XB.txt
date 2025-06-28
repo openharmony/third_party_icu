@@ -60,7 +60,7 @@ ar_XB{
         an{"؜‮Aragonese‬؜"}
         ang{"؜‮Old‬؜ ؜‮English‬؜"}
         anp{"؜‮Angika‬؜"}
-        ar{"؜‮Arabic‬؜"}
+        ar{"[Bidirection test locale]"}
         ar_001{"؜‮Modern‬؜ ؜‮Standard‬؜ ؜‮Arabic‬؜"}
         arc{"؜‮Aramaic‬؜"}
         arn{"؜‮Mapuche‬؜"}

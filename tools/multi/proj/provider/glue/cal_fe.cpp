@@ -55,7 +55,7 @@ virtual UBool inDaylightTime(UErrorCode& status) const ; \
     virtual int32_t defaultCenturyStartYear() const ;  \
     virtual int32_t handleComputeMonthStart(int32_t eyear, int32_t month, UBool useMonth) const ; \
     virtual int32_t handleGetLimit(UCalendarDateFields field, ELimitType limitType) const ; \
-    virtual Calendar* clone() const; \
+    virtual Calendar* clone(void) const; \
   public: static int32_t countAvailable();                              \
 public: static int32_t appendAvailable(UnicodeString* strs, int32_t i, int32_t count); \
   };
@@ -73,10 +73,10 @@ GLUE_VER( ICUGLUE_VER )
 #endif
 
 GLUE_SYM (Calendar ) :: GLUE_SYM(Calendar) ( const Locale& loc, UErrorCode& status ) :
-Calendar(status), _this(nullptr)
+Calendar(status), _this(NULL)
 { 
 
-  _this = OICU_ucal_open(nullptr, -1, /*locale*/nullptr, UCAL_DEFAULT, &status);
+  _this = OICU_ucal_open(NULL, -1, /*locale*/NULL, UCAL_DEFAULT, &status);
 
   // copy some things over
   setMinimalDaysInFirstWeek(OICU_ucal_getAttribute(_this, UCAL_MINIMAL_DAYS_IN_FIRST_WEEK));
@@ -116,8 +116,8 @@ int32_t GLUE_SYM ( Calendar ) :: handleComputeMonthStart(int32_t eyear, int32_t 
 int32_t GLUE_SYM ( Calendar ) :: handleGetLimit(UCalendarDateFields field, ELimitType limitType) const {
   return 1;
 }
-Calendar* GLUE_SYM ( Calendar ) :: clone() const {
-  return nullptr;
+Calendar* GLUE_SYM ( Calendar ) :: clone(void) const {
+  return NULL;
 }
 
 
@@ -125,9 +125,9 @@ Calendar* GLUE_SYM ( Calendar ) :: clone() const {
 // GLUE_SYM ( DateFormat ) :: create(UDateFormatStyle  timeStyle,
 //                                                     UDateFormatStyle  dateStyle,
 //                                                     const char        *locale,
-//                                                     const char16_t    *tzID,
+//                                                     const UChar       *tzID,
 //                                                     int32_t           tzIDLength,
-//                                                     const char16_t    *pattern,
+//                                                     const UChar       *pattern,
 //                                                     int32_t           patternLength,
 //                                                     UErrorCode        *status,
 //                                   const Locale &loc, const char */*ver*/) {
@@ -140,7 +140,7 @@ Calendar* GLUE_SYM ( Calendar ) :: clone() const {
 //                                       pattern,
 //                                       patternLength,
 //                                       status);
-//     if(U_FAILURE(*status)) return nullptr; // TODO: ERR?
+//     if(U_FAILURE(*status)) return NULL; // TODO: ERR?
 //     DateFormat *c =  new GLUE_SYM( DateFormat ) ( uc );
 // #if CAL_FE_DEBUG
 //     fprintf(stderr, "VCF " ICUGLUE_VER_STR " udat_open=%s ->> %p\n", loc.getName(), (void*)c);
@@ -175,7 +175,7 @@ int32_t GLUE_SYM ( Calendar ) :: appendAvailable(UnicodeString* strs, int32_t i,
 #if CAL_FE_DEBUG
          { 
             char foo[999];
-            const char16_t *ss = strs[i+j].getTerminatedBuffer();
+            const UChar *ss = strs[i+j].getTerminatedBuffer();
             u_austrcpy(foo, ss);
             fprintf(stderr,  "VCF " ICUGLUE_VER_STR " appending [%d+%d=%d] <<%s>>\n", i, j, i+j, foo);
         }
@@ -213,9 +213,9 @@ public:
   // virtual Calendar *createFormat(UCalendarStyle  timeStyle,
   //                                  UCalendarStyle  dateStyle,
   //                                  const char        *locale,
-  //                                  const char16_t    *tzID,
+  //                                  const UChar       *tzID,
   //                                  int32_t           tzIDLength,
-  //                                  const char16_t    *pattern,
+  //                                  const UChar       *pattern,
   //                                  int32_t           patternLength,
   //                                  UErrorCode        *status);
   virtual void* getDynamicClassID() const; 
@@ -272,7 +272,7 @@ UObject* VersionCalendarFactory::handleCreate(const Locale &loc, int32_t kind, c
     fprintf(stderr,  "VCalF:CC %s\n", loc.getName());
 #endif
     int32_t len = loc.getKeywordValue("sp", provider, 200, status);
-    if(U_FAILURE(status)||len==0) return nullptr;
+    if(U_FAILURE(status)||len==0) return NULL;
 #if CAL_FE_DEBUG
     fprintf(stderr,  "VCalF:KWV> %s/%d\n", u_errorName(status), len);
 #endif
@@ -280,7 +280,7 @@ UObject* VersionCalendarFactory::handleCreate(const Locale &loc, int32_t kind, c
 #if CAL_FE_DEBUG
     fprintf(stderr,  "VCalF:KWV %s\n", provider);
 #endif
-    if(strncmp(provider,"icu",3)) return nullptr;
+    if(strncmp(provider,"icu",3)) return NULL;
     const char *icuver=provider+3;
 #if CAL_FE_DEBUG
     fprintf(stderr,  "VCalF:ICUV %s\n", icuver);
@@ -295,16 +295,16 @@ UObject* VersionCalendarFactory::handleCreate(const Locale &loc, int32_t kind, c
     fprintf(stderr,  "VCalF:CC %s failed\n", loc.getName());
 #endif
 
-    return nullptr;
+    return NULL;
 }
 
 
-static const UnicodeString *gLocalesDate = nullptr;
+static const UnicodeString *gLocalesDate = NULL;
 static  int32_t gLocCountDate = 0; 
 
 const Hashtable *VersionCalendarFactory::getSupportedIDs (UErrorCode& status) const {
   // from coll.cpp
-  Hashtable *_ids = nullptr;
+  Hashtable *_ids = NULL;
   if (U_SUCCESS(status)) {
     int32_t count = 0;
     _ids = new Hashtable(status);
@@ -314,7 +314,7 @@ const Hashtable *VersionCalendarFactory::getSupportedIDs (UErrorCode& status) co
         _ids->put(idlist[i], (void*)this, status);
         if (U_FAILURE(status)) {
           delete _ids;
-          _ids = nullptr;
+          _ids = NULL;
           return;
         }
       }
@@ -328,7 +328,7 @@ const Hashtable *VersionCalendarFactory::getSupportedIDs (UErrorCode& status) co
 
 const UnicodeString
 *VersionCalendarFactory::getSupportedIDs(int32_t &count, UErrorCode &/*status*/) const {
-  if(gLocalesDate==nullptr) {
+  if(gLocalesDate==NULL) {
     count = 0;
     
     
@@ -369,7 +369,7 @@ const UnicodeString
 #include <stdio.h>
 #include <unicode/uversion.h>
 
-static URegistryKey rkcal = nullptr;
+static URegistryKey rkcal = NULL;
 
 void cal_provider_register(UErrorCode &status) {
   debugfprintf((stderr, "about to register VCalF\n"));
