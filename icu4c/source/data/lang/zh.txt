@@ -71,7 +71,6 @@ zh{
         bez{"贝纳文"}
         bfd{"巴非特文"}
         bg{"保加利亚文"}
-        bgc{"哈里亚纳语"}
         bgn{"西俾路支文"}
         bho{"博杰普尔文"}
         bi{"比斯拉马文"}
@@ -443,7 +442,6 @@ zh{
         rap{"拉帕努伊文"}
         rar{"拉罗汤加文"}
         rhg{"罗兴亚语"}
-        rif{"里夫语"}
         rm{"罗曼什文"}
         rn{"隆迪文"}
         ro{"罗马尼亚文"}
@@ -483,7 +481,6 @@ zh{
         si{"僧伽罗文"}
         sid{"悉达摩文"}
         sk{"斯洛伐克文"}
-        skr{"色莱基语"}
         sl{"斯洛文尼亚文"}
         slh{"南卢舒特种子语"}
         sm{"萨摩亚文"}
@@ -540,7 +537,6 @@ zh{
         tpi{"托克皮辛文"}
         tr{"土耳其文"}
         trv{"赛德克文"}
-        trw{"托尔瓦利语"}
         ts{"聪加文"}
         tsi{"钦西安文"}
         tt{"鞑靼文"}
@@ -622,7 +618,7 @@ zh{
         Adlm{"阿德拉姆文"}
         Afak{"阿法卡文"}
         Aghb{"高加索阿尔巴尼亚文"}
-        Ahom{"阿豪姆文"}
+        Ahom{"Ahom"}
         Arab{"阿拉伯文"}
         Aran{"波斯体"}
         Armi{"皇室亚拉姆文"}
@@ -840,6 +836,8 @@ zh{
             indian{"印度国定历"}
             islamic{"伊斯兰历"}
             islamic-civil{"伊斯兰希吉来日历"}
+            islamic-rgsa{"沙特阿拉伯伊斯兰历"}
+            islamic-tbla{"伊斯兰天文历"}
             islamic-umalqura{"伊斯兰历（乌姆库拉）"}
             iso8601{"国际标准历法"}
             japanese{"和历"}
@@ -1126,11 +1124,10 @@ zh{
     }
     characterLabelPattern{
         all{"{0} — 全部"}
+        category-list{"{0}: {1}"}
         compatibility{"{0} — 兼容"}
         enclosed{"{0} — 带圈"}
         extended{"{0} — 扩展"}
-        facing-left{"{0}面向左边"}
-        facing-right{"{0}面向右边"}
         historic{"{0} — 古代"}
         miscellaneous{"{0} — 杂项"}
         other{"{0} — 其它"}

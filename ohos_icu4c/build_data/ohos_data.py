@@ -171,7 +171,6 @@ def add_content_misc(src_file, dest_file, out_file):
 
     with open(src_file, 'r', encoding='utf-8') as f:
         src_content = f.read().splitlines()
-
     convert_units = []
     unit_quantities = []
     signal = 0

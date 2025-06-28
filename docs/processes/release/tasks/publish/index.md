@@ -258,7 +258,6 @@ $ git clone https://github.com/unicode-org/icu-docker.git
 $ cd icu-docker/src
 $ git clone --branch release-64-rc --depth 1 https://github.com/unicode-org/icu.git
 $ cd icu
-$ git lfs install --local
 $ git lfs fetch
 $ git lfs checkout
 $ cd ../..
@@ -362,15 +361,6 @@ This step publishes pre-processed Unicode property data, which may be ingested b
     *   Rename the `icuexportdata_tag-goes-here.zip` file to the correct tag (replacing slashes with dashes)
 
 ### Signing archives and creating checksums:
-
-#### Step 0. PGP keys:
-
-Use your own personal PGP key. Make sure that at least one other member of the
-ICU-TC has signed your key (so that there's an established chain-of-trust
-through which your key can be verified). Make sure that your signed public key
-is included in the `KEYS` file in the root of the ICU repository, so that users
-of ICU can easily find it there (and won't have to search random keyservers for
-it), see instructions in that file on how to update it.
 
 #### Step 1. PGP files:
 

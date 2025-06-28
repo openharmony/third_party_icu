@@ -69,7 +69,6 @@ zh_Hant_HK{
                     }
                 }
             }
-            times{"{0}⋅{1}"}
         }
         concentr{
             millimole-per-liter{
@@ -152,9 +151,6 @@ zh_Hant_HK{
             kilocalorie{
                 dnam{"千卡"}
                 other{"{0} 千卡"}
-            }
-            kilojoule{
-                other{"{0} 千焦"}
             }
         }
         force{
@@ -273,10 +269,6 @@ zh_Hant_HK{
             }
         }
         speed{
-            beaufort{
-                dnam{"蒲福氏風級"}
-                other{"蒲福氏風級 {0} 級"}
-            }
             kilometer-per-hour{
                 dnam{"公里每小時"}
             }
@@ -414,9 +406,6 @@ zh_Hant_HK{
             10p6{"{0} 百萬米"}
         }
         concentr{
-            item{
-                other{"{0} 個項目"}
-            }
             millimole-per-liter{
                 dnam{"毫摩爾/公升"}
             }
@@ -483,12 +472,8 @@ zh_Hant_HK{
             }
         }
         energy{
-            foodcalorie{
-                other{"{0}千卡"}
-            }
             kilojoule{
                 dnam{"千焦"}
-                other{"{0}千焦"}
             }
         }
         length{
@@ -547,7 +532,6 @@ zh_Hant_HK{
                 per{"{0} 每克"}
             }
             kilogram{
-                other{"{0} 公斤"}
                 per{"{0} 每公斤"}
             }
             ounce{
@@ -580,10 +564,6 @@ zh_Hant_HK{
             }
         }
         speed{
-            beaufort{
-                dnam{"蒲福氏風級"}
-                other{"蒲福氏風級 {0} 級"}
-            }
             kilometer-per-hour{
                 other{"{0}kph"}
             }
@@ -892,10 +872,6 @@ zh_Hant_HK{
             }
         }
         speed{
-            beaufort{
-                dnam{"蒲福氏風級"}
-                other{"蒲福氏風級 {0} 級"}
-            }
             kilometer-per-hour{
                 dnam{"公里每小時"}
                 other{"{0} 公里每小時"}

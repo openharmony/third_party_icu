@@ -424,10 +424,11 @@ fo{
     }
     Languages%short{
         az{"azeri"}
+        en_GB{"enskt (UK)"}
+        en_US{"enskt (USA)"}
     }
     Languages%variant{
         ckb{"kurdiskt, sorani"}
-        hi_Latn{"hinglish"}
     }
     Scripts{
         Arab{"arabisk"}
@@ -487,6 +488,7 @@ fo{
             ethiopic{"etiopiskur kalendari"}
             gregorian{"gregorianskur kalendari"}
             hebrew{"hebraiskur kalendari"}
+            islamic{"islamiskur kalendari"}
             iso8601{"ISO-8601 kalendari"}
             japanese{"japanskur kalendari"}
             persian{"persiskur kalendari"}
@@ -564,6 +566,7 @@ fo{
     }
     characterLabelPattern{
         all{"{0} — Alt"}
+        category-list{"{0}: {1}"}
         compatibility{"{0} — Sambæri"}
         enclosed{"{0} — Girða"}
         extended{"{0} — Víðkað"}
@@ -582,5 +585,10 @@ fo{
         language{"Mál: {0}"}
         script{"Skrift: {0}"}
         territory{"Øki: {0}"}
+    }
+    localeDisplayPattern{
+        keyTypePattern{"{0}: {1}"}
+        pattern{"{0} ({1})"}
+        separator{"{0}, {1}"}
     }
 }

@@ -12,8 +12,6 @@
 #include <math.h>
 #include <stdio.h>
 
-#include <utility>
-
 #include "unicode/utypes.h"
 #include "unicode/localpointer.h"
 #include "unicode/plurrule.h"
@@ -22,7 +20,6 @@
 #include "unicode/numfmt.h"
 #include "unicode/decimfmt.h"
 #include "unicode/numberrangeformatter.h"
-#include "bytesinkutil.h"
 #include "charstr.h"
 #include "cmemory.h"
 #include "cstring.h"
@@ -43,7 +40,6 @@
 #include "util.h"
 #include "pluralranges.h"
 #include "numrange_impl.h"
-#include "ulocimp.h"
 
 #if !UCONFIG_NO_FORMATTING
 
@@ -54,24 +50,24 @@ using icu::number::impl::DecNum;
 using icu::number::impl::DecimalQuantity;
 using icu::number::impl::RoundingMode;
 
-static const char16_t PLURAL_KEYWORD_OTHER[]={LOW_O,LOW_T,LOW_H,LOW_E,LOW_R,0};
-static const char16_t PLURAL_DEFAULT_RULE[]={LOW_O,LOW_T,LOW_H,LOW_E,LOW_R,COLON,SPACE,LOW_N,0};
-static const char16_t PK_IN[]={LOW_I,LOW_N,0};
-static const char16_t PK_NOT[]={LOW_N,LOW_O,LOW_T,0};
-static const char16_t PK_IS[]={LOW_I,LOW_S,0};
-static const char16_t PK_MOD[]={LOW_M,LOW_O,LOW_D,0};
-static const char16_t PK_AND[]={LOW_A,LOW_N,LOW_D,0};
-static const char16_t PK_OR[]={LOW_O,LOW_R,0};
-static const char16_t PK_VAR_N[]={LOW_N,0};
-static const char16_t PK_VAR_I[]={LOW_I,0};
-static const char16_t PK_VAR_F[]={LOW_F,0};
-static const char16_t PK_VAR_T[]={LOW_T,0};
-static const char16_t PK_VAR_E[]={LOW_E,0};
-static const char16_t PK_VAR_C[]={LOW_C,0};
-static const char16_t PK_VAR_V[]={LOW_V,0};
-static const char16_t PK_WITHIN[]={LOW_W,LOW_I,LOW_T,LOW_H,LOW_I,LOW_N,0};
-static const char16_t PK_DECIMAL[]={LOW_D,LOW_E,LOW_C,LOW_I,LOW_M,LOW_A,LOW_L,0};
-static const char16_t PK_INTEGER[]={LOW_I,LOW_N,LOW_T,LOW_E,LOW_G,LOW_E,LOW_R,0};
+static const UChar PLURAL_KEYWORD_OTHER[]={LOW_O,LOW_T,LOW_H,LOW_E,LOW_R,0};
+static const UChar PLURAL_DEFAULT_RULE[]={LOW_O,LOW_T,LOW_H,LOW_E,LOW_R,COLON,SPACE,LOW_N,0};
+static const UChar PK_IN[]={LOW_I,LOW_N,0};
+static const UChar PK_NOT[]={LOW_N,LOW_O,LOW_T,0};
+static const UChar PK_IS[]={LOW_I,LOW_S,0};
+static const UChar PK_MOD[]={LOW_M,LOW_O,LOW_D,0};
+static const UChar PK_AND[]={LOW_A,LOW_N,LOW_D,0};
+static const UChar PK_OR[]={LOW_O,LOW_R,0};
+static const UChar PK_VAR_N[]={LOW_N,0};
+static const UChar PK_VAR_I[]={LOW_I,0};
+static const UChar PK_VAR_F[]={LOW_F,0};
+static const UChar PK_VAR_T[]={LOW_T,0};
+static const UChar PK_VAR_E[]={LOW_E,0};
+static const UChar PK_VAR_C[]={LOW_C,0};
+static const UChar PK_VAR_V[]={LOW_V,0};
+static const UChar PK_WITHIN[]={LOW_W,LOW_I,LOW_T,LOW_H,LOW_I,LOW_N,0};
+static const UChar PK_DECIMAL[]={LOW_D,LOW_E,LOW_C,LOW_I,LOW_M,LOW_A,LOW_L,0};
+static const UChar PK_INTEGER[]={LOW_I,LOW_N,LOW_T,LOW_E,LOW_G,LOW_E,LOW_R,0};
 
 UOBJECT_DEFINE_RTTI_IMPLEMENTATION(PluralRules)
 UOBJECT_DEFINE_RTTI_IMPLEMENTATION(PluralKeywordEnumeration)
@@ -826,24 +822,24 @@ PluralRules::getRuleFromResource(const Locale& locale, UPluralType type, UErrorC
     }
     int32_t resLen=0;
     const char *curLocaleName=locale.getBaseName();
-    const char16_t* s = ures_getStringByKey(locRes.getAlias(), curLocaleName, &resLen, &errCode);
+    const UChar* s = ures_getStringByKey(locRes.getAlias(), curLocaleName, &resLen, &errCode);
 
     if (s == nullptr) {
         // Check parent locales.
         UErrorCode status = U_ZERO_ERROR;
+        char parentLocaleName[ULOC_FULLNAME_CAPACITY];
         const char *curLocaleName2=locale.getBaseName();
-        CharString parentLocaleName(curLocaleName2, status);
+        size_t curLocaleName2Len = strlen(curLocaleName2);
+        if (curLocaleName2Len > ULOC_FULLNAME_CAPACITY - 1) {
+            uprv_strncpy(parentLocaleName, curLocaleName2, ULOC_FULLNAME_CAPACITY - 1);
+        } else {
+            uprv_strcpy(parentLocaleName, curLocaleName2);
+        }
 
-        for (;;) {
-            {
-                CharString tmp;
-                CharStringByteSink sink(&tmp);
-                ulocimp_getParent(parentLocaleName.data(), sink, &status);
-                if (tmp.isEmpty()) break;
-                parentLocaleName = std::move(tmp);
-            }
+        while (uloc_getParent(parentLocaleName, parentLocaleName,
+                                       ULOC_FULLNAME_CAPACITY, &status) > 0) {
             resLen=0;
-            s = ures_getStringByKey(locRes.getAlias(), parentLocaleName.data(), &resLen, &status);
+            s = ures_getStringByKey(locRes.getAlias(), parentLocaleName, &resLen, &status);
             if (s != nullptr) {
                 errCode = U_ZERO_ERROR;
                 break;
@@ -1123,7 +1119,7 @@ static UnicodeString tokenString(tokenType tok) {
 
 void
 RuleChain::dumpRules(UnicodeString& result) {
-    char16_t digitString[16];
+    UChar digitString[16];
 
     if ( ruleHeader != nullptr ) {
         result +=  fKeyword;
@@ -1387,7 +1383,7 @@ PluralRuleParser::getNextToken(UErrorCode &status)
         return;
     }
 
-    char16_t ch;
+    UChar ch;
     while (ruleIndex < ruleSrc->length()) {
         ch = ruleSrc->charAt(ruleIndex);
         type = charType(ch);
@@ -1468,7 +1464,7 @@ PluralRuleParser::getNextToken(UErrorCode &status)
 }
 
 tokenType
-PluralRuleParser::charType(char16_t ch) {
+PluralRuleParser::charType(UChar ch) {
     if ((ch>=U_ZERO) && (ch<=U_NINE)) {
         return tNumber;
     }
@@ -1817,9 +1813,9 @@ int32_t FixedDecimal::decimals(double n) {
         }
     }
 
-    // Slow path, convert with snprintf, parse converted output.
+    // Slow path, convert with sprintf, parse converted output.
     char  buf[30] = {0};
-    snprintf(buf, sizeof(buf), "%1.15e", n);
+    sprintf(buf, "%1.15e", n);
     // formatted number looks like this: 1.234567890123457e-01
     int exponent = atoi(buf+18);
     int numFractionDigits = 15;

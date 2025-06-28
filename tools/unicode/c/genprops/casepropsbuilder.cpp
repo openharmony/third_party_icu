@@ -93,7 +93,7 @@ The file contains the following structures:
 
     const uint16_t exceptions[exceptionsLength];
 
-    const char16_t unfold[unfoldLength];
+    const UChar unfold[unfoldLength];
 
 
 Trie data word:
@@ -307,7 +307,7 @@ private:
 };
 
 CasePropsBuilder::CasePropsBuilder(UErrorCode &errorCode)
-        : excProps(nullptr), excPropsCount(0), maxFullLength(U16_MAX_LENGTH), pTrie(nullptr) {
+        : excProps(NULL), excPropsCount(0), maxFullLength(U16_MAX_LENGTH), pTrie(NULL) {
     // This builder encodes the following properties.
     relevantProps.
         add(UCHAR_CANONICAL_COMBINING_CLASS).  // 0 vs. 230 vs. other
@@ -328,8 +328,8 @@ CasePropsBuilder::CasePropsBuilder(UErrorCode &errorCode)
     // Write "unfold" meta data into the first row. Must be UGENCASE_UNFOLD_WIDTH UChars.
     unfold.
         append(0).
-        append((char16_t)UGENCASE_UNFOLD_WIDTH).
-        append((char16_t)UGENCASE_UNFOLD_STRING_WIDTH).
+        append((UChar)UGENCASE_UNFOLD_WIDTH).
+        append((UChar)UGENCASE_UNFOLD_STRING_WIDTH).
         append(0).
         append(0);
     U_ASSERT(unfold.length()==UGENCASE_UNFOLD_WIDTH);
@@ -340,7 +340,7 @@ CasePropsBuilder::CasePropsBuilder(UErrorCode &errorCode)
         return;
     }
     excProps=new ExcProps *[MAX_EXC_COUNT];
-    if(excProps==nullptr) {
+    if(excProps==NULL) {
         fprintf(stderr,
                 "genprops error: casepropsbuilder out of memory allocating "
                 "the array of exceptions properties\n");
@@ -524,7 +524,7 @@ CasePropsBuilder::setProps(const UniProps &props, const UnicodeSet &newValues,
             return;
         }
         ExcProps *newExcProps=new ExcProps(props);
-        if(newExcProps==nullptr) {
+        if(newExcProps==NULL) {
             fprintf(stderr,
                     "genprops error: casepropsbuilder out of memory allocating "
                     "exceptions properties\n");
@@ -588,7 +588,7 @@ CasePropsBuilder::makeExcProps(UChar32 c, uint32_t value, UErrorCode &errorCode)
         return 0;
     }
     LocalPointer<ExcProps> newExcProps(new ExcProps);
-    if(newExcProps==nullptr) {
+    if(newExcProps==NULL) {
         fprintf(stderr,
                 "genprops error: casepropsbuilder out of memory allocating "
                 "exceptions properties\n");
@@ -620,22 +620,22 @@ CasePropsBuilder::makeExcProps(UChar32 c, uint32_t value, UErrorCode &errorCode)
 
 static int32_t U_CALLCONV
 compareUnfold(const void *context, const void *left, const void *right) {
-    return u_memcmp((const char16_t *)left, (const char16_t *)right, UGENCASE_UNFOLD_WIDTH);
+    return u_memcmp((const UChar *)left, (const UChar *)right, UGENCASE_UNFOLD_WIDTH);
 }
 
 void
 CasePropsBuilder::makeUnfoldData(UErrorCode &errorCode) {
     if(U_FAILURE(errorCode)) { return; }
 
-    char16_t *p, *q;
+    UChar *p, *q;
     int32_t i, j, k;
 
     /* sort the data */
     int32_t unfoldLength=unfold.length();
     int32_t unfoldRows=unfoldLength/UGENCASE_UNFOLD_WIDTH-1;
-    char16_t *unfoldBuffer=unfold.getBuffer(-1);
+    UChar *unfoldBuffer=unfold.getBuffer(-1);
     uprv_sortArray(unfoldBuffer+UGENCASE_UNFOLD_WIDTH, unfoldRows, UGENCASE_UNFOLD_WIDTH*2,
-                   compareUnfold, nullptr, false, &errorCode);
+                   compareUnfold, NULL, false, &errorCode);
 
     /* make unique-string rows by merging adjacent ones' code point columns */
 
@@ -666,7 +666,7 @@ CasePropsBuilder::makeUnfoldData(UErrorCode &errorCode) {
         }
     }
 
-    unfoldBuffer[UCASE_UNFOLD_ROWS]=(char16_t)unfoldRows;
+    unfoldBuffer[UCASE_UNFOLD_ROWS]=(UChar)unfoldRows;
 
     if(beVerbose) {
         puts("unfold data:");
@@ -859,7 +859,7 @@ CasePropsBuilder::makeCaseClosure(UErrorCode &errorCode) {
     /* use the "unfold" data to add mappings */
 
     /* p always points to the code points; this loop ignores the strings completely */
-    const char16_t *p=unfold.getBuffer()+UGENCASE_UNFOLD_WIDTH+UGENCASE_UNFOLD_STRING_WIDTH;
+    const UChar *p=unfold.getBuffer()+UGENCASE_UNFOLD_WIDTH+UGENCASE_UNFOLD_STRING_WIDTH;
     int32_t unfoldRows=unfold.length()/UGENCASE_UNFOLD_WIDTH-1;
 
     for(int32_t i=0; i<unfoldRows; p+=UGENCASE_UNFOLD_WIDTH, ++i) {
@@ -917,7 +917,7 @@ CasePropsBuilder::makeException(UChar32 c, uint32_t value, ExcProps &ep, UErrorC
     }
 
     /* copy and shift the soft-dotted and case-sensitive bits */
-    char16_t excWord=(char16_t)((value&(UCASE_DOT_MASK|UCASE_SENSITIVE))<<UCASE_EXC_DOT_SHIFT);
+    UChar excWord=(UChar)((value&(UCASE_DOT_MASK|UCASE_SENSITIVE))<<UCASE_EXC_DOT_SHIFT);
 
     UniProps &p=ep.props;
 
@@ -1035,28 +1035,28 @@ CasePropsBuilder::makeException(UChar32 c, uint32_t value, ExcProps &ep, UErrorC
 
     if(count==0) {
         /* No optional slots: Try to share excWord entries. */
-        int32_t excIndex=exceptions.indexOf((char16_t)excWord);
+        int32_t excIndex=exceptions.indexOf((UChar)excWord);
         if(excIndex>=0) {
             return excIndex;
         }
         /* not found */
         excIndex=exceptions.length();
-        exceptions.append((char16_t)excWord);
+        exceptions.append((UChar)excWord);
         return excIndex;
     } else {
         /* write slots */
         UnicodeString excString;
-        excString.append((char16_t)0);  /* placeholder for excWord which will be stored at excIndex */
+        excString.append((UChar)0);  /* placeholder for excWord which will be stored at excIndex */
 
         if(slotBits<=0xffff) {
             for(int32_t i=0; i<count; ++i) {
-                excString.append((char16_t)slots[i]);
+                excString.append((UChar)slots[i]);
             }
         } else {
             excWord|=UCASE_EXC_DOUBLE_SLOTS;
             for(int32_t i=0; i<count; ++i) {
-                excString.append((char16_t)(slots[i]>>16));
-                excString.append((char16_t)slots[i]);
+                excString.append((UChar)(slots[i]>>16));
+                excString.append((UChar)slots[i]);
             }
         }
 
@@ -1070,7 +1070,7 @@ CasePropsBuilder::makeException(UChar32 c, uint32_t value, ExcProps &ep, UErrorC
         excString.append(closureString);
 
         /* write the main exceptions word */
-        excString.setCharAt(0, (char16_t)excWord);
+        excString.setCharAt(0, (UChar)excWord);
 
         // Try to share data.
         if(count==1 && ep.delta!=0) {
@@ -1187,7 +1187,7 @@ CasePropsBuilder::writeCSourceFile(const char *path, UErrorCode &errorCode) {
 
     FILE *f=usrc_create(path, "ucase_props_data.h", 2016,
                         "icu/tools/unicode/c/genprops/casepropsbuilder.cpp");
-    if(f==nullptr) {
+    if(f==NULL) {
         errorCode=U_FILE_ACCESS_ERROR;
         return;
     }
@@ -1203,7 +1203,7 @@ CasePropsBuilder::writeCSourceFile(const char *path, UErrorCode &errorCode) {
         "",
         "};\n\n");
     usrc_writeUTrie2Arrays(f,
-        "static const uint16_t ucase_props_trieIndex[%ld]={\n", nullptr,
+        "static const uint16_t ucase_props_trieIndex[%ld]={\n", NULL,
         pTrie,
         "\n};\n\n");
     usrc_writeArray(f,
@@ -1218,14 +1218,14 @@ CasePropsBuilder::writeCSourceFile(const char *path, UErrorCode &errorCode) {
         "\n};\n\n");
     fputs(
         "static const UCaseProps ucase_props_singleton={\n"
-        "  nullptr,\n"
+        "  NULL,\n"
         "  ucase_props_indexes,\n"
         "  ucase_props_exceptions,\n"
         "  ucase_props_unfold,\n",
         f);
     usrc_writeUTrie2Struct(f,
         "  {\n",
-        pTrie, "ucase_props_trieIndex", nullptr,
+        pTrie, "ucase_props_trieIndex", NULL,
         "  },\n");
     usrc_writeArray(f, "  { ", dataInfo.formatVersion, 8, 4, "", " }\n");
     fputs("};\n\n"
@@ -1238,7 +1238,7 @@ CasePropsBuilder::writeBinaryData(const char *path, UBool withCopyright, UErrorC
     if(U_FAILURE(errorCode)) { return; }
 
     UNewDataMemory *pData=udata_create(path, "icu", "ucase", &dataInfo,
-                                       withCopyright ? U_COPYRIGHT_STRING : nullptr, &errorCode);
+                                       withCopyright ? U_COPYRIGHT_STRING : NULL, &errorCode);
     if(U_FAILURE(errorCode)) {
         fprintf(stderr, "genprops: udata_create(%s, ucase.icu) failed - %s\n",
                 path, u_errorName(errorCode));
@@ -1267,9 +1267,9 @@ CasePropsBuilder::writeBinaryData(const char *path, UBool withCopyright, UErrorC
 
 PropsBuilder *
 createCasePropsBuilder(UErrorCode &errorCode) {
-    if(U_FAILURE(errorCode)) { return nullptr; }
+    if(U_FAILURE(errorCode)) { return NULL; }
     PropsBuilder *pb=new CasePropsBuilder(errorCode);
-    if(pb==nullptr) {
+    if(pb==NULL) {
         errorCode=U_MEMORY_ALLOCATION_ERROR;
     }
     return pb;

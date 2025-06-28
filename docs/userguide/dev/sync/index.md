@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Synchronization
+nav_order: 2
 parent: Contributors
 ---
 <!--

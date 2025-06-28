@@ -51,7 +51,7 @@ typedef enum ULocMatchLifetime ULocMatchLifetime;
 
 U_NAMESPACE_BEGIN
 
-LocaleMatcher::Result::Result(LocaleMatcher::Result &&src) noexcept :
+LocaleMatcher::Result::Result(LocaleMatcher::Result &&src) U_NOEXCEPT :
         desiredLocale(src.desiredLocale),
         supportedLocale(src.supportedLocale),
         desiredIndex(src.desiredIndex),
@@ -70,7 +70,7 @@ LocaleMatcher::Result::~Result() {
     }
 }
 
-LocaleMatcher::Result &LocaleMatcher::Result::operator=(LocaleMatcher::Result &&src) noexcept {
+LocaleMatcher::Result &LocaleMatcher::Result::operator=(LocaleMatcher::Result &&src) U_NOEXCEPT {
     this->~Result();
 
     desiredLocale = src.desiredLocale;
@@ -122,7 +122,7 @@ Locale LocaleMatcher::Result::makeResolvedLocale(UErrorCode &errorCode) const {
     return b.build(errorCode);
 }
 
-LocaleMatcher::Builder::Builder(LocaleMatcher::Builder &&src) noexcept :
+LocaleMatcher::Builder::Builder(LocaleMatcher::Builder &&src) U_NOEXCEPT :
         errorCode_(src.errorCode_),
         supportedLocales_(src.supportedLocales_),
         thresholdDistance_(src.thresholdDistance_),
@@ -142,7 +142,7 @@ LocaleMatcher::Builder::~Builder() {
     delete maxDistanceSupported_;
 }
 
-LocaleMatcher::Builder &LocaleMatcher::Builder::operator=(LocaleMatcher::Builder &&src) noexcept {
+LocaleMatcher::Builder &LocaleMatcher::Builder::operator=(LocaleMatcher::Builder &&src) U_NOEXCEPT {
     this->~Builder();
 
     errorCode_ = src.errorCode_;
@@ -307,7 +307,7 @@ LSR getMaximalLsrOrUnd(const XLikelySubtags &likelySubtags, const Locale &locale
     if (U_FAILURE(errorCode) || locale.isBogus() || *locale.getName() == 0 /* "und" */) {
         return UND_LSR;
     } else {
-        return likelySubtags.makeMaximizedLsrFrom(locale, false, errorCode);
+        return likelySubtags.makeMaximizedLsrFrom(locale, errorCode);
     }
 }
 
@@ -483,7 +483,7 @@ LocaleMatcher::LocaleMatcher(const Builder &builder, UErrorCode &errorCode) :
     }
 }
 
-LocaleMatcher::LocaleMatcher(LocaleMatcher &&src) noexcept :
+LocaleMatcher::LocaleMatcher(LocaleMatcher &&src) U_NOEXCEPT :
         likelySubtags(src.likelySubtags),
         localeDistance(src.localeDistance),
         thresholdDistance(src.thresholdDistance),
@@ -520,7 +520,7 @@ LocaleMatcher::~LocaleMatcher() {
     delete ownedDefaultLocale;
 }
 
-LocaleMatcher &LocaleMatcher::operator=(LocaleMatcher &&src) noexcept {
+LocaleMatcher &LocaleMatcher::operator=(LocaleMatcher &&src) U_NOEXCEPT {
     this->~LocaleMatcher();
 
     thresholdDistance = src.thresholdDistance;

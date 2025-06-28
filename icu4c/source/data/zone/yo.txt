@@ -597,9 +597,6 @@ yo{
             lg{"Àkókò Ìwọ̀ oorùn Greenland"}
             ls{"Àkókò Àfẹnukò Ìwọ̀ Oòrùn Greenland"}
         }
-        "meta:Gulf"{
-            ls{"Gulf Standard Time"}
-        }
         "meta:Guyana"{
             ls{"Àkókò Gúyànà"}
         }
@@ -656,14 +653,11 @@ yo{
             lg{"Japan Time"}
             ls{"Japan Standard Time"}
         }
-        "meta:Kazakhstan"{
-            ls{"Aago Kasasitáànì"}
-        }
         "meta:Kazakhstan_Eastern"{
-            ls{"Àkókò Ìlà-Oòrùn Kasasitáànì"}
+            ls{"East Kazakhstan Time"}
         }
         "meta:Kazakhstan_Western"{
-            ls{"Àkókò Ìwọ̀-Oòrùn Kasasitáànì"}
+            ls{"West Kazakhstan Time"}
         }
         "meta:Korea"{
             ld{"Korean Daylight Time"}
@@ -941,8 +935,10 @@ yo{
         "meta:Yukon"{
             ls{"Àkókò Yúkọ́nì"}
         }
+        fallbackFormat{"{1} ({0})"}
         gmtFormat{"WAT{0}"}
         gmtZeroFormat{"WAT"}
+        hourFormat{"+HH:mm;-HH:mm"}
         regionFormat{"Ìgbà {0}"}
         regionFormatDaylight{"{0} Àkókò ojúmọmọ"}
         regionFormatStandard{"{0} Ìlànà Àkókò"}

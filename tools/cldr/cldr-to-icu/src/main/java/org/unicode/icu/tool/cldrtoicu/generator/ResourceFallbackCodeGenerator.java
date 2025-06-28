@@ -1,23 +1,14 @@
-package org.unicode.icu.tool.cldrtoicu.generator;
+package main.java.org.unicode.icu.tool.cldrtoicu.generator;
 
-import static com.google.common.base.CharMatcher.whitespace;
+import com.google.common.base.Splitter;
+import main.java.org.unicode.icu.tool.cldrtoicu.CodeGenerator;
+import org.unicode.cldr.api.*;
 
 import java.io.PrintWriter;
 import java.nio.file.Path;
-import java.util.Collection;
-import java.util.Map;
-import java.util.TreeMap;
-import java.util.TreeSet;
+import java.util.*;
 
-import org.unicode.cldr.api.AttributeKey;
-import org.unicode.cldr.api.CldrData;
-import org.unicode.cldr.api.CldrDataSupplier;
-import org.unicode.cldr.api.CldrDataType;
-import org.unicode.cldr.api.CldrPath;
-import org.unicode.cldr.api.CldrValue;
-import org.unicode.icu.tool.cldrtoicu.CodeGenerator;
-
-import com.google.common.base.Splitter;
+import static com.google.common.base.CharMatcher.whitespace;
 
 public class ResourceFallbackCodeGenerator implements CodeGenerator {
     private Map<String, String> defaultScripts;
@@ -80,11 +71,6 @@ public class ResourceFallbackCodeGenerator implements CodeGenerator {
     }
 
     private void handleParentLocale(CldrValue value) {
-        String component = value.get(AttributeKey.keyOf("parentLocales", "component"));
-        if (component != null) {
-            // CLDR-16253 added component-specific parents, which we ignore for now.
-            return;
-        }
         String parent = value.get(AttributeKey.keyOf("parentLocale", "parent"));
         String childrenStr = value.get(AttributeKey.keyOf("parentLocale", "locales"));
 
