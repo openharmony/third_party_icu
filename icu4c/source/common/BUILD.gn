@@ -54,7 +54,7 @@ if (defined(ohos_lite)) {
   lite_library("icu_font") {
     sources = icu_source
     public_configs = [ ":icu_config" ]
-    if (board_toolchain_type == "iccarm" || board_toolchain_type == "clang") {
+    if (board_toolchain_type == "iccarm") {
       target_type = "static_library"
     } else {
       target_type = "shared_library"
