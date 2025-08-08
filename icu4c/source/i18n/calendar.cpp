@@ -2504,7 +2504,7 @@ Calendar::orphanTimeZone()
     // we let go of the time zone; the new time zone is the system default time zone
     TimeZone *defaultZone = TimeZone::createDefault();
     if (defaultZone == NULL) {
-        // No error handling available. Must keep fZone non-nullptr, there are many unchecked uses.
+        // No error handling available. Must keep fZone non-NULL, there are many unchecked uses.
         return NULL;
     }
     TimeZone *z = fZone;
@@ -3889,9 +3889,7 @@ void
 Calendar::setWeekData(const Locale& desiredLocale, const char *type, UErrorCode& status)
 {
 
-    if (U_FAILURE(status)) {
-        return;
-    }
+    if (U_FAILURE(status)) return;
 
     fFirstDayOfWeek = UCAL_SUNDAY;
     fMinimalDaysInFirstWeek = 1;
