@@ -20,17 +20,17 @@ import stat
 
 
 def generate_replace_data(data_filter, ohos_src_dir):
-    if (not os.path.exists(os.path.join(ohos_src_dir, "unit")) or 
+    if (not os.path.exists(os.path.join(ohos_src_dir, "unit")) or
         not os.path.exists(os.path.join(ohos_src_dir, "misc"))):
         return
-    
+
     data_filter["fileReplacements"] = dict()
     data_filter["fileReplacements"]["directory"] = "$FILTERS"
     data_filter["fileReplacements"]["replacements"] = []
-    
+
     for unit_file in os.listdir(os.path.join(ohos_src_dir, "unit")):
         data_filter["fileReplacements"]["replacements"].append("unit/{}".format(unit_file))
-    
+
     for misc_file in os.listdir(os.path.join(ohos_src_dir, "misc")):
         data_filter["fileReplacements"]["replacements"].append("misc/{}".format(misc_file))
 
@@ -57,10 +57,10 @@ def add_features_by_name(feature_filter, name, key):
 def parse_config_file(data_filter, ohos_src_dir):
     if not os.path.exists(os.path.join(ohos_src_dir, "config.json")):
         return
-    
+
     with open(os.path.join(ohos_src_dir, "config.json"), 'r', encoding='utf-8') as f:
         config = json.load(f)
-    
+
     add_loacale_by_name(data_filter, config["locale"])
     feature_filter = dict()
     for feature in config.keys():
@@ -74,12 +74,12 @@ def parse_config_file(data_filter, ohos_src_dir):
 def generate_json_file(ohos_src_dir, out_file):
     if not os.path.exists(ohos_src_dir):
         return
-    
+
     data_filter = dict()
     data_filter["strategy"] = "subtractive"
     generate_replace_data(data_filter, ohos_src_dir)
     parse_config_file(data_filter, ohos_src_dir)
-    
+
     flags = os.O_WRONLY | os.O_CREAT
     mode = stat.S_IWUSR | stat.S_IRUSR
     with os.fdopen(os.open(out_file, flags, mode), 'w') as f:
@@ -188,8 +188,8 @@ def add_content_misc(src_file, dest_file, out_file):
 
     with open(dest_file, 'r', encoding='utf-8') as f:
         dest_content = f.read().splitlines(True)
-    
-    data  = ''
+
+    data = ''
     for line in dest_content:
         data += line
         if "convertUnits{" in line:
@@ -203,6 +203,7 @@ def add_content_misc(src_file, dest_file, out_file):
     mode = stat.S_IWUSR | stat.S_IRUSR
     with os.fdopen(os.open(out_file, flags, mode), 'w') as f:
         f.write(data)
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -224,7 +225,7 @@ if __name__ == '__main__':
             copy_content(os.path.join(args.ohos_src_dir, unit_path, file),
                          os.path.join(args.icu_src_dir, unit_path, file),
                          os.path.join(out_dir, unit_path, file))
-    
+
     add_content_misc(os.path.join(args.ohos_src_dir, misc_path, units_file),
                      os.path.join(args.icu_src_dir, misc_path, units_file),
                      os.path.join(out_dir, misc_path, units_file))
