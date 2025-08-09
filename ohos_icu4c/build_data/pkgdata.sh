@@ -69,7 +69,7 @@ python3 $script_path/ohos_data.py \
     --out_dir "$out_put_root_path/thirdparty/icu" \
 
 gen_icu_data() {
-    
+
     # compile to res file
     PYTHONPATH=$icu_source_path/source/python python3 -m icutools.databuilder \
     --src_dir $icu_source_path/source/data \
@@ -80,7 +80,7 @@ gen_icu_data() {
     --tool_dir $tool_bin_dir \
     --out_dir $res_out_root_dir/out/build/$icu_dat_name \
     --tmp_dir $res_out_root_dir/out/tmp \
-    
+
     # package to one dat file
     export LD_LIBRARY_PATH=$tool_bin_dir:$LD_LIBRARY_PATH
     $tool_bin_dir/pkgdata \
