@@ -979,9 +979,9 @@ yrl{
                 other{"{0} kb"}
             }
             kilobyte{
-                dnam{"kB"}
-                one{"{0} kB"}
-                other{"{0} kB"}
+                dnam{"KB"}
+                one{"{0} KB"}
+                other{"{0} KB"}
             }
             megabit{
                 dnam{"Mb"}
@@ -1328,9 +1328,9 @@ yrl{
                 other{"{0} kb"}
             }
             kilobyte{
-                dnam{"kByte"}
-                one{"{0} kB"}
-                other{"{0} kB"}
+                dnam{"KByte"}
+                one{"{0} KB"}
+                other{"{0} KB"}
             }
             megabit{
                 dnam{"Mbit"}

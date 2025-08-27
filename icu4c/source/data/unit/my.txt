@@ -1306,7 +1306,7 @@ my{
             }
             kilobyte{
                 dnam{"ကီလိုဘိုက်"}
-                other{"{0} kB"}
+                other{"{0} KB"}
             }
             megabit{
                 dnam{"မီဂါဘစ်"}

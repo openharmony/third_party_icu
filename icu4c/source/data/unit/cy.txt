@@ -443,12 +443,12 @@ cy{
             }
             kilobyte{
                 dnam{"cilobeitiau"}
-                few{"{0} kB"}
-                many{"{0} kB"}
+                few{"{0} KB"}
+                many{"{0} KB"}
                 one{"{0} cilobeit"}
                 other{"{0} cilobeit"}
-                two{"{0} kB"}
-                zero{"{0} kB"}
+                two{"{0} KB"}
+                zero{"{0} KB"}
             }
             megabit{
                 dnam{"megadidau"}
@@ -2031,13 +2031,13 @@ cy{
                 zero{"{0} kb"}
             }
             kilobyte{
-                dnam{"kBeit"}
-                few{"{0} kB"}
-                many{"{0} kB"}
-                one{"{0}kB"}
-                other{"{0}kB"}
-                two{"{0} kB"}
-                zero{"{0} kB"}
+                dnam{"KBeit"}
+                few{"{0} KB"}
+                many{"{0} KB"}
+                one{"{0}KB"}
+                other{"{0}KB"}
+                two{"{0} KB"}
+                zero{"{0} KB"}
             }
             megabyte{
                 dnam{"MB"}
