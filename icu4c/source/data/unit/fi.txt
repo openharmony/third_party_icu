@@ -3244,9 +3244,9 @@ fi{
                 other{"{0}kb"}
             }
             kilobyte{
-                dnam{"kt"}
-                one{"{0}kt"}
-                other{"{0}kt"}
+                dnam{"Kt"}
+                one{"{0}Kt"}
+                other{"{0}Kt"}
             }
             megabit{
                 dnam{"Mb"}
@@ -4229,9 +4229,9 @@ fi{
                 other{"{0} kb"}
             }
             kilobyte{
-                dnam{"kt"}
-                one{"{0} kt"}
-                other{"{0} kt"}
+                dnam{"Kt"}
+                one{"{0} Kt"}
+                other{"{0} Kt"}
             }
             megabit{
                 dnam{"Mb"}
