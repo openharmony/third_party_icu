@@ -1546,9 +1546,9 @@ ky{
                 other{"{0} кб"}
             }
             kilobyte{
-                dnam{"КБайт"}
-                one{"{0} КБ"}
-                other{"{0} КБ"}
+                dnam{"кБайт"}
+                one{"{0} кБ"}
+                other{"{0} кБ"}
             }
             megabit{
                 dnam{"Мбит"}
