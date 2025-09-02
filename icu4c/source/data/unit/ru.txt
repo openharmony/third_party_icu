@@ -8173,11 +8173,11 @@ ru{
                 other{"{0} кбит"}
             }
             kilobyte{
-                dnam{"кБ"}
-                few{"{0} кБ"}
-                many{"{0} кБ"}
-                one{"{0} кБ"}
-                other{"{0} кБ"}
+                dnam{"КБ"}
+                few{"{0} КБ"}
+                many{"{0} КБ"}
+                one{"{0} КБ"}
+                other{"{0} КБ"}
             }
             megabit{
                 dnam{"Мбит"}
