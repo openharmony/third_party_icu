@@ -9450,6 +9450,7 @@
 乐亭 →lào\u0020tíng;
 俄罗斯 →é\u0020luó\u0020sī;
 伺侯 →cì\u0020hòu;
+六合区 →lù\u0020hé\u0020qū;
 ::Han-Spacedhan();
 # Convert compounds; these are added individually, not derived from Unihan kMandarin.
 # Note that Han-Spacedhan() has already been applied, so there should be spaces between Han characters.
