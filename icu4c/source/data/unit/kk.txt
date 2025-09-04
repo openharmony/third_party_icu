@@ -1192,7 +1192,7 @@ kk{
                 dnam{"кб"}
             }
             kilobyte{
-                dnam{"Кбайт"}
+                dnam{"КБ"}
             }
             megabit{
                 dnam{"Мб"}
@@ -1756,8 +1756,8 @@ kk{
             }
             kilobyte{
                 dnam{"Кбайт"}
-                one{"{0} Кбайт"}
-                other{"{0} Кбайт"}
+                one{"{0} КБ"}
+                other{"{0} КБ"}
             }
             megabit{
                 dnam{"Мбит"}
