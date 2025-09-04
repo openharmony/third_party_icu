@@ -1195,8 +1195,8 @@ jv{
                 other{"{0} kb"}
             }
             kilobyte{
-                dnam{"kBite"}
-                other{"{0} kB"}
+                dnam{"KBite"}
+                other{"{0} KB"}
             }
             megabit{
                 dnam{"Mbit"}

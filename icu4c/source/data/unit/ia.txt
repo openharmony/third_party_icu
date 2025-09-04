@@ -1188,7 +1188,7 @@ ia{
                 dnam{"kb"}
             }
             kilobyte{
-                dnam{"kB"}
+                dnam{"KB"}
             }
             megabit{
                 dnam{"Mb"}

@@ -1247,9 +1247,9 @@ en{
                 other{"{0}kb"}
             }
             kilobyte{
-                dnam{"KB"}
-                one{"{0}KB"}
-                other{"{0}KB"}
+                dnam{"kB"}
+                one{"{0}kB"}
+                other{"{0}kB"}
             }
             megabit{
                 dnam{"Mb"}
@@ -2221,9 +2221,9 @@ en{
                 other{"{0} kb"}
             }
             kilobyte{
-                dnam{"KByte"}
-                one{"{0} KB"}
-                other{"{0} KB"}
+                dnam{"kByte"}
+                one{"{0} kB"}
+                other{"{0} kB"}
             }
             megabit{
                 dnam{"Mbit"}
