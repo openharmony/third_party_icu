@@ -927,9 +927,9 @@ ast{
                 other{"{0}kb"}
             }
             kilobyte{
-                dnam{"kByte"}
-                one{"{0}kB"}
-                other{"{0}kB"}
+                dnam{"KByte"}
+                one{"{0}KB"}
+                other{"{0}KB"}
             }
             megabit{
                 dnam{"Mbit"}
@@ -1670,9 +1670,9 @@ ast{
                 other{"{0} kb"}
             }
             kilobyte{
-                dnam{"kByte"}
-                one{"{0} kB"}
-                other{"{0} kB"}
+                dnam{"KByte"}
+                one{"{0} KB"}
+                other{"{0} KB"}
             }
             megabit{
                 dnam{"Mbit"}
