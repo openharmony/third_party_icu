@@ -1659,8 +1659,8 @@ or{
             }
             kilobyte{
                 dnam{"କେବାଇଟ୍"}
-                one{"{0} kB"}
-                other{"{0} kB"}
+                one{"{0} KB"}
+                other{"{0} KB"}
             }
             megabit{
                 dnam{"ମେବିଟ୍"}

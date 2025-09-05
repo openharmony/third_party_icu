@@ -1304,7 +1304,7 @@ so{
                 dnam{"kbit"}
             }
             kilobyte{
-                dnam{"kBeyt"}
+                dnam{"KBeyt"}
             }
             megabit{
                 dnam{"Mbit"}
