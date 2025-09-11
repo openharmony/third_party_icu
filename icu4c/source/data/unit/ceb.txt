@@ -1251,7 +1251,7 @@ ceb{
                 dnam{"kbit"}
             }
             kilobyte{
-                dnam{"kByte"}
+                dnam{"KByte"}
             }
             megabit{
                 dnam{"Mbit"}

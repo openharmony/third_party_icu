@@ -944,7 +944,7 @@ id{
                 dnam{"kb"}
             }
             kilobyte{
-                dnam{"kB"}
+                dnam{"KB"}
             }
             megabit{
                 dnam{"Mb"}
@@ -1408,8 +1408,8 @@ id{
                 other{"{0} kb"}
             }
             kilobyte{
-                dnam{"kByte"}
-                other{"{0} kB"}
+                dnam{"KByte"}
+                other{"{0} KB"}
             }
             megabit{
                 dnam{"Mbit"}
