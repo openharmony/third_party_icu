@@ -214,8 +214,8 @@ zh_Hant{
                 other{"{0} kb"}
             }
             kilobyte{
-                dnam{"KB"}
-                other{"{0} KB"}
+                dnam{"kB"}
+                other{"{0} kB"}
             }
             megabit{
                 dnam{"Mb"}
@@ -1004,8 +1004,8 @@ zh_Hant{
                 other{"{0}kb"}
             }
             kilobyte{
-                dnam{"KB"}
-                other{"{0}KB"}
+                dnam{"kB"}
+                other{"{0}kB"}
             }
             megabit{
                 dnam{"Mb"}
@@ -1789,8 +1789,8 @@ zh_Hant{
                 other{"{0} kb"}
             }
             kilobyte{
-                dnam{"KB"}
-                other{"{0} KB"}
+                dnam{"kB"}
+                other{"{0} kB"}
             }
             megabit{
                 dnam{"Mb"}

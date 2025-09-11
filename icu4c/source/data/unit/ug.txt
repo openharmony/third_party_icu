@@ -263,9 +263,9 @@ ug{
                 other{"{0}kb"}
             }
             kilobyte{
-                dnam{"KByte"}
-                one{"{0}KB"}
-                other{"{0}KB"}
+                dnam{"kByte"}
+                one{"{0}kB"}
+                other{"{0}kB"}
             }
             megabit{
                 dnam{"Mbit"}
