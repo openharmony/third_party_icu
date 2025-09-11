@@ -1418,9 +1418,9 @@ fr{
                 other{"{0}kbit"}
             }
             kilobyte{
-                dnam{"Ko"}
-                one{"{0}Ko"}
-                other{"{0}Ko"}
+                dnam{"ko"}
+                one{"{0}ko"}
+                other{"{0}ko"}
             }
             megabit{
                 dnam{"Mbit"}
@@ -2357,9 +2357,9 @@ fr{
                 other{"{0} kbit"}
             }
             kilobyte{
-                dnam{"Ko"}
-                one{"{0} Ko"}
-                other{"{0} Ko"}
+                dnam{"ko"}
+                one{"{0} ko"}
+                other{"{0} ko"}
             }
             megabit{
                 dnam{"Mbit"}
