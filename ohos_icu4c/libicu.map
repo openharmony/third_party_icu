@@ -523,6 +523,27 @@
     u_strToUTF32WithSub;
     u_strFromUTF32WithSub;
     u_errorName;
+    u_charAge;
+    u_getUnicodeVersion;
+    uldn_open;
+    uldn_close;
+    uldn_getLocale;
+    uldn_getDialectHandling;
+    uldn_localeDisplayName;
+    uldn_languageDisplayName;
+    uldn_scriptDisplayName;
+    uldn_scriptCodeDisplayName;
+    uldn_regionDisplayName;
+    uldn_variantDisplayName;
+    uldn_keyDisplayName;
+    uldn_keyValueDisplayName;
+    uldn_openForContext;
+    uldn_getContext;
+    ulocdata_getCLDRVersion;
+    u_versionFromString;
+    u_versionFromUString;
+    u_versionToString;
+    u_getVersion;
 
   local:
     *;
