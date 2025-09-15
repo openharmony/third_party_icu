@@ -544,6 +544,8 @@
     u_versionFromUString;
     u_versionToString;
     u_getVersion;
+    utf8_back1SafeBody;
+    utf8_prevCharSafeBody;
 
   local:
     *;
