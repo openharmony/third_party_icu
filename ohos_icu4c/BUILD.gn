@@ -26,7 +26,10 @@ ohos_shared_library("icundk") {
   ]
   include_dirs = [ "//third_party/icu/icu4c/source/common" ]
 
-  sources = [ "src/icu_addon.cpp" ]
+  sources = [
+    "src/icu_addon.cpp",
+    "src/icu_native.cpp"
+  ]
 
   deps = [
     ":ohos_icudat",
