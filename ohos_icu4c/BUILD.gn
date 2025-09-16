@@ -28,7 +28,7 @@ ohos_shared_library("icundk") {
 
   sources = [
     "src/icu_addon.cpp",
-    "src/icu_native.cpp"
+    "src/icu_native.cpp",
   ]
 
   deps = [
