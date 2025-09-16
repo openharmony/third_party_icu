@@ -1206,9 +1206,9 @@ ha{
                 other{"kb{0}"}
             }
             kilobyte{
-                dnam{"kB"}
-                one{"kB{0}"}
-                other{"kB{0}"}
+                dnam{"KB"}
+                one{"KB{0}"}
+                other{"KB{0}"}
             }
             megabit{
                 dnam{"Mb"}
@@ -2072,8 +2072,8 @@ ha{
             }
             kilobyte{
                 dnam{"KByte"}
-                one{"kB {0}"}
-                other{"kB {0}"}
+                one{"KB {0}"}
+                other{"KB {0}"}
             }
             megabit{
                 dnam{"Mbit"}

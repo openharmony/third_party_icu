@@ -1211,9 +1211,9 @@ sq{
                 other{"{0} kb"}
             }
             kilobyte{
-                dnam{"kB"}
-                one{"{0} kB"}
-                other{"{0} kB"}
+                dnam{"KB"}
+                one{"{0} KB"}
+                other{"{0} KB"}
             }
             megabit{
                 dnam{"Mb"}
@@ -2197,9 +2197,9 @@ sq{
                 other{"{0} kb"}
             }
             kilobyte{
-                dnam{"kBajt"}
-                one{"{0} kB"}
-                other{"{0} kB"}
+                dnam{"KBajt"}
+                one{"{0} KB"}
+                other{"{0} KB"}
             }
             megabit{
                 dnam{"Mbit"}

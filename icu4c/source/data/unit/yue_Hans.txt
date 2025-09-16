@@ -218,8 +218,8 @@ yue_Hans{
                 other{"{0} kb"}
             }
             kilobyte{
-                dnam{"kB"}
-                other{"{0} kB"}
+                dnam{"KB"}
+                other{"{0} KB"}
             }
             megabit{
                 dnam{"Mb"}
@@ -1270,8 +1270,8 @@ yue_Hans{
                 other{"{0} kb"}
             }
             kilobyte{
-                dnam{"kB"}
-                other{"{0} kB"}
+                dnam{"KB"}
+                other{"{0} KB"}
             }
             megabit{
                 dnam{"Mb"}

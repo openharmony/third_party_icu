@@ -1177,7 +1177,7 @@ fil{
                 dnam{"kb"}
             }
             kilobyte{
-                dnam{"kB"}
+                dnam{"KB"}
             }
         }
         duration{
@@ -1799,9 +1799,9 @@ fil{
                 other{"{0} kb"}
             }
             kilobyte{
-                dnam{"kByte"}
-                one{"{0} kB"}
-                other{"{0} kB"}
+                dnam{"KByte"}
+                one{"{0} KB"}
+                other{"{0} KB"}
             }
             megabit{
                 dnam{"Mbit"}

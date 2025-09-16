@@ -1369,8 +1369,8 @@ it{
                 other{"{0}kb"}
             }
             kilobyte{
-                one{"{0}kB"}
-                other{"{0}kB"}
+                one{"{0}KB"}
+                other{"{0}KB"}
             }
             megabit{
                 one{"{0}Mb"}
@@ -2216,9 +2216,9 @@ it{
                 other{"{0} kb"}
             }
             kilobyte{
-                dnam{"kbyte"}
-                one{"{0} kB"}
-                other{"{0} kB"}
+                dnam{"Kbyte"}
+                one{"{0} KB"}
+                other{"{0} KB"}
             }
             megabit{
                 dnam{"Mbit"}

@@ -1336,7 +1336,7 @@ pt{
                 dnam{"kb"}
             }
             kilobyte{
-                dnam{"kB"}
+                dnam{"KB"}
             }
             megabit{
                 dnam{"Mb"}
@@ -1781,7 +1781,7 @@ pt{
                 dnam{"kbit"}
             }
             kilobyte{
-                dnam{"kByte"}
+                dnam{"KByte"}
             }
             megabit{
                 dnam{"Mbit"}
