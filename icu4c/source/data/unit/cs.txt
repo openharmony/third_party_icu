@@ -5613,11 +5613,11 @@ cs{
                 other{"{0} kb"}
             }
             kilobyte{
-                dnam{"kB"}
-                few{"{0} kB"}
-                many{"{0} kB"}
-                one{"{0} kB"}
-                other{"{0} kB"}
+                dnam{"KB"}
+                few{"{0} KB"}
+                many{"{0} KB"}
+                one{"{0} KB"}
+                other{"{0} KB"}
             }
             megabit{
                 dnam{"Mb"}
@@ -7047,11 +7047,11 @@ cs{
                 other{"{0} kb"}
             }
             kilobyte{
-                dnam{"kB"}
-                few{"{0} kB"}
-                many{"{0} kB"}
-                one{"{0} kB"}
-                other{"{0} kB"}
+                dnam{"KB"}
+                few{"{0} KB"}
+                many{"{0} KB"}
+                one{"{0} KB"}
+                other{"{0} KB"}
             }
             megabit{
                 dnam{"Mb"}

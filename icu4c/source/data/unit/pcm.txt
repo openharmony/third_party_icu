@@ -1179,7 +1179,7 @@ pcm{
                 dnam{"kb"}
             }
             kilobyte{
-                dnam{"kB"}
+                dnam{"KB"}
             }
             megabit{
                 dnam{"Mb"}
@@ -1619,8 +1619,8 @@ pcm{
             }
             kilobyte{
                 dnam{"KBait"}
-                one{"{0} kB"}
-                other{"{0} kB"}
+                one{"{0} KB"}
+                other{"{0} KB"}
             }
             megabit{
                 dnam{"Mbit"}
