@@ -4,5 +4,6 @@
 ar_KW{
     NumberElements{
         default{"latn"}
+        default_latn{"latn"}
     }
 }

@@ -18,7 +18,7 @@
 #include <mutex>
 
 namespace {
-const char* g_hwDirectory = "/system/usr/ohos_icu";
+const char* g_hwDirectory = "/system/usr/icu";
 static int status = 0;
 std::mutex dataMutex;
 }

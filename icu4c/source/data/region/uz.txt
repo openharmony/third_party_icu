@@ -108,7 +108,7 @@ uz{
         ES{"Ispaniya"}
         ET{"Efiopiya"}
         EU{"Yevropa Ittifoqi"}
-        EZ{"Yevrozona"}
+        EZ{"Yevrohudud"}
         FI{"Finlandiya"}
         FJ{"Fiji"}
         FK{"Folklend orollari"}

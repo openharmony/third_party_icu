@@ -111,7 +111,7 @@ kea{
         EZ{"Eurozona"}
         FI{"Finlándia"}
         FJ{"Fidji"}
-        FK{"Ilhas Malvinas"}
+        FK{"Ilhas Falkland (Ilhas Malvinas)"}
         FM{"Mikronézia"}
         FO{"Ilhas Faroe"}
         FR{"Fransa"}
@@ -134,7 +134,7 @@ kea{
         GU{"Guam"}
         GW{"Gine-Bisau"}
         GY{"Giana"}
-        HK{"Hong Kong, Rejion Administrativu Spesial di Xina"}
+        HK{"Hong Kong"}
         HM{"Ilhas Heard i McDonald"}
         HN{"Onduras"}
         HR{"Kroásia"}
@@ -184,11 +184,11 @@ kea{
         MF{"San Martinhu (Fransa)"}
         MG{"Madagaskar"}
         MH{"Ilhas Marxal"}
-        MK{"Masidónia di Norti"}
+        MK{"Masidónia (FYROM)"}
         ML{"Mali"}
         MM{"Mianmar (Birmánia)"}
         MN{"Mongólia"}
-        MO{"Makau, Rejion Administrativu Spesial di Xina"}
+        MO{"Makau"}
         MP{"Ilhas Marianas di Norti"}
         MQ{"Martinika"}
         MR{"Mauritánia"}

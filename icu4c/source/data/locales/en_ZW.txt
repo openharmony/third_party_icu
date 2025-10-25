@@ -72,7 +72,7 @@ en_ZW{
                 MMMd{"dd MMM"}
                 Md{"d/M"}
                 yMEd{"E, d/M/y"}
-                yMMMEd{"E, dd MMM y"}
+                yMMMEd{"E dd MMM y"}
                 yMMMd{"dd MMM y"}
                 yMd{"d/M/y"}
             }

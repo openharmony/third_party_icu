@@ -43,7 +43,7 @@ az{
         AL{"Albaniya"}
         AM{"Ermənistan"}
         AO{"Anqola"}
-        AQ{"Antarktika"}
+        AQ{"Antarktida"}
         AR{"Argentina"}
         AS{"Amerika Samoası"}
         AT{"Avstriya"}
@@ -255,7 +255,7 @@ az{
         SX{"Sint-Marten"}
         SY{"Suriya"}
         SZ{"Esvatini"}
-        TA{"Tristan da Kunya"}
+        TA{"Tristan-da-Kunya"}
         TC{"Törks və Kaykos adaları"}
         TD{"Çad"}
         TF{"Fransanın Cənub Əraziləri"}
@@ -297,6 +297,9 @@ az{
         ZM{"Zambiya"}
         ZW{"Zimbabve"}
         ZZ{"Naməlum Region"}
+    }
+    Countries%chagos{
+        IO{"Çaqos arxipelaqı"}
     }
     Countries%short{
         GB{"BK"}
