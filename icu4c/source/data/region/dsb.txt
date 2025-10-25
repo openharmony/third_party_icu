@@ -111,7 +111,7 @@ dsb{
         EZ{"europasmo"}
         FI{"Finska"}
         FJ{"Fidži"}
-        FK{"Falklandske kupy"}
+        FK{"Falklandske kupy (Malwiny)"}
         FM{"Mikroneziska"}
         FO{"Färöje"}
         FR{"Francojska"}
@@ -134,7 +134,7 @@ dsb{
         GU{"Guam"}
         GW{"Gineja-Bissau"}
         GY{"Guyana"}
-        HK{"Wósebna zastojnstwowa cona Hongkong"}
+        HK{"Hongkong"}
         HM{"Heardowa kupa a McDonaldowe kupy"}
         HN{"Honduras"}
         HR{"Chorwatska"}
@@ -184,11 +184,11 @@ dsb{
         MF{"St. Martin"}
         MG{"Madagaskar"}
         MH{"Marshallowe kupy"}
-        MK{"Pódpołnocna Makedańska"}
+        MK{"Makedońska (PRJ)"}
         ML{"Mali"}
         MM{"Myanmar"}
         MN{"Mongolska"}
-        MO{"Wósebna zastojnstwowa cona Macao"}
+        MO{"Macao"}
         MP{"Pódpołnocne Mariany"}
         MQ{"Martinique"}
         MR{"Mawretańska"}
@@ -223,7 +223,7 @@ dsb{
         PM{"St. Pierre a Miquelon"}
         PN{"Pitcairnowe kupy"}
         PR{"Puerto Rico"}
-        PS{"Palestinski awtonomny teritorium"}
+        PS{"Palestina"}
         PT{"Portugalska"}
         PW{"Palau"}
         PY{"Paraguay"}
@@ -297,6 +297,9 @@ dsb{
         ZM{"Sambija"}
         ZW{"Simbabwe"}
         ZZ{"njeznaty region"}
+    }
+    Countries%chagos{
+        IO{"Chagoske kupy"}
     }
     Countries%short{
         GB{"UK"}

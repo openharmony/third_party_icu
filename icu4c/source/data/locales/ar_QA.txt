@@ -4,5 +4,6 @@
 ar_QA{
     NumberElements{
         default{"latn"}
+        default_latn{"latn"}
     }
 }

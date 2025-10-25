@@ -2,6 +2,9 @@
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 ne_IN{
+    NumberElements{
+        default{"latn"}
+    }
     calendar{
         gregorian{
             DateTimePatterns{
@@ -12,7 +15,7 @@ ne_IN{
                 "y MMMM d, EEEE",
                 "y MMMM d",
                 "y MMM d",
-                "yy/M/d",
+                "y-MM-dd",
                 "{1}, {0}",
                 "{1} {0}",
                 "{1} {0}",

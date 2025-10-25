@@ -228,7 +228,7 @@ sl{
         PW{"Palau"}
         PY{"Paragvaj"}
         QA{"Katar"}
-        QO{"Ostala oceanija"}
+        QO{"Ostala Oceanija"}
         RE{"Reunion"}
         RO{"Romunija"}
         RS{"Srbija"}
@@ -263,7 +263,7 @@ sl{
         TH{"Tajska"}
         TJ{"Tadžikistan"}
         TK{"Tokelau"}
-        TL{"Timor-Leste"}
+        TL{"Vzhodni Timor"}
         TM{"Turkmenistan"}
         TN{"Tunizija"}
         TO{"Tonga"}
@@ -296,7 +296,10 @@ sl{
         ZA{"Južnoafriška republika"}
         ZM{"Zambija"}
         ZW{"Zimbabve"}
-        ZZ{"Neznano ali neveljavno območje"}
+        ZZ{"Neznano območje"}
+    }
+    Countries%chagos{
+        IO{"Otočje Chagos"}
     }
     Countries%short{
         GB{"ZK"}

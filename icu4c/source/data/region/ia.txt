@@ -184,7 +184,7 @@ ia{
         MF{"Sancte Martino francese"}
         MG{"Madagascar"}
         MH{"Insulas Marshall"}
-        MK{"Macedonia del Nord"}
+        MK{"Macedonia (ARYM)"}
         ML{"Mali"}
         MM{"Myanmar (Birmania)"}
         MN{"Mongolia"}
@@ -297,6 +297,9 @@ ia{
         ZM{"Zambia"}
         ZW{"Zimbabwe"}
         ZZ{"Region incognite"}
+    }
+    Countries%chagos{
+        IO{"Archipelago de Chagos"}
     }
     Countries%short{
         GB{"RU"}

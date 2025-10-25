@@ -107,7 +107,7 @@ mt{
         EU{"Unjoni Ewropea"}
         FI{"il-Finlandja"}
         FJ{"Fiġi"}
-        FK{"il-Gżejjer Falkland"}
+        FK{"Il-Gżejjer Falkland (il-Gżejjer Malvinas)"}
         FM{"il-Mikroneżja"}
         FO{"il-Gżejjer Faeroe"}
         FR{"Franza"}
@@ -180,7 +180,7 @@ mt{
         MF{"Saint Martin"}
         MG{"Madagascar"}
         MH{"Gżejjer Marshall"}
-        MK{"il-Maċedonja ta’ Fuq"}
+        MK{"l-Eks Repubblika Jugoslava tal-Maċedonia"}
         ML{"il-Mali"}
         MM{"il-Myanmar/Burma"}
         MN{"il-Mongolja"}

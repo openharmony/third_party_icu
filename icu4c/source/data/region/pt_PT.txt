@@ -11,6 +11,7 @@ pt_PT{
         039{"Europa do Sul"}
         154{"Europa do Norte"}
         202{"África subsariana"}
+        AC{"Ilha da Ascensão"}
         AM{"Arménia"}
         AX{"Alanda"}
         BD{"Bangladeche"}
@@ -62,15 +63,18 @@ pt_PT{
         SV{"Salvador"}
         SX{"São Martinho (Sint Maarten)"}
         TF{"Territórios Austrais Franceses"}
+        SZ{"Essuatíni"}
         TJ{"Tajiquistão"}
         TK{"Toquelau"}
         TM{"Turquemenistão"}
         TT{"Trindade e Tobago"}
         UM{"Ilhas Menores Afastadas dos EUA"}
         UZ{"Usbequistão"}
+        VA{"Cidade do Vaticano"}
         VI{"Ilhas Virgens dos EUA"}
         VN{"Vietname"}
-        XA{"Pseudoacentos"}
+        XA{"pseudoacentos"}
+        XB{"pseudobidirecional"}
         YE{"Iémen"}
         YT{"Maiote"}
         ZW{"Zimbabué"}
@@ -84,5 +88,6 @@ pt_PT{
         CZ{"República Checa"}
         FK{"Ilhas Falkland (Malvinas)"}
         NZ{"Aotearoa"}
+        TR{"Türkiye"}
     }
 }

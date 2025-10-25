@@ -70,7 +70,7 @@ no{
         BT{"Bhutan"}
         BV{"Bouvetøya"}
         BW{"Botswana"}
-        BY{"Hviterussland"}
+        BY{"Belarus"}
         BZ{"Belize"}
         CA{"Canada"}
         CC{"Kokosøyene"}
@@ -85,6 +85,7 @@ no{
         CN{"Kina"}
         CO{"Colombia"}
         CP{"Clippertonøya"}
+        CQ{"Sark"}
         CR{"Costa Rica"}
         CU{"Cuba"}
         CV{"Kapp Verde"}
@@ -184,7 +185,7 @@ no{
         MF{"Saint-Martin"}
         MG{"Madagaskar"}
         MH{"Marshalløyene"}
-        MK{"Nord-Makedonia"}
+        MK{"Republikken Nord-Makedonia"}
         ML{"Mali"}
         MM{"Myanmar (Burma)"}
         MN{"Mongolia"}
@@ -297,6 +298,9 @@ no{
         ZM{"Zambia"}
         ZW{"Zimbabwe"}
         ZZ{"ukjent område"}
+    }
+    Countries%chagos{
+        IO{"Chagosøyene"}
     }
     Countries%short{
         HK{"Hongkong"}
