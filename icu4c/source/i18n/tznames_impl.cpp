@@ -110,7 +110,7 @@ struct ZMatchInfo {
 };
 
 // Helper functions
-static void mergeTimeZoneKey(const UnicodeString& mzID, char* result);
+static void mergeTimeZoneKey(const UnicodeString& mzID, char* result, size_t capacity, UErrorCode& status);
 
 #define DEFAULT_CHARACTERNODE_CAPACITY 1
 

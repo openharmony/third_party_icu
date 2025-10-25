@@ -131,7 +131,6 @@ jv{
         chr{"Cherokee"}
         chy{"Cheyenne"}
         ckb{"Kurdi Tengah"}
-        co{"Corsican"}
         clc{"Chilcotin"}
         co{"Korsika"}
         cop{"Coptic"}

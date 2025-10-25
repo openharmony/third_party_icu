@@ -340,7 +340,6 @@ my{
                 }
                 MMMMd{"MMMMလ d ရက်"}
                 MMMd{"MMMလ d ရက်"}
-                MMMd{"d MMM"}
                 Md{"MM/dd"}
                 h{"h a"}
                 hm{"h:mm a"}
