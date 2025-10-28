@@ -1608,7 +1608,7 @@ realParseTable(ParseState* state, TableResource *table, char *tag, uint32_t star
         /* <issue: https://github.com/unicode-org/icu/pull/3340> 20250912 begin */
         member = parseResource(state, subtag.data(), &comment, status);
         /* <issue: https://github.com/unicode-org/icu/pull/3340> 20250912 end */
-        if (member == NULL || U_FAILURE(*status))
+        if (member == nullptr || U_FAILURE(*status))
         {
             error(line, "parse error. Stopped parsing resource with %s", u_errorName(*status));
             return nullptr;

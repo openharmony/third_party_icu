@@ -215,14 +215,14 @@ zh_Hant{
     calendar{
         buddhist{
             DateTimePatterns{
-                "Bh:mm:ss [zzzz]",
-                "Bh:mm:ss [z]",
-                "Bh:mm:ss",
-                "Bh:mm",
-                "Gy年M月d日EEEE",
-                "Gy年M月d日",
-                "Gy年M月d日",
-                "Gy/M/d",
+                "B h:mm:ss [zzzz]",
+                "B h:mm:ss [z]",
+                "B h:mm:ss",
+                "B h:mm",
+                "G y 年 M 月 d 日 EEEE",
+                "G y 年 M 月 d 日",
+                "G y 年 M 月 d 日",
+                "G y/M/d",
                 "{1} {0}",
                 "{1}{0}",
                 "{1} {0}",
@@ -230,24 +230,24 @@ zh_Hant{
                 "{1} {0}",
             }
             availableFormats{
-                Ed{"d日（E）"}
-                Gy{"Gy年"}
-                GyMMM{"Gy年M月"}
-                GyMMMEd{"Gy年M月d日E"}
-                GyMMMd{"Gy年M月d日"}
-                GyMd{"Gy/M/d"}
-                MMMEd{"M月d日E"}
-                y{"Gy年"}
-                yyyy{"Gy年"}
-                yyyyM{"Gy/M"}
-                yyyyMEd{"Gy/M/d（E）"}
-                yyyyMMM{"Gy年M月"}
-                yyyyMMMEd{"Gy年M月d日E"}
-                yyyyMMMM{"Gy年M月"}
-                yyyyMMMd{"Gy年M月d日"}
-                yyyyMd{"Gy/M/d"}
-                yyyyQQQ{"Gy年QQQ"}
-                yyyyQQQQ{"Gy年QQQQ"}
+                Ed{"d 日（E）"}
+                Gy{"G y 年"}
+                GyMMM{"G y 年 M 月"}
+                GyMMMEd{"G y 年 M 月 d 日 E"}
+                GyMMMd{"G y 年 M 月 d 日"}
+                GyMd{"G y/M/d"}
+                MMMEd{"M 月 d 日 E"}
+                y{"G y 年"}
+                yyyy{"G y 年"}
+                yyyyM{"G y/M"}
+                yyyyMEd{"G y/M/d（E）"}
+                yyyyMMM{"G y 年 M 月"}
+                yyyyMMMEd{"G y 年 M 月 d 日 E"}
+                yyyyMMMM{"G y 年 M 月"}
+                yyyyMMMd{"G y 年 M 月 d 日"}
+                yyyyMd{"G y/M/d"}
+                yyyyQQQ{"G y 年QQQ"}
+                yyyyQQQQ{"G y 年QQQQ"}
             }
             eras{
                 abbreviated{
@@ -257,20 +257,20 @@ zh_Hant{
         }
         chinese{
             DateTimePatterns{
-                "Bh:mm:ss [zzzz]",
-                "Bh:mm:ss [z]",
-                "Bh:mm:ss",
-                "Bh:mm",
+                "B h:mm:ss [zzzz]",
+                "B h:mm:ss [z]",
+                "B h:mm:ss",
+                "B h:mm",
                 {
-                    "rU年MMMd EEEE",
+                    "r U年 MMMd EEEE",
                     "d=hanidays",
                 }
                 {
-                    "rU年MMMd",
+                    "r U年 MMMd",
                     "d=hanidays",
                 }
                 {
-                    "r年MMMd",
+                    "r 年 MMMd",
                     "d=hanidays",
                 }
                 "r/M/d",
@@ -297,48 +297,48 @@ zh_Hant{
                 "rMd",
             }
             availableFormats{
-                Bh{"Bh時"}
-                Bhm{"Bh:mm"}
-                Bhms{"Bh:mm:ss"}
-                EBhm{"E Bh:mm"}
-                EBhms{"E Bh:mm:ss"}
+                Bh{"B h 時"}
+                Bhm{"B h:mm"}
+                Bhms{"B h:mm:ss"}
+                EBhm{"E B h:mm"}
+                EBhms{"E B h:mm:ss"}
                 Ed{"d E"}
-                Gy{"rU年"}
-                GyMMM{"rU年MMM"}
-                GyMMMEd{"rU年MMMdE"}
+                Gy{"r U年"}
+                GyMMM{"r U年 MMM"}
+                GyMMMEd{"r U年 MMMd E"}
                 GyMMMM{"r(U)MMMM"}
-                GyMMMMEd{"r(U)MMMMd日 E"}
-                GyMMMMd{"r(U)MMMMd日"}
-                GyMMMd{"r年MMMd"}
-                H{"HH時"}
+                GyMMMMEd{"r(U)MMMMd 日 E"}
+                GyMMMMd{"r(U)MMMMd 日"}
+                GyMMMd{"r 年 MMMd"}
+                H{"HH 時"}
                 M{"MMM"}
-                MEd{"M/dE"}
-                MMMEd{"MMMd日E"}
-                MMMMd{"MMMMd日"}
-                MMMd{"MMMd日"}
+                MEd{"M/d E"}
+                MMMEd{"MMMd 日 E"}
+                MMMMd{"MMMMd 日"}
+                MMMd{"MMMd 日"}
                 Md{"M/d"}
-                UM{"U年MMM"}
-                UMMM{"U年MMM"}
-                UMMMd{"U年MMMd"}
-                UMd{"U年MMMd"}
-                d{"d日"}
-                h{"Bh時"}
-                hm{"Bh:mm"}
-                hms{"Bh:mm:ss"}
-                y{"rU年"}
-                yMd{"r年MMMd"}
-                yyyy{"rU年"}
-                yyyyM{"rU年MMM"}
-                yyyyMEd{"rU年MMMd，E"}
-                yyyyMMM{"rU年MMM"}
-                yyyyMMMEd{"rU年MMMdE"}
-                yyyyMMMM{"rU年MMMM"}
-                yyyyMMMMEd{"r(U)MMMMd日 E"}
-                yyyyMMMMd{"r(U)MMMMd日"}
-                yyyyMMMd{"r年MMMd"}
-                yyyyMd{"r年MMMd"}
-                yyyyQQQ{"rU年QQQQ"}
-                yyyyQQQQ{"rU年QQQQ"}
+                UM{"U年 MMM"}
+                UMMM{"U年 MMM"}
+                UMMMd{"U年 MMMd"}
+                UMd{"U年 MMMd"}
+                d{"d 日"}
+                h{"B h 時"}
+                hm{"B h:mm"}
+                hms{"B h:mm:ss"}
+                y{"r U年"}
+                yMd{"r 年 MMMd"}
+                yyyy{"r U年"}
+                yyyyM{"r U年 MMM"}
+                yyyyMEd{"r U年 MMMd，E"}
+                yyyyMMM{"r U年 MMM"}
+                yyyyMMMEd{"r U年 MMMd E"}
+                yyyyMMMM{"r U年 MMMM"}
+                yyyyMMMMEd{"r(U)MMMMd 日 E"}
+                yyyyMMMMd{"r(U)MMMMd 日"}
+                yyyyMMMd{"r 年 MMMd"}
+                yyyyMd{"r 年 MMMd"}
+                yyyyQQQ{"r U年QQQQ"}
+                yyyyQQQQ{"r U年QQQQ"}
             }
             cyclicNameSets{
                 dayParts{
@@ -476,11 +476,11 @@ zh_Hant{
             }
             intervalFormats{
                 H{
-                    H{"HH至HH"}
+                    H{"HH 至 HH"}
                 }
                 Hm{
-                    H{"HH:mm至HH:mm"}
-                    m{"HH:mm至HH:mm"}
+                    H{"HH:mm 至 HH:mm"}
+                    m{"HH:mm 至 HH:mm"}
                 }
                 Hmv{
                     H{"HH:mm–HH:mm [v]"}
@@ -490,86 +490,86 @@ zh_Hant{
                     H{"HH–HH [v]"}
                 }
                 M{
-                    M{"MMM至MMM"}
+                    M{"MMM 至 MMM"}
                 }
                 MEd{
-                    M{"M/dE至M/dE"}
-                    d{"M/dE至M/dE"}
+                    M{"M/d E 至 M/d E"}
+                    d{"M/d E 至 M/d E"}
                 }
                 MMM{
                     M{"LLL至LLL"}
                 }
                 MMMEd{
-                    M{"MMMd日E至MMMd日E"}
-                    d{"MMMd日E至d日E"}
+                    M{"MMMd 日 E至 MMMd 日 E"}
+                    d{"MMMd 日 E至 d 日 E"}
                 }
                 MMMM{
                     M{"LLLL至LLLL"}
                 }
                 MMMd{
-                    M{"MMMd日至MMMd日"}
-                    d{"MMMd日至d日"}
+                    M{"MMMd 日至 MMMd 日"}
+                    d{"MMMd 日至 d 日"}
                 }
                 Md{
-                    M{"M/d至M/d"}
-                    d{"M/d至M/d"}
+                    M{"M/d 至 M/d"}
+                    d{"M/d 至 M/d"}
                 }
                 d{
-                    d{"d日至d日"}
+                    d{"d 日至 d日"}
                 }
-                fallback{"{0}至{1}"}
+                fallback{"{0} 至 {1}"}
                 h{
-                    B{"Bh時至Bh時"}
-                    h{"Bh時至h時"}
+                    B{"B h 時至B h 時"}
+                    h{"B h 時至 h 時"}
                 }
                 hm{
-                    B{"Bh:mm至Bh:mm"}
-                    h{"Bh:mm至h:mm"}
-                    m{"Bh:mm至h:mm"}
+                    B{"B h:mm 至B h:mm"}
+                    h{"B h:mm 至 h:mm"}
+                    m{"B h:mm 至 h:mm"}
                 }
                 hmv{
-                    B{"Bh:mm至Bh:mm [v]"}
-                    h{"Bh:mm至h:mm [v]"}
-                    m{"Bh:mm至h:mm [v]"}
+                    B{"B h:mm 至B h:mm [v]"}
+                    h{"B h:mm 至 h:mm [v]"}
+                    m{"B h:mm 至 h:mm [v]"}
                 }
                 hv{
-                    B{"Bh時至Bh時 [v]"}
-                    h{"Bh時至h時 [v]"}
+                    B{"B h 時至B h 時 [v]"}
+                    h{"B h 時至 h 時 [v]"}
                 }
                 y{
-                    y{"rU至rU"}
+                    y{"r U至 r U"}
                 }
                 yM{
-                    M{"r/M至r/M"}
-                    y{"r/M至r/M"}
+                    M{"r/M 至 r/M"}
+                    y{"r/M 至 r/M"}
                 }
                 yMEd{
-                    M{"r/M/dE至r/M/dE"}
-                    d{"r/M/dE至r/M/dE"}
-                    y{"r/M/dE至r/M/dE"}
+                    M{"r/M/d E至 r/M/d E"}
+                    d{"r/M/d E至 r/M/d E"}
+                    y{"r/M/d E至 r/M/d E"}
                 }
                 yMMM{
-                    M{"rU年MMM至MMM"}
-                    y{"rU年MMM至rU年MMM"}
+                    M{"r U年 MMM 至 MMM"}
+                    y{"r U年 MMM 至 r U年 MMM"}
                 }
                 yMMMEd{
-                    M{"rU年MMMdE至MMMdE"}
-                    d{"rU年MMMdE至dE"}
-                    y{"rU年MMMdE至rU年MMMdE"}
+                    M{"r U年 MMMd E至 MMMd E"}
+                    d{"r U年 MMMd E至 d E"}
+                    y{"r U年 MMMd E至 r U年 MMMd E"}
                 }
                 yMMMM{
-                    M{"rU年MMMM至MMMM"}
-                    y{"rU年MMMM至rU年MMMM"}
+                    M{"r U年 MMMM 至 MMMM"}
+                    y{"r U年 MMMM 至 r U年 MMMM"}
                 }
                 yMMMd{
-                    M{"r年MMMd至MMMd"}
-                    d{"r年MMMd至d"}
-                    y{"r年MMMd至r年MMMd"}
+                    M{"r 年 MMMd 至 MMMd"}
+                    d{"r 年 MMMd 至 d"}
+                    y{"r 年 MMMd 至 r 年 MMMd"}
                 }
                 yMd{
-                    M{"r/M/d至r/M/d"}
-                    d{"r/M/d至r/M/d"}
-                    y{"r/M/d至r/M/d"}
+                    M{"r/M/d 至 r/M/d"}
+                    d{"r/M/d 至 r/M/d"}
+                    y{"r/M/d 至 r/M/d"}
                 }
             }
             monthNames{
@@ -647,13 +647,13 @@ zh_Hant{
         }
         dangi{
             DateTimePatterns{
-                "Bh:mm:ss [zzzz]",
-                "Bh:mm:ss [z]",
-                "Bh:mm:ss",
-                "Bh:mm",
-                "U年MMMd日EEEE",
-                "U年MMMd日",
-                "U年MMMd日",
+                "B h:mm:ss [zzzz]",
+                "B h:mm:ss [z]",
+                "B h:mm:ss",
+                "B h:mm",
+                "U年 MMMd 日 EEEE",
+                "U年 MMMd 日",
+                "U年 MMMd 日",
                 "U/M/d",
                 "{1} {0}",
                 "{1} {0}",
@@ -672,7 +672,7 @@ zh_Hant{
                 "UMd",
             }
             availableFormats{
-                Ed{"d日E"}
+                Ed{"d 日 E"}
             }
             monthNames{
                 format{
@@ -788,13 +788,13 @@ zh_Hant{
         }
         generic{
             DateTimePatterns{
-                "Bh:mm:ss [zzzz]",
-                "Bh:mm:ss [z]",
-                "Bh:mm:ss",
-                "Bh:mm",
-                "G y年M月d日 EEEE",
-                "G y年M月d日",
-                "G y年M月d日",
+                "B h:mm:ss [zzzz]",
+                "B h:mm:ss [z]",
+                "B h:mm:ss",
+                "B h:mm",
+                "G y 年 M 月 d 日 EEEE",
+                "G y 年 M 月 d 日",
+                "G y 年 M 月 d 日",
                 "G y/M/d",
                 "{1} {0}",
                 "{1}{0}",
@@ -813,43 +813,43 @@ zh_Hant{
                 "GyMd",
             }
             availableFormats{
-                Bh{"Bh時"}
-                Bhm{"Bh:mm"}
-                Bhms{"Bh:mm:ss"}
-                EBhm{"E Bh:mm"}
-                EBhms{"E Bh:mm:ss"}
+                Bh{"B h 時"}
+                Bhm{"B h:mm"}
+                Bhms{"B h:mm:ss"}
+                EBhm{"E B h:mm"}
+                EBhms{"E B h:mm:ss"}
                 Ed{"d E"}
-                Ehm{"E Bh:mm"}
-                Ehms{"E Bh:mm:ss"}
-                Gy{"G y年"}
-                GyMMM{"G y年M月"}
-                GyMMMEd{"G y年M月d日 E"}
-                GyMMMd{"G y年M月d日"}
+                Ehm{"E B h:mm"}
+                Ehms{"E B h:mm:ss"}
+                Gy{"G y 年"}
+                GyMMM{"G y 年 M 月"}
+                GyMMMEd{"G y 年 M 月 d 日 E"}
+                GyMMMd{"G y 年 M 月 d 日"}
                 GyMd{"G y/M/d"}
-                H{"H時"}
+                H{"H 時"}
                 Hm{"H:mm"}
                 Hms{"H:mm:ss"}
-                M{"M月"}
+                M{"M 月"}
                 MEd{"M/d（E）"}
-                MMMEd{"M月d日 E"}
-                MMMMd{"M月d日"}
-                MMMd{"M月d日"}
+                MMMEd{"M 月 d 日 E"}
+                MMMMd{"M 月 d 日"}
+                MMMd{"M 月 d 日"}
                 Md{"M/d"}
-                d{"d日"}
-                h{"Bh時"}
-                hm{"Bh:mm"}
-                hms{"Bh:mm:ss"}
-                y{"G y年"}
-                yyyy{"G y年"}
+                d{"d 日"}
+                h{"B h 時"}
+                hm{"B h:mm"}
+                hms{"B h:mm:ss"}
+                y{"G y 年"}
+                yyyy{"G y 年"}
                 yyyyM{"G y/M"}
                 yyyyMEd{"G y/M/d（E）"}
-                yyyyMMM{"G y年M月"}
-                yyyyMMMEd{"G y年M月d日 E"}
-                yyyyMMMM{"G y年M月"}
-                yyyyMMMd{"G y年M月d日"}
+                yyyyMMM{"G y 年 M 月"}
+                yyyyMMMEd{"G y 年 M 月 d 日 E"}
+                yyyyMMMM{"G y 年 M 月"}
+                yyyyMMMd{"G y 年 M 月 d 日"}
                 yyyyMd{"G y/M/d"}
-                yyyyQQQ{"G y年QQQ"}
-                yyyyQQQQ{"G y年QQQQ"}
+                yyyyQQQ{"G y 年QQQ"}
+                yyyyQQQQ{"G y 年QQQQ"}
             }
             intervalFormats{
                 Hmv{
@@ -860,85 +860,85 @@ zh_Hant{
                     H{"HH–HH [v]"}
                 }
                 M{
-                    M{"M月至M月"}
+                    M{"M 月至 M 月"}
                 }
                 MEd{
-                    M{"M/d E至M/d E"}
-                    d{"M/d E至M/d E"}
+                    M{"M/d E至 M/d E"}
+                    d{"M/d E至 M/d E"}
                 }
                 MMM{
                     M{"LLL至LLL"}
                 }
                 MMMEd{
-                    M{"M月d日E至M月d日E"}
-                    d{"M月d日E至d日E"}
+                    M{"M 月 d 日 E至 M 月 d 日 E"}
+                    d{"M 月 d 日 E至 d 日 E"}
                 }
                 MMMM{
                     M{"LLLL至LLLL"}
                 }
                 MMMd{
-                    M{"M月d日至M月d日"}
-                    d{"M月d日至d日"}
+                    M{"M 月 d 日至 M 月 d 日"}
+                    d{"M 月 d 日至 d 日"}
                 }
                 Md{
-                    M{"M/d至M/d"}
-                    d{"M/d至M/d"}
+                    M{"M/d 至 M/d"}
+                    d{"M/d 至 M/d"}
                 }
                 d{
-                    d{"d日至d日"}
+                    d{"d 日至 d 日"}
                 }
                 h{
-                    B{"Bh時至Bh時"}
-                    h{"Bh時至h時"}
+                    B{"B h 時至B h 時"}
+                    h{"B h 時至 h 時"}
                 }
                 hm{
-                    B{"Bh:mm至Bh:mm"}
-                    h{"Bh:mm至h:mm"}
-                    m{"Bh:mm至h:mm"}
+                    B{"B h:mm 至B h:mm"}
+                    h{"B h:mm 至 h:mm"}
+                    m{"B h:mm 至 h:mm"}
                 }
                 hmv{
-                    B{"Bh:mm至Bh:mm [v]"}
-                    h{"Bh:mm至h:mm [v]"}
-                    m{"Bh:mm至h:mm [v]"}
+                    B{"B h:mm 至B h:mm [v]"}
+                    h{"B h:mm 至 h:mm [v]"}
+                    m{"B h:mm 至 h:mm [v]"}
                 }
                 hv{
-                    B{"Bh時至Bh時 [v]"}
-                    h{"Bh時至h時 [v]"}
+                    B{"B h 時至B h 時 [v]"}
+                    h{"B h 時至 h 時 [v]"}
                 }
                 y{
-                    y{"G y至y"}
+                    y{"G y 至 y"}
                 }
                 yM{
-                    M{"G y/M至y/M"}
-                    y{"G y/M至y/M"}
+                    M{"G y/M 至 y/M"}
+                    y{"G y/M 至 y/M"}
                 }
                 yMEd{
-                    M{"G y/M/dE至y/M/dE"}
-                    d{"G y/M/dE至y/M/dE"}
-                    y{"G y/M/dE至y/M/dE"}
+                    M{"G y/M/d E至 y/M/d E"}
+                    d{"G y/M/d E至 y/M/d E"}
+                    y{"G y/M/d E至 y/M/d E"}
                 }
                 yMMM{
-                    M{"G y年M月至M月"}
-                    y{"G y年M月至y年M月"}
+                    M{"G y 年 M 月至 M 月"}
+                    y{"G y 年 M 月至 y 年 M 月"}
                 }
                 yMMMEd{
-                    M{"G y年M月d日E至M月d日E"}
-                    d{"G y年M月d日E至d日E"}
-                    y{"G y年M月d日E至y年M月d日E"}
+                    M{"G y 年 M 月 d 日 E至 M 月 d 日 E"}
+                    d{"G y 年 M 月 d 日 E至 d 日 E"}
+                    y{"G y 年 M 月 d 日 E至 y 年 M 月 d 日 E"}
                 }
                 yMMMM{
-                    M{"G y年M月至M月"}
-                    y{"G y年M月至y年M月"}
+                    M{"G y 年 M 月至 M 月"}
+                    y{"G y 年 M 月至 y 年 M 月"}
                 }
                 yMMMd{
-                    M{"G y年M月d日至M月d日"}
-                    d{"G y年M月d日至d日"}
-                    y{"G y年M月d日至y年M月d日"}
+                    M{"G y 年 M 月 d 日至 M 月 d 日"}
+                    d{"G y 年 M 月 d 日至 d 日"}
+                    y{"G y 年 M 月 d 日至 y 年 M 月 d 日"}
                 }
                 yMd{
-                    M{"G y/M/d至y/M/d"}
-                    d{"G y/M/d至y/M/d"}
-                    y{"G y/M/d至y/M/d"}
+                    M{"G y/M/d 至 y/M/d"}
+                    d{"G y/M/d 至 y/M/d"}
+                    y{"G y/M/d 至 y/M/d"}
                 }
             }
         }
@@ -948,13 +948,13 @@ zh_Hant{
                 "下午",
             }
             DateTimePatterns{
-                "Bh:mm:ss [zzzz]",
-                "Bh:mm:ss [z]",
-                "Bh:mm:ss",
-                "Bh:mm",
-                "y年M月d日 EEEE",
-                "y年M月d日",
-                "y年M月d日",
+                "B h:mm:ss [zzzz]",
+                "B h:mm:ss [z]",
+                "B h:mm:ss",
+                "B h:mm",
+                "y 年 M 月 d 日 EEEE",
+                "y 年 M 月 d 日",
+                "y 年 M 月 d 日",
                 "y/M/d",
                 "{1} {0}",
                 "{1} {0}",
@@ -973,52 +973,52 @@ zh_Hant{
                 "yMd",
             }
             availableFormats{
-                Bh{"Bh時"}
-                Bhm{"Bh:mm"}
-                Bhms{"Bh:mm:ss"}
-                EBhm{"E Bh:mm"}
-                EBhms{"E Bh:mm:ss"}
-                Ed{"d日 E"}
-                Ehm{"E Bh:mm"}
-                Ehms{"E Bh:mm:ss"}
-                Gy{"Gy年"}
-                GyMMM{"Gy年M月"}
-                GyMMMEd{"Gy年M月d日 E"}
-                GyMMMd{"Gy年M月d日 E"}
+                Bh{"B h 時"}
+                Bhm{"B h:mm"}
+                Bhms{"B h:mm:ss"}
+                EBhm{"EB h:mm"}
+                EBhms{"EB h:mm:ss"}
+                Ed{"d 日 E"}
+                Ehm{"EB h:mm"}
+                Ehms{"EB h:mm:ss"}
+                Gy{"G y 年"}
+                GyMMM{"G y 年 M 月"}
+                GyMMMEd{"G y 年 M 月 d 日 E"}
+                GyMMMd{"G y 年 M 月 d 日 E"}
                 GyMd{"G y/M/d"}
-                H{"H時"}
+                H{"H 時"}
                 Hmsv{"HH:mm:ss [v]"}
                 Hmv{"HH:mm [v]"}
-                M{"M月"}
+                M{"M 月"}
                 MEd{"M/d（E）"}
-                MMMEd{"M月d日 E"}
+                MMMEd{"M 月 d 日 E"}
                 MMMMW{
-                    other{"MMMM的第W週"}
+                    other{"MMMM 的第 W 週"}
                 }
-                MMMMd{"M月d日"}
-                MMMd{"M月d日"}
+                MMMMd{"M 月 d 日"}
+                MMMd{"M 月 d 日"}
                 MMdd{"MM/dd"}
                 Md{"M/d"}
-                d{"d日"}
-                h{"Bh時"}
-                hm{"Bh:mm"}
-                hms{"Bh:mm:ss"}
-                hmsv{"Bh:mm:ss [v]"}
-                hmv{"Bh:mm [v]"}
-                y{"y年"}
+                d{"d 日"}
+                h{"B h 時"}
+                hm{"B h:mm"}
+                hms{"B h:mm:ss"}
+                hmsv{"B h:mm:ss [v]"}
+                hmv{"B h:mm [v]"}
+                y{"y 年"}
                 yM{"y/M"}
-                yMEEEEd{"y年M月d日 EEEE"}
+                yMEEEEd{"y 年 M 月 d 日 EEEE"}
                 yMEd{"y/M/d（E）"}
                 yMM{"y/MM"}
-                yMMM{"y年M月"}
-                yMMMEd{"y年M月d日 E"}
-                yMMMM{"y年M月"}
-                yMMMd{"y年M月d日"}
+                yMMM{"y 年 M 月"}
+                yMMMEd{"y 年 M 月 d 日 E"}
+                yMMMM{"y 年 M 月"}
+                yMMMd{"y 年 M 月 d 日"}
                 yMd{"y/M/d"}
-                yQQQ{"y年QQQ"}
-                yQQQQ{"y年QQQQ"}
+                yQQQ{"y 年QQQ"}
+                yQQQQ{"y 年QQQQ"}
                 yw{
-                    other{"Y年的第w週"}
+                    other{"Y 年的第 w 週"}
                 }
             }
             dayNames{
@@ -1088,51 +1088,51 @@ zh_Hant{
             }
             intervalFormats{
                 Bh{
-                    B{"Bh時 – Bh時"}
-                    h{"Bh–h時"}
+                    B{"B h 時 – B h 時"}
+                    h{"B h–h 時"}
                 }
                 Bhm{
-                    B{"Bh:mm – Bh:mm"}
-                    h{"Bh:mm–h:mm"}
-                    m{"Bh:mm–h:mm"}
+                    B{"B h:mm – B h:mm"}
+                    h{"B h:mm–h:mm"}
+                    m{"B h:mm–h:mm"}
                 }
                 Gy{
-                    G{"Gy – Gy"}
-                    y{"Gy–y"}
+                    G{"G y – G y"}
+                    y{"G y–y"}
                 }
                 GyM{
-                    G{"GGGGGy-MM – GGGGGy-MM"}
-                    M{"GGGGGy-MM – y-MM"}
-                    y{"GGGGGy-MM – y-MM"}
+                    G{"GGGGG y-MM – GGGGG y-MM"}
+                    M{"GGGGG y-MM – y-MM"}
+                    y{"GGGGG y-MM – y-MM"}
                 }
                 GyMEd{
-                    G{"GGGGGy-MM-dd, E – GGGGGy-MM-dd, E"}
-                    M{"GGGGGy-MM-dd, E – y-MM-dd, E"}
-                    d{"GGGGGy-MM-dd, E – y-MM-dd, E"}
-                    y{"GGGGGy-MM-dd, E – y-MM-dd, E"}
+                    G{"GGGGG y-MM-dd, E – GGGGG y-MM-dd, E"}
+                    M{"GGGGG y-MM-dd, E – y-MM-dd, E"}
+                    d{"GGGGG y-MM-dd, E – y-MM-dd, E"}
+                    y{"GGGGG y-MM-dd, E – y-MM-dd, E"}
                 }
                 GyMMM{
-                    G{"Gy年MMM – Gy年MMM"}
-                    M{"Gy年MMM–MMM"}
-                    y{"Gy年MMM – y年MMM"}
+                    G{"G y 年 MMM – G y 年 MMM"}
+                    M{"G y 年 MMM–MMM"}
+                    y{"G y 年 MMM – y 年 MMM"}
                 }
                 GyMMMEd{
-                    G{"Gy年MMMd日, E – Gy年MMMd日, E"}
-                    M{"Gy年MMMd日, E – MMMd日, E"}
-                    d{"Gy年MMMd日, E – MMMd日, E"}
-                    y{"Gy年MMMd日, E – y年MMMd日, E"}
+                    G{"G y 年 MMMd 日, E – G y 年 MMMd 日, E"}
+                    M{"G y 年 MMMd 日, E – MMMd 日, E"}
+                    d{"G y 年 MMMd 日, E – MMMd 日, E"}
+                    y{"G y 年 MMMd 日, E – y 年 MMMd 日, E"}
                 }
                 GyMMMd{
-                    G{"Gy年MMMd日 – Gy年MMMd日"}
-                    M{"Gy年MMMd日 – MMMd日"}
-                    d{"Gy年MMMd–d日"}
-                    y{"Gy年MMMd日 – y年MMMd日"}
+                    G{"G y 年 MMMd 日 – G y 年 MMMd 日"}
+                    M{"G y 年 MMMd 日 – MMMd 日"}
+                    d{"G y 年 MMMd–d 日"}
+                    y{"G y 年 MMMd 日 – y 年 MMMd 日"}
                 }
                 GyMd{
-                    G{"GGGGGy-MM-dd – GGGGGy-MM-dd"}
-                    M{"GGGGGy-MM-dd – y-MM-dd"}
-                    d{"GGGGGy-MM-dd – y-MM-dd"}
-                    y{"GGGGGy-MM-dd – y-MM-dd"}
+                    G{"GGGGG y-MM-dd – GGGGG y-MM-dd"}
+                    M{"GGGGG y-MM-dd – y-MM-dd"}
+                    d{"GGGGG y-MM-dd – y-MM-dd"}
+                    y{"GGGGG y-MM-dd – y-MM-dd"}
                 }
                 H{
                     H{"HH – HH"}
@@ -1149,89 +1149,89 @@ zh_Hant{
                     H{"HH – HH [v]"}
                 }
                 M{
-                    M{"M月至M月"}
+                    M{"M 月至 M 月"}
                 }
                 MEd{
-                    M{"M/d E至M/d E"}
-                    d{"M/d E至M/d E"}
+                    M{"M/d E至 M/d E"}
+                    d{"M/d E至 M/d E"}
                 }
                 MMM{
                     M{"LLL至LLL"}
                 }
                 MMMEd{
-                    M{"M月d日 E至M月d日 E"}
-                    d{"M月d日 E至d日 E"}
+                    M{"M 月 d 日 E至 M 月 d 日 E"}
+                    d{"M 月 d 日 E至 d 日 E"}
                 }
                 MMMM{
                     M{"LLLL至LLLL"}
                 }
                 MMMd{
-                    M{"M月d日至M月d日"}
-                    d{"M月d日至d日"}
+                    M{"M 月 d 日至 M 月 d 日"}
+                    d{"M 月 d 日至 d 日"}
                 }
                 Md{
-                    M{"M/d至M/d"}
-                    d{"M/d至M/d"}
+                    M{"M/d 至 M/d"}
+                    d{"M/d 至 M/d"}
                 }
                 d{
-                    d{"d日至d日"}
+                    d{"d 日至 d 日"}
                 }
                 h{
-                    B{"Bh時至Bh時"}
-                    a{"ah時至ah時"}
-                    h{"Bh時至h時"}
+                    B{"B h 時至B h 時"}
+                    a{"a h 時至a h 時"}
+                    h{"B h 時至 h 時"}
                 }
                 hm{
-                    B{"Bh:mm至Bh:mm"}
-                    a{"ah:mm至ah:mm"}
-                    h{"Bh:mm至h:mm"}
-                    m{"Bh:mm至h:mm"}
+                    B{"B h:mm 至B h:mm"}
+                    a{"a h:mm 至a h:mm"}
+                    h{"B h:mm 至 h:mm"}
+                    m{"B h:mm 至 h:mm"}
                 }
                 hmv{
-                    B{"Bh:mm至Bh:mm [v]"}
-                    a{"ah:mm至ah:mm [v]"}
-                    h{"Bh:mm至h:mm [v]"}
-                    m{"Bh:mm至h:mm [v]"}
+                    B{"B h:mm 至B h:mm [v]"}
+                    a{"a h:mm 至a h:mm [v]"}
+                    h{"B h:mm 至 h:mm [v]"}
+                    m{"B h:mm 至 h:mm [v]"}
                 }
                 hv{
-                    B{"Bh時至Bh時 [v]"}
-                    a{"ah時至ah時 [v]"}
-                    h{"Bh時至h時 [v]"}
+                    B{"B h 時至B h 時 [v]"}
+                    a{"a h 時至a h 時 [v]"}
+                    h{"B h 時至 h 時 [v]"}
                 }
                 y{
-                    y{"y至y"}
+                    y{"y 至 y"}
                 }
                 yM{
-                    M{"y/M至y/M"}
-                    y{"y/M至y/M"}
+                    M{"y/M 至 y/M"}
+                    y{"y/M 至 y/M"}
                 }
                 yMEd{
-                    M{"y/M/d E至y/M/d E"}
-                    d{"y/M/d E至y/M/d E"}
-                    y{"y/M/d E至y/M/d E"}
+                    M{"y/M/d E至 y/M/d E"}
+                    d{"y/M/d E至 y/M/d E"}
+                    y{"y/M/d E至 y/M/d E"}
                 }
                 yMMM{
-                    M{"y年M月至M月"}
-                    y{"y年M月至y年M月"}
+                    M{"y 年 M 月至 M 月"}
+                    y{"y 年 M 月至 y 年 M 月"}
                 }
                 yMMMEd{
-                    M{"y年M月d日 E至M月d日 E"}
-                    d{"y年M月d日 E至M月d日 E"}
-                    y{"y年M月d日 E至y年M月d日 E"}
+                    M{"y 年 M 月 d 日 E至 M 月 d 日 E"}
+                    d{"y 年 M 月 d 日 E至 M 月 d 日 E"}
+                    y{"y 年 M 月 d 日 E至 y 年 M 月 d 日 E"}
                 }
                 yMMMM{
-                    M{"y年M月至M月"}
-                    y{"y年M月至y年M月"}
+                    M{"y 年 M 月至 M 月"}
+                    y{"y 年 M 月至 y 年 M 月"}
                 }
                 yMMMd{
-                    M{"y年M月d日至M月d日"}
-                    d{"y年M月d日至d日"}
-                    y{"y年M月d日至y年M月d日"}
+                    M{"y 年 M 月 d 日至 M 月 d 日"}
+                    d{"y 年 M 月 d 日至 d 日"}
+                    y{"y 年 M 月 d 日至 y 年 M 月 d 日"}
                 }
                 yMd{
-                    M{"y/M/d至y/M/d"}
-                    d{"y/M/d至y/M/d"}
-                    y{"y/M/d至y/M/d"}
+                    M{"y/M/d 至 y/M/d"}
+                    d{"y/M/d 至 y/M/d"}
+                    y{"y/M/d 至 y/M/d"}
                 }
             }
             monthNames{
@@ -1265,14 +1265,14 @@ zh_Hant{
         }
         hebrew{
             DateTimePatterns{
-                "Bh:mm:ss [zzzz]",
-                "Bh:mm:ss [z]",
-                "Bh:mm:ss",
-                "Bh:mm",
-                "Gy年M月d日EEEE",
-                "Gy年M月d日",
-                "Gy年M月d日",
-                "Gy/M/d",
+                "B h:mm:ss [zzzz]",
+                "B h:mm:ss [z]",
+                "B h:mm:ss",
+                "B h:mm",
+                "G y 年 M 月 d 日 EEEE",
+                "G y 年 M 月 d 日",
+                "G y 年 M 月 d 日",
+                "G y/M/d",
                 "{1} {0}",
                 "{1}{0}",
                 "{1} {0}",
@@ -1332,14 +1332,14 @@ zh_Hant{
         }
         islamic{
             DateTimePatterns{
-                "Bh:mm:ss [zzzz]",
-                "Bh:mm:ss [z]",
-                "Bh:mm:ss",
-                "Bh:mm",
-                "Gy年M月d日EEEE",
-                "Gy年M月d日",
-                "Gy年M月d日",
-                "Gy/M/d",
+                "B h:mm:ss [zzzz]",
+                "B h:mm:ss [z]",
+                "B h:mm:ss",
+                "B h:mm",
+                "G y 年 M 月 d 日 EEEE",
+                "G y 年 M 月 d 日",
+                "G y 年 M 月 d 日",
+                "G y/M/d",
                 "{1} {0}",
                 "{1}{0}",
                 "{1} {0}",
@@ -1347,23 +1347,23 @@ zh_Hant{
                 "{1} {0}",
             }
             availableFormats{
-                Ed{"d日（E）"}
-                Gy{"Gy年"}
-                GyMMM{"Gy年M月"}
-                GyMMMEd{"Gy年M月d日E"}
-                GyMMMd{"Gy年M月d日"}
-                MMMEd{"M月d日E"}
-                y{"Gy年"}
-                yyyy{"Gy年"}
-                yyyyM{"Gy/M"}
-                yyyyMEd{"Gy/M/d（E）"}
-                yyyyMMM{"Gy年M月"}
-                yyyyMMMEd{"Gy年M月d日E"}
-                yyyyMMMM{"Gy年M月"}
-                yyyyMMMd{"Gy年M月d日"}
-                yyyyMd{"Gy/M/d"}
-                yyyyQQQ{"Gy年QQQ"}
-                yyyyQQQQ{"Gy年QQQQ"}
+                Ed{"d 日（E）"}
+                Gy{"G y 年"}
+                GyMMM{"G y 年 M 月"}
+                GyMMMEd{"G y 年 M 月 d 日 E"}
+                GyMMMd{"G y 年 M 月 d 日"}
+                MMMEd{"M 月 d 日 E"}
+                y{"G y 年"}
+                yyyy{"G y 年"}
+                yyyyM{"G y/M"}
+                yyyyMEd{"G y/M/d（E）"}
+                yyyyMMM{"G y 年 M 月"}
+                yyyyMMMEd{"G y 年 M 月 d 日 E"}
+                yyyyMMMM{"G y 年 M 月"}
+                yyyyMMMd{"G y 年 M 月 d 日"}
+                yyyyMd{"G y/M/d"}
+                yyyyQQQ{"G y 年QQQ"}
+                yyyyQQQQ{"G y 年QQQQ"}
             }
             eras{
                 abbreviated{
@@ -1405,14 +1405,14 @@ zh_Hant{
         }
         japanese{
             DateTimePatterns{
-                "Bh:mm:ss [zzzz]",
-                "Bh:mm:ss [z]",
-                "Bh:mm:ss",
-                "Bh:mm",
-                "Gy年M月d日EEEE",
-                "Gy年M月d日",
-                "Gy年M月d日",
-                "Gy/M/d",
+                "B h:mm:ss [zzzz]",
+                "B h:mm:ss [z]",
+                "B h:mm:ss",
+                "B h:mm",
+                "G y 年 M 月 d 日 EEEE",
+                "G y 年 M 月 d 日",
+                "G y 年 M 月 d 日",
+                "G y/M/d",
                 "{1} {0}",
                 "{1}{0}",
                 "{1} {0}",
@@ -1420,25 +1420,25 @@ zh_Hant{
                 "{1} {0}",
             }
             availableFormats{
-                Ed{"d日（E）"}
-                Gy{"Gy年"}
-                GyMMM{"Gy年M月"}
-                GyMMMEd{"Gy年M月d日E"}
-                GyMMMd{"Gy年M月d日"}
+                Ed{"d 日（E）"}
+                Gy{"G y 年"}
+                GyMMM{"G y 年 M 月"}
+                GyMMMEd{"G y 年 M 月 d 日 E"}
+                GyMMMd{"G y 年 M 月 d 日"}
                 Hm{"HH:mm"}
                 Hms{"HH:mm:ss"}
-                MMMEd{"M月d日E"}
-                y{"Gy年"}
-                yyyy{"Gy年"}
-                yyyyM{"Gy/M"}
-                yyyyMEd{"Gy/M/d（E）"}
-                yyyyMMM{"Gy年M月"}
-                yyyyMMMEd{"Gy年M月d日E"}
-                yyyyMMMM{"Gy年M月"}
-                yyyyMMMd{"Gy年M月d日"}
-                yyyyMd{"Gy/M/d"}
-                yyyyQQQ{"Gy年QQQ"}
-                yyyyQQQQ{"Gy年QQQQ"}
+                MMMEd{"M 月 d 日 E"}
+                y{"G y 年"}
+                yyyy{"G y 年"}
+                yyyyM{"G y/M"}
+                yyyyMEd{"G y/M/d（E）"}
+                yyyyMMM{"G y 年 M 月"}
+                yyyyMMMEd{"G y 年 M 月 d 日 E"}
+                yyyyMMMM{"G y 年 M 月"}
+                yyyyMMMd{"G y 年 M 月 d 日"}
+                yyyyMd{"G y/M/d"}
+                yyyyQQQ{"G y 年QQQ"}
+                yyyyQQQQ{"G y 年QQQQ"}
             }
             eras{
                 abbreviated{
@@ -1948,14 +1948,14 @@ zh_Hant{
         }
         roc{
             DateTimePatterns{
-                "Bh:mm:ss [zzzz]",
-                "Bh:mm:ss [z]",
-                "Bh:mm:ss",
-                "Bh:mm",
-                "Gy年M月d日 EEEE",
-                "Gy年M月d日",
-                "Gy年M月d日",
-                "Gy/M/d",
+                "B h:mm:ss [zzzz]",
+                "B h:mm:ss [z]",
+                "B h:mm:ss",
+                "B h:mm",
+                "G y 年 M 月 d 日 EEEE",
+                "G y 年 M 月 d 日",
+                "G y 年 M 月 d 日",
+                "G y/M/d",
                 "{1} {0}",
                 "{1}{0}",
                 "{1} {0}",
@@ -1963,23 +1963,23 @@ zh_Hant{
                 "{1} {0}",
             }
             availableFormats{
-                Gy{"Gy年"}
-                GyMMM{"Gy年M月"}
-                GyMMMEd{"Gy年M月d日E"}
-                GyMMMd{"Gy年M月d日"}
-                GyMd{"Gy/M/d"}
-                MMMEd{"M月d日E"}
-                y{"Gy年"}
-                yyyy{"Gy年"}
-                yyyyM{"Gy/M"}
-                yyyyMEd{"Gy/M/d（E）"}
-                yyyyMMM{"Gy年M月"}
-                yyyyMMMEd{"Gy年M月d日E"}
-                yyyyMMMM{"Gy年M月"}
-                yyyyMMMd{"Gy年M月d日"}
-                yyyyMd{"Gy/M/d"}
-                yyyyQQQ{"Gy年QQQ"}
-                yyyyQQQQ{"Gy年QQQQ"}
+                Gy{"G y 年"}
+                GyMMM{"G y 年 M 月"}
+                GyMMMEd{"G y 年 M 月 d 日 E"}
+                GyMMMd{"G y 年 M 月 d 日"}
+                GyMd{"G y/M/d"}
+                MMMEd{"M 月 d 日 E"}
+                y{"G y 年"}
+                yyyy{"G y 年"}
+                yyyyM{"G y/M"}
+                yyyyMEd{"G y/M/d（E）"}
+                yyyyMMM{"G y 年 M 月"}
+                yyyyMMMEd{"G y 年 M 月 d 日 E"}
+                yyyyMMMM{"G y 年 M 月"}
+                yyyyMMMd{"G y 年 M 月 d 日"}
+                yyyyMd{"G y/M/d"}
+                yyyyQQQ{"G y 年QQQ"}
+                yyyyQQQQ{"G y 年QQQQ"}
             }
             eras{
                 abbreviated{
