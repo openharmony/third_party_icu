@@ -35,7 +35,7 @@ en_GB{
                     y{"EEEE d MMM y – EEEE d MMM y G"}
                 }
                 MMMEd{
-                    d{"E d MMM – E d MMM"}
+                    d{"E d MMM – E d MMM"}
                 }
                 yMMMEEEEd{
                     M{"EEEE d MMM – EEEE d MMM y G"}
@@ -106,15 +106,15 @@ en_GB{
                 }
                 yMMMEEEEd{
                     M{"EEEE d MMM – EEEE d MMM y"}
-                    d{"EEEE d MMM – EEEE d MMM y"}
+                    d{"EEEE d MMM – EEEE d MMM y"}
                     y{"EEEE d MMM y – EEEE d MMM y"}
                 }
                 yMMMEd{
-                    d{"E, d MMM – E, d MMM y"}
+                    d{"E, d MMM – E, d MMM y"}
                 }
                 yMMMMEEEEd{
                     M{"EEEE d MMMM – EEEE d MMMM y"}
-                    d{"EEEE d MMMM – EEEE d MMMM y"}
+                    d{"EEEE d MMMM – EEEE d MMMM y"}
                     y{"EEEE d MMMM y – EEEE d MMMM y"}
                 }
             }
