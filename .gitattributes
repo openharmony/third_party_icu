@@ -76,3 +76,4 @@ configure text !eol
 *.json linguist-language=jsonc
 ohos_icu4j/data/icudt74l.dat filter=lfs diff=lfs merge=lfs -text
 ohos_icu4j/data/lite/icudt74l_dat.S filter=lfs diff=lfs merge=lfs -text
+ohos_icu4j/data/old/icudt72l.dat filter=lfs diff=lfs merge=lfs -text
