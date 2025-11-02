@@ -415,27 +415,27 @@ mn{
                 Hmsv{"HH:mm:ss v"}
                 Hmv{"HH:mm v"}
                 M{"L"}
-                MEd{"E, M-d"}
-                MMMEd{"E, MMM d"}
-                MMMMEEEEd{"EEEE, MMMM d 'өдөр'"}
+                MEd{"M-d, E"}
+                MMMEd{"MMM d, E"}
+                MMMMEEEEd{"MMMM d 'өдөр', EEEE"}
                 MMMMW{
                     one{"MMMM'ын' W-'р' 'долоо' 'хоног'"}
                     other{"MMMM'ын' W-'р' 'долоо' 'хоног'"}
                 }
                 MMMMd{"MMMM d 'өдөр'"}
                 MMMd{"MMM d"}
-                Md{"M-d"}
+                Md{"M/d"}
                 h{"h a"}
                 hm{"h:mm a"}
                 hms{"h:mm:ss a"}
                 hmsv{"h:mm:ss a v"}
                 hmv{"h:mm a v"}
                 yM{"y-M"}
-                yMEd{"E, y-M-d"}
+                yMEd{"y-M-d, E"}
                 yMMM{"y 'оны' LLL"}
-                yMMMEd{"E, y 'оны' MMM d"}
+                yMMMEd{"y 'оны' MMM d, E"}
                 yMMMM{"y 'оны' LLLL"}
-                yMMMMEEEEd{"EEEE, y 'оны' MMMM d 'өдөр'"}
+                yMMMMEEEEd{"y 'оны' MMMM d 'өдөр', EEEE"}
                 yMMMMd{"y 'оны' MMMM d 'өдөр'"}
                 yMMMd{"y 'оны' MMM d"}
                 yMd{"y-M-d"}
@@ -458,13 +458,13 @@ mn{
                         "Бя",
                     }
                     wide{
-                        "Ням",
-                        "Даваа",
-                        "Мягмар",
-                        "Лхагва",
-                        "Пүрэв",
-                        "Баасан",
-                        "Бямба",
+                        "ням",
+                        "даваа",
+                        "мягмар",
+                        "лхагва",
+                        "пүрэв",
+                        "баасан",
+                        "бямба",
                     }
                 }
                 stand-alone{
@@ -478,13 +478,13 @@ mn{
                         "Бя",
                     }
                     wide{
-                        "Ням",
-                        "Даваа",
-                        "Мягмар",
-                        "Лхагва",
-                        "Пүрэв",
-                        "Баасан",
-                        "Бямба",
+                        "ням",
+                        "даваа",
+                        "мягмар",
+                        "лхагва",
+                        "пүрэв",
+                        "баасан",
+                        "бямба",
                     }
                 }
             }
@@ -530,10 +530,10 @@ mn{
                     m{"HH:mm – HH:mm v"}
                 }
                 Hv{
-                    H{"HH – HH v"}
+                    H{"v HH – HH"}
                 }
                 M{
-                    M{"M – M"}
+                    M{"M – M 'сар'"}
                 }
                 MEd{
                     M{"E, MM-dd – E, MM-dd"}
@@ -543,20 +543,20 @@ mn{
                     M{"LLL – LLL"}
                 }
                 MMMEd{
-                    M{"E, MMM d – E, MMM d"}
-                    d{"E, MMM d – E, MMM d"}
+                    M{"MMM/d, E – MMM/d, E"}
+                    d{"MMM/d, E – MMM/d, E"}
                 }
                 MMMMd{
                     M{"MMMM d 'өдөр' – MMMM d 'өдөр'"}
                     d{"MMMM d–d 'өдөр'"}
                 }
                 MMMd{
-                    M{"MMM d – MMM d"}
+                    M{"MMM/d – MMM/d"}
                     d{"MMM d–d"}
                 }
                 Md{
-                    M{"MM-dd – MM-dd"}
-                    d{"MM-dd – MM-dd"}
+                    M{"MM.dd – MM.dd"}
+                    d{"MM.dd – MM.dd"}
                 }
                 d{
                     d{"d – d"}
@@ -573,8 +573,8 @@ mn{
                 }
                 hmv{
                     a{"h:mm a – h:mm a v"}
-                    h{"h:mm – h:mm a v"}
-                    m{"h:mm – h:mm a v"}
+                    h{"a v h:mm – h:mm"}
+                    m{"a v h:mm – h:mm"}
                 }
                 hv{
                     a{"h a – h a v"}
@@ -584,8 +584,8 @@ mn{
                     y{"y – y"}
                 }
                 yM{
-                    M{"y-MM – y-MM"}
-                    y{"y-MM – y-MM"}
+                    M{"y-MM – y-MM 'сар'"}
+                    y{"y-MM – y-MM 'сар'"}
                 }
                 yMEd{
                     M{"E, y-MM-dd – E, y-MM-dd"}
@@ -593,13 +593,13 @@ mn{
                     y{"E, y-MM-dd – E, y-MM-dd"}
                 }
                 yMMM{
-                    M{"y 'оны' LLL – LLL"}
+                    M{"y 'оны' LLL – LLL 'сар'"}
                     y{"y 'оны' LLL – y 'оны' LLL"}
                 }
                 yMMMEd{
-                    M{"E, y 'оны' MMM d – E, y 'оны' MMM d"}
-                    d{"E, y 'оны' MMM d – E, y 'оны' MMM d"}
-                    y{"E, y 'оны' MMM d – E, y 'оны' MMM d"}
+                    M{"y 'оны' MMM 'сарын' d, E – y 'оны' MMM 'сарын' d, E"}
+                    d{"y 'оны' MMM 'сарын' d, E – y 'оны' MMM 'сарын' d, E"}
+                    y{"y 'оны' MMM 'сарын' d, E – y 'оны' MMM 'сарын' d, E"}
                 }
                 yMMMM{
                     M{"y 'оны' LLLL – LLLL"}
@@ -616,9 +616,9 @@ mn{
                     y{"y 'оны' MMMM d 'өдөр' – y 'оны' MMMM d 'өдөр'"}
                 }
                 yMMMd{
-                    M{"y 'оны' MMM d – MMM d"}
+                    M{"y 'оны' MMM 'сарын' d – MMM 'сарын' d"}
                     d{"y 'оны' MMM d–d"}
-                    y{"y 'оны' MMM d – y 'оны' MMM d"}
+                    y{"y 'оны' MMM 'сарын' d – y 'оны' MMM 'сарын' d"}
                 }
                 yMd{
                     M{"y-MM-dd – y-MM-dd"}
@@ -643,18 +643,18 @@ mn{
                         "12-р сар",
                     }
                     wide{
-                        "Нэгдүгээр сар",
-                        "Хоёрдугаар сар",
-                        "Гуравдугаар сар",
-                        "Дөрөвдүгээр сар",
-                        "Тавдугаар сар",
-                        "Зургаадугаар сар",
-                        "Долоодугаар сар",
-                        "Наймдугаар сар",
-                        "Есдүгээр сар",
-                        "Аравдугаар сар",
-                        "Арван нэгдүгээр сар",
-                        "Арван хоёрдугаар сар",
+                        "Нэгдүгээр сарын",
+                        "Хоёрдугаар сарын",
+                        "Гуравдугаар сарын",
+                        "Дөрөвдүгээр сарын",
+                        "Тавдугаар сарын",
+                        "Зургаадугаар сарын",
+                        "Долоодугаар сарын",
+                        "Наймдугаар сарын",
+                        "Есдүгээр сарын",
+                        "Аравдугаар сарын",
+                        "Арван нэгдүгээр сарын",
+                        "Арван хоёрдугаар сарын",
                     }
                 }
                 stand-alone{
@@ -704,6 +704,12 @@ mn{
                     }
                 }
                 stand-alone{
+                    abbreviated{
+                        "I",
+                        "II",
+                        "III",
+                        "IV",
+                    }
                     narrow{
                         "I",
                         "II",
