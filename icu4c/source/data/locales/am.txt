@@ -403,9 +403,9 @@ am{
                 "h:mm:ss a z",
                 "h:mm:ss a",
                 "h:mm a",
-                "y MMMM d, EEEE",
-                "d MMMM y",
-                "d MMM y",
+                "EEEE፣ MMMM d፣ y",
+                "MMMM d፣ y",
+                "MMM d፣ y",
                 "dd/MM/y",
                 "{1} {0}",
                 "{1} {0}",
@@ -427,11 +427,15 @@ am{
                 Ed{"E d"}
                 Gy{"y G"}
                 GyMMM{"MMM y G"}
+                GyMMMEd{"E፣ MMM d፣ y G"}
                 GyMd{"M/d/y GGGGG"}
+                GyMMMd{"MMM d፣ y G"}
                 H{"H"}
-                MEd{"E፣ M/d"}
+                MEd{"E፣ dd/MM"}
                 MMMEd{"E፣ MMM d"}
                 MMMMEd{"E፣ MMMM d"}
+                MMMMd{"MMMM d"}
+                MMMd{"MMM d"}
                 MMMMW{
                     one{"ሳምንት W የ MMMM"}
                     other{"ሳምንት W የ MMMM"}
@@ -440,7 +444,7 @@ am{
                 yM{"MM/y"}
                 yMEd{"E፣ dd/MM/y"}
                 yMMM{"MMM y"}
-                yMMMEd{"E፣ MMM d y"}
+                yMMMEd{"E፣ MMM d፣ y"}
                 yMMMM{"MMMM y"}
                 yMMMd{"d MMM y"}
                 yMd{"dd/MM/y"}
@@ -452,7 +456,7 @@ am{
                     abbreviated{
                         "እሑድ",
                         "ሰኞ",
-                        "ማክሰ",
+                        "ማክሰኞ",
                         "ረቡዕ",
                         "ሐሙስ",
                         "ዓርብ",
@@ -478,6 +482,15 @@ am{
                     }
                 }
                 stand-alone{
+                    abbreviated{
+                        "እሑ",
+                        "ሰኞ",
+                        "ማክ",
+                        "ረቡ",
+                        "ሐሙ",
+                        "ዓር",
+                        "ቅዳ",
+                    }
                     narrow{
                         "እ",
                         "ሰ",
@@ -492,19 +505,19 @@ am{
             dayPeriod{
                 format{
                     abbreviated{
-                        afternoon1{"ከሰዓት"}
-                        evening1{"በምሽት"}
+                        afternoon1{"ከሰዓት1"}
+                        evening1{"ማታ1"}
                         midnight{"እኩለ ሌሊት"}
-                        morning1{"ጥዋት"}
-                        night1{"በሌሊት"}
+                        morning1{"ጥዋት1"}
+                        night1{"ሌሊት1"}
                         noon{"ቀትር"}
                     }
                     narrow{
-                        afternoon1{"ከሰዓት"}
-                        evening1{"በምሽት"}
+                        afternoon1{"ከሰዓት1"}
+                        evening1{"ማታ1"}
                         midnight{"እኩለ ሌሊት"}
-                        morning1{"ጥዋት"}
-                        night1{"በሌሊት"}
+                        morning1{"ጥዋት1"}
+                        night1{"ሌሊት1"}
                         noon{"ቀ"}
                     }
                 }
@@ -576,18 +589,23 @@ am{
                     M{"M–M"}
                 }
                 MEd{
-                    M{"E፣ d/M – E፣ d/M"}
-                    d{"E d/M – E d/M"}
+                    M{"E፣ dd/MM – E፣ dd/MM"}
+                    d{"E፣ dd/MM – E፣ dd/MM"}
                 }
                 MMM{
                     M{"MMM–MMM"}
                 }
                 MMMEd{
-                    d{"E d – E d፣ MMM"}
+                    M{"E፣ d MMM – E፣ d MMM"}
+                    d{"E፣ d MMM – E፣ d MMM"}
+                }
+                MMMd{
+                    M{"MMM d – MMM d"}
+                    d{"MMM d–d"}
                 }
                 Md{
-                    M{"d/M – d/M"}
-                    d{"d–d/M"}
+                    M{"dd/MM – dd/MM"}
+                    d{"dd/MM – dd/MM"}
                 }
                 fallback{"{0} – {1}"}
                 h{
@@ -605,20 +623,21 @@ am{
                     h{"h – h a v"}
                 }
                 yM{
-                    M{"M/y – M/y"}
-                    y{"M/y – M/y"}
+                    M{"MM/y – MM/y"}
+                    y{"MM/y – MM/y"}
                 }
                 yMEd{
-                    M{"E d/M/ – E d/M፣ y"}
-                    y{"E፣ d/M/y – E፣ d/M/y"}
+                    M{"E፣ dd/MM/y – E፣ dd/MM/y"}
+                    d{"E፣ dd/MM/y – E፣ dd/MM/y"}
+                    y{"E፣ dd/MM/y – E፣ dd/MM/y"}
                 }
                 yMMM{
-                    M{"MMM–MMM፣ y"}
+                    M{"MMM–MMM y"}
                     y{"MMM y – MMM y"}
                 }
                 yMMMEd{
-                    M{"E MMM d – E MMM d፣ y"}
-                    d{"E MMM d – E MMM d፣ y"}
+                    M{"E፣ MMM d – E፣ MMM d፣ y"}
+                    d{"E፣ MMM d – E፣ MMM d፣ y"}
                     y{"E፣ MMM d፣ y – E፣ MMM d፣ y"}
                 }
                 yMMMM{
@@ -639,7 +658,7 @@ am{
             monthNames{
                 format{
                     abbreviated{
-                        "ጃን",
+                        "ጃኑ",
                         "ፌብ",
                         "ማርች",
                         "ኤፕሪ",
@@ -653,7 +672,7 @@ am{
                         "ዲሴም",
                     }
                     wide{
-                        "ጃንዋሪ",
+                        "ጃኑዋሪ",
                         "ፌብሩዋሪ",
                         "ማርች",
                         "ኤፕሪል",

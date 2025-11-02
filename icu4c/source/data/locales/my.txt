@@ -171,7 +171,7 @@ my{
                 "EEEE G dd MMMM y",
                 "G dd MMMM y",
                 "G d MMM y",
-                "GGGGG d/M/y",
+                "GGGGG dd-MM-yy",
                 "{1} {0}",
                 "{1} {0}",
                 "{1} {0}",
@@ -331,28 +331,28 @@ my{
                 GyMd{"G y/M/d"}
                 Hmsv{"v HH:mm:ss"}
                 Hmv{"v HH:mm"}
-                MEd{"Eနေ့၊ MM/dd"}
-                MMMEd{"Eနေ့၊ MMMလ d ရက်"}
+                MEd{"Eနေ့၊ dd/MMMM"}
+                MMMEd{"Eနေ့၊ MMMMလ d ရက်"}
                 MMMM{"LLLLလ"}
                 MMMMEd{"Eနေ့၊ MMMMလ d ရက်"}
                 MMMMW{
                     other{"MMMM လ W ပတ်မြောက်"}
                 }
                 MMMMd{"MMMMလ d ရက်"}
-                MMMd{"MMMလ d ရက်"}
-                Md{"MM/dd"}
+                MMMd{"MMMMလ d ရက်"}
+                Md{"dd/MMMM"}
                 h{"h a"}
                 hm{"h:mm a"}
                 hms{"h:mm:ss a"}
                 hmsv{"h:mm:ss a v"}
                 hmv{"h:mm a v"}
-                yM{"y/MM"}
-                yMEd{"Eနေ့၊ y/MM/dd"}
-                yMMM{"y ခုနှစ် MMMလ"}
-                yMMMEd{"Eနေ့၊ y ခုနှစ် MMMလ d ရက်"}
+                yM{"MMMM/yyyy"}
+                yMEd{"Eနေ့၊ dd/MMMM/yyyy"}
+                yMMM{"yyyy ခုနှစ် MMMMလ"}
+                yMMMEd{"Eနေ့၊ yyyy ခုနှစ် MMMMလ d ရက်"}
                 yMMMM{"y ခုနှစ် MMMMလ"}
-                yMMMd{"y ခုနှစ် MMMလ d ရက်"}
-                yMd{"dd/MM/y"}
+                yMMMd{"yyyy ခုနှစ် MMMMလ d ရက်"}
+                yMd{"dd/MMMM/yyyy"}
                 yw{
                     other{"Y ခု w ပတ်မြောက်"}
                 }
@@ -475,23 +475,23 @@ my{
                     M{"M – M"}
                 }
                 MEd{
-                    M{"EEEEနေ့၊ MM/dd – EEEEနေ့၊ MM/dd"}
-                    d{"EEEEနေ့၊ MM/dd – EEEEနေ့၊ MM/dd"}
+                    M{"EEEEနေ့၊ MMMM/dd – EEEEနေ့၊ MMMM/dd"}
+                    d{"EEEEနေ့၊ MMMM/dd – EEEEနေ့၊ MMMM/dd"}
                 }
                 MMM{
-                    M{"MMMလ – MMMလ"}
+                    M{"MMMMလ – MMMMလ"}
                 }
                 MMMEd{
-                    M{"EEEEနေ့၊ MMMလ d ရက် – EEEEနေ့၊ MMMလ d ရက်"}
-                    d{"EEEEနေ့၊ MMMလ d ရက် – EEEEနေ့၊ MMMလ d ရက်"}
+                    M{"EEEEနေ့၊ MMMMလ d ရက် – EEEEနေ့၊ MMMMလ d ရက်"}
+                    d{"EEEEနေ့၊ MMMMလ d ရက် – EEEEနေ့၊ MMMMလ d ရက်"}
                 }
                 MMMd{
-                    M{"MMMလ d ရက် – MMMလ d ရက်"}
-                    d{"MMMလ d ရက် – MMMလ d ရက်"}
+                    M{"MMMMလ d ရက် – MMMMလ d ရက်"}
+                    d{"MMMMလ d ရက် – MMMMလ d ရက်"}
                 }
                 Md{
-                    M{"MM/dd – MM/dd"}
-                    d{"MM/dd – MM/dd"}
+                    M{"MMMM/dd – MMMM/dd"}
+                    d{"MMMM/dd – MMMM/dd"}
                 }
                 d{
                     d{"d – d"}
@@ -519,36 +519,36 @@ my{
                     y{"y – y"}
                 }
                 yM{
-                    M{"y/MM – y/MM"}
-                    y{"y/MM – y/MM"}
+                    M{"yyyy/MMMM – yyyy/MMMM"}
+                    y{"yyyy/MMMM – yyyy/MMMM"}
                 }
                 yMEd{
-                    M{"EEEEနေ့၊ y/MM/dd – EEEEနေ့၊ y/MM/dd"}
-                    d{"EEEEနေ့၊ y/MM/dd – EEEEနေ့၊ y/MM/dd"}
-                    y{"EEEEနေ့၊ y/MM/dd – EEEEနေ့၊ y/MM/dd"}
+                    M{"EEEEနေ့၊ yyyy/MMMM/dd – EEEEနေ့၊ yyyy/MMMM/dd"}
+                    d{"EEEEနေ့၊ yyyy/MMMM/dd – EEEEနေ့၊ yyyy/MMMM/dd"}
+                    y{"EEEEနေ့၊ yyyy/MMMM/dd – EEEEနေ့၊ yyyy/MMMM/dd"}
                 }
                 yMMM{
-                    M{"y ခုနှစ် MMMလ–MMMလ"}
-                    y{"y ခုနှစ် MMMလ – y ခုနှစ် MMMလ"}
+                    M{"yyyy ခုနှစ် MMMMလ–MMMMလ"}
+                    y{"yyyy ခုနှစ် MMMMလ – yyyy ခုနှစ် MMMMလ"}
                 }
                 yMMMEd{
-                    M{"y ခုနှစ် MMMလ d ရက်၊ EEEEနေ့ – y ခုနှစ် MMMလ d ရက် EEEEနေ့"}
-                    d{"y ခုနှစ် MMMလ d ရက်၊ EEEEနေ့ – y ခုနှစ် MMMလ d ရက် EEEEနေ့"}
-                    y{"y ခုနှစ် MMMလ d ရက်၊ EEEEနေ့ – y ခုနှစ် MMMလ d ရက် EEEEနေ့"}
+                    M{"yyyy ခုနှစ် MMMMလ d ရက်၊ EEEEနေ့ – yyyy ခုနှစ် MMMMလ d ရက် EEEEနေ့"}
+                    d{"yyyy ခုနှစ် MMMMလ d ရက်၊ EEEEနေ့ – yyyy ခုနှစ် MMMMလ d ရက် EEEEနေ့"}
+                    y{"yyyy ခုနှစ် MMMMလ d ရက်၊ EEEEနေ့ – yyyy ခုနှစ် MMMMလ d ရက် EEEEနေ့"}
                 }
                 yMMMM{
-                    M{"y ခုနှစ် MMMMလ–MMMMလ"}
-                    y{"y ခုနှစ် MMMMလ – y ခုနှစ် MMMMလ"}
+                    M{"yyyy ခုနှစ် MMMMလ–MMMMလ"}
+                    y{"yyyy ခုနှစ် MMMMလ – yyyy ခုနှစ် MMMMလ"}
                 }
                 yMMMd{
-                    M{"y ခုနှစ် MMMလ d ရက် – MMMလ d ရက်"}
-                    d{"y ခုနှစ် MMMလ d ရက်–d ရက်"}
-                    y{"y ခုနှစ် MMMလ d ရက် – y ခုနှစ် MMMလ d ရက်"}
+                    M{"yyyy ခုနှစ် MMMMလ d ရက် – MMMMလ d ရက်"}
+                    d{"yyyy ခုနှစ် MMMMလ d ရက်–d ရက်"}
+                    y{"yyyy ခုနှစ် MMMMလ d ရက် – yyyy ခုနှစ် MMMMလ d ရက်"}
                 }
                 yMd{
-                    M{"y/MM/dd – y/MM/dd"}
-                    d{"y/MM/dd – y/MM/dd"}
-                    y{"y/MM/dd – y/MM/dd"}
+                    M{"yyyy/MMMM/dd – yyyy/MMMM/dd"}
+                    d{"yyyy/MMMM/dd – yyyy/MMMM/dd"}
+                    y{"yyyy/MMMM/dd – yyyy/MMMM/dd"}
                 }
             }
             monthNames{
