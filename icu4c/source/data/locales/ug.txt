@@ -214,15 +214,15 @@ ug{
                 "HH:mm:ss z",
                 "HH:mm:ss",
                 "HH:mm",
-                "EEEE، MMMM d، y G",
-                "MMMM d، y G",
-                "MMM d، y G",
-                "M/d/y GGGGG",
-                "{1}، {0}",
+                "G y-يىلى M-ئاينىڭ d-كۈنى EEEE",
+                "G y-يىلى M-ئاينىڭ d-كۈنى",
+                "G y-يىلى M-ئاينىڭ d-كۈنى",
+                "GGGGG d/M/y",
                 "{1} {0}",
                 "{1} {0}",
-                "{1}، {0}",
-                "{1}، {0}",
+                "{1} {0}",
+                "{1} {0}",
+                "{1} {0}",
             }
             DateTimeSkeletons{
                 "ahmmsszzzz",
@@ -235,85 +235,85 @@ ug{
                 "GGGGGyMd",
             }
             availableFormats{
-                Ed{"d E"}
-                Gy{"y G"}
-                GyMMM{"MMM y G"}
-                GyMMMEd{"E، MMM d، y G"}
-                GyMMMd{"MMM d، y G"}
-                MEd{"E، M/d"}
-                MMMEd{"E، MMM d"}
-                Md{"M/d"}
-                y{"y G"}
-                yyyy{"y G"}
-                yyyyM{"M/y GGGGG"}
-                yyyyMEd{"E، M/d/y GGGGG"}
-                yyyyMMM{"MMM y G"}
-                yyyyMMMEd{"E، MMM d، y G"}
-                yyyyMMMd{"MMM d، y G"}
-                yyyyMd{"M/d/y GGGGG"}
-                yyyyQQQ{"QQQ y G"}
-                yyyyQQQQ{"QQQQ y G"}
+                Ed{"d EEEE"}
+                Gy{"G y"}
+                GyMMM{"G y-يىلى M-ئاي"}
+                GyMMMEd{"G y-يىلى M-ئاينىڭ d-كۈنى E"}
+                GyMMMd{"G y-يىلى M-ئاينىڭ d-كۈنى"}
+                MEd{"d/M E"}
+                MMMEd{"d/M EEEE"}
+                Md{"d/M"}
+                y{"G y"}
+                yyyy{"G y"}
+                yyyyM{"GGGGG M/y"}
+                yyyyMEd{"GGGGG d/M/y E"}
+                yyyyMMM{"G y-يىلى M-ئاي"}
+                yyyyMMMEd{"G y-يىلى M-ئاينىڭ d-كۈنى E"}
+                yyyyMMMd{"G y-يىلى M-ئاينىڭ d-كۈنى"}
+                yyyyMd{"GGGGG d/M/y"}
+                yyyyQQQ{"G y QQQ"}
+                yyyyQQQQ{"G y QQQQ"}
             }
             intervalFormats{
                 M{
-                    M{"M ~ M"}
+                    M{"M-ئاي ~ M-ئاي"}
                 }
                 MEd{
-                    M{"E، M/d ~ E، M/d"}
-                    d{"E، M/d ~ E، M/d"}
+                    M{"d/M E ~ d/M E"}
+                    d{"d/M E ~ d E"}
                 }
                 MMM{
-                    M{"MMM ~ MMM"}
+                    M{"M-ئاي ~ M-ئاي"}
                 }
                 MMMEd{
-                    M{"E، MMM d ~ E، MMM d"}
-                    d{"E، MMM d ~ E، MMM d"}
+                    M{"M-ئاينىڭ d-كۈنى E ~ M-ئاينىڭ d-كۈنى E"}
+                    d{"M-ئاينىڭ d-كۈنى E ~ d-كۈنى E"}
                 }
                 MMMd{
-                    d{"MMM d ~ d"}
+                    d{"M-ئاينىڭ d-كۈنى ~ d-كۈنى"}
                 }
                 Md{
-                    M{"M/d ~ M/d"}
-                    d{"M/d ~ M/d"}
+                    M{"d/M ~ d/M"}
+                    d{"d/M ~ d/M"}
                 }
                 d{
                     d{"d ~ d"}
                 }
                 fallback{"{0} ~ {1}"}
                 y{
-                    y{"y ~ y G"}
+                    y{"G y ~ y"}
                 }
                 yM{
-                    M{"M/y ~ M/y GGGGG"}
-                    y{"M/y ~ M/y GGGGG"}
+                    M{"GGGGG M/y ~ M"}
+                    y{"GGGGG M/y ~ M/y"}
                 }
                 yMEd{
-                    M{"E، M/d/y ~ E، M/d/y GGGGG"}
-                    d{"E، M/d/y ~ E، M/d/y GGGGG"}
-                    y{"E، M/d/y ~ E، M/d/y GGGGG"}
+                    M{"GGGGG d/M/y E ~ d/M E"}
+                    d{"GGGGG d/M/y E ~ d E"}
+                    y{"GGGGG d/M/y E ~ d/M/y E"}
                 }
                 yMMM{
-                    M{"MMM ~ MMM y G"}
-                    y{"MMM y ~ MMM y G"}
+                    M{"G y-يىلى M-ئاي ~ M-ئاي"}
+                    y{"G y-يىلى M-ئاي ~ y-يىلى M-ئاي"}
                 }
                 yMMMEd{
-                    M{"E، MMM d ~ E، MMM d، y G"}
-                    d{"E، MMM d ~ E، MMM d، y G"}
-                    y{"E، MMM d، y ~ E، MMM d، y G"}
+                    M{"G d/M/y E ~ d/M E"}
+                    d{"G d/M/y E ~ d E"}
+                    y{"G d/M/y E ~ d/M/y E"}
                 }
                 yMMMM{
-                    M{"MMMM ~ MMMM y G"}
-                    y{"MMMM y ~ MMMM y G"}
+                    M{"G y-يىلى M-ئاي ~ M-ئاي"}
+                    y{"G y-يىلى M-ئاي ~ y-يىلى M-ئاي"}
                 }
                 yMMMd{
-                    M{"MMM d ~ MMM d، y G"}
-                    d{"MMM d ~ d، y G"}
-                    y{"MMM d، y ~ MMM d، y G"}
+                    M{"G d/M/y ~ d/M"}
+                    d{"G d/M/y ~ d"}
+                    y{"G d/M/y ~ d/M/y"}
                 }
                 yMd{
-                    M{"M/d/y ~ M/d/y GGGGG"}
-                    d{"M/d/y ~ M/d/y GGGGG"}
-                    y{"M/d/y ~ M/d/y GGGGG"}
+                    M{"GGGGG d/M/y ~ d/M"}
+                    d{"GGGGG d/M/y ~ d"}
+                    y{"GGGGG d/M/y ~ d/M/y"}
                 }
             }
         }
@@ -323,8 +323,8 @@ ug{
                 "چ ك",
             }
             AmPmMarkersAbbr{
-                "چ.ب",
-                "چ.ك",
+                "چ ب",
+                "چ ك",
             }
             AmPmMarkersNarrow{
                 "ب",
@@ -335,15 +335,15 @@ ug{
                 "a h:mm:ss z",
                 "a h:mm:ss",
                 "a h:mm",
-                "y، d-MMMM، EEEE",
-                "y، d-MMMM",
-                "y، d-MMM",
+                "y-يىلى M-ئاينىڭ d-كۈنى EEEE",
+                "y-يىلى M-ئاينىڭ d-كۈنى",
+                "y-يىلى M-ئاينىڭ d-كۈنى",
                 "d/M/y",
-                "{1}، {0}",
                 "{1} {0}",
                 "{1} {0}",
-                "{1}، {0}",
-                "{1}، {0}",
+                "{1} {0}",
+                "{1} {0}",
+                "{1} {0}",
             }
             DateTimeSkeletons{
                 "ahmmsszzzz",
@@ -359,18 +359,18 @@ ug{
                 Ed{"d E"}
                 Ehm{"E a h:mm"}
                 Ehms{"E a h:mm:ss"}
-                Gy{"y G"}
-                GyMMM{"y MMM G"}
-                GyMMMEd{"y d-MMM، E G"}
-                GyMMMd{"y d-MMM G"}
+                Gy{"G y"}
+                GyMMM{"G y-يىلى M-ئاي"}
+                GyMMMEd{"G y-يىلى M-ئاينىڭ d-كۈنى EEEE"}
+                GyMMMd{"G y-يىلى M-ئاينىڭ d-كۈنى"}
                 MEd{"d/M E"}
-                MMMEd{"d-MMM، E"}
+                MMMEd{"M-ئاينىڭ d-كۈنى EEEE"}
                 MMMMW{
-                    one{"MMMM، W-ھەپتە"}
-                    other{"MMMM، W-ھەپتە"}
+                    one{"M-ئاي W-ھەپتە"}
+                    other{"M-ئاي W-ھەپتە"}
                 }
-                MMMMd{"d-MMMM"}
-                MMMd{"d-MMM"}
+                MMMMd{"M-ئاينىڭ d-كۈنى"}
+                MMMd{"M-ئاينىڭ d-كۈنى"}
                 Md{"d/M"}
                 yM{"M/y"}
                 yMEd{"d/M/y EEEE"}
@@ -378,20 +378,20 @@ ug{
                 yMMMd{"y-يىلى M-ئاينىڭ d-كۈنى"}
                 yMd{"d/M/y"}
                 yw{
-                    one{"Y، w-ھەپتە"}
-                    other{"Y، w-ھەپتە"}
+                    one{"Y-يىلى w-ھەپتە"}
+                    other{"Y-يىلى w-ھەپتە"}
                 }
             }
             dayNames{
                 format{
                     abbreviated{
-                        "يە",
-                        "دۈ",
-                        "سە",
-                        "چا",
-                        "پە",
-                        "جۈ",
-                        "شە",
+                        "يەك",
+                        "دۈش",
+                        "سەي",
+                        "چار",
+                        "پەي",
+                        "جۈم",
+                        "شەن",
                     }
                     short{
                         "ي",
@@ -450,29 +450,29 @@ ug{
                     H{"HH ~ HH v"}
                 }
                 M{
-                    M{"M ~ M"}
+                    M{"M-ئاي ~ M-ئاي"}
                 }
                 MEd{
                     M{"d/M E ~ d/M E"}
                     d{"d/M E ~ d/M E"}
                 }
                 MMM{
-                    M{"MMM ~ MMM"}
+                    M{"M-ئاي ~ M-ئاي"}
                 }
                 MMMEd{
-                    M{"M-ئاينىڭ d-كۈنى EEEE ~ d-كۈنى EEEE"}
+                    M{"M-ئاينىڭ d-كۈنى EEEE ~ M-ئاينىڭ d-كۈنى EEEE"}
                     d{"M-ئاينىڭ d-كۈنى EEEE ~ d-كۈنى EEEE"}
                 }
                 MMMd{
                     M{"M-ئاينىڭ d-كۈنى ~ M-ئاينىڭ d-كۈنى"}
-                    d{"M-ئاينىڭ d ~ d-كۈنى"}
+                    d{"M-ئاينىڭ d-كۈنى ~ d-كۈنى"}
                 }
                 Md{
-                    M{"M/d ~ M/d"}
-                    d{"M/d ~ M/d"}
+                    M{"d/M ~ d/M"}
+                    d{"d/M ~ d/M"}
                 }
                 d{
-                    d{"d ~ d"}
+                    d{"d ~ d-كۈنى"}
                 }
                 fallback{"{0} ~ {1}"}
                 h{
@@ -497,9 +497,9 @@ ug{
                     y{"M/y ~ M/y"}
                 }
                 yMEd{
-                    M{"d/M/y E ~ d/M/y E"}
-                    d{"d/M/y E ~ d/M/y E"}
-                    y{"d/M/y E ~ d/M/y E"}
+                    M{"d/M/y EEEE ~ d/M EEEE"}
+                    d{"d/M/y EEEE ~ d/M EEEE"}
+                    y{"d/M/y EEEE ~ d/M/y EEEE"}
                 }
                 yMMM{
                     M{"y-يىلى M-ئاي ~ M-ئاي"}
@@ -507,39 +507,39 @@ ug{
                 }
                 yMMMEd{
                     M{"y-يىلى M-ئاينىڭ d-كۈنى EEEE ~ M-ئاينىڭ d-كۈنى EEEE"}
-                    d{"y-يىلى M-ئاينىڭ d-كۈنى EEEE ~ M-ئاينىڭ d-كۈنى EEEE"}
+                    d{"y-يىلى M-ئاينىڭ d-كۈنى EEEE ~ d-كۈنى EEEE"}
                     y{"y-يىلى M-ئاينىڭ d-كۈنى EEEE ~ y-يىلى M-ئاينىڭ d-كۈنى EEEE"}
                 }
                 yMMMM{
-                    M{"MMMM ~ y MMMM"}
-                    y{"y MMMM ~ y MMMM"}
+                    M{"y-يىلى M-ئاي ~ M-ئاي"}
+                    y{"y-يىلى M-ئاي ~ y-يىلى M-ئاي"}
                 }
                 yMMMd{
-                    M{"d-MMM ~ y، d-MMM"}
-                    d{"d-MMM ~ y، d-MMM"}
-                    y{"y، d-MMM ~ y، d-MMM"}
+                    M{"y-يىلى M-ئاينىڭ d-كۈنى ~ M-ئاينىڭ d-كۈنى"}
+                    d{"y-يىلى M-ئاينىڭ d-كۈنى ~ d-كۈنى"}
+                    y{"y-يىلى M-ئاينىڭ d-كۈنى ~ y-يىلى M-ئاينىڭ d-كۈنى"}
                 }
                 yMd{
-                    M{"d/M/y ~ d/M/y"}
-                    d{"d/M/y ~ d/M/y"}
+                    M{"d/M/y ~ d/M"}
+                    d{"d/M/y ~ d"}
                     y{"d/M/y ~ d/M/y"}
                 }
             }
             monthNames{
                 format{
                     wide{
-                        "يانۋار",
-                        "فېۋرال",
-                        "مارت",
-                        "ئاپرېل",
-                        "ماي",
-                        "ئىيۇن",
-                        "ئىيۇل",
-                        "ئاۋغۇست",
-                        "سېنتەبىر",
-                        "ئۆكتەبىر",
-                        "نويابىر",
-                        "دېكابىر",
+                        "1-ئاي",
+                        "2-ئاي",
+                        "3-ئاي",
+                        "4-ئاي",
+                        "5-ئاي",
+                        "6-ئاي",
+                        "7-ئاي",
+                        "8-ئاي",
+                        "9-ئاي",
+                        "10-ئاي",
+                        "11-ئاي",
+                        "12-ئاي",
                     }
                 }
             }
