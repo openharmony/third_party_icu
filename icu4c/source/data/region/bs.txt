@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 bs{
@@ -43,7 +43,7 @@ bs{
         AL{"Albanija"}
         AM{"Armenija"}
         AO{"Angola"}
-        AQ{"Antarktika"}
+        AQ{"Antarktik"}
         AR{"Argentina"}
         AS{"Američka Samoa"}
         AT{"Austrija"}
@@ -68,7 +68,7 @@ bs{
         BR{"Brazil"}
         BS{"Bahami"}
         BT{"Butan"}
-        BV{"Ostrvo Buve"}
+        BV{"Ostrvo Bouvet"}
         BW{"Bocvana"}
         BY{"Bjelorusija"}
         BZ{"Belize"}
@@ -87,7 +87,7 @@ bs{
         CP{"Ostrvo Clipperton"}
         CR{"Kostarika"}
         CU{"Kuba"}
-        CV{"Zelenortska Ostrva"}
+        CV{"Zelenortska Republika"}
         CW{"Kurasao"}
         CX{"Božićno ostrvo"}
         CY{"Kipar"}
@@ -113,7 +113,7 @@ bs{
         FJ{"Fidži"}
         FK{"Folklandska ostrva"}
         FM{"Mikronezija"}
-        FO{"Farska ostrva"}
+        FO{"Farska Ostrva"}
         FR{"Francuska"}
         GA{"Gabon"}
         GB{"Ujedinjeno Kraljevstvo"}
@@ -135,7 +135,7 @@ bs{
         GW{"Gvineja-Bisao"}
         GY{"Gvajana"}
         HK{"Hong Kong (Kina)"}
-        HM{"Ostrvo Heard i arhipelag McDonald"}
+        HM{"Ostrva Herd i McDonald"}
         HN{"Honduras"}
         HR{"Hrvatska"}
         HT{"Haiti"}
@@ -186,7 +186,7 @@ bs{
         MH{"Maršalova ostrva"}
         MK{"Sjeverna Makedonija"}
         ML{"Mali"}
-        MM{"Mjanmar"}
+        MM{"Mijanmar"}
         MN{"Mongolija"}
         MO{"Makao (Kina)"}
         MP{"Sjeverna Marijanska ostrva"}
@@ -206,7 +206,7 @@ bs{
         NF{"Ostrvo Norfolk"}
         NG{"Nigerija"}
         NI{"Nikaragva"}
-        NL{"Holandija"}
+        NL{"Nizozemska"}
         NO{"Norveška"}
         NP{"Nepal"}
         NR{"Nauru"}
@@ -242,7 +242,7 @@ bs{
         SG{"Singapur"}
         SH{"Sveta Helena"}
         SI{"Slovenija"}
-        SJ{"Svalbard i Jan Majen"}
+        SJ{"Svalbard i Jan Mayen"}
         SK{"Slovačka"}
         SL{"Sijera Leone"}
         SM{"San Marino"}
@@ -297,6 +297,9 @@ bs{
         ZM{"Zambija"}
         ZW{"Zimbabve"}
         ZZ{"Nepoznata oblast"}
+    }
+    Countries%chagos{
+        IO{"arhipelag Chagos"}
     }
     Countries%short{
         GB{"UK"}

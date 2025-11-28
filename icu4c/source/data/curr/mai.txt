@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 mai{
@@ -40,37 +40,12 @@ mai{
             "अज्ञात मुद्रा",
         }
     }
-    Currencies%narrow{
-        INR{"₹"}
-        USD{"$"}
-    }
     CurrencyPlurals{
-        BRL{
-            other{"ब्राज़ीली रियाल"}
-        }
-        CNY{
-            other{"चीनी युआन"}
-        }
-        EUR{
-            other{"यूरो"}
-        }
-        GBP{
-            other{"ब्रिटिश पाउंड स्टर्लिंग"}
-        }
-        INR{
-            other{"भारतीय रुपया"}
-        }
-        JPY{
-            other{"जापानी येन"}
-        }
-        RUB{
-            other{"रूसी रूबल"}
-        }
-        USD{
-            other{"यूएस डॉलर"}
-        }
         XXX{
             other{"(अज्ञात मुद्रा)"}
         }
+    }
+    CurrencyUnitPatterns{
+        other{"{0} {1}"}
     }
 }

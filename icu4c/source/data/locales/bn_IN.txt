@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 bn_IN{
@@ -9,9 +9,9 @@ bn_IN{
         word-medial{"{0}…{1}"}
     }
     NumberElements{
+        default{"latn"}
         beng{
             patterns{
-                currencyFormat{"¤#,##,##0.00"}
                 currencyFormat%alphaNextToNumber{"¤ #,##,##0.00"}
             }
         }
@@ -68,7 +68,7 @@ bn_IN{
                     "খ্রিঃ",
                 }
                 wide{
-                    "খ্রিস্টপূর্ব",
+                    "খ্রিঃপূঃ",
                     "খ্রিষ্টাব্দ",
                 }
             }
@@ -87,20 +87,6 @@ bn_IN{
                         "অক্টোঃ",
                         "নভেঃ",
                         "ডিসেঃ",
-                    }
-                    narrow{
-                        "জা",
-                        "ফে",
-                        "মা",
-                        "এ",
-                        "মে",
-                        "জুন",
-                        "জুল",
-                        "আ",
-                        "সে",
-                        "অ",
-                        "ন",
-                        "ডি",
                     }
                 }
                 stand-alone{

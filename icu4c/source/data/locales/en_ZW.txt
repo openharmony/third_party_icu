@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 en_ZW{
@@ -72,7 +72,7 @@ en_ZW{
                 MMMd{"dd MMM"}
                 Md{"d/M"}
                 yMEd{"E, d/M/y"}
-                yMMMEd{"E, dd MMM y"}
+                yMMMEd{"E dd MMM y"}
                 yMMMd{"dd MMM y"}
                 yMd{"d/M/y"}
             }

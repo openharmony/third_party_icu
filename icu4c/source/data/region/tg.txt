@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 tg{
@@ -96,7 +96,7 @@ tg{
         GU{"Гуам"}
         GW{"Гвинея-Бисау"}
         GY{"Гайана"}
-        HK{"Ҳонконг (МММ)"}
+        HK{"Ҳонконг"}
         HM{"Ҷазираи Ҳерд ва Ҷазираҳои Макдоналд"}
         HN{"Гондурас"}
         HR{"Хорватия"}
@@ -144,11 +144,11 @@ tg{
         MF{"Ҷазираи Сент-Мартин"}
         MG{"Мадагаскар"}
         MH{"Ҷазираҳои Маршалл"}
-        MK{"Македонияи Шимолӣ"}
+        MK{"Мақдун (ҶСЮМ)"}
         ML{"Мали"}
         MM{"Мянма"}
         MN{"Муғулистон"}
-        MO{"Макао (МММ)"}
+        MO{"Макао"}
         MP{"Ҷазираҳои Марианаи Шимолӣ"}
         MQ{"Мартиника"}
         MR{"Мавритания"}

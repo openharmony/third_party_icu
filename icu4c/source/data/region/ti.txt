@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 ti{
@@ -85,6 +85,7 @@ ti{
         CN{"ቻይና"}
         CO{"ኮሎምብያ"}
         CP{"ደሴት ክሊፐርቶን"}
+        CQ{"ሳርክ"}
         CR{"ኮስታ ሪካ"}
         CU{"ኩባ"}
         CV{"ኬፕ ቨርደ"}
@@ -146,7 +147,6 @@ ti{
         IL{"እስራኤል"}
         IM{"ኣይል ኦፍ ማን"}
         IN{"ህንዲ"}
-        IO{"ብሪጣንያዊ ህንዳዊ ውቅያኖስ ግዝኣት"}
         IQ{"ዒራቕ"}
         IR{"ኢራን"}
         IS{"ኣይስላንድ"}
@@ -184,11 +184,11 @@ ti{
         MF{"ቅዱስ ማርቲን"}
         MG{"ማዳጋስካር"}
         MH{"ደሴታት ማርሻል"}
-        MK{"ሰሜን መቄዶንያ"}
+        MK{"መቄዶኒያ"}
         ML{"ማሊ"}
         MM{"ሚያንማር (በርማ)"}
         MN{"ሞንጎልያ"}
-        MO{"ፍሉይ ምምሕዳራዊ ዞባ ማካው (ቻይና)"}
+        MO{"ማካው"}
         MP{"ሰሜናዊ ደሴታት ማርያና"}
         MQ{"ማርቲኒክ"}
         MR{"ማውሪታንያ"}
@@ -223,7 +223,7 @@ ti{
         PM{"ቅዱስ ፕየርን ሚከሎንን"}
         PN{"ደሴታት ፒትካርን"}
         PR{"ፖርቶ ሪኮ"}
-        PS{"ግዝኣታት ፍልስጤም"}
+        PS{"ፍልስጤም"}
         PT{"ፖርቱጋል"}
         PW{"ፓላው"}
         PY{"ፓራጓይ"}

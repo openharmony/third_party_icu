@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 ks{
@@ -146,7 +146,6 @@ ks{
         IL{"اسرا ییل"}
         IM{"آیِل آف مین"}
         IN{"ہِندوستان"}
-        IO{"برطانوی بحرِ ہِندۍ علاقہٕ"}
         IQ{"ایٖراق"}
         IR{"ایٖران"}
         IS{"اَیِسلینڑ"}

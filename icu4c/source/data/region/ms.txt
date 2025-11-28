@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 ms{
@@ -267,7 +267,7 @@ ms{
         TM{"Turkmenistan"}
         TN{"Tunisia"}
         TO{"Tonga"}
-        TR{"Turki"}
+        TR{"Turkiye"}
         TT{"Trinidad dan Tobago"}
         TV{"Tuvalu"}
         TW{"Taiwan (China)"}
@@ -279,7 +279,7 @@ ms{
         US{"Amerika Syarikat"}
         UY{"Uruguay"}
         UZ{"Uzbekistan"}
-        VA{"Kota Vatican"}
+        VA{"Bandar Vatican"}
         VC{"Saint Vincent dan Grenadines"}
         VE{"Venezuela"}
         VG{"Kepulauan Virgin British"}
@@ -298,6 +298,9 @@ ms{
         ZW{"Zimbabwe"}
         ZZ{"Wilayah Tidak Diketahui"}
     }
+    Countries%chagos{
+        IO{"Kepulauan Chagos"}
+    }
     Countries%short{
         GB{"UK"}
         HK{"Hong Kong"}
@@ -315,6 +318,6 @@ ms{
         NZ{"Aotearoa New Zealand"}
         SZ{"Swaziland"}
         TL{"Timor Timur"}
-        TR{"Türkiye"}
+        TR{"Turki"}
     }
 }

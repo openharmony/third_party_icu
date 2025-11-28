@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 lv{
@@ -195,7 +195,7 @@ lv{
         MS{"Montserrata"}
         MT{"Malta"}
         MU{"Maurīcija"}
-        MV{"Maldīvija"}
+        MV{"Maldīvu salas"}
         MW{"Malāvija"}
         MX{"Meksika"}
         MY{"Malaizija"}
@@ -297,6 +297,9 @@ lv{
         ZM{"Zambija"}
         ZW{"Zimbabve"}
         ZZ{"nezināms reģions"}
+    }
+    Countries%chagos{
+        IO{"Čagosu arhipelāgs"}
     }
     Countries%short{
         HK{"Honkonga"}

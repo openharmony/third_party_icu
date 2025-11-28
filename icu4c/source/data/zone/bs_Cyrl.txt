@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 bs_Cyrl{
@@ -1940,8 +1940,6 @@ bs_Cyrl{
             lg{"Јекатеринбург вријеме"}
             ls{"Јекатеринбург стандардно вријеме"}
         }
-        fallbackFormat{"{1} ({0})"}
-        gmtFormat{"GMT{0}"}
         regionFormat{"Време: {0}"}
     }
 }

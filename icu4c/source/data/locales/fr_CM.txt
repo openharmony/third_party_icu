@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 fr_CM{
@@ -9,10 +9,6 @@ fr_CM{
                 "soir",
             }
             AmPmMarkersAbbr{
-                "mat.",
-                "soir",
-            }
-            AmPmMarkersNarrow{
                 "mat.",
                 "soir",
             }
@@ -27,14 +23,6 @@ fr_CM{
             }
             dayPeriod{
                 stand-alone{
-                    abbreviated{
-                        am{"mat."}
-                        pm{"soir"}
-                    }
-                    narrow{
-                        am{"mat."}
-                        pm{"soir"}
-                    }
                     wide{
                         am{"matin"}
                         pm{"soir"}

@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 sw_KE{
@@ -7,7 +7,6 @@ sw_KE{
         latn{
             patterns{
                 accountingFormat%noCurrency{"#,##0.00;(#,##0.00)"}
-                currencyPatternAppendISO{"{0} ¤¤"}
             }
             patternsLong{
                 decimalFormat{

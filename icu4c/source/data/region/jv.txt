@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 jv{
@@ -40,7 +40,7 @@ jv{
         AF{"Afganistan"}
         AG{"Antigua lan Barbuda"}
         AI{"Anguilla"}
-        AL{"Albani"}
+        AL{"Albania"}
         AM{"Arménia"}
         AO{"Angola"}
         AQ{"Antartika"}
@@ -107,13 +107,13 @@ jv{
         ER{"Éritréa"}
         ES{"Sepanyol"}
         ET{"Étiopia"}
-        EU{"Uni Éropah"}
+        EU{"Uni Éropa"}
         EZ{"Zona Éuro"}
         FI{"Finlan"}
         FJ{"Fiji"}
         FK{"Kapuloan Falkland"}
         FM{"Féderasi Mikronésia"}
-        FO{"Kapuloan Faro"}
+        FO{"Kapuloan Faroe"}
         FR{"Prancis"}
         GA{"Gabon"}
         GB{"Karajan Manunggal"}
@@ -129,13 +129,13 @@ jv{
         GP{"Guadélup"}
         GQ{"Guinéa Katulistiwa"}
         GR{"Grikenlan"}
-        GS{"Georgia Kidul lan Kapuloan Sandwich Kidul"}
+        GS{"Georgia Selatan lan Kapuloan Sandwich Selatan"}
         GT{"Guatémala"}
         GU{"Guam"}
         GW{"Guinea-Bissau"}
         GY{"Guyana"}
         HK{"Hong Kong (Tiongkok)"}
-        HM{"Kapuloan Heard lan McDonald"}
+        HM{"Pulo Heard & Kepuloan McDonald"}
         HN{"Honduras"}
         HR{"Kroasia"}
         HT{"Haiti"}
@@ -145,11 +145,11 @@ jv{
         IE{"Républik Irlan"}
         IL{"Israèl"}
         IM{"Pulo Man"}
-        IN{"Indhia"}
-        IO{"Wilayah Inggris nang Segoro Hindia"}
+        IN{"Indhi"}
+        IO{"Wilayah Inggris ing Segara Hindia"}
         IQ{"Irak"}
         IR{"Iran"}
-        IS{"Èslan"}
+        IS{"Islandia"}
         IT{"Itali"}
         JE{"Jersey"}
         JM{"Jamaika"}
@@ -184,7 +184,7 @@ jv{
         MF{"Santa Martin"}
         MG{"Madagaskar"}
         MH{"Kapuloan Marshall"}
-        MK{"Républik Makédonia Lor"}
+        MK{"Makedonia Utara"}
         ML{"Mali"}
         MM{"Myanmar (Burma)"}
         MN{"Mongolia"}
@@ -199,7 +199,7 @@ jv{
         MW{"Malawi"}
         MX{"Mèksiko"}
         MY{"Malaysia"}
-        MZ{"Mosambik"}
+        MZ{"Mozambik"}
         NA{"Namibia"}
         NC{"Kalédonia Anyar"}
         NE{"Nigér"}
@@ -211,7 +211,7 @@ jv{
         NP{"Népal"}
         NR{"Nauru"}
         NU{"Niue"}
-        NZ{"Selandia Anyar"}
+        NZ{"Niu Sélan"}
         OM{"Oman"}
         PA{"Panama"}
         PE{"Peru"}
@@ -258,7 +258,7 @@ jv{
         TA{"Tristan da Cunha"}
         TC{"Turks lan Kapuloan Kaikos"}
         TD{"Chad"}
-        TF{"Wilayah Prancis nang Kutub Kidul"}
+        TF{"Wilayah Prancis Selatan"}
         TG{"Togo"}
         TH{"Tanah Thai"}
         TJ{"Tajikistan"}
@@ -275,11 +275,11 @@ jv{
         UA{"Ukrania"}
         UG{"Uganda"}
         UM{"Kapuloan AS Paling Njaba"}
-        UN{"Pasarékatan Bangsa-Bangsa"}
+        UN{"Perserikatan Bangsa-Bangsa"}
         US{"Amérika Sarékat"}
         UY{"Uruguay"}
         UZ{"Usbèkistan"}
-        VA{"Kutha Vatikan"}
+        VA{"Vatikan"}
         VC{"Saint Vinsen lan Grénadin"}
         VE{"Vénésuéla"}
         VG{"Kapuloan Virgin Britania"}
@@ -297,6 +297,9 @@ jv{
         ZM{"Sambia"}
         ZW{"Simbabwe"}
         ZZ{"Daerah Ora Dikenali"}
+    }
+    Countries%chagos{
+        IO{"Kapuloan Chagos"}
     }
     Countries%short{
         GB{"KM"}

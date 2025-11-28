@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 zh_Hans_SG{
@@ -28,6 +28,12 @@ zh_Hans_SG{
                 "GyMd",
                 "GyMd",
                 "GyyMd",
+            }
+            intervalFormats{
+                Hv{
+                    H{"vHH–HH"}
+                }
+                fallback{"{0}至{1}"}
             }
         }
         chinese{
@@ -304,9 +310,7 @@ zh_Hans_SG{
                 "GyyMd",
             }
             availableFormats{
-                MEd{"M-dE"}
                 MMM{"M月"}
-                Md{"M-d"}
             }
         }
     }

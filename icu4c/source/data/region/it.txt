@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 it{
@@ -113,7 +113,7 @@ it{
         FJ{"Figi"}
         FK{"Isole Falkland"}
         FM{"Micronesia"}
-        FO{"Isole Fær Øer"}
+        FO{"Isole Faroe"}
         FR{"Francia"}
         GA{"Gabon"}
         GB{"Regno Unito"}
@@ -298,6 +298,9 @@ it{
         ZW{"Zimbabwe"}
         ZZ{"Regione sconosciuta"}
     }
+    Countries%chagos{
+        IO{"Arcipelago Chagos"}
+    }
     Countries%short{
         GB{"UK"}
         HK{"Hong Kong"}
@@ -313,7 +316,7 @@ it{
         CZ{"Repubblica Ceca"}
         FK{"Isole Falkland (Isole Malvine)"}
         NZ{"Nuova Zelanda (Aotearoa)"}
-        SZ{"Regno di eSwatini"}
+        SZ{"Regno di Eswatini"}
         TL{"Timor Leste"}
         TR{"Türkiye"}
     }

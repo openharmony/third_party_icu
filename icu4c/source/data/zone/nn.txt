@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 nn{
@@ -42,9 +42,6 @@ nn{
         }
         "Europe:Dublin"{
             ld{"irsk sommartid"}
-        }
-        "Europe:Kiev"{
-            ec{"Kyiv"}
         }
         "Europe:London"{
             ld{"britisk sommartid"}
@@ -378,7 +375,7 @@ nn{
             ls{"kaledonsk normaltid"}
         }
         "meta:New_Zealand"{
-            ld{"nyzealandsk sumartid"}
+            ld{"nyzealandsk sommartid"}
             lg{"nyzealandsk tid"}
             ls{"nyzealandsk normaltid"}
         }

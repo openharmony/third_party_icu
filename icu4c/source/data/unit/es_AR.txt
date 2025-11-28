@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 es_AR{
@@ -41,7 +41,6 @@ es_AR{
     unitsNarrow{
         duration{
             second{
-                dnam{"seg."}
                 one{"{0}seg."}
                 other{"{0}seg."}
             }

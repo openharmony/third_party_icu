@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 lt{
@@ -279,7 +279,7 @@ lt{
         US{"Jungtinės Valstijos"}
         UY{"Urugvajus"}
         UZ{"Uzbekistanas"}
-        VA{"Vatikano Miesto Valstybė"}
+        VA{"Vatikanas"}
         VC{"Šventasis Vincentas ir Grenadinai"}
         VE{"Venesuela"}
         VG{"Didžiosios Britanijos Mergelių Salos"}
@@ -297,6 +297,9 @@ lt{
         ZM{"Zambija"}
         ZW{"Zimbabvė"}
         ZZ{"nežinoma sritis"}
+    }
+    Countries%chagos{
+        IO{"Čagoso salynas"}
     }
     Countries%short{
         GB{"JK"}

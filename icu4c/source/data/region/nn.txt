@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 nn{
@@ -14,7 +14,6 @@ nn{
         151{"Aust-Europa"}
         AE{"Dei sameinte arabiske emirata"}
         AT{"Austerrike"}
-        BY{"Kviterussland"}
         CC{"Kokosøyane"}
         CD{"Kongo-Kinshasa"}
         CF{"Den sentralafrikanske republikken"}
@@ -23,20 +22,24 @@ nn{
         DO{"Den dominikanske republikken"}
         EU{"Den europeiske unionen"}
         EZ{"eurosona"}
-        FK{"Falklandsøyane"}
+        FK{"Falklandsøyane (Islas Malvinas)"}
         FO{"Færøyane"}
         GS{"Sør-Georgia og Sør-Sandwichøyane"}
+        HK{"Hongkong"}
         HM{"Heardøya og McDonaldøyane"}
         IC{"Kanariøyane"}
         KM{"Komorane"}
         KY{"Caymanøyane"}
         LU{"Luxembourg"}
         MH{"Marshalløyane"}
+        MK{"Den tidlegare jugoslaviske republikken Makedonia"}
+        MO{"Macao"}
         MP{"Nord-Marianane"}
         MV{"Maldivane"}
         NO{"Noreg"}
         PH{"Filippinane"}
         PN{"Pitcairn"}
+        PS{"Det palestinske området"}
         SB{"Salomonøyane"}
         SC{"Seychellane"}
         SH{"Saint Helena"}
@@ -44,18 +47,20 @@ nn{
         TF{"Dei franske sørterritoria"}
         TL{"Aust-Timor"}
         UM{"USAs ytre småøyar"}
-        UN{"SN"}
+        UN{"Sameinte nasjonar"}
         VC{"St. Vincent og Grenadinane"}
         VG{"Dei britiske Jomfruøyane"}
         VI{"Dei amerikanske Jomfruøyane"}
         XA{"pseudospråk – aksentar"}
         XB{"pseudospråk – RTL"}
     }
+    Countries%chagos{
+        IO{"Chagosøyane"}
+    }
     Countries%short{
         UN{"SN"}
     }
     Countries%variant{
-        CI{"Elfenbeinskysten"}
         FK{"Falklandsøyane (Islas Malvinas)"}
         TL{"Aust-Timor"}
     }

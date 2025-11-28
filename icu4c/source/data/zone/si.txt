@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 si{
@@ -1906,7 +1906,6 @@ si{
         "meta:Yukon"{
             ls{"යුකොන් වේලාව"}
         }
-        fallbackFormat{"{1} ({0})"}
         gmtFormat{"ග්‍රිමවේ{0}"}
         gmtZeroFormat{"ග්‍රිමවේ"}
         hourFormat{"+HH.mm;-HH.mm"}

@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 zh_Hant_HK{
@@ -100,5 +100,8 @@ zh_Hant_HK{
         YT{"馬約特"}
         ZM{"贊比亞"}
         ZW{"津巴布韋"}
+    }
+    Countries%variant{
+        CI{"象牙海岸"}
     }
 }

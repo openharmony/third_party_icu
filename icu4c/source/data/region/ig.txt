@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 ig{
@@ -298,6 +298,9 @@ ig{
         ZW{"Zimbabwe"}
         ZZ{"Mpaghara Amaghị"}
     }
+    Countries%chagos{
+        IO{"Chagos Archipelago"}
+    }
     Countries%short{
         GB{"UK"}
         MO{"Macao"}
@@ -309,6 +312,5 @@ ig{
         CZ{"Czech Republik"}
         SZ{"Swaziland"}
         TL{"East Timor"}
-        TR{"Turki"}
     }
 }

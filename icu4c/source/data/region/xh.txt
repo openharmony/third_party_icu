@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 xh{
@@ -297,6 +297,9 @@ xh{
         ZM{"EZambia"}
         ZW{"EZimbabwe"}
         ZZ{"Ingingqi Engaziwayo"}
+    }
+    Countries%chagos{
+        IO{"EChagos Archipelago"}
     }
     Countries%short{
         GB{"E-UK"}
