@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 as{
@@ -1895,10 +1895,6 @@ as{
         "meta:Yukon"{
             ls{"য়ুকোন সময়"}
         }
-        fallbackFormat{"{1} ({0})"}
-        gmtFormat{"GMT{0}"}
-        gmtZeroFormat{"GMT"}
-        hourFormat{"+HH:mm;-HH:mm"}
         regionFormat{"{0} সময়"}
         regionFormatDaylight{"{0} (+1) ডেলাইট সময়"}
         regionFormatStandard{"{0} (+0) মান সময়"}

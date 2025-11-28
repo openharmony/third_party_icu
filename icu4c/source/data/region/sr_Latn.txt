@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 sr_Latn{
@@ -264,7 +264,7 @@ sr_Latn{
         TH{"Tajland"}
         TJ{"Tadžikistan"}
         TK{"Tokelau"}
-        TL{"Timor-Leste (Istočni Timor)"}
+        TL{"Istočni Timor"}
         TM{"Turkmenistan"}
         TN{"Tunis"}
         TO{"Tonga"}
@@ -298,6 +298,9 @@ sr_Latn{
         ZM{"Zambija"}
         ZW{"Zimbabve"}
         ZZ{"Nepoznat region"}
+    }
+    Countries%chagos{
+        IO{"arhipelag Čagos"}
     }
     Countries%short{
         GB{"UK"}

@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 mk{
@@ -111,7 +111,7 @@ mk{
         EZ{"Еврозона"}
         FI{"Финска"}
         FJ{"Фиџи"}
-        FK{"Фолкландски Острови"}
+        FK{"Фолкландски Острови (Малвински Острови)"}
         FM{"Микронезија"}
         FO{"Фарски Острови"}
         FR{"Франција"}
@@ -254,7 +254,7 @@ mk{
         SV{"Ел Салвадор"}
         SX{"Свети Мартин"}
         SY{"Сирија"}
-        SZ{"Свазиленд"}
+        SZ{"Есватини"}
         TA{"Тристан да Куња"}
         TC{"Острови Туркс и Каикос"}
         TD{"Чад"}
@@ -297,6 +297,9 @@ mk{
         ZM{"Замбија"}
         ZW{"Зимбабве"}
         ZZ{"Непознат регион"}
+    }
+    Countries%chagos{
+        IO{"Архипелаг Чагос"}
     }
     Countries%short{
         GB{"ОК"}

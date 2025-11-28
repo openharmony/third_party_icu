@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 sw{
@@ -67,6 +67,7 @@ sw{
         bez{"Kibena"}
         bfd{"Kibafut"}
         bg{"Kibulgaria"}
+        bgc{"Kiharyanvi"}
         bgn{"Kibalochi cha Magharibi"}
         bho{"Kibhojpuri"}
         bi{"Kibislama"}
@@ -141,7 +142,7 @@ sw{
         es_419{"Kihispania (Amerika ya Latini)"}
         es_ES{"Kihispania (Ulaya)"}
         et{"Kiestonia"}
-        eu{"Kibaski"}
+        eu{"Kibaske"}
         ewo{"Kiewondo"}
         fa{"Kiajemi"}
         fa_AF{"Kiajemi (Afganistani)"}
@@ -228,7 +229,7 @@ sw{
         khq{"Kikoyra Chiini"}
         ki{"Kikikuyu"}
         kj{"Kikwanyama"}
-        kk{"Kikazakh"}
+        kk{"Kikazaki"}
         kkj{"Lugha ya Kako"}
         kl{"Kikalaallisut"}
         kln{"Kikalenjin"}
@@ -310,13 +311,13 @@ sw{
         mul{"Lugha nyingi"}
         mus{"Kikriki"}
         mwl{"Kimirandi"}
-        my{"Kiburma"}
+        my{"Kibarma"}
         myv{"Kierzya"}
         mzn{"Kimazanderani"}
         na{"Kinauru"}
         nap{"Kinapoli"}
         naq{"Kinama"}
-        nb{"Kinorwe cha Bokmal"}
+        nb{"Kibokmali cha Norwe"}
         nd{"Kindebele cha Kaskazini"}
         nds{"Kisaksoni"}
         ne{"Kinepali"}
@@ -349,7 +350,7 @@ sw{
         ojw{"Kiojibwa cha Magharibi"}
         oka{"Kiokanagani"}
         om{"Kioromo"}
-        or{"Kioriya"}
+        or{"Kiodiya"}
         os{"Kiosetia"}
         pa{"Kipunjabi"}
         pag{"Kipangasinan"}
@@ -368,6 +369,7 @@ sw{
         pt_PT{"Kireno (Ulaya)"}
         qu{"Kikechua"}
         quc{"Kʼicheʼ"}
+        raj{"Kirajasthani"}
         rap{"Kirapanui"}
         rar{"Kirarotonga"}
         rhg{"Kirohingya"}
@@ -376,6 +378,7 @@ sw{
         ro{"Kiromania"}
         ro_MD{"Kimoldova cha Romania"}
         rof{"Kirombo"}
+        root{"Kiroot"}
         ru{"Kirusi"}
         rup{"Kiaromania"}
         rw{"Kinyarwanda"}
@@ -459,8 +462,8 @@ sw{
         tyv{"Kituva"}
         tzm{"Kitamazighati cha Atlasi ya Kati"}
         udm{"Kiudmurt"}
-        ug{"Kiuyghur"}
-        uk{"Kiukraini"}
+        ug{"Kiuigu"}
+        uk{"Kiukreni"}
         umb{"Umbundu"}
         und{"Lugha isiyojulikana"}
         ur{"Kiurdu"}
@@ -589,9 +592,9 @@ sw{
             gregorian{"Kalenda ya Kigregori"}
             hebrew{"Kalenda ya Kiebrania"}
             indian{"Kalenda ya Taifa ya India"}
-            islamic{"Kalenda ya Kiislamu"}
-            islamic-civil{"Kalenda ya Kiislamu/Rasmi"}
-            islamic-umalqura{"Kalenda ya kiislamu (Umm al-Qura)"}
+            islamic{"Kalenda ya Hijra"}
+            islamic-civil{"Kalenda ya Hijra (inayoanza usiku wa manane)"}
+            islamic-umalqura{"Kalenda ya Hijra (Umm ul-Qura)"}
             iso8601{"Kalenda ya ISO-8601"}
             japanese{"Kalenda ya Kijapani"}
             persian{"Kalenda ya Kiajemi"}
@@ -723,10 +726,11 @@ sw{
     }
     characterLabelPattern{
         all{"{0} — zote"}
-        category-list{"{0}: {1}"}
         compatibility{"{0} — uwiano"}
         enclosed{"{0} — finyu"}
         extended{"{0} — pana"}
+        facing-left{"{0} inayoangalia kushoto"}
+        facing-right{"{0} inayoangalia kulia"}
         historic{"{0} — ya kihistoria"}
         miscellaneous{"{0} — ziada"}
         other{"{0} — nyingine"}
@@ -742,10 +746,5 @@ sw{
         language{"Lugha: {0}"}
         script{"Hati: {0}"}
         territory{"Eneo: {0}"}
-    }
-    localeDisplayPattern{
-        keyTypePattern{"{0}: {1}"}
-        pattern{"{0} ({1})"}
-        separator{"{0}, {1}"}
     }
 }

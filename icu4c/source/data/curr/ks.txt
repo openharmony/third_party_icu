@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 ks{
@@ -1020,21 +1020,10 @@ ks{
             "زِمبابِیُک ڈالَر",
         }
     }
-    Currencies%narrow{
-        JPY{"¥"}
-    }
     CurrencyPlurals{
         BRL{
             one{"برازیٖلی رِیَل"}
             other{"برازیٖلی رِیَلز"}
-        }
-        CNY{
-            one{"چیٖنی یُوان"}
-            other{"چیٖنی یُوان"}
-        }
-        GBP{
-            one{"برطٲنوی پوٗنڈ"}
-            other{"برطٲنوی پوٗنڈ"}
         }
         JPY{
             one{"جاپٲن یَن"}

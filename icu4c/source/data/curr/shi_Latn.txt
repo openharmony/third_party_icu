@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 shi_Latn{
@@ -176,9 +176,13 @@ shi_Latn{
             "SHP",
             "ajnih n santilin",
         }
+        SLE{
+            "SLE",
+            "liyun",
+        }
         SLL{
             "SLL",
-            "liyun",
+            "liyun (1964—2022)",
         }
         SOS{
             "SOS",

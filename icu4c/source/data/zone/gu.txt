@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 gu{
@@ -1566,11 +1566,6 @@ gu{
         "meta:Gilbert_Islands"{
             ls{"ગિલબર્ટ આઇલેન્ડ્સ સમય"}
         }
-        "meta:Greenland"{
-            ld{"પૂર્વ ગ્રીનલેન્ડ ગ્રીષ્મ સમય"}
-            lg{"પૂર્વ ગ્રીનલેન્ડ સમય"}
-            ls{"પૂર્વ ગ્રીનલેન્ડ માનક સમય"}
-        }
         "meta:Greenland_Eastern"{
             ld{"પૂર્વ ગ્રીનલેન્ડ ગ્રીષ્મ સમય"}
             lg{"પૂર્વ ગ્રીનલેન્ડ સમય"}
@@ -1648,9 +1643,6 @@ gu{
             ld{"પેટ્રોપેવલોવ્સ્ક-કામચતસ્કી ગ્રીષ્મ સમય"}
             lg{"પેટ્રોપેવલોવ્સ્ક-કામચતસ્કી સમય"}
             ls{"પેટ્રોપેવલોવ્સ્ક-કામચતસ્કી પ્રમાણભૂત સમય"}
-        }
-        "meta:Kazakhstan"{
-            ls{"કઝાકિસ્તાન સમય"}
         }
         "meta:Kazakhstan_Eastern"{
             ls{"પૂર્વ કઝાકિસ્તાન સમય"}
@@ -1955,10 +1947,6 @@ gu{
         "meta:Yukon"{
             ls{"યુકોન સમય"}
         }
-        fallbackFormat{"{1} ({0})"}
-        gmtFormat{"GMT{0}"}
-        gmtZeroFormat{"GMT"}
-        hourFormat{"+HH:mm;-HH:mm"}
         regionFormat{"{0} સમય"}
         regionFormatDaylight{"{0} દિવસ સમય"}
         regionFormatStandard{"{0} માનક સમય"}

@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 pt_PT{
@@ -89,9 +89,6 @@ pt_PT{
         }
         "America:St_Thomas"{
             ec{"St. Thomas"}
-        }
-        "Antarctica:DumontDUrville"{
-            ec{"Dumont d’Urville"}
         }
         "Asia:Aden"{
             ec{"Adem"}
@@ -216,14 +213,8 @@ pt_PT{
         "Pacific:Pitcairn"{
             ec{"Ilhas Pitcairn"}
         }
-        "Pacific:Ponape"{
-            ec{"Pohnpei"}
-        }
         "Pacific:Tarawa"{
             ec{"Tarawa"}
-        }
-        "Pacific:Truk"{
-            ec{"Chuuk"}
         }
         "meta:Acre"{
             ld{"Hora de verão do Acre"}

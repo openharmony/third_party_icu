@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 fur{
@@ -106,7 +106,7 @@ fur{
         EU{"Union europeane"}
         FI{"Finlandie"}
         FJ{"Fizi"}
-        FK{"Isulis Falkland"}
+        FK{"Isulis Falkland (Isulis Malvinas)"}
         FM{"Micronesie"}
         FO{"Isulis Faroe"}
         FR{"France"}
@@ -129,7 +129,7 @@ fur{
         GU{"Guam"}
         GW{"Guinea-Bissau"}
         GY{"Guyana"}
-        HK{"Regjon aministrative speciâl de Cine di Hong Kong"}
+        HK{"Hong Kong"}
         HM{"Isule Heard e Isulis McDonald"}
         HN{"Honduras"}
         HR{"Cravuazie"}
@@ -179,10 +179,11 @@ fur{
         MF{"Sant Martin"}
         MG{"Madagascar"}
         MH{"Isulis Marshall"}
+        MK{"Macedonie (FYROM)"}
         ML{"Mali"}
         MM{"Birmanie"}
         MN{"Mongolie"}
-        MO{"Regjon aministrative speciâl de Cine di Macao"}
+        MO{"Macao"}
         MP{"Isulis Mariana dal Nord"}
         MQ{"Martiniche"}
         MR{"Mauritanie"}

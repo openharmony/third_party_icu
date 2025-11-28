@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 ne{
@@ -589,7 +589,7 @@ ne{
             ec{"तिजुआना"}
         }
         "America:Toronto"{
-            ec{"टोरोण्टो"}
+            ec{"टोरोन्टो"}
         }
         "America:Tortola"{
             ec{"टार्टोला"}
@@ -1903,10 +1903,6 @@ ne{
         "meta:Yukon"{
             ls{"युकोनको समय"}
         }
-        fallbackFormat{"{1} ({0})"}
-        gmtFormat{"GMT{0}"}
-        gmtZeroFormat{"GMT"}
-        hourFormat{"+HH:mm;-HH:mm"}
         regionFormat{"{0} समय"}
         regionFormatDaylight{"{0} (+१)"}
         regionFormatStandard{"{0} (+०)"}

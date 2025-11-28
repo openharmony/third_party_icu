@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 keyTypeData:table(nofallback){
@@ -7,6 +7,9 @@ keyTypeData:table(nofallback){
             islamicc{"islamic-civil"}
         }
         tz:alias{"/ICUDATA/timezoneTypes/bcpTypeAlias/tz"}
+    }
+    ianaMap{
+        timezone:alias{"/ICUDATA/timezoneTypes/ianaMap/timezone"}
     }
     keyInfo{
         deprecated{
@@ -71,9 +74,6 @@ keyTypeData:table(nofallback){
         deprecated{
             co{
                 direct{"true"}
-            }
-            tz{
-                camtr{"true"}
             }
         }
     }

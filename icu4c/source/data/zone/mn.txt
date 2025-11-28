@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 mn{
@@ -1903,10 +1903,6 @@ mn{
         "meta:Yukon"{
             ls{"Юкон цагийн бүс"}
         }
-        fallbackFormat{"{1} ({0})"}
-        gmtFormat{"GMT{0}"}
-        gmtZeroFormat{"GMT"}
-        hourFormat{"+HH:mm;-HH:mm"}
         regionFormat{"{0}-н цаг"}
         regionFormatDaylight{"{0}-н зуны цаг"}
         regionFormatStandard{"{0}-н стандарт цаг"}

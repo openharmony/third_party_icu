@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 pt{
@@ -108,7 +108,7 @@ pt{
         ES{"Espanha"}
         ET{"Etiópia"}
         EU{"União Europeia"}
-        EZ{"zona do euro"}
+        EZ{"Área do Euro"}
         FI{"Finlândia"}
         FJ{"Fiji"}
         FK{"Ilhas Malvinas"}
@@ -254,14 +254,14 @@ pt{
         SV{"El Salvador"}
         SX{"Sint Maarten"}
         SY{"Síria"}
-        SZ{"Essuatíni"}
+        SZ{"Eswatini"}
         TA{"Tristão da Cunha"}
         TC{"Ilhas Turcas e Caicos"}
         TD{"Chade"}
         TF{"Territórios Franceses do Sul"}
         TG{"Togo"}
         TH{"Tailândia"}
-        TJ{"Tadjiquistão"}
+        TJ{"Tajiquistão"}
         TK{"Tokelau"}
         TL{"Timor-Leste"}
         TM{"Turcomenistão"}
@@ -279,7 +279,7 @@ pt{
         US{"Estados Unidos"}
         UY{"Uruguai"}
         UZ{"Uzbequistão"}
-        VA{"Cidade do Vaticano"}
+        VA{"Vaticano"}
         VC{"São Vicente e Granadinas"}
         VE{"Venezuela"}
         VG{"Ilhas Virgens Britânicas"}
@@ -297,6 +297,9 @@ pt{
         ZM{"Zâmbia"}
         ZW{"Zimbábue"}
         ZZ{"Região desconhecida"}
+    }
+    Countries%chagos{
+        IO{"Arquipélago de Chagos"}
     }
     Countries%short{
         HK{"Hong Kong"}

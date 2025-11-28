@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 fr_CA{
@@ -86,10 +86,6 @@ fr_CA{
         KRW{
             "KRW",
             "won sud-coréen",
-        }
-        LAK{
-            "LAK",
-            "kip laotien",
         }
         LBP{
             "LBP",
@@ -214,10 +210,6 @@ fr_CA{
         IRR{
             one{"rial iranien"}
             other{"rials iraniens"}
-        }
-        LAK{
-            one{"kip laotien"}
-            other{"kips laotiens"}
         }
         OMR{
             one{"rial omanais"}

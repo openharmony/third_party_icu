@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 ar{
@@ -1925,10 +1925,8 @@ ar{
         "meta:Yukon"{
             ls{"توقيت يوكون"}
         }
-        fallbackFormat{"{1} ({0})"}
         gmtFormat{"غرينتش{0}"}
         gmtZeroFormat{"غرينتش"}
-        hourFormat{"+HH:mm;-HH:mm"}
         regionFormat{"توقيت {0}"}
         regionFormatDaylight{"توقيت {0} الصيفي"}
         regionFormatStandard{"توقيت {0} الرسمي"}

@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 ro{
@@ -228,7 +228,7 @@ ro{
         PW{"Palau"}
         PY{"Paraguay"}
         QA{"Qatar"}
-        QO{"Oceania Periferică"}
+        QO{"Oceania Îndepărtată"}
         RE{"Réunion"}
         RO{"România"}
         RS{"Serbia"}
@@ -279,7 +279,7 @@ ro{
         US{"Statele Unite ale Americii"}
         UY{"Uruguay"}
         UZ{"Uzbekistan"}
-        VA{"Statul Cetății Vaticanului"}
+        VA{"Cetatea Vaticanului"}
         VC{"Saint Vincent și Grenadinele"}
         VE{"Venezuela"}
         VG{"Insulele Virgine Britanice"}
@@ -297,6 +297,9 @@ ro{
         ZM{"Zambia"}
         ZW{"Zimbabwe"}
         ZZ{"Regiune necunoscută"}
+    }
+    Countries%chagos{
+        IO{"Arhipelagul Chagos"}
     }
     Countries%short{
         HK{"Hong Kong"}

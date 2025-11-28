@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 fr_MA{
@@ -18,22 +18,6 @@ fr_MA{
             }
             monthNames{
                 format{
-                    abbreviated{
-                        "jan.",
-                        "fév.",
-                        "mar.",
-                        "avr.",
-                        "mai",
-                        "jui.",
-                        "juil.",
-                        "août",
-                        "sept.",
-                        "oct.",
-                        "nov.",
-                        "déc.",
-                    }
-                }
-                stand-alone{
                     abbreviated{
                         "jan.",
                         "fév.",

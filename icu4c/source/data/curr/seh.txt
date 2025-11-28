@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 seh{
@@ -179,9 +179,13 @@ seh{
             "SHP",
             "Libra de Santa Helena",
         }
+        SLE{
+            "SLE",
+            "Leone de Serra Leoa",
+        }
         SLL{
             "SLL",
-            "Leone de Serra Leoa",
+            "Leone de Serra Leoa (1964—2022)",
         }
         SOS{
             "SOS",

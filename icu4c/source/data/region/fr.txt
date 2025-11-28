@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 fr{
@@ -228,7 +228,7 @@ fr{
         PW{"Palaos"}
         PY{"Paraguay"}
         QA{"Qatar"}
-        QO{"Région périphérique de l'Océanie"}
+        QO{"Région périphérique de l’Océanie"}
         RE{"La Réunion"}
         RO{"Roumanie"}
         RS{"Serbie"}
@@ -279,7 +279,7 @@ fr{
         US{"États-Unis"}
         UY{"Uruguay"}
         UZ{"Ouzbékistan"}
-        VA{"État de la Cité du Vatican"}
+        VA{"Vatican"}
         VC{"Saint-Vincent-et-les Grenadines"}
         VE{"Venezuela"}
         VG{"Îles Vierges britanniques"}
@@ -297,6 +297,9 @@ fr{
         ZM{"Zambie"}
         ZW{"Zimbabwe"}
         ZZ{"Région indéterminée"}
+    }
+    Countries%chagos{
+        IO{"Archipel des Chagos"}
     }
     Countries%short{
         GB{"R.-U."}

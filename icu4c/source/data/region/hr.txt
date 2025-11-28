@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 hr{
@@ -129,7 +129,7 @@ hr{
         GP{"Guadalupe"}
         GQ{"Ekvatorska Gvineja"}
         GR{"Grčka"}
-        GS{"Južna Georgija i Južni Sendvički Otoci"}
+        GS{"Južna Georgia i Otočje Južni Sendvič"}
         GT{"Gvatemala"}
         GU{"Guam"}
         GW{"Gvineja Bisau"}
@@ -220,7 +220,7 @@ hr{
         PH{"Filipini"}
         PK{"Pakistan"}
         PL{"Poljska"}
-        PM{"Saint-Pierre-et-Miquelon"}
+        PM{"Sveti Petar i Mikelon"}
         PN{"Otoci Pitcairn"}
         PR{"Portoriko"}
         PS{"Palestina"}
@@ -250,7 +250,7 @@ hr{
         SO{"Somalija"}
         SR{"Surinam"}
         SS{"Južni Sudan"}
-        ST{"Sveti Toma i Princip"}
+        ST{"Sveti Toma i Prinsipe"}
         SV{"Salvador"}
         SX{"Sint Maarten"}
         SY{"Sirija"}
@@ -279,7 +279,7 @@ hr{
         US{"Sjedinjene Američke Države"}
         UY{"Urugvaj"}
         UZ{"Uzbekistan"}
-        VA{"Vatikanski Grad"}
+        VA{"Vatikan"}
         VC{"Sveti Vincent i Grenadini"}
         VE{"Venezuela"}
         VG{"Britanski Djevičanski otoci"}
@@ -298,6 +298,9 @@ hr{
         ZW{"Zimbabve"}
         ZZ{"nepoznato područje"}
     }
+    Countries%chagos{
+        IO{"Otočje Chagos"}
+    }
     Countries%short{
         GB{"UK"}
         HK{"Hong Kong"}
@@ -312,7 +315,9 @@ hr{
         CI{"Bjelokosna Obala"}
         CZ{"Češka Republika"}
         FK{"Falklandski otoci (Malvini)"}
+        NZ{"Aotearoa Novi Zeland"}
         SZ{"Svazi"}
         TL{"Istočni Timor"}
+        TR{"Türkiye"}
     }
 }

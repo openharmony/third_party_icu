@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 sv{
@@ -70,7 +70,7 @@ sv{
         BT{"Bhutan"}
         BV{"Bouvetön"}
         BW{"Botswana"}
-        BY{"Vitryssland"}
+        BY{"Belarus"}
         BZ{"Belize"}
         CA{"Kanada"}
         CC{"Kokosöarna"}
@@ -78,7 +78,7 @@ sv{
         CF{"Centralafrikanska republiken"}
         CG{"Kongo-Brazzaville"}
         CH{"Schweiz"}
-        CI{"Côte d’Ivoire"}
+        CI{"Elfenbenskusten"}
         CK{"Cooköarna"}
         CL{"Chile"}
         CM{"Kamerun"}
@@ -108,7 +108,7 @@ sv{
         ES{"Spanien"}
         ET{"Etiopien"}
         EU{"Europeiska unionen"}
-        EZ{"euroområdet"}
+        EZ{"Euroområdet"}
         FI{"Finland"}
         FJ{"Fiji"}
         FK{"Falklandsöarna"}
@@ -228,7 +228,7 @@ sv{
         PW{"Palau"}
         PY{"Paraguay"}
         QA{"Qatar"}
-        QO{"yttre öar i Oceanien"}
+        QO{"Yttre öar i Oceanien"}
         RE{"Réunion"}
         RO{"Rumänien"}
         RS{"Serbien"}
@@ -296,7 +296,10 @@ sv{
         ZA{"Sydafrika"}
         ZM{"Zambia"}
         ZW{"Zimbabwe"}
-        ZZ{"okänd region"}
+        ZZ{"Okänd region"}
+    }
+    Countries%chagos{
+        IO{"Chagosöarna"}
     }
     Countries%short{
         HK{"Hongkong"}
@@ -307,6 +310,7 @@ sv{
     Countries%variant{
         CD{"Demokratiska republiken Kongo"}
         CG{"Republiken Kongo"}
+        CI{"Côte d’Ivoire"}
         NZ{"Aotearoa Nya Zeeland"}
         TL{"Timor-Leste"}
     }

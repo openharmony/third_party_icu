@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 km{
@@ -1903,10 +1903,8 @@ km{
         "meta:Yukon"{
             ls{"ម៉ោងនៅយូខន់"}
         }
-        fallbackFormat{"{1} ({0})"}
         gmtFormat{"ម៉ោង​សកល {0}"}
         gmtZeroFormat{"ម៉ោង​សកល"}
-        hourFormat{"+HH:mm;-HH:mm"}
         regionFormat{"ម៉ោង​នៅ​ {0}"}
         regionFormatDaylight{"ម៉ោង​ពេល​ថ្ងៃ​នៅ​ {0}"}
         regionFormatStandard{"ម៉ោង​ស្តង់ដារ​នៅ ​{0}"}

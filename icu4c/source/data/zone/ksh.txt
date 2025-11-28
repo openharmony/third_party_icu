@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 ksh{
@@ -344,9 +344,6 @@ ksh{
         "meta:Seychelles"{
             ls{"Zigg vun de Seischälle"}
         }
-        fallbackFormat{"{1} ({0})"}
-        gmtFormat{"GMT{0}"}
-        hourFormat{"+HH:mm;-HH:mm"}
         regionFormat{"Zick vun {0}"}
         regionFormatDaylight{"Summerzick vun {0}"}
         regionFormatStandard{"Schtandattzick vun {0}"}

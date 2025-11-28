@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 th{
@@ -1960,10 +1960,6 @@ th{
         "meta:Yukon"{
             ls{"เวลายูคอน"}
         }
-        fallbackFormat{"{1} ({0})"}
-        gmtFormat{"GMT{0}"}
-        gmtZeroFormat{"GMT"}
-        hourFormat{"+HH:mm;-HH:mm"}
         regionFormat{"เวลา{0}"}
         regionFormatDaylight{"เวลาออมแสง{0}"}
         regionFormatStandard{"เวลามาตรฐาน{0}"}

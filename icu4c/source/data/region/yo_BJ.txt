@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 yo_BJ{
@@ -33,7 +33,7 @@ yo_BJ{
         BL{"Ìlú Bátílɛ́mì"}
         BN{"Búrúnɛ́lì"}
         BO{"Bɔ̀lífíyà"}
-        BQ{"Káríbíánì ti Nɛ́dálándì"}
+        BQ{"Kàríbíánì ti Nɛ́dálándì"}
         BW{"Bɔ̀tìsúwánà"}
         BZ{"Bèlísɛ̀"}
         CH{"switishilandi"}
@@ -107,12 +107,16 @@ yo_BJ{
         ZW{"Shimibabe"}
         ZZ{"Àgbègbè àìmɔ̀"}
     }
+    Countries%biot{
+        IO{"Àlà-ilɛ̀ Bírítéènì ní Etíkun Índíà"}
+    }
+    Countries%chagos{
+        IO{"Àkójɔpɔ̀ Àwɔn Erékùshù Shágòsì"}
+    }
     Countries%short{
         PS{"Palɛsítínì"}
     }
     Countries%variant{
-        CZ{"Shɛ́ɛ́kì"}
         TL{"Ìlà Òòrùn Tímɔ̀"}
-        TR{"Èdè Tɔɔki"}
     }
 }

@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 be{
@@ -1903,10 +1903,6 @@ be{
         "meta:Yukon"{
             ls{"Час Юкана"}
         }
-        fallbackFormat{"{1} ({0})"}
-        gmtFormat{"GMT{0}"}
-        gmtZeroFormat{"GMT"}
-        hourFormat{"+HH:mm;-HH:mm"}
         regionFormat{"Час: {0}"}
         regionFormatDaylight{"Летні час: {0}"}
         regionFormatStandard{"Стандартны час: {0}"}

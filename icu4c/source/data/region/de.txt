@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 de{
@@ -297,6 +297,9 @@ de{
         ZM{"Sambia"}
         ZW{"Simbabwe"}
         ZZ{"Unbekannte Region"}
+    }
+    Countries%chagos{
+        IO{"Chagos-Archipel"}
     }
     Countries%short{
         GB{"UK"}

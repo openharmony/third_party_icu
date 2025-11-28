@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 pa{
@@ -1938,10 +1938,6 @@ pa{
         "meta:Yukon"{
             ls{"ਯੂਕੋਨ ਸਮਾਂ"}
         }
-        fallbackFormat{"{1} ({0})"}
-        gmtFormat{"GMT{0}"}
-        gmtZeroFormat{"GMT"}
-        hourFormat{"+HH:mm;-HH:mm"}
         regionFormat{"{0} ਵੇਲਾ"}
         regionFormatDaylight{"{0} ਪ੍ਰਕਾਸ਼ ਵੇਲਾ"}
         regionFormatStandard{"{0} ਮਿਆਰੀ ਵੇਲਾ"}

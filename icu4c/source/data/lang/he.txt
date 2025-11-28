@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 he{
@@ -71,6 +71,7 @@ he{
         bez{"בנה"}
         bfd{"באפוט"}
         bg{"בולגרית"}
+        bgc{"הריאנבי"}
         bgn{"באלוצ׳י מערבית"}
         bho{"בוג׳פורי"}
         bi{"ביסלמה"}
@@ -125,7 +126,7 @@ he{
         crs{"קריאולית (סיישל)"}
         cs{"צ׳כית"}
         csb{"קשובית"}
-        csw{"סקרי של אזור הביצות"}
+        csw{"קרי של אזור הביצות"}
         cu{"סלאבית כנסייתית עתיקה"}
         cv{"צ׳ובאש"}
         cy{"וולשית"}
@@ -201,7 +202,7 @@ he{
         grb{"גרבו"}
         grc{"יוונית עתיקה"}
         gsw{"גרמנית שוויצרית"}
-        gu{"גוג׳ארטי"}
+        gu{"גוג׳ארטית"}
         guz{"גוסי"}
         gv{"מאנית"}
         gwi{"גוויצ׳ן"}
@@ -211,7 +212,7 @@ he{
         haw{"הוואית"}
         hax{"האידה דרומית"}
         he{"עברית"}
-        hi{"הינדי"}
+        hi{"הינדית"}
         hil{"היליגאינון"}
         hit{"חתית"}
         hmn{"המונג"}
@@ -437,6 +438,7 @@ he{
         ro_MD{"מולדבית"}
         rof{"רומבו"}
         rom{"רומאני"}
+        root{"רוט"}
         ru{"רוסית"}
         rup{"ארומנית"}
         rw{"קנירואנדית"}
@@ -493,7 +495,7 @@ he{
         sus{"סוסו"}
         sux{"שומרית"}
         sv{"שוודית"}
-        sw{"סווהילי"}
+        sw{"סוואהילית"}
         sw_CD{"סווהילי קונגו"}
         swb{"קומורית"}
         syc{"סירית קלאסית"}
@@ -674,7 +676,7 @@ he{
         Lana{"לאנה"}
         Laoo{"לאי"}
         Latg{"לטיני גאלי"}
-        Latn{"לטיני"}
+        Latn{"לטינית"}
         Lepc{"לפחה"}
         Limb{"לימבו"}
         Lina{"ליניארי א"}
@@ -795,10 +797,9 @@ he{
             gregorian{"לוח השנה הגרגוריאני"}
             hebrew{"לוח השנה העברי"}
             indian{"לוח השנה ההודי הלאומי"}
-            islamic{"לוח השנה המוסלמי"}
+            islamic{"לוח שנה ההיג׳רי"}
             islamic-civil{"לוח השנה המוסלמי האזרחי"}
-            islamic-rgsa{"לוח השנה המוסלמי (ערב הסעודית)"}
-            islamic-tbla{"לוח השנה המוסלמי האסטרולוגי"}
+            islamic-tbla{"לוח השנה המוסלמי האסטרונומי"}
             islamic-umalqura{"לוח השנה המוסלמי אום אל-קורא"}
             iso8601{"לוח שנה ISO-8601"}
             japanese{"לוח השנה היפני"}
@@ -1084,16 +1085,16 @@ he{
     }
     characterLabelPattern{
         all{"{0} - הכל"}
-        category-list{"{0}: {1}"}
         compatibility{"{0} - תאימות"}
         enclosed{"{0} - תחום"}
         extended{"{0} - מורחב"}
+        facing-left{"{0} פונה שמאלה"}
+        facing-right{"{0} פונה ימינה"}
         historic{"{0} - היסטורי"}
         miscellaneous{"{0} - שונות"}
         other{"{0} - אחר"}
         scripts{"כתב - {0}"}
         strokes{
-            many{"{0} משיכות מכחול"}
             one{"משיכת מכחול {0}"}
             other{"{0} משיכות מכחול"}
             two{"{0} משיכות מכחול"}
@@ -1108,7 +1109,5 @@ he{
     }
     localeDisplayPattern{
         keyTypePattern{"{0}:‏ {1}"}
-        pattern{"{0} ({1})"}
-        separator{"{0}, {1}"}
     }
 }

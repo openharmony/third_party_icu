@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 en_CA{
@@ -56,24 +56,6 @@ en_CA{
                     M{"y-MM-dd – y-MM-dd"}
                     d{"y-MM-dd – y-MM-dd"}
                     y{"y-MM-dd – y-MM-dd"}
-                }
-            }
-            monthNames{
-                format{
-                    wide{
-                        "first month",
-                        "second month",
-                        "third month",
-                        "fourth month",
-                        "fifth month",
-                        "sixth month",
-                        "seventh month",
-                        "eighth month",
-                        "ninth month",
-                        "tenth month",
-                        "eleventh month",
-                        "twelfth month",
-                    }
                 }
             }
         }
@@ -228,7 +210,7 @@ en_CA{
                 "EEEE, MMMM d, y",
                 "MMMM d, y",
                 "MMM d, y",
-                "M/d/yy",
+                "y-MM-dd",
                 "{1}, {0}",
                 "{1}, {0}",
                 "{1}, {0}",
@@ -237,7 +219,12 @@ en_CA{
             }
             availableFormats{
                 Ed{"E d"}
-                MMdd{"MM/dd"}
+                MEd{"E, MM-dd"}
+                MMdd{"MM-dd"}
+                Md{"MM-dd"}
+                yM{"y-MM"}
+                yMEd{"E, y-MM-dd"}
+                yMd{"y-MM-dd"}
             }
             dayPeriod{
                 format{
@@ -268,16 +255,6 @@ en_CA{
                         am{"a.m."}
                         pm{"p.m."}
                     }
-                }
-            }
-            eras{
-                wide{
-                    "before Christ",
-                    "Anno Domini",
-                }
-                wide%variant{
-                    "before Common Era",
-                    "Common Era",
                 }
             }
             intervalFormats{

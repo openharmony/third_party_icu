@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 dsb{
@@ -14,7 +14,7 @@ dsb{
                 "&S<š<<<Š<ś<<<Ś"
                 "&Z<ž<<<Ž<ź<<<Ź"
             }
-            Version{"42"}
+            Version{"44.1"}
         }
     }
 }

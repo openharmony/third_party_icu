@@ -1,4 +1,4 @@
-﻿// © 2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 // Generated using tools/cldr/cldr-to-icu/build-icu-data.xml
 ksb{
@@ -92,7 +92,6 @@ ksb{
         IE{"Ayalandi"}
         IL{"Islaeli"}
         IN{"India"}
-        IO{"Eneo ja Uingeeza mwe Bahali Hindi"}
         IQ{"Ilaki"}
         IR{"Uajemi"}
         IS{"Aislandi"}
