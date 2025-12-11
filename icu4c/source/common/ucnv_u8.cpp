@@ -20,6 +20,14 @@
 *   UTF-8 converter, with a branch for converting supplementary code points.
 */
 
+#if defined(__aarch64__) || defined(_M_ARM64)
+#  define ARM64_OPT_U8_TO_U16
+#endif
+
+#ifdef ARM64_OPT_U8_TO_U16
+#include <arm_neon.h>
+#endif
+
 #include "unicode/utypes.h"
 
 #if !UCONFIG_NO_CONVERSION
@@ -94,6 +102,22 @@ static void  U_CALLCONV ucnv_toUnicode_UTF8 (UConverterToUnicodeArgs * args,
         if (U8_IS_SINGLE(ch))        /* Simple case */
         {
             *(myTarget++) = (char16_t) ch;
+#ifdef ARM64_OPT_U8_TO_U16
+            while (mySource + 16 < sourceLimit && myTarget + 16 < targetLimit) {
+                uint8x16_t inByte = vld1q_u8(mySource);
+                if (vminvq_s8(vreinterpretq_s8_u8(inByte)) >= 0) {
+                    int8x16x2_t pair = {{vreinterpretq_s8_u8(inByte), vmovq_n_s8(0)}};
+                    vst2q_s8((int8_t *)(myTarget), pair);
+                    mySource += 16;
+                    myTarget += 16;
+                } else {
+                    break;
+                }
+            }
+            while (mySource < sourceLimit && myTarget < targetLimit && U8_IS_SINGLE(*mySource)) {
+                *(myTarget++) = (char16_t)(*(mySource++));
+            }
+#endif
         }
         else
         {
