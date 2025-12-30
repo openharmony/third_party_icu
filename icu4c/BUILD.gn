@@ -598,6 +598,7 @@ ohos_shared_library("shared_icui18n") {
   if (!is_mingw) {
     cflags_cc += [ "-fPIC" ]
     ldflags += [ "-ldl" ]
+    version_script = "libhmicui18n.versionscript"
   }
 
   part_name = "$icu_part_name"
