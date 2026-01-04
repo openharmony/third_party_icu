@@ -276,7 +276,7 @@ group("icuuc_win") {
 }
 
 group("icui18n_host") {
-  deps = [ "//third_party/icu/icu4c:static_icui18n(${host_toolchain})" ]
+  deps = [ "//third_party/icu/icu4c:shared_icui18n(${host_toolchain})" ]
 }
 
 ohos_shared_library("shared_icutu") {
