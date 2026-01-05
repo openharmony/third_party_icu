@@ -565,6 +565,10 @@ ohos_shared_library("shared_icui18n") {
     "-lm",
   ]
 
+  if (!build_ohos_sdk) {
+    version_script = "libhmicui18n.versionscript"
+  }
+
   sources = icu_i18n_source
   configs = [
     ":icu_config",
