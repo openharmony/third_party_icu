@@ -783,46 +783,46 @@ ms{
         }
         digital{
             bit{
-                other{"{0}bit"}
+                other{"{0} bit"}
             }
             byte{
                 dnam{"B"}
-                other{"{0}B"}
+                other{"{0} B"}
             }
             gigabit{
                 dnam{"Gb"}
-                other{"{0}Gb"}
+                other{"{0} Gb"}
             }
             gigabyte{
                 dnam{"GB"}
-                other{"{0}GB"}
+                other{"{0} GB"}
             }
             kilobit{
                 dnam{"kb"}
-                other{"{0}kb"}
+                other{"{0} kb"}
             }
             kilobyte{
                 dnam{"KB"}
-                other{"{0}KB"}
+                other{"{0} KB"}
             }
             megabit{
                 dnam{"Mb"}
-                other{"{0}Mb"}
+                other{"{0} Mb"}
             }
             megabyte{
                 dnam{"MB"}
-                other{"{0}MB"}
+                other{"{0} MB"}
             }
             petabyte{
-                other{"{0}PB"}
+                other{"{0} PB"}
             }
             terabit{
                 dnam{"Tb"}
-                other{"{0}Tb"}
+                other{"{0} Tb"}
             }
             terabyte{
                 dnam{"TB"}
-                other{"{0}TB"}
+                other{"{0} TB"}
             }
         }
         duration{
