@@ -645,37 +645,37 @@ th{
         }
         digital{
             bit{
-                other{"{0}บิต"}
+                other{"{0} bit"}
             }
             byte{
-                other{"{0}ไบต์"}
+                other{"{0} B"}
             }
             gigabit{
-                other{"{0}Gb"}
+                other{"{0} Gb"}
             }
             gigabyte{
-                other{"{0}GB"}
+                other{"{0} GB"}
             }
             kilobit{
-                other{"{0}kb"}
+                other{"{0} kb"}
             }
             kilobyte{
-                other{"{0}KB"}
+                other{"{0} KB"}
             }
             megabit{
-                other{"{0}Mb"}
+                other{"{0} Mb"}
             }
             megabyte{
-                other{"{0}MB"}
+                other{"{0} MB"}
             }
             petabyte{
-                other{"{0}PB"}
+                other{"{0} PB"}
             }
             terabit{
-                other{"{0}Tb"}
+                other{"{0} Tb"}
             }
             terabyte{
-                other{"{0}TB"}
+                other{"{0} TB"}
             }
         }
         duration{
