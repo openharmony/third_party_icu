@@ -23,8 +23,9 @@ namespace OHOS {
 namespace ICU {
 class LunarCalendar {
 public:
-    static int32_t NewYear(int32_t gyear);
+    static int32_t NewYear(int32_t eyear);
     static int32_t NewMoonNear(int32_t days);
+    static const std::string LunarType;
 
     LunarCalendar();
     ~LunarCalendar();
@@ -43,14 +44,16 @@ public:
     bool IsLeapMonth();
 
 private:
-    static int32_t GetDaysPerLunarYear(int32_t lunarYear);
+    static int32_t GetDaysPerLunarYear(int32_t year);
     static bool IsGregorianLeapYear(int32_t year);
-    static int32_t CalcDaysFromBaseDate(int32_t year, int32_t month, int32_t day);
+    static int32_t GetLeapDaysInYear(int32_t year);
+    static int32_t GetLeapMonthInYear(int32_t year);
+    static int32_t GetDaysInMonth(int32_t year, int32_t month);
 
     bool VerifyDate(int32_t year, int32_t month, int32_t day);
-    void SolorDateToLunarDate();
-    void AdjustLeapMonth(int32_t& i, int32_t tempDaysCounts, int32_t leapMonth);
-
+    int32_t CalcDaysFromBaseDate(int32_t year, int32_t month, int32_t day);
+    void SolarDateToLunarDate();
+    void AdjustLeapMonth(int32_t& i, int32_t tempDaysCounts, int32_t month);
     static const int32_t VALID_START_YEAR = 1900;
     static const int32_t VALID_END_YEAR = 2100;
     static const int32_t VALID_START_MONTH = 1;
@@ -67,9 +70,9 @@ private:
     static const int32_t DAYS_IN_BIG_MONTH = 30;
     static const int32_t DAYS_IN_SMALL_MONTH = 29;
 
-    int32_t solorYear = -1;
-    int32_t solorMonth = -1;
-    int32_t solorDay = -1;
+    int32_t solarYear = -1;
+    int32_t solarMonth = -1;
+    int32_t solarDay = -1;
     int32_t lunarYear = -1;
     int32_t lunarMonth = -1;
     int32_t lunarDay = -1;
