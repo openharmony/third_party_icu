@@ -14,8 +14,10 @@
  */
 #include "lunar_calendar.h"
 
+
 namespace OHOS {
 namespace ICU {
+const std::string LunarCalendar::LunarType = "chinese";
 static const int32_t CYCLE_LENGTH = 60;
 static const int32_t CHINESE_EPOCH_YEAR = -2636;
 static const int32_t LUNAR1900_TO_SOLAR1970 = 25538;
@@ -27,28 +29,59 @@ static const std::vector<int32_t> accDaysOfMonth {
 };
 
 static const std::vector<uint32_t> lunarDateInfo {
-    0x4bd8, 0x4ae0, 0xa570, 0x54d5, 0xd260, 0xd950, 0x5554, 0x56af, 0x9ad0, 0x55d2,
-    0x4ae0, 0xa5b6, 0xa4d0, 0xd250, 0xd295, 0xb54f, 0xd6a0, 0xada2, 0x95b0, 0x4977,
-    0x497f, 0xa4b0, 0xb4b5, 0x6a50, 0x6d40, 0xab54, 0x2b6f, 0x9570, 0x52f2, 0x4970,
-    0x6566, 0xd4a0, 0xea50, 0x6a95, 0x5adf, 0x2b60, 0x86e3, 0x92ef, 0xc8d7, 0xc95f,
-    0xd4a0, 0xd8a6, 0xb55f, 0x56a0, 0xa5b4, 0x25df, 0x92d0, 0xd2b2, 0xa950, 0xb557,
-    0x6ca0, 0xb550, 0x5355, 0x4daf, 0xa5b0, 0x4573, 0x52bf, 0xa9a8, 0xe950, 0x6aa0,
-    0xaea6, 0xab50, 0x4b60, 0xaae4, 0xa570, 0x5260, 0xf263, 0xd950, 0x5b57, 0x56a0,
-    0x96d0, 0x4dd5, 0x4ad0, 0xa4d0, 0xd4d4, 0xd250, 0xd558, 0xb540, 0xb6a0, 0x95a6,
-    0x95bf, 0x49b0, 0xa974, 0xa4b0, 0xb27a, 0x6a50, 0x6d40, 0xaf46, 0xab60, 0x9570,
-    0x4af5, 0x4970, 0x64b0, 0x74a3, 0xea50, 0x6b58, 0x5ac0, 0xab60, 0x96d5, 0x92e0,
-    0xc960, 0xd954, 0xd4a0, 0xda50, 0x7552, 0x56a0, 0xabb7, 0x25d0, 0x92d0, 0xcab5,
-    0xa950, 0xb4a0, 0xbaa4, 0xad50, 0x55d9, 0x4ba0, 0xa5b0, 0x5176, 0x52bf, 0xa930,
-    0x7954, 0x6aa0, 0xad50, 0x5b52, 0x4b60, 0xa6e6, 0xa4e0, 0xd260, 0xea65, 0xd530,
-    0x5aa0, 0x76a3, 0x96d0, 0x4afb, 0x4ad0, 0xa4d0, 0xd0b6, 0xd25f, 0xd520, 0xdd45,
-    0xb5a0, 0x56d0, 0x55b2, 0x49b0, 0xa577, 0xa4b0, 0xaa50, 0xb255, 0x6d2f, 0xada0,
-    0x4b63, 0x937f, 0x49f8, 0x4970, 0x64b0, 0x68a6, 0xea5f, 0x6b20, 0xa6c4, 0xaaef,
-    0x92e0, 0xd2e3, 0xc960, 0xd557, 0xd4a0, 0xda50, 0x5d55, 0x56a0, 0xa6d0, 0x55d4,
-    0x52d0, 0xa9b8, 0xa950, 0xb4a0, 0xb6a6, 0xad50, 0x55a0, 0xaba4, 0xa5b0, 0x52b0,
-    0xb273, 0x6930, 0x7337, 0x6aa0, 0xad50, 0x4b55, 0x4b6f, 0xa570, 0x54e4, 0xd260,
-    0xe968, 0xd520, 0xdaa0, 0x6aa6, 0x56df, 0x4ae0, 0xa9d4, 0xa4d0, 0xd150, 0xf252,
-    0xd520,
+    0x04bd8, 0x04ae0, 0x0a570, 0x054d5, 0x0d260, 0x0d950, 0x16554, 0x056a0, 0x09ad0, 0x055d2,
+    0x04ae0, 0x0a5b6, 0x0a4d0, 0x0d250, 0x1d255, 0x0b540, 0x0d6a0, 0x0ada2, 0x095b0, 0x14977,
+    0x04970, 0x0a4b0, 0x0b4b5, 0x06a50, 0x06d40, 0x1ab54, 0x02b60, 0x09570, 0x052f2, 0x04970,
+    0x06566, 0x0d4a0, 0x0ea50, 0x16a95, 0x05ad0, 0x02b60, 0x186e3, 0x092e0, 0x1c8d7, 0x0c950,
+    0x0d4a0, 0x1d8a6, 0x0b550, 0x056a0, 0x1a5b4, 0x025d0, 0x092d0, 0x0d2b2, 0x0a950, 0x0b557,
+    0x06ca0, 0x0b550, 0x15355, 0x04da0, 0x0a5b0, 0x14573, 0x052b0, 0x0a9a8, 0x0e950, 0x06aa0,
+    0x0aea6, 0x0ab50, 0x04b60, 0x0aae4, 0x0a570, 0x05260, 0x0f263, 0x0d950, 0x05b57, 0x056a0,
+    0x096d0, 0x04dd5, 0x04ad0, 0x0a4d0, 0x0d4d4, 0x0d250, 0x0d558, 0x0b540, 0x0b6a0, 0x195a6,
+    0x095b0, 0x049b0, 0x0a974, 0x0a4b0, 0x0b27a, 0x06a50, 0x06d40, 0x0af46, 0x0ab60, 0x09570,
+    0x04af5, 0x04970, 0x064b0, 0x074a3, 0x0ea50, 0x06b58, 0x05ac0, 0x0ab60, 0x096d5, 0x092e0,
+    0x0c960, 0x0d954, 0x0d4a0, 0x0da50, 0x07552, 0x056a0, 0x0abb7, 0x025d0, 0x092d0, 0x0cab5,
+    0x0a950, 0x0b4a0, 0x0baa4, 0x0ad50, 0x055d9, 0x04ba0, 0x0a5b0, 0x15176, 0x052b0, 0x0a930,
+    0x07954, 0x06aa0, 0x0ad50, 0x05b52, 0x04b60, 0x0a6e6, 0x0a4e0, 0x0d260, 0x0ea65, 0x0d530,
+    0x05aa0, 0x076a3, 0x096d0, 0x04afb, 0x04ad0, 0x0a4d0, 0x1d0b6, 0x0d250, 0x0d520, 0x0dd45,
+    0x0b5a0, 0x056d0, 0x055b2, 0x049b0, 0x0a577, 0x0a4b0, 0x0aa50, 0x1b255, 0x06d20, 0x0ada0,
+    0x14b63, 0x09370, 0x049f8, 0x04970, 0x064b0, 0x168a6, 0x0ea50, 0x06aa0, 0x1a6c4, 0x0aae0,
+    0x092e0, 0x0d2e3, 0x0c960, 0x0d557, 0x0d4a0, 0x0da50, 0x05d55, 0x056a0, 0x0a6d0, 0x055d4,
+    0x052d0, 0x0a9b8, 0x0a950, 0x0b4a0, 0x0b6a6, 0x0ad50, 0x055a0, 0x0aba4, 0x0a5b0, 0x052b0,
+    0x0b273, 0x06930, 0x07337, 0x06aa0, 0x0ad50, 0x14b55, 0x04b60, 0x0a570, 0x054e4, 0x0d160,
+    0x0e968, 0x0d520, 0x0daa0, 0x16aa6, 0x056d0, 0x04ae0, 0x0a9d4, 0x0a2d0, 0x0d150, 0x0f252,
+    0x0d520,
 };
+
+int32_t LunarCalendar::GetLeapDaysInYear(int32_t year)
+{
+    if ((year < VALID_START_YEAR) || (year > VALID_END_YEAR)) {
+        return -1;
+    }
+    if (GetLeapMonthInYear(year) != 0) {
+        return (lunarDateInfo[year - START_YEAR] & 0x10000) == 0x10000 ? DAYS_IN_BIG_MONTH : DAYS_IN_SMALL_MONTH;
+      }
+      return 0;
+}
+
+int32_t LunarCalendar::GetLeapMonthInYear(int32_t year)
+{
+    if ((year < VALID_START_YEAR) || (year > VALID_END_YEAR)) {
+        return -1;
+    }
+    return lunarDateInfo[year - START_YEAR] & 0xf;
+}
+
+int32_t LunarCalendar::GetDaysInMonth(int32_t year, int32_t month)
+{
+    if ((year < VALID_START_YEAR) || (year > VALID_END_YEAR)) {
+        return -1;
+    }
+    if ((month > VALID_END_MONTH) || (month < VALID_START_MONTH)) {
+        return -1;
+    }
+    uint32_t offset = 0x10000 >> static_cast<uint32_t>(month);
+    return (lunarDateInfo[year - START_YEAR] & offset) == offset ? DAYS_IN_BIG_MONTH : DAYS_IN_SMALL_MONTH;
+}
 
 LunarCalendar::LunarCalendar()
 {
@@ -66,35 +99,35 @@ bool LunarCalendar::SetDaysFrom1970(int32_t year, int32_t month, int32_t daysFro
     if (!isValidDate) {
         return false;
     }
-    solorYear = year;
-    solorMonth = month;
-    solorDay = day;
-    daysCounts = CalcDaysFromBaseDate(solorYear, solorMonth, solorDay);
-    SolorDateToLunarDate();
+    solarYear = year;
+    solarMonth = month;
+    solarDay = day;
+    daysCounts = CalcDaysFromBaseDate(solarYear, solarMonth, solarDay);
+    SolarDateToLunarDate();
     return true;
 }
 
 int32_t LunarCalendar::CalcDaysFromBaseDate(int32_t year, int32_t month, int32_t day)
 {
-    int32_t daysCounts = DAYS_OF_YEAR * (year - START_YEAR);
-    daysCounts += accDaysOfMonth[month - 1];
-    bool isGregorianLeapYear = IsGregorianLeapYear(year);
-    if (isGregorianLeapYear && month > MONTH_FEB) {
-        daysCounts++;
+    int32_t daysNum = DAYS_OF_YEAR * (year - START_YEAR);
+    daysNum += accDaysOfMonth[month - 1];
+    bool isLeapYear = IsGregorianLeapYear(year);
+    if (isLeapYear && month > MONTH_FEB) {
+        daysNum++;
     }
-    daysCounts--;
-    daysCounts += day;
-    daysCounts += (year - START_YEAR) / FREQ_LEAP_YEAR;
-    if (isGregorianLeapYear) {
-        daysCounts--;
+    daysNum--;
+    daysNum += day;
+    daysNum += (year - START_YEAR) / FREQ_LEAP_YEAR;
+    if (isLeapYear) {
+        daysNum--;
     }
     if (year >= VALID_END_YEAR) {
-        daysCounts--;
+        daysNum--;
     }
-    return daysCounts;
+    return daysNum;
 }
 
-void LunarCalendar::SolorDateToLunarDate()
+void LunarCalendar::SolarDateToLunarDate()
 {
     int32_t daysInPerLunarYear = 0;
     int32_t daysInPerLunarMonth = 0;
@@ -111,18 +144,15 @@ void LunarCalendar::SolorDateToLunarDate()
     }
     lunarYear = i;
 
-    leapMonth = lunarDateInfo[lunarYear - START_YEAR] & 0xf;
-    leapMonth = (leapMonth == 0xf) ? 0 : leapMonth;
+    leapMonth = GetLeapMonthInYear(lunarYear);
     isLeapMonth = false;
     for (i = 1; i <= VALID_END_MONTH && tempDaysCounts > 0; i++) {
         if (leapMonth > 0 && (leapMonth + 1) == i && !isLeapMonth) {
             --i;
             isLeapMonth = true;
-            daysInPerLunarMonth = ((lunarDateInfo[lunarYear - START_YEAR + 1] & 0xf) == 0xf) ? DAYS_IN_BIG_MONTH :
-                DAYS_IN_SMALL_MONTH;
+            daysInPerLunarMonth = GetLeapDaysInYear(lunarYear);
         } else {
-            daysInPerLunarMonth = ((lunarDateInfo[lunarYear - START_YEAR] &
-                (0x8000 >> (i - 1))) == (0x8000 >> (i - 1))) ? DAYS_IN_BIG_MONTH : DAYS_IN_SMALL_MONTH;
+            daysInPerLunarMonth = GetDaysInMonth(lunarYear, i);
         }
         if (isLeapMonth && (leapMonth + 1) == i) {
             isLeapMonth = false;
@@ -138,9 +168,9 @@ void LunarCalendar::SolorDateToLunarDate()
     lunarDay = tempDaysCounts + 1;
 }
 
-void LunarCalendar::AdjustLeapMonth(int32_t& i, int32_t tempDaysCounts, int32_t leapMonth)
+void LunarCalendar::AdjustLeapMonth(int32_t& i, int32_t tempDaysCounts, int32_t month)
 {
-    if (tempDaysCounts == 0 && leapMonth > 0 && i == leapMonth + 1) {
+    if (tempDaysCounts == 0 && month > 0 && i == month + 1) {
         if (isLeapMonth) {
             isLeapMonth = false;
         } else {
@@ -150,21 +180,17 @@ void LunarCalendar::AdjustLeapMonth(int32_t& i, int32_t tempDaysCounts, int32_t 
     }
 }
 
-int32_t LunarCalendar::GetDaysPerLunarYear(int32_t lunarYear)
+int32_t LunarCalendar::GetDaysPerLunarYear(int32_t year)
 {
     int32_t daysPerLunarYear = 0;
-    if ((lunarYear < START_YEAR) || (lunarYear > END_YEAR)) {
+    if ((year < START_YEAR) || (year > END_YEAR)) {
         return 0;
     }
     daysPerLunarYear += BASE_DAYS_PER_LUNAR_YEAR;
     for (uint32_t i = 0x8000; i > 0x8; i = i >> 1) {
-        daysPerLunarYear += ((lunarDateInfo[lunarYear - START_YEAR] & i) == i) ? 1 : 0;
+        daysPerLunarYear += ((lunarDateInfo[year - START_YEAR] & i) == i) ? 1 : 0;
     }
-    if (((lunarDateInfo[lunarYear - START_YEAR] & 0xf) != 0) &&
-        ((lunarDateInfo[lunarYear - START_YEAR] & 0xf) != 0xf)) {
-        daysPerLunarYear += ((lunarDateInfo[lunarYear - START_YEAR + 1] & 0xf) == 0xf) ? DAYS_IN_BIG_MONTH :
-            DAYS_IN_SMALL_MONTH;
-    }
+    daysPerLunarYear += GetLeapDaysInYear(year);
     return daysPerLunarYear;
 }
 
@@ -209,7 +235,7 @@ int32_t LunarCalendar::GetSolarYear()
     if (!isValidDate) {
         return -1;
     }
-    return solorYear;
+    return solarYear;
 }
 
 int32_t LunarCalendar::GetSolarMonth()
@@ -217,7 +243,7 @@ int32_t LunarCalendar::GetSolarMonth()
     if (!isValidDate) {
         return -1;
     }
-    return solorMonth;
+    return solarMonth;
 }
 
 int32_t LunarCalendar::GetSolarDay()
@@ -225,7 +251,7 @@ int32_t LunarCalendar::GetSolarDay()
     if (!isValidDate) {
         return -1;
     }
-    return solorDay;
+    return solarDay;
 }
 
 int32_t LunarCalendar::GetLunarYear()
@@ -287,22 +313,16 @@ int32_t LunarCalendar::GetDateOfYear()
         return -1;
     }
     int32_t lunarDayOfYear = 0;
-    int32_t currentLunarMonth = lunarMonth;
-    bool isCurrentLeap = isLeapMonth;
 
-    for (int32_t month = 1; month < currentLunarMonth; ++month) {
-        bool isBigMonth = ((lunarDateInfo[lunarYear - START_YEAR] & (0x8000 >> (month - 1))) == (0x8000 >> (month - 1)));
-        lunarDayOfYear += isBigMonth ? DAYS_IN_BIG_MONTH : DAYS_IN_SMALL_MONTH;
+    for (int32_t month = 1; month < lunarMonth; ++month) {
+        lunarDayOfYear += GetDaysInMonth(lunarYear, month);
     }
 
     if (leapMonth > 0) {
-        if (currentLunarMonth > leapMonth) {
-            bool isLeapMonthBig = ((lunarDateInfo[lunarYear - START_YEAR + 1] & 0xf) == 0xf) ? DAYS_IN_BIG_MONTH : DAYS_IN_SMALL_MONTH;
-            lunarDayOfYear += isLeapMonthBig ? DAYS_IN_BIG_MONTH : DAYS_IN_SMALL_MONTH;
-        }
-        else if (isCurrentLeap && (currentLunarMonth == leapMonth)) {
-            bool isLeapMonthBig = ((lunarDateInfo[lunarYear - START_YEAR + 1] & 0xf) == 0xf) ? DAYS_IN_BIG_MONTH : DAYS_IN_SMALL_MONTH;
-            lunarDayOfYear += isLeapMonthBig ? DAYS_IN_BIG_MONTH : DAYS_IN_SMALL_MONTH;
+        if (lunarMonth > leapMonth){
+            lunarDayOfYear += GetLeapDaysInYear(lunarYear);
+        } else if (isLeapMonth && (lunarMonth == leapMonth)) {
+            lunarDayOfYear += GetDaysInMonth(lunarYear, lunarMonth);
         }
     }
     lunarDayOfYear += lunarDay;
@@ -341,44 +361,41 @@ int32_t LunarCalendar::NewYear(int32_t eyear)
         return -1;
     }
 
-    int32_t daysCounts = 0;
+    int32_t daysNum = 0;
     for (int32_t i = START_YEAR; i < lyear; i++) {
-        daysCounts += GetDaysPerLunarYear(i);
+        daysNum += GetDaysPerLunarYear(i);
     }
     
-    return daysCounts + 1 - LUNAR1900_TO_SOLAR1970;
+    return daysNum + 1 - LUNAR1900_TO_SOLAR1970;
 }
 
 int32_t LunarCalendar::NewMoonNear(int32_t days)
 {
-    int32_t daysCounts = days + LUNAR1900_TO_SOLAR1970 - 1;
+    int32_t daysNum = days + LUNAR1900_TO_SOLAR1970 - 1;
     int32_t year = START_YEAR;
-    for (; year < END_YEAR && daysCounts >= GetDaysPerLunarYear(year); year++) {
-        daysCounts -= GetDaysPerLunarYear(year);
+    for (; year < END_YEAR && daysNum >= GetDaysPerLunarYear(year); year++) {
+        daysNum -= GetDaysPerLunarYear(year);
     }
     if (year >= END_YEAR || year < START_YEAR) {
         return -1;
     }
     
-    int32_t leapMonth = lunarDateInfo[year - START_YEAR] & 0xf;
-    leapMonth = (leapMonth == 0xf) ? 0 : leapMonth;
-    bool isLeapMonth = false;
+    int32_t leapMonthInYear = GetLeapMonthInYear(year);
+    bool isLeapMonthInYear = false;
     int32_t daysInPerLunarMonth = 0;
     int32_t nearestNewMoon = 0;
-    for (int32_t i = 1; i <= VALID_END_MONTH && daysCounts > 0; i++) {
-        if (leapMonth > 0 && (leapMonth + 1) == i && !isLeapMonth) {
+    for (int32_t i = 1; i <= VALID_END_MONTH && daysNum > 0; i++) {
+        if (leapMonthInYear > 0 && (leapMonthInYear + 1) == i && !isLeapMonthInYear) {
             --i;
-            isLeapMonth = true;
-            daysInPerLunarMonth = ((lunarDateInfo[year - START_YEAR + 1] & 0xf) == 0xf) ? DAYS_IN_BIG_MONTH :
-                DAYS_IN_SMALL_MONTH;
+            isLeapMonthInYear = true;
+            daysInPerLunarMonth = GetLeapDaysInYear(year);
         } else {
-            daysInPerLunarMonth = ((lunarDateInfo[year - START_YEAR] &
-                (0x8000 >> (i - 1))) == (0x8000 >> (i - 1))) ? DAYS_IN_BIG_MONTH : DAYS_IN_SMALL_MONTH;
+            daysInPerLunarMonth = GetDaysInMonth(year, i);
         }
-        if (isLeapMonth && (leapMonth + 1) == i) {
-            isLeapMonth = false;
+        if (isLeapMonthInYear && (leapMonthInYear + 1) == i) {
+            isLeapMonthInYear = false;
         }
-        daysCounts -= daysInPerLunarMonth;
+        daysNum -= daysInPerLunarMonth;
         nearestNewMoon += daysInPerLunarMonth;
     }
 
@@ -388,8 +405,7 @@ int32_t LunarCalendar::NewMoonNear(int32_t days)
     }
     totalNewMoonDays += nearestNewMoon;
     
-    int32_t result = totalNewMoonDays + 1 - LUNAR1900_TO_SOLAR1970;
-    return (result < 0) ? -1 : result;
+    return totalNewMoonDays + 1 - LUNAR1900_TO_SOLAR1970;
 }
 } // namespace ICU
 } // namespace OHOS
