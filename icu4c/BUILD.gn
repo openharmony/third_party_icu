@@ -503,6 +503,7 @@ icu_i18n_source = [
   "//third_party/icu/icu4c/source/i18n/nfrule.cpp",
   "//third_party/icu/icu4c/source/i18n/iso8601cal.cpp",
   "//third_party/icu/icu4c/source/i18n/number_simple.cpp",
+  "//third_party/icu/icu4c/source/ohos/lunar_calendar.cpp",
 ]
 
 ohos_shared_library("shared_icuuc") {

@@ -25,6 +25,7 @@
 #include <float.h>
 #include "gregoimp.h" // Math
 #include "astro.h" // CalendarAstronomer
+#include "ohos/lunar_calendar.h"
 #include "unicode/simpletz.h"
 #include "uhash.h"
 #include "ucln_in.h"
@@ -338,6 +339,16 @@ int32_t ChineseCalendar::handleComputeMonthStart(int32_t eyear, int32_t month, U
     int32_t gyear = eyear + fEpochYear - 1; // Gregorian year
     int32_t theNewYear = newYear(gyear);
     int32_t newMoon = newMoonNear(theNewYear + month * 29, true);
+
+    /* <issue:https://gitcode.com/openharmony/third_party_icu/issues/259> 20260116 begin */
+    int32_t theNewYearTemp = OHOS::ICU::LunarCalendar::NewYear(eyear);
+    int32_t newMoonTemp = OHOS::ICU::LunarCalendar::NewMoonNear(theNewYearTemp + month * 29);
+    if (theNewYearTemp != -1 && newMoonTemp != -1 && getType() == OHOS::ICU::LunarCalendar::LunarType) {
+        theNewYear = theNewYearTemp;
+        newMoon = newMoonTemp;
+    }
+    newMoonTemp = newMoon;
+    /* <issue:https://gitcode.com/openharmony/third_party_icu/issues/259> 20260116 end */
     
     int32_t julianDay = newMoon + kEpochStartAsJulianDay;
 
@@ -361,6 +372,12 @@ int32_t ChineseCalendar::handleComputeMonthStart(int32_t eyear, int32_t month, U
     if (month != internalGet(UCAL_MONTH) ||
         isLeapMonth != internalGet(UCAL_IS_LEAP_MONTH)) {
         newMoon = newMoonNear(newMoon + SYNODIC_GAP, true);
+        /* <issue:https://gitcode.com/openharmony/third_party_icu/issues/259> 20260116 begin */
+        newMoonTemp = OHOS::ICU::LunarCalendar::NewMoonNear(newMoonTemp + SYNODIC_GAP);
+        if (newMoonTemp != -1 && getType() == OHOS::ICU::LunarCalendar::LunarType) {
+            newMoon = newMoonTemp;
+        }
+        /* <issue:https://gitcode.com/openharmony/third_party_icu/issues/259> 20260116 end */
         julianDay = newMoon + kEpochStartAsJulianDay;
     }
 
@@ -703,6 +720,24 @@ void ChineseCalendar::computeChineseFields(int32_t days, int32_t gyear, int32_t 
     int32_t thisMoon = newMoonNear(days + 1, false); // Start of this month
     // Note: hasLeapMonthBetweenWinterSolstices is a member variable
     hasLeapMonthBetweenWinterSolstices = synodicMonthsBetween(firstMoon, lastMoon) == 12;
+
+    /* <issue:https://gitcode.com/openharmony/third_party_icu/issues/259> 20260116 begin */
+    OHOS::ICU::LunarCalendar lunarCalendar;
+    bool isValid = lunarCalendar.SetDaysFrom1970(gyear, gmonth + 1, days);
+    if (isValid && getType() == OHOS::ICU::LunarCalendar::LunarType) {
+        internalSet(UCAL_MONTH, lunarCalendar.GetLunarMonth() - 1); // Convert from 1-based to 0-based
+        internalSet(UCAL_ORDINAL_MONTH, lunarCalendar.GetOrdinalMonth() - 1); // Convert from 1-based to 0-based
+        internalSet(UCAL_IS_LEAP_MONTH, lunarCalendar.IsLeapMonth()?1:0);
+        if (setAllFields) {
+            internalSet(UCAL_EXTENDED_YEAR, lunarCalendar.GetExtendedYear());
+            internalSet(UCAL_ERA, lunarCalendar.GetEra());
+            internalSet(UCAL_YEAR, lunarCalendar.GetCycleYear());
+            internalSet(UCAL_DAY_OF_MONTH, lunarCalendar.GetLunarDay());
+            internalSet(UCAL_DAY_OF_YEAR, lunarCalendar.GetDateOfYear());
+        }
+        return;
+    }
+    /* <issue:https://gitcode.com/openharmony/third_party_icu/issues/259> 20260116 end */
 
     int32_t month = synodicMonthsBetween(firstMoon, thisMoon);
     int32_t theNewYear = newYear(gyear);
