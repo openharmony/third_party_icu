@@ -59,8 +59,8 @@ int32_t LunarCalendar::GetLeapDaysInYear(int32_t year)
     }
     if (GetLeapMonthInYear(year) != 0) {
         return (lunarDateInfo[year - START_YEAR] & 0x10000) == 0x10000 ? DAYS_IN_BIG_MONTH : DAYS_IN_SMALL_MONTH;
-      }
-      return 0;
+    }
+    return 0;
 }
 
 int32_t LunarCalendar::GetLeapMonthInYear(int32_t year)
@@ -146,7 +146,8 @@ void LunarCalendar::SolarDateToLunarDate()
 
     leapMonth = GetLeapMonthInYear(lunarYear);
     isLeapMonth = false;
-    for (i = 1; i <= VALID_END_MONTH && tempDaysCounts > 0; i++) {
+    i = 1;
+    while (i <= VALID_END_MONTH && tempDaysCounts > 0) {
         if (leapMonth > 0 && (leapMonth + 1) == i && !isLeapMonth) {
             --i;
             isLeapMonth = true;
@@ -158,6 +159,7 @@ void LunarCalendar::SolarDateToLunarDate()
             isLeapMonth = false;
         }
         tempDaysCounts -= daysInPerLunarMonth;
+        ++i;
     }
     AdjustLeapMonth(i, tempDaysCounts, leapMonth);
     if (tempDaysCounts < 0) {
@@ -384,7 +386,8 @@ int32_t LunarCalendar::NewMoonNear(int32_t days)
     bool isLeapMonthInYear = false;
     int32_t daysInPerLunarMonth = 0;
     int32_t nearestNewMoon = 0;
-    for (int32_t i = 1; i <= VALID_END_MONTH && daysNum > 0; i++) {
+    int32_t i = 1;
+    while (i <= VALID_END_MONTH && daysNum > 0) {
         if (leapMonthInYear > 0 && (leapMonthInYear + 1) == i && !isLeapMonthInYear) {
             --i;
             isLeapMonthInYear = true;
@@ -397,11 +400,12 @@ int32_t LunarCalendar::NewMoonNear(int32_t days)
         }
         daysNum -= daysInPerLunarMonth;
         nearestNewMoon += daysInPerLunarMonth;
+        ++i;
     }
 
     int32_t totalNewMoonDays = 0;
-    for (int32_t i = START_YEAR; i < year; i++) {
-        totalNewMoonDays += GetDaysPerLunarYear(i);
+    for (int32_t j = START_YEAR; j < year; j++) {
+        totalNewMoonDays += GetDaysPerLunarYear(j);
     }
     totalNewMoonDays += nearestNewMoon;
     
