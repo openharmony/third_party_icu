@@ -17216,9 +17216,11 @@ FFE6; [0D C4, 05, 20]
 
 20C0; [0D F4, 05, 05]
 
-20A8; [0D F6, 05, 05]
+20C1; [0D F6, 05, 05]
 
-FDFC; [0D F8, 05, 05]
+20A8; [0D F8, 05, 05]
+
+FDFC; [0D FA, 05, 05]
 
 FDD1 0034;	[0E 02 02, 05, 05]	# DIGIT first primary starts new lead byte
 
