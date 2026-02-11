@@ -11387,7 +11387,7 @@ E0100..E01EF  ; Grapheme_Extend
 208D          ; Grapheme_Base
 208E          ; Grapheme_Base
 2090..209C    ; Grapheme_Base
-20A0..20C0    ; Grapheme_Base
+20A0..20C1    ; Grapheme_Base
 2100..2101    ; Grapheme_Base
 2102          ; Grapheme_Base
 2103..2106    ; Grapheme_Base
@@ -12523,7 +12523,7 @@ FFFC..FFFD    ; Grapheme_Base
 30000..3134A  ; Grapheme_Base
 31350..323AF  ; Grapheme_Base
 
-# Total code points: 147613
+# Total code points: 147614
 
 # ================================================
 
