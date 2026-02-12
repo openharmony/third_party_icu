@@ -10018,7 +10018,8 @@ cp;20BD;age=7.0;na=RUBLE SIGN
 cp;20BE;age=8.0;lb=PO;na=LARI SIGN
 cp;20BF;age=10.0;na=BITCOIN SIGN
 cp;20C0;age=14.0;lb=PO;na=SOM SIGN
-unassigned;20C1..20CF;bc=ET;lb=PR
+cp;20C1;age=14.0;na=SAUDI RIYAL SIGN
+unassigned;20C2..20CF;bc=ET;lb=PR
 
 block;20D0..20FF;age=1.1;bc=NSM;blk=Diacriticals_For_Symbols;ccc=230;CI;gc=Mn;GCB=EX;Gr_Ext;IDC;InCB=Extend;jt=T;lb=CM;Math;SB=EX;sc=Zinh;WB=Extend;XIDC
 # 20D0..20FF Combining Diacritical Marks for Symbols
