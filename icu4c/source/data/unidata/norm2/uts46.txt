@@ -2446,7 +2446,8 @@
 # 20BE        valid                     # 8.0  LARI SIGN
 # 20BF        valid                     # 10.0 BITCOIN SIGN
 # 20C0        valid                     # 14.0 SOM SIGN
-20C1..20CF    >FFFD                     # NA   <reserved-20C1>..<reserved-20CF>
+# 20C1        valid                     # 17.0 SAUDI RIYAL SIGN
+20C2..20CF    >FFFD                     # NA   <reserved-20C1>..<reserved-20CF>
 # 20D0..20E1  valid                     # 1.1  COMBINING LEFT HARPOON ABOVE..COMBINING LEFT RIGHT ARROW ABOVE
 # 20E2..20E3  valid                     # 3.0  COMBINING ENCLOSING SCREEN..COMBINING ENCLOSING KEYCAP
 # 20E4..20EA  valid                     # 3.2  COMBINING ENCLOSING UPWARD POINTING TRIANGLE..COMBINING LEFTWARDS ARROW OVERLAY

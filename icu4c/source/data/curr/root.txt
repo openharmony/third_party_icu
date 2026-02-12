@@ -194,8 +194,10 @@ root{
         XCD{"$"}
         ZAR{"R"}
         ZMW{"ZK"}
+        SAR{"⃁"}
     }
     Currencies%variant{
+        SAR{"⃁"}
         TRY{"TL"}
     }
     CurrencyUnitPatterns{
