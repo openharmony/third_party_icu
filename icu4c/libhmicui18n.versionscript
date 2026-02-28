@@ -395,6 +395,12 @@
             "ucol_strcollIter_74";
             "ucol_strcollUTF8_74";
             "ucol_strcoll_74";
+            "ucsdet_close_74";
+            "ucsdet_detect_74";
+            "ucsdet_getConfidence_74";
+            "ucsdet_getName_74";
+            "ucsdet_open_74";
+            "ucsdet_setText_74";
             "udat_adoptNumberFormatForFields_74";
             "udat_adoptNumberFormat_74";
             "udat_applyPattern_74";
