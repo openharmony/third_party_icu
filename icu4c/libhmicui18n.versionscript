@@ -62,6 +62,7 @@
             "icu_74::DateFormatSymbols::getAmPmStrings(int&) const";
             "icu_74::DateFormatSymbols::getMonths(int&, icu_74::DateFormatSymbols::DtContextType, icu_74::DateFormatSymbols::DtWidthType) const";
             "icu_74::DateFormatSymbols::getWeekdays(int&, icu_74::DateFormatSymbols::DtContextType, icu_74::DateFormatSymbols::DtWidthType) const";
+            "icu_74::DateFormatSymbols::setAmPmStrings(icu_74::UnicodeString const*, int)";
             "icu_74::DateFormatSymbols::~DateFormatSymbols()";
             "icu_74::DateIntervalFormat::createInstance(icu_74::UnicodeString const&, icu_74::Locale const&, UErrorCode&)";
             "icu_74::DateIntervalFormat::format(icu_74::Calendar&, icu_74::Calendar&, icu_74::UnicodeString&, icu_74::FieldPosition&, UErrorCode&) const";
