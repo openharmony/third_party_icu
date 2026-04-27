@@ -31,7 +31,8 @@
             "sub_component": [
                 "//third_party/icu/icu4c:shared_icuuc",
                 "//third_party/icu/icu4c:shared_icui18n",
-                "//third_party/icu/ohos_icu4c:icundk"
+                "//third_party/icu/ohos_icu4c:icundk",
+                "//third_party/icu/icu4c:static_icu"
             ],
             "inner_kits": [
                 {
@@ -557,6 +558,13 @@
                     "header": {
                         "header_files": [],
                         "header_base": "//third_party/icu/icu4c/source/common"
+                    }
+                },
+                {
+                    "name": "//third_party/icu/icu4c:static_icu",
+                    "header": {
+                        "header_files": [],
+                        "header_base": "//third_party/icu/icu4c/source"
                     }
                 }
             ],
