@@ -598,6 +598,13 @@ bool g_isCustomLocale = false;
 #undef u_getVersion
 #undef utf8_back1SafeBody
 #undef utf8_prevCharSafeBody
+#undef UCNV_FROM_U_CALLBACK_STOP
+#undef UCNV_TO_U_CALLBACK_STOP
+#undef UCNV_FROM_U_CALLBACK_SKIP
+#undef UCNV_FROM_U_CALLBACK_SUBSTITUTE
+#undef UCNV_FROM_U_CALLBACK_ESCAPE
+#undef UCNV_TO_U_CALLBACK_SKIP
+#undef UCNV_TO_U_CALLBACK_SUBSTITUTE
 
 extern "C"
 {
@@ -2978,5 +2985,58 @@ int32_t utf8_back1SafeBody(const uint8_t *s, int32_t start, int32_t i)
 UChar32 utf8_prevCharSafeBody(const uint8_t *s, int32_t start, int32_t *pi, UChar32 c, UBool strict)
 {
     return U_ICU_ENTRY_POINT_RENAME(utf8_prevCharSafeBody)(s, start, pi, c, strict);
+}
+
+void UCNV_FROM_U_CALLBACK_STOP(const void *context, UConverterFromUnicodeArgs *fromUArgs,
+    const UChar* codeUnits, int32_t length, UChar32 codePoint, UConverterCallbackReason reason,
+    UErrorCode * err)
+{
+    U_ICU_ENTRY_POINT_RENAME(UCNV_FROM_U_CALLBACK_STOP)(context, fromUArgs, codeUnits, length,
+        codePoint, reason, err);
+}
+
+void UCNV_TO_U_CALLBACK_STOP(const void *context, UConverterToUnicodeArgs *toUArgs,
+    const char* codeUnits, int32_t length, UConverterCallbackReason reason, UErrorCode* err)
+{
+    U_ICU_ENTRY_POINT_RENAME(UCNV_TO_U_CALLBACK_STOP)(context, toUArgs, codeUnits, length,
+        reason, err);
+}
+
+void UCNV_FROM_U_CALLBACK_SKIP(const void *context, UConverterFromUnicodeArgs *fromUArgs,
+    const UChar* codeUnits, int32_t length, UChar32 codePoint,
+    UConverterCallbackReason reason, UErrorCode * err)
+{
+    U_ICU_ENTRY_POINT_RENAME(UCNV_FROM_U_CALLBACK_SKIP)(context, fromUArgs, codeUnits, length,
+        codePoint, reason, err);
+}
+
+void UCNV_FROM_U_CALLBACK_SUBSTITUTE(const void *context, UConverterFromUnicodeArgs *fromUArgs,
+    const UChar* codeUnits, int32_t length, UChar32 codePoint, UConverterCallbackReason reason,
+    UErrorCode * err)
+{
+    U_ICU_ENTRY_POINT_RENAME(UCNV_FROM_U_CALLBACK_SUBSTITUTE)(context, fromUArgs, codeUnits, length,
+        codePoint, reason, err);
+}
+
+void UCNV_FROM_U_CALLBACK_ESCAPE(const void *context, UConverterFromUnicodeArgs *fromUArgs,
+    const UChar* codeUnits, int32_t length, UChar32 codePoint, UConverterCallbackReason reason,
+    UErrorCode * err)
+{
+    U_ICU_ENTRY_POINT_RENAME(UCNV_FROM_U_CALLBACK_ESCAPE)(context, fromUArgs, codeUnits, length,
+        codePoint, reason, err);
+}
+
+void UCNV_TO_U_CALLBACK_SKIP(const void *context, UConverterToUnicodeArgs *toUArgs,
+    const char* codeUnits, int32_t length, UConverterCallbackReason reason, UErrorCode * err)
+{
+    U_ICU_ENTRY_POINT_RENAME(UCNV_TO_U_CALLBACK_SKIP)(context, toUArgs, codeUnits, length,
+        reason, err);
+}
+
+void UCNV_TO_U_CALLBACK_SUBSTITUTE(const void *context, UConverterToUnicodeArgs *toUArgs,
+    const char* codeUnits, int32_t length, UConverterCallbackReason reason, UErrorCode * err)
+{
+    U_ICU_ENTRY_POINT_RENAME(UCNV_TO_U_CALLBACK_SUBSTITUTE)(context, toUArgs, codeUnits, length,
+        reason, err);
 }
 }
