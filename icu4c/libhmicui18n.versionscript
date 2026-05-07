@@ -57,6 +57,7 @@
             "icu_74::DateFormat::format(double, icu_74::UnicodeString&) const";
             "icu_74::DateFormat::format(double, icu_74::UnicodeString&, icu_74::FieldPositionIterator*, UErrorCode&) const";
             "icu_74::DateFormat::getBestPattern(icu_74::Locale const&, icu_74::UnicodeString const&, UErrorCode&)";
+            "icu_74::DateFormat::parse(icu_74::UnicodeString const&, icu_74::ParsePosition&) const";
             "icu_74::DateFormatSymbols::DateFormatSymbols(icu_74::Locale const&, UErrorCode&)";
             "icu_74::DateFormatSymbols::DateFormatSymbols(icu_74::Locale const&, char const*, UErrorCode&)";
             "icu_74::DateFormatSymbols::getAmPmStrings(int&) const";
