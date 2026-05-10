@@ -100,6 +100,8 @@
             "icu_74::Formattable::Formattable(icu_74::Formattable const&)";
             "icu_74::Formattable::Formattable(icu_74::StringPiece, UErrorCode&)";
             "icu_74::Formattable::Formattable(icu_74::UnicodeString const&)";
+            "icu_74::Formattable::getType() const";
+            "icu_74::Formattable::isNumeric() const";
             "icu_74::Formattable::~Formattable()";
             "icu_74::FormattedDateInterval::FormattedDateInterval(icu_74::FormattedDateInterval&&)";
             "icu_74::FormattedDateInterval::nextPosition(icu_74::ConstrainedFieldPosition&, UErrorCode&) const";
@@ -153,6 +155,7 @@
             "icu_74::MessageFormat::MessageFormat(icu_74::UnicodeString const&, icu_74::Locale const&, UErrorCode&)";
             "icu_74::MessageFormat::format(icu_74::Formattable const*, int, icu_74::UnicodeString&, icu_74::FieldPosition&, UErrorCode&) const";
             "icu_74::MessageFormat::~MessageFormat()";
+            "icu_74::NumberFormat::createInstance(icu_74::Locale const&, UErrorCode&)";
             "icu_74::NumberFormat::createInstance(icu_74::Locale const&, UNumberFormatStyle, UErrorCode&)";
             "icu_74::NumberingSystem::createInstance(icu_74::Locale const&, UErrorCode&)";
             "icu_74::NumberingSystem::createInstanceByName(char const*, UErrorCode&)";
@@ -301,6 +304,7 @@
             "typeinfo for icu_74::AnnualTimeZoneRule";
             "typeinfo for icu_74::BasicTimeZone";
             "typeinfo for icu_74::DateFormat";
+            "typeinfo for icu_74::NumberFormat";
             "typeinfo for icu_74::SimpleDateFormat";
             "typeinfo for icu_74::TimeArrayTimeZoneRule";
             "typeinfo for icu_74::TimeZone";
