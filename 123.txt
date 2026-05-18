@@ -31,7 +31,7 @@
     print("in,id:", convertToUnicdoe('"Kepulauan Falkland (Malvinas)"'))
     print("it:", convertToUnicdoe('"Isole Falkland (Isole Malvine)"'))
     print("iw,he:", convertToUnicdoe('"איי פוקלנד (איי מלווינס)"'))
-    print("ja:", convertToUnicdoe('"Îles Malouines (Îles Falkland)"'))
+    print("ja:", convertToUnicdoe('"フォークランド諸島 (マルビーナス諸島)"'))
     print("ka:", convertToUnicdoe('"ფოლკლენდის კუნძულები (მალვინის კუნძულები)"'))
     print("kk:", convertToUnicdoe('"Фолкленд аралдары (Мальвин аралдары)"'))
     print("km:", convertToUnicdoe(''))
