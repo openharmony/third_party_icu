@@ -111,7 +111,7 @@ eu{
         EZ{"Eurogunea"}
         FI{"Finlandia"}
         FJ{"Fiji"}
-        FK{"Falklandak"}
+        FK{"Falklandak (Malvinak)"}
         FM{"Mikronesia"}
         FO{"Faroe uharteak"}
         FR{"Frantzia"}

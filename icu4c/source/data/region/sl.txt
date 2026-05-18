@@ -111,7 +111,7 @@ sl{
         EZ{"evroobmočje"}
         FI{"Finska"}
         FJ{"Fidži"}
-        FK{"Falklandski otoki"}
+        FK{"Falklandski otoki (Malvini)"}
         FM{"Mikronezija"}
         FO{"Ferski otoki"}
         FR{"Francija"}

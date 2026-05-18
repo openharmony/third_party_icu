@@ -111,7 +111,7 @@ ms{
         EZ{"Zon Euro"}
         FI{"Finland"}
         FJ{"Fiji"}
-        FK{"Kepulauan Falkland"}
+        FK{"Kepulauan Falkland (Islas Malvinas)"}
         FM{"Micronesia"}
         FO{"Kepulauan Faroe"}
         FR{"Perancis"}

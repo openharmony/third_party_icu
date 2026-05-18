@@ -112,7 +112,7 @@ hu{
         EZ{"Eurózóna"}
         FI{"Finnország"}
         FJ{"Fidzsi"}
-        FK{"Falkland-szigetek"}
+        FK{"Falkland-szigetek (Malvin-szigetek)"}
         FM{"Mikronézia"}
         FO{"Feröer szigetek"}
         FR{"Franciaország"}

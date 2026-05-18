@@ -111,7 +111,7 @@ cs{
         EZ{"eurozóna"}
         FI{"Finsko"}
         FJ{"Fidži"}
-        FK{"Falklandské ostrovy"}
+        FK{"Falklandské ostrovy (Malvíny)"}
         FM{"Mikronésie"}
         FO{"Faerské ostrovy"}
         FR{"Francie"}

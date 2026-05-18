@@ -111,7 +111,7 @@ uz{
         EZ{"Yevrohudud"}
         FI{"Finlandiya"}
         FJ{"Fiji"}
-        FK{"Folklend orollari"}
+        FK{"Folklend (Malvin) orollari"}
         FM{"Mikroneziya"}
         FO{"Farer orollari"}
         FR{"Fransiya"}

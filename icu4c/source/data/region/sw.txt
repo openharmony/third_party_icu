@@ -111,7 +111,7 @@ sw{
         EZ{"Jumuiya ya Ulaya"}
         FI{"Ufini"}
         FJ{"Fiji"}
-        FK{"Visiwa vya Falkland"}
+        FK{"Visiwa vya Falkland (Islas Malvinas)"}
         FM{"Mikronesia"}
         FO{"Visiwa vya Faroe"}
         FR{"Ufaransa"}
