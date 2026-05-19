@@ -107,9 +107,9 @@ en{
             ls{"Anadyr Standard Time"}
         }
         "meta:Apia"{
-            ld{"Samoa Daylight Time"}
-            lg{"Samoa Time"}
-            ls{"Samoa Standard Time"}
+            ld{"Apia Daylight Time"}
+            lg{"Apia Time"}
+            ls{"Apia Standard Time"}
         }
         "meta:Aqtau"{
             ld{"Aqtau Summer Time"}
@@ -608,9 +608,9 @@ en{
             ls{"Samara Standard Time"}
         }
         "meta:Samoa"{
-            ld{"American Samoa Daylight Time"}
-            lg{"American Samoa Time"}
-            ls{"American Samoa Standard Time"}
+            ld{"Samoa Daylight Time"}
+            lg{"Samoa Time"}
+            ls{"Samoa Standard Time"}
         }
         "meta:Seychelles"{
             ls{"Seychelles Time"}
