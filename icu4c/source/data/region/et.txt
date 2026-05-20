@@ -112,7 +112,7 @@ et{
         EZ{"euroala"}
         FI{"Soome"}
         FJ{"Fidži"}
-        FK{"Falklandi saared"}
+        FK{"Falklandi saared (Malviini saared)"}
         FM{"Mikroneesia"}
         FO{"Fääri saared"}
         FR{"Prantsusmaa"}

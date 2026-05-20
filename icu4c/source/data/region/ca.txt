@@ -111,7 +111,7 @@ ca{
         EZ{"zona euro"}
         FI{"Finlàndia"}
         FJ{"Fiji"}
-        FK{"Illes Malvines"}
+        FK{"Illes Falkland (Illes Malvines)"}
         FM{"Micronèsia"}
         FO{"Illes Fèroe"}
         FR{"França"}

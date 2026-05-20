@@ -111,7 +111,7 @@ jv{
         EZ{"Zona Éuro"}
         FI{"Finlan"}
         FJ{"Fiji"}
-        FK{"Kapuloan Falkland"}
+        FK{"Kapuloan Falkland (Islas Malvinas)"}
         FM{"Féderasi Mikronésia"}
         FO{"Kapuloan Faroe"}
         FR{"Prancis"}

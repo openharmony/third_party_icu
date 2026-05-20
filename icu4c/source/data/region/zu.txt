@@ -111,7 +111,7 @@ zu{
         EZ{"I-Eurozone"}
         FI{"i-Finland"}
         FJ{"i-Fiji"}
-        FK{"i-Falkland Islands"}
+        FK{"i-Falkland Islands (Islas Malvinas)"}
         FM{"i-Micronesia"}
         FO{"i-Faroe Islands"}
         FR{"i-France"}

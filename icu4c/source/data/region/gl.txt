@@ -111,7 +111,7 @@ gl{
         EZ{"Eurozona"}
         FI{"Finlandia"}
         FJ{"Fidxi"}
-        FK{"Illas Malvinas"}
+        FK{"Illas Malvinas (Falkland)"}
         FM{"Micronesia"}
         FO{"Illas Faroe"}
         FR{"Francia"}
