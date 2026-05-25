@@ -1191,8 +1191,8 @@ zh_Hant{
                 other{"{0} 英里"}
             }
             mile-scandinavian{
-                dnam{"斯堪地那維亞英里"}
-                other{"{0} 斯堪地那維亞英里"}
+                dnam{"斯堪地那維亞里"}
+                other{"{0} 斯堪地那維亞里"}
             }
             millimeter{
                 dnam{"公釐"}
