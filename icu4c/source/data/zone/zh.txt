@@ -1212,7 +1212,7 @@ zh{
             ec{"富纳富提"}
         }
         "Pacific:Galapagos"{
-            ec{"加拉帕戈斯"}
+            ec{"科隆群岛"}
         }
         "Pacific:Gambier"{
             ec{"甘比尔"}
@@ -1559,7 +1559,7 @@ zh{
             ls{"格林尼治标准时间"}
         }
         "meta:Galapagos"{
-            ls{"加拉帕戈斯时间"}
+            ls{"科隆群岛时间"}
         }
         "meta:Gambier"{
             ls{"甘比尔时间"}
