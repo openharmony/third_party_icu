@@ -976,11 +976,11 @@ zh_Hant{
                 Bh{"Bh時"}
                 Bhm{"Bh:mm"}
                 Bhms{"Bh:mm:ss"}
-                EBhm{"EBh:mm"}
-                EBhms{"EBh:mm:ss"}
+                EBhm{"E Bh:mm"}
+                EBhms{"E Bh:mm:ss"}
                 Ed{"d日 E"}
-                Ehm{"EBh:mm"}
-                Ehms{"EBh:mm:ss"}
+                Ehm{"E Bh:mm"}
+                Ehms{"E Bh:mm:ss"}
                 Gy{"Gy年"}
                 GyMMM{"Gy年M月"}
                 GyMMMEd{"Gy年M月d日 E"}
