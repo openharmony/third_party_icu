@@ -6,7 +6,6 @@ es_419{
         latn{
             patterns{
                 currencyFormat{"¤#,##0.00"}
-                percentFormat{"#,##0%"}
             }
             patternsLong{
                 decimalFormat{
