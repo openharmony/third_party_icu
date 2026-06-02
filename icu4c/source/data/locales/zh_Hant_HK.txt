@@ -404,7 +404,7 @@ zh_Hant_HK{
                 Md{"d/M"}
                 h{"ah時"}
                 hm{"ah:mm"}
-                hms{"a h:mm:ss"}
+                hms{"ah:mm:ss"}
                 hmsv{"ah:mm:ss [v]"}
                 hmv{"ah:mm [v]"}
                 yM{"M/y"}

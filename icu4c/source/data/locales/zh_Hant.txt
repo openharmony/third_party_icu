@@ -1002,7 +1002,7 @@ zh_Hant{
                 d{"d日"}
                 h{"Bh時"}
                 hm{"Bh:mm"}
-                hms{"B h:mm:ss"}
+                hms{"Bh:mm:ss"}
                 hmsv{"Bh:mm:ss [v]"}
                 hmv{"Bh:mm [v]"}
                 y{"y年"}
