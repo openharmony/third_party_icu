@@ -173,6 +173,7 @@
             "icu_74::RegexMatcher::RegexMatcher(icu_74::UnicodeString const&, unsigned int, UErrorCode&)";
             "icu_74::RegexMatcher::appendReplacement(icu_74::UnicodeString&, icu_74::UnicodeString const&, UErrorCode&)";
             "icu_74::RegexMatcher::appendTail(icu_74::UnicodeString&)";
+            "icu_74::RegexMatcher::replaceAll(icu_74::UnicodeString const&, UErrorCode&)";
             "icu_74::RegexMatcher::end(UErrorCode&) const";
             "icu_74::RegexMatcher::find()";
             "icu_74::RegexMatcher::find(UErrorCode&)";
