@@ -513,6 +513,10 @@ ohos_shared_library("shared_icuuc") {
     "-lm",
   ]
 
+  if (!build_ohos_sdk) {
+    version_script = "libhmicuuc.versionscript"
+  }
+
   configs = [
     ":icu_config",
     "//build/config/compiler:rtti",
