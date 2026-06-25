@@ -258,6 +258,7 @@
             "icu_74::UCharsTrieBuilder::~UCharsTrieBuilder()";
             "icu_74::UMemory::operator delete(void*)";
             "icu_74::UMemory::operator delete[](void*)";
+            "icu_74::UMemory::operator new(unsigned int)";
             "icu_74::UMemory::operator new(unsigned long)";
             "icu_74::UMemory::operator new[](unsigned long)";
             "icu_74::UObject::getDynamicClassID() const";
@@ -282,8 +283,10 @@
             "icu_74::UVector64::assign(icu_74::UVector64 const&, UErrorCode&)";
             "icu_74::UVector64::expandCapacity(int, UErrorCode&)";
             "icu_74::UVector64::insertElementAt(long, int, UErrorCode&)";
+            "icu_74::UVector64::insertElementAt(long long, int, UErrorCode&)";
             "icu_74::UVector64::removeAllElements()";
             "icu_74::UVector64::setElementAt(long, int)";
+            "icu_74::UVector64::setElementAt(long long, int)";
             "icu_74::UVector64::setMaxCapacity(int)";
             "icu_74::UVector64::setSize(int)";
             "icu_74::UVector64::~UVector64()";
@@ -789,6 +792,8 @@
             "uhash_setKeyDeleter_74";
             "uhash_setValueComparator_74";
             "uhash_setValueDeleter_74";
+            "uidna_IDNToASCII_74";
+            "uidna_IDNToUnicode_74";
             "uidna_close_74";
             "uidna_labelToASCII_74";
             "uidna_labelToASCII_UTF8_74";
