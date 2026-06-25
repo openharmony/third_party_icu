@@ -42,6 +42,7 @@
             "icu_74::CharString::appendInvariantChars(icu_74::UnicodeString const&, UErrorCode&)";
             "icu_74::CharString::appendNumber(int, UErrorCode&)";
             "icu_74::CharString::contains(icu_74::StringPiece) const";
+            "icu_74::CharString::copyFrom(icu_74::CharString const&, UErrorCode&)";
             "icu_74::CharString::extract(char*, int, UErrorCode&) const";
             "icu_74::CharString::lastIndexOf(char) const";
             "icu_74::CharString::operator=(icu_74::CharString&&)";
@@ -78,6 +79,7 @@
             "icu_74::ICUService::createSimpleFactory(icu_74::UObject*, icu_74::UnicodeString const&, signed char, UErrorCode&)";
             "icu_74::ICUService::getDisplayName(icu_74::UnicodeString const&, icu_74::UnicodeString&, icu_74::Locale const&) const";
             "icu_74::ICUService::getKey(icu_74::ICUServiceKey&, icu_74::UnicodeString*, UErrorCode&) const";
+            "icu_74::ICUService::getKey(icu_74::ICUServiceKey&, icu_74::UnicodeString*, icu_74::ICUServiceFactory const*, UErrorCode&) const";
             "icu_74::ICUService::notifyListener(icu_74::EventListener&) const";
             "icu_74::ICUService::reInitializeFactories()";
             "icu_74::ICUService::registerFactory(icu_74::ICUServiceFactory*, UErrorCode&)";
@@ -166,12 +168,15 @@
             "icu_74::LocaleMatcher::Builder::~Builder()";
             "icu_74::LocaleMatcher::Result::makeResolvedLocale(UErrorCode&) const";
             "icu_74::LocaleMatcher::Result::~Result()";
+            "icu_74::LocaleMatcher::getBestMatch(icu_74::Locale::Iterator&, UErrorCode&) const";
+            "icu_74::LocaleMatcher::getBestMatch(icu_74::Locale const&, UErrorCode&) const";
             "icu_74::LocaleMatcher::getBestMatchResult(icu_74::Locale const&, UErrorCode&) const";
             "icu_74::LocaleMatcher::getBestMatchResult(icu_74::Locale::Iterator&, UErrorCode&) const";
             "icu_74::LocaleMatcher::~LocaleMatcher()";
             "icu_74::LocaleUtility::initLocaleFromName(icu_74::UnicodeString const&, icu_74::Locale&)";
             "icu_74::LocaleUtility::initNameFromLocale(icu_74::Locale const&, icu_74::UnicodeString&)";
             "icu_74::MessageImpl::appendReducedApostrophes(icu_74::UnicodeString const&, int, int, icu_74::UnicodeString&)";
+            "icu_74::MessageImpl::appendSubMessageWithoutSkipSyntax(icu_74::MessagePattern const&, int, icu_74::UnicodeString&)";
             "icu_74::MessagePattern::MessagePattern(UErrorCode&)";
             "icu_74::MessagePattern::MessagePattern(icu_74::MessagePattern const&)";
             "icu_74::MessagePattern::clear()";
@@ -179,6 +184,7 @@
             "icu_74::MessagePattern::getPluralOffset(int) const";
             "icu_74::MessagePattern::operator==(icu_74::MessagePattern const&) const";
             "icu_74::MessagePattern::parse(icu_74::UnicodeString const&, UParseError*, UErrorCode&)";
+            "icu_74::MessagePattern::parseChoiceStyle(icu_74::UnicodeString const&, UParseError*, UErrorCode&)";
             "icu_74::MessagePattern::parsePluralStyle(icu_74::UnicodeString const&, UParseError*, UErrorCode&)";
             "icu_74::MessagePattern::validateArgumentName(icu_74::UnicodeString const&)";
             "icu_74::MessagePattern::~MessagePattern()";
@@ -199,11 +205,15 @@
             "icu_74::Normalizer2Impl::makeFCD(char16_t const*, char16_t const*, icu_74::ReorderingBuffer*, UErrorCode&) const";
             "icu_74::Normalizer::normalize(icu_74::UnicodeString const&, UNormalizationMode, int, icu_74::UnicodeString&, UErrorCode&)";
             "icu_74::ParsePosition::~ParsePosition()";
+            "icu_74::PatternProps::isIdentifier(char16_t const*, int)";
             "icu_74::PatternProps::isWhiteSpace(int)";
             "icu_74::PatternProps::skipWhiteSpace(char16_t const*, int)";
             "icu_74::PatternProps::skipWhiteSpace(icu_74::UnicodeString const&, int)";
             "icu_74::PatternProps::trimWhiteSpace(char16_t const*, int&)";
             "icu_74::ReorderingBuffer::init(int, UErrorCode&)";
+            "icu_74::Replaceable::~Replaceable()";
+            "icu_74::Replaceable::clone() const";
+            "icu_74::Replaceable::hasMetaData() const";
             "icu_74::ResourceArray::getValue(int, icu_74::ResourceValue&) const";
             "icu_74::ResourceBundle::ResourceBundle(char const*, icu_74::Locale const&, UErrorCode&)";
             "icu_74::ResourceBundle::get(char const*, UErrorCode&) const";
@@ -260,6 +270,7 @@
             "icu_74::UMemory::operator delete[](void*)";
             "icu_74::UMemory::operator new(unsigned int)";
             "icu_74::UMemory::operator new(unsigned long)";
+            "icu_74::UMemory::operator new[](unsigned int)";
             "icu_74::UMemory::operator new[](unsigned long)";
             "icu_74::UObject::getDynamicClassID() const";
             "icu_74::UObject::~UObject()";
@@ -905,6 +916,7 @@
             "unorm2_spanQuickCheckYes_74";
             "unorm_compare_74";
             "uprv_add32_overflow_74";
+            "uprv_asciitolower_74";
             "uprv_ceil_74";
             "uprv_deleteUObject_74";
             "uprv_fabs_74";
@@ -921,6 +933,7 @@
             "uprv_isInvariantString_74";
             "uprv_isInvariantUString_74";
             "uprv_isNaN_74";
+            "uprv_isNegativeInfinity_74";
             "uprv_isPositiveInfinity_74";
             "uprv_itou_74";
             "uprv_log_74";
