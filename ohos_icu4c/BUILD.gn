@@ -90,3 +90,49 @@ ohos_prebuilt_etc("ohos_old_icudat") {
   part_name = "icu"
   subsystem_name = "thirdparty"
 }
+
+ohos_prebuilt_etc("icudt72l_diff") {
+  source = "//third_party/icu/ohos_icu4j/data/old/icudt72l.diff"
+
+  module_install_dir = "usr/ohos_icu_diff/"
+  part_name = "icu"
+  subsystem_name = "thirdparty"
+}
+
+ohos_executable("icu72_dat_mount") {
+  sources = [ "mount/icu72_dat_mount.cpp" ]
+
+  external_deps = []
+  defines = []
+  if (defined(global_parts_info) &&
+      defined(global_parts_info.updater_updater)) {
+    external_deps += [
+      "updater:libdiff_patch_shared",
+      "openssl:libcrypto_static"
+    ]
+    defines += [ "UPDATER_ENABLE" ]
+  }
+
+  install_images = [ "system" ]
+  subsystem_name = "thirdparty"
+  part_name = "icu"
+}
+
+ohos_executable("icu72_dat_diff") {
+  sources = [ "mount/icu72_dat_diff.cpp" ]
+
+  external_deps = []
+  defines = []
+  if (defined(global_parts_info) &&
+      defined(global_parts_info.updater_updater)) {
+    external_deps += [
+      "updater:libpatch",
+      "updater:libdiff",
+      "updater:libutils",
+      "openssl:libcrypto_static"
+    ]
+    defines += [ "UPDATER_ENABLE" ]
+  }
+  subsystem_name = "thirdparty"
+  part_name = "icu"
+}
