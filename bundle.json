@@ -23,7 +23,9 @@
         "deps": {
             "components": [
                 "init",
-                "hilog"
+                "hilog",
+                "updater",
+                "openssl"
                 ],
             "third_party": []
         },
@@ -32,7 +34,9 @@
                 "//third_party/icu/icu4c:shared_icuuc",
                 "//third_party/icu/icu4c:shared_icui18n",
                 "//third_party/icu/ohos_icu4c:icundk",
-                "//third_party/icu/icu4c:static_icu"
+                "//third_party/icu/icu4c:static_icu",
+                "//third_party/icu/ohos_icu4c:icudt72l_diff",
+                "//third_party/icu/ohos_icu4c:icu72_dat_mount"
             ],
             "inner_kits": [
                 {
