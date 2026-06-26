@@ -1,559 +1,177 @@
+/*
+ * Copyright (c) 2026 Huawei Device Co., Ltd.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ 
+#include <cerrno>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <dirent.h>
+#include <string>
+#include <sys/mount.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <unistd.h>
+ 
+#ifdef UPDATER_ENABLE
+#include "diff_patch/diff_patch_interface.h"
+#endif
+ 
+namespace {
+    constexpr char DIFF_FILE_PATH[] = "/system/usr/ohos_icu_diff/icudt72l.diff";
+    constexpr char BASE_FILE_PATH[] = "/system/usr/icu/icudt74l.dat";
+    constexpr char RESTORE_TARGET_DIR[] = "/data/service/el1/public/i18n/icu";
+    constexpr char RESTORE_TARGET_PATH[] = "/data/service/el1/public/i18n/icu/icudt72l.dat";
+    constexpr char MOUNT_TARGET_PATH[] = "/system/usr/ohos_icu/icudt72l.dat";
+    constexpr mode_t DIR_MODE = 0755;
+    constexpr unsigned char DIFF_MAGIC[] = {0x42, 0x53, 0x44, 0x49, 0x46, 0x46, 0x34, 0x30}; // "BSDIFF40"
+}
+ 
+bool CreateDirectoryRecursive(const char* path, mode_t mode)
 {
-  global:
-    UCNV_TO_U_CALLBACK_ESCAPE;
-    u_charDigitValue;
-    u_charDirection;
-    u_charFromName;
-    u_charMirror;
-    u_charName;
-    u_charType;
-    u_digit;
-    u_enumCharNames;
-    u_enumCharTypes;
-    u_foldCase;
-    u_forDigit;
-    u_getBidiPairedBracket;
-    u_getBinaryPropertySet;
-    u_getCombiningClass;
-    u_getFC_NFKC_Closure;
-    u_getIntPropertyMaxValue;
-    u_getIntPropertyMinValue;
-    u_getIntPropertyValue;
-    u_getNumericValue;
-    u_getPropertyEnum;
-    u_getPropertyName;
-    u_getPropertyValueEnum;
-    u_getPropertyValueName;
-    u_hasBinaryProperty;
-    u_isIDIgnorable;
-    u_isIDPart;
-    u_isIDStart;
-    u_isISOControl;
-    u_isJavaIDPart;
-    u_isJavaIDStart;
-    u_isJavaSpaceChar;
-    u_isMirrored;
-    u_isUAlphabetic;
-    u_isULowercase;
-    u_isUUppercase;
-    u_isUWhiteSpace;
-    u_isWhitespace;
-    u_isalnum;
-    u_isalpha;
-    u_isbase;
-    u_isblank;
-    u_iscntrl;
-    u_isdefined;
-    u_isdigit;
-    u_isgraph;
-    u_islower;
-    u_isprint;
-    u_ispunct;
-    u_isspace;
-    u_istitle;
-    u_isupper;
-    u_isxdigit;
-    u_stringHasBinaryProperty;
-    u_tolower;
-    u_totitle;
-    u_toupper;
-    ubidi_close;
-    ubidi_countParagraphs;
-    ubidi_countRuns;
-    ubidi_getBaseDirection;
-    ubidi_getClassCallback;
-    ubidi_getCustomizedClass;
-    ubidi_getDirection;
-    ubidi_getLength;
-    ubidi_getLevelAt;
-    ubidi_getLevels;
-    ubidi_getLogicalIndex;
-    ubidi_getLogicalMap;
-    ubidi_getLogicalRun;
-    ubidi_getParaLevel;
-    ubidi_getParagraph;
-    ubidi_getParagraphByIndex;
-    ubidi_getProcessedLength;
-    ubidi_getReorderingMode;
-    ubidi_getReorderingOptions;
-    ubidi_getResultLength;
-    ubidi_getText;
-    ubidi_getVisualIndex;
-    ubidi_getVisualMap;
-    ubidi_getVisualRun;
-    ubidi_invertMap;
-    ubidi_isInverse;
-    ubidi_isOrderParagraphsLTR;
-    ubidi_open;
-    ubidi_openSized;
-    ubidi_orderParagraphsLTR;
-    ubidi_reorderLogical;
-    ubidi_reorderVisual;
-    ubidi_setClassCallback;
-    ubidi_setContext;
-    ubidi_setInverse;
-    ubidi_setLine;
-    ubidi_setPara;
-    ubidi_setReorderingMode;
-    ubidi_setReorderingOptions;
-    ubidi_writeReordered;
-    ubidi_writeReverse;
-    ublock_getCode;
-    ubrk_clone;
-    ubrk_close;
-    ubrk_countAvailable;
-    ubrk_current;
-    ubrk_first;
-    ubrk_following;
-    ubrk_getAvailable;
-    ubrk_getBinaryRules;
-    ubrk_getLocaleByType;
-    ubrk_getRuleStatus;
-    ubrk_getRuleStatusVec;
-    ubrk_isBoundary;
-    ubrk_last;
-    ubrk_next;
-    ubrk_open;
-    ubrk_openBinaryRules;
-    ubrk_openRules;
-    ubrk_preceding;
-    ubrk_previous;
-    ubrk_setText;
-    ubrk_setUText;
-    ucal_add;
-    ucal_clear;
-    ucal_clearField;
-    ucal_clone;
-    ucal_close;
-    ucal_countAvailable;
-    ucal_equivalentTo;
-    ucal_get;
-    ucal_getAttribute;
-    ucal_getAvailable;
-    ucal_getCanonicalTimeZoneID;
-    ucal_getDSTSavings;
-    ucal_getDayOfWeekType;
-    ucal_getDefaultTimeZone;
-    ucal_getFieldDifference;
-    ucal_getGregorianChange;
-    ucal_getHostTimeZone;
-    ucal_getKeywordValuesForLocale;
-    ucal_getLimit;
-    ucal_getLocaleByType;
-    ucal_getMillis;
-    ucal_getNow;
-    ucal_getTZDataVersion;
-    ucal_getTimeZoneDisplayName;
-    ucal_getTimeZoneID;
-    ucal_getTimeZoneIDForWindowsID;
-    ucal_getTimeZoneOffsetFromLocal;
-    ucal_getTimeZoneTransitionDate;
-    ucal_getType;
-    ucal_getWeekendTransition;
-    ucal_getWindowsTimeZoneID;
-    ucal_inDaylightTime;
-    ucal_isSet;
-    ucal_isWeekend;
-    ucal_open;
-    ucal_openCountryTimeZones;
-    ucal_openTimeZoneIDEnumeration;
-    ucal_openTimeZones;
-    ucal_roll;
-    ucal_set;
-    ucal_setAttribute;
-    ucal_setDate;
-    ucal_setDateTime;
-    ucal_setDefaultTimeZone;
-    ucal_setGregorianChange;
-    ucal_setMillis;
-    ucal_setTimeZone;
-    ucnv_clone;
-    ucnv_close;
-    ucnv_compareNames;
-    ucnv_convert;
-    ucnv_convertEx;
-    ucnv_countAliases;
-    ucnv_countAvailable;
-    ucnv_countStandards;
-    ucnv_detectUnicodeSignature;
-    ucnv_fixFileSeparator;
-    ucnv_flushCache;
-    ucnv_fromAlgorithmic;
-    ucnv_fromUChars;
-    ucnv_fromUCountPending;
-    ucnv_fromUnicode;
-    ucnv_getAlias;
-    ucnv_getAliases;
-    ucnv_getAvailableName;
-    ucnv_getCCSID;
-    ucnv_getCanonicalName;
-    ucnv_getDefaultName;
-    ucnv_getDisplayName;
-    ucnv_getFromUCallBack;
-    ucnv_getInvalidChars;
-    ucnv_getInvalidUChars;
-    ucnv_getMaxCharSize;
-    ucnv_getMinCharSize;
-    ucnv_getName;
-    ucnv_getNextUChar;
-    ucnv_getPlatform;
-    ucnv_getStandard;
-    ucnv_getStandardName;
-    ucnv_getStarters;
-    ucnv_getSubstChars;
-    ucnv_getToUCallBack;
-    ucnv_getType;
-    ucnv_isAmbiguous;
-    ucnv_isFixedWidth;
-    ucnv_open;
-    ucnv_openAllNames;
-    ucnv_openCCSID;
-    ucnv_openPackage;
-    ucnv_openStandardNames;
-    ucnv_openU;
-    ucnv_reset;
-    ucnv_resetFromUnicode;
-    ucnv_resetToUnicode;
-    ucnv_setDefaultName;
-    ucnv_setFallback;
-    ucnv_setFromUCallBack;
-    ucnv_setSubstChars;
-    ucnv_setSubstString;
-    ucnv_setToUCallBack;
-    ucnv_toAlgorithmic;
-    ucnv_toUChars;
-    ucnv_toUCountPending;
-    ucnv_toUnicode;
-    ucnv_usesFallback;
-    ucol_clone;
-    ucol_cloneBinary;
-    ucol_close;
-    ucol_countAvailable;
-    ucol_equal;
-    ucol_getAttribute;
-    ucol_getAvailable;
-    ucol_getBound;
-    ucol_getContractionsAndExpansions;
-    ucol_getDisplayName;
-    ucol_getEquivalentReorderCodes;
-    ucol_getFunctionalEquivalent;
-    ucol_getKeywordValues;
-    ucol_getKeywordValuesForLocale;
-    ucol_getKeywords;
-    ucol_getLocaleByType;
-    ucol_getMaxVariable;
-    ucol_getReorderCodes;
-    ucol_getRules;
-    ucol_getRulesEx;
-    ucol_getSortKey;
-    ucol_getStrength;
-    ucol_getTailoredSet;
-    ucol_getVariableTop;
-    ucol_greater;
-    ucol_greaterOrEqual;
-    ucol_mergeSortkeys;
-    ucol_open;
-    ucol_openAvailableLocales;
-    ucol_openBinary;
-    ucol_openRules;
-    ucol_setAttribute;
-    ucol_setMaxVariable;
-    ucol_setReorderCodes;
-    ucol_setStrength;
-    ucol_strcoll;
-    ucol_strcollUTF8;
-    udat_adoptNumberFormat;
-    udat_adoptNumberFormatForFields;
-    udat_applyPattern;
-    udat_clone;
-    udat_close;
-    udat_countAvailable;
-    udat_countSymbols;
-    udat_format;
-    udat_formatCalendar;
-    udat_formatCalendarForFields;
-    udat_formatForFields;
-    udat_get2DigitYearStart;
-    udat_getAvailable;
-    udat_getBooleanAttribute;
-    udat_getCalendar;
-    udat_getContext;
-    udat_getLocaleByType;
-    udat_getNumberFormat;
-    udat_getNumberFormatForField;
-    udat_getSymbols;
-    udat_isLenient;
-    udat_open;
-    udat_parse;
-    udat_parseCalendar;
-    udat_set2DigitYearStart;
-    udat_setBooleanAttribute;
-    udat_setCalendar;
-    udat_setContext;
-    udat_setLenient;
-    udat_setNumberFormat;
-    udat_setSymbols;
-    udat_toCalendarDateField;
-    udat_toPattern;
-    uenum_close;
-    uenum_count;
-    uenum_next;
-    uenum_reset;
-    uenum_unext;
-    ufieldpositer_close;
-    ufieldpositer_next;
-    ufieldpositer_open;
-    uidna_close;
-    uidna_labelToASCII;
-    uidna_labelToASCII_UTF8;
-    uidna_labelToUnicode;
-    uidna_labelToUnicodeUTF8;
-    uidna_nameToASCII;
-    uidna_nameToASCII_UTF8;
-    uidna_nameToUnicode;
-    uidna_nameToUnicodeUTF8;
-    uidna_openUTS46;
-    uloc_acceptLanguage;
-    uloc_acceptLanguageFromHTTP;
-    uloc_addLikelySubtags;
-    uloc_canonicalize;
-    uloc_countAvailable;
-    uloc_forLanguageTag;
-    uloc_getAvailable;
-    uloc_getBaseName;
-    uloc_getCharacterOrientation;
-    uloc_getCountry;
-    uloc_getDefault;
-    uloc_getDisplayCountry;
-    uloc_getDisplayKeyword;
-    uloc_getDisplayKeywordValue;
-    uloc_getDisplayLanguage;
-    uloc_getDisplayName;
-    uloc_getDisplayScript;
-    uloc_getDisplayVariant;
-    uloc_getISO3Country;
-    uloc_getISO3Language;
-    uloc_getISOCountries;
-    uloc_getISOLanguages;
-    uloc_getKeywordValue;
-    uloc_getLCID;
-    uloc_getLanguage;
-    uloc_getLineOrientation;
-    uloc_getLocaleForLCID;
-    uloc_getName;
-    uloc_getParent;
-    uloc_getScript;
-    uloc_getVariant;
-    uloc_isRightToLeft;
-    uloc_minimizeSubtags;
-    uloc_openAvailableByType;
-    uloc_openKeywords;
-    uloc_setDefault;
-    uloc_setKeywordValue;
-    uloc_toLanguageTag;
-    uloc_toLegacyKey;
-    uloc_toLegacyType;
-    uloc_toUnicodeLocaleKey;
-    uloc_toUnicodeLocaleType;
-    unorm2_append;
-    unorm2_close;
-    unorm2_composePair;
-    unorm2_getCombiningClass;
-    unorm2_getDecomposition;
-    unorm2_getInstance;
-    unorm2_getNFCInstance;
-    unorm2_getNFDInstance;
-    unorm2_getNFKCCasefoldInstance;
-    unorm2_getNFKCInstance;
-    unorm2_getNFKDInstance;
-    unorm2_getRawDecomposition;
-    unorm2_hasBoundaryAfter;
-    unorm2_hasBoundaryBefore;
-    unorm2_isInert;
-    unorm2_isNormalized;
-    unorm2_normalize;
-    unorm2_normalizeSecondAndAppend;
-    unorm2_openFiltered;
-    unorm2_quickCheck;
-    unorm2_spanQuickCheckYes;
-    unorm_compare;
-    unum_applyPattern;
-    unum_clone;
-    unum_close;
-    unum_countAvailable;
-    unum_format;
-    unum_formatDecimal;
-    unum_formatDouble;
-    unum_formatDoubleCurrency;
-    unum_formatDoubleForFields;
-    unum_formatInt64;
-    unum_getAttribute;
-    unum_getAvailable;
-    unum_getContext;
-    unum_getDoubleAttribute;
-    unum_getLocaleByType;
-    unum_getSymbol;
-    unum_getTextAttribute;
-    unum_open;
-    unum_parse;
-    unum_parseDecimal;
-    unum_parseDouble;
-    unum_parseDoubleCurrency;
-    unum_parseInt64;
-    unum_setAttribute;
-    unum_setContext;
-    unum_setDoubleAttribute;
-    unum_setSymbol;
-    unum_setTextAttribute;
-    unum_toPattern;
-    unumf_close;
-    unumf_formatDecimal;
-    unumf_formatDouble;
-    unumf_formatInt;
-    unumf_openForSkeletonAndLocale;
-    unumf_openForSkeletonAndLocaleWithError;
-    uscript_breaksBetweenLetters;
-    uscript_getCode;
-    uscript_getName;
-    uscript_getSampleString;
-    uscript_getScript;
-    uscript_getScriptExtensions;
-    uscript_getShortName;
-    uscript_getUsage;
-    uscript_hasScript;
-    uscript_isCased;
-    uscript_isRightToLeft;
-    uset_add;
-    uset_addString;
-    uset_clear;
-    uset_close;
-    uset_complement;
-    uset_contains;
-    uset_containsString;
-    uset_getItem;
-    uset_getItemCount;
-    uset_getRangeCount;
-    uset_isEmpty;
-    uset_open;
-    uset_openPattern;
-    uset_openPatternOptions;
-    uset_remove;
-    uset_removeString;
-    uset_size;
-    uset_toPattern;
-    utrans_clone;
-    utrans_close;
-    utrans_countAvailableIDs;
-    utrans_getSourceSet;
-    utrans_getUnicodeID;
-    utrans_openIDs;
-    utrans_openInverse;
-    utrans_openU;
-    utrans_register;
-    utrans_setFilter;
-    utrans_toRules;
-    utrans_transIncrementalUChars;
-    utrans_transUChars;
-    utrans_unregisterID;
-    utext_close;
-    utext_openUTF8;
-    utext_openUChars;
-    utext_clone;
-    utext_equals;
-    utext_nativeLength;
-    utext_char32At;
-    utext_current32;
-    utext_next32;
-    utext_previous32;
-    utext_next32From;
-    utext_previous32From;
-    utext_getNativeIndex;
-    utext_setNativeIndex;
-    utext_moveIndex32;
-    utext_getPreviousNativeIndex;
-    utext_extract;
-    u_strlen;
-    u_countChar32;
-    u_strHasMoreChar32Than;
-    u_strcat;
-    u_strncat;
-    u_strstr;
-    u_strFindFirst;
-    u_strchr;
-    u_strchr32;
-    u_strrstr;
-    u_strFindLast;
-    u_strrchr;
-    u_strrchr32;
-    u_strpbrk;
-    u_strcspn;
-    u_strspn;
-    u_strtok_r;
-    u_strcmp;
-    u_strcmpCodePointOrder;
-    u_strCompare;
-    u_strCaseCompare;
-    u_strncmp;
-    u_strncmpCodePointOrder;
-    u_strcasecmp;
-    u_strncasecmp;
-    u_memcasecmp;
-    u_strcpy;
-    u_strncpy;
-    u_memcpy;
-    u_memmove;
-    u_memset;
-    u_memcmp;
-    u_memcmpCodePointOrder;
-    u_memchr;
-    u_memchr32;
-    u_memrchr;
-    u_memrchr32;
-    u_strToUpper;
-    u_strToLower;
-    u_strToTitle;
-    u_strFoldCase;
-    u_strToUTF8;
-    u_strFromUTF8;
-    u_strToUTF8WithSub;
-    u_strFromUTF8WithSub;
-    u_strFromUTF8Lenient;
-    u_strToUTF32;
-    u_strFromUTF32;
-    u_strToUTF32WithSub;
-    u_strFromUTF32WithSub;
-    u_errorName;
-    u_charAge;
-    u_getUnicodeVersion;
-    uldn_open;
-    uldn_close;
-    uldn_getLocale;
-    uldn_getDialectHandling;
-    uldn_localeDisplayName;
-    uldn_languageDisplayName;
-    uldn_scriptDisplayName;
-    uldn_scriptCodeDisplayName;
-    uldn_regionDisplayName;
-    uldn_variantDisplayName;
-    uldn_keyDisplayName;
-    uldn_keyValueDisplayName;
-    uldn_openForContext;
-    uldn_getContext;
-    ulocdata_getCLDRVersion;
-    u_versionFromString;
-    u_versionFromUString;
-    u_versionToString;
-    u_getVersion;
-    utf8_back1SafeBody;
-    utf8_prevCharSafeBody;
-    UCNV_FROM_U_CALLBACK_STOP;
-    UCNV_TO_U_CALLBACK_STOP;
-    UCNV_FROM_U_CALLBACK_SKIP;
-    UCNV_FROM_U_CALLBACK_SUBSTITUTE;
-    UCNV_FROM_U_CALLBACK_ESCAPE;
-    UCNV_TO_U_CALLBACK_SKIP;
-    UCNV_TO_U_CALLBACK_SUBSTITUTE;
-
-  local:
-    *;
-};
+    if (mkdir(path, mode) == 0) {
+        return true;
+    }
+    if (errno == EEXIST) {
+        return true;
+    }
+    if (errno == ENOENT) {
+        char* tmp = strdup(path);
+        if (tmp == nullptr) {
+            return false;
+        }
+        char* p = strrchr(tmp, '/');
+        if (p != nullptr) {
+            *p = '\0';
+            if (CreateDirectoryRecursive(tmp, mode)) {
+                free(tmp);
+                return CreateDirectoryRecursive(path, mode);
+            }
+        }
+        free(tmp);
+        return false;
+    }
+    return false;
+}
+ 
+bool IsFileExists(const char* path)
+{
+    struct stat st;
+    return (stat(path, &st) == 0);
+}
+ 
+bool IsDiffFileValid()
+{
+    FILE* fp = fopen(DIFF_FILE_PATH, "rb");
+    if (fp == nullptr) {
+        return false;
+    }
+ 
+    unsigned char magic[sizeof(DIFF_MAGIC)];
+    size_t readLen = fread(magic, 1, sizeof(DIFF_MAGIC), fp);
+    fclose(fp);
+ 
+    if (readLen != sizeof(DIFF_MAGIC)) {
+        return false;
+    }
+ 
+    if (memcmp(magic, DIFF_MAGIC, sizeof(DIFF_MAGIC)) != 0) {
+        return false;
+    }
+ 
+    return true;
+}
+ 
+bool RestoreIcuData()
+{
+    if (IsFileExists(RESTORE_TARGET_PATH)) {
+        return true;
+    }
+ 
+    if (!IsFileExists(BASE_FILE_PATH)) {
+        return false;
+    }
+ 
+    if (!IsFileExists(DIFF_FILE_PATH)) {
+        return false;
+    }
+ 
+    if (!IsDiffFileValid()) {
+        return false;
+    }
+ 
+    if (!CreateDirectoryRecursive(RESTORE_TARGET_DIR, DIR_MODE)) {
+        return false;
+    }
+ 
+#ifdef UPDATER_ENABLE
+    int32_t result = Updater::ApplyPatch(DIFF_FILE_PATH, BASE_FILE_PATH, RESTORE_TARGET_PATH);
+    if (result != 0) {
+        return false;
+    }
+#else
+    return false;
+#endif
+ 
+    if (!IsFileExists(RESTORE_TARGET_PATH)) {
+        return false;
+    }
+ 
+    return true;
+}
+ 
+bool MountIcuData()
+{
+    printf("[ICU_MOUNT] MountIcuData start\n");
+ 
+    if (!IsFileExists(RESTORE_TARGET_PATH)) {
+        printf("[ICU_MOUNT] Restore target path does not exist: %s\n", RESTORE_TARGET_PATH);
+        return false;
+    }
+    printf("[ICU_MOUNT] Restore target path exists: %s\n", RESTORE_TARGET_PATH);
+ 
+    if (!CreateDirectoryRecursive("/system/usr/ohos_icu", DIR_MODE)) {
+        printf("[ICU_MOUNT] Failed to create directory: /system/usr/ohos_icu\n");
+        return false;
+    }
+    printf("[ICU_MOUNT] Directory created: /system/usr/ohos_icu\n");
+ 
+    if (mount(RESTORE_TARGET_PATH, MOUNT_TARGET_PATH, nullptr, MS_BIND, nullptr) != 0) {
+        printf("[ICU_MOUNT] mount failed, errno: %d\n", errno);
+        return false;
+    }
+    printf("[ICU_MOUNT] mount success\n");
+ 
+    return true;
+}
+ 
+int main(int argc, char* argv[])
+{
+    printf("[ICU_MOUNT] Start hmos_cust_icu_mount\n");
+ 
+    if (!RestoreIcuData()) {
+        printf("[ICU_MOUNT] RestoreIcuData failed\n");
+        return EXIT_FAILURE;
+    }
+    printf("[ICU_MOUNT] RestoreIcuData success\n");
+ 
+    if (!MountIcuData()) {
+        printf("[ICU_MOUNT] MountIcuData failed\n");
+        return EXIT_FAILURE;
+    }
+    printf("[ICU_MOUNT] MountIcuData success\n");
+ 
+    printf("[ICU_MOUNT] hmos_cust_icu_mount completed successfully\n");
+    return EXIT_SUCCESS;
+}
