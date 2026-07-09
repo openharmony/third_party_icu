@@ -378,6 +378,7 @@
             "icu_74::UnicodeSetIterator::next()";
             "icu_74::UnicodeSetIterator::~UnicodeSetIterator()";
             "icu_74::UnicodeString::UnicodeString(char const*)";
+            "icu_74::UnicodeString::UnicodeString(char const*, char const*)";
             "icu_74::UnicodeString::UnicodeString(char const*, int)";
             "icu_74::UnicodeString::UnicodeString(char const*, int, char const*)";
             "icu_74::UnicodeString::UnicodeString(char const*, int, icu_74::UnicodeString::EInvariant)";
