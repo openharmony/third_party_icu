@@ -486,6 +486,7 @@
             "vtable for icu_74::UnicodeStringAppendable";
         };
         extern "C" {
+            "GetIcuVersion";
             "SetOhosIcuDirectory";
             "T_CString_toLowerCase_74";
             "UCNV_FROM_U_CALLBACK_ESCAPE_74";
@@ -499,6 +500,7 @@
             "UDataMemory_createNewInstance_74";
             "u_UCharsToChars_74";
             "u_asciiToUpper_74";
+            "u_austrncpy_74";
             "u_caseInsensitivePrefixMatch_74";
             "u_charAge_74";
             "u_charDigitValue_74";
