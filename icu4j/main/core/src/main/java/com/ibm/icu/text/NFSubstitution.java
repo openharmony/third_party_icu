@@ -1649,7 +1649,7 @@ class NumeratorSubstitution extends NFSubstitution {
         int zeroCount = 0;
         /* <issue: https://github.com/unicode-org/icu/pull/4059> 20260717 begin */
         if (withZeros && ruleSet != null) {
-        /* <issue: https://github.com/unicode-org/icu/pull/4059> 20260717 end */
+            /* <issue: https://github.com/unicode-org/icu/pull/4059> 20260717 end */
             String workText = text;
             ParsePosition workPos = new ParsePosition(1);
             //int digit;

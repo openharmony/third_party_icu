@@ -1857,7 +1857,7 @@ public class RbnfTest extends CoreTestFmwk {
         assertEquals("Wrong result with Ethiopic rule set", "፻፳፫", rbnf.format(123));
     }
 
-/* <issue: https://github.com/unicode-org/icu/pull/4059> 20260717 begin */
+    /* <issue: https://github.com/unicode-org/icu/pull/4059> 20260717 begin */
     @Test
     public void Test23407NullDereferenceREAD() {
         // This is "garbage" from a fuzzer run. We test that the code does not crash.
@@ -1869,5 +1869,5 @@ public class RbnfTest extends CoreTestFmwk {
             // Expected exception or parse failure is fine, but not others like NPE.
         }
     }
-/* <issue: https://github.com/unicode-org/icu/pull/4059> 20260717 end */
+    /* <issue: https://github.com/unicode-org/icu/pull/4059> 20260717 end */
 }
