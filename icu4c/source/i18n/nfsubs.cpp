@@ -1290,8 +1290,9 @@ NumeratorSubstitution::doParse(const UnicodeString& text,
     UErrorCode status = U_ZERO_ERROR;
     int32_t zeroCount = 0;
     UnicodeString workText(text);
-
-    if (withZeros) {
+     /* <issue: https://github.com/unicode-org/icu/pull/4059> 20260717 begin */
+    if (withZeros && getRuleSet() != nullptr) {
+     /* <issue: https://github.com/unicode-org/icu/pull/4059> 20260717 end */
         ParsePosition workPos(1);
         Formattable temp;
 

@@ -1647,7 +1647,9 @@ class NumeratorSubstitution extends NFSubstitution {
         // if withZeros is true, we need to count the zeros
         // and use that to adjust the parse result
         int zeroCount = 0;
-        if (withZeros) {
+/* <issue: https://github.com/unicode-org/icu/pull/4059> 20260717 begin */
+        if (withZeros && ruleSet != null) {
+/* <issue: https://github.com/unicode-org/icu/pull/4059> 20260717 end */
             String workText = text;
             ParsePosition workPos = new ParsePosition(1);
             //int digit;
@@ -1677,7 +1679,9 @@ class NumeratorSubstitution extends NFSubstitution {
         // we've parsed off the zeros, now let's parse the rest from our current position
         Number result =  super.doParse(text, parsePosition, withZeros ? 1 : baseValue, upperBound, false, nonNumericalExecutedRuleMask);
 
-        if (withZeros) {
+/* <issue: https://github.com/unicode-org/icu/pull/4059> 20260717 begin */
+        if (withZeros && result != null) {
+/* <issue: https://github.com/unicode-org/icu/pull/4059> 20260717 end */
             // any base value will do in this case.  is there a way to
             // force this to not bother trying all the base values?
 

@@ -1856,4 +1856,18 @@ public class RbnfTest extends CoreTestFmwk {
         rbnf.setDefaultRuleSet("%ethiopic");
         assertEquals("Wrong result with Ethiopic rule set", "፻፳፫", rbnf.format(123));
     }
+
+/* <issue: https://github.com/unicode-org/icu/pull/4059> 20260717 begin */
+    @Test
+    public void Test23407NullDereferenceREAD() {
+        // This is "garbage" from a fuzzer run. We test that the code does not crash.
+        String fuzzstr = "x0x:>%䀾>Ā;%䀾:>;>;;<0<<>";
+        try {
+            RuleBasedNumberFormat rbfmt = new RuleBasedNumberFormat(fuzzstr, Locale.US);
+            rbfmt.parse(fuzzstr);
+        } catch (IllegalArgumentException | ParseException e) {
+            // Expected exception or parse failure is fine, but not others like NPE.
+        }
+    }
+/* <issue: https://github.com/unicode-org/icu/pull/4059> 20260717 end */
 }
