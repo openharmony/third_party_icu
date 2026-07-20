@@ -182,10 +182,12 @@
             "icu_74::MessagePattern::clear()";
             "icu_74::MessagePattern::getNumericValue(icu_74::MessagePattern::Part const&) const";
             "icu_74::MessagePattern::getPluralOffset(int) const";
+            "icu_74::MessagePattern::operator=(icu_74::MessagePattern const&)";
             "icu_74::MessagePattern::operator==(icu_74::MessagePattern const&) const";
             "icu_74::MessagePattern::parse(icu_74::UnicodeString const&, UParseError*, UErrorCode&)";
             "icu_74::MessagePattern::parseChoiceStyle(icu_74::UnicodeString const&, UParseError*, UErrorCode&)";
             "icu_74::MessagePattern::parsePluralStyle(icu_74::UnicodeString const&, UParseError*, UErrorCode&)";
+            "icu_74::MessagePattern::parseSelectStyle(icu_74::UnicodeString const&, UParseError*, UErrorCode&)";
             "icu_74::MessagePattern::validateArgumentName(icu_74::UnicodeString const&)";
             "icu_74::MessagePattern::~MessagePattern()";
             "icu_74::Normalizer2::getInstance(char const*, char const*, UNormalization2Mode, UErrorCode&)";
@@ -286,6 +288,7 @@
             "icu_74::UVector32::assign(icu_74::UVector32 const&, UErrorCode&)";
             "icu_74::UVector32::expandCapacity(int, UErrorCode&)";
             "icu_74::UVector32::insertElementAt(int, int, UErrorCode&)";
+            "icu_74::UVector32::operator==(icu_74::UVector32 const&) const";
             "icu_74::UVector32::removeAllElements()";
             "icu_74::UVector32::setElementAt(int, int)";
             "icu_74::UVector32::setSize(int)";
@@ -319,6 +322,7 @@
             "icu_74::UVector::setDeleter(void (*)(void*))";
             "icu_74::UVector::setElementAt(void*, int)";
             "icu_74::UVector::setSize(int, UErrorCode&)";
+            "icu_74::UVector::sort(int (*)(UElement, UElement), UErrorCode&)";
             "icu_74::UVector::sortWithUComparator(int (*)(void const*, void const*, void const*), void const*, UErrorCode&)";
             "icu_74::UVector::toArray(void**) const";
             "icu_74::UVector::~UVector()";
@@ -351,6 +355,7 @@
             "icu_74::UnicodeSet::contains(icu_74::UnicodeString const&) const";
             "icu_74::UnicodeSet::contains(int) const";
             "icu_74::UnicodeSet::contains(int, int) const";
+            "icu_74::UnicodeSet::containsAll(icu_74::UnicodeString const&) const";
             "icu_74::UnicodeSet::containsNone(int, int) const";
             "icu_74::UnicodeSet::freeze()";
             "icu_74::UnicodeSet::getRangeCount() const";
@@ -478,10 +483,14 @@
             "typeinfo for icu_74::UnicodeMatcher";
             "typeinfo for icu_74::UnicodeSet";
             "typeinfo for icu_74::UnicodeString";
+            "vtable for icu_74::ByteSink";
             "vtable for icu_74::CacheKeyBase";
             "vtable for icu_74::ErrorCode";
             "vtable for icu_74::LocaleBuilder";
+            "vtable for icu_74::Locale::Iterator";
             "vtable for icu_74::ParsePosition";
+            "vtable for icu_74::Replaceable";
+            "vtable for icu_74::UObject";
             "vtable for icu_74::UnicodeString";
             "vtable for icu_74::UnicodeStringAppendable";
         };
@@ -613,6 +622,7 @@
             "u_strstr_74";
             "u_strtok_r_74";
             "u_terminateChars_74";
+            "u_terminateUChars_74";
             "u_tolower_74";
             "u_totitle_74";
             "u_toupper_74";
@@ -761,8 +771,10 @@
             "udata_getLength_74";
             "udata_getMemory_74";
             "udata_openChoice_74";
+            "udata_printError_74";
             "udata_setCommonData_74";
             "udata_setFileAccess_74";
+            "udata_swapDataHeader_74";
             "uenum_close_74";
             "uenum_count_74";
             "uenum_nextDefault_74";
@@ -952,6 +964,7 @@
             "uprv_sortArray_74";
             "uprv_strdup_74";
             "uprv_stricmp_74";
+            "uprv_strndup_74";
             "uprv_timezone_74";
             "uprv_toupper_74";
             "uprv_trunc_74";
@@ -997,6 +1010,7 @@
             "uscript_hasScript_74";
             "uscript_isCased_74";
             "uscript_isRightToLeft_74";
+            "uset_addRange_74";
             "uset_addString_74";
             "uset_add_74";
             "uset_applyPattern_74";
