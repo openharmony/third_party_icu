@@ -186,7 +186,18 @@ NumberFormatterImpl::macrosToMicroGenerator(const MacroProps& macros, bool safe,
 
     // Resolve the symbols. Do this here because currency may need to customize them.
     if (macros.symbols.isDecimalFormatSymbols()) {
-        fMicros.simple.symbols = macros.symbols.getDecimalFormatSymbols();
+        /* <issue: https://gitcode.com/openharmony/third_party_icu/issues/314> 20260723 begin */
+        if (macros.symbols.getDecimalFormatSymbols() == nullptr) {
+            return nullptr;
+        }
+        LocalPointer<DecimalFormatSymbols> newSymbols(
+            new DecimalFormatSymbols(*macros.symbols.getDecimalFormatSymbols()), status);
+        if (U_FAILURE(status)) {
+            return nullptr;
+        }
+        fMicros.simple.symbols = newSymbols.getAlias();
+        fSymbols.adoptInstead(newSymbols.orphan());
+        /* <issue: https://gitcode.com/openharmony/third_party_icu/issues/314> 20260723 end */
     } else {
         LocalPointer<DecimalFormatSymbols> newSymbols(
             new DecimalFormatSymbols(macros.locale, *ns, status), status);
