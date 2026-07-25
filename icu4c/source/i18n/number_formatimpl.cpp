@@ -188,15 +188,16 @@ NumberFormatterImpl::macrosToMicroGenerator(const MacroProps& macros, bool safe,
     if (macros.symbols.isDecimalFormatSymbols()) {
         /* <issue: https://gitcode.com/openharmony/third_party_icu/issues/314> 20260723 begin */
         if (macros.symbols.getDecimalFormatSymbols() == nullptr) {
-            return nullptr;
+            fMicros.simple.symbols = nullptr;
+        } else {
+            LocalPointer<DecimalFormatSymbols> newSymbols(
+                new DecimalFormatSymbols(*macros.symbols.getDecimalFormatSymbols()), status);
+            if (U_FAILURE(status)) {
+                return nullptr;
+            }
+            fMicros.simple.symbols = newSymbols.getAlias();
+            fSymbols.adoptInstead(newSymbols.orphan());
         }
-        LocalPointer<DecimalFormatSymbols> newSymbols(
-            new DecimalFormatSymbols(*macros.symbols.getDecimalFormatSymbols()), status);
-        if (U_FAILURE(status)) {
-            return nullptr;
-        }
-        fMicros.simple.symbols = newSymbols.getAlias();
-        fSymbols.adoptInstead(newSymbols.orphan());
         /* <issue: https://gitcode.com/openharmony/third_party_icu/issues/314> 20260723 end */
     } else {
         LocalPointer<DecimalFormatSymbols> newSymbols(
