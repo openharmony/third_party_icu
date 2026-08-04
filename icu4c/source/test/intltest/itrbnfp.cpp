@@ -40,6 +40,9 @@ void IntlTestRBNFParse::runIndexedTest(int32_t index, UBool exec, const char* &n
     switch (index) {
 #if U_HAVE_RBNF
         TESTCASE(0, TestParse);
+     /* <issue: https://github.com/unicode-org/icu/pull/4059> 20260717 begin */
+        TESTCASE(1, Test23407NullDereferenceREAD);
+     /* <issue: https://github.com/unicode-org/icu/pull/4059> 20260717 end */
 #else
         TESTCASE(0, TestRBNFParseDisabled);
 #endif
@@ -156,6 +159,24 @@ IntlTestRBNFParse::testfmt(RuleBasedNumberFormat* formatter, double val, UErrorC
         logln("error: could not format %g, returned status: %d", val, status);
     }
 }
+
+/* <issue: https://github.com/unicode-org/icu/pull/4059> 20260717 begin */
+void
+IntlTestRBNFParse::Test23407NullDereferenceREAD() {
+    // This is "garbage" from a fuzzer run. We test that the code does not crash.
+    // Parse failure is expected.
+    logln("Test23407NullDereferenceREAD");
+    icu::UnicodeString fuzzstr(u"x0x:>%䀾>Ā;%䀾:>;>;;<0<<>");
+
+    UErrorCode status = U_ZERO_ERROR;
+    UParseError perror;
+    icu::RuleBasedNumberFormat rbfmt(fuzzstr, Locale::getUS(), perror, status);
+    icu::Formattable result;
+    if (U_SUCCESS(status)) {
+        rbfmt.parse(fuzzstr, result, status);
+    }
+}
+/* <issue: https://github.com/unicode-org/icu/pull/4059> 20260717 end */
 
 void
 IntlTestRBNFParse::testfmt(RuleBasedNumberFormat* formatter, int val, UErrorCode& status) {

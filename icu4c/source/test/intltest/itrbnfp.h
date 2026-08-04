@@ -29,6 +29,9 @@ class IntlTestRBNFParse : public IntlTest {
    * Perform an API test
    */
   virtual void TestParse();
+/* <issue: https://github.com/unicode-org/icu/pull/4059> 20260717 begin */
+  virtual void Test23407NullDereferenceREAD();
+/* <issue: https://github.com/unicode-org/icu/pull/4059> 20260717 end */
 
   void testfmt(RuleBasedNumberFormat* formatter, double val, UErrorCode& status);
   void testfmt(RuleBasedNumberFormat* formatter, int val, UErrorCode& status);
