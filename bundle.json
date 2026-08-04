@@ -34,7 +34,6 @@
                 "//third_party/icu/icu4c:shared_icuuc",
                 "//third_party/icu/icu4c:shared_icui18n",
                 "//third_party/icu/ohos_icu4c:icundk",
-                "//third_party/icu/icu4c:static_icu",
                 "//third_party/icu/ohos_icu4c:icudt72l_diff",
                 "//third_party/icu/ohos_icu4c:icu72_dat_mount"
             ],
@@ -562,13 +561,6 @@
                     "header": {
                         "header_files": [],
                         "header_base": "//third_party/icu/icu4c/source/common"
-                    }
-                },
-                {
-                    "name": "//third_party/icu/icu4c:static_icu",
-                    "header": {
-                        "header_files": [],
-                        "header_base": "//third_party/icu/icu4c/source"
                     }
                 }
             ],
