@@ -15,7 +15,6 @@
 #ifndef OHOS_GLOBAL_I18N_LUNAR_CALENDAR_H
 #define OHOS_GLOBAL_I18N_LUNAR_CALENDAR_H
 
-#include <cstdint>
 #include <string>
 #include <unordered_map>
 #include <vector>
