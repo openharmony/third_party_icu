@@ -136,3 +136,6 @@ ohos_executable("icu72_dat_diff") {
   subsystem_name = "thirdparty"
   part_name = "icu"
 }
+
+action("gen_icudt72l_diff") {
+}
