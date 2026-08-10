@@ -92,8 +92,9 @@ ohos_prebuilt_etc("ohos_old_icudat") {
 }
 
 ohos_prebuilt_etc("icudt72l_diff") {
-  source = "//third_party/icu/ohos_icu4j/data/old/icudt72l.diff"
+  source = "$target_out_dir/icudt72l.diff"
 
+  deps = [ ":gen_icudt72l_diff" ]
   module_install_dir = "usr/ohos_icu_diff/"
   part_name = "icu"
   subsystem_name = "thirdparty"
@@ -138,4 +139,22 @@ ohos_executable("icu72_dat_diff") {
 }
 
 action("gen_icudt72l_diff") {
+  script = "//third_party/icu/ohos_icu4c/mount/run_diff.sh"
+
+  deps = [
+    ":pkg_icudata",
+  ]
+  dat_root_out_dir =
+      get_label_info(":pkg_icudata", "root_out_dir")
+  inputs = [
+    "//third_party/icu/ohos_icu4c/mount/CMakeLists.txt",
+    "//third_party/icu/ohos_icu4c/mount/run_diff.sh",
+  ]
+
+  outputs = [ "$target_out_dir/icudt72l.diff" ]
+
+  args = [
+    "$dat_root_out_dir",
+  ]
+  print("zdd-args=${args}")
 }
