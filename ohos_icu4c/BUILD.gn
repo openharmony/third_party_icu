@@ -156,5 +156,4 @@ action("gen_icudt72l_diff") {
   args = [
     "$dat_root_out_dir",
   ]
-  print("zdd-args=${args}")
 }
