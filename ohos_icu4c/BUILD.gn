@@ -108,7 +108,7 @@ ohos_executable("icu72_dat_mount") {
       defined(global_parts_info.updater_updater)) {
     external_deps += [
       "updater:libdiff_patch_shared",
-      "openssl:libcrypto_static"
+      "openssl:libcrypto_shared"
     ]
     defines += [ "UPDATER_ENABLE" ]
   }
@@ -129,7 +129,7 @@ ohos_executable("icu72_dat_diff") {
       "updater:libpatch",
       "updater:libdiff",
       "updater:libutils",
-      "openssl:libcrypto_static"
+      "openssl:libcrypto_shared"
     ]
     defines += [ "UPDATER_ENABLE" ]
   }
