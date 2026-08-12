@@ -39,8 +39,6 @@ set(INCLUDE_DIRS
     "${UPDATER_ROOT}/services/include/patch"
     "${UPDATER_ROOT}/services/common"
     "${UPDATER_ROOT}/utils/include"
-    "${UPSTREAM_ROOT}/third_party/bounds_checking_function/include"
-    "${UPSTREAM_ROOT}/third_party/bounds_checking_function/src"
     "${UPDATER_ROOT}/services/package/pkg_verify"
     "${UPDATER_ROOT}/services/package/pkg_algorithm"
     "${UPDATER_ROOT}/services/package"
@@ -48,6 +46,9 @@ set(INCLUDE_DIRS
     "${UPDATER_ROOT}/services/package/pkg_package"
     "${UPDATER_ROOT}/services/include/log"
     "${UPDATER_ROOT}/services/include/script"
+    "${UPSTREAM_ROOT}/third_party/bounds_checking_function/include"
+    "${UPSTREAM_ROOT}/third_party/bounds_checking_function/src"
+    "${UPSTREAM_ROOT}/third_party/lz4/lib"
 )
 
 foreach(dir ${INCLUDE_DIRS})
@@ -66,6 +67,7 @@ file(GLOB pkg_package_LIST "${UPDATER_ROOT}/services/package/pkg_package/*.cpp")
 file(GLOB pkg_verify_LIST "${UPDATER_ROOT}/services/package/pkg_verify/*.cpp")
 list(FILTER pkg_verify_LIST EXCLUDE REGEX ".*hash_data_verifier\\.cpp$")
 file(GLOB diffpatch_LIST "${UPDATER_ROOT}/services/diffpatch/diff/*.cpp")
+file(GLOB lz4_LIST "${UPSTREAM_ROOT}/third_party/lz4/lib/*.c")
 
 add_library(difflib SHARED
     ${UPDATER_ROOT}/services/diffpatch/bzip2/bzip2_adapter.cpp
@@ -81,6 +83,7 @@ add_library(difflib SHARED
 
 add_library(BoundsCheckLib STATIC
     ${BOUNDS_CHECK_SRC_LIST}
+    ${lz4_LIST}
 )
 
 target_link_libraries(difflib PRIVATE BoundsCheckLib)
@@ -93,7 +96,6 @@ target_link_libraries(icu72_dat_diff
     BoundsCheckLib
     difflib
     bz2
-    lz4
     crypto
     z
     pthread
