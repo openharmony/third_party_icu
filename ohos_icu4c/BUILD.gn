@@ -155,5 +155,6 @@ action("gen_icudt72l_diff") {
 
   args = [
     "$dat_root_out_dir",
+    "$target_out_dir",
   ]
 }
