@@ -16,8 +16,8 @@ project(icu72_dat_diff C CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-error -Wno-c++11-narrowing -D_INC_STRING_S -D_INC_WCHAR_S -D_SECIMP=// -D_STDIO_S_DEFINED -D_INC_STDIO_S -D_INC_STDLIB_S -D_INC_MEMORY_S")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -O2 -Wall -Wno-error -Wno-c++11-narrowing -DUPDATER_ENABLE -DOPENSSL_SUPPRESS_DEPRECATED -DCOMPILER_GNU=1")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC -Wno-error -Wno-c++11-narrowing -D_INC_STRING_S -D_INC_WCHAR_S -D_SECIMP=// -D_STDIO_S_DEFINED -D_INC_STDIO_S -D_INC_STDLIB_S -D_INC_MEMORY_S")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -std=c++17 -O2 -Wall -Wno-error -Wno-c++11-narrowing -DUPDATER_ENABLE -DOPENSSL_SUPPRESS_DEPRECATED -DCOMPILER_GNU=1")
 message("==UPSTREAM_ROOT: ${UPSTREAM_ROOT}")
 set(ICU_ROOT "${UPSTREAM_ROOT}/third_party/icu")
 set(UPDATER_ROOT "${UPSTREAM_ROOT}/base/update/updater")
@@ -50,6 +50,7 @@ set(INCLUDE_DIRS
     "${UPSTREAM_ROOT}/third_party/bounds_checking_function/src"
     "${UPSTREAM_ROOT}/third_party/lz4/lib"
     "${UPSTREAM_ROOT}/third_party/bzip2"
+    "${UPSTREAM_ROOT}/third_party/openssl/include"
 )
 
 foreach(dir ${INCLUDE_DIRS})
