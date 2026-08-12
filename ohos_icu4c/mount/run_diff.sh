@@ -26,14 +26,11 @@ if [ -z "$ROOT_OUT_DIR" ]; then
     exit 1
 fi
 
-UPSTREAM_ROOT="${SOURCE_ROOT}"
-
 ICU_OUT_DIR="${SOURCE_ROOT}/${ROOT_OUT_DIR}/thirdparty/icu/out"
 ICU_OLD_DATA_DIR="${SOURCE_ROOT}/third_party/icu/ohos_icu4j/data/old"
 
 echo "=========================================" >&2
 echo "Building icu72_dat_diff" >&2
-echo "UPSTREAM_ROOT: $UPSTREAM_ROOT" >&2
 echo "SOURCE_ROOT: $SOURCE_ROOT" >&2
 echo "ICU_OUT_DIR: $ICU_OUT_DIR" >&2
 echo "ICU_OLD_DATA_DIR: $ICU_OLD_DATA_DIR" >&2
@@ -44,7 +41,7 @@ echo "=========================================" >&2
 mkdir -p "${BUILD_DIR}"
 cd "${BUILD_DIR}"
 
-cmake -DUPSTREAM_ROOT="${UPSTREAM_ROOT}" .. \
+cmake -DUPSTREAM_ROOT="${SOURCE_ROOT}" .. \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_SYSTEM_NAME=Linux \
     -DCMAKE_SYSTEM_PROCESSOR=x86_64 \
