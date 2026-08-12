@@ -49,6 +49,7 @@ set(INCLUDE_DIRS
     "${UPSTREAM_ROOT}/third_party/bounds_checking_function/include"
     "${UPSTREAM_ROOT}/third_party/bounds_checking_function/src"
     "${UPSTREAM_ROOT}/third_party/lz4/lib"
+    "${UPSTREAM_ROOT}/third_party/bzip2"
 )
 
 foreach(dir ${INCLUDE_DIRS})
@@ -68,6 +69,7 @@ file(GLOB pkg_verify_LIST "${UPDATER_ROOT}/services/package/pkg_verify/*.cpp")
 list(FILTER pkg_verify_LIST EXCLUDE REGEX ".*hash_data_verifier\\.cpp$")
 file(GLOB diffpatch_LIST "${UPDATER_ROOT}/services/diffpatch/diff/*.cpp")
 file(GLOB lz4_LIST "${UPSTREAM_ROOT}/third_party/lz4/lib/*.c")
+file(GLOB bzip2_LIST "${UPSTREAM_ROOT}/third_party/bzip2/*.c")
 
 add_library(difflib SHARED
     ${UPDATER_ROOT}/services/diffpatch/bzip2/bzip2_adapter.cpp
@@ -84,6 +86,7 @@ add_library(difflib SHARED
 add_library(BoundsCheckLib STATIC
     ${BOUNDS_CHECK_SRC_LIST}
     ${lz4_LIST}
+    ${bzip2_LIST}
 )
 
 target_link_libraries(difflib PRIVATE BoundsCheckLib)
@@ -95,7 +98,6 @@ add_executable(icu72_dat_diff ${SOURCES})
 target_link_libraries(icu72_dat_diff
     BoundsCheckLib
     difflib
-    bz2
     crypto
     z
     pthread
