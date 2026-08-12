@@ -16,6 +16,7 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BUILD_DIR="${SCRIPT_DIR}/build"
 ROOT_OUT_DIR="$1"
+DIFF_OUT_DIR="$2"
 
 SOURCE_ROOT="${SCRIPT_DIR}/../../../../"
 echo "ROOT_OUT_DIR: $ROOT_OUT_DIR" >&2
@@ -37,6 +38,7 @@ echo "SOURCE_ROOT: $SOURCE_ROOT" >&2
 echo "ICU_OUT_DIR: $ICU_OUT_DIR" >&2
 echo "ICU_OLD_DATA_DIR: $ICU_OLD_DATA_DIR" >&2
 echo "BUILD_DIR: $BUILD_DIR" >&2
+echo "DIFF_OUT_DIR: $DIFF_OUT_DIR" >&2
 echo "=========================================" >&2
 
 mkdir -p "${BUILD_DIR}"
@@ -60,7 +62,7 @@ cd "${SCRIPT_DIR}"
 ./build/icu72_dat_diff \
     "${ICU_OLD_DATA_DIR}/icudt72l.dat" \
     "${ICU_OUT_DIR}/icudt74l.dat" \
-    "${ICU_OUT_DIR}/icudt72l.diff"
+    "${SOURCE_ROOT}/${DIFF_OUT_DIR}/icudt72l.diff"
 
 echo "">&2
 echo "=========================================">&2
