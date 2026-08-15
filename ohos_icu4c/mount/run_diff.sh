@@ -41,7 +41,7 @@ echo "=========================================" >&2
 mkdir -p "${BUILD_DIR}"
 cd "${BUILD_DIR}"
 
-cmake -DUPSTREAM_ROOT="${SOURCE_ROOT}" .. \
+cmake .. -DUPSTREAM_ROOT="${SOURCE_ROOT}" \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_SYSTEM_NAME=Linux \
     -DCMAKE_SYSTEM_PROCESSOR=x86_64 \
