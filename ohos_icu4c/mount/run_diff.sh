@@ -14,11 +14,13 @@
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-BUILD_DIR="${SCRIPT_DIR}/build"
 ROOT_OUT_DIR="$1"
 DIFF_OUT_DIR="$2"
 
 SOURCE_ROOT="${SCRIPT_DIR}/../../../../"
+BUILD_DIR="${SOURCE_ROOT}/${DIFF_OUT_DIR}/build"
+cp "${SCRIPT_DIR}/CMakeLists.txt" "${SOURCE_ROOT}/${DIFF_OUT_DIR}/"
+cp "${SCRIPT_DIR}/icu72_dat_diff.cpp" "${SOURCE_ROOT}/${DIFF_OUT_DIR}/"
 echo "ROOT_OUT_DIR: $ROOT_OUT_DIR" >&2
 echo "SOURCE_ROOT: $SOURCE_ROOT" >&2
 if [ -z "$ROOT_OUT_DIR" ]; then
@@ -38,6 +40,9 @@ echo "BUILD_DIR: $BUILD_DIR" >&2
 echo "DIFF_OUT_DIR: $DIFF_OUT_DIR" >&2
 echo "=========================================" >&2
 
+if [ -d "${BUILD_DIR}" ]; then
+    rm -rf "${BUILD_DIR}"
+fi
 mkdir -p "${BUILD_DIR}"
 cd "${BUILD_DIR}"
 
@@ -55,8 +60,8 @@ echo "=========================================" >&2
 echo "Running icu72_dat_diff to generate icudt72l.diff" >&2
 echo "=========================================" >&2
 
-cd "${SCRIPT_DIR}"
-./build/icu72_dat_diff \
+cd "${BUILD_DIR}"
+./icu72_dat_diff \
     "${ICU_OLD_DATA_DIR}/icudt72l.dat" \
     "${ICU_OUT_DIR}/icudt74l.dat" \
     "${SOURCE_ROOT}/${DIFF_OUT_DIR}/icudt72l.diff"
