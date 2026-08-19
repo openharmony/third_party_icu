@@ -15,6 +15,19 @@ import("//build/ohos.gni")
 import("//build/ohos/ndk/ndk.gni")
 import("//third_party/icu/icu.gni")
 
+group("build_icudt72l") {
+  deps= []
+  if (defined(global_parts_info) &&
+      defined(global_parts_info.updater_updater)) {
+    deps += [
+      ":icudt72l_diff",
+      ":ohos_mount_icu72ldat",
+    ]
+  } else {
+    deps += [ ":ohos_icu72l_dat" ]
+  }
+}
+
 ohos_shared_library("icundk") {
   ldflags = [
     "-shared",
@@ -30,7 +43,6 @@ ohos_shared_library("icundk") {
 
   deps = [
     ":ohos_icudat",
-    ":ohos_old_icudat",
     "//third_party/icu/icu4c:shared_icui18n",
     "//third_party/icu/icu4c:shared_icuuc",
   ]
@@ -83,17 +95,25 @@ ohos_prebuilt_etc("ohos_icudat") {
   subsystem_name = "thirdparty"
 }
 
-ohos_prebuilt_etc("ohos_old_icudat") {
-  source = "//third_party/icu/ohos_icu4j/data/icudt72l.dat"
+ohos_prebuilt_etc("ohos_icu72l_dat") {
+  source = "//third_party/icu/ohos_icu4j/data/old/icudt72l.dat"
+ 
+  module_install_dir = "usr/ohos_icu/"
+  part_name = "icu"
+  subsystem_name = "thirdparty"
+}
 
+ohos_prebuilt_etc("ohos_mount_icu72ldat") {
+  source = "//third_party/icu/ohos_icu4j/data/icudt72l.dat"
+ 
   module_install_dir = "usr/ohos_icu/"
   part_name = "icu"
   subsystem_name = "thirdparty"
 }
 
 ohos_prebuilt_etc("icudt72l_diff") {
-  source = "//third_party/icu/ohos_icu4j/data/old/icudt72l.diff"
-
+  source = "$target_out_dir/icudt72l.diff"
+  deps = [ ":gen_icudt72l_diff" ]
   module_install_dir = "usr/ohos_icu_diff/"
   part_name = "icu"
   subsystem_name = "thirdparty"
@@ -135,4 +155,25 @@ ohos_executable("icu72_dat_diff") {
   }
   subsystem_name = "thirdparty"
   part_name = "icu"
+}
+
+action("gen_icudt72l_diff") {
+  script = "//third_party/icu/ohos_icu4c/mount/run_diff.sh"
+
+  deps = [
+    ":pkg_icudata",
+  ]
+  dat_root_out_dir =
+      get_label_info(":pkg_icudata", "root_out_dir")
+  inputs = [
+    "//third_party/icu/ohos_icu4c/mount/CMakeLists.txt",
+    "//third_party/icu/ohos_icu4c/mount/run_diff.sh",
+  ]
+
+  outputs = [ "$target_out_dir/icudt72l.diff" ]
+
+  args = [
+    "$dat_root_out_dir",
+    "$target_out_dir",
+  ]
 }
