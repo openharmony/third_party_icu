@@ -30,6 +30,7 @@ fi
 
 ICU_OUT_DIR="${SOURCE_ROOT}/${ROOT_OUT_DIR}/thirdparty/icu/out"
 ICU_OLD_DATA_DIR="${SOURCE_ROOT}/third_party/icu/ohos_icu4j/data/old"
+CMAKE_COMPILER_PATH="${SOURCE_ROOT}/prebuilts/clang/ohos/linux-x86_64/llvm/bin"
 
 echo "=========================================" >&2
 echo "Building icu72_dat_diff" >&2
@@ -50,8 +51,8 @@ cmake .. -DUPSTREAM_ROOT="${SOURCE_ROOT}" \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_SYSTEM_NAME=Linux \
     -DCMAKE_SYSTEM_PROCESSOR=x86_64 \
-    -DCMAKE_C_COMPILER=clang \
-    -DCMAKE_CXX_COMPILER=clang++
+    -DCMAKE_C_COMPILER=${CMAKE_COMPILER_PATH}/clang \
+    -DCMAKE_CXX_COMPILER=${CMAKE_COMPILER_PATH}/clang++
 
 make -j$(nproc)
 
