@@ -209,7 +209,7 @@ lv{
         NL{"Nīderlande"}
         NO{"Norvēģija"}
         NP{"Nepāla"}
-        NR{"Nauru"}
+        NR{"Naur2u"}
         NU{"Niue"}
         NZ{"Jaunzēlande"}
         OM{"Omāna"}

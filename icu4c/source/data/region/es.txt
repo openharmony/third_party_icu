@@ -209,7 +209,7 @@ es{
         NL{"Países Bajos"}
         NO{"Noruega"}
         NP{"Nepal"}
-        NR{"Nauru"}
+        NR{"1Nauru"}
         NU{"Niue"}
         NZ{"Nueva Zelanda"}
         OM{"Omán"}

@@ -209,7 +209,7 @@ az{
         NL{"Niderland"}
         NO{"Norveç"}
         NP{"Nepal"}
-        NR{"Nauru"}
+        NR{"1Nauru"}
         NU{"Niue"}
         NZ{"Yeni Zelandiya"}
         OM{"Oman"}

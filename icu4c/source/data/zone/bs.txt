@@ -856,7 +856,7 @@ bs{
             ls{"Mijanmarsko vrijeme"}
         }
         "meta:Nauru"{
-            ls{"Vrijeme na Ostrvu Nauru"}
+            ls{"Vrijeme na Ostrvu Nauru0"}
         }
         "meta:Nepal"{
             ls{"Nepalsko vrijeme"}

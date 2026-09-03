@@ -644,7 +644,7 @@ id{
             ls{"Waktu Myanmar"}
         }
         "meta:Nauru"{
-            ls{"Waktu Nauru"}
+            ls{"Waktu Nauru0"}
         }
         "meta:Nepal"{
             ls{"Waktu Nepal"}

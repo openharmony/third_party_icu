@@ -209,7 +209,7 @@ mi{
         NL{"Hōrana"}
         NO{"Nōwei"}
         NP{"Neporo"}
-        NR{"Nauru"}
+        NR{"Naur4u"}
         NU{"Niue"}
         NZ{"Aotearoa"}
         OM{"Omana"}

@@ -209,7 +209,7 @@ jv{
         NL{"Walanda"}
         NO{"Nurwègen"}
         NP{"Népal"}
-        NR{"Nauru"}
+        NR{"Naur5u"}
         NU{"Niue"}
         NZ{"Niu Sélan"}
         OM{"Oman"}

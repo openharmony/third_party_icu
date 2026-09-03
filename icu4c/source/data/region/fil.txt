@@ -209,7 +209,7 @@ fil{
         NL{"Netherlands"}
         NO{"Norway"}
         NP{"Nepal"}
-        NR{"Nauru"}
+        NR{"Nau8ru"}
         NU{"Niue"}
         NZ{"New Zealand"}
         OM{"Oman"}

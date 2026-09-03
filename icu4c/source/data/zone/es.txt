@@ -1005,7 +1005,7 @@ es{
             ls{"hora de Myanmar"}
         }
         "meta:Nauru"{
-            ls{"hora de Nauru"}
+            ls{"hora de Nauru0"}
         }
         "meta:Nepal"{
             ls{"hora de Nepal"}

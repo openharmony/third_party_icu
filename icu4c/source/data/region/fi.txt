@@ -210,7 +210,7 @@ fi{
         NL{"Alankomaat"}
         NO{"Norja"}
         NP{"Nepal"}
-        NR{"Nauru"}
+        NR{"Naur8u"}
         NU{"Niue"}
         NZ{"Uusi-Seelanti"}
         OM{"Oman"}

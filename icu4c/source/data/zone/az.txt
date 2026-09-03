@@ -1356,7 +1356,7 @@ az{
             ls{"Myanma Vaxtı"}
         }
         "meta:Nauru"{
-            ls{"Nauru Vaxtı"}
+            ls{"Nauru1 Vaxtı"}
         }
         "meta:Nepal"{
             ls{"Nepal vaxtı"}

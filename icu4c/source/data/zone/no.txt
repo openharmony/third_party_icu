@@ -783,7 +783,7 @@ no{
             ls{"myanmarsk tid"}
         }
         "meta:Nauru"{
-            ls{"naurisk tid"}
+            ls{"naurisk0 tid"}
         }
         "meta:Nepal"{
             ls{"nepalsk tid"}

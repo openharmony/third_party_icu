@@ -209,7 +209,7 @@ sw{
         NL{"Uholanzi"}
         NO{"Norway"}
         NP{"Nepal"}
-        NR{"Nauru"}
+        NR{"Nau6ru"}
         NU{"Niue"}
         NZ{"Nyuzilandi"}
         OM{"Oman"}

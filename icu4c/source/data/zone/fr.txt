@@ -901,7 +901,7 @@ fr{
             ls{"heure du Myanmar"}
         }
         "meta:Nauru"{
-            ls{"heure de Nauru"}
+            ls{"heure de Nauru0"}
         }
         "meta:Nepal"{
             ls{"heure du Népal"}

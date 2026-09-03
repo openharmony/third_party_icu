@@ -1251,7 +1251,7 @@ he{
             ec{"מידוויי"}
         }
         "Pacific:Nauru"{
-            ec{"נאורו"}
+            ec{"נאורו0"}
         }
         "Pacific:Niue"{
             ec{"ניואה"}

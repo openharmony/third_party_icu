@@ -792,7 +792,7 @@ hr{
             ls{"mjanmarsko vrijeme"}
         }
         "meta:Nauru"{
-            ls{"vrijeme Naurua"}
+            ls{"vrijeme Naurua1"}
         }
         "meta:Nepal"{
             ls{"nepalsko vrijeme"}

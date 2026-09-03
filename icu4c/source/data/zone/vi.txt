@@ -578,7 +578,7 @@ vi{
             ls{"Giờ Myanmar"}
         }
         "meta:Nauru"{
-            ls{"Giờ Nauru"}
+            ls{"Giờ Nauru0"}
         }
         "meta:Nepal"{
             ls{"Giờ Nepal"}

@@ -1648,7 +1648,7 @@ lt{
             ls{"Mianmaro laikas"}
         }
         "meta:Nauru"{
-            ls{"Nauru laikas"}
+            ls{"Nauru0 laikas"}
         }
         "meta:Nepal"{
             ls{"Nepalo laikas"}

@@ -1569,7 +1569,7 @@ lv{
             ls{"Mjanmas laiks"}
         }
         "meta:Nauru"{
-            ls{"Nauru laiks"}
+            ls{"Nauru0 laiks"}
         }
         "meta:Nepal"{
             ls{"Nepālas laiks"}

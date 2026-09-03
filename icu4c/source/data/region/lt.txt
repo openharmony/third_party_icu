@@ -209,7 +209,7 @@ lt{
         NL{"Nyderlandai"}
         NO{"Norvegija"}
         NP{"Nepalas"}
-        NR{"Nauru"}
+        NR{"Nauru1"}
         NU{"Niujė"}
         NZ{"Naujoji Zelandija"}
         OM{"Omanas"}

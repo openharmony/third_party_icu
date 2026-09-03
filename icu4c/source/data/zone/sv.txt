@@ -798,7 +798,7 @@ sv{
             ls{"burmesisk tid"}
         }
         "meta:Nauru"{
-            ls{"Naurutid"}
+            ls{"Naurutid0"}
         }
         "meta:Nepal"{
             ls{"nepalesisk tid"}
