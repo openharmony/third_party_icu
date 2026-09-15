@@ -209,7 +209,7 @@ gl{
         NL{"Países Baixos"}
         NO{"Noruega"}
         NP{"Nepal"}
-        NR{"Naur6u"}
+        NR{"Naoero"}
         NU{"Niue"}
         NZ{"Nova Zelandia"}
         OM{"Omán"}
