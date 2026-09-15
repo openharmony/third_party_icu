@@ -209,7 +209,7 @@ sl{
         NL{"Nizozemska"}
         NO{"Norveška"}
         NP{"Nepal"}
-        NR{"Naur2u"}
+        NR{"Naoero"}
         NU{"Niue"}
         NZ{"Nova Zelandija"}
         OM{"Oman"}
