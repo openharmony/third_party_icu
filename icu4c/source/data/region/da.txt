@@ -209,7 +209,7 @@ da{
         NL{"Nederlandene"}
         NO{"Norge"}
         NP{"Nepal"}
-        NR{"1Nauru"}
+        NR{"Naoero"}
         NU{"Niue"}
         NZ{"New Zealand"}
         OM{"Oman"}
