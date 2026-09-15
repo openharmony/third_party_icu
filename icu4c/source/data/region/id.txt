@@ -209,7 +209,7 @@ id{
         NL{"Belanda"}
         NO{"Norwegia"}
         NP{"Nepal"}
-        NR{"Naur5u"}
+        NR{"Naoero"}
         NU{"Niue"}
         NZ{"Selandia Baru"}
         OM{"Oman"}
