@@ -210,7 +210,7 @@ no{
         NL{"Nederland"}
         NO{"Norge"}
         NP{"Nepal"}
-        NR{"Naur2u"}
+        NR{"Naoero"}
         NU{"Niue"}
         NZ{"New Zealand"}
         OM{"Oman"}
