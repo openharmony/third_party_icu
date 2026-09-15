@@ -209,7 +209,7 @@ ms{
         NL{"Belanda"}
         NO{"Norway"}
         NP{"Nepal"}
-        NR{"Nau4ru"}
+        NR{"Naoero"}
         NU{"Niue"}
         NZ{"New Zealand"}
         OM{"Oman"}
