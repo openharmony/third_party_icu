@@ -210,7 +210,7 @@ et{
         NL{"Holland"}
         NO{"Norra"}
         NP{"Nepal"}
-        NR{"Nauru0"}
+        NR{"Naoero"}
         NU{"Niue"}
         NZ{"Uus-Meremaa"}
         OM{"Omaan"}
