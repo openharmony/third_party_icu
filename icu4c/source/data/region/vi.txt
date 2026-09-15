@@ -209,7 +209,7 @@ vi{
         NL{"Hà Lan"}
         NO{"Na Uy"}
         NP{"Nepal"}
-        NR{"Naur3u"}
+        NR{"Naoero"}
         NU{"Niue"}
         NZ{"New Zealand"}
         OM{"Oman"}
