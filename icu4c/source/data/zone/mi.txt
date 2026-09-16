@@ -738,7 +738,7 @@ mi{
             ls{"Wā Pēma"}
         }
         "meta:Nauru"{
-            ls{"Wā Nauru0"}
+            ls{"Wā Naoero"}
         }
         "meta:Nepal"{
             ls{"Wā Nepōra"}
