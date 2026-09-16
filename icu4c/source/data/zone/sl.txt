@@ -835,7 +835,7 @@ sl{
             ls{"Mjanmarski čas"}
         }
         "meta:Nauru"{
-            ls{"Naurujski1 čas"}
+            ls{"Čas v Naoeru"}
         }
         "meta:Nepal"{
             ls{"Nepalski čas"}
