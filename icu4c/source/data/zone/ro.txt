@@ -731,7 +731,7 @@ ro{
             ls{"Ora Myanmarului"}
         }
         "meta:Nauru"{
-            ls{"Ora din1 Nauru"}
+            ls{"Ora în Nauru"}
         }
         "meta:Nepal"{
             ls{"Ora Nepalului"}
