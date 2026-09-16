@@ -648,7 +648,7 @@ jv{
             ls{"Wektu Myanmar"}
         }
         "meta:Nauru"{
-            ls{"Wektu Nauru0"}
+            ls{"Wektu Naoero"}
         }
         "meta:Nepal"{
             ls{"Wektu Nepal"}
