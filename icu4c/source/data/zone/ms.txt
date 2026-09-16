@@ -514,7 +514,7 @@ ms{
             ls{"Waktu Myanmar"}
         }
         "meta:Nauru"{
-            ls{"Waktu Nauru0"}
+            ls{"Waktu Naoero"}
         }
         "meta:Nepal"{
             ls{"Waktu Nepal"}
