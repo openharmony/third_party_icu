@@ -1251,7 +1251,7 @@ ka{
             ec{"მიდუეი"}
         }
         "Pacific:Nauru"{
-            ec{"ნაურუ0"}
+            ec{"ნაოერო"}
         }
         "Pacific:Niue"{
             ec{"ნიუე"}
