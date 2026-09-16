@@ -838,7 +838,7 @@ fi{
             ls{"Myanmarin aika"}
         }
         "meta:Nauru"{
-            ls{"Naurun0 aika"}
+            ls{"Naoeron aika"}
         }
         "meta:Nepal"{
             ls{"Nepalin aika"}
