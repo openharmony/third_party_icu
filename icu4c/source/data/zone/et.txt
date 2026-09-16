@@ -824,7 +824,7 @@ et{
             ls{"Birma aeg"}
         }
         "meta:Nauru"{
-            ls{"Nauru0 aeg"}
+            ls{"Naoero kellaaeg"}
         }
         "meta:Nepal"{
             ls{"Nepali aeg"}
