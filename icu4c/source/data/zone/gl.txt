@@ -901,7 +901,7 @@ gl{
             ls{"hora de Myanmar"}
         }
         "meta:Nauru"{
-            ls{"hora de Nauru0"}
+            ls{"Hora de Naoero"}
         }
         "meta:Nepal"{
             ls{"hora de Nepal"}
