@@ -111,7 +111,7 @@ tr{
         EZ{"Euro Bölgesi"}
         FI{"Finlandiya"}
         FJ{"Fiji"}
-        FK{"Falkland Adaları (Malvinas Adaları)"}
+        FK{"Falkland Adaları"}
         FM{"Mikronezya"}
         FO{"Faroe Adaları"}
         FR{"Fransa"}

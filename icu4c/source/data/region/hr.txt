@@ -111,7 +111,7 @@ hr{
         EZ{"eurozona"}
         FI{"Finska"}
         FJ{"Fidži"}
-        FK{"Falklandski Otoci (Malvini)"}
+        FK{"Falklandski otoci"}
         FM{"Mikronezija"}
         FO{"Farski otoci"}
         FR{"Francuska"}
