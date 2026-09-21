@@ -111,7 +111,7 @@ fr{
         EZ{"Zone euro"}
         FI{"Finlande"}
         FJ{"Fidji"}
-        FK{"Îles Malouines (Îles Falkland)"}
+        FK{"Îles Malouines"}
         FM{"Micronésie"}
         FO{"Îles Féroé"}
         FR{"France"}

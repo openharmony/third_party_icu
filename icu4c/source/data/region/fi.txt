@@ -112,7 +112,7 @@ fi{
         EZ{"euroalue"}
         FI{"Suomi"}
         FJ{"Fidži"}
-        FK{"Falklandinsaaret (Malvinassaaret)"}
+        FK{"Falklandinsaaret"}
         FM{"Mikronesia"}
         FO{"Färsaaret"}
         FR{"Ranska"}

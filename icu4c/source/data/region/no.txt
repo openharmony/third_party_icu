@@ -112,7 +112,7 @@ no{
         EZ{"eurosonen"}
         FI{"Finland"}
         FJ{"Fiji"}
-        FK{"Falklandsøyene (Islas Malvinas)"}
+        FK{"Falklandsøyene"}
         FM{"Mikronesiaføderasjonen"}
         FO{"Færøyene"}
         FR{"Frankrike"}
