@@ -1251,7 +1251,7 @@ ru{
             ec{"о-ва Мидуэй"}
         }
         "Pacific:Nauru"{
-            ec{"Науру"}
+            ec{"Наоэро"}
         }
         "Pacific:Niue"{
             ec{"Ниуэ"}
@@ -1747,7 +1747,7 @@ ru{
             ls{"Мьянма"}
         }
         "meta:Nauru"{
-            ls{"Науру"}
+            ls{"Наоэро"}
         }
         "meta:Nepal"{
             ls{"Непал"}

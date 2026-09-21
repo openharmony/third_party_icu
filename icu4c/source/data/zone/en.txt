@@ -497,7 +497,7 @@ en{
             ls{"Myanmar Time"}
         }
         "meta:Nauru"{
-            ls{"Nauru Time"}
+            ls{"Naoero Time"}
         }
         "meta:Nepal"{
             ls{"Nepal Time"}

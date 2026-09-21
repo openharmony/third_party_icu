@@ -924,7 +924,7 @@ sk{
             ls{"mjanmarský čas"}
         }
         "meta:Nauru"{
-            ls{"nauruský čas"}
+            ls{"Nauruský čas"}
         }
         "meta:Nepal"{
             ls{"nepálsky čas"}

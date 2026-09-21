@@ -668,7 +668,7 @@ da{
             ls{"Myanmar-tid"}
         }
         "meta:Nauru"{
-            ls{"Nauru-tid"}
+            ls{"Naoero-tid"}
         }
         "meta:Nepal"{
             ls{"Nepalesisk tid"}

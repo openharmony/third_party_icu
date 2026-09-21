@@ -799,7 +799,7 @@ nl{
             ls{"Myanmarese tijd"}
         }
         "meta:Nauru"{
-            ls{"Nauruaanse tijd"}
+            ls{"Tijd in Naoero"}
         }
         "meta:Nepal"{
             ls{"Nepalese tijd"}

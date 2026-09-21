@@ -984,7 +984,7 @@ hu{
             ls{"mianmari idő"}
         }
         "meta:Nauru"{
-            ls{"naurui idő"}
+            ls{"Naurui idő"}
         }
         "meta:Nepal"{
             ls{"nepáli idő"}

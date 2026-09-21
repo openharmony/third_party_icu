@@ -472,7 +472,7 @@ sw{
             ls{"Saa za Myanmar"}
         }
         "meta:Nauru"{
-            ls{"Saa za Nauru"}
+            ls{"Wakati wa Naoero"}
         }
         "meta:Nepal"{
             ls{"Saa za Nepal"}

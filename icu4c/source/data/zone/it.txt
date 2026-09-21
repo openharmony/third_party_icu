@@ -743,7 +743,7 @@ it{
             ls{"Ora della Birmania"}
         }
         "meta:Nauru"{
-            ls{"Ora di Nauru"}
+            ls{"Ora di Naoero"}
         }
         "meta:Nepal"{
             ls{"Ora del Nepal"}

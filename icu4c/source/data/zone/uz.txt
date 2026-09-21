@@ -1311,7 +1311,7 @@ uz{
             ls{"Myanma vaqti"}
         }
         "meta:Nauru"{
-            ls{"Nauru vaqti"}
+            ls{"Naoero vaqti"}
         }
         "meta:Nepal"{
             ls{"Nepal vaqti"}

@@ -1001,7 +1001,7 @@ pl{
             ls{"czas Mjanma"}
         }
         "meta:Nauru"{
-            ls{"czas Nauru"}
+            ls{"Czas lokalny Nauru"}
         }
         "meta:Nepal"{
             ls{"czas Nepal"}
